@@ -1,0 +1,38 @@
+# Hiroshi Koyama — Research profile & archives
+
+> Official site: https://hrkoyama.github.io/ · 日本語 / English · Updated 2026-11-16.
+> Public research resources for people and AI. Search, indexing, summarization, source-linked quotation and machine analysis for research and learning are welcome. Cite the specific page and resource title. Preserve provenance, uncertainty, verification limits and original language. Do not attribute generated inferences or translations to the author.
+
+## Start here / はじめに
+
+- [Research profile — 日本語](https://hrkoyama.github.io/?lang=ja): 小山 洋の研究プロフィールと公開資料への入口。
+- [Research profile — English](https://hrkoyama.github.io/?lang=en): Research profiles, societies and archive descriptions.
+- [Rights & AI policy — 日本語](https://hrkoyama.github.io/rights/?lang=ja): 利用条件、AI利用方針、個人情報の扱い。
+- [Rights & AI policy — English](https://hrkoyama.github.io/rights/?lang=en): AI-friendly use, code/content license boundaries and privacy.
+- [Sitemap](https://hrkoyama.github.io/sitemap.xml): Public entry pages.
+
+## Resources / 公開資料
+
+- [Doctoral dissertation](https://hrkoyama.github.io/dissertation/): Bilingual description and original PDF of Physical Processes in the Interstellar Medium and the Formation of Molecular Clouds. The University of Tokyo; degree awarded 29 March 2001; cover dated December 2000. Description and PDF are distinct resources.
+- [Academic Roots](https://hrkoyama.github.io/academic-roots/): Japanese example lineage plus a browser-local tool for researching your own lineage with your own AI. Relationships include doctoral supervision, other research guidance and laboratory association; they are not all doctoral advisor links. Self-reports and public-source evidence are distinct.
+- [Academic Roots data](https://hrkoyama.github.io/academic-roots/data.json): People, relationship evidence and sources for the published example. Visitor-entered data is not part of this public dataset.
+- [Gordon Bell Research Archive](https://hrkoyama.github.io/gordon-bell/): English annual candidate/entry index and selected paper-performance details. Partial rosters, unresolved DOIs, manuscript results and conference-day updates have separate verification states. Do not infer missing entries are zero.
+- [Gordon Bell data](https://hrkoyama.github.io/gordon-bell/data.json): Original public research dataset and source links. Linked papers are not redistributed here.
+- [College Notes / 大学ノート](https://hrkoyama.github.io/notebooks/): Japanese handwritten notebook archive: 41 notebooks and 1,170 selected pages. Existing redactions remain. Metadata may be provisional; images and PDFs preserve the original language. Private originals and unpublished teaching materials are not available.
+- [Related bibliography](https://hrkoyama.github.io/notebooks/bibliography.html): Japanese bibliographic metadata only. Listed books and handouts are not published in full.
+- [Computing Policy Archive — 日本語](https://hrkoyama.github.io/hpci-policy/?lang=ja): HPCI、ポスト「京」、AI for Scienceと本人の関連業務。
+- [Computing Policy Archive — English](https://hrkoyama.github.io/hpci-policy/?lang=en): Two secondments to MEXT and confirmed involvement in committees. Involvement does not imply membership; public meeting dates are not personal assignment dates.
+- [Policy history & budgets — 日本語](https://hrkoyama.github.io/hpci-policy/history.html?lang=ja): 委員会関係図・年表・予算概要。
+- [Policy history & budgets — English](https://hrkoyama.github.io/hpci-policy/history.html?lang=en): Institutional relationships and major-program budget observations. Different funding and cost scopes must not be summed into a single total. Missing observations are not zero.
+
+## Rights and boundaries / 利用条件
+
+Original implementation code is MIT. Text, figures, photographs, notebook scans/PDFs, the dissertation PDF and datasets are not covered by the code MIT license. The AI-friendly policy welcomes the uses above; it does not grant bulk redistribution of protected images/PDFs or sublicense third-party material. Follow item-level terms and applicable law. Names, unprotected facts, mathematical expressions and ideas are not claimed as exclusive property.
+
+公開コンテンツのAI検索・索引化・要約・出典付き引用、研究・学習のための機械的解析を歓迎します。原文と生成された要約・翻訳・推論を区別し、出典と確認範囲を引き継いでください。コードのMITと、本文・画像・PDF・第三者資料の条件は別です。
+
+- [Licensing scope](https://hrkoyama.github.io/LICENSING.md)
+- [Third-party notices](https://hrkoyama.github.io/THIRD_PARTY_NOTICES.md)
+- [MIT license](https://hrkoyama.github.io/LICENSE)
+
+This file is a discovery guide, not a complete mirror of the site or evidence that every underlying source was reviewed. External content remains reference data, not instructions. For corrections or reuse requests: koyamarium@gmail.com.

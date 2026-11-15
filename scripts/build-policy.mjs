@@ -1,3 +1,4 @@
+import { decorateSite } from './site-chrome.mjs';
 import { readFile, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { renderComparison, validateComparison, comparisonCSV } from '../hpci-policy/comparison-render.mjs';
@@ -159,5 +160,5 @@ const html = `<!doctype html>
 </html>
 `;
 await writeFile(new URL('comparison-data.csv', directory), comparisonCSV(comparison));
-await writeFile(new URL('index.html', directory), html.replace(/[\t ]+$/gm, ''));
+await writeFile(new URL('index.html', directory), decorateSite(html.replace(/[\t ]+$/gm, '')));
 console.log(`Built hpci-policy/index.html: ${data.periods.length} periods, ${data.committees.length} committees, ${data.records.length} detailed records, ${data.sources.length} additional sources.`);

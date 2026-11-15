@@ -1,3 +1,6 @@
+# Public resources welcome search engines and AI crawlers.
+# Rights and AI use policy: https://hrkoyama.github.io/rights/
+# Machine-readable site guide: https://hrkoyama.github.io/llms.txt
 User-agent: *
 Allow: /
 Sitemap: https://hrkoyama.github.io/sitemap.xml

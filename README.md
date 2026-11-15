@@ -76,3 +76,11 @@ Costs and intervals are intentionally heterogeneous historical observations, not
 ## Licensing
 
 Original implementation code is MIT; text, figures, scans, PDFs and data have separate terms. See `LICENSING.md`, `THIRD_PARTY_NOTICES.md` and `/rights/`. Archive-specific notices take precedence.
+
+## Shared language, navigation and site policy
+
+`site.css` and `site.js` provide common navigation and rights notices. The explicit `?lang=ja` / `?lang=en` parameter wins over the stored preference (`hrkoyama.home.language`); language selection follows internal HTML links while preserving other query parameters and fragments. Profile, dissertation and rights pages include both languages in static HTML. Their language sections remain readable without JavaScript. Japanese Academic Roots/notebook content and the English Gordon Bell archive retain their original languages, identified in the common header.
+
+After editing static HTML or the shared chrome, run `node scripts/build-site-chrome.mjs`. Both HPCI generators also call the shared decorator so rebuilds retain the navigation and notices. The chrome build refreshes only the existing public notebook manifest receipts; scans, redactions and PDFs must remain unchanged.
+
+`/rights/`, `LICENSING.md`, the notebook notice, `/robots.txt` and `/llms.txt` must agree: welcome AI search, indexing, summaries, source-linked quotation and research/learning analysis; distinguish original code (MIT), content, visitor data and third-party rights. Do not claim blanket redistribution rights over linked papers or notebook content. The AI guide is a resource index, not a full text mirror or proof of source verification.

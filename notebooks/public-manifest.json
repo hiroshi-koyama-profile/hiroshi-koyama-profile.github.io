@@ -15,8 +15,8 @@
     },
     {
       "path": "LICENSING.md",
-      "bytes": 3970,
-      "sha256": "fd3873caef3ed494381ca8842cd4d35dbbf3f9ac9863bf2f689972589edf3fe5"
+      "bytes": 5160,
+      "sha256": "0c82542f1506bed1ee038a83435042b06e0e1e7fb23402687cb8032c211c8d18"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -12020,8 +12020,8 @@
     },
     {
       "path": "bibliography.html",
-      "bytes": 28550,
-      "sha256": "91d383ff8e3dc769a1eb071aa1eb232afb6d37a91e6b1fd42245675e363c64b1"
+      "bytes": 31491,
+      "sha256": "2981f8027c7ad5881a02d043ffcc7faa6ae0a703e43a26f2ba80ff9126c8b7ab"
     },
     {
       "path": "bibliography.json",
@@ -12045,8 +12045,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 5654,
-      "sha256": "336a46c6f6d757f5f48384fd663f94b34349838234ed3ec1f02df815e7f85f02"
+      "bytes": 7681,
+      "sha256": "b8fdfd513f0164c9e184763c4253dc3aba397b194a668423aa7357edd42515fb"
     },
     {
       "path": "library.css",
@@ -12060,8 +12060,8 @@
     },
     {
       "path": "notebook.html",
-      "bytes": 5022,
-      "sha256": "4903346a74cc9329aff268c6b56ca68b11aa80f2fc1280e2276eaf09cb4f57b4"
+      "bytes": 7049,
+      "sha256": "77060ee26d5e556f53829e4eab36f91122b86fb2aeb4c3d6abf8e06f0af6489f"
     },
     {
       "path": "notebook.js",
@@ -12075,8 +12075,8 @@
     },
     {
       "path": "quantum-a-sample.html",
-      "bytes": 13709,
-      "sha256": "5ce46d6422aceee4a8d85f4a6dd1234bb20d17b3aabbb314300ff2a43bb08c57"
+      "bytes": 15736,
+      "sha256": "a6424d9482dd66d486a9ed75c96b8a1cac8df9530204e904d34f5622af437640"
     },
     {
       "path": "style.css",

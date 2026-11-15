@@ -10,9 +10,9 @@ The MIT license in `LICENSE` applies only to original software implementation co
 
 ## Text, illustrations, photographs, books and data: separate terms
 
-The MIT license does **not** cover explanatory text, translations, diagrams, plots, SVG artwork, photographs, notebook scans/PDFs, covers, book manuscripts, EPUB/PDF editions, videos or datasets. A code license does not automatically license its generated figures or other output. Follow an explicit item-level license or permission where present. Otherwise no additional reuse permission is granted for protected content: rights remain with the respective rights holders. Viewing the site or using a provided download does not by itself grant republication rights. Contact the maintainer through mailto:koyamarium@gmail.com for reuse requests.
+The MIT license does **not** cover explanatory text, translations, diagrams, plots, SVG artwork, photographs, notebook scans/PDFs, covers, book manuscripts, EPUB/PDF editions, videos or datasets. A code license does not automatically license its generated figures or other output. Follow an explicit item-level license or permission where present. Except for the uses welcomed by the AI policy below, no additional reuse permission is granted for protected content: rights remain with the respective rights holders. Viewing the site or using a provided download does not by itself grant republication rights. Contact the maintainer through mailto:koyamarium@gmail.com for reuse requests.
 
-解説本文・翻訳・図・グラフ・SVGの絵・写真・自筆ノート画像/PDF・表紙・書籍原稿/EPUB/PDF・動画・データはMITの対象外です。作図コードと完成図は別の対象です。個別の利用条件がある場合はその条件を優先し、未指定の保護対象部分は各権利者が権利を留保します。再利用の相談は上記サイトの問い合わせ窓口へお願いします。
+解説本文・翻訳・図・グラフ・SVGの絵・写真・自筆ノート画像/PDF・表紙・書籍原稿/EPUB/PDF・動画・データはMITの対象外です。作図コードと完成図は別の対象です。個別の利用条件がある場合はその条件を優先し、下記AI利用方針で歓迎する利用を除き、未指定の保護対象部分は各権利者が権利を留保します。追加の利用相談は koyamarium@gmail.com へお願いします。
 
 This notice does not assert exclusive rights over unprotected facts, mathematical expressions, ideas, or material lacking copyright protection. Whether an AI-assisted/generated item is protected depends on its particular circumstances; this notice does not guarantee protection. Statutory exceptions, valid earlier permissions and applicable GitHub Terms of Service are unaffected. No ownership of third-party, jointly held or institutional rights is transferred or resolved by this notice.
 
@@ -23,3 +23,9 @@ This notice does not assert exclusive rights over unprotected facts, mathematica
 External libraries, fonts, quoted material, teaching material, public documents, research papers, market data, names and trademarks retain their original rights and conditions. A reference or source link is not a redistribution license. Preserve all upstream notices. See `THIRD_PARTY_NOTICES.md` for the project-specific inventory.
 
 外部ライブラリ・フォント・引用・講義や教材由来の内容・公的資料・論文・市場データ・名称や商標は元の権利・条件を維持します。出典の記載のみで転載許諾が得られるわけではありません。既存の個別ライセンスを本方針で取り消しません。
+
+## AI-friendly use / AIによる利用
+
+AI search, indexing, summarization, source-linked quotation and machine analysis of public content for research and learning are welcome under the [site AI policy](https://hrkoyama.github.io/rights/). Cite the specific page URL and author/resource title. Distinguish original material from generated summaries, translations and inferences, and preserve uncertainty. This permission does not grant bulk redistribution of protected images, scans or PDFs, or sublicense third-party material. Existing item-level licenses and statutory exceptions are unaffected.
+
+公開コンテンツのAI検索・索引化・要約・出典付き引用、研究・学習のための機械的解析を歓迎します。対象ページのURLと著者・資料名を示し、原文と生成された要約・翻訳・推論を区別して、不確かな事項も引き継いでください。保護対象の画像・ノート・PDF等の一括再配布や第三者資料の再許諾は含みません。個別の利用条件や法令上認められる利用は影響を受けません。
