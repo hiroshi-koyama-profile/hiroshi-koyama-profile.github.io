@@ -7,6 +7,14 @@
   try { saved = localStorage.getItem(key); } catch {}
   const initial = supported(requested) ? requested : supported(saved) ? saved : 'ja';
   let activeLanguage = initial;
+  function languageURL(language) {
+    const alternate = document.body.dataset.contentLanguage && document.querySelector(`link[rel="alternate"][hreflang="${language}"]`);
+    const destination = alternate ? new URL(alternate.href) : null;
+    const url = destination ? new URL(destination.pathname + destination.search, location.origin) : new URL(location.href);
+    url.searchParams.set('lang', language);
+    url.hash = location.hash;
+    return url;
+  }
   function apply(language) {
     if (!supported(language)) return;
     activeLanguage = language;
@@ -27,7 +35,7 @@
     }
     document.querySelectorAll('a[href]').forEach(link => {
       if (link.hasAttribute('data-site-lang')) {
-        const url = new URL(location.href); url.searchParams.set('lang', link.dataset.siteLang); link.href = url.href;
+        link.href = languageURL(link.dataset.siteLang).href;
         if (link.dataset.siteLang === language) link.setAttribute('aria-current', 'page'); else link.removeAttribute('aria-current');
         return;
       }
@@ -35,7 +43,7 @@
       if (!raw || raw.startsWith('#') || link.hasAttribute('download')) return;
       const url = new URL(raw, location.href);
       if (url.origin !== location.origin || !(/\/$/.test(url.pathname) || /\.html$/.test(url.pathname))) return;
-      url.searchParams.set('lang', language); link.href = url.href;
+      url.searchParams.set('lang', supported(link.hreflang) ? link.hreflang : language); link.href = url.href;
     });
   }
   apply(initial);
@@ -44,16 +52,14 @@
     const link = event.target.closest('a[href]');
     if (!link || link.hasAttribute('download')) return;
     if (link.hasAttribute('data-site-lang')) {
-      const url = new URL(location.href);
-      url.searchParams.set('lang', link.dataset.siteLang);
-      link.href = url.href;
+      link.href = languageURL(link.dataset.siteLang).href;
       return;
     }
     const raw = link.getAttribute('href');
     if (!raw || raw.startsWith('#')) return;
     const url = new URL(raw, location.href);
     if (url.origin === location.origin && (/\/$/.test(url.pathname) || /\.html$/.test(url.pathname))) {
-      url.searchParams.set('lang', activeLanguage);
+      url.searchParams.set('lang', supported(link.hreflang) ? link.hreflang : activeLanguage);
       link.href = url.href;
     }
   }, true);

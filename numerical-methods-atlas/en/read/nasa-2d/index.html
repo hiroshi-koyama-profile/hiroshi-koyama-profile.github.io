@@ -1,0 +1,157 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NASA 2D verification and validation case catalog · An Atlas of Numerical Methods</title><meta name="description" content="Start with the official NPARC Verification and Validation Archive , CFL3D test cases , and Turbulence Modeling Resource . NASA&#39;s TMR information page describes the resource&#39;s move to GitHub in February 2026. The two 15-degree wedge flows are now computed educa"><link rel="canonical" href="https://hrkoyama.github.io/numerical-methods-atlas/en/read/nasa-2d/"><link rel="alternate" hreflang="en" href="https://hrkoyama.github.io/numerical-methods-atlas/en/read/nasa-2d/"><link rel="alternate" hreflang="ja" href="https://hrkoyama.github.io/numerical-methods-atlas/ja/read/nasa-2d/"><meta property="og:title" content="NASA 2D verification and validation case catalog · An Atlas of Numerical Methods"><meta property="og:description" content="Start with the official NPARC Verification and Validation Archive , CFL3D test cases , and Turbulence Modeling Resource . NASA&#39;s TMR information page describes the resource&#39;s move to GitHub in February 2026. The two 15-degree wedge flows are now computed educa"><meta property="og:url" content="https://hrkoyama.github.io/numerical-methods-atlas/en/read/nasa-2d/"><meta property="og:type" content="article"><link rel="icon" href="/numerical-methods-atlas/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/numerical-methods-atlas/vendor/katex.min.css"><link rel="stylesheet" href="/numerical-methods-atlas/style.css"><script type="module" src="/numerical-methods-atlas/reading.js"></script><!-- site-head -->
+<link rel="stylesheet" href="/site.css?v=645e504550a3">
+<script src="/site.js?v=645e504550a3" defer></script>
+<link rel="describedby" href="/llms.txt">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<!-- /site-head -->
+</head><body data-content-language="en">
+<!-- site-top -->
+<div class="site-chrome site-top"><div class="site-inner"><a class="site-brand" href="/">Hiroshi Koyama</a><nav class="site-nav" aria-label="Site navigation"><a href="/"><span data-ui-ja="ホーム" data-ui-en="Home">ホーム / Home</span></a><a href="/rights/"><span data-ui-ja="利用条件・AI方針" data-ui-en="Rights &amp; AI policy">利用条件・AI方針 / Rights &amp; AI policy</span></a></nav><nav class="site-languages" aria-label="言語 / Language"><a href="?lang=ja" data-site-lang="ja" lang="ja">日本語</a><a href="?lang=en" data-site-lang="en" lang="en">English</a></nav><p class="site-content-note"><span data-ui-ja="このコンテンツの本文は英語です。" data-ui-en="This content is in English.">このコンテンツの本文は英語です。 / This content is in English.</span></p></div></div>
+<!-- /site-top -->
+<a class="skip-link" href="#main">Skip to content</a><header class="site-header"><a class="brand" href="/numerical-methods-atlas/?lang=en"><span class="brand-symbol" aria-hidden="true">∑</span><span>An Atlas of Numerical Methods</span></a><button class="mobile-menu" aria-label="Open navigation" aria-expanded="false">Menu</button><nav aria-label="Main navigation"><a href="/numerical-methods-atlas/?lang=en#/methods">Methods</a><a href="/numerical-methods-atlas/?lang=en#/experiments">Experiments</a><a href="/numerical-methods-atlas/en/read/">Reading chapters</a></nav><div class="language-switch" role="group" aria-label="Language"><a href="/numerical-methods-atlas/en/read/nasa-2d/" lang="en" hreflang="en" aria-current="page">English</a><a href="/numerical-methods-atlas/ja/read/nasa-2d/" lang="ja" hreflang="ja">日本語</a></div></header><main id="main" tabindex="-1"><div class="reading-shell page-width"><aside class="reading-nav"><a class="back-link" href="/numerical-methods-atlas/en/read/">← Reading chapters</a><p class="eyebrow">IN THIS EDITION</p><nav aria-label="Reading chapters"><a href="/numerical-methods-atlas/en/read/accuracy-stability/">A-stability, L-stability and error norms</a><a href="/numerical-methods-atlas/en/read/advanced-limiters/">Advanced limiters: TVB and positivity preservation</a><a href="/numerical-methods-atlas/en/read/advanced/">Preconditioning, dual time stepping, and residual distribution</a><a href="/numerical-methods-atlas/en/read/ale/">Arbitrary Lagrangian–Eulerian methods</a><a href="/numerical-methods-atlas/en/read/basis-functions/">Orthogonal polynomials and mesh basis functions</a><a href="/numerical-methods-atlas/en/read/benchmarks/">Benchmark library</a><a href="/numerical-methods-atlas/en/read/biological-models/">Biological model equations and numerical verification</a><a href="/numerical-methods-atlas/en/read/carbuncle/">The carbuncle phenomenon</a><a href="/numerical-methods-atlas/en/read/chapman-enskog/">Chapman–Enskog expansion: from populations to transport</a><a href="/numerical-methods-atlas/en/read/cip/">CIP: carry the value and the gradient</a><a href="/numerical-methods-atlas/en/read/coordinates-viscosity/">Polar and cylindrical coordinates: tensors and viscosity</a><a href="/numerical-methods-atlas/en/read/double-mach/">Double Mach Reflection</a><a href="/numerical-methods-atlas/en/read/elliptic/">Diffusion, elliptic equations, boundary conditions, and iteration</a><a href="/numerical-methods-atlas/en/read/equation-gallery/">Equation gallery: choose the equation before the algorithm</a><a href="/numerical-methods-atlas/en/read/experiments/">Interactive experiment guide</a><a href="/numerical-methods-atlas/en/read/fem/">Continuous finite elements: from weak form to sparse assembly</a><a href="/numerical-methods-atlas/en/read/geophysical-grids/">Spherical meshes and Arakawa A, B and C grids</a><a href="/numerical-methods-atlas/en/read/gravity-boundaries/">Gravity kernels: isolated FFTs and a periodic slab</a><a href="/numerical-methods-atlas/en/read/gsph/">Godunov smoothed particle hydrodynamics (GSPH)</a><a href="/numerical-methods-atlas/en/read/history/">Historical atlas</a><a href="/numerical-methods-atlas/en/read/hyperbolic-diffusion/">Nishikawa's hyperbolic diffusion: iterate a first-order system</a><a href="/numerical-methods-atlas/en/read/incompressible/">Incompressible flow: project with compatible discrete operators</a><a href="/numerical-methods-atlas/en/read/keep/">KEEP schemes: preserve the smooth-flow balance, test the limits</a><a href="/numerical-methods-atlas/en/read/lattice-boltzmann/">Lattice Boltzmann: collide, stream, recover fluid motion</a><a href="/numerical-methods-atlas/en/read/limiters/">Slope limiters: minmod, Superbee, MC, van Leer, and van Albada</a><a href="/numerical-methods-atlas/en/read/meshes/">Structured, unstructured, and triangular meshes</a><a href="/numerical-methods-atlas/en/read/mhd/">MHD: constrained transport and divergence cleaning</a><a href="/numerical-methods-atlas/en/read/movies/">Time-dependent tests: movies and saved states</a><a href="/numerical-methods-atlas/en/read/nasa-2d/" aria-current="page">NASA 2D verification and validation case catalog</a><a href="/numerical-methods-atlas/en/read/particle-gravity/">Particle gravity: PM, P³M, Tree, multipoles, and multigrid</a><a href="/numerical-methods-atlas/en/read/particles-sph/">Particle methods and smoothed particle hydrodynamics</a><a href="/numerical-methods-atlas/en/read/reconstruction/">Euler reconstruction: PPM, characteristics, WENO-Z and AUSM</a><a href="/numerical-methods-atlas/en/read/reference-solutions/">Exact and reference solutions</a><a href="/numerical-methods-atlas/en/read/references/">References by original publication year</a><a href="/numerical-methods-atlas/en/read/relativistic-hydrodynamics/">Relativistic hydrodynamics: SRHD, GRHD, and GRMHD</a><a href="/numerical-methods-atlas/en/read/release-notes-v0.1.0/">v0.1.0 — First edition</a><a href="/numerical-methods-atlas/en/read/roadmap/">Implementation roadmap</a><a href="/numerical-methods-atlas/en/read/roe-memorial/">Remembering Philip L. Roe</a><a href="/numerical-methods-atlas/en/read/runge-kutta/">Runge–Kutta families: stages, order, stability, and SSP</a><a href="/numerical-methods-atlas/en/read/shock-expansion/">Traced PPM, AUSM variants and curved bow shocks</a><a href="/numerical-methods-atlas/en/read/site-coverage/">Site coverage and counting rules</a><a href="/numerical-methods-atlas/en/read/sparse-nonlinear/">Sparse and nonlinear systems: measure the actual residual</a><a href="/numerical-methods-atlas/en/read/stability/">Differences, CFL, von Neumann analysis, and Lax</a><a href="/numerical-methods-atlas/en/read/stiff-integration/">Stiff integration: solve the stage, control the time error</a><a href="/numerical-methods-atlas/en/read/symplectic/">Symplectic integration: a canonical map, not an exact energy promise</a><a href="/numerical-methods-atlas/en/read/textbooks/">Textbooks: where to look next</a><a href="/numerical-methods-atlas/en/read/time-integration/">Time integration and leapfrog</a></nav></aside><div class="chapter-wrap"><div class="chapter-topline"><span>THE READING ROOM</span><a href="https://github.com/koyamarium/numerical-methods-atlas/blob/main/docs/nasa-2d.md">View source ↗</a></div><article class="prose" lang="en"><h1>NASA 2D verification and validation case catalog</h1>
+<p>Start with the official <a href="https://www.grc.nasa.gov/WWW/wind/valid/archive.html">NPARC Verification and Validation Archive</a>,
+<a href="https://nasa.github.io/CFL3D/Cfl3dv6/cfl3dv6_testcases.html">CFL3D test cases</a>,
+and <a href="https://tmbwg.github.io/turbmodels/">Turbulence Modeling Resource</a>.
+NASA&#39;s <a href="https://www.nasa.gov/nasa-turbulence-modeling-resource/">TMR information page</a>
+describes the resource&#39;s move to GitHub in February 2026.
+The two <strong>15-degree wedge flows are now computed educational Euler baselines</strong>.
+The remaining NASA entries below are cataloged candidates. These independent
+calculations are not Wind-US output, experimental validations or reproductions
+of NASA&#39;s complete solver/grid comparison. A classical Mach-3 forward-facing
+step and <a href="/numerical-methods-atlas/en/read/double-mach/">Double Mach Reflection</a> complement the NASA cases.</p>
+<h2 id="computed-shock-tests">Computed shock tests<a class="heading-anchor" href="#computed-shock-tests" aria-label="Link to this section">#</a></h2>
+<p><a href="/numerical-methods-atlas/?lang=en#/gallery">Open the shock-containing fields in the gallery</a>.
+Both wedges start from uniform freestream with gamma 1.4, density 1 and sound
+speed 1. The independent body-fitted mesh spans x = −0.5 to 1, the lower wall
+y = max(x,0) tan(15°), and the upper boundary y = 1.2. The higher farfield keeps
+the Mach-2 weak shock below that boundary at the outlet; it differs from the
+height 1 of NASA&#39;s Mach-2.5 domain. Inlet and upper-boundary
+states are fixed at freestream, the outlet is extrapolated and the lower wall
+reflects normal momentum. Shared oriented face fluxes conserve the cell totals;
+cell areas and face normals come from the actual quadrilaterals.</p>
+<ul>
+<li><strong>NASA wedge, Mach 2.0:</strong> Mach and pressure maps on 240 × 80 cells at t = 3,
+with the theoretical weak-shock line. A 120 × 40 run supplies a second grid.
+<a href="https://www.grc.nasa.gov/WWW/wind/valid/wedgeM2/wedgeM2.html">NASA setup</a>.</li>
+<li><strong>NASA wedge, Mach 2.5:</strong> the same independent meshes and terminal time.
+The reference shock angle is approximately 36.94490°, pressure ratio 2.467500,
+and downstream Mach number 1.873526. The theta–beta–Mach root and normal-shock
+relations supply the reference, with a numerical Rankine–Hugoniot check.
+<a href="https://www.grc.nasa.gov/WWW/wind/valid/wedge/wedge.html">NASA analytical comparison</a>.</li>
+<li><strong>Classical Mach-3 forward-facing step:</strong> a 3 × 1 tunnel with the step at
+x = 0.6 and height 0.2, uniform inflow (density 1.4, pressure 1, velocity 3),
+reflecting walls and an extrapolated exit. A 240 × 80 grid reaches t = 4,
+with 81 saved states and an MP4. <a href="/numerical-methods-atlas/?lang=en#/movies?case=forward-step">Watch the shock reflections</a>.
+This is the classical Emery/Woodward–Colella benchmark, not a NASA-originated
+experiment. The corner treatment differs from the corrected PPM comparison
+in <a href="https://www.researchgate.net/publication/222459521_The_numerical_simulation_of_two-dimensional_fluid_flow_with_strong_shocks">Woodward–Colella §VI.b</a>:
+this baseline applies plain reflection and does not reset entropy or enthalpy
+near the step corner. Corner artifacts and smeared slip lines may remain.</li>
+</ul>
+<p>These use <strong>first-order HLL finite volumes and SSPRK2</strong>, with CFL 0.4. Wedges
+have no imposed analytical shock in their initial state. Their normalized L1
+density errors compare conservative cell averages with an exactly clipped
+piecewise-constant oblique-shock reference. Wall-pressure medians use the first
+fluid row over 0.5 &lt; x &lt; 0.9; a density-gradient fit over 0.35 &lt; x &lt; 0.85 estimates
+the shock angle. Mach-2 MC still has local time variation at t = 3 (maximum conserved update
+rate approximately 6.08 in the published run); it is not a converged steady
+solution. This residual is exposed alongside the sharper density error.
+Two grids at one finite terminal time do not establish general
+asymptotic order or complete steady convergence. The step has no exact overlay
+and only one published grid; t = 4 is an unsteady snapshot.</p>
+<p><img src="/numerical-methods-atlas/assets/nasa-wedge-m20.png" alt="NASA Mach-2 wedge">
+<img src="/numerical-methods-atlas/assets/nasa-wedge-m25.png" alt="NASA Mach-2.5 wedge">
+<img src="/numerical-methods-atlas/assets/forward-step.png" alt="Mach-3 forward-facing step"></p>
+<p>Reproduce with <code>python scripts/build_shock_gallery.py</code>; <code>--reuse</code> renders cached,
+source-checked trajectories. Download <a href="/numerical-methods-atlas/assets/shock-gallery.json">run definitions, diagnostics and hashes</a>,
+<a href="/numerical-methods-atlas/assets/shock-gallery.npz">final numerical fields</a>, and the
+<a href="/numerical-methods-atlas/assets/movies/shock-catalog.json">step movie manifest</a>.</p>
+<h2 id="shock-containing-nasa-cases-still-to-implement">Shock-containing NASA cases still to implement<a class="heading-anchor" href="#shock-containing-nasa-cases-still-to-implement" aria-label="Link to this section">#</a></h2>
+<p>The <a href="https://www.grc.nasa.gov/WWW/wind/valid/m5swbli/m5swbli.html">Mach-5 shock/boundary-layer interaction</a>,
+<a href="https://www.grc.nasa.gov/WWW/wind/valid/hypramp/hypramp.html">Mach-7 laminar ramp</a>,
+Sajben diffuser and RAE 2822 are later candidates. Their viscous, turbulence or
+gas-model requirements are part of each case; an inviscid wedge image is not
+a substitute for those validations. These cases have no computed exhibit here.</p>
+<h2 id="starting-with-euler-and-analytical-references">Starting with Euler and analytical references<a class="heading-anchor" href="#starting-with-euler-and-analytical-references" aria-label="Link to this section">#</a></h2>
+<ul>
+<li><strong>15° wedge, Mach 2.0 — computed baseline:</strong> oblique shock and wall pressure with two grids. Roe/HLLE method comparisons remain future work. <a href="https://www.grc.nasa.gov/WWW/wind/valid/wedgeM2/wedgeM2.html">NASA case</a>.</li>
+<li><strong>15° wedge, Mach 2.5 — computed baseline:</strong> shock angle and downstream-state reference. Pair this compression case with the planned expansion corner below. <a href="https://www.grc.nasa.gov/WWW/wind/valid/wedge/wedge.html">NASA case</a>.</li>
+<li><strong>Prandtl–Meyer 15° expansion, Mach 2.5:</strong> expansion-fan structure and analytical Mach/pressure relations. <a href="https://www.grc.nasa.gov/WWW/wind/valid/archive.html">Official archive</a>.</li>
+</ul>
+<h2 id="laminar-flow-unsteadiness-and-pressure-poisson-problems">Laminar flow, unsteadiness, and pressure Poisson problems<a class="heading-anchor" href="#laminar-flow-unsteadiness-and-pressure-poisson-problems" aria-label="Link to this section">#</a></h2>
+<ul>
+<li><strong>Driven cavity:</strong> centerline velocities, primary vortex, and corner vortices in a square. NASA uses low-Mach calculations to approximate incompressible flow and compares with Ghia and colleagues. <a href="https://www.grc.nasa.gov/WWW/wind/valid/cavity/cavity.html">NASA case</a>.</li>
+<li><strong>Blasius laminar flat plate:</strong> boundary-layer profiles, skin friction, and wall-normal mesh resolution. <a href="https://www.grc.nasa.gov/www/wind/valid/fplam/fplam.html">NASA case</a>.</li>
+<li><strong>Unsteady laminar circular cylinder:</strong> vortex shedding, drag/lift histories, and temporal accuracy; a candidate after dual time stepping. <a href="https://www.grc.nasa.gov/WWW/wind/valid/lamcyl/lam_cyl.html">NASA case</a>.</li>
+</ul>
+<h2 id="turbulence-models-separation-and-airfoils">Turbulence models, separation, and airfoils<a class="heading-anchor" href="#turbulence-models-separation-and-airfoils" aria-label="Link to this section">#</a></h2>
+<ul>
+<li><strong>Zero-pressure-gradient turbulent flat plate:</strong> skin friction, turbulence-model implementation verification, and grid convergence. <a href="https://tmbwg.github.io/turbmodels/flatplate.html">TMR verification</a>.</li>
+<li><strong>2D bump-in-channel:</strong> curved-wall pressure and friction, with comparisons between codes using the same turbulence model. <a href="https://tmbwg.github.io/turbmodels/bump.html">TMR verification</a>.</li>
+<li><strong>Driver–Seegmiller backward-facing step:</strong> separation, reattachment, Cp/Cf, and velocity profiles. Fix the dataset version, including Reynolds-number definitions and corrections. <a href="https://tmbwg.github.io/turbmodels/backstep_val.html">TMR validation</a>, <a href="https://www.grc.nasa.gov/WWW/wind/valid/backstep/backstep.html">NPARC</a>.</li>
+<li><strong>Sajben transonic diffuser:</strong> internal shocks, back pressure, and shock/boundary-layer interaction. <a href="https://www.grc.nasa.gov/WWW/wind/valid/transdif/transdif.html">NASA case</a>.</li>
+<li><strong>RAE 2822 transonic airfoil:</strong> surface Cp, shocks, and boundary layers. State the case number and corrected Mach number and angle of attack. <a href="https://www.grc.nasa.gov/WWW/wind/valid/raetaf/raetaf.html">NASA case</a>.</li>
+<li><strong>NACA 0012:</strong> surface pressure, lift/drag, and sensitivity to grids, far-field boundaries, and turbulence models. <a href="https://tmbwg.github.io/turbmodels/naca0012_val.html">TMR validation</a>.</li>
+<li><strong>NACA 4412 trailing-edge separation:</strong> adverse pressure gradients and trailing-edge separation. <a href="https://tmbwg.github.io/turbmodels/naca4412sep_val.html">TMR validation</a>.</li>
+<li><strong>NASA wall-mounted hump:</strong> wall-induced separation and reattachment. Record the applicability of 2D calculations to experiments containing three-dimensional effects. <a href="https://tmbwg.github.io/turbmodels/nasahump_val.html">TMR validation</a>.</li>
+<li><strong>2D mixing layer:</strong> free-shear-layer growth, velocity, and turbulence quantities. <a href="https://tmbwg.github.io/turbmodels/delvilleshear_val.html">TMR validation</a>.</li>
+<li><strong>2D airfoil near-wake:</strong> wake velocity deficit and recovery. <a href="https://tmbwg.github.io/turbmodels/airfoilwake_val.html">TMR validation</a>.</li>
+</ul>
+<h2 id="other-classical-2d-benchmarks">Other classical 2D benchmarks<a class="heading-anchor" href="#other-classical-2d-benchmarks" aria-label="Link to this section">#</a></h2>
+<p>Double Mach Reflection, the Mach 3 forward-facing step, 2D Riemann
+configurations, the isentropic vortex, and odd-even shock/carbuncle tests are
+also useful flux demonstrations. The first two have a representative source
+in <a href="https://doi.org/10.1016/0021-9991(84)90142-6">Woodward–Colella (1984)</a>.
+<a href="/numerical-methods-atlas/en/read/double-mach/">Our Double Mach Reflection exhibit</a> and the forward step above
+are implemented first-order HLL baselines. Riemann configurations and controlled
+odd-even/carbuncle comparisons remain future work; the smooth KEEP vortex is computed.
+See the separate <a href="/numerical-methods-atlas/en/read/carbuncle/">carbuncle notes</a> for the required stability comparisons.
+Do not label all of these as NASA-originated problems. ONERA M6 is a 3D wing;
+axisymmetric bump and jet cases are also different from planar 2D cases and
+are excluded from the main list.</p>
+<h2 id="information-to-fix-for-each-implementation">Information to fix for each implementation<a class="heading-anchor" href="#information-to-fix-for-each-implementation" aria-label="Link to this section">#</a></h2>
+<p>Record the original source, case number, geometry, nondimensionalization,
+Mach/Reynolds numbers, angle of attack, wall/far-field/inlet/outlet boundaries,
+grid sequence, exact turbulence-model variant, convergence residuals, time
+steps, and definitions of Cp/Cf/Cl/Cd. A decreasing residual alone establishes
+neither grid convergence nor agreement with experiments. Add the original
+measurement papers at implementation time rather than citing only NASA&#39;s
+resource pages.</p>
+<h2 id="muscl-reconstruction-comparisons">MUSCL reconstruction comparisons<a class="heading-anchor" href="#muscl-reconstruction-comparisons" aria-label="Link to this section">#</a></h2>
+<p><a href="/numerical-methods-atlas/?lang=en#/flow-comparison?case=wedge-m2.5&amp;method=mc">Compare first order, minmod and MC</a>.
+The new runs keep acoustic HLL, SSPRK2 and nominal CFL 0.4 fixed. Primitive
+variables are reconstructed from physical gradients at quadrilateral area
+centroids to face midpoints. On the body-fitted grid, x secants account for
+the accompanying physical y displacement. A shared face flux updates both
+neighbors. The limiter choices are minmod(a,b) and
+MC(a,b) = minmod(2a,(a+b)/2,2b); see the <a href="/numerical-methods-atlas/en/read/limiters/">limiter definitions</a>.
+Boundary reconstruction excludes solid neighbors and reflects fluid-side
+states. One cellwise factor scales reconstructed deviations when a face
+would have nonpositive density or pressure. Failed SSPRK2 steps halve the
+step size and retry; these events are recorded. Conserved means are not clipped.
+This is a tested safeguard, not a general positivity theorem for this solver.</p>
+<p>Both NASA wedges have all three reconstructions on 120 × 40 and 240 × 80
+meshes at t = 3. Wall pressure, fitted shock angle and integrated density
+errors use the definitions above. A separate periodic entropy wave uses
+velocity (0.7,0.3), pressure 1 and density
+1 + 0.2 sin(2πx) sin(2πy), initialized and compared as exact cell averages.
+Grids 16², 32², 64² and 128² reach t = 0.5. Observed orders are printed in the
+comparison page; MC approaches second order on this smooth test. Limiter
+activation at extrema affects the measured minmod order. Shock errors have
+a different convergence regime and do not establish smooth second order.</p>
+<p><img src="/numerical-methods-atlas/assets/comparisons/smooth-refinement.png" alt="Smooth two-dimensional refinement"></p>
+<p>The <a href="/numerical-methods-atlas/?lang=en#/flow-comparison?case=forward-step&amp;method=mc">forward-step comparison</a>
+adds minmod and MC stills and 81-state clips on the same 240 × 80 mesh. All
+three clips share density/pressure scales and requested output times, but
+actual intermediate timestamps can differ by one adaptive solver step.
+Nominal CFL and grids do not imply equal computational cost. These are three
+reconstructions of one physical case; the original first-order movie remains
+available. The corner treatment is unchanged and the t = 4 flow is unsteady.</p>
+<p>Reproduce with <code>python scripts/build_euler_comparison.py</code>. Download the
+<a href="/numerical-methods-atlas/assets/comparisons/euler-comparison.json">comparison definitions, diagnostics and hashes</a>
+and <a href="/numerical-methods-atlas/assets/comparisons/final-fields.npz">final conservative arrays</a>.
+Full trajectories are cached locally under <code>outputs/euler-comparison</code>.</p>
+</article><div class="chapter-bottom"><a href="/numerical-methods-atlas/?lang=en#/atlas">Historical atlas →</a><a href="/numerical-methods-atlas/?lang=en#/gallery">Computed gallery →</a></div></div><aside class="chapter-toc"><p class="eyebrow">ON THIS PAGE</p><nav aria-label="On this page"><a href="#computed-shock-tests">Computed shock tests</a><a href="#shock-containing-nasa-cases-still-to-implement">Shock-containing NASA cases still to implement</a><a href="#starting-with-euler-and-analytical-references">Starting with Euler and analytical references</a><a href="#laminar-flow-unsteadiness-and-pressure-poisson-problems">Laminar flow, unsteadiness, and pressure Poisson problems</a><a href="#turbulence-models-separation-and-airfoils">Turbulence models, separation, and airfoils</a><a href="#other-classical-2d-benchmarks">Other classical 2D benchmarks</a><a href="#information-to-fix-for-each-implementation">Information to fix for each implementation</a><a href="#muscl-reconstruction-comparisons">MUSCL reconstruction comparisons</a></nav></aside></div></main><footer class="site-footer"><a href="/numerical-methods-atlas/?lang=en">An Atlas of Numerical Methods</a><a href="https://github.com/koyamarium/numerical-methods-atlas">GitHub ↗</a></footer><!-- site-bottom -->
+<footer class="site-chrome site-bottom"><div class="site-inner"><div class="site-legal"><p>© 2026 Hiroshi Koyama / 小山 洋</p><p><span data-ui-ja="公開資料のAI検索・要約・出典付き引用を歓迎します。" data-ui-en="AI search, summaries and source-linked quotation are welcome.">公開資料のAI検索・要約・出典付き引用を歓迎します。 / AI search, summaries and source-linked quotation are welcome.</span></p><p><span data-ui-ja="自作コード：MIT。本文・図・画像・PDF・データ・第三者資料は別条件です。" data-ui-en="Original code: MIT. Text, figures, images, PDFs, data and third-party material have separate terms.">自作コード：MIT。本文・図・画像・PDF・データ・第三者資料は別条件です。 / Original code: MIT. Text, figures, images, PDFs, data and third-party material have separate terms.</span></p><p class="site-credit"><span data-ui-ja="Webサイト制作：ChatGPTとCodexの支援を利用。" data-ui-en="Website developed with assistance from ChatGPT and Codex.">Webサイト制作：ChatGPTとCodexの支援を利用。 / Website developed with assistance from ChatGPT and Codex.</span></p></div><nav class="site-links" aria-label="Site policies and resources"><a href="/rights/"><span data-ui-ja="利用条件・AI方針" data-ui-en="Rights &amp; AI policy">利用条件・AI方針 / Rights &amp; AI policy</span></a><a href="/llms.txt"><span data-ui-ja="AI向け案内" data-ui-en="AI site guide">AI向け案内 / AI site guide</span></a><a href="/sitemap.xml"><span data-ui-ja="サイトマップ" data-ui-en="Sitemap">サイトマップ / Sitemap</span></a></nav></div></footer>
+<!-- /site-bottom -->
+</body></html>

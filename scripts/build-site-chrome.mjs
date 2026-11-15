@@ -9,7 +9,8 @@ async function walk(dir) {
     if (entry.isDirectory()) await walk(url);
     else if (entry.name.endsWith('.html')) {
       const path = decodeURIComponent(url.pathname.slice(root.pathname.length));
-      const fixed = path === 'academic-roots/index.html' || path.startsWith('notebooks/') ? 'ja' : path.startsWith('gordon-bell/') ? 'en' : '';
+      const reading = /^numerical-methods-atlas\/(en|ja)\/read\//.exec(path);
+      const fixed = reading ? reading[1] : path === 'academic-roots/index.html' || path.startsWith('notebooks/') ? 'ja' : path.startsWith('gordon-bell/') || path.startsWith('the-art-of-thermal-instability/') ? 'en' : '';
       await writeFile(url, decorateSite(await readFile(url,'utf8'), {contentLanguage:fixed}));
     }
   }

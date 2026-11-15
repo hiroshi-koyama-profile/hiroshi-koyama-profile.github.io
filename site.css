@@ -7,3 +7,6 @@
 .profile-main h1>span{display:inline-block;white-space:nowrap;font-size:.75em}
 /* The common language links replace duplicate archive-level language controls. */
 body>.site-top~.wrap .lang-switch{display:none!important}
+
+/* The common switch follows language alternates for static atlas reading pages. */
+body>.site-top~.site-header .language-switch{display:none!important}

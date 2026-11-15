@@ -11,6 +11,18 @@
 - [Rights & AI policy — English](https://hrkoyama.github.io/rights/?lang=en): AI-friendly use, code/content license boundaries and privacy.
 - [Sitemap](https://hrkoyama.github.io/sitemap.xml): Public entry pages.
 
+## Numerical methods, thermal instability & consultation
+
+- [Research Compass — 日本語](https://hrkoyama.github.io/guide/?lang=ja): 数値計算と熱的不安定性の公開本文を探し、出典付きの相談文を利用者自身のLLMへ渡す。質問はブラウザ内で処理し、運営者へ送信しない。
+- [Research Compass — English](https://hrkoyama.github.io/guide/?lang=en): Browser-local lexical retrieval and manual handoff of selected source excerpts to the visitor's own LLM. No hosted LLM, API key or inference endpoint. Index and knowledge packs are bounded snapshots, not full-site mirrors or guarantees of complete ingestion.
+- [Numerical Methods Atlas](https://hrkoyama.github.io/numerical-methods-atlas/): Bilingual atlas, reading chapters and interactive educational experiments. Distinguish implementations, limited validation, literature surveys and future work. Japanese translations may be drafts or unavailable. A mentioned method does not establish implementation.
+- [Numerical reading chapters — 日本語](https://hrkoyama.github.io/numerical-methods-atlas/ja/read/): 静的な解説章の目次。式・実装・参照文献と翻訳の状態を確認する。
+- [Numerical reading chapters — English](https://hrkoyama.github.io/numerical-methods-atlas/en/read/): Static English reading index with original source links.
+- [The Art of Thermal Instability](https://hrkoyama.github.io/the-art-of-thermal-instability/): English research archive. Scientific outputs, prototypes, deferred historical matches and literature-only entries have different scope. Do not claim that every result in every cited paper is reproduced.
+- [Combined knowledge pack](https://hrkoyama.github.io/guide/packs/all.md): Source-linked excerpts for the two sites; figures and running experiments are excluded. Follow its capture timestamp and the original pages for current scope.
+- [Numerical methods pack](https://hrkoyama.github.io/guide/packs/numerical.md)
+- [Thermal instability pack](https://hrkoyama.github.io/guide/packs/thermal.md)
+
 ## Resources / 公開資料
 
 - [Doctoral dissertation](https://hrkoyama.github.io/dissertation/): Bilingual description and original PDF of Physical Processes in the Interstellar Medium and the Formation of Molecular Clouds. The University of Tokyo; degree awarded 29 March 2001; cover dated December 2000. Description and PDF are distinct resources.

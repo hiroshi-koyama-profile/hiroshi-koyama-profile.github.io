@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hrkoyama.github.io/numerical-methods-atlas/sitemap.xml

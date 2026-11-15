@@ -1,2 +1,5 @@
 *.pdf binary
 *.csv whitespace=cr-at-eol
+
+# Preserve generated scientific figure files without text normalization.
+the-art-of-thermal-instability/**/*.svg binary

@@ -1,0 +1,240 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Implementation roadmap · An Atlas of Numerical Methods</title><meta name="description" content="Shock-method expansion takes priority over relativity and new subject areas. The first published stage adds limited parabolic FV, characteristics, WENO-Z and an AUSM baseline , Roe&#39;s Property U with numerical counterexamples , and controlled planar odd–even di"><link rel="canonical" href="https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/"><link rel="alternate" hreflang="en" href="https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/"><link rel="alternate" hreflang="ja" href="https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/"><meta property="og:title" content="Implementation roadmap · An Atlas of Numerical Methods"><meta property="og:description" content="Shock-method expansion takes priority over relativity and new subject areas. The first published stage adds limited parabolic FV, characteristics, WENO-Z and an AUSM baseline , Roe&#39;s Property U with numerical counterexamples , and controlled planar odd–even di"><meta property="og:url" content="https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/"><meta property="og:type" content="article"><link rel="icon" href="/numerical-methods-atlas/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/numerical-methods-atlas/vendor/katex.min.css"><link rel="stylesheet" href="/numerical-methods-atlas/style.css"><script type="module" src="/numerical-methods-atlas/reading.js"></script><!-- site-head -->
+<link rel="stylesheet" href="/site.css?v=645e504550a3">
+<script src="/site.js?v=645e504550a3" defer></script>
+<link rel="describedby" href="/llms.txt">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<!-- /site-head -->
+</head><body data-content-language="en">
+<!-- site-top -->
+<div class="site-chrome site-top"><div class="site-inner"><a class="site-brand" href="/">Hiroshi Koyama</a><nav class="site-nav" aria-label="Site navigation"><a href="/"><span data-ui-ja="ホーム" data-ui-en="Home">ホーム / Home</span></a><a href="/rights/"><span data-ui-ja="利用条件・AI方針" data-ui-en="Rights &amp; AI policy">利用条件・AI方針 / Rights &amp; AI policy</span></a></nav><nav class="site-languages" aria-label="言語 / Language"><a href="?lang=ja" data-site-lang="ja" lang="ja">日本語</a><a href="?lang=en" data-site-lang="en" lang="en">English</a></nav><p class="site-content-note"><span data-ui-ja="このコンテンツの本文は英語です。" data-ui-en="This content is in English.">このコンテンツの本文は英語です。 / This content is in English.</span></p></div></div>
+<!-- /site-top -->
+<a class="skip-link" href="#main">Skip to content</a><header class="site-header"><a class="brand" href="/numerical-methods-atlas/?lang=en"><span class="brand-symbol" aria-hidden="true">∑</span><span>An Atlas of Numerical Methods</span></a><button class="mobile-menu" aria-label="Open navigation" aria-expanded="false">Menu</button><nav aria-label="Main navigation"><a href="/numerical-methods-atlas/?lang=en#/methods">Methods</a><a href="/numerical-methods-atlas/?lang=en#/experiments">Experiments</a><a href="/numerical-methods-atlas/en/read/">Reading chapters</a></nav><div class="language-switch" role="group" aria-label="Language"><a href="/numerical-methods-atlas/en/read/roadmap/" lang="en" hreflang="en" aria-current="page">English</a><a href="/numerical-methods-atlas/ja/read/roadmap/" lang="ja" hreflang="ja">日本語</a></div></header><main id="main" tabindex="-1"><div class="reading-shell page-width"><aside class="reading-nav"><a class="back-link" href="/numerical-methods-atlas/en/read/">← Reading chapters</a><p class="eyebrow">IN THIS EDITION</p><nav aria-label="Reading chapters"><a href="/numerical-methods-atlas/en/read/accuracy-stability/">A-stability, L-stability and error norms</a><a href="/numerical-methods-atlas/en/read/advanced-limiters/">Advanced limiters: TVB and positivity preservation</a><a href="/numerical-methods-atlas/en/read/advanced/">Preconditioning, dual time stepping, and residual distribution</a><a href="/numerical-methods-atlas/en/read/ale/">Arbitrary Lagrangian–Eulerian methods</a><a href="/numerical-methods-atlas/en/read/basis-functions/">Orthogonal polynomials and mesh basis functions</a><a href="/numerical-methods-atlas/en/read/benchmarks/">Benchmark library</a><a href="/numerical-methods-atlas/en/read/biological-models/">Biological model equations and numerical verification</a><a href="/numerical-methods-atlas/en/read/carbuncle/">The carbuncle phenomenon</a><a href="/numerical-methods-atlas/en/read/chapman-enskog/">Chapman–Enskog expansion: from populations to transport</a><a href="/numerical-methods-atlas/en/read/cip/">CIP: carry the value and the gradient</a><a href="/numerical-methods-atlas/en/read/coordinates-viscosity/">Polar and cylindrical coordinates: tensors and viscosity</a><a href="/numerical-methods-atlas/en/read/double-mach/">Double Mach Reflection</a><a href="/numerical-methods-atlas/en/read/elliptic/">Diffusion, elliptic equations, boundary conditions, and iteration</a><a href="/numerical-methods-atlas/en/read/equation-gallery/">Equation gallery: choose the equation before the algorithm</a><a href="/numerical-methods-atlas/en/read/experiments/">Interactive experiment guide</a><a href="/numerical-methods-atlas/en/read/fem/">Continuous finite elements: from weak form to sparse assembly</a><a href="/numerical-methods-atlas/en/read/geophysical-grids/">Spherical meshes and Arakawa A, B and C grids</a><a href="/numerical-methods-atlas/en/read/gravity-boundaries/">Gravity kernels: isolated FFTs and a periodic slab</a><a href="/numerical-methods-atlas/en/read/gsph/">Godunov smoothed particle hydrodynamics (GSPH)</a><a href="/numerical-methods-atlas/en/read/history/">Historical atlas</a><a href="/numerical-methods-atlas/en/read/hyperbolic-diffusion/">Nishikawa's hyperbolic diffusion: iterate a first-order system</a><a href="/numerical-methods-atlas/en/read/incompressible/">Incompressible flow: project with compatible discrete operators</a><a href="/numerical-methods-atlas/en/read/keep/">KEEP schemes: preserve the smooth-flow balance, test the limits</a><a href="/numerical-methods-atlas/en/read/lattice-boltzmann/">Lattice Boltzmann: collide, stream, recover fluid motion</a><a href="/numerical-methods-atlas/en/read/limiters/">Slope limiters: minmod, Superbee, MC, van Leer, and van Albada</a><a href="/numerical-methods-atlas/en/read/meshes/">Structured, unstructured, and triangular meshes</a><a href="/numerical-methods-atlas/en/read/mhd/">MHD: constrained transport and divergence cleaning</a><a href="/numerical-methods-atlas/en/read/movies/">Time-dependent tests: movies and saved states</a><a href="/numerical-methods-atlas/en/read/nasa-2d/">NASA 2D verification and validation case catalog</a><a href="/numerical-methods-atlas/en/read/particle-gravity/">Particle gravity: PM, P³M, Tree, multipoles, and multigrid</a><a href="/numerical-methods-atlas/en/read/particles-sph/">Particle methods and smoothed particle hydrodynamics</a><a href="/numerical-methods-atlas/en/read/reconstruction/">Euler reconstruction: PPM, characteristics, WENO-Z and AUSM</a><a href="/numerical-methods-atlas/en/read/reference-solutions/">Exact and reference solutions</a><a href="/numerical-methods-atlas/en/read/references/">References by original publication year</a><a href="/numerical-methods-atlas/en/read/relativistic-hydrodynamics/">Relativistic hydrodynamics: SRHD, GRHD, and GRMHD</a><a href="/numerical-methods-atlas/en/read/release-notes-v0.1.0/">v0.1.0 — First edition</a><a href="/numerical-methods-atlas/en/read/roadmap/" aria-current="page">Implementation roadmap</a><a href="/numerical-methods-atlas/en/read/roe-memorial/">Remembering Philip L. Roe</a><a href="/numerical-methods-atlas/en/read/runge-kutta/">Runge–Kutta families: stages, order, stability, and SSP</a><a href="/numerical-methods-atlas/en/read/shock-expansion/">Traced PPM, AUSM variants and curved bow shocks</a><a href="/numerical-methods-atlas/en/read/site-coverage/">Site coverage and counting rules</a><a href="/numerical-methods-atlas/en/read/sparse-nonlinear/">Sparse and nonlinear systems: measure the actual residual</a><a href="/numerical-methods-atlas/en/read/stability/">Differences, CFL, von Neumann analysis, and Lax</a><a href="/numerical-methods-atlas/en/read/stiff-integration/">Stiff integration: solve the stage, control the time error</a><a href="/numerical-methods-atlas/en/read/symplectic/">Symplectic integration: a canonical map, not an exact energy promise</a><a href="/numerical-methods-atlas/en/read/textbooks/">Textbooks: where to look next</a><a href="/numerical-methods-atlas/en/read/time-integration/">Time integration and leapfrog</a></nav></aside><div class="chapter-wrap"><div class="chapter-topline"><span>THE READING ROOM</span><a href="https://github.com/koyamarium/numerical-methods-atlas/blob/main/docs/roadmap.md">View source ↗</a></div><article class="prose" lang="en"><h1>Implementation roadmap</h1>
+<h2 id="current-priority-shock-methods">Current priority: shock methods<a class="heading-anchor" href="#current-priority-shock-methods" aria-label="Link to this section">#</a></h2>
+<p>Shock-method expansion takes priority over relativity and new subject areas.
+The first published stage adds <a href="/numerical-methods-atlas/en/read/reconstruction/">limited parabolic FV, characteristics, WENO-Z and an AUSM baseline</a>, <a href="/numerical-methods-atlas/en/read/advanced/#roes-property-u">Roe&#39;s Property U with numerical counterexamples</a>, and <a href="/numerical-methods-atlas/en/read/carbuncle/">controlled planar odd–even diagnostics</a>. The <a href="/numerical-methods-atlas/en/read/shock-expansion/">second computed stage</a> adds direct-Eulerian traced PPM with independent steepening/flattening switches, specified AUSM+/AUSM+-up fluxes, and conforming-grid cylinder-forebody tests including a directional HLLE/Roe experiment. The recorded strong-jump AUSM+ failure, finite-time bow-shock behavior and unresolved verification are explicit. Lagrange/remap, optimized original Rotated-RHLL, broader strength/rotation studies and external-code comparisons remain future work.</p>
+<h2 id="first-edition-executable-foundations">First edition: executable foundations<a class="heading-anchor" href="#first-edition-executable-foundations" aria-label="Link to this section">#</a></h2>
+<p>Version 0.1.0 brings together an educational Python library, a historical atlas,
+English method notes, a bibliographic catalog, comparison figures, and automated
+numerical checks. The repository is the first-edition distribution; the reading
+guide in the <a href="/numerical-methods-atlas/?lang=en#/">README</a> connects the material.</p>
+<p>The NASA case catalog includes computed 15-degree wedge baselines and remaining
+implementation candidates. A separate conforming-grid forebody diagnostic now includes a directional hybrid;
+catalog inclusion alone still does not indicate an implemented simulation.</p>
+<h2 id="next-verification-work">Next verification work<a class="heading-anchor" href="#next-verification-work" aria-label="Link to this section">#</a></h2>
+<ul>
+<li>Strengthen links between run manifests and saved arrays; report grid and time refinement together with wall-clock costs.</li>
+<li>Add finite-volume cell-average initialization and integrated references, characteristic WENO, positivity limiters, and stronger shock tests.</li>
+<li>Added shallow-water and isothermal Riemann references; topography, well balancing, and numerical dry-bed evolution remain separate implementation steps.</li>
+<li>Extend the new HLLD standard tests with UCT-HLLD, stronger-field cases and external reference-code comparisons.</li>
+<li>Explore nonlinear Fourier methods and dealiasing, Euler DG with limiting, and multidimensional residual distribution.</li>
+<li>Implement low-Mach PDE preconditioning and extend the directional 2D Euler hybrid beyond its stated forebody tests; test entropy correction, positivity, and carbuncle resistance separately.</li>
+<li>Extend elliptic solvers to variable coefficients, anisotropy, line smoothing, FAS, AMG, and 2D mixed boundaries.</li>
+</ul>
+<h2 id="suggested-order-for-nasa-cases">Suggested order for NASA cases<a class="heading-anchor" href="#suggested-order-for-nasa-cases" aria-label="Link to this section">#</a></h2>
+<p>Start with wedge and expansion flows to verify 2D Euler fluxes and wall
+boundaries. Use the cavity and Blasius cases to establish viscous, pressure,
+and boundary treatments, then the cylinder to examine unsteady accuracy.
+For RANS, verify model implementations on flat-plate and bump cases before
+moving to airfoils, steps, diffusers, and humps. This order follows dependencies
+and difficulty and complements the atlas&#39;s publication chronology.</p>
+<h2 id="shock-gallery-nasa-wedges-and-a-forward-facing-step">Shock gallery: NASA wedges and a forward-facing step<a class="heading-anchor" href="#shock-gallery-nasa-wedges-and-a-forward-facing-step" aria-label="Link to this section">#</a></h2>
+<p>Computed the NASA 15-degree wedges at Mach 2.0 and 2.5 with independent
+body-fitted first-order HLL / SSPRK2 finite volumes, two grids and oblique-shock
+references. Added the classical Mach-3 forward step on a 240 × 80 blocked-cell
+mesh, 81 saved states to t = 4 and an MP4, bringing the movie catalog to five.
+The step uses plain reflecting corners, not the entropy/enthalpy reset of the
+original PPM comparison. These are educational inviscid baselines, not Wind-US
+outputs or viscous experimental validations. <a href="/numerical-methods-atlas/en/read/nasa-2d/">Setup and limits</a>.
+Mach-5 shock/boundary-layer interaction, Mach-7 viscous ramps and the existing
+transonic diffuser/airfoil cases remain implementation candidates.</p>
+<h2 id="web-edition">Web edition<a class="heading-anchor" href="#web-edition" aria-label="Link to this section">#</a></h2>
+<p><a href="/numerical-methods-atlas/">The public web edition</a>
+organizes the first-edition library as a historical atlas, method reading room,
+computed gallery, and searchable reference library. Each exhibit connects
+literature, equations, execution, figures, and verification scope.</p>
+<p>The interactive Sod comparison switches between four precomputed MUSCL density
+curves from the Python library. Figures and the original gallery validation
+manifest remain available alongside the complete source edition. Future
+exhibits should continue to distinguish tested educational examples,
+original-figure reproductions, prototypes, literature-only entries, and
+planned work.</p>
+<h2 id="first-expansion-interactive-numerical-notebooks">First expansion: interactive numerical notebooks<a class="heading-anchor" href="#first-expansion-interactive-numerical-notebooks" aria-label="Link to this section">#</a></h2>
+<p>The stability laboratory runs periodic FTCS, upwind, classical LF, and LW
+updates in the browser, with both velocity signs, Fourier amplification,
+pointwise error, and downloadable experiment snapshots. Its numerical kernels
+are checked against the Python implementation across 24 reference cases.</p>
+<p>The convergence notebook makes the existing DG and Euler entropy-wave gallery
+measurements inspectable, including observed slopes and scalar-unknown counts.
+It introduces no new wall-clock ranking or general nonlinear stability claim.
+The <a href="/numerical-methods-atlas/en/read/experiments/">experiment guide</a> records definitions and provenance.</p>
+<h2 id="second-expansion-geometry-time-and-multidimensional-shocks">Second expansion: geometry, time, and multidimensional shocks<a class="heading-anchor" href="#second-expansion-geometry-time-and-multidimensional-shocks" aria-label="Link to this section">#</a></h2>
+<p>Added seven scalar ODE integrators with a temporal notebook; three mesh-connectivity examples with an explorer; 1D SPH kernel reconstruction; a 1D ALE geometric-conservation check; and cylindrical gradient, Newtonian stress, and stress-divergence operators verified against analytic fields. The <a href="/numerical-methods-atlas/en/read/coordinates-viscosity/">coordinate and viscosity chapter</a> distinguishes physical components from coordinate-basis tensors.</p>
+<p><a href="/numerical-methods-atlas/en/read/double-mach/">The 2D Double Mach Reflection baseline</a> now computes an actual Mach-10 interaction with first-order HLL and SSPRK2. Higher-order reconstruction, full grid refinement, and resolution of the fine wall jet remain future work. The NASA wedge baselines were added later; the cataloged viscous and turbulence cases remain unimplemented. <a href="/numerical-methods-atlas/en/read/carbuncle/">Blunt-body carbuncle comparisons beyond the new planar diagnostic</a>, a complete SPH fluid solver, unstructured flow fluxes, and a complete ALE Euler solver also remain future work. <a href="/numerical-methods-atlas/en/read/roe-memorial/">The Roe memorial</a> is sourced from official university records.</p>
+<h2 id="third-expansion-hamiltonian-maps-and-particle-gravity">Third expansion: Hamiltonian maps and particle gravity<a class="heading-anchor" href="#third-expansion-hamiltonian-maps-and-particle-gravity" aria-label="Link to this section">#</a></h2>
+<p>Added fixed-step canonical maps and a notebook for harmonic/quartic oscillators; periodic 3D CIC/FFT PM; an isolated softened octree with monopole/full second moments; isolated doubled-grid convolution; and sampled/continuum slab Green-transform options. Figures have dedicated source manifests. P³M corrections, a coupled TreePM solver, FMM translations, cosmological expansion, shear-periodic remapping, and a gravity-coupled SPH fluid integrator remain future work.</p>
+<h2 id="fourth-expansion-nonsteady-movies-and-smooth-keep">Fourth expansion: nonsteady movies and smooth KEEP<a class="heading-anchor" href="#fourth-expansion-nonsteady-movies-and-smooth-keep" aria-label="Link to this section">#</a></h2>
+<p>Added saved-state output that leaves solver time steps unchanged, four numerical movies with frame inspection and MP4 export, and the original second-order Cartesian KEEP flux with smooth-vortex refinement. Steady fields retain still images. The KEEP implementation excludes shock stabilization, later PEP/redefined variants, high-order curvilinear forms, and the 3D TGV/LES examples discussed in the reading guide.</p>
+<h2 id="fifth-expansion-limiters-rk-families-and-cip">Fifth expansion: limiters, RK families, and CIP<a class="heading-anchor" href="#fifth-expansion-limiters-rk-families-and-cip" aria-label="Link to this section">#</a></h2>
+<p>Added selectable MUSCL slopes, TVB modified-minmod and positive-reconstruction building blocks, nine explicit RK tableaus with nonlinear stage verification, twelve oscillator methods, and original cubic-Hermite CIP with a conservation counterexample. Full Euler-update positivity is still a separate extension.</p>
+<h2 id="sixth-expansion-equations-sparse-systems-and-kinetic-transport">Sixth expansion: equations, sparse systems and kinetic transport<a class="heading-anchor" href="#sixth-expansion-equations-sparse-systems-and-kinetic-transport" aria-label="Link to this section">#</a></h2>
+<p>Added nine saved-profile cases across seven equation families, including
+Burgers and LWR traffic. Scalar exact cell averages and conserved cell means of
+semi-analytic Euler/shallow-water/isothermal Riemann references are distinguished.
+The <a href="/numerical-methods-atlas/en/read/reference-solutions/">reference library</a> adds 18 formula-based cases,
+including vacuum/dry fans, viscous profiles and a manufactured Poisson field.</p>
+<p>The new <a href="/numerical-methods-atlas/en/read/fem/">continuous P1 FEM</a>, <a href="/numerical-methods-atlas/en/read/sparse-nonlinear/">sparse/nonlinear solvers</a>,
+<a href="/numerical-methods-atlas/en/read/stiff-integration/">stiff ODE integrators</a>, <a href="/numerical-methods-atlas/en/read/incompressible/">periodic MAC projection</a>,
+<a href="/numerical-methods-atlas/en/read/lattice-boltzmann/">D2Q9–BGK</a>, and <a href="/numerical-methods-atlas/en/read/hyperbolic-diffusion/">first-order hyperbolic diffusion baseline</a>
+have dedicated numerical checks, figures and source-hashed manifests.
+<a href="/numerical-methods-atlas/en/read/chapman-enskog/">Chapman–Enskog expansion</a> is a formal derivation linked to
+the measured shear viscosity. These educational additions are included in the
+published atlas at <a href="/numerical-methods-atlas/">https://hrkoyama.github.io/numerical-methods-atlas/</a> . Their
+implementation limits and remaining verification work are stated in each chapter.</p>
+<h2 id="authorized-next-work">Authorized next work<a class="heading-anchor" href="#authorized-next-work" aria-label="Link to this section">#</a></h2>
+<ul>
+<li><strong>Added — Roe&#39;s Property U:</strong> original four conditions, parameter-vector derivation, jump/consistency/eigenbasis checks and an expansion-discontinuity counterexample; see <a href="/numerical-methods-atlas/en/read/advanced/#roes-property-u">the explanation</a>.</li>
+<li>Inutsuka&#39;s GSPH: Gaussian convolution and specific-volume reconstruction,
+oriented pair Riemann states, a matched conservative energy update, and
+smooth/contact/shock-tube verification before variable smoothing lengths.
+The Iwasaki–Inutsuka GSPMHD extension is a later, separately verified stage;
+see the <a href="/numerical-methods-atlas/en/read/gsph/">source notes and staged plan</a>.</li>
+<li>Relativistic hydrodynamics is a source-based extension plan: SRHD recovery
+and characteristic tests before SRMHD, fixed-metric GR, and independently
+verified Einstein–matter coupling. Radiation and SRGSPH are separate branches;
+see the <a href="/numerical-methods-atlas/en/read/relativistic-hydrodynamics/">development review checked in November 2026</a>.</li>
+<li><strong>First stage added:</strong> limited parabolic FV, conservative characteristics and FD WENO-Z with Sod/contact/Shu–Osher comparisons. Direct-Eulerian tracing/steepening/flattening are now added in <a href="/numerical-methods-atlas/en/read/shock-expansion/">the second stage</a>; Lagrange/remap remain separate.</li>
+<li>AUSM common-sound-speed baseline retained; specified AUSM+ and AUSM+-up fluxes, matched traced-PPM cases and a recorded admissibility failure are added in <a href="/numerical-methods-atlas/en/read/shock-expansion/">the second stage</a>.</li>
+<li><strong>Completed web stage:</strong> HLLD with Brio–Wu, Alfvén-wave refinement and weak field-loop CT-Contact/GLM comparisons; see the <a href="/numerical-methods-atlas/?lang=en#/mhd-tests">MHD tests</a>.</li>
+<li><strong>Planned — electromagnetic FDTD (finite-difference time-domain):</strong> Yee-grid
+placement, leapfrog Maxwell updates, CFL limits and numerical dispersion;
+start with vacuum-wave and conducting-cavity tests, then absorbing boundaries
+and PML reflection checks. Implementation and dedicated verification are pending.</li>
+<li><strong>Planned — plasma PIC (Particle-in-Cell):</strong> start with electrostatic
+particle–Poisson coupling, then electromagnetic particle–Maxwell coupling.
+Cover particle shapes, deposition/gather, Boris pushing, charge-conserving
+current deposition and Gauss-law diagnostics. Plan plasma-oscillation,
+two-stream and Landau-damping tests, with energy, noise and grid/time/particle
+refinement checks. Existing gravitational PM is a separate scoped example.
+The <a href="https://warpx.readthedocs.io/en/25.11/theory/pic.html">WarpX PIC theory notes</a>
+are a starting reference; no plasma PIC solver is implemented here yet.</li>
+<li>Stiff integration: higher-order IMEX, embedded DIRK, variable-step BDF and operator splitting beyond the implemented BE/BDF2/SDIRK2/IMEX-Euler models.</li>
+<li>Sparse/nonlinear solvers: matrix-free Newton–Krylov, robust reorderings/fill, flexible preconditioning and broader nonlinear benchmarks beyond the implemented fixed-right GMRES/BiCGSTAB and ILU(0).</li>
+<li>Viscous/incompressible flow: wall projection, SIMPLE/PISO, cavity and cylinder-wake validation beyond periodic Taylor–Green.</li>
+<li>FEM: mixed velocity–pressure pairs, inf–sup checks, curved/irregular meshes and natural/mixed boundary assembly.</li>
+<li>LBM: MRT/TRT/cumulant collisions, thermal and multiphase models beyond low-Mach isothermal D2Q9–BGK.</li>
+<li>Hyperbolic diffusion: full second-order RD, anisotropy and unified advection/viscous systems beyond the periodic first-order baseline.</li>
+</ul>
+<p>AMR is deferred at the author’s request; it is not part of this expansion.</p>
+<h2 id="biological-and-geophysical-survey-additions">Biological and geophysical survey additions<a class="heading-anchor" href="#biological-and-geophysical-survey-additions" aria-label="Link to this section">#</a></h2>
+<p><a href="/numerical-methods-atlas/en/read/biological-models/">The biological catalog</a> contains 22 survey-only model
+families, with equations, source conventions and proposed verification.
+A practical implementation sequence is logistic/SIR and enzyme kinetics,
+then Fisher fronts, FitzHugh–Nagumo, Schnakenberg and Keller–Segel, with a
+birth–death SSA as a separate stochastic branch. No biological solver or
+biological validation is added by the survey.</p>
+<p><a href="/numerical-methods-atlas/en/read/geophysical-grids/">Arakawa A/B/C</a> has variable-location diagrams and
+tested semi-discrete f-plane Fourier symbols. D/E, vertical staggering,
+nonlinear potential-vorticity schemes, Kelvin/Rossby waves and coastlines
+remain additional work. This is not a full geophysical dynamical core.</p>
+<h2 id="planned-machine-learning-numerics">Planned machine-learning numerics<a class="heading-anchor" href="#planned-machine-learning-numerics" aria-label="Link to this section">#</a></h2>
+<p><strong>Status: revision candidates; the dedicated explanations, implementations and
+verification below have not been added.</strong> Start with stable function evaluation,
+automatic differentiation and optimization as shared foundations for Volume 1.
+Scientific machine-learning applications are later candidates. These plans do
+not add to implemented-method counts, and no release date is assigned.</p>
+<p>Mixed-precision arithmetic and the design of low-precision GPU computations are
+outside the current scope. Ordinary floating-point roundoff and stable function
+evaluation remain part of the shared foundations.</p>
+<ul>
+<li><input disabled="" type="checkbox"> <strong>Softmax and log-sum-exp:</strong> maximum shifting, log-softmax, exponential
+overflow and underflow. Plan checks for large inputs, invariance under constant
+shifts, probability sums and derivative consistency. See the
+<a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.special.softmax.html">SciPy softmax notes</a>.</li>
+<li><input disabled="" type="checkbox"> <strong>Cross-entropy and stable loss evaluation:</strong> compute directly from logits,
+connect to log-sum-exp, and cover sigmoid and binary cross-entropy. Check finite
+values and analytic gradients for extreme inputs. Start from the
+<a href="https://docs.pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html">PyTorch cross-entropy documentation</a>.</li>
+<li><input disabled="" type="checkbox"> <strong>Automatic differentiation and backpropagation:</strong> forward/reverse modes,
+the chain rule, Jacobian–vector products (JVPs), vector–Jacobian products (VJPs)
+and Hessian–vector products. Distinguish symbolic and finite-difference
+derivatives; cover roundoff, nondifferentiable points and intermediate-storage
+costs. Use the <a href="https://docs.jax.dev/en/latest/301/index.html">JAX autodiff guide</a>
+and plan analytic/directional derivative comparisons.</li>
+<li><input disabled="" type="checkbox"> <strong>Implicit differentiation, adjoints and differentiable solvers:</strong>
+sensitivities through linear solves, converged nonlinear systems and time
+evolution. Distinguish unrolling iterations from differentiating the defining
+equations; state Jacobian invertibility, solve tolerances and gradient checks.
+The <a href="https://papers.neurips.cc/paper_files/paper/2022/file/228b9279ecf9bbafe582406850c57115-Paper-Conference.pdf">implicit-differentiation paper</a>
+is a starting reference.</li>
+<li><input disabled="" type="checkbox"> <strong>Machine-learning optimization:</strong> gradient
+descent/SGD, momentum, Adam, L-BFGS and Gauss–Newton/Levenberg–Marquardt.
+Distinguish objective minimization from the existing Newton root solves;
+compare scaling, conditioning, learning rates and gradient norms.
+Do not claim universal convergence or a universal ranking.</li>
+<li><input disabled="" type="checkbox"> <strong>Application candidate — PINNs and inverse problems:</strong> separate PDE,
+initial/boundary and observation losses; compare with conventional finite
+differences/FEM using shared error measures. A lower training loss alone is
+not a PDE-error guarantee. See the <a href="https://maziarraissi.github.io/PINNs/">authors&#39; PINN notes</a>
+and <a href="https://papers.nips.cc/paper_files/paper/2021/hash/df438e5206f31600e6ae4af72f2725f1-Abstract.html">failure-mode study</a>.</li>
+<li><input disabled="" type="checkbox"> <strong>Application candidate — neural operators/Fourier neural operators:</strong>
+connect learned function-to-solution maps with the existing Fourier bases and
+spectral methods. Plan separate checks of out-of-distribution behavior, grid
+changes, discretization and aliasing errors; changing grid resolution alone
+does not guarantee accuracy. See the
+<a href="https://www.jmlr.org/papers/volume24/21-1524/21-1524.pdf">neural-operator paper</a>.</li>
+<li><input disabled="" type="checkbox"> <strong>Application candidate — symbolic regression and equation discovery:</strong>
+search for explicit expressions from data or learned models, separately from
+automatic derivative evaluation. Assess noise, dimensions/symmetries,
+expression complexity and independent-data checks. Consider the study on
+<a href="https://proceedings.neurips.cc/paper_files/paper/2020/hash/c9f2f917078bd2db12f23c3b413d9cba-Abstract.html">extracting symbolic models from deep learning</a>.</li>
+</ul>
+<h2 id="planned-quantum-chemistry-and-dft">Planned quantum chemistry and DFT<a class="heading-anchor" href="#planned-quantum-chemistry-and-dft" aria-label="Link to this section">#</a></h2>
+<p><strong>Status: planned; implementation and the dedicated literature review have not
+started. No release date is assigned.</strong> This is a separate electronic-structure
+branch, with the following development checklist. None of these planned items
+adds to the current implemented-method or equation counts.</p>
+<ul>
+<li><input disabled="" type="checkbox"> <strong>Schrödinger eigenproblems:</strong> begin with one-electron models, including
+the harmonic oscillator and hydrogenic radial problem. Compare finite
+differences, finite elements and spectral discretization, recording boundary,
+domain-truncation and resolution errors separately.</li>
+<li><input disabled="" type="checkbox"> <strong>Electronic-structure bases:</strong> introduce atomic orbitals, Gaussian and
+Slater functions, plane waves and real-space grids. Include overlap matrices
+and generalized eigenproblems. Connect to the existing
+<a href="/numerical-methods-atlas/en/read/basis-functions/">element-basis notebook</a>, while distinguishing its
+mesh-local polynomial examples from molecular orbital basis sets.</li>
+<li><input disabled="" type="checkbox"> <strong>Coulomb and Hartree potentials:</strong> connect electronic charge density to
+Poisson solvers. State electrostatic units, charge signs, isolated/periodic
+boundaries, zero modes and self-interaction conventions explicitly; do not
+silently reuse gravitational signs or normalizations.</li>
+<li><input disabled="" type="checkbox"> <strong>Hartree–Fock:</strong> develop a small closed-shell molecular example with
+matrix assembly, a generalized eigenvalue solve and a self-consistent field
+loop. Verify the required integral machinery before presenting energies.</li>
+<li><input disabled="" type="checkbox"> <strong>Kohn–Sham density functional theory:</strong> explain the density, effective
+potential and exchange–correlation approximation. Start with an explicitly
+identified LDA model; GGA and later functionals require their own verification.</li>
+<li><input disabled="" type="checkbox"> <strong>SCF iteration and mixing:</strong> compare damping, density/potential mixing
+and Pulay/DIIS acceleration. Report electron-number checks, eigenproblem and
+SCF residuals, energy changes and explicit nonconvergence.</li>
+<li><input disabled="" type="checkbox"> <strong>Verification examples:</strong> use one-electron references and small atoms or
+molecules, with basis/grid refinement and independent reference-code checks.
+Separate discretization error, SCF tolerance and physical-model differences.</li>
+</ul>
+<p>The intended first milestones are a verified one-electron eigensolver, followed
+by a minimal-basis Hartree–Fock example, then a clearly scoped Kohn–Sham DFT
+example. Periodic materials, pseudopotentials, spin-dependent extensions and
+post-Hartree–Fock correlation are later branches, rather than promises of the
+first implementation. This plan does not change the current priority of the
+fluid-method work above, and AMR remains deferred.</p>
+<p>The next editorial priority is to connect shared equations to multiple
+verified discretizations, cost/error evidence and explicit failure cases,
+while retaining separate labels for surveys, prototypes and verified models.</p>
+<p>Reference-element basis functions now have an executable <a href="/numerical-methods-atlas/en/read/basis-functions/">Legendre/nodal notebook</a>, including exact and quadrature mass, affine metric scaling and triangular P2 shapes. Curved-element metrics, orthogonal simplex modes and higher-order FEM/DG fluid assembly remain separate extensions.</p>
+<h2 id="verified-euler-and-mhd-comparisons">Verified Euler and MHD comparisons<a class="heading-anchor" href="#verified-euler-and-mhd-comparisons" aria-label="Link to this section">#</a></h2>
+<p>Added 2D primitive MUSCL with minmod/MC, exact-cell-average smooth refinement, NASA wedge first/second-order comparisons on two grids, and three forward-step reconstruction clips. The <a href="/numerical-methods-atlas/?lang=en#/flow-comparison">comparison page</a> fixes HLL/SSPRK2 and exposes diagnostics. Added full-vector HLLD, Brio–Wu, four-grid circular Alfvén waves and weak magnetic loops on two grids with HLLE/HLLD × CT-Contact/GLM. Source/artifact hashes, conservative arrays, positivity/retry/fallback diagnostics and bilingual scope notes accompany the <a href="/numerical-methods-atlas/?lang=en#/mhd-tests">MHD page</a>. These complete the agreed three web stages; books remain deferred.</p>
+<h2 id="same-system-poisson-solvers">Same-system Poisson solvers<a class="heading-anchor" href="#same-system-poisson-solvers" aria-label="Link to this section">#</a></h2>
+<p>The <a href="/numerical-methods-atlas/?lang=en#/poisson-comparison">comparison notebook</a> adds Jacobi, weighted Jacobi, red-black GS/SOR, CG, V-cycles, FFT/DST and separable DST+Thomas under one residual target. Two broad-source problems, a single-eigenmode diagnostic, three timing trials and a separate 1D Thomas table expose the differences. <a href="/numerical-methods-atlas/en/read/elliptic/#same-system-poisson-comparison">Definitions and limits</a>.</p>
+</article><div class="chapter-bottom"><a href="/numerical-methods-atlas/?lang=en#/atlas">Historical atlas →</a><a href="/numerical-methods-atlas/?lang=en#/gallery">Computed gallery →</a></div></div><aside class="chapter-toc"><p class="eyebrow">ON THIS PAGE</p><nav aria-label="On this page"><a href="#current-priority-shock-methods">Current priority: shock methods</a><a href="#first-edition-executable-foundations">First edition: executable foundations</a><a href="#next-verification-work">Next verification work</a><a href="#suggested-order-for-nasa-cases">Suggested order for NASA cases</a><a href="#shock-gallery-nasa-wedges-and-a-forward-facing-step">Shock gallery: NASA wedges and a forward-facing step</a><a href="#web-edition">Web edition</a><a href="#first-expansion-interactive-numerical-notebooks">First expansion: interactive numerical notebooks</a><a href="#second-expansion-geometry-time-and-multidimensional-shocks">Second expansion: geometry, time, and multidimensional shocks</a><a href="#third-expansion-hamiltonian-maps-and-particle-gravity">Third expansion: Hamiltonian maps and particle gravity</a><a href="#fourth-expansion-nonsteady-movies-and-smooth-keep">Fourth expansion: nonsteady movies and smooth KEEP</a><a href="#fifth-expansion-limiters-rk-families-and-cip">Fifth expansion: limiters, RK families, and CIP</a><a href="#sixth-expansion-equations-sparse-systems-and-kinetic-transport">Sixth expansion: equations, sparse systems and kinetic transport</a><a href="#authorized-next-work">Authorized next work</a><a href="#biological-and-geophysical-survey-additions">Biological and geophysical survey additions</a><a href="#planned-machine-learning-numerics">Planned machine-learning numerics</a><a href="#planned-quantum-chemistry-and-dft">Planned quantum chemistry and DFT</a><a href="#verified-euler-and-mhd-comparisons">Verified Euler and MHD comparisons</a><a href="#same-system-poisson-solvers">Same-system Poisson solvers</a></nav></aside></div></main><footer class="site-footer"><a href="/numerical-methods-atlas/?lang=en">An Atlas of Numerical Methods</a><a href="https://github.com/koyamarium/numerical-methods-atlas">GitHub ↗</a></footer><!-- site-bottom -->
+<footer class="site-chrome site-bottom"><div class="site-inner"><div class="site-legal"><p>© 2026 Hiroshi Koyama / 小山 洋</p><p><span data-ui-ja="公開資料のAI検索・要約・出典付き引用を歓迎します。" data-ui-en="AI search, summaries and source-linked quotation are welcome.">公開資料のAI検索・要約・出典付き引用を歓迎します。 / AI search, summaries and source-linked quotation are welcome.</span></p><p><span data-ui-ja="自作コード：MIT。本文・図・画像・PDF・データ・第三者資料は別条件です。" data-ui-en="Original code: MIT. Text, figures, images, PDFs, data and third-party material have separate terms.">自作コード：MIT。本文・図・画像・PDF・データ・第三者資料は別条件です。 / Original code: MIT. Text, figures, images, PDFs, data and third-party material have separate terms.</span></p><p class="site-credit"><span data-ui-ja="Webサイト制作：ChatGPTとCodexの支援を利用。" data-ui-en="Website developed with assistance from ChatGPT and Codex.">Webサイト制作：ChatGPTとCodexの支援を利用。 / Website developed with assistance from ChatGPT and Codex.</span></p></div><nav class="site-links" aria-label="Site policies and resources"><a href="/rights/"><span data-ui-ja="利用条件・AI方針" data-ui-en="Rights &amp; AI policy">利用条件・AI方針 / Rights &amp; AI policy</span></a><a href="/llms.txt"><span data-ui-ja="AI向け案内" data-ui-en="AI site guide">AI向け案内 / AI site guide</span></a><a href="/sitemap.xml"><span data-ui-ja="サイトマップ" data-ui-en="Sitemap">サイトマップ / Sitemap</span></a></nav></div></footer>
+<!-- /site-bottom -->
+</body></html>

@@ -84,3 +84,22 @@ Original implementation code is MIT; text, figures, scans, PDFs and data have se
 After editing static HTML or the shared chrome, run `node scripts/build-site-chrome.mjs`. Both HPCI generators also call the shared decorator so rebuilds retain the navigation and notices. The chrome build refreshes only the existing public notebook manifest receipts; scans, redactions and PDFs must remain unchanged.
 
 `/rights/`, `LICENSING.md`, the notebook notice, `/robots.txt` and `/llms.txt` must agree: welcome AI search, indexing, summaries, source-linked quotation and research/learning analysis; distinguish original code (MIT), content, visitor data and third-party rights. Do not claim blanket redistribution rights over linked papers or notebook content. The AI guide is a resource index, not a full text mirror or proof of source verification.
+
+## Numerical methods, thermal instability and Research Compass (2026-11-16)
+
+- `/guide/`: bilingual, browser-local retrieval over 159 public text pages and two project overviews. Source links, exports and knowledge packs use this site's URLs. It hosts no LLM and never sends questions to the operator.
+- `/numerical-methods-atlas/`: the reviewed public numerical-methods website, including its static English/Japanese reading rooms and interactive experiments.
+- `/the-art-of-thermal-instability/`: the reviewed English archive, figures, data, code and movie-gallery assets. Prototype and validation limits are preserved.
+
+The upstream sources remain available at `https://github.com/koyamarium/numerical-methods-atlas` and `https://github.com/koyamarium/the-art-of-thermal-instability`. The main public HTML rebuilt from those sources matched the previous production HTML byte for byte before URL/navigation adaptation. `research-imports.json` records the source commits and hashes for unchanged binary/download assets. Only the reviewed `website/dist/` and `dist/` artifacts were imported; numerical experiments were not rerun. The original project Pages sites are unpublished after this deployment was verified. No redirect or migration link is added on the previous portfolio.
+
+To refresh reviewed publication artifacts:
+
+```sh
+python3 scripts/import-research-sites.py --numerical-dist /absolute/path/to/numerical/website/dist --thermal-dist /absolute/path/to/thermal/dist
+node scripts/build-site-chrome.mjs
+python3 scripts/build-guide.py --local-site .
+node --test scripts/guide.test.mjs scripts/research-model.test.mjs
+```
+
+Retain upstream licensing notices and KaTeX/Marked notices. Refresh the root sitemap when pages are added or removed. Shared navigation changes require rebuilding the guide afterward so its per-page source hashes describe the exact HTML.
