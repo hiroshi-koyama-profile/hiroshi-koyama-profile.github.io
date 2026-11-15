@@ -118,3 +118,7 @@ node scripts/build-site-chrome.mjs
 The importer rebases site URLs, preserves all educational model modules and SVG figures, and connects the textbook's language controls to the shared site navigation while preserving interactive control values. Upstream source: `https://github.com/koyamarium/astronomy-step-by-step`. Its old Pages publication is stopped after verifying the new copy. No migration link or redirect is added to the old portfolio.
 
 Add changed entry pages to the root sitemap when refreshing the textbook. This migration does not add astrophysics to the two-domain Research Compass corpus.
+
+## Search Console verification
+
+Keep `google0b2aef3d9ae4b856.html` at the site root. This is the Google-issued HTML ownership verification file for `https://hrkoyama.github.io/`; removing it can invalidate ownership verification. The submitted discovery entry point is `https://hrkoyama.github.io/sitemap.xml`.
