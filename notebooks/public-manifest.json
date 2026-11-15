@@ -15,8 +15,8 @@
     },
     {
       "path": "LICENSING.md",
-      "bytes": 5160,
-      "sha256": "0c82542f1506bed1ee038a83435042b06e0e1e7fb23402687cb8032c211c8d18"
+      "bytes": 5183,
+      "sha256": "8fc1a9d11a38aba88d1a6b246abeccfe80c008e83327a88de212baa4e9744f1c"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -12020,8 +12020,8 @@
     },
     {
       "path": "bibliography.html",
-      "bytes": 31491,
-      "sha256": "a1042c152548f5aa8987e91df2455cc131d874c8b8a3ff72612ee354cce8a16e"
+      "bytes": 31442,
+      "sha256": "92df96295151b30ad7492665dc3b2623cfb35f9897b8ddf4e6aa83a7665aef40"
     },
     {
       "path": "bibliography.json",

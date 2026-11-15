@@ -10,9 +10,9 @@ The MIT license in `LICENSE` applies only to original software implementation co
 
 ## Text, illustrations, photographs, books and data: separate terms
 
-The MIT license does **not** cover explanatory text, translations, diagrams, plots, SVG artwork, photographs, notebook scans/PDFs, covers, book manuscripts, EPUB/PDF editions, videos or datasets. A code license does not automatically license its generated figures or other output. Follow an explicit item-level license or permission where present. Otherwise no additional reuse permission is granted for protected content: rights remain with the respective rights holders. Viewing the site or using a provided download does not by itself grant republication rights. Contact the maintainer through mailto:koyamarium@gmail.com for reuse requests.
+The MIT license does **not** cover explanatory text, translations, diagrams, plots, SVG artwork, photographs, notebook scans/PDFs, covers, book manuscripts, EPUB/PDF editions, videos or datasets. A code license does not automatically license its generated figures or other output. Follow an explicit item-level license or permission where present. Otherwise no additional reuse permission is granted for protected content: rights remain with the respective rights holders. Viewing the site or using a provided download does not by itself grant republication rights. Review https://hrkoyama.github.io/rights/ for the published reuse terms.
 
-解説本文・翻訳・図・グラフ・SVGの絵・写真・自筆ノート画像/PDF・表紙・書籍原稿/EPUB/PDF・動画・データはMITの対象外です。作図コードと完成図は別の対象です。個別の利用条件がある場合はその条件を優先し、未指定の保護対象部分は各権利者が権利を留保します。再利用の相談は上記サイトの問い合わせフォームへお願いします。
+解説本文・翻訳・図・グラフ・SVGの絵・写真・自筆ノート画像/PDF・表紙・書籍原稿/EPUB/PDF・動画・データはMITの対象外です。作図コードと完成図は別の対象です。個別の利用条件がある場合はその条件を優先し、未指定の保護対象部分は各権利者が権利を留保します。公開されている利用条件は https://hrkoyama.github.io/rights/ をご確認ください。
 
 This notice does not assert exclusive rights over unprotected facts, mathematical expressions, ideas, or material lacking copyright protection. Whether an AI-assisted/generated item is protected depends on its particular circumstances; this notice does not guarantee protection. Statutory exceptions, valid earlier permissions and applicable GitHub Terms of Service are unaffected. No ownership of third-party, jointly held or institutional rights is transferred or resolved by this notice.
 

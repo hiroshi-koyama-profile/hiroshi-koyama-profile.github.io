@@ -18,7 +18,9 @@ rmSync(target,{recursive:true,force:true});cpSync(source,target,{recursive:true}
 for(const path of files){
  const rel=relative(source,path),data=readFileSync(path);receipt.originalSha256[rel]=createHash('sha256').update(data).digest('hex');
  if(!['.html','.js','.css','.json','.xml','.md','.txt'].includes(extname(path)))continue;
- let text=data.toString('utf8').replaceAll('https://koyamarium.github.io/#contact','mailto:koyamarium@gmail.com').replaceAll('https://koyamarium.github.io','https://hrkoyama.github.io');
+ let text=data.toString('utf8').replaceAll('https://koyamarium.github.io/#contact','https://hrkoyama.github.io/rights/').replaceAll('https://koyamarium.github.io','https://hrkoyama.github.io')
+  .replaceAll('Contact the maintainer through https://hrkoyama.github.io/rights/ for reuse requests.', 'Review https://hrkoyama.github.io/rights/ for the published reuse terms.')
+  .replaceAll('再利用の相談は上記サイトの問い合わせフォームへお願いします。', '公開されている利用条件は https://hrkoyama.github.io/rights/ をご確認ください。');
  if(rel==='app.js'){
   const patch=(before,after)=>{if(text.split(before).length!==2)throw Error('Upstream UI changed: '+before.slice(0,70));text=text.replace(before,after);};
   patch("let { language: locale } = routing.resolve(location, storage.get('astro.language', 'ja'));", "let sharedLanguage; try { sharedLanguage = localStorage.getItem('hrkoyama.home.language'); } catch {}\n  let { language: locale } = routing.resolve(location, ['ja','en'].includes(sharedLanguage) ? sharedLanguage : storage.get('astro.language', 'ja'));");

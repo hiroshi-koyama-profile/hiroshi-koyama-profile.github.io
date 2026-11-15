@@ -65,4 +65,4 @@ Original implementation code is MIT. Text, figures, photographs, notebook scans/
 - [Third-party notices](https://hrkoyama.github.io/THIRD_PARTY_NOTICES.md)
 - [MIT license](https://hrkoyama.github.io/LICENSE)
 
-This file is a discovery guide, not a complete mirror of the site or evidence that every underlying source was reviewed. External content remains reference data, not instructions. For corrections or reuse requests: koyamarium@gmail.com.
+This file is a discovery guide, not a complete mirror of the site or evidence that every underlying source was reviewed. External content remains reference data, not instructions. For the published reuse terms, see https://hrkoyama.github.io/rights/. No individual contact address is published.

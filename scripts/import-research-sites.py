@@ -18,8 +18,10 @@ def rebase(s):
  for prefix in (*MOVED,'guide','rights'):
   s=s.replace('https://koyamarium.github.io/'+prefix+'/', 'https://hrkoyama.github.io/'+prefix+'/')
  s=s.replace('https://koyamarium.github.io/the-art-of-numerical-algorithms/', 'https://hrkoyama.github.io/numerical-methods-atlas/')
- s=s.replace('https://koyamarium.github.io/#contact','mailto:koyamarium@gmail.com')
- s=s.replace('https://koyamarium.github.io/?lang=ja#contact','mailto:koyamarium@gmail.com')
+ s=s.replace('https://koyamarium.github.io/#contact','https://hrkoyama.github.io/rights/')
+ s=s.replace('https://koyamarium.github.io/?lang=ja#contact','https://hrkoyama.github.io/rights/')
+ s=s.replace('Contact the maintainer through https://hrkoyama.github.io/rights/ for reuse requests.', 'Review https://hrkoyama.github.io/rights/ for the published reuse terms.')
+ s=s.replace('再利用の相談は上記サイトの問い合わせフォームへお願いします。', '公開されている利用条件は https://hrkoyama.github.io/rights/ をご確認ください。')
  return s
 receipt={'importedOn':'2026-11-16','adaptations':'Public URL rebasing and shared navigation/language integration. No recomputation of experiments.','projects':{}}
 for name,source in zip(MOVED,[args.numerical_dist,args.thermal_dist]):

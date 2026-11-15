@@ -122,3 +122,7 @@ Add changed entry pages to the root sitemap when refreshing the textbook. This m
 ## Search Console verification
 
 Keep `google0b2aef3d9ae4b856.html` at the site root. This is the Google-issued HTML ownership verification file for `https://hrkoyama.github.io/`; removing it can invalidate ownership verification. The submitted discovery entry point is `https://hrkoyama.github.io/sitemap.xml`.
+
+## Public contact information
+
+The rights page, licensing notices, bibliography and AI guide do not publish an individual email address. Keep Japanese and English wording aligned. Importers direct legacy contact references to the published rights policy; do not restore a contact address or advertise an unavailable inquiry form. Author attribution is retained.
