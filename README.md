@@ -103,3 +103,18 @@ node --test scripts/guide.test.mjs scripts/research-model.test.mjs
 ```
 
 Retain upstream licensing notices and KaTeX/Marked notices. Refresh the root sitemap when pages are added or removed. Shared navigation changes require rebuilding the guide afterward so its per-page source hashes describe the exact HTML.
+
+## Complete astrophysics textbook migration (2026-11-16)
+
+`/astronomy-step-by-step/ja/` and `/astronomy-step-by-step/en/` host the entire bilingual textbook: 16 foundation chapters, 35 advanced worked chapters, the solution library, textbook guide, numbers-and-units supplement and teaching principles. The later full-site request superseded the paused three-section proposal; the supplement is included as part of the complete textbook.
+
+`astronomy-import.json` records the upstream source commit and original public-file hashes. Build the upstream `astronomy-step-by-step` repository with `node scripts/check.mjs`, `node scripts/build.mjs`, and `node scripts/check-static.mjs`, then run:
+
+```sh
+node scripts/import-astronomy.mjs /absolute/path/to/astronomy-step-by-step/dist
+node scripts/build-site-chrome.mjs
+```
+
+The importer rebases site URLs, preserves all educational model modules and SVG figures, and connects the textbook's language controls to the shared site navigation while preserving interactive control values. Upstream source: `https://github.com/koyamarium/astronomy-step-by-step`. Its old Pages publication is stopped after verifying the new copy. No migration link or redirect is added to the old portfolio.
+
+Add changed entry pages to the root sitemap when refreshing the textbook. This migration does not add astrophysics to the two-domain Research Compass corpus.

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102b3c">
+  <meta name="description" content="Read finite lifetimes and thermal motion as two distinct effects. Distinguish natural and thermal broadening and calculate temperature scaling.">
+  <title>Why spectral lines have width | Theoretical Astrophysics, Step by Step</title>
+  <link rel="icon" href="/astronomy-step-by-step/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/astronomy-step-by-step/style.css?v=20261109-solutions">
+  <link rel="stylesheet" href="/astronomy-step-by-step/series.css?v=20261109-solutions">
+  <link rel="stylesheet" href="/astronomy-step-by-step/books.css?v=20261109-solutions">
+  <link rel="stylesheet" href="/astronomy-step-by-step/solutions.css?v=20261109-solutions">
+  <script src="/astronomy-step-by-step/illustrations.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/series.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/animation.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-gas-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-gas-content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-labs.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-gas-labs.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/press-schechter.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-dynamics-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/collapse-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/collapse-lab.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-dynamics-content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-dynamics-labs.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/nonequilibrium-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/nonequilibrium-content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/nonequilibrium-labs.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/schwarzschild.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/solution-extensions-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/solution-extensions-content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/solution-extensions-labs.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/solutions.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/numbers.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/books.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/routing.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/app.js?v=20261109-solutions" defer></script>
+
+  <link rel="canonical" href="https://hrkoyama.github.io/astronomy-step-by-step/en/chapter/width/">
+  <link rel="alternate" hreflang="ja" href="https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/width/">
+  <link rel="alternate" hreflang="en" href="https://hrkoyama.github.io/astronomy-step-by-step/en/chapter/width/">
+  <meta property="og:title" content="Why spectral lines have width | Theoretical Astrophysics, Step by Step">
+  <meta property="og:description" content="Read finite lifetimes and thermal motion as two distinct effects. Distinguish natural and thermal broadening and calculate temperature scaling.">
+  <meta property="og:url" content="https://hrkoyama.github.io/astronomy-step-by-step/en/chapter/width/">
+  <meta property="og:type" content="website">
+<!-- site-head -->
+<link rel="stylesheet" href="/site.css?v=645e504550a3">
+<script src="/site.js?v=645e504550a3" defer></script>
+<link rel="describedby" href="/llms.txt">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<!-- /site-head -->
+</head>
+<body>
+<!-- site-top -->
+<div class="site-chrome site-top"><div class="site-inner"><a class="site-brand" href="/">Hiroshi Koyama</a><nav class="site-nav" aria-label="Site navigation"><a href="/"><span data-ui-ja="ホーム" data-ui-en="Home">ホーム / Home</span></a><a href="/rights/"><span data-ui-ja="利用条件・AI方針" data-ui-en="Rights &amp; AI policy">利用条件・AI方針 / Rights &amp; AI policy</span></a></nav><nav class="site-languages" aria-label="言語 / Language"><a href="?lang=ja" data-site-lang="ja" lang="ja">日本語</a><a href="?lang=en" data-site-lang="en" lang="en">English</a></nav></div></div>
+<!-- /site-top -->
+<a class="skip" href="#main">本文へ / Skip to content</a>
+  <header class="header">
+    <a class="brand" href="/astronomy-step-by-step/en/" aria-label="ホーム / Home"><span class="brand-mark" aria-hidden="true">✳</span><span id="brand-name">Theoretical Astrophysics, Step by Step<small>FOUNDATIONS & ADVANCED</small></span></a>
+    <nav aria-label="メイン / Main"><a id="nav-chapters" href="/astronomy-step-by-step/en/chapters/">Foundations</a><a id="nav-advanced" href="/astronomy-step-by-step/en/advanced/">Advanced</a><a id="nav-solutions" href="/astronomy-step-by-step/en/solutions/">Solutions</a><a id="nav-numbers" href="/astronomy-step-by-step/en/appendix/numbers/">Numbers</a><a id="nav-books" href="/astronomy-step-by-step/en/books/">Books</a><a id="nav-about" href="/astronomy-step-by-step/en/about/">About</a></nav>
+    <div class="languages" role="group" aria-label="言語 / Language"><a data-lang="ja" lang="ja" href="/astronomy-step-by-step/ja/chapter/width/" role="button" aria-pressed="false">日本語</a><a data-lang="en" lang="en" href="/astronomy-step-by-step/en/chapter/width/" role="button" aria-pressed="true">EN</a></div>
+  </header>
+  <main id="main" tabindex="-1"><div class="lesson-layout"><aside class="sidebar"><a class="back" href="/astronomy-step-by-step/en/chapters/">← Foundations contents</a><div class="side-title">THE LEARNING PATH</div><nav class="side-links" aria-label="Chapter navigation"><a href="/astronomy-step-by-step/en/chapter/tools/" ><span>00</span>A small mathematical toolkit for the universe</a><a href="/astronomy-step-by-step/en/chapter/distance/" ><span>01</span>Measuring light, measuring distance</a><a href="/astronomy-step-by-step/en/chapter/matter/" ><span>02</span>Stars, gas, vacuum, and the forces of nature</a><a href="/astronomy-step-by-step/en/chapter/atom/" ><span>03</span>Atomic light and starlight: why 10.2 eV?</a><a href="/astronomy-step-by-step/en/chapter/width/" aria-current="page"><span>04</span>Why spectral lines have width</a><a href="/astronomy-step-by-step/en/chapter/scattering/" ><span>05</span>The classical electron radius and Thomson scattering</a><a href="/astronomy-step-by-step/en/chapter/thermal/" ><span>06</span>Mean free paths, thermal equilibrium, and Boltzmann factors</a><a href="/astronomy-step-by-step/en/chapter/planck/" ><span>07</span>From Einstein A and B coefficients to Planck’s law</a><a href="/astronomy-step-by-step/en/chapter/virial/" ><span>08</span>The virial theorem: why shrinking stars heat up</a><a href="/astronomy-step-by-step/en/chapter/structure/" ><span>09</span>Stellar structure and the mass–luminosity relation</a><a href="/astronomy-step-by-step/en/chapter/sun/" ><span>10</span>Why is the Sun’s surface about 6,000 degrees?</a><a href="/astronomy-step-by-step/en/chapter/eddington/" ><span>11</span>The Eddington limit: when light balances gravity</a><a href="/astronomy-step-by-step/en/chapter/chandra/" ><span>12</span>The Chandrasekhar mass: a white dwarf’s limit</a><a href="/astronomy-step-by-step/en/chapter/relativity/" ><span>13</span>An entry to general relativity: light, clocks, and gravity</a><a href="/astronomy-step-by-step/en/chapter/elements/" ><span>14</span>Nucleosynthesis and why helium is about 25%</a><a href="/astronomy-step-by-step/en/chapter/expansion/" ><span>15</span>Cosmic expansion and the Hubble–Lemaître law</a></nav></aside><article class="lesson"><header class="lesson-head"><div class="eyebrow">FOUNDATIONS · 04 / ATOMS & RADIATION</div><h1>Why spectral lines have width</h1><p class="dek">Read finite lifetimes and thermal motion as two distinct effects.</p><div class="lesson-meta"><span>Reading time: 13 min</span><span>Tools: Doppler shifts and square roots</span></div></header><div class="goal"><strong>WHAT YOU WILL LEARN</strong>Distinguish natural and thermal broadening and calculate temperature scaling.</div>
+      <section><h2><span class="step-no">01</span>First define the width</h2><p>We use the full width at half maximum (FWHM): the full separation between the two half-height points. Standard deviations and half-widths have different numerical factors; always specify the convention.</p></section><section><h2><span class="step-no">02</span>Finite lifetimes produce natural broadening</h2><p>A wave lasting only a finite time has a spread of frequencies, unlike an endless monochromatic wave. A shorter excited-state lifetime gives a broader natural line. We use the following result from wave analysis.</p><div class="equation"><div class="math">Δν<sub>nat,FWHM</sub> = <span class="frac"><span>1</span><span>2πτ</span></span></div><div class="caption">For a long-lived lower level and negligible additional broadening. The natural profile is Lorentzian.</div></div><aside class="callout warning">The estimate ΔEΔt ≈ ℏ does not fix the FWHM coefficient. The exact profile convention matters.</aside></section><section><h2><span class="step-no">03</span>Atoms move toward and away from us</h2><div class="equation"><div class="math"><span class="frac"><span>Δν</span><span>ν<sub>0</sub></span></span> ≈ <span class="frac"><span>v<sub>los</sub></span><span>c</span></span>,　σ<sub>v</sub> = √(<span class="frac"><span>k<sub>B</sub>T</span><span>m</span></span>)</div><div class="caption">v<sub>los</sub> is positive toward the observer; σ<sub>v</sub> is the one-dimensional velocity standard deviation. We assume |v| ≪ c.</div></div><div class="equation"><div class="math">Δν<sub>th,FWHM</sub> = <span class="frac"><span>ν<sub>0</sub></span><span>c</span></span>√(<span class="frac"><span>8 ln 2 · k<sub>B</sub>T</span><span>m</span></span>)</div></div><p>A Gaussian distribution of line-of-sight thermal velocities gives a Gaussian frequency profile. Its FWHM is 2√(2 ln 2) ≈ 2.355 times the standard deviation.</p></section><section><h2><span class="step-no">04</span>Compare the widths for hydrogen at 10,000 K</h2><p>Hydrogen has σᵥ ≈ 9.1 km/s and a thermal FWHM of about 21 km/s. At Lyα, ν₀ ≈ 2.47 × 10¹⁵ Hz, so Δν<sub>th</sub> ≈ 1.8 × 10¹¹ Hz. A 2p lifetime of about 1.6 ns gives a natural width near 1.0 × 10⁸ Hz.</p><p>Thermal broadening dominates the core in this example, but Lorentzian wings decline slowly and can still matter far from line centre. Combining the two gives a Voigt profile. Collisions, turbulence, rotation, and instruments can add further broadening.</p></section>
+      <aside class="quiz"><div class="eyebrow">CHECK YOUR UNDERSTANDING</div><h2>Pause and work it out.</h2><p>If the temperature of hydrogen gas quadruples, what happens to its thermal line width?</p><details><summary>Show the answer and reasoning</summary><p>It doubles: thermal width scales as √(T/m). At the same temperature, heavier atoms have narrower thermal lines.</p></details></aside>
+      <div class="sources"><strong>REFERENCES & PHYSICAL INPUTS</strong><p>These sources support the laws and numerical values; some use university-level mathematics. The explanations and algebra here are written for this guide.</p><ul><li><a href="https://www.nist.gov/pml/atomic-spectroscopy-compendium-basic-ideas-notation-data-and-formulas/atomic-spectroscopy-6" target="_blank" rel="noopener noreferrer">NIST · Spectral line shapes ↗</a></li><li><a href="https://www.astro.princeton.edu/~rt3504/ewExternalFiles/course_notes.pdf" target="_blank" rel="noopener noreferrer">Princeton · Radiative processes in astrophysics ↗</a></li></ul></div>
+      <div class="lesson-bottom"><button class="complete-button" id="complete-chapter" data-id="width" aria-pressed="false">Mark this chapter complete</button><div class="prev-next"><a href="/astronomy-step-by-step/en/chapter/atom/"><small>← Previous</small>Atomic light and starlight: why 10.2 eV?</a><a href="/astronomy-step-by-step/en/chapter/scattering/"><small>Next →</small>The classical electron radius and Thomson scattering</a></div></div></article></div></main>
+  <footer id="footer"><span>Theoretical Astrophysics, Step by Step</span><span><a href="/astronomy-step-by-step/en/books/">Textbooks & review volumes</a> · <a href="/astronomy-step-by-step/en/about/">Teaching principles</a></span></footer>
+
+<!-- site-bottom -->
+<footer class="site-chrome site-bottom"><div class="site-inner"><div class="site-legal"><p>© 2026 Hiroshi Koyama / 小山 洋</p><p><span data-ui-ja="公開資料のAI検索・要約・出典付き引用を歓迎します。" data-ui-en="AI search, summaries and source-linked quotation are welcome.">公開資料のAI検索・要約・出典付き引用を歓迎します。 / AI search, summaries and source-linked quotation are welcome.</span></p><p><span data-ui-ja="自作コード：MIT。本文・図・画像・PDF・データ・第三者資料は別条件です。" data-ui-en="Original code: MIT. Text, figures, images, PDFs, data and third-party material have separate terms.">自作コード：MIT。本文・図・画像・PDF・データ・第三者資料は別条件です。 / Original code: MIT. Text, figures, images, PDFs, data and third-party material have separate terms.</span></p><p class="site-credit"><span data-ui-ja="Webサイト制作：ChatGPTとCodexの支援を利用。" data-ui-en="Website developed with assistance from ChatGPT and Codex.">Webサイト制作：ChatGPTとCodexの支援を利用。 / Website developed with assistance from ChatGPT and Codex.</span></p></div><nav class="site-links" aria-label="Site policies and resources"><a href="/rights/"><span data-ui-ja="利用条件・AI方針" data-ui-en="Rights &amp; AI policy">利用条件・AI方針 / Rights &amp; AI policy</span></a><a href="/llms.txt"><span data-ui-ja="AI向け案内" data-ui-en="AI site guide">AI向け案内 / AI site guide</span></a><a href="/sitemap.xml"><span data-ui-ja="サイトマップ" data-ui-en="Sitemap">サイトマップ / Sitemap</span></a></nav></div></footer>
+<!-- /site-bottom -->
+</body>
+</html>

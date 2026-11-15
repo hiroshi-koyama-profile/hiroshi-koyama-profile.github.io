@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102b3c">
+  <meta name="description" content="Why does gravity govern stars when electromagnetism is so strong? Explain charge cancellation and why gravity adds up.">
+  <title>Stars, gas, vacuum, and the forces of nature | Theoretical Astrophysics, Step by Step</title>
+  <link rel="icon" href="/astronomy-step-by-step/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/astronomy-step-by-step/style.css?v=20261109-solutions">
+  <link rel="stylesheet" href="/astronomy-step-by-step/series.css?v=20261109-solutions">
+  <link rel="stylesheet" href="/astronomy-step-by-step/books.css?v=20261109-solutions">
+  <link rel="stylesheet" href="/astronomy-step-by-step/solutions.css?v=20261109-solutions">
+  <script src="/astronomy-step-by-step/illustrations.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/series.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/animation.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-gas-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-gas-content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-labs.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-gas-labs.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/press-schechter.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-dynamics-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/collapse-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/collapse-lab.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-dynamics-content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-dynamics-labs.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/nonequilibrium-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/nonequilibrium-content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/nonequilibrium-labs.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/schwarzschild.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/solution-extensions-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/solution-extensions-content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/solution-extensions-labs.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/solutions.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/numbers.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/books.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/routing.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/app.js?v=20261109-solutions" defer></script>
+
+  <link rel="canonical" href="https://hrkoyama.github.io/astronomy-step-by-step/en/chapter/matter/">
+  <link rel="alternate" hreflang="ja" href="https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/matter/">
+  <link rel="alternate" hreflang="en" href="https://hrkoyama.github.io/astronomy-step-by-step/en/chapter/matter/">
+  <meta property="og:title" content="Stars, gas, vacuum, and the forces of nature | Theoretical Astrophysics, Step by Step">
+  <meta property="og:description" content="Why does gravity govern stars when electromagnetism is so strong? Explain charge cancellation and why gravity adds up.">
+  <meta property="og:url" content="https://hrkoyama.github.io/astronomy-step-by-step/en/chapter/matter/">
+  <meta property="og:type" content="website">
+<!-- site-head -->
+<link rel="stylesheet" href="/site.css?v=645e504550a3">
+<script src="/site.js?v=645e504550a3" defer></script>
+<link rel="describedby" href="/llms.txt">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<!-- /site-head -->
+</head>
+<body>
+<!-- site-top -->
+<div class="site-chrome site-top"><div class="site-inner"><a class="site-brand" href="/">Hiroshi Koyama</a><nav class="site-nav" aria-label="Site navigation"><a href="/"><span data-ui-ja="ホーム" data-ui-en="Home">ホーム / Home</span></a><a href="/rights/"><span data-ui-ja="利用条件・AI方針" data-ui-en="Rights &amp; AI policy">利用条件・AI方針 / Rights &amp; AI policy</span></a></nav><nav class="site-languages" aria-label="言語 / Language"><a href="?lang=ja" data-site-lang="ja" lang="ja">日本語</a><a href="?lang=en" data-site-lang="en" lang="en">English</a></nav></div></div>
+<!-- /site-top -->
+<a class="skip" href="#main">本文へ / Skip to content</a>
+  <header class="header">
+    <a class="brand" href="/astronomy-step-by-step/en/" aria-label="ホーム / Home"><span class="brand-mark" aria-hidden="true">✳</span><span id="brand-name">Theoretical Astrophysics, Step by Step<small>FOUNDATIONS & ADVANCED</small></span></a>
+    <nav aria-label="メイン / Main"><a id="nav-chapters" href="/astronomy-step-by-step/en/chapters/">Foundations</a><a id="nav-advanced" href="/astronomy-step-by-step/en/advanced/">Advanced</a><a id="nav-solutions" href="/astronomy-step-by-step/en/solutions/">Solutions</a><a id="nav-numbers" href="/astronomy-step-by-step/en/appendix/numbers/">Numbers</a><a id="nav-books" href="/astronomy-step-by-step/en/books/">Books</a><a id="nav-about" href="/astronomy-step-by-step/en/about/">About</a></nav>
+    <div class="languages" role="group" aria-label="言語 / Language"><a data-lang="ja" lang="ja" href="/astronomy-step-by-step/ja/chapter/matter/" role="button" aria-pressed="false">日本語</a><a data-lang="en" lang="en" href="/astronomy-step-by-step/en/chapter/matter/" role="button" aria-pressed="true">EN</a></div>
+  </header>
+  <main id="main" tabindex="-1"><div class="lesson-layout"><aside class="sidebar"><a class="back" href="/astronomy-step-by-step/en/chapters/">← Foundations contents</a><div class="side-title">THE LEARNING PATH</div><nav class="side-links" aria-label="Chapter navigation"><a href="/astronomy-step-by-step/en/chapter/tools/" ><span>00</span>A small mathematical toolkit for the universe</a><a href="/astronomy-step-by-step/en/chapter/distance/" ><span>01</span>Measuring light, measuring distance</a><a href="/astronomy-step-by-step/en/chapter/matter/" aria-current="page"><span>02</span>Stars, gas, vacuum, and the forces of nature</a><a href="/astronomy-step-by-step/en/chapter/atom/" ><span>03</span>Atomic light and starlight: why 10.2 eV?</a><a href="/astronomy-step-by-step/en/chapter/width/" ><span>04</span>Why spectral lines have width</a><a href="/astronomy-step-by-step/en/chapter/scattering/" ><span>05</span>The classical electron radius and Thomson scattering</a><a href="/astronomy-step-by-step/en/chapter/thermal/" ><span>06</span>Mean free paths, thermal equilibrium, and Boltzmann factors</a><a href="/astronomy-step-by-step/en/chapter/planck/" ><span>07</span>From Einstein A and B coefficients to Planck’s law</a><a href="/astronomy-step-by-step/en/chapter/virial/" ><span>08</span>The virial theorem: why shrinking stars heat up</a><a href="/astronomy-step-by-step/en/chapter/structure/" ><span>09</span>Stellar structure and the mass–luminosity relation</a><a href="/astronomy-step-by-step/en/chapter/sun/" ><span>10</span>Why is the Sun’s surface about 6,000 degrees?</a><a href="/astronomy-step-by-step/en/chapter/eddington/" ><span>11</span>The Eddington limit: when light balances gravity</a><a href="/astronomy-step-by-step/en/chapter/chandra/" ><span>12</span>The Chandrasekhar mass: a white dwarf’s limit</a><a href="/astronomy-step-by-step/en/chapter/relativity/" ><span>13</span>An entry to general relativity: light, clocks, and gravity</a><a href="/astronomy-step-by-step/en/chapter/elements/" ><span>14</span>Nucleosynthesis and why helium is about 25%</a><a href="/astronomy-step-by-step/en/chapter/expansion/" ><span>15</span>Cosmic expansion and the Hubble–Lemaître law</a></nav></aside><article class="lesson"><header class="lesson-head"><div class="eyebrow">FOUNDATIONS · 02 / OBSERVATIONS & TOOLS</div><h1>Stars, gas, vacuum, and the forces of nature</h1><p class="dek">Why does gravity govern stars when electromagnetism is so strong?</p><div class="lesson-meta"><span>Reading time: 9 min</span><span>Tools: The inverse-square law</span></div></header><div class="goal"><strong>WHAT YOU WILL LEARN</strong>Explain charge cancellation and why gravity adds up.</div>
+      <section><h2><span class="step-no">01</span>Is a cosmic vacuum really empty?</h2><p>Space between stars contains atoms, ions, electrons, dust, and radiation. Even a very dilute medium can absorb or scatter light over a long path. Hot stellar interiors are plasmas: electrons are no longer bound to individual atoms.</p></section><section><h2><span class="step-no">02</span>Compare two inverse-square laws</h2><div class="equation"><div class="math">F<sub>G</sub> = <span class="frac"><span>Gm<sub>p</sub><sup>2</sup></span><span>r<sup>2</sup></span></span>,　F<sub>E</sub> = <span class="frac"><span>e<sup>2</sup></span><span>4πε<sub>0</sub>r<sup>2</sup></span></span></div></div><div class="equation"><div class="math"><span class="frac"><span>F<sub>E</sub></span><span>F<sub>G</sub></span></span> = <span class="frac"><span>e<sup>2</sup></span><span>4πε<sub>0</sub>Gm<sub>p</sub><sup>2</sup></span></span> ≈ 1.2 × 10<sup>36</sup></div><div class="caption">e is the elementary charge, ε₀ the vacuum permittivity, and mₚ the proton mass. This ratio is for two protons.</div></div></section><section><h2><span class="step-no">03</span>Large objects are nearly electrically neutral</h2><p>Nearly equal positive and negative charges largely cancel the long-range electric force. Gravity from ordinary matter adds attractively. This makes gravity central to the global balance of stars, while magnetic fields and electromagnetic forces still matter in many cosmic settings.</p></section><section><h2><span class="step-no">04</span>Pressure is force per area</h2><div class="equation"><div class="math">P = <span class="frac"><span>F</span><span>A</span></span>,　P<sub>gas</sub> = nk<sub>B</sub>T</div><div class="caption">n is the number of particles per unit volume. The ideal-gas equation describes pressure from particle motion.</div></div><p>Pressure itself has no direction. A star is supported by the force imbalance created when pressure is higher inside than outside.</p></section>
+      <aside class="quiz"><div class="eyebrow">CHECK YOUR UNDERSTANDING</div><h2>Pause and work it out.</h2><p>If two protons are separated twice as far, does the ratio of electric to gravitational force change?</p><details><summary>Show the answer and reasoning</summary><p>No. Both forces scale as 1/r², so the distance cancels in their ratio.</p></details></aside>
+      <div class="sources"><strong>REFERENCES & PHYSICAL INPUTS</strong><p>These sources support the laws and numerical values; some use university-level mathematics. The explanations and algebra here are written for this guide.</p><ul><li><a href="https://openstax.org/books/astronomy-2e/pages/15-1-the-structure-and-composition-of-the-sun" target="_blank" rel="noopener noreferrer">OpenStax · Structure and composition of the Sun ↗</a></li><li><a href="https://pdg.lbl.gov/2025/reviews/rpp2025-rev-astrophysical-constants.pdf" target="_blank" rel="noopener noreferrer">Particle Data Group · Astrophysical constants (2025) ↗</a></li></ul></div>
+      <div class="lesson-bottom"><button class="complete-button" id="complete-chapter" data-id="matter" aria-pressed="false">Mark this chapter complete</button><div class="prev-next"><a href="/astronomy-step-by-step/en/chapter/distance/"><small>← Previous</small>Measuring light, measuring distance</a><a href="/astronomy-step-by-step/en/chapter/atom/"><small>Next →</small>Atomic light and starlight: why 10.2 eV?</a></div></div></article></div></main>
+  <footer id="footer"><span>Theoretical Astrophysics, Step by Step</span><span><a href="/astronomy-step-by-step/en/books/">Textbooks & review volumes</a> · <a href="/astronomy-step-by-step/en/about/">Teaching principles</a></span></footer>
+
+<!-- site-bottom -->
+<footer class="site-chrome site-bottom"><div class="site-inner"><div class="site-legal"><p>© 2026 Hiroshi Koyama / 小山 洋</p><p><span data-ui-ja="公開資料のAI検索・要約・出典付き引用を歓迎します。" data-ui-en="AI search, summaries and source-linked quotation are welcome.">公開資料のAI検索・要約・出典付き引用を歓迎します。 / AI search, summaries and source-linked quotation are welcome.</span></p><p><span data-ui-ja="自作コード：MIT。本文・図・画像・PDF・データ・第三者資料は別条件です。" data-ui-en="Original code: MIT. Text, figures, images, PDFs, data and third-party material have separate terms.">自作コード：MIT。本文・図・画像・PDF・データ・第三者資料は別条件です。 / Original code: MIT. Text, figures, images, PDFs, data and third-party material have separate terms.</span></p><p class="site-credit"><span data-ui-ja="Webサイト制作：ChatGPTとCodexの支援を利用。" data-ui-en="Website developed with assistance from ChatGPT and Codex.">Webサイト制作：ChatGPTとCodexの支援を利用。 / Website developed with assistance from ChatGPT and Codex.</span></p></div><nav class="site-links" aria-label="Site policies and resources"><a href="/rights/"><span data-ui-ja="利用条件・AI方針" data-ui-en="Rights &amp; AI policy">利用条件・AI方針 / Rights &amp; AI policy</span></a><a href="/llms.txt"><span data-ui-ja="AI向け案内" data-ui-en="AI site guide">AI向け案内 / AI site guide</span></a><a href="/sitemap.xml"><span data-ui-ja="サイトマップ" data-ui-en="Sitemap">サイトマップ / Sitemap</span></a></nav></div></footer>
+<!-- /site-bottom -->
+</body>
+</html>

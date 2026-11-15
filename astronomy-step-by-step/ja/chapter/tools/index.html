@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102b3c">
+  <meta name="description" content="指数・比例・単位。式変形の「なぜ」を一つずつ。 等号と近似を区別し、比例式から変化の倍率を計算できる。">
+  <title>宇宙を読むための、数式の道具箱 | 理論天文学の道具箱</title>
+  <link rel="icon" href="/astronomy-step-by-step/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/astronomy-step-by-step/style.css?v=20261109-solutions">
+  <link rel="stylesheet" href="/astronomy-step-by-step/series.css?v=20261109-solutions">
+  <link rel="stylesheet" href="/astronomy-step-by-step/books.css?v=20261109-solutions">
+  <link rel="stylesheet" href="/astronomy-step-by-step/solutions.css?v=20261109-solutions">
+  <script src="/astronomy-step-by-step/illustrations.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/series.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/animation.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-gas-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-gas-content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-labs.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-gas-labs.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/press-schechter.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-dynamics-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/collapse-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/collapse-lab.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-dynamics-content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-dynamics-labs.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/nonequilibrium-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/nonequilibrium-content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/nonequilibrium-labs.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/schwarzschild.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/solution-extensions-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/solution-extensions-content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/solution-extensions-labs.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/solutions.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/numbers.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/books.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/routing.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/app.js?v=20261109-solutions" defer></script>
+
+  <link rel="canonical" href="https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/tools/">
+  <link rel="alternate" hreflang="ja" href="https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/tools/">
+  <link rel="alternate" hreflang="en" href="https://hrkoyama.github.io/astronomy-step-by-step/en/chapter/tools/">
+  <meta property="og:title" content="宇宙を読むための、数式の道具箱 | 理論天文学の道具箱">
+  <meta property="og:description" content="指数・比例・単位。式変形の「なぜ」を一つずつ。 等号と近似を区別し、比例式から変化の倍率を計算できる。">
+  <meta property="og:url" content="https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/tools/">
+  <meta property="og:type" content="website">
+<!-- site-head -->
+<link rel="stylesheet" href="/site.css?v=645e504550a3">
+<script src="/site.js?v=645e504550a3" defer></script>
+<link rel="describedby" href="/llms.txt">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<!-- /site-head -->
+</head>
+<body>
+<!-- site-top -->
+<div class="site-chrome site-top"><div class="site-inner"><a class="site-brand" href="/">Hiroshi Koyama</a><nav class="site-nav" aria-label="Site navigation"><a href="/"><span data-ui-ja="ホーム" data-ui-en="Home">ホーム / Home</span></a><a href="/rights/"><span data-ui-ja="利用条件・AI方針" data-ui-en="Rights &amp; AI policy">利用条件・AI方針 / Rights &amp; AI policy</span></a></nav><nav class="site-languages" aria-label="言語 / Language"><a href="?lang=ja" data-site-lang="ja" lang="ja">日本語</a><a href="?lang=en" data-site-lang="en" lang="en">English</a></nav></div></div>
+<!-- /site-top -->
+<a class="skip" href="#main">本文へ / Skip to content</a>
+  <header class="header">
+    <a class="brand" href="/astronomy-step-by-step/ja/" aria-label="ホーム / Home"><span class="brand-mark" aria-hidden="true">✳</span><span id="brand-name">理論天文学の道具箱<small>THEORETICAL ASTROPHYSICS, STEP BY STEP</small></span></a>
+    <nav aria-label="メイン / Main"><a id="nav-chapters" href="/astronomy-step-by-step/ja/chapters/">入門編</a><a id="nav-advanced" href="/astronomy-step-by-step/ja/advanced/">発展編</a><a id="nav-solutions" href="/astronomy-step-by-step/ja/solutions/">解ライブラリー</a><a id="nav-numbers" href="/astronomy-step-by-step/ja/appendix/numbers/">番外編</a><a id="nav-books" href="/astronomy-step-by-step/ja/books/">教科書</a><a id="nav-about" href="/astronomy-step-by-step/ja/about/">この教材について</a></nav>
+    <div class="languages" role="group" aria-label="言語 / Language"><a data-lang="ja" lang="ja" href="/astronomy-step-by-step/ja/chapter/tools/" role="button" aria-pressed="true">日本語</a><a data-lang="en" lang="en" href="/astronomy-step-by-step/en/chapter/tools/" role="button" aria-pressed="false">EN</a></div>
+  </header>
+  <main id="main" tabindex="-1"><div class="lesson-layout"><aside class="sidebar"><a class="back" href="/astronomy-step-by-step/ja/chapters/">← 入門編の目次</a><div class="side-title">学びの道すじ</div><nav class="side-links" aria-label="章の目次"><a href="/astronomy-step-by-step/ja/chapter/tools/" aria-current="page"><span>00</span>宇宙を読むための、数式の道具箱</a><a href="/astronomy-step-by-step/ja/chapter/distance/" ><span>01</span>光を測る、距離を測る</a><a href="/astronomy-step-by-step/ja/chapter/matter/" ><span>02</span>星とガスと真空、宇宙を動かす力</a><a href="/astronomy-step-by-step/ja/chapter/atom/" ><span>03</span>原子の光と星の光 — 10.2 eVの意味</a><a href="/astronomy-step-by-step/ja/chapter/width/" ><span>04</span>スペクトル線に幅がある理由</a><a href="/astronomy-step-by-step/ja/chapter/scattering/" ><span>05</span>古典的電子半径とトムソン散乱</a><a href="/astronomy-step-by-step/ja/chapter/thermal/" ><span>06</span>平均自由行程、熱平衡、ボルツマン分布</a><a href="/astronomy-step-by-step/ja/chapter/planck/" ><span>07</span>A・B係数からプランク分布へ</a><a href="/astronomy-step-by-step/ja/chapter/virial/" ><span>08</span>ビリアル定理 — 星は縮むと熱くなる</a><a href="/astronomy-step-by-step/ja/chapter/structure/" ><span>09</span>星の構造と、質量–光度関係</a><a href="/astronomy-step-by-step/ja/chapter/sun/" ><span>10</span>太陽の表面は、なぜ約6000度？</a><a href="/astronomy-step-by-step/ja/chapter/eddington/" ><span>11</span>エディントン限界 — 光が重力とつり合うとき</a><a href="/astronomy-step-by-step/ja/chapter/chandra/" ><span>12</span>チャンドラセカール質量 — 白色矮星の限界</a><a href="/astronomy-step-by-step/ja/chapter/relativity/" ><span>13</span>一般相対論への入口 — 光と時計と重力</a><a href="/astronomy-step-by-step/ja/chapter/elements/" ><span>14</span>元素合成と、ヘリウムが約25%の理由</a><a href="/astronomy-step-by-step/ja/chapter/expansion/" ><span>15</span>宇宙膨張とハッブル–ルメートルの法則</a></nav></aside><article class="lesson"><header class="lesson-head"><div class="eyebrow">FOUNDATIONS · 00 / 観測と道具</div><h1>宇宙を読むための、数式の道具箱</h1><p class="dek">指数・比例・単位。式変形の「なぜ」を一つずつ。</p><div class="lesson-meta"><span>読む目安：8分</span><span>使う道具：分数・平方根</span></div></header><div class="goal"><strong>この章でできるようになること</strong>等号と近似を区別し、比例式から変化の倍率を計算できる。</div>
+      <section><h2><span class="step-no">01</span>まずは「何倍になるか」</h2><p>球の表面積は A＝4πR²。半径Rを2Rに置き換えるだけで、面積の変化がわかります。宇宙物理では、このような比の計算が大きな武器になります。</p><div class="equation"><div class="math">A' = 4π(2R)<sup>2</sup> = 4 × 4πR<sup>2</sup> = 4A</div></div><p>a ∝ bⁿ は「aはbのn乗に比例する」という意味です。a＝Cbⁿという式で、係数Cを省いています。比を取るときはCが一定であることを確認しましょう。</p></section><section><h2><span class="step-no">02</span>指数をまとめる・分母を払う</h2><div class="equation"><div class="math">R<sup>4</sup>(<span class="frac"><span>M</span><span>R</span></span>)<sup>4</sup> = R<sup>4</sup><span class="frac"><span>M<sup>4</sup></span><span>R<sup>4</sup></span></span> = M<sup>4</sup></div></div><p>同じ量を両辺に掛けたり、両辺を同じ量で割ったりしてよい。ただし0で割ることはできません。分数の指数は、M¹ᐟ³が立方根、M²ᐟ³がその2乗です。</p></section><section><h2><span class="step-no">03</span>＝、≈、∼、∝を使い分ける</h2><p><strong>＝</strong> はそのモデルでの等式。<strong>≈</strong> は数値や式の近似。<strong>∼</strong> は係数を省いた桁の見積もり。<strong>∝</strong> は一定条件での比例関係です。見積もりから厳密な係数が出たように扱わないことが大切です。</p></section><section><h2><span class="step-no">04</span>単位も式の一部</h2><p>この教材は原則SI単位を使います。距離m、時間s、質量kg、温度K、エネルギーJ、光度W（J/s）です。太陽の質量M☉≈1.99×10³⁰ kg、光度L☉≈3.83×10²⁶ Wを比較の物差しにします。</p><div class="equation"><div class="math">1 eV = 1.602 × 10<sup>−19</sup> J</div><div class="caption">eVは小さなエネルギーを表す単位。温度は T[K]＝t[℃]＋273.15。</div></div><p>exp(x) は eˣ の別の書き方です。e≈2.718。lnはその逆で、ln(eˣ)＝xとなります。指数や対数が初めてなら、数値例から読んで構いません。</p></section><section><h2><span class="step-no">05</span>よく使う定数を、ここで確認</h2><p><strong>c</strong>：光速。<strong>G</strong>：重力の強さを決める万有引力定数。<strong>h</strong>：光の振動数をエネルギーに換えるプランク定数。<strong>ℏ＝h/(2π)</strong>：換算プランク定数。<strong>k<sub>B</sub></strong>：温度をエネルギーに換えるボルツマン定数。</p><div class="equation"><div class="math">G ≈ 6.674 × 10<sup>−11</sup> m<sup>3</sup>kg<sup>−1</sup>s<sup>−2</sup><br>h ≈ 6.626 × 10<sup>−34</sup> J·s<br>k<sub>B</sub> ≈ 1.381 × 10<sup>−23</sup> J/K ≈ 8.617 × 10<sup>−5</sup> eV/K</div></div><p><strong>mₑ≈9.109×10⁻³¹ kg</strong>は電子の質量、<strong>mₚ≈1.673×10⁻²⁷ kg</strong>は陽子の質量、<strong>mᵤ≈1.661×10⁻²⁷ kg</strong>は原子質量定数です。電荷の大きさを表すe≈1.602×10⁻¹⁹ Cは、指数関数の底eとは文脈で区別します。</p></section>
+      <aside class="quiz"><div class="eyebrow">CHECK YOUR UNDERSTANDING</div><h2>自分の言葉で、確かめよう。</h2><p>半径が2倍になった球。表面積と体積はそれぞれ何倍？</p><details><summary>答えと考え方を見る</summary><p>表面積は2²＝4倍、体積は2³＝8倍。式の係数4πや4π/3は、比を取ると消えます。</p></details></aside>
+      <div class="sources"><strong>参考資料・出発点にした法則</strong><p>以下は原理や数値を確認できる資料です。大学レベルの数式を含むものもあります。本文の説明と式変形は、この教材向けに構成しています。</p><ul><li><a href="https://pdg.lbl.gov/2025/reviews/rpp2025-rev-astrophysical-constants.pdf" target="_blank" rel="noopener noreferrer">Particle Data Group · Astrophysical constants (2025) ↗</a></li></ul></div>
+      <div class="lesson-bottom"><button class="complete-button" id="complete-chapter" data-id="tools" aria-pressed="false">この章を読了にする</button><div class="prev-next"><a href="/astronomy-step-by-step/ja/chapter/distance/"><small>次の章 →</small>光を測る、距離を測る</a></div></div></article></div></main>
+  <footer id="footer"><span>理論天文学の道具箱</span><span><a href="/astronomy-step-by-step/ja/books/">教科書・総説集ガイド</a> · <a href="/astronomy-step-by-step/ja/about/">教材の方針</a></span></footer>
+
+<!-- site-bottom -->
+<footer class="site-chrome site-bottom"><div class="site-inner"><div class="site-legal"><p>© 2026 Hiroshi Koyama / 小山 洋</p><p><span data-ui-ja="公開資料のAI検索・要約・出典付き引用を歓迎します。" data-ui-en="AI search, summaries and source-linked quotation are welcome.">公開資料のAI検索・要約・出典付き引用を歓迎します。 / AI search, summaries and source-linked quotation are welcome.</span></p><p><span data-ui-ja="自作コード：MIT。本文・図・画像・PDF・データ・第三者資料は別条件です。" data-ui-en="Original code: MIT. Text, figures, images, PDFs, data and third-party material have separate terms.">自作コード：MIT。本文・図・画像・PDF・データ・第三者資料は別条件です。 / Original code: MIT. Text, figures, images, PDFs, data and third-party material have separate terms.</span></p><p class="site-credit"><span data-ui-ja="Webサイト制作：ChatGPTとCodexの支援を利用。" data-ui-en="Website developed with assistance from ChatGPT and Codex.">Webサイト制作：ChatGPTとCodexの支援を利用。 / Website developed with assistance from ChatGPT and Codex.</span></p></div><nav class="site-links" aria-label="Site policies and resources"><a href="/rights/"><span data-ui-ja="利用条件・AI方針" data-ui-en="Rights &amp; AI policy">利用条件・AI方針 / Rights &amp; AI policy</span></a><a href="/llms.txt"><span data-ui-ja="AI向け案内" data-ui-en="AI site guide">AI向け案内 / AI site guide</span></a><a href="/sitemap.xml"><span data-ui-ja="サイトマップ" data-ui-en="Sitemap">サイトマップ / Sitemap</span></a></nav></div></footer>
+<!-- /site-bottom -->
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102b3c">
+  <meta name="description" content="回転すると、静止できない領域と安定円軌道はどう変わるか。 地平面と静止限界を区別し、回転の向きで変わる円軌道を計算する。">
+  <title>Kerr解：回転・エルゴ領域・ISCO | 理論天文学の道具箱</title>
+  <link rel="icon" href="/astronomy-step-by-step/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/astronomy-step-by-step/style.css?v=20261109-solutions">
+  <link rel="stylesheet" href="/astronomy-step-by-step/series.css?v=20261109-solutions">
+  <link rel="stylesheet" href="/astronomy-step-by-step/books.css?v=20261109-solutions">
+  <link rel="stylesheet" href="/astronomy-step-by-step/solutions.css?v=20261109-solutions">
+  <script src="/astronomy-step-by-step/illustrations.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/series.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/animation.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-gas-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-gas-content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-labs.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-gas-labs.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/press-schechter.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-dynamics-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/collapse-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/collapse-lab.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-dynamics-content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-dynamics-labs.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/nonequilibrium-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/nonequilibrium-content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/nonequilibrium-labs.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/schwarzschild.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/solution-extensions-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/solution-extensions-content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/solution-extensions-labs.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/solutions.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/numbers.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/books.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/routing.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/app.js?v=20261109-solutions" defer></script>
+
+  <link rel="canonical" href="https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/kerr/">
+  <link rel="alternate" hreflang="ja" href="https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/kerr/">
+  <link rel="alternate" hreflang="en" href="https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/kerr/">
+  <meta property="og:title" content="Kerr解：回転・エルゴ領域・ISCO | 理論天文学の道具箱">
+  <meta property="og:description" content="回転すると、静止できない領域と安定円軌道はどう変わるか。 地平面と静止限界を区別し、回転の向きで変わる円軌道を計算する。">
+  <meta property="og:url" content="https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/kerr/">
+  <meta property="og:type" content="website">
+<!-- site-head -->
+<link rel="stylesheet" href="/site.css?v=645e504550a3">
+<script src="/site.js?v=645e504550a3" defer></script>
+<link rel="describedby" href="/llms.txt">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<!-- /site-head -->
+</head>
+<body>
+<!-- site-top -->
+<div class="site-chrome site-top"><div class="site-inner"><a class="site-brand" href="/">Hiroshi Koyama</a><nav class="site-nav" aria-label="Site navigation"><a href="/"><span data-ui-ja="ホーム" data-ui-en="Home">ホーム / Home</span></a><a href="/rights/"><span data-ui-ja="利用条件・AI方針" data-ui-en="Rights &amp; AI policy">利用条件・AI方針 / Rights &amp; AI policy</span></a></nav><nav class="site-languages" aria-label="言語 / Language"><a href="?lang=ja" data-site-lang="ja" lang="ja">日本語</a><a href="?lang=en" data-site-lang="en" lang="en">English</a></nav></div></div>
+<!-- /site-top -->
+<a class="skip" href="#main">本文へ / Skip to content</a>
+  <header class="header">
+    <a class="brand" href="/astronomy-step-by-step/ja/" aria-label="ホーム / Home"><span class="brand-mark" aria-hidden="true">✳</span><span id="brand-name">理論天文学の道具箱<small>THEORETICAL ASTROPHYSICS, STEP BY STEP</small></span></a>
+    <nav aria-label="メイン / Main"><a id="nav-chapters" href="/astronomy-step-by-step/ja/chapters/">入門編</a><a id="nav-advanced" href="/astronomy-step-by-step/ja/advanced/">発展編</a><a id="nav-solutions" href="/astronomy-step-by-step/ja/solutions/">解ライブラリー</a><a id="nav-numbers" href="/astronomy-step-by-step/ja/appendix/numbers/">番外編</a><a id="nav-books" href="/astronomy-step-by-step/ja/books/">教科書</a><a id="nav-about" href="/astronomy-step-by-step/ja/about/">この教材について</a></nav>
+    <div class="languages" role="group" aria-label="言語 / Language"><a data-lang="ja" lang="ja" href="/astronomy-step-by-step/ja/advanced/kerr/" role="button" aria-pressed="true">日本語</a><a data-lang="en" lang="en" href="/astronomy-step-by-step/en/advanced/kerr/" role="button" aria-pressed="false">EN</a></div>
+  </header>
+  <main id="main" tabindex="-1"><div class="lesson-layout"><aside class="sidebar"><a class="back" href="/astronomy-step-by-step/ja/advanced/">← 発展編の目次</a><div class="side-title">公開中の章</div><nav class="side-links" aria-label="発展編の章"><a href="/astronomy-step-by-step/ja/advanced/lane-emden/" ><span>01</span>Lane–Emden方程式とポリトロープ</a><a href="/astronomy-step-by-step/ja/advanced/bonnor-ebert/" ><span>02</span>Bonnor–Ebert球と雲の限界質量</a><a href="/astronomy-step-by-step/ja/advanced/isothermal-cylinder/" ><span>03</span>Ostrikerの等温円柱と限界線密度</a><a href="/astronomy-step-by-step/ja/advanced/hayashi/" ><span>04</span>林限界と林トラック</a><a href="/astronomy-step-by-step/ja/advanced/ellipsoids/" ><span>05</span>楕円体の重力ポテンシャル</a><a href="/astronomy-step-by-step/ja/advanced/tensor-virial/" ><span>06</span>テンソルビリアルとMaclaurin／Jacobi系列</a><a href="/astronomy-step-by-step/ja/advanced/jeans/" ><span>07</span>Jeans不安定性とJeans swindle</a><a href="/astronomy-step-by-step/ja/advanced/zeldovich/" ><span>08</span>Zel’dovich近似とパンケーキ</a><a href="/astronomy-step-by-step/ja/advanced/press-schechter/" ><span>09</span>Press–Schechter理論とハローの質量関数</a><a href="/astronomy-step-by-step/ja/advanced/rayleigh-taylor/" ><span>10</span>Rayleigh–Taylor不安定性</a><a href="/astronomy-step-by-step/ja/advanced/kelvin-helmholtz/" ><span>11</span>Kelvin–Helmholtz不安定性</a><a href="/astronomy-step-by-step/ja/advanced/bondi/" ><span>12</span>Bondi降着と音速点</a><a href="/astronomy-step-by-step/ja/advanced/parker-wind/" ><span>13</span>Parker風と超音速流出</a><a href="/astronomy-step-by-step/ja/advanced/sedov/" ><span>14</span>Sedov–Taylor爆風解</a><a href="/astronomy-step-by-step/ja/advanced/isothermal-collapse/" ><span>15</span>Larson–Penston／Shuの等温崩壊</a><a href="/astronomy-step-by-step/ja/advanced/shock-acceleration/" ><span>16</span>衝撃波と粒子加速</a><a href="/astronomy-step-by-step/ja/advanced/synchrotron/" ><span>17</span>シンクロトロン放射と電子の冷却</a><a href="/astronomy-step-by-step/ja/advanced/relaxation/" ><span>18</span>2体緩和と重力散乱</a><a href="/astronomy-step-by-step/ja/advanced/fokker-planck/" ><span>19</span>Fokker–Planck方程式</a><a href="/astronomy-step-by-step/ja/advanced/gravothermal/" ><span>20</span>グラボサーマル・カタストロフィー</a><a href="/astronomy-step-by-step/ja/advanced/angular-momentum/" ><span>21</span>角運動量輸送と降着</a><a href="/astronomy-step-by-step/ja/advanced/alpha-disk/" ><span>22</span>α円盤と粘性型の降着</a><a href="/astronomy-step-by-step/ja/advanced/mri/" ><span>23</span>MRI：磁場と差動回転の不安定性</a><a href="/astronomy-step-by-step/ja/advanced/viscous-disk/" ><span>24</span>Lynden–Bell–Pringleの粘性円盤相似解</a><a href="/astronomy-step-by-step/ja/advanced/toomre-q/" ><span>25</span>Toomre Qと円盤の自己重力</a><a href="/astronomy-step-by-step/ja/advanced/stromgren/" ><span>26</span>Strömgren球と電離前線</a><a href="/astronomy-step-by-step/ja/advanced/sunyaev-zeldovich/" ><span>27</span>逆コンプトン散乱とSZ効果</a><a href="/astronomy-step-by-step/ja/advanced/goldreich-julian/" ><span>28</span>Goldreich–Julian密度と共回転</a><a href="/astronomy-step-by-step/ja/advanced/two-temperature/" ><span>29</span>2温度プラズマと電子・イオンの緩和</a><a href="/astronomy-step-by-step/ja/advanced/ambipolar-diffusion/" ><span>30</span>両極性拡散：磁場と中性ガスのずれ</a><a href="/astronomy-step-by-step/ja/advanced/three-body-chemistry/" ><span>31</span>3体化学反応と水素分子の形成</a><a href="/astronomy-step-by-step/ja/advanced/schwarzschild/" ><span>32</span>Schwarzschild解：時計・光子球・ISCO</a><a href="/astronomy-step-by-step/ja/advanced/kerr/" aria-current="page"><span>33</span>Kerr解：回転・エルゴ領域・ISCO</a><a href="/astronomy-step-by-step/ja/advanced/tomimatsu-sato/" ><span>34</span>富松–佐藤解：Ernstポテンシャルと四重極</a><a href="/astronomy-step-by-step/ja/advanced/lin-mestel-shu/" ><span>35</span>Lin–Mestel–Shu：一様楕円体の崩壊</a></nav></aside><article class="lesson"><header class="lesson-head"><div class="eyebrow">ADVANCED · 33</div><h1>Kerr解：回転・エルゴ領域・ISCO</h1><p class="dek">回転すると、静止できない領域と安定円軌道はどう変わるか。</p><div class="lesson-meta"><span>読む目安：45分</span><span>使う道具：Schwarzschild解、微分、保存量</span></div></header><div class="goal"><strong>この章でできるようになること</strong>地平面と静止限界を区別し、回転の向きで変わる円軌道を計算する。</div><p class="foundation-bridge"><a href="/astronomy-step-by-step/ja/chapter/relativity/">つながる入門章：一般相対論への入口 — 光と時計と重力 ↗</a></p>
+      <p class="foundation-bridge"><a href="/astronomy-step-by-step/ja/solutions/">解の仮定・境界条件を比べる：ソリューションライブラリー ↗</a></p><section><h2><span class="step-no">01</span>回転する時空のものさし</h2><p>Schwarzschildの球対称性を離れ、定常・軸対称・真空・漸近平坦なKerr計量を既知の厳密解として使う。電荷はゼロ、周囲の円盤や試験粒子の自己重力は無視する。以下はG＝c＝M＝1で、物理半径はGM/c²、時間はGM/c³を掛けて戻す。χ＝cJ/(GM²)は0以上とし、軌道の向きを別に選ぶ。</p><div class="equation"><div class="math">Σ = R² + χ² cos²θ,　Δ = R² − 2R + χ²<br>ds² = −(1−2R/Σ)dt² − (4χR sin²θ/Σ)dt dφ + (Σ/Δ)dR² + Σdθ²<br>　+ [R²+χ²+2χ²R sin²θ/Σ]sin²θ dφ²</div></div><p>交差項の係数は2gₜφである。χ＝0ならSchwarzschildに戻る。RはBoyer–Lindquist座標で、回転時には球の面積半径ではない。式からの帰結を導く章であり、Einstein方程式から計量を構成するテンソル計算は参照資料へ譲る。</p></section><section><h2><span class="step-no">02</span>地平面と静止限界を分ける</h2><p>外側の地平面はΔ＝0の大きい根。固定したR,θ,φでの静止時計はds²＝gₜₜdt²なので、時間的であるにはgₜₜ＜0が必要となる。gₜₜ＝0の外側の根を静止限界と呼ぶ。</p><div class="equation"><div class="math">R₊ = 1 + √(1−χ²)<br>Rₑ(θ) = 1 + √(1−χ²cos²θ)</div></div><p>極では両者が一致し、赤道面の静止限界はχによらずR＝2。この間では静止はできないが、回転しながら時間的に動ける。静止限界は脱出不能な境界ではない。パネルは外部だけを扱い、地平面を横切る座標系や極限χ＝1の軌道は再生しない。</p></section><section><h2><span class="step-no">03</span>許される角速度と引きずり</h2><p>Rとθを一定にし、Ω＝dφ/dtで回る観測者を考える。計量に代入し、二次式が負になるΩの区間を求める。光的な両端は次式で、時間的な観測者はその内側にある。</p><div class="equation"><div class="math">gₜₜ + 2gₜφΩ + gφφΩ² &lt; 0<br>Ω₋ &lt; Ω &lt; Ω₊,　Ω± = [−gₜφ ± √(gₜφ²−gₜₜgφφ)]/gφφ<br>ΩZ = −gₜφ/gφφ = 2χR / [(R²+χ²)²−χ²Δsin²θ]</div></div><p>角運動量pφ＝gₜφuᵗ＋gφφuφがゼロでもΩZは一般にゼロでない。これが局所的な非回転観測者の引きずりである。その観測者も固定半径を保つ加速度が必要で、自由落下や円軌道の角速度と同一視しない。</p></section><section><h2><span class="step-no">04</span>円軌道からISCOへ</h2><p>赤道面の質量を持つ試験粒子では、保存エネルギーEと比角運動量Lを使って半径の運動を分離できる。Carter定数は赤道面でゼロ。円軌道の二条件と、半径方向の安定性が限界になる条件を組み合わせる。</p><div class="equation"><div class="math">Σ²(dR/dτ)² = ℛ(R)<br>ℛ = [E(R²+χ²)−χL]² − Δ[R²+(L−χE)²]<br>ℛ = ∂Rℛ = ∂²Rℛ = 0<br>⇒ R² − 6R + 8sχ√R − 3χ² = 0</div></div><p>微分ではE,Lを固定し、消去した後でs＝＋1を順行、s＝−1を逆行とする。外部の適切な根を選ぶと、次の閉じた式になる。</p><div class="equation"><div class="math">Z₁ = 1 + (1−χ²)<sup>1/3</sup>[(1+χ)<sup>1/3</sup>+(1−χ)<sup>1/3</sup>]<br>Z₂ = √(3χ²+Z₁²)<br>R<sub>ISCO,s</sub> = 3+Z₂−s√[(3−Z₁)(3+Z₁+2Z₂)]</div></div><p>χ＝0で両方向とも6。χ→1では順行の極限は1、逆行は9である。ただしχ＝1の地平面に普通の時間的円軌道を置く意味ではない。ISCOの内側にも落下物質は存在でき、圧力や磁場がある円盤の内縁は別の問題である。</p></section><section><h2><span class="step-no">05</span>回転の強さを変えて比較する</h2><div data-lab="kerr"></div><aside class="callout">線は本文の式から計算した座標半径。観測された影でも、粒子の軌道積分でもない。入力変更は異なる定常時空の比較で、ブラックホールが時間とともに回転を増すアニメーションではない。</aside></section>
+      <aside class="quiz"><div class="eyebrow">CHECK YOUR UNDERSTANDING</div><h2>式を使って、確かめよう。</h2><p>赤道面の静止限界がR＝2のままでも、地平面が内側へ動くと何が起きるか。</p><details><summary>答えと考え方を見る</summary><p>地平面の外に、遠方に対して静止できないエルゴ領域が広がる。脱出不可能という条件ではなく、許される時間的運動に共回転が必要になる。</p></details></aside>
+      <div class="sources"><strong>参考資料・出発点にした法則</strong><p>本文はこの教材向けの説明・導出です。参考資料とは記号や規格化が異なる場合があります。操作パネルの解法と近似は本文に明記しています。</p><ul><li><a href="https://doi.org/10.1103/PhysRevLett.11.237" target="_blank" rel="noopener noreferrer">Kerr (1963) · Gravitational field of a spinning mass ↗</a></li><li><a href="https://articles.adsabs.harvard.edu/pdf/1972ApJ...178..347B" target="_blank" rel="noopener noreferrer">Bardeen, Press & Teukolsky (1972) ↗</a></li><li><a href="https://arxiv.org/abs/1410.2130" target="_blank" rel="noopener noreferrer">Teukolsky (2015) · The Kerr Metric ↗</a></li></ul></div>
+      <div class="lesson-bottom"><button class="complete-button" id="complete-chapter" data-volume="advanced" data-id="kerr" aria-pressed="false">この章を読了にする</button><p class="advanced-progress">発展編の読了：0 / 35</p><div class="prev-next"><a href="/astronomy-step-by-step/ja/advanced/schwarzschild/"><small>← 前の章</small>Schwarzschild解：時計・光子球・ISCO</a><a href="/astronomy-step-by-step/ja/advanced/tomimatsu-sato/"><small>次の章 →</small>富松–佐藤解：Ernstポテンシャルと四重極</a></div></div></article></div></main>
+  <footer id="footer"><span>理論天文学の道具箱</span><span><a href="/astronomy-step-by-step/ja/books/">教科書・総説集ガイド</a> · <a href="/astronomy-step-by-step/ja/about/">教材の方針</a></span></footer>
+
+<!-- site-bottom -->
+<footer class="site-chrome site-bottom"><div class="site-inner"><div class="site-legal"><p>© 2026 Hiroshi Koyama / 小山 洋</p><p><span data-ui-ja="公開資料のAI検索・要約・出典付き引用を歓迎します。" data-ui-en="AI search, summaries and source-linked quotation are welcome.">公開資料のAI検索・要約・出典付き引用を歓迎します。 / AI search, summaries and source-linked quotation are welcome.</span></p><p><span data-ui-ja="自作コード：MIT。本文・図・画像・PDF・データ・第三者資料は別条件です。" data-ui-en="Original code: MIT. Text, figures, images, PDFs, data and third-party material have separate terms.">自作コード：MIT。本文・図・画像・PDF・データ・第三者資料は別条件です。 / Original code: MIT. Text, figures, images, PDFs, data and third-party material have separate terms.</span></p><p class="site-credit"><span data-ui-ja="Webサイト制作：ChatGPTとCodexの支援を利用。" data-ui-en="Website developed with assistance from ChatGPT and Codex.">Webサイト制作：ChatGPTとCodexの支援を利用。 / Website developed with assistance from ChatGPT and Codex.</span></p></div><nav class="site-links" aria-label="Site policies and resources"><a href="/rights/"><span data-ui-ja="利用条件・AI方針" data-ui-en="Rights &amp; AI policy">利用条件・AI方針 / Rights &amp; AI policy</span></a><a href="/llms.txt"><span data-ui-ja="AI向け案内" data-ui-en="AI site guide">AI向け案内 / AI site guide</span></a><a href="/sitemap.xml"><span data-ui-ja="サイトマップ" data-ui-en="Sitemap">サイトマップ / Sitemap</span></a></nav></div></footer>
+<!-- /site-bottom -->
+</body>
+</html>

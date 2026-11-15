@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102b3c">
+  <meta name="description" content="吸収・自然放出・誘導放出のつり合いを、式変形で解く。 詳細釣り合いの式をuνについて解き、分母の−1の出所を説明できる。">
+  <title>A・B係数からプランク分布へ | 理論天文学の道具箱</title>
+  <link rel="icon" href="/astronomy-step-by-step/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/astronomy-step-by-step/style.css?v=20261109-solutions">
+  <link rel="stylesheet" href="/astronomy-step-by-step/series.css?v=20261109-solutions">
+  <link rel="stylesheet" href="/astronomy-step-by-step/books.css?v=20261109-solutions">
+  <link rel="stylesheet" href="/astronomy-step-by-step/solutions.css?v=20261109-solutions">
+  <script src="/astronomy-step-by-step/illustrations.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/series.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/animation.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-gas-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-gas-content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-labs.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-gas-labs.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/press-schechter.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-dynamics-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/collapse-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/collapse-lab.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-dynamics-content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-dynamics-labs.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/nonequilibrium-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/nonequilibrium-content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/nonequilibrium-labs.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/schwarzschild.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/solution-extensions-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/solution-extensions-content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/solution-extensions-labs.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/solutions.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/numbers.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/books.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/routing.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/app.js?v=20261109-solutions" defer></script>
+
+  <link rel="canonical" href="https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/planck/">
+  <link rel="alternate" hreflang="ja" href="https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/planck/">
+  <link rel="alternate" hreflang="en" href="https://hrkoyama.github.io/astronomy-step-by-step/en/chapter/planck/">
+  <meta property="og:title" content="A・B係数からプランク分布へ | 理論天文学の道具箱">
+  <meta property="og:description" content="吸収・自然放出・誘導放出のつり合いを、式変形で解く。 詳細釣り合いの式をuνについて解き、分母の−1の出所を説明できる。">
+  <meta property="og:url" content="https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/planck/">
+  <meta property="og:type" content="website">
+<!-- site-head -->
+<link rel="stylesheet" href="/site.css?v=645e504550a3">
+<script src="/site.js?v=645e504550a3" defer></script>
+<link rel="describedby" href="/llms.txt">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<!-- /site-head -->
+</head>
+<body>
+<!-- site-top -->
+<div class="site-chrome site-top"><div class="site-inner"><a class="site-brand" href="/">Hiroshi Koyama</a><nav class="site-nav" aria-label="Site navigation"><a href="/"><span data-ui-ja="ホーム" data-ui-en="Home">ホーム / Home</span></a><a href="/rights/"><span data-ui-ja="利用条件・AI方針" data-ui-en="Rights &amp; AI policy">利用条件・AI方針 / Rights &amp; AI policy</span></a></nav><nav class="site-languages" aria-label="言語 / Language"><a href="?lang=ja" data-site-lang="ja" lang="ja">日本語</a><a href="?lang=en" data-site-lang="en" lang="en">English</a></nav></div></div>
+<!-- /site-top -->
+<a class="skip" href="#main">本文へ / Skip to content</a>
+  <header class="header">
+    <a class="brand" href="/astronomy-step-by-step/ja/" aria-label="ホーム / Home"><span class="brand-mark" aria-hidden="true">✳</span><span id="brand-name">理論天文学の道具箱<small>THEORETICAL ASTROPHYSICS, STEP BY STEP</small></span></a>
+    <nav aria-label="メイン / Main"><a id="nav-chapters" href="/astronomy-step-by-step/ja/chapters/">入門編</a><a id="nav-advanced" href="/astronomy-step-by-step/ja/advanced/">発展編</a><a id="nav-solutions" href="/astronomy-step-by-step/ja/solutions/">解ライブラリー</a><a id="nav-numbers" href="/astronomy-step-by-step/ja/appendix/numbers/">番外編</a><a id="nav-books" href="/astronomy-step-by-step/ja/books/">教科書</a><a id="nav-about" href="/astronomy-step-by-step/ja/about/">この教材について</a></nav>
+    <div class="languages" role="group" aria-label="言語 / Language"><a data-lang="ja" lang="ja" href="/astronomy-step-by-step/ja/chapter/planck/" role="button" aria-pressed="true">日本語</a><a data-lang="en" lang="en" href="/astronomy-step-by-step/en/chapter/planck/" role="button" aria-pressed="false">EN</a></div>
+  </header>
+  <main id="main" tabindex="-1"><div class="lesson-layout"><aside class="sidebar"><a class="back" href="/astronomy-step-by-step/ja/chapters/">← 入門編の目次</a><div class="side-title">学びの道すじ</div><nav class="side-links" aria-label="章の目次"><a href="/astronomy-step-by-step/ja/chapter/tools/" ><span>00</span>宇宙を読むための、数式の道具箱</a><a href="/astronomy-step-by-step/ja/chapter/distance/" ><span>01</span>光を測る、距離を測る</a><a href="/astronomy-step-by-step/ja/chapter/matter/" ><span>02</span>星とガスと真空、宇宙を動かす力</a><a href="/astronomy-step-by-step/ja/chapter/atom/" ><span>03</span>原子の光と星の光 — 10.2 eVの意味</a><a href="/astronomy-step-by-step/ja/chapter/width/" ><span>04</span>スペクトル線に幅がある理由</a><a href="/astronomy-step-by-step/ja/chapter/scattering/" ><span>05</span>古典的電子半径とトムソン散乱</a><a href="/astronomy-step-by-step/ja/chapter/thermal/" ><span>06</span>平均自由行程、熱平衡、ボルツマン分布</a><a href="/astronomy-step-by-step/ja/chapter/planck/" aria-current="page"><span>07</span>A・B係数からプランク分布へ</a><a href="/astronomy-step-by-step/ja/chapter/virial/" ><span>08</span>ビリアル定理 — 星は縮むと熱くなる</a><a href="/astronomy-step-by-step/ja/chapter/structure/" ><span>09</span>星の構造と、質量–光度関係</a><a href="/astronomy-step-by-step/ja/chapter/sun/" ><span>10</span>太陽の表面は、なぜ約6000度？</a><a href="/astronomy-step-by-step/ja/chapter/eddington/" ><span>11</span>エディントン限界 — 光が重力とつり合うとき</a><a href="/astronomy-step-by-step/ja/chapter/chandra/" ><span>12</span>チャンドラセカール質量 — 白色矮星の限界</a><a href="/astronomy-step-by-step/ja/chapter/relativity/" ><span>13</span>一般相対論への入口 — 光と時計と重力</a><a href="/astronomy-step-by-step/ja/chapter/elements/" ><span>14</span>元素合成と、ヘリウムが約25%の理由</a><a href="/astronomy-step-by-step/ja/chapter/expansion/" ><span>15</span>宇宙膨張とハッブル–ルメートルの法則</a></nav></aside><article class="lesson"><header class="lesson-head"><div class="eyebrow">FOUNDATIONS · 07 / 原子と放射</div><h1>A・B係数からプランク分布へ</h1><p class="dek">吸収・自然放出・誘導放出のつり合いを、式変形で解く。</p><div class="lesson-meta"><span>読む目安：18分</span><span>使う道具：ボルツマン比・指数関数</span></div></header><div class="goal"><strong>この章でできるようになること</strong>詳細釣り合いの式をuνについて解き、分母の−1の出所を説明できる。</div>
+      <section><h2><span class="step-no">01</span>まず、何を求めるか決める</h2><p>uνは単位体積・単位振動数あたりの放射エネルギー密度です。単位はJ m⁻³ Hz⁻¹。幅Δνの範囲には約uνΔνのエネルギー密度があります。二準位E₁、E₂の差はhν。n₁、n₂は準位ごとの原子数密度、g₁、g₂は統計的重みです。</p><aside class="callout ">ここではB係数を<strong>uνを掛ける定義</strong>にそろえます。平均強度Jνを掛ける定義では係数の数値が変わります。線が十分狭く、その幅でuνがほぼ一定とします。</aside></section><section><h2><span class="step-no">02</span>三つの過程を書き出す</h2><p>吸収：n₁B₁₂uν。自然放出：n₂A₂₁。誘導放出：n₂B₂₁uν。原子と放射が同じ温度で熱平衡にあるとき、上に上がる率と下に下がる率が等しくなります。</p><div class="equation"><div class="math">n<sub>1</sub>B<sub>12</sub>u<sub>ν</sub> = n<sub>2</sub>A<sub>21</sub> + n<sub>2</sub>B<sub>21</sub>u<sub>ν</sub></div></div></section><section><h2><span class="step-no">03</span>uνを含む項を集めて、割る</h2><div class="equation"><div class="math">(n<sub>1</sub>B<sub>12</sub>−n<sub>2</sub>B<sub>21</sub>)u<sub>ν</sub> = n<sub>2</sub>A<sub>21</sub></div></div><div class="equation"><div class="math">u<sub>ν</sub> = <span class="frac"><span>A<sub>21</sub>/B<sub>21</sub></span><span>(n<sub>1</sub>/n<sub>2</sub>)(B<sub>12</sub>/B<sub>21</sub>)−1</span></span></div></div><p>2行目では、分子と分母をn₂B₂₁で割っています。ここまでは熱平衡の条件を整理しただけで、まだスペクトルの形を決めきっていません。</p></section><section><h2><span class="step-no">04</span>ボルツマン比とアインシュタイン関係式を代入</h2><div class="equation"><div class="math"><span class="frac"><span>n<sub>1</sub></span><span>n<sub>2</sub></span></span> = <span class="frac"><span>g<sub>1</sub></span><span>g<sub>2</sub></span></span>e<sup>hν/(k<sub>B</sub>T)</sup>,　g<sub>1</sub>B<sub>12</sub> = g<sub>2</sub>B<sub>21</sub></div></div><div class="equation"><div class="math"><span class="frac"><span>A<sub>21</sub></span><span>B<sub>21</sub></span></span> = <span class="frac"><span>8πhν<sup>3</sup></span><span>c<sup>3</sup></span></span></div></div><p>B係数の関係は微視的な遷移の対称性に対応します。A/Bの係数は電磁波のモード数と結びつき、古典的なレイリー–ジーンズ極限との一致からも決まります。これらは追加の物理的入力です。詳細釣り合いだけから8πの係数が出るわけではありません。</p></section><section><h2><span class="step-no">05</span>プランク分布に到着</h2><div class="equation"><div class="math">u<sub>ν</sub>(T) = <span class="frac"><span>8πhν<sup>3</sup></span><span>c<sup>3</sup></span></span><span class="frac"><span>1</span><span>exp(hν/k<sub>B</sub>T)−1</span></span></div></div><p>低振動数でx＝hν/(k<sub>B</sub>T)≪1ならeˣ−1≈x。代入するとuν≈8πν²k<sub>B</sub>T/c³となり、レイリー–ジーンズの式を再現します。高振動数では指数関数が増加を抑えるため、短波長側へ際限なくエネルギーが増えることはありません。</p><div class="equation"><div class="math">B<sub>ν</sub> = <span class="frac"><span>c</span><span>4π</span></span>u<sub>ν</sub></div><div class="caption">等方的な熱平衡放射での関係。Bνは比強度で、uνや表面から出る流束と単位が異なります。</div></div><div data-lab="blackbody"></div></section>
+      <aside class="quiz"><div class="eyebrow">CHECK YOUR UNDERSTANDING</div><h2>自分の言葉で、確かめよう。</h2><p>式変形で得た分母の「−1」は、三つの遷移過程のどれに由来する？</p><details><summary>答えと考え方を見る</summary><p>誘導放出です。吸収から誘導放出を差し引く項 n₁B₁₂−n₂B₂₁ の、第2項から現れます。</p></details></aside>
+      <div class="sources"><strong>参考資料・出発点にした法則</strong><p>以下は原理や数値を確認できる資料です。大学レベルの数式を含むものもあります。本文の説明と式変形は、この教材向けに構成しています。</p><ul><li><a href="https://www.astro.princeton.edu/~rt3504/ewExternalFiles/course_notes.pdf" target="_blank" rel="noopener noreferrer">Princeton · Radiative processes in astrophysics ↗</a></li><li><a href="https://openstax.org/books/astronomy-2e/pages/5-2-the-electromagnetic-spectrum" target="_blank" rel="noopener noreferrer">OpenStax · Radiation and spectra ↗</a></li></ul></div>
+      <div class="lesson-bottom"><button class="complete-button" id="complete-chapter" data-id="planck" aria-pressed="false">この章を読了にする</button><div class="prev-next"><a href="/astronomy-step-by-step/ja/chapter/thermal/"><small>← 前の章</small>平均自由行程、熱平衡、ボルツマン分布</a><a href="/astronomy-step-by-step/ja/chapter/virial/"><small>次の章 →</small>ビリアル定理 — 星は縮むと熱くなる</a></div></div></article></div></main>
+  <footer id="footer"><span>理論天文学の道具箱</span><span><a href="/astronomy-step-by-step/ja/books/">教科書・総説集ガイド</a> · <a href="/astronomy-step-by-step/ja/about/">教材の方針</a></span></footer>
+
+<!-- site-bottom -->
+<footer class="site-chrome site-bottom"><div class="site-inner"><div class="site-legal"><p>© 2026 Hiroshi Koyama / 小山 洋</p><p><span data-ui-ja="公開資料のAI検索・要約・出典付き引用を歓迎します。" data-ui-en="AI search, summaries and source-linked quotation are welcome.">公開資料のAI検索・要約・出典付き引用を歓迎します。 / AI search, summaries and source-linked quotation are welcome.</span></p><p><span data-ui-ja="自作コード：MIT。本文・図・画像・PDF・データ・第三者資料は別条件です。" data-ui-en="Original code: MIT. Text, figures, images, PDFs, data and third-party material have separate terms.">自作コード：MIT。本文・図・画像・PDF・データ・第三者資料は別条件です。 / Original code: MIT. Text, figures, images, PDFs, data and third-party material have separate terms.</span></p><p class="site-credit"><span data-ui-ja="Webサイト制作：ChatGPTとCodexの支援を利用。" data-ui-en="Website developed with assistance from ChatGPT and Codex.">Webサイト制作：ChatGPTとCodexの支援を利用。 / Website developed with assistance from ChatGPT and Codex.</span></p></div><nav class="site-links" aria-label="Site policies and resources"><a href="/rights/"><span data-ui-ja="利用条件・AI方針" data-ui-en="Rights &amp; AI policy">利用条件・AI方針 / Rights &amp; AI policy</span></a><a href="/llms.txt"><span data-ui-ja="AI向け案内" data-ui-en="AI site guide">AI向け案内 / AI site guide</span></a><a href="/sitemap.xml"><span data-ui-ja="サイトマップ" data-ui-en="Sitemap">サイトマップ / Sitemap</span></a></nav></div></footer>
+<!-- /site-bottom -->
+</body>
+</html>

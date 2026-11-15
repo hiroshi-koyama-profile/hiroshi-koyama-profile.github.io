@@ -23,6 +23,24 @@
 - [Numerical methods pack](https://hrkoyama.github.io/guide/packs/numerical.md)
 - [Thermal instability pack](https://hrkoyama.github.io/guide/packs/thermal.md)
 
+## Astrophysics textbook / 理論天文学の道具箱
+
+- [日本語トップ](https://hrkoyama.github.io/astronomy-step-by-step/ja/): 入門編16章、発展編35章、解ライブラリー、教科書・総説集ガイド、数字と単位の番外編。
+- [English home](https://hrkoyama.github.io/astronomy-step-by-step/en/): Complete bilingual textbook. Educational models have explicit assumptions and limits; preserve those distinctions.
+- [Foundations — 日本語](https://hrkoyama.github.io/astronomy-step-by-step/ja/chapters/)
+- [Foundations — English](https://hrkoyama.github.io/astronomy-step-by-step/en/chapters/)
+- [Advanced — 日本語](https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/)
+- [Advanced — English](https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/)
+- [Solution library — 日本語](https://hrkoyama.github.io/astronomy-step-by-step/ja/solutions/)
+- [Solution library — English](https://hrkoyama.github.io/astronomy-step-by-step/en/solutions/)
+- [Books — 日本語](https://hrkoyama.github.io/astronomy-step-by-step/ja/books/)
+- [Books — English](https://hrkoyama.github.io/astronomy-step-by-step/en/books/)
+- [Numbers and units — 日本語](https://hrkoyama.github.io/astronomy-step-by-step/ja/appendix/numbers/)
+- [Numbers and units — English](https://hrkoyama.github.io/astronomy-step-by-step/en/appendix/numbers/)
+- [Textbook sitemap](https://hrkoyama.github.io/astronomy-step-by-step/sitemap.xml)
+
+The Research Compass search corpus remains limited to numerical methods and thermal instability; the astrophysics textbook is available through the links above rather than that search index. Linked commercial books are bibliographic guidance, not bundled full texts.
+
 ## Resources / 公開資料
 
 - [Doctoral dissertation](https://hrkoyama.github.io/dissertation/): Bilingual description and original PDF of Physical Processes in the Interstellar Medium and the Formation of Molecular Clouds. The University of Tokyo; degree awarded 29 March 2001; cover dated December 2000. Description and PDF are distinct resources.

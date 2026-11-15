@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102b3c">
+  <meta name="description" content="逆二乗則から、宇宙の距離のはしごへ。 光度と見かけの明るさを区別し、距離が求まる理由を説明できる。">
+  <title>光を測る、距離を測る | 理論天文学の道具箱</title>
+  <link rel="icon" href="/astronomy-step-by-step/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/astronomy-step-by-step/style.css?v=20261109-solutions">
+  <link rel="stylesheet" href="/astronomy-step-by-step/series.css?v=20261109-solutions">
+  <link rel="stylesheet" href="/astronomy-step-by-step/books.css?v=20261109-solutions">
+  <link rel="stylesheet" href="/astronomy-step-by-step/solutions.css?v=20261109-solutions">
+  <script src="/astronomy-step-by-step/illustrations.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/series.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/animation.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-gas-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-gas-content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-labs.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-gas-labs.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/press-schechter.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-dynamics-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/collapse-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/collapse-lab.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-dynamics-content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-dynamics-labs.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/nonequilibrium-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/nonequilibrium-content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/nonequilibrium-labs.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/schwarzschild.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/solution-extensions-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/solution-extensions-content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/solution-extensions-labs.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/solutions.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/numbers.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/books.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/routing.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/app.js?v=20261109-solutions" defer></script>
+
+  <link rel="canonical" href="https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/distance/">
+  <link rel="alternate" hreflang="ja" href="https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/distance/">
+  <link rel="alternate" hreflang="en" href="https://hrkoyama.github.io/astronomy-step-by-step/en/chapter/distance/">
+  <meta property="og:title" content="光を測る、距離を測る | 理論天文学の道具箱">
+  <meta property="og:description" content="逆二乗則から、宇宙の距離のはしごへ。 光度と見かけの明るさを区別し、距離が求まる理由を説明できる。">
+  <meta property="og:url" content="https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/distance/">
+  <meta property="og:type" content="website">
+<!-- site-head -->
+<link rel="stylesheet" href="/site.css?v=645e504550a3">
+<script src="/site.js?v=645e504550a3" defer></script>
+<link rel="describedby" href="/llms.txt">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<!-- /site-head -->
+</head>
+<body>
+<!-- site-top -->
+<div class="site-chrome site-top"><div class="site-inner"><a class="site-brand" href="/">Hiroshi Koyama</a><nav class="site-nav" aria-label="Site navigation"><a href="/"><span data-ui-ja="ホーム" data-ui-en="Home">ホーム / Home</span></a><a href="/rights/"><span data-ui-ja="利用条件・AI方針" data-ui-en="Rights &amp; AI policy">利用条件・AI方針 / Rights &amp; AI policy</span></a></nav><nav class="site-languages" aria-label="言語 / Language"><a href="?lang=ja" data-site-lang="ja" lang="ja">日本語</a><a href="?lang=en" data-site-lang="en" lang="en">English</a></nav></div></div>
+<!-- /site-top -->
+<a class="skip" href="#main">本文へ / Skip to content</a>
+  <header class="header">
+    <a class="brand" href="/astronomy-step-by-step/ja/" aria-label="ホーム / Home"><span class="brand-mark" aria-hidden="true">✳</span><span id="brand-name">理論天文学の道具箱<small>THEORETICAL ASTROPHYSICS, STEP BY STEP</small></span></a>
+    <nav aria-label="メイン / Main"><a id="nav-chapters" href="/astronomy-step-by-step/ja/chapters/">入門編</a><a id="nav-advanced" href="/astronomy-step-by-step/ja/advanced/">発展編</a><a id="nav-solutions" href="/astronomy-step-by-step/ja/solutions/">解ライブラリー</a><a id="nav-numbers" href="/astronomy-step-by-step/ja/appendix/numbers/">番外編</a><a id="nav-books" href="/astronomy-step-by-step/ja/books/">教科書</a><a id="nav-about" href="/astronomy-step-by-step/ja/about/">この教材について</a></nav>
+    <div class="languages" role="group" aria-label="言語 / Language"><a data-lang="ja" lang="ja" href="/astronomy-step-by-step/ja/chapter/distance/" role="button" aria-pressed="true">日本語</a><a data-lang="en" lang="en" href="/astronomy-step-by-step/en/chapter/distance/" role="button" aria-pressed="false">EN</a></div>
+  </header>
+  <main id="main" tabindex="-1"><div class="lesson-layout"><aside class="sidebar"><a class="back" href="/astronomy-step-by-step/ja/chapters/">← 入門編の目次</a><div class="side-title">学びの道すじ</div><nav class="side-links" aria-label="章の目次"><a href="/astronomy-step-by-step/ja/chapter/tools/" ><span>00</span>宇宙を読むための、数式の道具箱</a><a href="/astronomy-step-by-step/ja/chapter/distance/" aria-current="page"><span>01</span>光を測る、距離を測る</a><a href="/astronomy-step-by-step/ja/chapter/matter/" ><span>02</span>星とガスと真空、宇宙を動かす力</a><a href="/astronomy-step-by-step/ja/chapter/atom/" ><span>03</span>原子の光と星の光 — 10.2 eVの意味</a><a href="/astronomy-step-by-step/ja/chapter/width/" ><span>04</span>スペクトル線に幅がある理由</a><a href="/astronomy-step-by-step/ja/chapter/scattering/" ><span>05</span>古典的電子半径とトムソン散乱</a><a href="/astronomy-step-by-step/ja/chapter/thermal/" ><span>06</span>平均自由行程、熱平衡、ボルツマン分布</a><a href="/astronomy-step-by-step/ja/chapter/planck/" ><span>07</span>A・B係数からプランク分布へ</a><a href="/astronomy-step-by-step/ja/chapter/virial/" ><span>08</span>ビリアル定理 — 星は縮むと熱くなる</a><a href="/astronomy-step-by-step/ja/chapter/structure/" ><span>09</span>星の構造と、質量–光度関係</a><a href="/astronomy-step-by-step/ja/chapter/sun/" ><span>10</span>太陽の表面は、なぜ約6000度？</a><a href="/astronomy-step-by-step/ja/chapter/eddington/" ><span>11</span>エディントン限界 — 光が重力とつり合うとき</a><a href="/astronomy-step-by-step/ja/chapter/chandra/" ><span>12</span>チャンドラセカール質量 — 白色矮星の限界</a><a href="/astronomy-step-by-step/ja/chapter/relativity/" ><span>13</span>一般相対論への入口 — 光と時計と重力</a><a href="/astronomy-step-by-step/ja/chapter/elements/" ><span>14</span>元素合成と、ヘリウムが約25%の理由</a><a href="/astronomy-step-by-step/ja/chapter/expansion/" ><span>15</span>宇宙膨張とハッブル–ルメートルの法則</a></nav></aside><article class="lesson"><header class="lesson-head"><div class="eyebrow">FOUNDATIONS · 01 / 観測と道具</div><h1>光を測る、距離を測る</h1><p class="dek">逆二乗則から、宇宙の距離のはしごへ。</p><div class="lesson-meta"><span>読む目安：12分</span><span>使う道具：比例・平方根</span></div></header><div class="goal"><strong>この章でできるようになること</strong>光度と見かけの明るさを区別し、距離が求まる理由を説明できる。</div>
+      <section><h2><span class="step-no">01</span>光は宇宙から届く情報</h2><p>電波、赤外線、可視光、紫外線、X線は、すべて電磁波です。真空中では同じ速さc≈3.00×10⁸ m/sで進みます。波長λと振動数νをつなぐのは c＝λν。光子1個のエネルギーは E＝hν＝hc/λです。</p><div class="equation"><div class="math">E[eV] ≈ <span class="frac"><span>1240</span><span>λ[nm]</span></span></div><div class="caption">500 nmの光なら約2.48 eV。短い波長ほど光子1個のエネルギーが大きい。</div></div></section><section><h2><span class="step-no">02</span>光を球面に分ける</h2><p>星が1秒間に出す全エネルギーを光度Lと呼びます。距離dの球面を通る光が一様なら、1 m²に届くエネルギー流束fは、全体を面積4πd²で割った値です。</p><figure class="concept-figure" data-illustration="inverse-square"><img src="/astronomy-step-by-step/illustrations/inverse-square-ja.svg?v=20261106-3" width="1200" height="700" loading="lazy" decoding="async" alt="星を囲む半径dと2dの球面。距離が2倍なら球面積は4倍、同じ面積に届く光は4分の1。"><figcaption><strong>光は広い球面に分かれる</strong>同じ光度の星から出た光は球面に広がります。距離2dの球面積は距離dの4倍なので、同じ受光面積に届く流束は1/4。球は模式的に描いています。</figcaption><a class="figure-enlarge" href="/astronomy-step-by-step/illustrations/inverse-square-ja.svg?v=20261106-3" target="_blank" rel="noopener noreferrer">図を大きく見る ↗</a></figure><div class="equation"><div class="math">f = <span class="frac"><span>L</span><span>4πd<sup>2</sup></span></span>　⇒　d = √(<span class="frac"><span>L</span><span>4πf</span></span>)</div><div class="caption">吸収や方向による偏りを無視した式です。光度の単位はW、流束はW/m²。</div></div></section><section><h2><span class="step-no">03</span>近い星には三角測量</h2><p>地球が太陽の周りを動くと、近い星は遠い背景に対して位置がずれます。年周視差pは、1 auの基線に対応する角度で、半年離れた最大のずれの半分です。1秒角の視差に対応する距離を1パーセク（pc）と定めます。</p><figure class="concept-figure" data-illustration="parallax"><img src="/astronomy-step-by-step/illustrations/parallax-ja.svg?v=20261106-3" width="1200" height="700" loading="lazy" decoding="async" alt="太陽、半年離れた二つの地球の位置、近い星を結ぶ三角形。星で測る角度pは太陽と地球の距離1 auに対応する。"><figcaption><strong>年周視差を三角形で見る</strong>年周視差pは、太陽と地球の距離1 auに対応する角度。半年離れた地球の位置の間隔は約2 auで、最大の角度の差は約2pです。角度と天体の大きさは誇張しています。</figcaption><a class="figure-enlarge" href="/astronomy-step-by-step/illustrations/parallax-ja.svg?v=20261106-3" target="_blank" rel="noopener noreferrer">図を大きく見る ↗</a></figure><div class="equation"><div class="math">d[pc] = <span class="frac"><span>1</span><span>p[arcsec]</span></span></div><div class="caption">p＝0.05秒角なら20 pc、約65光年。光年は時間ではなく距離です。</div></div></section><section><h2><span class="step-no">04</span>距離のはしごは「校正の連鎖」</h2><p>太陽系の測距 → 年周視差 → セファイドなどの周期–光度関係 → Ia型超新星。この順に、近くでわかった距離を使って、次の方法の本来の明るさを校正します。Ia型超新星は、光度曲線の形や色を補正して標準化します。全てが同じ明るさの爆発ではありません。</p><div class="equation"><div class="math">v ≈ H<sub>0</sub>d,　z ≈ <span class="frac"><span>v</span><span>c</span></span></div><div class="caption">近い宇宙・小さな赤方偏移での近似。H₀は他の距離測定などで校正する必要があります。</div></div><aside class="callout warning">遠い宇宙では単純なd＝cz/H₀は使えません。膨張の歴史を含む宇宙論モデルが必要で、距離の定義も一つではありません。</aside><p><a href="/astronomy-step-by-step/ja/chapter/expansion/">宇宙膨張とハッブルの法則の章へ →</a>　距離が同じ割合で伸びると、なぜvが距離に比例するのかを式変形で確かめます。</p></section>
+      <aside class="quiz"><div class="eyebrow">CHECK YOUR UNDERSTANDING</div><h2>自分の言葉で、確かめよう。</h2><p>同じ光度の星が、別の星の1/9の明るさに見えます。距離は何倍？</p><details><summary>答えと考え方を見る</summary><p>3倍です。f ∝ 1/d²なので、距離の比は√9＝3。光度が同じという条件が必要です。</p></details></aside>
+      <div class="sources"><strong>参考資料・出発点にした法則</strong><p>以下は原理や数値を確認できる資料です。大学レベルの数式を含むものもあります。本文の説明と式変形は、この教材向けに構成しています。</p><ul><li><a href="https://openstax.org/books/astronomy-2e/pages/5-2-the-electromagnetic-spectrum" target="_blank" rel="noopener noreferrer">OpenStax · Radiation and spectra ↗</a></li><li><a href="https://lambda.gsfc.nasa.gov/education/graphic_history/hubb_const.html" target="_blank" rel="noopener noreferrer">NASA LAMBDA · Hubble constant and distance ladder ↗</a></li></ul></div>
+      <div class="lesson-bottom"><button class="complete-button" id="complete-chapter" data-id="distance" aria-pressed="false">この章を読了にする</button><div class="prev-next"><a href="/astronomy-step-by-step/ja/chapter/tools/"><small>← 前の章</small>宇宙を読むための、数式の道具箱</a><a href="/astronomy-step-by-step/ja/chapter/matter/"><small>次の章 →</small>星とガスと真空、宇宙を動かす力</a></div></div></article></div></main>
+  <footer id="footer"><span>理論天文学の道具箱</span><span><a href="/astronomy-step-by-step/ja/books/">教科書・総説集ガイド</a> · <a href="/astronomy-step-by-step/ja/about/">教材の方針</a></span></footer>
+
+<!-- site-bottom -->
+<footer class="site-chrome site-bottom"><div class="site-inner"><div class="site-legal"><p>© 2026 Hiroshi Koyama / 小山 洋</p><p><span data-ui-ja="公開資料のAI検索・要約・出典付き引用を歓迎します。" data-ui-en="AI search, summaries and source-linked quotation are welcome.">公開資料のAI検索・要約・出典付き引用を歓迎します。 / AI search, summaries and source-linked quotation are welcome.</span></p><p><span data-ui-ja="自作コード：MIT。本文・図・画像・PDF・データ・第三者資料は別条件です。" data-ui-en="Original code: MIT. Text, figures, images, PDFs, data and third-party material have separate terms.">自作コード：MIT。本文・図・画像・PDF・データ・第三者資料は別条件です。 / Original code: MIT. Text, figures, images, PDFs, data and third-party material have separate terms.</span></p><p class="site-credit"><span data-ui-ja="Webサイト制作：ChatGPTとCodexの支援を利用。" data-ui-en="Website developed with assistance from ChatGPT and Codex.">Webサイト制作：ChatGPTとCodexの支援を利用。 / Website developed with assistance from ChatGPT and Codex.</span></p></div><nav class="site-links" aria-label="Site policies and resources"><a href="/rights/"><span data-ui-ja="利用条件・AI方針" data-ui-en="Rights &amp; AI policy">利用条件・AI方針 / Rights &amp; AI policy</span></a><a href="/llms.txt"><span data-ui-ja="AI向け案内" data-ui-en="AI site guide">AI向け案内 / AI site guide</span></a><a href="/sitemap.xml"><span data-ui-ja="サイトマップ" data-ui-en="Sitemap">サイトマップ / Sitemap</span></a></nav></div></footer>
+<!-- /site-bottom -->
+</body>
+</html>

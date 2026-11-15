@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102b3c">
+  <meta name="description" content="ぶつかる確率から、エネルギーの分かれ方へ。 平均自由行程を計算し、熱浴からボルツマン因子が出る理由を追える。">
+  <title>平均自由行程、熱平衡、ボルツマン分布 | 理論天文学の道具箱</title>
+  <link rel="icon" href="/astronomy-step-by-step/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/astronomy-step-by-step/style.css?v=20261109-solutions">
+  <link rel="stylesheet" href="/astronomy-step-by-step/series.css?v=20261109-solutions">
+  <link rel="stylesheet" href="/astronomy-step-by-step/books.css?v=20261109-solutions">
+  <link rel="stylesheet" href="/astronomy-step-by-step/solutions.css?v=20261109-solutions">
+  <script src="/astronomy-step-by-step/illustrations.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/series.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/animation.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-gas-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-gas-content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-labs.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-gas-labs.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/press-schechter.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-dynamics-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/collapse-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/collapse-lab.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-dynamics-content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-dynamics-labs.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/nonequilibrium-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/nonequilibrium-content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/nonequilibrium-labs.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/schwarzschild.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/solution-extensions-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/solution-extensions-content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/solution-extensions-labs.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/solutions.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/numbers.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/books.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/routing.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/app.js?v=20261109-solutions" defer></script>
+
+  <link rel="canonical" href="https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/thermal/">
+  <link rel="alternate" hreflang="ja" href="https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/thermal/">
+  <link rel="alternate" hreflang="en" href="https://hrkoyama.github.io/astronomy-step-by-step/en/chapter/thermal/">
+  <meta property="og:title" content="平均自由行程、熱平衡、ボルツマン分布 | 理論天文学の道具箱">
+  <meta property="og:description" content="ぶつかる確率から、エネルギーの分かれ方へ。 平均自由行程を計算し、熱浴からボルツマン因子が出る理由を追える。">
+  <meta property="og:url" content="https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/thermal/">
+  <meta property="og:type" content="website">
+<!-- site-head -->
+<link rel="stylesheet" href="/site.css?v=645e504550a3">
+<script src="/site.js?v=645e504550a3" defer></script>
+<link rel="describedby" href="/llms.txt">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<!-- /site-head -->
+</head>
+<body>
+<!-- site-top -->
+<div class="site-chrome site-top"><div class="site-inner"><a class="site-brand" href="/">Hiroshi Koyama</a><nav class="site-nav" aria-label="Site navigation"><a href="/"><span data-ui-ja="ホーム" data-ui-en="Home">ホーム / Home</span></a><a href="/rights/"><span data-ui-ja="利用条件・AI方針" data-ui-en="Rights &amp; AI policy">利用条件・AI方針 / Rights &amp; AI policy</span></a></nav><nav class="site-languages" aria-label="言語 / Language"><a href="?lang=ja" data-site-lang="ja" lang="ja">日本語</a><a href="?lang=en" data-site-lang="en" lang="en">English</a></nav></div></div>
+<!-- /site-top -->
+<a class="skip" href="#main">本文へ / Skip to content</a>
+  <header class="header">
+    <a class="brand" href="/astronomy-step-by-step/ja/" aria-label="ホーム / Home"><span class="brand-mark" aria-hidden="true">✳</span><span id="brand-name">理論天文学の道具箱<small>THEORETICAL ASTROPHYSICS, STEP BY STEP</small></span></a>
+    <nav aria-label="メイン / Main"><a id="nav-chapters" href="/astronomy-step-by-step/ja/chapters/">入門編</a><a id="nav-advanced" href="/astronomy-step-by-step/ja/advanced/">発展編</a><a id="nav-solutions" href="/astronomy-step-by-step/ja/solutions/">解ライブラリー</a><a id="nav-numbers" href="/astronomy-step-by-step/ja/appendix/numbers/">番外編</a><a id="nav-books" href="/astronomy-step-by-step/ja/books/">教科書</a><a id="nav-about" href="/astronomy-step-by-step/ja/about/">この教材について</a></nav>
+    <div class="languages" role="group" aria-label="言語 / Language"><a data-lang="ja" lang="ja" href="/astronomy-step-by-step/ja/chapter/thermal/" role="button" aria-pressed="true">日本語</a><a data-lang="en" lang="en" href="/astronomy-step-by-step/en/chapter/thermal/" role="button" aria-pressed="false">EN</a></div>
+  </header>
+  <main id="main" tabindex="-1"><div class="lesson-layout"><aside class="sidebar"><a class="back" href="/astronomy-step-by-step/ja/chapters/">← 入門編の目次</a><div class="side-title">学びの道すじ</div><nav class="side-links" aria-label="章の目次"><a href="/astronomy-step-by-step/ja/chapter/tools/" ><span>00</span>宇宙を読むための、数式の道具箱</a><a href="/astronomy-step-by-step/ja/chapter/distance/" ><span>01</span>光を測る、距離を測る</a><a href="/astronomy-step-by-step/ja/chapter/matter/" ><span>02</span>星とガスと真空、宇宙を動かす力</a><a href="/astronomy-step-by-step/ja/chapter/atom/" ><span>03</span>原子の光と星の光 — 10.2 eVの意味</a><a href="/astronomy-step-by-step/ja/chapter/width/" ><span>04</span>スペクトル線に幅がある理由</a><a href="/astronomy-step-by-step/ja/chapter/scattering/" ><span>05</span>古典的電子半径とトムソン散乱</a><a href="/astronomy-step-by-step/ja/chapter/thermal/" aria-current="page"><span>06</span>平均自由行程、熱平衡、ボルツマン分布</a><a href="/astronomy-step-by-step/ja/chapter/planck/" ><span>07</span>A・B係数からプランク分布へ</a><a href="/astronomy-step-by-step/ja/chapter/virial/" ><span>08</span>ビリアル定理 — 星は縮むと熱くなる</a><a href="/astronomy-step-by-step/ja/chapter/structure/" ><span>09</span>星の構造と、質量–光度関係</a><a href="/astronomy-step-by-step/ja/chapter/sun/" ><span>10</span>太陽の表面は、なぜ約6000度？</a><a href="/astronomy-step-by-step/ja/chapter/eddington/" ><span>11</span>エディントン限界 — 光が重力とつり合うとき</a><a href="/astronomy-step-by-step/ja/chapter/chandra/" ><span>12</span>チャンドラセカール質量 — 白色矮星の限界</a><a href="/astronomy-step-by-step/ja/chapter/relativity/" ><span>13</span>一般相対論への入口 — 光と時計と重力</a><a href="/astronomy-step-by-step/ja/chapter/elements/" ><span>14</span>元素合成と、ヘリウムが約25%の理由</a><a href="/astronomy-step-by-step/ja/chapter/expansion/" ><span>15</span>宇宙膨張とハッブル–ルメートルの法則</a></nav></aside><article class="lesson"><header class="lesson-head"><div class="eyebrow">FOUNDATIONS · 06 / 原子と放射</div><h1>平均自由行程、熱平衡、ボルツマン分布</h1><p class="dek">ぶつかる確率から、エネルギーの分かれ方へ。</p><div class="lesson-meta"><span>読む目安：16分</span><span>使う道具：指数・対数（発展は微分）</span></div></header><div class="goal"><strong>この章でできるようになること</strong>平均自由行程を計算し、熱浴からボルツマン因子が出る理由を追える。</div>
+      <section><h2><span class="step-no">01</span>一度ぶつかるまでの距離</h2><p>数密度nの粒子が一様に分布し、それぞれの断面積がσなら、距離xの細い筒の中で出会う標的の目安はnσxです。平均1回に対応する距離は、nσℓ＝1から求まります。</p><div class="equation"><div class="math">ℓ = <span class="frac"><span>1</span><span>nσ</span></span> = <span class="frac"><span>1</span><span>κρ</span></span>,　τ<sub>opt</sub> = <span class="frac"><span>R</span><span>ℓ</span></span> = κρR</div><div class="caption">後半は一様な媒質の場合の光学的厚さ。寿命τと混同しないようτ<sub>opt</sub>と書きます。</div></div></section><section><h2><span class="step-no">02</span>たくさん散乱すると、出口まで遠回り</h2><p>ランダムにN回進むと、正味の距離の目安は√N ℓです。半径Rを抜けるには√N ℓ∼R、したがってN∼(R/ℓ)²。1歩にℓ/cかかるので、拡散時間の桁は次のようになります。</p><figure class="concept-figure" data-illustration="random-walk"><img src="/astronomy-step-by-step/illustrations/random-walk-ja.svg?v=20261106-3" width="1200" height="700" loading="lazy" decoding="async" alt="散乱体の間で何度も向きを変える光の折れ線経路と、始点から終点までの短い直線距離。"><figcaption><strong>散乱する光の道のり</strong>多数の散乱をたどる光の道筋の一例。淡い円は散乱体、黒い点は進路が変わった位置です。間隔は一定ではなく、平均値が平均自由行程。道のりと正味の変位を区別しましょう。</figcaption><a class="figure-enlarge" href="/astronomy-step-by-step/illustrations/random-walk-ja.svg?v=20261106-3" target="_blank" rel="noopener noreferrer">図を大きく見る ↗</a></figure><div class="equation"><div class="math">t<sub>diff</sub> ∼ <span class="frac"><span>R<sup>2</sup></span><span>cℓ</span></span>　(ℓ ≪ R)</div></div><aside class="callout warning">散乱だけでは必ずしも光子数や光のエネルギー分布が黒体に整うわけではありません。黒体への熱化には、十分な吸収・放出などの過程も必要です。薄いガスでは局所的な熱平衡が成り立たないこともあります。</aside></section><section><h2><span class="step-no">03</span>大きな全体は孤立、小さな一部は熱を交換</h2><p>孤立した「小さな系＋大きな熱浴」全体では、決まった全エネルギーの微視状態を等しく数えます（ミクロカノニカルの考え方）。小さな系がエネルギーEᵢを持つ確率は、残りの熱浴がE<sub>tot</sub>−Eᵢを持つ場合の数Ω<sub>bath</sub>に比例します。</p><div class="equation"><div class="math">S = k<sub>B</sub> ln Ω,　ΔS<sub>bath</sub> ≈ −<span class="frac"><span>E<sub>i</sub></span><span>T</span></span></div></div><p>大きな熱浴は温度がほぼ変わらず、エネルギーをEᵢだけ失うとエントロピーが約Eᵢ/T減る、という熱力学の関係を使いました。両辺をk<sub>B</sub>で割って指数関数に戻すと、状態数の比は次の形です。</p><div class="equation"><div class="math">p<sub>i</sub> ∝ g<sub>i</sub> exp(−<span class="frac"><span>E<sub>i</sub></span><span>k<sub>B</sub>T</span></span>)</div><div class="caption">gᵢは同じエネルギーを持つ状態の数（統計的重み）。これが小系のカノニカル分布です。</div></div></section><section><h2><span class="step-no">04</span>二つの準位なら、比を取るだけ</h2><div class="equation"><div class="math"><span class="frac"><span>n<sub>2</sub></span><span>n<sub>1</sub></span></span> = <span class="frac"><span>g<sub>2</sub></span><span>g<sub>1</sub></span></span>exp(−<span class="frac"><span>E<sub>2</sub>−E<sub>1</sub></span><span>k<sub>B</sub>T</span></span>)</div></div><p>たとえば準位差10.2 eV、T＝10⁴ Kならk<sub>B</sub>T≈0.862 eV。指数部分はexp(−11.8)≈7.2×10⁻⁶。励起状態は熱平衡では少数になります。ただし水素全体の電離割合は別の計算が必要です。</p></section><details class="advanced"><summary>発展：エントロピー極大と未定乗数 α、β</summary><p>ここだけ高校数学の微分を使います。微分方程式は使いません。古典的で独立な粒子を各準位にnᵢ個配る場合、Ω＝N! ∏gᵢⁿⁱ/nᵢ!。nᵢが十分大きいとして ln n!≈n ln n−n（スターリング近似）を使います。</p><div class="equation"><div class="math">F = ln Ω − α(Σn<sub>i</sub>−N) − β(Σn<sub>i</sub>E<sub>i</sub>−U)</div></div><p>粒子数Σnᵢ＝NとエネルギーΣnᵢEᵢ＝Uを保ってlnΩを最大化します。独立なnᵢで偏微分して0と置くと、−ln(nᵢ/gᵢ)−α−βEᵢ＝0。これを指数関数に戻します。</p><div class="equation"><div class="math">n<sub>i</sub> = g<sub>i</sub>e<sup>−α</sup>e<sup>−βE<sub>i</sub></sup>,　β = <span class="frac"><span>1</span><span>k<sub>B</sub>T</span></span></div></div><p>最後のβの同定には熱力学のエントロピーと温度の関係を使います。αは粒子数を合わせる係数です。この数え方をそのまま光子に使うとプランク分布にはなりません。光子は粒子数が保存されないボース粒子だからです。次章ではA・B係数から導きます。</p></details>
+      <aside class="quiz"><div class="eyebrow">CHECK YOUR UNDERSTANDING</div><h2>自分の言葉で、確かめよう。</h2><p>同じ断面積の粒子が2倍の密度になったら、平均自由行程は？</p><details><summary>答えと考え方を見る</summary><p>半分です。ℓ＝1/(nσ)。ただし相互作用の断面積が同じという条件です。</p></details></aside>
+      <div class="sources"><strong>参考資料・出発点にした法則</strong><p>以下は原理や数値を確認できる資料です。大学レベルの数式を含むものもあります。本文の説明と式変形は、この教材向けに構成しています。</p><ul><li><a href="https://www.astro.princeton.edu/~rt3504/ewExternalFiles/course_notes.pdf" target="_blank" rel="noopener noreferrer">Princeton · Radiative processes in astrophysics ↗</a></li><li><a href="https://openstax.org/books/college-physics/pages/30-9-the-pauli-exclusion-principle" target="_blank" rel="noopener noreferrer">OpenStax · The Pauli exclusion principle ↗</a></li></ul></div>
+      <div class="lesson-bottom"><button class="complete-button" id="complete-chapter" data-id="thermal" aria-pressed="false">この章を読了にする</button><div class="prev-next"><a href="/astronomy-step-by-step/ja/chapter/scattering/"><small>← 前の章</small>古典的電子半径とトムソン散乱</a><a href="/astronomy-step-by-step/ja/chapter/planck/"><small>次の章 →</small>A・B係数からプランク分布へ</a></div></div></article></div></main>
+  <footer id="footer"><span>理論天文学の道具箱</span><span><a href="/astronomy-step-by-step/ja/books/">教科書・総説集ガイド</a> · <a href="/astronomy-step-by-step/ja/about/">教材の方針</a></span></footer>
+
+<!-- site-bottom -->
+<footer class="site-chrome site-bottom"><div class="site-inner"><div class="site-legal"><p>© 2026 Hiroshi Koyama / 小山 洋</p><p><span data-ui-ja="公開資料のAI検索・要約・出典付き引用を歓迎します。" data-ui-en="AI search, summaries and source-linked quotation are welcome.">公開資料のAI検索・要約・出典付き引用を歓迎します。 / AI search, summaries and source-linked quotation are welcome.</span></p><p><span data-ui-ja="自作コード：MIT。本文・図・画像・PDF・データ・第三者資料は別条件です。" data-ui-en="Original code: MIT. Text, figures, images, PDFs, data and third-party material have separate terms.">自作コード：MIT。本文・図・画像・PDF・データ・第三者資料は別条件です。 / Original code: MIT. Text, figures, images, PDFs, data and third-party material have separate terms.</span></p><p class="site-credit"><span data-ui-ja="Webサイト制作：ChatGPTとCodexの支援を利用。" data-ui-en="Website developed with assistance from ChatGPT and Codex.">Webサイト制作：ChatGPTとCodexの支援を利用。 / Website developed with assistance from ChatGPT and Codex.</span></p></div><nav class="site-links" aria-label="Site policies and resources"><a href="/rights/"><span data-ui-ja="利用条件・AI方針" data-ui-en="Rights &amp; AI policy">利用条件・AI方針 / Rights &amp; AI policy</span></a><a href="/llms.txt"><span data-ui-ja="AI向け案内" data-ui-en="AI site guide">AI向け案内 / AI site guide</span></a><a href="/sitemap.xml"><span data-ui-ja="サイトマップ" data-ui-en="Sitemap">サイトマップ / Sitemap</span></a></nav></div></footer>
+<!-- /site-bottom -->
+</body>
+</html>

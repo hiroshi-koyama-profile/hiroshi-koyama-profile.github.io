@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102b3c">
+  <meta name="description" content="距離の伸び率からv＝HD、赤方偏移、ハッブル時間へ。 スケール因子からv＝HDを導き、赤方偏移と宇宙年齢を混同しない。">
+  <title>宇宙膨張とハッブル–ルメートルの法則 | 理論天文学の道具箱</title>
+  <link rel="icon" href="/astronomy-step-by-step/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/astronomy-step-by-step/style.css?v=20261109-solutions">
+  <link rel="stylesheet" href="/astronomy-step-by-step/series.css?v=20261109-solutions">
+  <link rel="stylesheet" href="/astronomy-step-by-step/books.css?v=20261109-solutions">
+  <link rel="stylesheet" href="/astronomy-step-by-step/solutions.css?v=20261109-solutions">
+  <script src="/astronomy-step-by-step/illustrations.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/series.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/animation.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-gas-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-gas-content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-labs.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-gas-labs.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/press-schechter.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-dynamics-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/collapse-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/collapse-lab.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-dynamics-content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/advanced-dynamics-labs.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/nonequilibrium-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/nonequilibrium-content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/nonequilibrium-labs.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/schwarzschild.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/solution-extensions-math.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/solution-extensions-content.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/solution-extensions-labs.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/solutions.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/numbers.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/books.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/routing.js?v=20261109-solutions" defer></script>
+  <script src="/astronomy-step-by-step/app.js?v=20261109-solutions" defer></script>
+
+  <link rel="canonical" href="https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/expansion/">
+  <link rel="alternate" hreflang="ja" href="https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/expansion/">
+  <link rel="alternate" hreflang="en" href="https://hrkoyama.github.io/astronomy-step-by-step/en/chapter/expansion/">
+  <meta property="og:title" content="宇宙膨張とハッブル–ルメートルの法則 | 理論天文学の道具箱">
+  <meta property="og:description" content="距離の伸び率からv＝HD、赤方偏移、ハッブル時間へ。 スケール因子からv＝HDを導き、赤方偏移と宇宙年齢を混同しない。">
+  <meta property="og:url" content="https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/expansion/">
+  <meta property="og:type" content="website">
+<!-- site-head -->
+<link rel="stylesheet" href="/site.css?v=645e504550a3">
+<script src="/site.js?v=645e504550a3" defer></script>
+<link rel="describedby" href="/llms.txt">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<!-- /site-head -->
+</head>
+<body>
+<!-- site-top -->
+<div class="site-chrome site-top"><div class="site-inner"><a class="site-brand" href="/">Hiroshi Koyama</a><nav class="site-nav" aria-label="Site navigation"><a href="/"><span data-ui-ja="ホーム" data-ui-en="Home">ホーム / Home</span></a><a href="/rights/"><span data-ui-ja="利用条件・AI方針" data-ui-en="Rights &amp; AI policy">利用条件・AI方針 / Rights &amp; AI policy</span></a></nav><nav class="site-languages" aria-label="言語 / Language"><a href="?lang=ja" data-site-lang="ja" lang="ja">日本語</a><a href="?lang=en" data-site-lang="en" lang="en">English</a></nav></div></div>
+<!-- /site-top -->
+<a class="skip" href="#main">本文へ / Skip to content</a>
+  <header class="header">
+    <a class="brand" href="/astronomy-step-by-step/ja/" aria-label="ホーム / Home"><span class="brand-mark" aria-hidden="true">✳</span><span id="brand-name">理論天文学の道具箱<small>THEORETICAL ASTROPHYSICS, STEP BY STEP</small></span></a>
+    <nav aria-label="メイン / Main"><a id="nav-chapters" href="/astronomy-step-by-step/ja/chapters/">入門編</a><a id="nav-advanced" href="/astronomy-step-by-step/ja/advanced/">発展編</a><a id="nav-solutions" href="/astronomy-step-by-step/ja/solutions/">解ライブラリー</a><a id="nav-numbers" href="/astronomy-step-by-step/ja/appendix/numbers/">番外編</a><a id="nav-books" href="/astronomy-step-by-step/ja/books/">教科書</a><a id="nav-about" href="/astronomy-step-by-step/ja/about/">この教材について</a></nav>
+    <div class="languages" role="group" aria-label="言語 / Language"><a data-lang="ja" lang="ja" href="/astronomy-step-by-step/ja/chapter/expansion/" role="button" aria-pressed="true">日本語</a><a data-lang="en" lang="en" href="/astronomy-step-by-step/en/chapter/expansion/" role="button" aria-pressed="false">EN</a></div>
+  </header>
+  <main id="main" tabindex="-1"><div class="lesson-layout"><aside class="sidebar"><a class="back" href="/astronomy-step-by-step/ja/chapters/">← 入門編の目次</a><div class="side-title">学びの道すじ</div><nav class="side-links" aria-label="章の目次"><a href="/astronomy-step-by-step/ja/chapter/tools/" ><span>00</span>宇宙を読むための、数式の道具箱</a><a href="/astronomy-step-by-step/ja/chapter/distance/" ><span>01</span>光を測る、距離を測る</a><a href="/astronomy-step-by-step/ja/chapter/matter/" ><span>02</span>星とガスと真空、宇宙を動かす力</a><a href="/astronomy-step-by-step/ja/chapter/atom/" ><span>03</span>原子の光と星の光 — 10.2 eVの意味</a><a href="/astronomy-step-by-step/ja/chapter/width/" ><span>04</span>スペクトル線に幅がある理由</a><a href="/astronomy-step-by-step/ja/chapter/scattering/" ><span>05</span>古典的電子半径とトムソン散乱</a><a href="/astronomy-step-by-step/ja/chapter/thermal/" ><span>06</span>平均自由行程、熱平衡、ボルツマン分布</a><a href="/astronomy-step-by-step/ja/chapter/planck/" ><span>07</span>A・B係数からプランク分布へ</a><a href="/astronomy-step-by-step/ja/chapter/virial/" ><span>08</span>ビリアル定理 — 星は縮むと熱くなる</a><a href="/astronomy-step-by-step/ja/chapter/structure/" ><span>09</span>星の構造と、質量–光度関係</a><a href="/astronomy-step-by-step/ja/chapter/sun/" ><span>10</span>太陽の表面は、なぜ約6000度？</a><a href="/astronomy-step-by-step/ja/chapter/eddington/" ><span>11</span>エディントン限界 — 光が重力とつり合うとき</a><a href="/astronomy-step-by-step/ja/chapter/chandra/" ><span>12</span>チャンドラセカール質量 — 白色矮星の限界</a><a href="/astronomy-step-by-step/ja/chapter/relativity/" ><span>13</span>一般相対論への入口 — 光と時計と重力</a><a href="/astronomy-step-by-step/ja/chapter/elements/" ><span>14</span>元素合成と、ヘリウムが約25%の理由</a><a href="/astronomy-step-by-step/ja/chapter/expansion/" aria-current="page"><span>15</span>宇宙膨張とハッブル–ルメートルの法則</a></nav></aside><article class="lesson"><header class="lesson-head"><div class="eyebrow">FOUNDATIONS · 15 / 宇宙論への入口</div><h1>宇宙膨張とハッブル–ルメートルの法則</h1><p class="dek">距離の伸び率からv＝HD、赤方偏移、ハッブル時間へ。</p><div class="lesson-meta"><span>読む目安：20分</span><span>使う道具：比例・速さ＝距離の変化÷時間</span></div></header><div class="goal"><strong>この章でできるようになること</strong>スケール因子からv＝HDを導き、赤方偏移と宇宙年齢を混同しない。</div>
+      <section><h2><span class="step-no">01</span>銀河どうしの距離に、共通の倍率をかける</h2><p>十分大きな尺度で宇宙がほぼ一様・等方的だとする標準的なモデルを考えます。宇宙の流れに乗る点の目盛りをχ、その時刻での距離の尺度をスケール因子a(t)とすると、適切な共動距離χを使ってD(t)＝a(t)χと書けます。aは無次元で、現在をa<sub>now</sub>＝1にそろえます。</p><figure class="concept-figure" data-illustration="expansion-space"><img src="/astronomy-step-by-step/illustrations/expansion-space-ja.svg?v=20261106-3" width="1200" height="700" loading="lazy" decoding="async" alt="同じ大きさの四つの銀河を、間隔が一様に1.5倍になる前後で比較。ABの距離はdから1.5dになる。"><figcaption><strong>銀河間の距離が同じ割合で伸びる</strong>銀河間の距離が一様に1.5倍になる例。銀河の絵の大きさは変えていません。格子は距離の比較用で、物理的な棒や特別な中心を表しません。</figcaption><a class="figure-enlarge" href="/astronomy-step-by-step/illustrations/expansion-space-ja.svg?v=20261106-3" target="_blank" rel="noopener noreferrer">図を大きく見る ↗</a></figure><div class="equation"><div class="math">D = aχ,　D' = a'χ　⇒　<span class="frac"><span>D′</span><span>D</span></span> = <span class="frac"><span>a′</span><span>a</span></span></div><div class="caption">ダッシュは別の時刻の値を表します。この行では微分の記号ではありません。</div></div><p>aが1から1.1になれば、宇宙膨張に従う点どうしの距離はどこでも1.1倍です。銀河や太陽系や原子の大きさまで、同じ倍率で伸びるという意味ではありません。重力や電磁気力で束縛された系の内部では、その力が構造を決めます。</p></section><section><h2><span class="step-no">02</span>短い時間での変化を割り算すると、ハッブルの法則</h2><p>短い時間ΔtでaがΔaだけ増えるとします。χは固定なので、ΔD＝χΔa＝DΔa/a。これをΔtで割れば、距離の増える速さが得られます。</p><div class="equation"><div class="math"><span class="frac"><span>ΔD</span><span>Δt</span></span> = (<span class="frac"><span>Δa</span><span>aΔt</span></span>)D</div><div class="caption">右辺のaとDは時間区間の初めの値。この有限の時間区間に対する式は、χ一定なら等式です。</div></div><div class="equation"><div class="math">H<sub>Δt</sub> ≡ <span class="frac"><span>Δa</span><span>aΔt</span></span>,　v<sub>Δt</sub> ≡ <span class="frac"><span>ΔD</span><span>Δt</span></span>　⇒　v<sub>Δt</sub> = H<sub>Δt</sub>D</div></div><p>十分短い時間に対応する瞬間の量をH(t)、v<sub>rec</sub>と書くと、v<sub>rec</sub>＝H(t)D。これが一様な膨張でのハッブル–ルメートルの関係です。H(t)は単位時間あたりの割合で、現在の値がH₀。「ハッブル定数」という名前でも、宇宙の歴史を通じて一定とは限りません。</p></section><section><h2><span class="step-no">03</span>どこから見ても、遠い点ほど速く離れる</h2><p>一直線にA、B、Cが並び、短い時間に各間隔が1%伸びるとします。Aから見たCはBの2倍遠ければ、距離の増加も2倍。Bから見ても、両側の点が同じ規則で離れます。地球だけが特別な膨張の中心だという結論は出ません。</p><div data-lab="expansion"></div><aside class="callout ">v<sub>rec</sub>は同じ宇宙時刻で定義した遠くの点との距離の変化率です。宇宙論的な遠距離ではHDがcを超えても、近くの観測者の横を物体が光より速く通ることを意味しません。この距離変化率に、局所的な速度上限cをそのまま当てはめることはできません。</aside></section><section><h2><span class="step-no">04</span>伸びる波長が、宇宙論的赤方偏移になる</h2><div class="equation"><div class="math">z ≡ <span class="frac"><span>λ<sub>obs</sub>−λ<sub>emit</sub></span><span>λ<sub>emit</sub></span></span>　⇒　1+z = <span class="frac"><span>λ<sub>obs</sub></span><span>λ<sub>emit</sub></span></span></div></div><p>一様・等方な宇宙で、光の放出者と観測者が共に宇宙の流れに乗っているとき、一般相対論から次の関係が与えられます。波長の定義だけから導いたのではなく、膨張する時空を光が伝わるという追加の結果を使います。</p><div class="equation"><div class="math">1+z = <span class="frac"><span>a<sub>now</sub></span><span>a<sub>emit</sub></span></span>　⇒　a<sub>emit</sub> = <span class="frac"><span>1</span><span>1+z</span></span>　(a<sub>now</sub>=1)</div></div><p>z＝1なら光を出したときのaは0.5。zが大きいとき、これを特殊相対論のドップラー式にそのまま置き換えて距離を求めることはできません。実際の観測には、銀河の固有運動や重力による赤方偏移も加わりえます。</p></section><section><h2><span class="step-no">05</span>近い宇宙でなら、観測から距離を見積もれる</h2><div class="equation"><div class="math">z ≈ <span class="frac"><span>v</span><span>c</span></span>,　v ≈ H<sub>0</sub>D　⇒　D ≈ <span class="frac"><span>cz</span><span>H<sub>0</sub></span></span></div></div><p>計算例としてH₀＝70 km s⁻¹ Mpc⁻¹を使います。これは練習用の丸い値で、最新の測定値を一つに確定する意味ではありません。1 Mpc（メガパーセク）≈326万光年です。D＝10 Mpcならv≈700 km/s、D＝100 Mpcなら約7000 km/sとなります。</p><p>z＝0.005ならv≈1500 km/s、D≈21.4 Mpc。ただし近い銀河の固有運動は、この推定に大きく影響することがあります。遠い銀河では膨張史と距離の定義も必要で、この近似式だけでは足りません。</p></section><section><h2><span class="step-no">06</span>1/H₀は時間。でも宇宙年齢そのものではない</h2><div class="equation"><div class="math">H<sub>0</sub> ≈ <span class="frac"><span>70 km/s</span><span>3.086×10<sup>19</sup> km</span></span> ≈ 2.27×10<sup>−18</sup> s<sup>−1</sup></div></div><div class="equation"><div class="math">t<sub>H</sub> ≡ <span class="frac"><span>1</span><span>H<sub>0</sub></span></span> ≈ 4.41×10<sup>17</sup> s ≈ 140億年</div><div class="caption">H₀＝70 km s⁻¹ Mpc⁻¹の例でのハッブル時間です。</div></div><p>現在の距離Dを、現在の後退速度H₀Dで割ると1/H₀になります。しかし過去の速さがずっと今と同じだったとは限りません。宇宙年齢を得るには、過去の膨張をたどる必要があります。</p><aside class="callout warning">「膨張が加速する」と「Hが増える」は同じではありません。Hは距離の絶対的な増加率ではなく、距離で割った割合です。ハッブルの法則自体は膨張の仕方を表す関係で、物質・放射・暗黒エネルギーが膨張史をどう決めるかを単独で解く法則ではありません。</aside></section>
+      <aside class="quiz"><div class="eyebrow">CHECK YOUR UNDERSTANDING</div><h2>自分の言葉で、確かめよう。</h2><p>Lyαの静止波長は約121.6 nm。z＝3の銀河から届くと何nm？ 放出時のスケール因子は現在の何倍？</p><details><summary>答えと考え方を見る</summary><p>λ<sub>obs</sub>＝(1＋3)×121.6＝486.4 nm。a<sub>now</sub>＝1とすればa<sub>emit</sub>＝1/(1＋3)＝0.25。「宇宙の年齢が現在の1/4だった」とは、この式だけからは言えません。</p></details></aside>
+      <div class="sources"><strong>参考資料・出発点にした法則</strong><p>以下は原理や数値を確認できる資料です。大学レベルの数式を含むものもあります。本文の説明と式変形は、この教材向けに構成しています。</p><ul><li><a href="https://www.jpl.nasa.gov/edu/resources/lesson-plan/math-of-the-expanding-universe/" target="_blank" rel="noopener noreferrer">NASA JPL · Math of the expanding universe ↗</a></li><li><a href="https://astro.ucla.edu/~wright/cosmo_02.htm" target="_blank" rel="noopener noreferrer">UCLA / Ned Wright · Cosmology tutorial: Distances and scale factor ↗</a></li><li><a href="https://lambda.gsfc.nasa.gov/education/graphic_history/hubb_const.html" target="_blank" rel="noopener noreferrer">NASA LAMBDA · Hubble constant and distance ladder ↗</a></li></ul></div>
+      <div class="lesson-bottom"><button class="complete-button" id="complete-chapter" data-id="expansion" aria-pressed="false">この章を読了にする</button><div class="prev-next"><a href="/astronomy-step-by-step/ja/chapter/elements/"><small>← 前の章</small>元素合成と、ヘリウムが約25%の理由</a><a href="/astronomy-step-by-step/ja/chapters/"><small>目次へ →</small>学びの道すじを振り返る</a></div></div></article></div></main>
+  <footer id="footer"><span>理論天文学の道具箱</span><span><a href="/astronomy-step-by-step/ja/books/">教科書・総説集ガイド</a> · <a href="/astronomy-step-by-step/ja/about/">教材の方針</a></span></footer>
+
+<!-- site-bottom -->
+<footer class="site-chrome site-bottom"><div class="site-inner"><div class="site-legal"><p>© 2026 Hiroshi Koyama / 小山 洋</p><p><span data-ui-ja="公開資料のAI検索・要約・出典付き引用を歓迎します。" data-ui-en="AI search, summaries and source-linked quotation are welcome.">公開資料のAI検索・要約・出典付き引用を歓迎します。 / AI search, summaries and source-linked quotation are welcome.</span></p><p><span data-ui-ja="自作コード：MIT。本文・図・画像・PDF・データ・第三者資料は別条件です。" data-ui-en="Original code: MIT. Text, figures, images, PDFs, data and third-party material have separate terms.">自作コード：MIT。本文・図・画像・PDF・データ・第三者資料は別条件です。 / Original code: MIT. Text, figures, images, PDFs, data and third-party material have separate terms.</span></p><p class="site-credit"><span data-ui-ja="Webサイト制作：ChatGPTとCodexの支援を利用。" data-ui-en="Website developed with assistance from ChatGPT and Codex.">Webサイト制作：ChatGPTとCodexの支援を利用。 / Website developed with assistance from ChatGPT and Codex.</span></p></div><nav class="site-links" aria-label="Site policies and resources"><a href="/rights/"><span data-ui-ja="利用条件・AI方針" data-ui-en="Rights &amp; AI policy">利用条件・AI方針 / Rights &amp; AI policy</span></a><a href="/llms.txt"><span data-ui-ja="AI向け案内" data-ui-en="AI site guide">AI向け案内 / AI site guide</span></a><a href="/sitemap.xml"><span data-ui-ja="サイトマップ" data-ui-en="Sitemap">サイトマップ / Sitemap</span></a></nav></div></footer>
+<!-- /site-bottom -->
+</body>
+</html>
