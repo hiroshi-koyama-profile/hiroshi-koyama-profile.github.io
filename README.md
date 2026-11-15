@@ -83,6 +83,8 @@ Original implementation code is MIT; text, figures, scans, PDFs and data have se
 
 After editing static HTML or the shared chrome, run `node scripts/build-site-chrome.mjs`. Both HPCI generators also call the shared decorator so rebuilds retain the navigation and notices. The chrome build refreshes only the existing public notebook manifest receipts; scans, redactions and PDFs must remain unchanged.
 
+The shared decorator also assigns the site-wide `favicon.svg`: a navy H monogram with a gold star, distinct from the old portfolio's green orbital mark. Its URL includes the icon content hash so browsers can fetch an updated icon. Rebuild the shared chrome and then the local guide snapshot after changing the icon.
+
 `/rights/`, `LICENSING.md`, the notebook notice, `/robots.txt` and `/llms.txt` must agree: welcome AI search, indexing, summaries, source-linked quotation and research/learning analysis; distinguish original code (MIT), content, visitor data and third-party rights. Do not claim blanket redistribution rights over linked papers or notebook content. The AI guide is a resource index, not a full text mirror or proof of source verification.
 
 ## Numerical methods, thermal instability and Research Compass (2026-11-16)
