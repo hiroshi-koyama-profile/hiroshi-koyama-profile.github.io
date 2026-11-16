@@ -25,6 +25,10 @@
       element.textContent = language === 'en' ? element.dataset.uiEn : element.dataset.uiJa;
     });
     document.querySelectorAll('[data-site-language]').forEach(element => { element.hidden = element.dataset.siteLanguage !== language; });
+    document.querySelectorAll('[data-site-search-input]').forEach(field => {
+      field.placeholder = language === 'en' ? 'Search this site' : 'サイト内検索';
+      field.setAttribute('aria-label', language === 'en' ? 'Search this site' : 'サイト内検索');
+    });
     const title = document.querySelector('[data-page-title-ja][data-page-title-en]');
     if (title) document.title = language === 'en' ? title.dataset.pageTitleEn : title.dataset.pageTitleJa;
     const description = document.querySelector('meta[name="description"][data-description-ja]');
@@ -63,6 +67,21 @@
       link.href = url.href;
     }
   }, true);
+  // Search terms travel only in the URL fragment; the host never receives them.
+  document.addEventListener('submit', event => {
+    const form = event.target.closest('[data-site-search-form]');
+    if (!form) return;
+    event.preventDefault();
+    const input = form.querySelector('[data-site-search-input]');
+    const query = input.value.trim().slice(0, 200);
+    const destination = new URL('/search/', location.origin);
+    destination.searchParams.set('lang', activeLanguage);
+    if (query) destination.hash = new URLSearchParams({ q: query }).toString();
+    if (location.pathname === '/search/') {
+      if (location.href !== destination.href) history.pushState(null, '', destination.href);
+      document.dispatchEvent(new CustomEvent('site-search-query'));
+    } else location.assign(destination.href);
+  });
   // Existing bilingual archives own their content; their language controls also update the shared navigation.
   document.addEventListener('archive-language-change', event => apply(event.detail));
 })();

@@ -10,3 +10,11 @@ body>.site-top~.wrap .lang-switch{display:none!important}
 
 /* The common switch follows language alternates for static atlas reading pages. */
 body>.site-top~.site-header .language-switch{display:none!important}
+
+
+/* A consistent search field across the independent archive layouts. */
+.site-chrome .site-search{display:flex;flex:0 1 245px;min-width:180px;margin:0;gap:0;align-items:stretch}
+.site-chrome .site-search input{display:block;box-sizing:border-box;width:100%;min-width:0;flex:1;margin:0;padding:8px 10px;border:1px solid #aeb9b2;border-right:0;border-radius:5px 0 0 5px;background:#fffdf7;color:#25382f;font:inherit;line-height:1.4}
+.site-chrome .site-search button{display:block;box-sizing:border-box;flex:none;margin:0;padding:8px 12px;border:1px solid #1c4168;border-radius:0 5px 5px 0;background:#1c4168;color:#fff9ed;font:inherit;line-height:1.4;cursor:pointer;white-space:nowrap}
+.site-chrome .site-search input:focus-visible,.site-chrome .site-search button:focus-visible{outline:2px solid #b8893f;outline-offset:2px}
+@media(max-width:600px){.site-chrome .site-search{order:4;flex:1 1 100%;min-width:0}.site-content-note{order:5}}

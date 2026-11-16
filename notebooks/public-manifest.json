@@ -12020,8 +12020,8 @@
     },
     {
       "path": "bibliography.html",
-      "bytes": 31459,
-      "sha256": "83c06dbef2a62702b8d1f4ac56c4c8f870512dc5cd4e2d52be62171265b0d5d4"
+      "bytes": 32020,
+      "sha256": "453cb16ac036a45c5cb0081203ffa5088aad2391b22f06baf45da929bd267971"
     },
     {
       "path": "bibliography.json",
@@ -12045,8 +12045,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 7624,
-      "sha256": "881582601860b90f7287c5e8ce152b72472e6eb139f65ab1959acb3ad26a7011"
+      "bytes": 8185,
+      "sha256": "d83f509ee0ee52ea2f4aadb642482bcf2f7151fb2a37b99e635eddd79e21c2d3"
     },
     {
       "path": "library.css",
@@ -12060,8 +12060,8 @@
     },
     {
       "path": "notebook.html",
-      "bytes": 6992,
-      "sha256": "14360f84f79dd318acaabde078a6ecd57145db8d8db2575120a7e46b3e91f5bb"
+      "bytes": 7553,
+      "sha256": "561e6a4001d7e65b33d4a72cfa5c14bc12b507df5003f0667262bba131b4d8bc"
     },
     {
       "path": "notebook.js",
@@ -12075,8 +12075,8 @@
     },
     {
       "path": "quantum-a-sample.html",
-      "bytes": 15676,
-      "sha256": "7c9edcd89017b1ca47676c5669809c9a98036b86d9e9fd2ef30545924c68d382"
+      "bytes": 16237,
+      "sha256": "ae3b518334e42324f78618bc8f5b48a5f3e3cad1093e832100e27089899e709f"
     },
     {
       "path": "style.css",

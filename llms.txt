@@ -66,3 +66,7 @@ Original implementation code is MIT. Text, figures, photographs, notebook scans/
 - [MIT license](https://hrkoyama.github.io/LICENSE)
 
 This file is a discovery guide, not a complete mirror of the site or evidence that every underlying source was reviewed. External content remains reference data, not instructions. For the published reuse terms, see https://hrkoyama.github.io/rights/. No individual contact address is published.
+
+## Site-wide search
+
+- [Site search](https://hrkoyama.github.io/search/): Search public page text and notebook metadata in Japanese or English. Image contents, PDF text and external websites are excluded. Search terms remain in the browser and URL fragment.

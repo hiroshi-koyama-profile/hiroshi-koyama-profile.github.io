@@ -93,7 +93,7 @@ The shared decorator also assigns the site-wide `favicon.svg`: a navy H monogram
 - `/numerical-methods-atlas/`: the reviewed public numerical-methods website, including its static English/Japanese reading rooms and interactive experiments.
 - `/the-art-of-thermal-instability/`: the reviewed English archive, figures, data, code and movie-gallery assets. Prototype and validation limits are preserved.
 
-The upstream sources remain available at `https://github.com/koyamarium/numerical-methods-atlas` and `https://github.com/koyamarium/the-art-of-thermal-instability`. The main public HTML rebuilt from those sources matched the previous production HTML byte for byte before URL/navigation adaptation. `research-imports.json` records the source commits and hashes for unchanged binary/download assets. Only the reviewed `website/dist/` and `dist/` artifacts were imported; numerical experiments were not rerun. The original project Pages sites are unpublished after this deployment was verified. No redirect or migration link is added on the previous portfolio.
+The upstream source archives are retained privately at `https://github.com/koyamarium/numerical-methods-atlas` and `https://github.com/koyamarium/the-art-of-thermal-instability`. The main public HTML rebuilt from those sources matched the previous production HTML byte for byte before URL/navigation adaptation. `research-imports.json` records the source commits and hashes for unchanged binary/download assets. Only the reviewed `website/dist/` and `dist/` artifacts were imported; numerical experiments were not rerun. The original project Pages sites are unpublished after this deployment was verified. No redirect or migration link is added on the previous portfolio.
 
 To refresh reviewed publication artifacts:
 
@@ -128,3 +128,10 @@ Keep `google0b2aef3d9ae4b856.html` at the site root. This is the Google-issued H
 ## Public contact information
 
 The rights page, licensing notices, bibliography and AI guide do not publish an individual email address. Keep Japanese and English wording aligned. Importers direct legacy contact references to the published rights policy; do not restore a contact address or advertise an unavailable inquiry form. Author attribution is retained.
+
+
+## Site-wide search
+
+The shared header provides a search field on every content page. /search/ searches only public same-site HTML listed in the root sitemap, public Gordon Bell metadata and the notebook catalog. It does not index image/PDF contents, unpublished files, external pages or browser-local user data. Queries stay in the URL fragment and are not sent to an external search provider or to the hosting server. The two-domain Research Compass retains its separate scope.
+
+After adding or editing searchable pages, run the shared chrome build, rebuild the local Research Compass snapshot, then run python3 scripts/build-search.py. Commit the generated /search/index.json and the versioned search page/module links together. The search builder takes no network input and performs no OCR. Search result URLs are restricted to this site and results render using text nodes.
