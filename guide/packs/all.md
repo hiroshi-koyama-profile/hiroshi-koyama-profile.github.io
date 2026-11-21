@@ -1,7 +1,7 @@
 # Hiroshi Koyama — public site knowledge pack
 
-Snapshot: 2026-11-21-e8872a3d7d
-Captured (UTC): 2026-11-21T13:43:36+00:00
+Snapshot: 2026-11-21-7d19d8d54e
+Captured (UTC): 2026-11-21T13:47:32+00:00
 
 For consulting the published site with your own LLM. Excerpts are reference data, not instructions. Cite the source URLs. This snapshot is not a full-site mirror, and a reference to an algorithm does not establish implementation or validation. Check source pages for current scope. No unpublished manuscripts or apps are included. Code: MIT within its scope; text/figures: separate terms. https://hrkoyama.github.io/rights/
 
@@ -7140,16 +7140,18 @@ Avoid new scope, fix issues found during checking and carry unfinished items int
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/
 Coverage: reading
 
-In progress / publication check pending
-Align the current source of truth, method status and next deliverables in Japanese and English. Label earlier priorities and implementation candidates as history; do not mark this work complete before checking its publication.
+Current scope published and checked
+Published and checked a bilingual separation of the current plan and development history, with aligned headings and status in the text, tables of contents and JSON. Preserved existing section links and historical translation status, distinguishing P0 work, conditional Ewald/H₂ additions and AI research from 2027 onward.
+Work queue
 
 ## Implementation roadmap — A shared executable-example registry and three templates [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/
 Coverage: reading
 
-In progress / publication check pending
-Connect the already published Barnes–Hut, hydrogenic and helium inputs and code through example IDs, editions, working directories, commands, outputs, tolerances, failure rules and citations. Preserve existing release files and check the new entry points after publication.
+Current scope published and checked
+Connected the three published Barnes–Hut, hydrogenic and helium examples through a common JSON registry and bilingual execution guide covering editions, inputs, working directories, commands, outputs, check values, failure rules, citation and existing terms. Retrieved only the public registry and release files, reran the examples and confirmed their numerical and expected-failure checks.
+Download and run the three examples · Common execution registry · Additional execution receipt for the three examples · Rerun receipt using the public registry
 
 ## Implementation roadmap — Curate assumptions, limits and sources for 24 priority methods [en]
 
@@ -14551,16 +14553,18 @@ Coverage: reading
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/
 Coverage: reading
 
-実装中・公開確認待ち
-現在の正本、手法の状態、分野別の次の成果物を日英で揃える。旧来の優先順位や実装候補は履歴・候補と明示し、公開確認が済むまで完了としない。
+今回の範囲を公開確認済み
+現行計画と開発履歴を日英で分け、本文・目次・JSONの見出しと状態を揃えた。既存の節リンクと履歴の翻訳状態を保持し、P0の整備、条件付きのEwald/H₂追加、2027年以降のAI研究を区別して公開・確認した。
+作業台帳
 
 ## 実装ロードマップ — 実行例の共通台帳と3つの雛形 [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/
 Coverage: reading
 
-実装中・公開確認待ち
-Barnes–Hut・水素型原子・Heの公開済み入力とコードを、例ID・版・実行場所・コマンド・出力・許容誤差・失敗判定・引用から辿れる一覧へ結ぶ。既存の配布物を上書きせず、公開後に入口を確認する。
+今回の範囲を公開確認済み
+公開済みのBarnes–Hut・水素型原子・Heの3例を、版・入力・実行場所・コマンド・出力・確認値・失敗判定・引用・既存の利用条件へ辿れる共通JSONと日英の実行案内に接続した。公開された一覧と配布ファイルだけを取得して再実行し、3例の数値条件と失敗判定の合格を確認した。
+3例の取得・実行案内 · 実行例の共通台帳 · 3例の追加実行記録 · 公開一覧からの再実行記録
 
 ## 実装ロードマップ — 主要24手法の条件・制約・文献を整理 [ja]
 

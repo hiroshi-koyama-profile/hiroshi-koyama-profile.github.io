@@ -1,0 +1,648 @@
+{
+  "schema_version": 1,
+  "verified_on": "2026-11-21T13:46:16.500622+00:00",
+  "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json",
+  "registry_sha256": "f6324ebe3d604f3227b6d0cf720de56b1af1b33d9b7a543f2156d461dbe761a1",
+  "registry_source_mode": "public-registry",
+  "verification_tool": {
+    "verifier_url": "https://hrkoyama.github.io/scripts/verify-atlas-execution-examples.py",
+    "verifier_sha256": "b7ca3b06f60d3e53bab4b592fbd6dc4d1e3d5939f13ae68635225954b302eaa2",
+    "registry_builder_url": "https://hrkoyama.github.io/scripts/build-atlas-execution-examples.py",
+    "registry_builder_sha256": "b7c16a194a33b76a9e6958a231790de67d4c7d1be195012580ab1074a046611d"
+  },
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.0.2",
+    "scipy": "1.14.1",
+    "matplotlib": "3.9.4",
+    "operating_system": "Darwin",
+    "machine": "arm64"
+  },
+  "scope": "Only the three curated execution recipes were rerun. Atomic cases share one runner. This is not a new run of the immutable editions’ 411 or 23 packaged pytest checks, independent PySCF reference regeneration, all 60 problems, or a general solver certification.",
+  "releases": [
+    {
+      "family": "numerical-methods-atlas",
+      "version": "2026-11-21",
+      "download": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/atlas-code-2026-11-21.zip",
+      "sha256": "f17c0cfcf6956a2677dcdc874235806ae9c5453514be02e6d3274732bcdebe4f",
+      "archive_bytes": 1595003,
+      "manifest": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/source-manifest.json",
+      "manifest_sha256": "af57327b5aaec0a62c76fde23e1b8da750abd6d07abe5d4593a3f7ad45907c63",
+      "archived_files_verified": 89,
+      "downloaded_artifacts": [
+        {
+          "url": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/examples/barnes-hut/input.json",
+          "sha256": "28c1943856caba029f30fd344c5f790da8054b9028021ceddf935ed68c9e03f6",
+          "bytes": 23095
+        },
+        {
+          "url": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/examples/barnes-hut/reference/result.json",
+          "sha256": "336b48a0bbfc8b6ae9abd4be86c366917885875fbd85f1033864dadeeff257ab",
+          "bytes": 904
+        },
+        {
+          "url": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/examples/barnes-hut/reference/forces.csv",
+          "sha256": "f7d88b05718203b27b961d2c6247c7aef121ffbdaee1222ba9c2c33b93a2d2a2",
+          "bytes": 37879
+        }
+      ],
+      "execution": {
+        "group": "barnes-hut",
+        "completed": true,
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 0.665825,
+        "shared_runner_cases": [
+          "barnes-hut"
+        ],
+        "command": "python examples/barnes-hut/run.py --input examples/barnes-hut/input.json --output output"
+      }
+    },
+    {
+      "family": "quantum-atoms",
+      "version": "2026-11-21",
+      "download": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/quantum-atoms-2026-11-21.zip",
+      "sha256": "f81c61b854e68b9750d960a17a133ee9a00ae7bd0c3ee268263caee626cf44c9",
+      "archive_bytes": 2475875,
+      "manifest": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/source-manifest.json",
+      "manifest_sha256": "c6d22b507028150eb09699fc0103d958e04764d1af9f98692f18ae111357d546",
+      "archived_files_verified": 26,
+      "downloaded_artifacts": [
+        {
+          "url": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/inputs.json",
+          "sha256": "8680ad9e5b04b5689b52849c71d849ddb98f9ecc9bea851a0f09d2ee2fcc6237",
+          "bytes": 1451
+        },
+        {
+          "url": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/results/results.json",
+          "sha256": "953896b55df923dcbf13ced8fdb60b699918597cded8e986807b241f1192e739",
+          "bytes": 64495
+        },
+        {
+          "url": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/results/profiles/hydrogenic-z1-n1-l0.csv",
+          "sha256": "b00c67ed623bbd98d3ea29feed6ac89446f54d17cfd6a2ef97d9be46eb2d4cff",
+          "bytes": 448266
+        },
+        {
+          "url": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/results/profiles/hydrogenic-z1-n2-l0.csv",
+          "sha256": "ca41c51afb53299779ac47de455ce12238e57e59bb77a885776960a6b3f7429f",
+          "bytes": 451918
+        },
+        {
+          "url": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/results/profiles/hydrogenic-z1-n2-l1.csv",
+          "sha256": "506ce166c04e8b752b39a4d213a5ba27225c611e632056c37b98e214ff13b4ef",
+          "bytes": 441135
+        },
+        {
+          "url": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/results/profiles/hydrogenic-z1-n3-l2.csv",
+          "sha256": "834d641826f32f21dde2b7cee1985845c29489a5cee1c80d8f925fbabe8a9d77",
+          "bytes": 432863
+        },
+        {
+          "url": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/results/profiles/hydrogenic-z2-n1-l0.csv",
+          "sha256": "7237ffefc37504bab5050a6c35f84b9b1284b2e1ecde9001e684319148a1e82c",
+          "bytes": 451703
+        },
+        {
+          "url": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/results/profiles/hydrogenic-z2-n2-l0.csv",
+          "sha256": "325acf636fee554d4dca765d8d824f46df5291c016261efccd28f328b19734ce",
+          "bytes": 458165
+        },
+        {
+          "url": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/results/profiles/hydrogenic-z2-n2-l1.csv",
+          "sha256": "c15d122c7dd9363296a77e61a987db71e823910705825ae7748ac325d1c4f066",
+          "bytes": 446809
+        },
+        {
+          "url": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/results/profiles/hydrogenic-z2-n3-l2.csv",
+          "sha256": "0b3c44b4035123ba7c385a8137b98bffba50e45e62f8b646e393c027a80d0ab6",
+          "bytes": 442445
+        },
+        {
+          "url": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/results/profiles/helium-hf.csv",
+          "sha256": "d06863e6b740b53cce7cd85ff05f915f68a2e8e42838e59538c5d63d3382d176",
+          "bytes": 730040
+        },
+        {
+          "url": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/results/profiles/helium-lda_x.csv",
+          "sha256": "4d48d7640e370ef764d6bbf6548e49c17a476d1a41397e7991f2903077f4f4eb",
+          "bytes": 739498
+        },
+        {
+          "url": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/reference-pyscf.json",
+          "sha256": "0fcf5800a54f5429e258e304d58c43214d20f22703625e76d703639ea79c36d9",
+          "bytes": 628299
+        }
+      ],
+      "execution": {
+        "group": "quantum-atoms",
+        "completed": true,
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 11.246535,
+        "shared_runner_cases": [
+          "hydrogenic-atoms",
+          "helium-ground-state"
+        ],
+        "command": "python run.py --input inputs.json --reference reference-pyscf.json --output output --figures"
+      }
+    }
+  ],
+  "examples": [
+    {
+      "id": "barnes-hut",
+      "problem_id": "isolated-particles",
+      "execution": {
+        "group": "barnes-hut",
+        "completed": true,
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 0.665825,
+        "shared_runner_cases": [
+          "barnes-hut"
+        ],
+        "command": "python examples/barnes-hut/run.py --input examples/barnes-hut/input.json --output output"
+      },
+      "validation": {
+        "passed": true,
+        "checks": [
+          {
+            "id": "particle-count",
+            "pointer": "/particles",
+            "comparison": "equals",
+            "expected": 192,
+            "observed": 192,
+            "passed": true
+          },
+          {
+            "id": "relative-force-error",
+            "pointer": "/relative_rms_force_error",
+            "comparison": "maximum",
+            "tolerance": 0.05,
+            "observed": 0.0028910490118654836,
+            "maximum_residual": 0.0028910490118654836,
+            "passed": true
+          },
+          {
+            "id": "fully-opened-error",
+            "pointer": "/fully_opened_max_absolute_error",
+            "comparison": "maximum",
+            "tolerance": 2e-13,
+            "observed": 3.552713678800501e-15,
+            "maximum_residual": 3.552713678800501e-15,
+            "passed": true
+          },
+          {
+            "id": "reported-checks",
+            "pointer": "/checks",
+            "comparison": "all_true",
+            "observed": {
+              "fixed_case_relative_force_error": true,
+              "fully_opened_tree_matches_direct_sum": true
+            },
+            "passed": true
+          },
+          {
+            "id": "input-provenance",
+            "pointer": "/input_sha256",
+            "comparison": "equals",
+            "expected": "28c1943856caba029f30fd344c5f790da8054b9028021ceddf935ed68c9e03f6",
+            "observed": "28c1943856caba029f30fd344c5f790da8054b9028021ceddf935ed68c9e03f6",
+            "passed": true
+          },
+          {
+            "id": "output-results",
+            "passed": true,
+            "generated_path": "result.json",
+            "comparison": "nonempty_artifact",
+            "sha256": "336b48a0bbfc8b6ae9abd4be86c366917885875fbd85f1033864dadeeff257ab",
+            "bytes": 904
+          },
+          {
+            "id": "output-forces",
+            "passed": true,
+            "generated_path": "forces.csv",
+            "comparison": "nonempty_artifact",
+            "sha256": "f7d88b05718203b27b961d2c6247c7aef121ffbdaee1222ba9c2c33b93a2d2a2",
+            "bytes": 37879
+          }
+        ],
+        "expected_failures": []
+      },
+      "residuals": {
+        "relative-force-error": 0.0028910490118654836,
+        "fully-opened-error": 3.552713678800501e-15
+      },
+      "passed": true
+    },
+    {
+      "id": "hydrogenic-atoms",
+      "problem_id": "hydrogenic-atoms",
+      "execution": {
+        "group": "quantum-atoms",
+        "completed": true,
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 11.246535,
+        "shared_runner_cases": [
+          "hydrogenic-atoms",
+          "helium-ground-state"
+        ],
+        "command": "python run.py --input inputs.json --reference reference-pyscf.json --output output --figures"
+      },
+      "validation": {
+        "passed": true,
+        "checks": [
+          {
+            "id": "normalization",
+            "pointer": "/hydrogenic/refinement",
+            "comparison": "abs_difference",
+            "field": "norm",
+            "expected": 1,
+            "tolerance": 1e-12,
+            "observed": [
+              0.9999999999999998,
+              1.0,
+              0.9999999999999996,
+              1.0000000000000002,
+              1.0000000000000002,
+              1.0000000000000007,
+              1.0000000000000007,
+              1.0000000000000004,
+              0.9999999999999998,
+              0.9999999999999998,
+              1.0,
+              0.9999999999999996,
+              1.0000000000000002,
+              1.0000000000000002,
+              1.0000000000000002,
+              1.0000000000000007,
+              1.0000000000000002,
+              1.0000000000000007,
+              1.0000000000000004,
+              1.0000000000000004,
+              0.9999999999999996,
+              1.0000000000000002,
+              0.9999999999999999,
+              1.0000000000000018
+            ],
+            "maximum_residual": 1.7763568394002505e-15,
+            "passed": true
+          },
+          {
+            "id": "eigen-residual",
+            "pointer": "/hydrogenic/refinement",
+            "comparison": "maximum",
+            "field": "eigen_residual",
+            "tolerance": 1e-07,
+            "units": "hartree",
+            "observed": [
+              1.0570707547073232e-13,
+              3.9806651155800925e-13,
+              2.1195230425015774e-12,
+              1.1036779698394472e-13,
+              4.662331035286052e-13,
+              1.2462227066855107e-12,
+              1.0675701833957839e-13,
+              3.359062911290406e-13,
+              1.3870807586420553e-12,
+              1.4150878293828522e-13,
+              3.993268036939531e-13,
+              2.1735873252979166e-12,
+              9.578598462256446e-14,
+              3.4890717976743023e-13,
+              1.5824961512569615e-12,
+              1.15386623356884e-13,
+              4.476261512092323e-13,
+              1.3126538175385397e-12,
+              9.201426801495605e-14,
+              4.805127544225791e-13,
+              1.3762158288763509e-12,
+              1.198210157460636e-13,
+              5.473742429450054e-13,
+              1.4502003553359513e-12
+            ],
+            "maximum_residual": 2.1735873252979166e-12,
+            "passed": true
+          },
+          {
+            "id": "analytic-energy-fine-grid",
+            "pointer": "/hydrogenic/refinement",
+            "comparison": "maximum",
+            "field": "energy_error",
+            "where": {
+              "dr": 0.01
+            },
+            "tolerance": 0.00021,
+            "units": "hartree",
+            "observed": [
+              1.2499376568997356e-05,
+              7.812400994733348e-07,
+              2.604209303758154e-07,
+              1.0284986737274515e-08,
+              0.0001999600109197086,
+              1.2499374537455754e-05,
+              4.166921105053234e-06,
+              1.6460908686122266e-07
+            ],
+            "maximum_residual": 0.0001999600109197086,
+            "passed": true
+          },
+          {
+            "id": "energy-refinement",
+            "pointer": "/checks/hydrogenic_exact_energy_errors_reduce",
+            "comparison": "equals",
+            "expected": true,
+            "observed": true,
+            "passed": true
+          },
+          {
+            "id": "output-results",
+            "passed": true,
+            "generated_path": "results.json",
+            "comparison": "nonempty_artifact",
+            "sha256": "953896b55df923dcbf13ced8fdb60b699918597cded8e986807b241f1192e739",
+            "bytes": 64495
+          },
+          {
+            "id": "output-hydrogenic-z1-n1-l0",
+            "passed": true,
+            "generated_path": "profiles/hydrogenic-z1-n1-l0.csv",
+            "comparison": "nonempty_artifact",
+            "sha256": "b00c67ed623bbd98d3ea29feed6ac89446f54d17cfd6a2ef97d9be46eb2d4cff",
+            "bytes": 448266
+          },
+          {
+            "id": "output-hydrogenic-z1-n2-l0",
+            "passed": true,
+            "generated_path": "profiles/hydrogenic-z1-n2-l0.csv",
+            "comparison": "nonempty_artifact",
+            "sha256": "ca41c51afb53299779ac47de455ce12238e57e59bb77a885776960a6b3f7429f",
+            "bytes": 451918
+          },
+          {
+            "id": "output-hydrogenic-z1-n2-l1",
+            "passed": true,
+            "generated_path": "profiles/hydrogenic-z1-n2-l1.csv",
+            "comparison": "nonempty_artifact",
+            "sha256": "506ce166c04e8b752b39a4d213a5ba27225c611e632056c37b98e214ff13b4ef",
+            "bytes": 441135
+          },
+          {
+            "id": "output-hydrogenic-z1-n3-l2",
+            "passed": true,
+            "generated_path": "profiles/hydrogenic-z1-n3-l2.csv",
+            "comparison": "nonempty_artifact",
+            "sha256": "834d641826f32f21dde2b7cee1985845c29489a5cee1c80d8f925fbabe8a9d77",
+            "bytes": 432863
+          },
+          {
+            "id": "output-hydrogenic-z2-n1-l0",
+            "passed": true,
+            "generated_path": "profiles/hydrogenic-z2-n1-l0.csv",
+            "comparison": "nonempty_artifact",
+            "sha256": "7237ffefc37504bab5050a6c35f84b9b1284b2e1ecde9001e684319148a1e82c",
+            "bytes": 451703
+          },
+          {
+            "id": "output-hydrogenic-z2-n2-l0",
+            "passed": true,
+            "generated_path": "profiles/hydrogenic-z2-n2-l0.csv",
+            "comparison": "nonempty_artifact",
+            "sha256": "325acf636fee554d4dca765d8d824f46df5291c016261efccd28f328b19734ce",
+            "bytes": 458165
+          },
+          {
+            "id": "output-hydrogenic-z2-n2-l1",
+            "passed": true,
+            "generated_path": "profiles/hydrogenic-z2-n2-l1.csv",
+            "comparison": "nonempty_artifact",
+            "sha256": "c15d122c7dd9363296a77e61a987db71e823910705825ae7748ac325d1c4f066",
+            "bytes": 446809
+          },
+          {
+            "id": "output-hydrogenic-z2-n3-l2",
+            "passed": true,
+            "generated_path": "profiles/hydrogenic-z2-n3-l2.csv",
+            "comparison": "nonempty_artifact",
+            "sha256": "0b3c44b4035123ba7c385a8137b98bffba50e45e62f8b646e393c027a80d0ab6",
+            "bytes": 442445
+          }
+        ],
+        "expected_failures": []
+      },
+      "residuals": {
+        "normalization": 1.7763568394002505e-15,
+        "eigen-residual": 2.1735873252979166e-12,
+        "analytic-energy-fine-grid": 0.0001999600109197086
+      },
+      "passed": true
+    },
+    {
+      "id": "helium-ground-state",
+      "problem_id": "helium-ground-state",
+      "execution": {
+        "group": "quantum-atoms",
+        "completed": true,
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 11.246535,
+        "shared_runner_cases": [
+          "hydrogenic-atoms",
+          "helium-ground-state"
+        ],
+        "command": "python run.py --input inputs.json --reference reference-pyscf.json --output output --figures"
+      },
+      "validation": {
+        "passed": true,
+        "checks": [
+          {
+            "id": "scf-convergence",
+            "pointer": "/helium/refinement",
+            "comparison": "equals",
+            "field": "converged",
+            "expected": true,
+            "observed": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "passed": true
+          },
+          {
+            "id": "electron-count",
+            "pointer": "/helium/refinement",
+            "comparison": "abs_difference",
+            "field": "electron_count",
+            "expected": 2,
+            "tolerance": 1e-12,
+            "observed": [
+              2.000000000000001,
+              2.0000000000000013,
+              2.0000000000000004,
+              2.0000000000000004,
+              1.9999999999999987,
+              1.9999999999999971,
+              1.9999999999999978,
+              1.9999999999999991
+            ],
+            "maximum_residual": 2.886579864025407e-15,
+            "passed": true
+          },
+          {
+            "id": "density-residual",
+            "pointer": "/helium/refinement",
+            "comparison": "maximum",
+            "field": "density_residual",
+            "tolerance": 1e-09,
+            "observed": [
+              7.298249888167601e-10,
+              7.316610815340308e-10,
+              7.316707064930232e-10,
+              7.323110498990301e-10,
+              6.952509607840008e-10,
+              6.967106753784264e-10,
+              6.974721705773261e-10,
+              6.978373585460334e-10
+            ],
+            "maximum_residual": 7.323110498990301e-10,
+            "passed": true
+          },
+          {
+            "id": "orbital-residual",
+            "pointer": "/helium/refinement",
+            "comparison": "maximum",
+            "field": "orbital_residual",
+            "tolerance": 1e-07,
+            "units": "hartree",
+            "observed": [
+              4.695098870537009e-11,
+              4.7038039700900065e-11,
+              4.7182351733513516e-11,
+              5.1491767770429186e-11,
+              1.0149884055190545e-11,
+              1.025495451273947e-11,
+              1.1489290296974026e-11,
+              2.4583100641605903e-11
+            ],
+            "maximum_residual": 5.1491767770429186e-11,
+            "passed": true
+          },
+          {
+            "id": "energy-identity",
+            "pointer": "/helium/refinement",
+            "comparison": "maximum",
+            "field": "energy_identity_error",
+            "tolerance": 1e-10,
+            "units": "hartree",
+            "observed": [
+              0.0,
+              4.440892098500626e-16,
+              0.0,
+              4.440892098500626e-16,
+              1.7763568394002505e-15,
+              4.440892098500626e-16,
+              8.881784197001252e-16,
+              4.440892098500626e-16
+            ],
+            "maximum_residual": 1.7763568394002505e-15,
+            "passed": true
+          },
+          {
+            "id": "independent-energy",
+            "pointer": "/helium/independent_comparison",
+            "comparison": "absolute_maximum",
+            "field": "extrapolated_reference_difference",
+            "tolerance": 1e-08,
+            "units": "hartree",
+            "observed": [
+              5.990838936043019e-10,
+              9.792922028850626e-11
+            ],
+            "maximum_residual": 5.990838936043019e-10,
+            "passed": true
+          },
+          {
+            "id": "independent-density",
+            "pointer": "/helium/independent_comparison",
+            "comparison": "maximum",
+            "field": "radial_density_l1_difference",
+            "tolerance": 5e-05,
+            "observed": [
+              1.530884883674325e-05,
+              1.6870027832909943e-05
+            ],
+            "maximum_residual": 1.6870027832909943e-05,
+            "passed": true
+          },
+          {
+            "id": "output-results",
+            "passed": true,
+            "generated_path": "results.json",
+            "comparison": "nonempty_artifact",
+            "sha256": "953896b55df923dcbf13ced8fdb60b699918597cded8e986807b241f1192e739",
+            "bytes": 64495
+          },
+          {
+            "id": "output-helium-hf",
+            "passed": true,
+            "generated_path": "profiles/helium-hf.csv",
+            "comparison": "nonempty_artifact",
+            "sha256": "d06863e6b740b53cce7cd85ff05f915f68a2e8e42838e59538c5d63d3382d176",
+            "bytes": 730040
+          },
+          {
+            "id": "output-helium-lda_x",
+            "passed": true,
+            "generated_path": "profiles/helium-lda_x.csv",
+            "comparison": "nonempty_artifact",
+            "sha256": "4d48d7640e370ef764d6bbf6548e49c17a476d1a41397e7991f2903077f4f4eb",
+            "bytes": 739498
+          }
+        ],
+        "expected_failures": [
+          {
+            "id": "iteration-limit-is-failure",
+            "pointer": "/helium/expected_nonconvergence",
+            "comparison": "equals",
+            "field": "converged",
+            "expected": false,
+            "observed": [
+              false,
+              false
+            ],
+            "passed": true
+          },
+          {
+            "id": "failure-reason",
+            "pointer": "/helium/expected_nonconvergence",
+            "comparison": "equals",
+            "field": "reason",
+            "expected": "max_iterations",
+            "observed": [
+              "max_iterations",
+              "max_iterations"
+            ],
+            "passed": true
+          }
+        ]
+      },
+      "residuals": {
+        "electron-count": 2.886579864025407e-15,
+        "density-residual": 7.323110498990301e-10,
+        "orbital-residual": 5.1491767770429186e-11,
+        "energy-identity": 1.7763568394002505e-15,
+        "independent-energy": 5.990838936043019e-10,
+        "independent-density": 1.6870027832909943e-05
+      },
+      "passed": true
+    }
+  ],
+  "unique_runner_executions": 2,
+  "passed": true
+}
