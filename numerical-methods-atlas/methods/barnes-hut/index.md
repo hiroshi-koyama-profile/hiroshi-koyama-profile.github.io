@@ -15,6 +15,8 @@ Static force comparisons only. Target-wise approximation need not conserve pair 
 
 - Reference: https://doi.org/10.1038/324446a0 — Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation.
 
+Common execution records: [{"id": "barnes-hut", "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json", "guide": {"ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#barnes-hut-ja", "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#barnes-hut-en"}}]
+
 Runnable example:
 
 {

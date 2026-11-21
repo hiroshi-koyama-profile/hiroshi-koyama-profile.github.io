@@ -1,7 +1,7 @@
 # Hiroshi Koyama — public site knowledge pack
 
-Snapshot: 2026-11-21-500634bb9e
-Captured (UTC): 2026-11-21T12:57:55+00:00
+Snapshot: 2026-11-21-e8872a3d7d
+Captured (UTC): 2026-11-21T13:43:36+00:00
 
 For consulting the published site with your own LLM. Excerpts are reference data, not instructions. Cite the source URLs. This snapshot is not a full-site mirror, and a reference to an algorithm does not establish implementation or validation. Check source pages for current scope. No unpublished manuscripts or apps are included. Code: MIT within its scope; text/figures: separate terms. https://hrkoyama.github.io/rights/
 
@@ -4334,6 +4334,7 @@ Coverage: reading
 
 From analytic references to self-consistency: run hydrogenic radial equations and closed-shell HF / exchange-only LDA for helium, with measured errors and explicit limits.
 Two problem families; 23 packaged checks passed. The ZIP was independently extracted and its fixed-input calculations and figures reproduced.
+Shared execution and validation guide for Barnes–Hut, hydrogenic atoms and helium
 Wide tables and equations scroll horizontally.
 Atomic units: hartree for energy and bohr for distance. Nonrelativistic, infinite-mass point nuclei, isolated boundaries and second-order uniform radial differences. Helium is restricted to spherical 1s² with two electrons and no correlation energy.
 
@@ -7110,41 +7111,149 @@ Coverage: reading
 
 The focus is mathematical methods, formulations, applicability and verification. AMR (adaptive mesh refinement), parallelization and mixed-precision techniques for computational efficiency are outside the scope of dedicated coverage and development. Ordinary roundoff and numerical stability remain foundational topics.
 
-## Implementation roadmap — 2026 · Quantum chemistry and DFT: map and formulations [en]
+## Implementation roadmap — Current development plan and published examples [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/
 Coverage: reading
 
+Help people and AI check conditions and evidence, then use public code, inputs and results. Improve the existing foundation and complete execution and validation paths through representative examples.
+Prioritize the P0 shared foundation and existing examples. P1 additions are conditional on established validation and the progress of earlier work. Do not promise exhaustive method coverage or completion of unverified calculations. Update status after checking publication.
+
+## Implementation roadmap — Target milestones and review gates [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/#atlas-queue-milestones
+Coverage: reading
+
+End of November: shared registry and three example entries
+Check shared paths from the published Barnes–Hut, hydrogenic and helium examples to inputs, execution, results and citation.
+First half of December: 15 representative problems and 24 priority methods
+Prioritize reproduction paths and method conditions/sources, then decide the scope of Ewald/H₂ additions from progress and established validation.
+18 December: target cutoff for adding new fields
+Leave unverified additions planned and move to reproduction and bilingual navigation checks for published examples.
+23 December: target for checking the year-end edition
+Reconcile releases, indexes, status, citation and maintenance/restoration instructions. This does not mean completing every implementation candidate.
+End of December: corrections and recording remaining gaps
+Avoid new scope, fix issues found during checking and carry unfinished items into the next work queue.
+
+## Implementation roadmap — Separate the current plan from development history [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/
+Coverage: reading
+
+In progress / publication check pending
+Align the current source of truth, method status and next deliverables in Japanese and English. Label earlier priorities and implementation candidates as history; do not mark this work complete before checking its publication.
+
+## Implementation roadmap — A shared executable-example registry and three templates [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/
+Coverage: reading
+
+In progress / publication check pending
+Connect the already published Barnes–Hut, hydrogenic and helium inputs and code through example IDs, editions, working directories, commands, outputs, tolerances, failure rules and citations. Preserve existing release files and check the new entry points after publication.
+
+## Implementation roadmap — Curate assumptions, limits and sources for 24 priority methods [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/
+Coverage: reading
+
+Planned
+Start with methods used by representative examples: what they solve, applicable and unsuitable conditions, checked scope and original sources. Distinguish unknown from not applicable, and chapter-related references from method-specific verification.
+
+## Implementation roadmap — Give 15 existing problems fixed-input reproduction paths [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/
+Coverage: reading
+
+Planned
+Select existing problems and provide paths from public inputs to result files, check values, tolerances and explicit failures. Reuse completed examples; these are not 15 new problems to add to the inventory.
+
+## Implementation roadmap — Connect problem, equation and picture entries to actual use [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/
+Coverage: reading
+
+Planned
+Use Poisson, Barnes–Hut and hydrogenic/He examples to show useful decisions, conditions and paths to inputs and code in both languages. Update the field map and introductory copy, keeping reading, runnable examples and plans distinct.
+
+## Implementation roadmap — Check execution, retrieval and citation using public releases only [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/
+Coverage: reading
+
+Planned
+Extract public ZIPs in a fixed environment and run small representative examples. Record human bilingual navigation and AI discovery, retrieval, execution and citation separately. Apply the same checks to any newly published examples; do not promise search inclusion or future model-training use.
+
+## Implementation roadmap — Prepare a year-end edition that can be maintained and restored [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/
+Coverage: reading
+
+Planned
+Reconcile reproduction, bilingual guidance, indexes, downloads, editions and terms. Check ordinary Git/Python/Node maintenance and restoration in a separate directory, and carry remaining gaps into the next work queue.
+
+## Implementation roadmap — A small Ewald validation example and PME/SPME reading [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/
+Coverage: reading
+
+Conditional candidate
+A conditional addition after the shared registry and representative examples. Fix self and zero-mode terms, boundaries and units for a neutral 3D periodic system, then compare energies, forces and convergence with an independent reference. Provide at least original sources, formulations and validation specifications for PME/SPME. Keep entries as reading or planned if the comparison is not established.
+
+## Implementation roadmap — An H₂ example using external electronic-structure software [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/
+Coverage: reading
+
+Conditional candidate
+A candidate using existing public software with fixed geometry, basis, spin, functional, quadrature and SCF settings to compare RHF, specified DFT and finite-basis FCI. Do not call reruns in the same software independent-implementation validation or describe the example as an atlas-built general molecular solver. Periodic band calculations are a separate task.
+
+## Implementation roadmap — Barnes–Hut fixed inputs and direct-sum comparison [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/
+Coverage: reading
+
+Scoped verified example published
+Published code, inputs and JSON/CSV compare isolated softened gravity for 192 particles with an identical-kernel direct sum. This is a static-force comparison, not a complete orbital integrator, FMM or TreePM solver.
+Inputs, results and reproduction
+
+## Implementation roadmap — Quantum chemistry and DFT: map and formulations [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/
+Coverage: reading
+
+Reading published
 Bilingual introductions to 18 entries, representative equations and primary references. A separate chapter supplies scoped hydrogenic/He runs; other dedicated implementations remain future work.
 
-## Implementation roadmap — 2026 · Representative runnable quantum-chemistry and DFT checks [en]
+## Implementation roadmap — Representative runnable quantum-chemistry and DFT checks [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/
 Coverage: reading
 
-Hydrogenic atoms and spherical-helium closed-shell HF / exchange-only LDA are executed and verified. H₂ and periodic examples remain next, including little-group/SOC/time-reversal and irrep checks.
+Scoped verified examples published
+Published fixed inputs, code, results and independent references for executed hydrogenic atoms and spherical-helium closed-shell HF / exchange-only LDA. This does not verify general molecular, periodic or correlation-inclusive DFT. An H₂ addition is conditional; periodic numerical validation is a separate task.
+Runnable hydrogenic / helium checks
 
-## Implementation roadmap — 2027 · Atlas-based specialist AI and model research [en]
+## Implementation roadmap — Atlas-based specialist AI and model research [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/
 Coverage: reading
 
+2027 or later
 A goal for 2027 or later: investigate retrieval plus execution, verified training examples and held-out evaluation. This is not a commitment to deliver an independently pretrained foundation model.
-Work queue / JSON
 
-## Implementation roadmap — 2027 · Atlas-based specialist AI and model research [en]
+## Implementation roadmap — Development history and field-specific validation candidates [en]
 
-Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/#atlas-roadmap-history
 Coverage: reading
 
-The sections below record earlier development and validation plans. The current priorities are stated above.
+The sections below retain earlier development records and field-specific validation candidates. They are not the current priority order or a commitment to implement every item this year. Existing section links are preserved.
 
-## Implementation roadmap — Current priority: shock methods# [en]
+## Implementation roadmap — Earlier priority: shock methods# [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/#current-priority-shock-methods
 Coverage: reading
 
-Shock-method expansion takes priority over relativity and new subject areas.
+At that stage, shock-method expansion took priority over relativity and new subject areas.
 The first published stage adds limited parabolic FV, characteristics, WENO-Z and an AUSM baseline, Roe's Property U with numerical counterexamples, and controlled planar odd–even diagnostics. The second computed stage adds direct-Eulerian traced PPM with independent steepening/flattening switches, specified AUSM+/AUSM+-up fluxes, and conforming-grid cylinder-forebody tests including a directional HLLE/Roe experiment. The recorded strong-jump AUSM+ failure, finite-time bow-shock behavior and unresolved verification are explicit. Lagrange/remap, optimized original Rotated-RHLL, broader strength/rotation studies and external-code comparisons remain future work.
 
 ## Implementation roadmap — First edition: executable foundations# [en]
@@ -7160,7 +7269,7 @@ The NASA case catalog includes computed 15-degree wedge baselines and remaining
 implementation candidates. A separate conforming-grid forebody diagnostic now includes a directional hybrid;
 catalog inclusion alone still does not indicate an implemented simulation.
 
-## Implementation roadmap — Next verification work# [en]
+## Implementation roadmap — Earlier validation candidates# [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/#next-verification-work
 Coverage: reading
@@ -7173,7 +7282,7 @@ Explore nonlinear Fourier methods and dealiasing, Euler DG with limiting, and mu
 Implement low-Mach PDE preconditioning and extend the directional 2D Euler hybrid beyond its stated forebody tests; test entropy correction, positivity, and carbuncle resistance separately.
 Extend elliptic solvers to variable coefficients, anisotropy, line smoothing, FAS, AMG, and 2D mixed boundaries.
 
-## Implementation roadmap — Suggested order for NASA cases# [en]
+## Implementation roadmap — Earlier suggested order for NASA cases# [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/#suggested-order-for-nasa-cases
 Coverage: reading
@@ -7278,7 +7387,7 @@ the measured shear viscosity. These educational additions are included in the
 published atlas at https://hrkoyama.github.io/numerical-methods-atlas/ . Their
 implementation limits and remaining verification work are stated in each chapter.
 
-## Implementation roadmap — Authorized next work# [en]
+## Implementation roadmap — Earlier implementation candidates and progress# [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/#authorized-next-work
 Coverage: reading
@@ -7297,7 +7406,7 @@ First stage added: limited parabolic FV, conservative characteristics and FD WEN
 AUSM common-sound-speed baseline retained; specified AUSM+ and AUSM+-up fluxes, matched traced-PPM cases and a recorded admissibility failure are added in the second stage.
 Completed web stage: HLLD with Brio–Wu, Alfvén-wave refinement and weak field-loop CT-Contact/GLM comparisons; see the MHD tests.
 
-## Implementation roadmap — Authorized next work# [en]
+## Implementation roadmap — Earlier implementation candidates and progress# [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/#authorized-next-work
 Coverage: reading
@@ -7318,7 +7427,7 @@ Stiff integration: higher-order IMEX, embedded DIRK, variable-step BDF and opera
 Sparse/nonlinear solvers: matrix-free Newton–Krylov, robust reorderings/fill, flexible preconditioning and broader nonlinear benchmarks beyond the implemented fixed-right GMRES/BiCGSTAB and ILU(0).
 Viscous/incompressible flow: wall projection, SIMPLE/PISO, cavity and cylinder-wake validation beyond periodic Taylor–Green.
 
-## Implementation roadmap — Authorized next work# [en]
+## Implementation roadmap — Earlier implementation candidates and progress# [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/#authorized-next-work
 Coverage: reading
@@ -7344,7 +7453,7 @@ tested semi-discrete f-plane Fourier symbols. D/E, vertical staggering,
 nonlinear potential-vorticity schemes, Kelvin/Rossby waves and coastlines
 remain additional work. This is not a full geophysical dynamical core.
 
-## Implementation roadmap — Planned machine-learning numerics# [en]
+## Implementation roadmap — Longer-term candidates: machine-learning numerics# [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/#planned-machine-learning-numerics
 Coverage: reading
@@ -7370,7 +7479,7 @@ the chain rule, Jacobian–vector products (JVPs), vector–Jacobian products (V
 and Hessian–vector products. Distinguish symbolic and finite-difference
 derivatives; cover roundoff, nondifferentiable points and intermediate-storage
 
-## Implementation roadmap — Planned machine-learning numerics# [en]
+## Implementation roadmap — Longer-term candidates: machine-learning numerics# [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/#planned-machine-learning-numerics
 Coverage: reading
@@ -7399,7 +7508,7 @@ spectral methods. Plan separate checks of out-of-distribution behavior, grid
 changes, discretization and aliasing errors; changing grid resolution alone
 does not guarantee accuracy. See the
 
-## Implementation roadmap — Planned machine-learning numerics# [en]
+## Implementation roadmap — Longer-term candidates: machine-learning numerics# [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/#planned-machine-learning-numerics
 Coverage: reading
@@ -7411,12 +7520,12 @@ automatic derivative evaluation. Assess noise, dimensions/symmetries,
 expression complexity and independent-data checks. Consider the study on
 extracting symbolic models from deep learning.
 
-## Implementation roadmap — Quantum chemistry and DFT: hydrogenic / He validation available [en]
+## Implementation roadmap — Electronic structure: published examples and remaining work [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/#planned-quantum-chemistry-and-dft
 Coverage: reading
 
-Introductions, representative formulas and primary references are available for 18 entries. Hydrogenic/He examples supply fixed inputs, code and independent reference comparisons. Molecular and periodic examples remain next.
+Introductions, representative formulas and primary references are available for 18 entries. Hydrogenic/He examples supply fixed inputs, code and independent reference comparisons. H₂ is a conditional addition; periodic numerical validation is a separate task.
 Bilingual overview, runnable examples and next plans
 
 ## Implementation roadmap — Verified Euler and MHD comparisons# [en]
@@ -11876,6 +11985,7 @@ Coverage: reading
 
 解析解から自己無撞着計算へ。水素型原子の動径方程式と、Heの閉殻HF・交換のみLDAを実際に計算し、誤差と適用範囲を確かめます。
 2つの問題群、公開コードの検査23件通過。配布ZIPを別フォルダへ展開し、固定入力の計算と画像生成を再実行しました。
+Barnes–Hut・水素型原子・Heの共通実行・検証手順
 横長の表と数式は左右にスクロールできます。
 原子単位系（エネルギー：hartree、距離：bohr）。非相対論、無限質量の点核、孤立境界、一様動径格子の2次中心差分を用います。Heは球対称1s²・2電子に限定し、相関エネルギーは含みません。
 
@@ -14403,7 +14513,7 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/
 Coverage: reading
 
 解説章公開コード・データ / Public code and data
-英語原文が更新されています。この日本語訳は旧版に対応します。
+上部の現行計画は日英で更新しています。履歴部分の一部の日本語訳は英語の旧版に対応します。
 
 ## 実装ロードマップ — 収録方針 [ja]
 
@@ -14412,41 +14522,149 @@ Coverage: reading
 
 数値計算の数理的な手法・定式化・適用条件・検証を中心に扱います。AMR（適応格子細分化）、並列化、mixed precision（混合精度）などの計算効率化・実装上の技巧は、独立した収録・開発の対象から外します。通常の丸め誤差や数値安定性は基礎として扱います。
 
-## 実装ロードマップ — 2026 · 量子化学・DFTの見取り図と定式化 [ja]
+## 実装ロードマップ — 現在の整備計画と公開済みの例 [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/
 Coverage: reading
 
+人にもAIにも、条件と根拠を確かめ、公開コード・入力・結果を使える資料へ。既存の基盤を整え、代表例から実行・検証の経路を揃える。
+P0の共通基盤と既存例を優先する。P1は検証が成立し、先行作業が予定内に収まる場合の追加候補。全手法の網羅や未検証計算の完成を約束しない。状態は公開確認後に更新する。
+
+## 実装ロードマップ — 整備の目安と確認の節目 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/#atlas-queue-milestones
+Coverage: reading
+
+11月末：共通台帳と3例の入口
+公開済みのBarnes–Hut・水素型原子・Heから、入力・実行・結果・引用までの共通の経路を確認する。
+12月前半：代表15問題・主要24手法
+既存例の実行経路と条件・文献の整理を優先し、進捗と検証の成立を見てEwald/H₂の追加範囲を判断する。
+12月18日：新分野の追加を止める目安
+未検証の追加は予定のまま残し、公開済み例の再現と日英の導線確認へ移る。
+12月23日：年末版の確認目標
+配布物・索引・状態表示・引用・更新と復元の手順を照合する。すべての候補の実装完了を意味しない。
+12月末：修正と残る不足の記録
+新しい範囲を増やさず、確認で見つかった問題を修正し、未完成項目を次の台帳へ引き継ぐ。
+
+## 実装ロードマップ — 現行計画と履歴を分ける [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/
+Coverage: reading
+
+実装中・公開確認待ち
+現在の正本、手法の状態、分野別の次の成果物を日英で揃える。旧来の優先順位や実装候補は履歴・候補と明示し、公開確認が済むまで完了としない。
+
+## 実装ロードマップ — 実行例の共通台帳と3つの雛形 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/
+Coverage: reading
+
+実装中・公開確認待ち
+Barnes–Hut・水素型原子・Heの公開済み入力とコードを、例ID・版・実行場所・コマンド・出力・許容誤差・失敗判定・引用から辿れる一覧へ結ぶ。既存の配布物を上書きせず、公開後に入口を確認する。
+
+## 実装ロードマップ — 主要24手法の条件・制約・文献を整理 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/
+Coverage: reading
+
+予定
+代表例に関わる手法から、何を解くか、使える条件、避ける条件、確認した範囲と原典を整理する。未確認と適用対象外を区別し、章単位の関連文献を個別手法の検証と混同しない。
+
+## 実装ロードマップ — 既存15問題を固定入力から再実行できる形へ [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/
+Coverage: reading
+
+予定
+既にある問題を選び、公開入力から結果ファイルを生成し、確認値・許容誤差・失敗を判定できる経路を揃える。既存の完成例を再利用し、新規15問題として総数へ加算しない。
+
+## 実装ロードマップ — 問題・数式・画像から使い方へ進む入口 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/
+Coverage: reading
+
+予定
+Poisson・Barnes–Hut・H/Heを代表例として、得られる判断、条件、入力・コードへの進み方を日英で示す。分野地図と紹介文を現状に合わせ、解説・実行例・予定を区別する。
+
+## 実装ロードマップ — 公開配布だけを使う実行・取得・引用の確認 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/
+Coverage: reading
+
+予定
+固定環境で公開ZIPを展開し、小規模な代表例を実行する。人の日英の導線と、AIの外部発見・情報取得・実行・引用を別々に記録する。年内に追加公開する例も同じ確認を通し、検索への掲載や将来の学習採用を保証しない。
+
+## 実装ロードマップ — 更新・復元できる年末版へまとめる [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/
+Coverage: reading
+
+予定
+代表例の再現、日英案内、索引、取得先、版・利用条件を照合する。通常のGit・Python・Nodeによる更新と別フォルダへの復元を確認し、残る不足は次の台帳へ残す。
+
+## 実装ロードマップ — Ewaldの小規模検証とPME/SPMEの解説 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/
+Coverage: reading
+
+条件付きの候補
+共通台帳・代表例の整備を優先したうえで追加する候補。中性の3次元周期系で自己項・ゼロモード・境界・単位を固定し、エネルギー・力・収束を独立した参照と照合する。PME/SPMEは少なくとも原典・定式化・検証仕様を揃える。照合できなければ解説・予定の状態を維持する。
+
+## 実装ロードマップ — H₂の外部ソフトによる実行例 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/
+Coverage: reading
+
+条件付きの候補
+既存の公開ソフトで幾何・基底・スピン・汎関数・求積・SCF条件を固定し、RHF・指定DFT・有限基底FCIを比較する候補。同じソフト内の再実行を独立実装の検証と呼ばず、アトラス独自の汎用分子ソルバーとも区別する。周期バンド計算は別課題とする。
+
+## 実装ロードマップ — Barnes–Hutの固定入力・直接和比較 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/
+Coverage: reading
+
+検証した限定例を公開済み
+192粒子の孤立・軟化重力を、同じ核の直接和と比較するコード、入力、JSON・CSVを公開済み。静的な力の比較であり、汎用軌道積分・FMM・TreePMの完成を意味しない。
+入力・結果と実行手順
+
+## 実装ロードマップ — 量子化学・DFTの見取り図と定式化 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/
+Coverage: reading
+
+解説公開済み
 18項目の日英解説、代表式、一次文献。水素型原子・Heの限定した実行例は別章に公開し、その他の専用実装は今後の作業として区別する。
 
-## 実装ロードマップ — 2026 · 量子化学・DFTの代表的な実行・検証例 [ja]
+## 実装ロードマップ — 量子化学・DFTの代表的な実行・検証例 [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/
 Coverage: reading
 
-水素型原子と球対称Heの閉殻HF・交換のみLDAを実行・検証。小分子H₂と周期系は次段階。周期系では小群・SOC・時間反転と既約表現の条件も照合する。
+検証した限定例を公開済み
+水素型原子と球対称Heの閉殻HF・交換のみLDAを実行・検証し、固定入力、コード、結果、独立参照を公開済み。一般の分子・周期・相関を含むDFTまで検証したという意味ではない。H₂の追加は条件付き、周期系の実行検証は別課題とする。
+水素型原子・Heの実行検証例
 
-## 実装ロードマップ — 2027 · アトラスを核とする専門AI・モデル研究 [ja]
+## 実装ロードマップ — アトラスを核とする専門AI・モデル研究 [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/
 Coverage: reading
 
+2027年以降
 2027年以降の目標。資料検索と計算実行を結ぶ試作、検証済み学習事例、未学習問題での評価を検討。独立した基盤モデルの完成を約束する項目ではない。
-作業台帳 / JSON
 
-## 実装ロードマップ — 2027 · アトラスを核とする専門AI・モデル研究 [ja]
+## 実装ロードマップ — これまでの整備・分野別の検証候補 [ja]
 
-Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/#atlas-roadmap-history
 Coverage: reading
 
-これより下は、これまでの整備と従来の検証計画です。現在の優先順位は上記を参照してください。
+以下は過去の拡張記録と分野別の検証候補です。現行の優先順位や、すべてを年内に実装する約束ではありません。既存の節リンクを保持しています。
 
-## 実装ロードマップ — 現在の最優先：衝撃波手法# [ja]
+## 実装ロードマップ — 過去の重点：衝撃波手法# [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/#current-priority-shock-methods
 Coverage: reading
 
-相対論・新分野より、衝撃波手法の拡充を優先します。最初の公開段階として制限付き放物線FV・特性変数・WENO-Z・AUSM基準例、数値反例を含むRoeのProperty U、管理した平面odd–even診断を追加しました。第2段階では、急峻化・平坦化を独立に切り替える直接Euler型波追跡PPM、定義を明示したAUSM+／AUSM+-up、方向分解HLLE/Roe実験を含む物体適合格子の円柱前半部を追加しました。強圧力差でのAUSM+停止、有限時刻の弓形衝撃波、未解決の検証を明示します。Lagrange/remap、原型Rotated-RHLLの最適化、幅広い強度・回転条件、外部コード比較は今後です。
+当時は、相対論・新分野より衝撃波手法の拡充を優先しました。最初の公開段階として制限付き放物線FV・特性変数・WENO-Z・AUSM基準例、数値反例を含むRoeのProperty U、管理した平面odd–even診断を追加しました。第2段階では、急峻化・平坦化を独立に切り替える直接Euler型波追跡PPM、定義を明示したAUSM+／AUSM+-up、方向分解HLLE/Roe実験を含む物体適合格子の円柱前半部を追加しました。強圧力差でのAUSM+停止、有限時刻の弓形衝撃波、未解決の検証を明示します。Lagrange/remap、原型Rotated-RHLLの最適化、幅広い強度・回転条件、外部コード比較は今後です。
 
 ## 実装ロードマップ — 初版：実行可能な基礎# [ja]
 
@@ -14456,7 +14674,7 @@ Coverage: reading
 v0.1.0は教育用Pythonライブラリ、歴史アトラス、英語解説、文献カタログ、比較図、自動数値検査をまとめています。リポジトリが初版配布物で、READMEのガイドが資料をつなぎます。
 NASA問題集には計算済みの15°楔の基準例と未実装候補が含まれます。別の物体適合格子の前面診断に方向分解ハイブリッドを追加しました。カタログへの収録だけでは、引き続き実装済みを意味しません。
 
-## 実装ロードマップ — 次の検証# [ja]
+## 実装ロードマップ — 従来の検証候補# [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/#next-verification-work
 Coverage: reading
@@ -14469,7 +14687,7 @@ Coverage: reading
 低Mach PDE前処理を実装し、方向分解2次元Eulerハイブリッドを前面テスト以外へ広げます。エントロピー修正、正値性、カーバンクルを別々に確認します。
 楕円解法を変係数、異方性、線緩和、FAS、AMG、2次元混合境界へ拡張します。
 
-## 実装ロードマップ — NASA問題の推奨順序# [ja]
+## 実装ロードマップ — 従来のNASA問題の推奨順序# [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/#suggested-order-for-nasa-cases
 Coverage: reading
@@ -14536,7 +14754,7 @@ Coverage: reading
 Burgers・LWR交通流を含む7系統9ケースの保存分布を追加しました。スカラー厳密セル平均と、Euler・浅水・等温の半解析Riemann参照解の保存変数セル平均を区別します。参照解ライブラリには、真空・乾床の膨張波、粘性速度分布、Poisson製造解を含む18ケースを追加しました。
 連続P1 FEM、疎行列・非線形解法、硬いODE、周期MAC射影、D2Q9–BGK、1次双曲型拡散に専用検査・図・ソースハッシュがあります。Chapman–Enskog展開は測定したせん断粘性へつなぐ形式導出です。これらの教育用実装は新しいアトラスで公開済みです。各章に実装範囲と残る検証を示しています。
 
-## 実装ロードマップ — 承認済みの次の作業# [ja]
+## 実装ロードマップ — 従来の実装候補と進捗記録# [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/#authorized-next-work
 Coverage: reading
@@ -14565,7 +14783,7 @@ Coverage: reading
 生物カタログは22系統を文献のみで整理し、方程式、出典規約、検証案を含みます。実装順はロジスティック／SIR・酵素反応からFisher前線、FitzHugh–Nagumo、Schnakenberg、Keller–Segelへ進め、出生・死亡SSAを独立した確率分岐とします。生物ソルバーや生物の妥当性確認は追加していません。
 Arakawa A／B／Cは配置図と検証済み半離散f平面記号を持ちます。D／E、鉛直配置、非線形渦位、Kelvin／Rossby、海岸は追加課題で、完全な地球流体コアではありません。
 
-## 実装ロードマップ — 機械学習に関連する数値計算の改訂候補# [ja]
+## 実装ロードマップ — 長期の改訂候補：機械学習に関連する数値計算# [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/#planned-machine-learning-numerics
 Coverage: reading
@@ -14581,12 +14799,12 @@ Coverage: reading
  応用候補 — Neural Operator／Fourier Neural Operator：入力関数から解関数への写像を学習する考え方を、既存のFourier基底・スペクトル法と接続します。学習分布外、格子変更、離散化・aliasing誤差を独立に確認する計画とし、格子を変更できることだけで精度を保証しません。Neural Operator原論文を参照します。
  応用候補 — 記号回帰と方程式発見：データや学習モデルから明示的な数式を探す方法。微分の自動計算と区別し、ノイズ、次元・対称性、式の複雑さ、別データでの再現性を評価します。深層学習から記号モデルを抽出する研究を調査候補とします。
 
-## 実装ロードマップ — 量子化学・DFT：水素型原子・Heの検証例を公開 [ja]
+## 実装ロードマップ — 電子状態：公開済み例と残る課題 [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/#planned-quantum-chemistry-and-dft
 Coverage: reading
 
-18項目の導入解説・代表式・一次文献を公開しました。水素型原子・Heには固定入力、コード、独立参照との比較があります。小分子・周期系は次段階です。
+18項目の導入解説・代表式・一次文献を公開しました。水素型原子・Heには固定入力、コード、独立参照との比較があります。H₂の追加は条件付きの候補で、周期系の実行検証は別課題です。
 日英の解説・計算例と今後の計画
 
 ## 実装ロードマップ — 検証付きEuler・MHD比較# [ja]

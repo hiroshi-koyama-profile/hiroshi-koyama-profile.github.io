@@ -12,6 +12,10 @@ ATLAS=ROOT/'numerical-methods-atlas'
 ORIGIN='https://hrkoyama.github.io'
 DATA=json.loads((ROOT/'catalog/atlas-methods.json').read_text())
 METHODS=DATA['methods']
+EXECUTION_RECORDS=json.loads((ROOT/'catalog/atlas-execution-examples.json').read_text())['examples']
+EXECUTION_REGISTRY=ORIGIN+'/numerical-methods-atlas/code-and-data/examples.json'
+def execution_links(method_id):
+    return [{'id':e['id'],'registry_url':EXECUTION_REGISTRY,'guide':{lang:ORIGIN+'/numerical-methods-atlas/code-and-data/?lang='+lang+'#'+e['id']+'-'+lang for lang in ['ja','en']}} for e in EXECUTION_RECORDS if method_id in e['method_ids']]
 # Remove obsolete generated records when the editorial catalog excludes a topic.
 active_ids={x['id'] for x in METHODS}
 for directory in (ATLAS/'methods').glob('*'):
@@ -74,6 +78,7 @@ def public_record(x):
             'code_base':ORIGIN+CODE,'code_edition':EDITION if x['code_modules'] else None}
     if x.get('quantum_examples'):
         record.update(code_urls=[ORIGIN+ACODE+f for f in ['atomic_radial.py','run.py']],test_urls=[ORIGIN+ACODE+'test_atomic_radial.py'],run_commands=[ATOMS['test_command'],ATOMS['run_command']],run_from='Extracted quantum-atoms edition directory',code_base=ORIGIN+ACODE,code_edition=ATOMS['edition'],code_verification=ORIGIN+ACODE+'verification.json',code_download=ORIGIN+ACODE+ATOMS['archive'],inputs=ORIGIN+ACODE+'inputs.json',results=ORIGIN+ACODE+'results/results.json',independent_reference=ORIGIN+ACODE+'reference-pyscf.json',code_examples=[{**ACASES[i],'reading':{l:ORIGIN+f'/numerical-methods-atlas/{l}/read/quantum-atoms/#{ACASES[i]["section"]}' for l in ['ja','en']}} for i in x['quantum_examples']])
+    record['execution_examples']=execution_links(x['id'])
     return record
 
 sections=[]
@@ -125,6 +130,8 @@ for x in METHODS:
             for ident in x['quantum_examples']:
                 c=ACASES[ident];body+='<li>'+link(f'/numerical-methods-atlas/{lang}/read/quantum-atoms/#{c["section"]}',c['name'][lang])+'</li>'
             body+='</ul><p>'+link(ACODE+ATOMS['archive'],'コード・入力・結果 ZIP' if ja else 'Code, inputs and results ZIP')+' · '+link(ACODE+'verification.json','独立展開の検証記録' if ja else 'Independent-extraction verification')+'</p><p>'+link(ACODE+'atomic_radial.py','Python solver')+' · '+link(ACODE+'test_atomic_radial.py','Tests')+' · '+link(ACODE+'inputs.json','Inputs JSON')+' · '+link(ACODE+'results/results.json','Results JSON')+' · '+link(ACODE+'reference-pyscf.json','Independent reference JSON')+'</p><pre><code>'+esc(ATOMS['test_command']+'\n'+ATOMS['run_command'])+'</code></pre>'
+        for common in execution_links(x['id']):
+            body+='<p class="resource-summary">'+link(common['guide'][lang],'入力・実行・結果判定・引用の共通手順' if ja else 'Shared input, execution, validation and citation steps')+'</p>'
         if x.get('example'):
             example=x['example']
             body+='<h2>'+('固定入力から計算する' if ja else 'Run an explicit input')+'</h2><p>'+('192粒子の座標・質量を保存した入力を使い、ツリーと直接和の力を計算します。出力は誤差と検査を記録するJSON、粒子ごとの力を記録するCSVです。' if ja else 'Use explicit positions and masses for 192 particles. Compute tree and direct-sum forces, then export error/check records as JSON and particle forces as CSV.')+'</p><p>'+link(example['input'],'入力 / Input JSON')+' · '+link(example['runner'],'実行コード / Runner')+' · '+link(example['reference'],'参照出力 / Reference JSON')+' · '+link(example['forces'],'力のデータ / Force CSV')+'</p><pre><code>'+esc(example['command'])+'</code></pre>'
@@ -148,6 +155,7 @@ for x in METHODS:
     md+='\n'.join('- Code: '+ORIGIN+CODE+'numart/'+name+'.py' for name in x['code_modules'])+'\n\n'
     md+='\n'.join('- Reference: '+r['url']+' — '+r['scope'] for r in x['references'])+'\n\n'
     if x.get('quantum_examples'):md+='Scoped example: '+x['example_scope']['en']+'\n\n'+json.dumps(record['code_examples'],ensure_ascii=False,indent=2)+'\n\nDownload: '+record['code_download']+'\nVerification: '+record['code_verification']+'\nSource: '+record['code_urls'][0]+'\nResults: '+record['results']+'\nCommands (from extracted atomic edition):\n\n'+ '\n'.join(record['run_commands'])+'\n\n'
+    if record['execution_examples']:md+='Common execution records: '+json.dumps(record['execution_examples'],ensure_ascii=False)+'\n\n'
     if x.get('next_deliverable'):md+='Next: '+x['next_deliverable']['en']+'\n\n'
     if x.get('example'):md+='Runnable example:\n\n'+json.dumps(x['example'],ensure_ascii=False,indent=2)+'\n\n'
     md+='Source: '+ORIGIN+url+'\nEdition and terms: '+ORIGIN+'/numerical-methods-atlas/code-and-data/\n'
@@ -205,6 +213,7 @@ block=f'''\n## Method records and executable code
 - [Method registry / JSON]({ORIGIN}/numerical-methods-atlas/methods/index.json): Names, status, reading routes, chapter-related Python modules, tests, reference links and explicit metadata gaps. Each entry has a stable HTML URL, index.json and index.md. Null assumptions or boundaries mean not yet curated, not unrestricted applicability.
 - Editorial scope: {DATA['editorial_policy']['statement']['en']}
 - [Code, inputs and verification]({ORIGIN}/numerical-methods-atlas/code-and-data/): Public ZIP, file hashes, dependencies and standalone verification. Original implementation code is MIT within its scope; datasets and content retain separate terms.
+- [Shared execution records / JSON]({EXECUTION_REGISTRY}): three existing examples (Barnes–Hut, hydrogenic atoms, helium) with fixed inputs, versioned downloads, commands, outputs, numeric acceptance rules, failure scope and citation. Follow each record’s guide URL and the linked public-download rerun receipt. The atomic examples share one runner.
 - [Code edition manifest]({ORIGIN}{CODE}source-manifest.json): Direct file URLs are the public_base_url plus each listed path. The archive contains no Git history or private manuscripts.
 - [Code edition verification]({ORIGIN}{CODE}verification.json): {verification['passed']} passed, {verification['skipped']} intentionally inapplicable cases skipped in an independent extraction. No Ewald/PME/SPME or DFT implementation is included in this edition.
 - [Runnable atomic examples]({ORIGIN}/numerical-methods-atlas/en/read/quantum-atoms/): two hydrogenic/He problem families, {AVER["passed"]} independently extracted package checks passed; code, fixed inputs, CSV profiles, SCF histories and PySCF reference results. [Atomic source manifest]({ORIGIN}{ACODE}source-manifest.json) and [verification]({ORIGIN}{ACODE}verification.json). Only spherical 1s² HF and Dirac exchange-only LDA for He; not general molecular or periodic DFT.

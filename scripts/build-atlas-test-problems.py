@@ -17,6 +17,8 @@ ROUTE='/numerical-methods-atlas/test-cases/'
 source=ROOT/'catalog/atlas-test-problems.json'
 data=json.loads(source.read_text())
 problems=data['problems']
+execution_records=json.loads((ROOT/'catalog/atlas-execution-examples.json').read_text())['examples']
+execution_registry=ORIGIN+'/numerical-methods-atlas/code-and-data/examples.json'
 assert len({x['id'] for x in problems})==len(problems)
 counts=Counter(x['group'] for x in problems)
 availability=Counter(x['availability'] for x in problems)
@@ -56,8 +58,11 @@ for x in public['problems']:
         available=lang if (ATLAS/lang/'read'/x['chapter']/'index.html').is_file() else 'en'
         x['reading'][lang]=ORIGIN+f'/numerical-methods-atlas/{available}/read/'+x['chapter']+'/'+('#'+x['reading_section'] if x.get('reading_section') else '')
     if x.get('code_base'):x['code_verification']=ORIGIN+x['code_base']+'verification.json'
+    x['execution_examples']=[{'id':e['id'],'registry_url':execution_registry,'guide':{lang:ORIGIN+'/numerical-methods-atlas/code-and-data/?lang='+lang+'#'+e['id']+'-'+lang for lang in ['ja','en']}} for e in execution_records if e['problem_id']==x['id']]
     x['url']=ORIGIN+ROUTE+'#'+x['id']
     x['run_commands']=x.get('commands') or ['python -m pytest -q tests/'+Path(e['path']).name+' -k '+e['python_symbol'] for e in x['evidence'] if 'python_symbol' in e]
+    if not x['run_commands'] and x['execution_examples']:
+        x['run_commands']=[next(e for e in execution_records if e['problem_id']==x['id'])['commands']['run']]
 dest=ROOT/ROUTE.lstrip('/');dest.mkdir(parents=True,exist_ok=True)
 (dest/'index.json').write_text(json.dumps(public,ensure_ascii=False,indent=2)+'\n')
 esc=html.escape
@@ -92,7 +97,9 @@ for lang in ['ja','en']:
                 body+='<li>'+link('/'+e['path'],label)
                 if e.get('where'):body+=' <code>'+esc(json.dumps(e['where'],ensure_ascii=False))+'</code>'
                 body+='</li>'
-            body+='</ul></details></li>'
+            body+='</ul></details>'
+            for e in x['execution_examples']:body+='<p>'+link(e['guide'][lang],'固定入力から実行・検証・引用する' if ja else 'Run, validate and cite the fixed input')+'</p>'
+            body+='</li>'
         body+='</ul></section>'
     body+='<h2>'+('総数に加算しないもの' if ja else 'Not added to the total')+'</h2><ul>'+''.join('<li>'+esc(x)+'</li>' for x in data['excluded_examples'][lang])+'</ul><p>'+link('/using/','利用・引用' if ja else 'Use and citation')+'</p></section>'
     sections.append(body)

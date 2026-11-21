@@ -1,7 +1,177 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "reviewed_on": "2026-11-21",
+  "title": {
+    "ja": "数値計算法アトラス：現行の整備計画",
+    "en": "Numerical Methods Atlas: current development plan"
+  },
+  "description": {
+    "ja": "人にもAIにも、条件と根拠を確かめ、公開コード・入力・結果を使える資料へ。既存の基盤を整え、代表例から実行・検証の経路を揃える。",
+    "en": "Help people and AI check conditions and evidence, then use public code, inputs and results. Improve the existing foundation and complete execution and validation paths through representative examples."
+  },
+  "policy": {
+    "ja": "P0の共通基盤と既存例を優先する。P1は検証が成立し、先行作業が予定内に収まる場合の追加候補。全手法の網羅や未検証計算の完成を約束しない。状態は公開確認後に更新する。",
+    "en": "Prioritize the P0 shared foundation and existing examples. P1 additions are conditional on established validation and the progress of earlier work. Do not promise exhaustive method coverage or completion of unverified calculations. Update status after checking publication."
+  },
   "items": [
+    {
+      "id": "current-roadmap",
+      "target_year": 2026,
+      "state": "in-progress",
+      "track": "current",
+      "title": {
+        "ja": "現行計画と履歴を分ける",
+        "en": "Separate the current plan from development history"
+      },
+      "scope": {
+        "ja": "現在の正本、手法の状態、分野別の次の成果物を日英で揃える。旧来の優先順位や実装候補は履歴・候補と明示し、公開確認が済むまで完了としない。",
+        "en": "Align the current source of truth, method status and next deliverables in Japanese and English. Label earlier priorities and implementation candidates as history; do not mark this work complete before checking its publication."
+      },
+      "priority": "P0"
+    },
+    {
+      "id": "executable-example-registry",
+      "target_year": 2026,
+      "state": "in-progress",
+      "track": "current",
+      "title": {
+        "ja": "実行例の共通台帳と3つの雛形",
+        "en": "A shared executable-example registry and three templates"
+      },
+      "scope": {
+        "ja": "Barnes–Hut・水素型原子・Heの公開済み入力とコードを、例ID・版・実行場所・コマンド・出力・許容誤差・失敗判定・引用から辿れる一覧へ結ぶ。既存の配布物を上書きせず、公開後に入口を確認する。",
+        "en": "Connect the already published Barnes–Hut, hydrogenic and helium inputs and code through example IDs, editions, working directories, commands, outputs, tolerances, failure rules and citations. Preserve existing release files and check the new entry points after publication."
+      },
+      "priority": "P0"
+    },
+    {
+      "id": "method-assumptions-review",
+      "target_year": 2026,
+      "state": "planned",
+      "track": "current",
+      "title": {
+        "ja": "主要24手法の条件・制約・文献を整理",
+        "en": "Curate assumptions, limits and sources for 24 priority methods"
+      },
+      "scope": {
+        "ja": "代表例に関わる手法から、何を解くか、使える条件、避ける条件、確認した範囲と原典を整理する。未確認と適用対象外を区別し、章単位の関連文献を個別手法の検証と混同しない。",
+        "en": "Start with methods used by representative examples: what they solve, applicable and unsuitable conditions, checked scope and original sources. Distinguish unknown from not applicable, and chapter-related references from method-specific verification."
+      },
+      "priority": "P0"
+    },
+    {
+      "id": "representative-recipes",
+      "target_year": 2026,
+      "state": "planned",
+      "track": "current",
+      "title": {
+        "ja": "既存15問題を固定入力から再実行できる形へ",
+        "en": "Give 15 existing problems fixed-input reproduction paths"
+      },
+      "scope": {
+        "ja": "既にある問題を選び、公開入力から結果ファイルを生成し、確認値・許容誤差・失敗を判定できる経路を揃える。既存の完成例を再利用し、新規15問題として総数へ加算しない。",
+        "en": "Select existing problems and provide paths from public inputs to result files, check values, tolerances and explicit failures. Reuse completed examples; these are not 15 new problems to add to the inventory."
+      },
+      "priority": "P0"
+    },
+    {
+      "id": "human-entry-points",
+      "target_year": 2026,
+      "state": "planned",
+      "track": "current",
+      "title": {
+        "ja": "問題・数式・画像から使い方へ進む入口",
+        "en": "Connect problem, equation and picture entries to actual use"
+      },
+      "scope": {
+        "ja": "Poisson・Barnes–Hut・H/Heを代表例として、得られる判断、条件、入力・コードへの進み方を日英で示す。分野地図と紹介文を現状に合わせ、解説・実行例・予定を区別する。",
+        "en": "Use Poisson, Barnes–Hut and hydrogenic/He examples to show useful decisions, conditions and paths to inputs and code in both languages. Update the field map and introductory copy, keeping reading, runnable examples and plans distinct."
+      },
+      "priority": "P0"
+    },
+    {
+      "id": "public-reproduction-checks",
+      "target_year": 2026,
+      "state": "planned",
+      "track": "current",
+      "title": {
+        "ja": "公開配布だけを使う実行・取得・引用の確認",
+        "en": "Check execution, retrieval and citation using public releases only"
+      },
+      "scope": {
+        "ja": "固定環境で公開ZIPを展開し、小規模な代表例を実行する。人の日英の導線と、AIの外部発見・情報取得・実行・引用を別々に記録する。年内に追加公開する例も同じ確認を通し、検索への掲載や将来の学習採用を保証しない。",
+        "en": "Extract public ZIPs in a fixed environment and run small representative examples. Record human bilingual navigation and AI discovery, retrieval, execution and citation separately. Apply the same checks to any newly published examples; do not promise search inclusion or future model-training use."
+      },
+      "priority": "P0"
+    },
+    {
+      "id": "year-end-release",
+      "target_year": 2026,
+      "state": "planned",
+      "track": "current",
+      "title": {
+        "ja": "更新・復元できる年末版へまとめる",
+        "en": "Prepare a year-end edition that can be maintained and restored"
+      },
+      "scope": {
+        "ja": "代表例の再現、日英案内、索引、取得先、版・利用条件を照合する。通常のGit・Python・Nodeによる更新と別フォルダへの復元を確認し、残る不足は次の台帳へ残す。",
+        "en": "Reconcile reproduction, bilingual guidance, indexes, downloads, editions and terms. Check ordinary Git/Python/Node maintenance and restoration in a separate directory, and carry remaining gaps into the next work queue."
+      },
+      "priority": "P0"
+    },
+    {
+      "id": "ewald-pme-spme",
+      "target_year": 2026,
+      "state": "conditional-planned",
+      "track": "conditional",
+      "title": {
+        "ja": "Ewaldの小規模検証とPME/SPMEの解説",
+        "en": "A small Ewald validation example and PME/SPME reading"
+      },
+      "scope": {
+        "ja": "共通台帳・代表例の整備を優先したうえで追加する候補。中性の3次元周期系で自己項・ゼロモード・境界・単位を固定し、エネルギー・力・収束を独立した参照と照合する。PME/SPMEは少なくとも原典・定式化・検証仕様を揃える。照合できなければ解説・予定の状態を維持する。",
+        "en": "A conditional addition after the shared registry and representative examples. Fix self and zero-mode terms, boundaries and units for a neutral 3D periodic system, then compare energies, forces and convergence with an independent reference. Provide at least original sources, formulations and validation specifications for PME/SPME. Keep entries as reading or planned if the comparison is not established."
+      },
+      "priority": "P1"
+    },
+    {
+      "id": "molecular-quantum-example",
+      "target_year": 2026,
+      "state": "conditional-planned",
+      "track": "conditional",
+      "title": {
+        "ja": "H₂の外部ソフトによる実行例",
+        "en": "An H₂ example using external electronic-structure software"
+      },
+      "scope": {
+        "ja": "既存の公開ソフトで幾何・基底・スピン・汎関数・求積・SCF条件を固定し、RHF・指定DFT・有限基底FCIを比較する候補。同じソフト内の再実行を独立実装の検証と呼ばず、アトラス独自の汎用分子ソルバーとも区別する。周期バンド計算は別課題とする。",
+        "en": "A candidate using existing public software with fixed geometry, basis, spin, functional, quadrature and SCF settings to compare RHF, specified DFT and finite-basis FCI. Do not call reruns in the same software independent-implementation validation or describe the example as an atlas-built general molecular solver. Periodic band calculations are a separate task."
+      },
+      "priority": "P1"
+    },
+    {
+      "id": "barnes-hut-example",
+      "target_year": 2026,
+      "state": "published-verified-example",
+      "track": "published",
+      "title": {
+        "ja": "Barnes–Hutの固定入力・直接和比較",
+        "en": "Barnes–Hut fixed inputs and direct-sum comparison"
+      },
+      "scope": {
+        "ja": "192粒子の孤立・軟化重力を、同じ核の直接和と比較するコード、入力、JSON・CSVを公開済み。静的な力の比較であり、汎用軌道積分・FMM・TreePMの完成を意味しない。",
+        "en": "Published code, inputs and JSON/CSV compare isolated softened gravity for 192 particles with an identical-kernel direct sum. This is a static-force comparison, not a complete orbital integrator, FMM or TreePM solver."
+      },
+      "links": [
+        {
+          "url": "/numerical-methods-atlas/methods/barnes-hut/",
+          "label": {
+            "ja": "入力・結果と実行手順",
+            "en": "Inputs, results and reproduction"
+          }
+        }
+      ]
+    },
     {
       "id": "quantum-reading",
       "target_year": 2026,
@@ -13,7 +183,8 @@
       "scope": {
         "ja": "18項目の日英解説、代表式、一次文献。水素型原子・Heの限定した実行例は別章に公開し、その他の専用実装は今後の作業として区別する。",
         "en": "Bilingual introductions to 18 entries, representative equations and primary references. A separate chapter supplies scoped hydrogenic/He runs; other dedicated implementations remain future work."
-      }
+      },
+      "track": "published"
     },
     {
       "id": "quantum-examples",
@@ -24,9 +195,19 @@
         "en": "Representative runnable quantum-chemistry and DFT checks"
       },
       "scope": {
-        "ja": "水素型原子と球対称Heの閉殻HF・交換のみLDAを実行・検証。小分子H₂と周期系は次段階。周期系では小群・SOC・時間反転と既約表現の条件も照合する。",
-        "en": "Hydrogenic atoms and spherical-helium closed-shell HF / exchange-only LDA are executed and verified. H₂ and periodic examples remain next, including little-group/SOC/time-reversal and irrep checks."
-      }
+        "ja": "水素型原子と球対称Heの閉殻HF・交換のみLDAを実行・検証し、固定入力、コード、結果、独立参照を公開済み。一般の分子・周期・相関を含むDFTまで検証したという意味ではない。H₂の追加は条件付き、周期系の実行検証は別課題とする。",
+        "en": "Published fixed inputs, code, results and independent references for executed hydrogenic atoms and spherical-helium closed-shell HF / exchange-only LDA. This does not verify general molecular, periodic or correlation-inclusive DFT. An H₂ addition is conditional; periodic numerical validation is a separate task."
+      },
+      "track": "published",
+      "links": [
+        {
+          "url": "/numerical-methods-atlas/{lang}/read/quantum-atoms/",
+          "label": {
+            "ja": "水素型原子・Heの実行検証例",
+            "en": "Runnable hydrogenic / helium checks"
+          }
+        }
+      ]
     },
     {
       "id": "atlas-specialist-ai",
@@ -41,8 +222,71 @@
         "en": "A goal for 2027 or later: investigate retrieval plus execution, verified training examples and held-out evaluation. This is not a commitment to deliver an independently pretrained foundation model."
       },
       "decision": {
-        "ja": "2026年11月21日のユーザー指示により今年の作業から繰り延べ。",
-        "en": "Deferred from 2026 at the user’s request on 2026-11-21."
+        "ja": "2026年の資料・実行例の整備と区別し、専門AIの研究を2027年以降の目標とする。",
+        "en": "Keep specialist-AI research separate from the 2026 resource and runnable-example work, as a goal for 2027 or later."
+      },
+      "track": "later"
+    }
+  ],
+  "milestones": [
+    {
+      "id": "shared-first-examples",
+      "target": "2026-11-30",
+      "title": {
+        "ja": "11月末：共通台帳と3例の入口",
+        "en": "End of November: shared registry and three example entries"
+      },
+      "scope": {
+        "ja": "公開済みのBarnes–Hut・水素型原子・Heから、入力・実行・結果・引用までの共通の経路を確認する。",
+        "en": "Check shared paths from the published Barnes–Hut, hydrogenic and helium examples to inputs, execution, results and citation."
+      }
+    },
+    {
+      "id": "representative-paths",
+      "target": "2026-12-12",
+      "title": {
+        "ja": "12月前半：代表15問題・主要24手法",
+        "en": "First half of December: 15 representative problems and 24 priority methods"
+      },
+      "scope": {
+        "ja": "既存例の実行経路と条件・文献の整理を優先し、進捗と検証の成立を見てEwald/H₂の追加範囲を判断する。",
+        "en": "Prioritize reproduction paths and method conditions/sources, then decide the scope of Ewald/H₂ additions from progress and established validation."
+      }
+    },
+    {
+      "id": "feature-freeze",
+      "target": "2026-12-18",
+      "title": {
+        "ja": "12月18日：新分野の追加を止める目安",
+        "en": "18 December: target cutoff for adding new fields"
+      },
+      "scope": {
+        "ja": "未検証の追加は予定のまま残し、公開済み例の再現と日英の導線確認へ移る。",
+        "en": "Leave unverified additions planned and move to reproduction and bilingual navigation checks for published examples."
+      }
+    },
+    {
+      "id": "year-end-edition",
+      "target": "2026-12-23",
+      "title": {
+        "ja": "12月23日：年末版の確認目標",
+        "en": "23 December: target for checking the year-end edition"
+      },
+      "scope": {
+        "ja": "配布物・索引・状態表示・引用・更新と復元の手順を照合する。すべての候補の実装完了を意味しない。",
+        "en": "Reconcile releases, indexes, status, citation and maintenance/restoration instructions. This does not mean completing every implementation candidate."
+      }
+    },
+    {
+      "id": "correction-window",
+      "target": "2026-12-31",
+      "title": {
+        "ja": "12月末：修正と残る不足の記録",
+        "en": "End of December: corrections and recording remaining gaps"
+      },
+      "scope": {
+        "ja": "新しい範囲を増やさず、確認で見つかった問題を修正し、未完成項目を次の台帳へ引き継ぐ。",
+        "en": "Avoid new scope, fix issues found during checking and carry unfinished items into the next work queue."
       }
     }
   ]

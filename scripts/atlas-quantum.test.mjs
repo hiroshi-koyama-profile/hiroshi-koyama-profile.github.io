@@ -93,6 +93,8 @@ test('only executed quantum examples enter test-problem counts and specialist AI
     const roadmap=read(`numerical-methods-atlas/${lang}/read/roadmap/index.html`);
     assert.ok(roadmap.includes(ai.title[lang])&&roadmap.includes(ai.scope[lang]));
     assert.ok(roadmap.indexOf('id="atlas-work-queue"')<roadmap.indexOf('id="current-priority-shock-methods"'));
+    assert.ok(roadmap.indexOf('id="atlas-roadmap-history"')<roadmap.indexOf('id="current-priority-shock-methods"'));
+    assert.doesNotMatch(roadmap,/現在の最優先：衝撃波手法|承認済みの次の作業|Current priority: shock methods|Authorized next work/);
     assert.ok(!roadmap.includes('implementation and the dedicated literature review have not'));
   }
   const translations=json('numerical-methods-atlas/locales/messages.json');

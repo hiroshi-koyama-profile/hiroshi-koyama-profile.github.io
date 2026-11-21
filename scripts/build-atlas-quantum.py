@@ -126,14 +126,93 @@ for path in [ATLAS/'coverage.json',ATLAS/'assets/site-coverage.json']:
     coverage['public_extension_sha256']={f:sha(ROOT/f) for f in ['catalog/atlas-quantum.json','catalog/atlas-methods.json','catalog/atlas-equations.json']}
     write(path,coverage)
 
+# Public roadmap rendering is separate from imported development history.
+def roadmap_history_titles(lang):
+    titles={
+        'current-priority-shock-methods':('過去の重点：衝撃波手法','Earlier priority: shock methods'),
+        'next-verification-work':('従来の検証候補','Earlier validation candidates'),
+        'suggested-order-for-nasa-cases':('従来のNASA問題の推奨順序','Earlier suggested order for NASA cases'),
+        'authorized-next-work':('従来の実装候補と進捗記録','Earlier implementation candidates and progress'),
+        'planned-machine-learning-numerics':('長期の改訂候補：機械学習に関連する数値計算','Longer-term candidates: machine-learning numerics'),
+        'planned-quantum-chemistry-and-dft':('電子状態：公開済み例と残る課題','Electronic structure: published examples and remaining work'),
+    }
+    return {key:value[0 if lang=='ja' else 1] for key,value in titles.items()}
+
+
+def build_public_roadmap(work,lang):
+    ja=lang=='ja'
+    title='現在の整備計画と公開済みの例' if ja else 'Current development plan and published examples'
+    history='これまでの整備・分野別の検証候補' if ja else 'Development history and field-specific validation candidates'
+    headings=[{'level':2,'id':'atlas-work-queue','title':title}]
+    states={
+        'in-progress':('実装中・公開確認待ち','In progress / publication check pending'),
+        'planned':('予定','Planned'),
+        'conditional-planned':('条件付きの候補','Conditional candidate'),
+        'published-verified-example':('検証した限定例を公開済み','Scoped verified example published'),
+        'reading-available':('解説公開済み','Reading published'),
+        'hydrogenic-helium-verified':('検証した限定例を公開済み','Scoped verified examples published'),
+        'deferred-until-2027':('2027年以降','2027 or later'),
+        'published':('今回の範囲を公開確認済み','Current scope published and checked'),
+    }
+    tracks=[('current','まず揃える共通基盤・既存例（P0）','Shared foundation and existing examples first (P0)'),
+            ('conditional','検証と進捗を見て追加する候補（P1）','Additions conditional on validation and progress (P1)'),
+            ('published','既に利用できる代表例・解説','Representative examples and reading already available'),
+            ('later','2027年以降の目標','Goals for 2027 or later')]
+    body='<section id="atlas-work-queue"><h2>'+title+'</h2>'+paragraph(work['description'][lang])+paragraph(work['policy'][lang])
+    if work.get('milestones'):
+        label='整備の目安と確認の節目' if ja else 'Target milestones and review gates'
+        headings.append({'level':3,'id':'atlas-queue-milestones','title':label})
+        body+='<section><h3 id="atlas-queue-milestones">'+label+'</h3><ol>'
+        for x in work['milestones']:body+='<li><strong>'+esc(x['title'][lang])+'</strong>'+paragraph(x['scope'][lang])+'</li>'
+        body+='</ol></section>'
+    for track,jtitle,etitle in tracks:
+        rows=[x for x in work['items'] if x['track']==track]
+        if not rows:continue
+        ident='atlas-queue-'+track;label=jtitle if ja else etitle
+        headings.append({'level':3,'id':ident,'title':label})
+        body+='<section><h3 id="'+ident+'">'+esc(label)+'</h3>'
+        for x in rows:
+            state=states[x['state']][0 if ja else 1]
+            body+='<article data-work-id="'+esc(x['id'])+'" data-work-state="'+esc(x['state'])+'"><h4>'+esc(x['title'][lang])+'</h4><p class="resource-status">'+esc(state)+'</p>'+paragraph(x['scope'][lang])
+            if x.get('links'):body+='<p>'+' · '.join(link(y['url'].format(lang=lang),y['label'][lang]) for y in x['links'])+'</p>'
+            body+='</article>'
+        body+='</section>'
+    body+='<p>'+link('/catalog/atlas-work-queue.json','現行作業台帳 / JSON' if ja else 'Current work queue / JSON')+'</p></section>'
+    body+='<h2 id="atlas-roadmap-history">'+history+'</h2>'+paragraph('以下は過去の拡張記録と分野別の検証候補です。現行の優先順位や、すべてを年内に実装する約束ではありません。既存の節リンクを保持しています。' if ja else 'The sections below retain earlier development records and field-specific validation candidates. They are not the current priority order or a commitment to implement every item this year. Existing section links are preserved.')
+    headings.append({'level':2,'id':'atlas-roadmap-history','title':history})
+    return body,headings
+
+
+def adapt_roadmap_history(text,headings,lang,current_headings):
+    titles=roadmap_history_titles(lang)
+    for ident,title in titles.items():
+        def heading(match):
+            anchor=re.search(r'<a\b[^>]*class="heading-anchor"[^>]*>.*?</a>',match[2],flags=re.S)
+            return match[1]+esc(title)+(anchor[0] if anchor else '')+match[3]
+        text=re.sub(r'(<h[23]\b[^>]*\bid="'+re.escape(ident)+r'"[^>]*>)(.*?)(</h[23]>)',heading,text,flags=re.S)
+        # Imported static tables of contents must use the same titles as the body.
+        def toc_label(match):
+            return match[0] if 'class="heading-anchor"' in match[1] else match[1]+esc(title)+match[3]
+        text=re.sub(r'(<a\b[^>]*href="#'+re.escape(ident)+r'"[^>]*>)(.*?)(</a>)',toc_label,text,flags=re.S)
+    text=text.replace('相対論・新分野より、衝撃波手法の拡充を優先します。','当時は、相対論・新分野より衝撃波手法の拡充を優先しました。')
+    text=text.replace('Shock-method expansion takes priority over relativity and new subject areas.','At that stage, shock-method expansion took priority over relativity and new subject areas.')
+    text=text.replace('英語原文が更新されています。この日本語訳は旧版に対応します。','上部の現行計画は日英で更新しています。履歴部分の一部の日本語訳は英語の旧版に対応します。')
+    ids={x['id'] for x in current_headings}
+    def toc(match):
+        old=match[2]
+        for ident in ids:old=re.sub(r'<a\b[^>]*href="#'+re.escape(ident)+r'"[^>]*>.*?</a>','',old,flags=re.S)
+        return match[1]+''.join(link('#'+x['id'],x['title']) for x in current_headings)+old+match[3]
+    text=re.sub(r'(<aside\b[^>]*class="chapter-toc"[^>]*>.*?<nav\b[^>]*>)(.*?)(</nav>)',toc,text,flags=re.S)
+    updated=None if headings is None else current_headings+[{**h,'title':titles.get(h['id'],h['title'])} for h in headings if h['id'] not in ids]
+    return text,updated
+
+
 # Keep imported prose inventories current without changing any original anchor.
 counts=coverage['counts']
 for lang in ['ja','en']:
     ja=lang=='ja';extension='<section id="quantum-extension"><h2>'+('電子状態・量子化学の追加項目' if ja else 'Added electronic-structure reading')+'</h2>'+paragraph('水素型原子・Heに限定した実行例を公開し、その他の実装予定と区別しています。' if ja else 'Scoped hydrogenic/He runs are available; other implementations remain planned.')+'<ul>'+''.join('<li>'+link(f'/numerical-methods-atlas/{lang}/read/quantum-chemistry/#{x["id"]}',x['name'][lang])+'</li>' for x in methods.values())+'</ul></section>'
     bib='<section id="quantum-references"><h2>'+('量子化学の追加一次文献' if ja else 'Added quantum-chemistry primary publications')+'</h2><ol>'+''.join('<li>'+reference(r)+'</li>' for r in refs.values())+'</ol></section>'
-    roadmap='<section id="atlas-work-queue"><h2>'+('現在の優先順位と2027年以降' if ja else 'Current priorities and 2027 onward')+'</h2>'
-    for x in queue['items']:roadmap+='<h3>'+str(x['target_year'])+' · '+esc(x['title'][lang])+'</h3>'+paragraph(x['scope'][lang])
-    roadmap+='<p>'+link('/catalog/atlas-work-queue.json','作業台帳 / JSON' if ja else 'Work queue / JSON')+'</p></section>'+paragraph('これより下は、これまでの整備と従来の検証計画です。現在の優先順位は上記を参照してください。' if ja else 'The sections below record earlier development and validation plans. The current priorities are stated above.')
+    roadmap,roadmap_headings=build_public_roadmap(queue,lang)
     for name,block,marker in [('site-coverage',extension,'quantum-inventory'),('references',bib,'quantum-bibliography'),('roadmap',roadmap,'atlas-work-queue')]:
         start='<!-- '+marker+' -->';end='<!-- /'+marker+' -->'
         for path,mode in [(ATLAS/lang/'read'/name/'index.html','static'),(ATLAS/('content.'+lang+'.json'),'content')]+([(ATLAS/'content.json','content')] if lang=='en' else []):
@@ -141,13 +220,12 @@ for lang in ['ja','en']:
             text=doc[name]['html'] if doc is not None else path.read_text()
             text=re.sub(re.escape(start)+r'.*?'+re.escape(end),'',text,flags=re.S)
             if name=='roadmap':
-                heading='量子化学・DFT：水素型原子・Heの検証例を公開' if ja else 'Quantum chemistry and DFT: hydrogenic / He validation available'
-                current='<h2 id="planned-quantum-chemistry-and-dft">'+heading+'</h2>'+paragraph(f'{len(methods)}項目の導入解説・代表式・一次文献を公開しました。水素型原子・Heには固定入力、コード、独立参照との比較があります。小分子・周期系は次段階です。' if ja else f'Introductions, representative formulas and primary references are available for {len(methods)} entries. Hydrogenic/He examples supply fixed inputs, code and independent reference comparisons. Molecular and periodic examples remain next.')
+                heading=roadmap_history_titles(lang)['planned-quantum-chemistry-and-dft']
+                current='<h2 id="planned-quantum-chemistry-and-dft">'+heading+'</h2>'+paragraph(f'{len(methods)}項目の導入解説・代表式・一次文献を公開しました。水素型原子・Heには固定入力、コード、独立参照との比較があります。H₂の追加は条件付きの候補で、周期系の実行検証は別課題です。' if ja else f'Introductions, representative formulas and primary references are available for {len(methods)} entries. Hydrogenic/He examples supply fixed inputs, code and independent reference comparisons. H₂ is a conditional addition; periodic numerical validation is a separate task.')
                 current+='<p>'+link(f'/numerical-methods-atlas/{lang}/read/quantum-chemistry/','日英の解説・計算例と今後の計画' if ja else 'Bilingual overview, runnable examples and next plans')+'</p>'
                 text=re.sub(r'<h2 id="planned-quantum-chemistry-and-dft"[^>]*>.*?(?=<h2|\Z)',lambda m:current,text,flags=re.S)
-                if doc is not None:
-                    for h in doc[name]['headings']:
-                        if h['id']=='planned-quantum-chemistry-and-dft':h['title']=heading
+                text,updated_headings=adapt_roadmap_history(text,doc[name]['headings'] if doc is not None else None,lang,roadmap_headings)
+                if doc is not None:doc[name]['headings']=updated_headings
             if name=='site-coverage':
                 text=re.sub(r'(counted |集計日)\d{4}-\d\d-\d\d',lambda m:m[1]+data['reviewed_on'],text)
                 if ja:

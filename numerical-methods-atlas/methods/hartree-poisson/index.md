@@ -50,6 +50,8 @@ Commands (from extracted atomic edition):
 python -m pytest -q
 python run.py --input inputs.json --output output --figures
 
+Common execution records: [{"id": "helium-ground-state", "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json", "guide": {"ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#helium-ground-state-ja", "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#helium-ground-state-en"}}]
+
 Next: Small isolated and periodic reference examples.
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/methods/hartree-poisson/

@@ -1,0 +1,717 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-11-21",
+  "verification_receipt": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/verification/2026-11-21.json",
+  "policy": {
+    "ja": "3つの既存問題群の共通実行案内です。実行終了と数値検証の合格を別に記録します。原子2例は同じ固定入力runnerを1回実行して個別に判定し、新しい問題・手法・検査件数として加算しません。",
+    "en": "A common execution guide for three existing problem families. Process completion and numerical validation are distinct. Both atomic cases share one fixed-input runner and receive separate case decisions; these are not additional problems, methods or packaged test counts."
+  },
+  "examples": [
+    {
+      "id": "barnes-hut",
+      "name": {
+        "ja": "Barnes–Hut：192粒子と直接和の比較",
+        "en": "Barnes–Hut: 192 particles against direct summation"
+      },
+      "problem_id": "isolated-particles",
+      "method_ids": [
+        "barnes-hut"
+      ],
+      "scope": {
+        "ja": "孤立・軟化重力の静的な力の比較。軌道計算・周期系・実行速度の比較ではありません。",
+        "en": "Static isolated softened-gravity force comparison, not orbital integration, periodic gravity or a timing benchmark."
+      },
+      "assumptions": {
+        "ja": "正の質量を持つ固定192粒子。Plummer軟化、四重極まで、同じ核の直接和を参照。",
+        "en": "192 fixed particles with positive masses; Plummer softening, expansion through quadrupoles, and direct summation with the identical kernel."
+      },
+      "units": {
+        "ja": "無次元、G=1、軟化長0.03。入力の長さ・質量の規約を保持。",
+        "en": "Dimensionless, G=1, softening 0.03; preserve input length and mass conventions."
+      },
+      "boundaries": {
+        "ja": "3次元孤立境界。周期境界ではない。",
+        "en": "3D isolated boundaries, not periodic."
+      },
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/methods/barnes-hut/?lang=ja",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/methods/barnes-hut/?lang=en"
+      },
+      "release": {
+        "family": "numerical-methods-atlas",
+        "version": "2026-11-21",
+        "download": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/atlas-code-2026-11-21.zip",
+        "sha256": "f17c0cfcf6956a2677dcdc874235806ae9c5453514be02e6d3274732bcdebe4f",
+        "manifest": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/source-manifest.json",
+        "manifest_sha256": "af57327b5aaec0a62c76fde23e1b8da750abd6d07abe5d4593a3f7ad45907c63",
+        "verification": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/verification.json",
+        "archive_directory": "atlas-code-2026-11-21"
+      },
+      "citation": {
+        "creator": "Hiroshi Koyama",
+        "title": {
+          "ja": "Barnes–Hut：192粒子と直接和の比較",
+          "en": "Barnes–Hut: 192 particles against direct summation"
+        },
+        "version": "2026-11-21",
+        "url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#barnes-hut-en",
+        "method_publications": [
+          "https://doi.org/10.1038/324446a0"
+        ]
+      },
+      "terms": {
+        "code": "MIT",
+        "code_license": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/LICENSE",
+        "content_and_data": "https://hrkoyama.github.io/rights/",
+        "scope": {
+          "ja": "自作コードはMIT。入力・数値データ・図・本文はサイトの個別条件に従います。この台帳は利用許諾を拡大しません。",
+          "en": "Original code is MIT. Inputs, numerical data, figures and prose retain the site’s item-specific terms. This registry does not expand reuse permissions."
+        }
+      },
+      "execution_group": "barnes-hut",
+      "shared_runner_cases": [
+        "barnes-hut"
+      ],
+      "inputs": {
+        "url": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/examples/barnes-hut/input.json",
+        "sha256": "28c1943856caba029f30fd344c5f790da8054b9028021ceddf935ed68c9e03f6",
+        "path": "examples/barnes-hut/input.json"
+      },
+      "dependencies": {
+        "core": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/requirements.txt",
+        "testing": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/requirements.txt",
+        "plotting": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/requirements.txt"
+      },
+      "commands": {
+        "install": "python -m pip install -r requirements.txt",
+        "run": "python examples/barnes-hut/run.py --input examples/barnes-hut/input.json --output output",
+        "tests": "python -m pytest -q tests/test_particle_gravity.py",
+        "run_argv": [
+          "python",
+          "examples/barnes-hut/run.py",
+          "--input",
+          "examples/barnes-hut/input.json",
+          "--output",
+          "{output}"
+        ],
+        "tests_argv": [
+          "python",
+          "-m",
+          "pytest",
+          "-q",
+          "tests/test_particle_gravity.py"
+        ]
+      },
+      "outputs": [
+        {
+          "url": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/examples/barnes-hut/reference/result.json",
+          "sha256": "336b48a0bbfc8b6ae9abd4be86c366917885875fbd85f1033864dadeeff257ab",
+          "path": "examples/barnes-hut/reference/result.json",
+          "id": "results",
+          "format": "json",
+          "generated_path": "result.json"
+        },
+        {
+          "url": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/examples/barnes-hut/reference/forces.csv",
+          "sha256": "f7d88b05718203b27b961d2c6247c7aef121ffbdaee1222ba9c2c33b93a2d2a2",
+          "path": "examples/barnes-hut/reference/forces.csv",
+          "id": "forces",
+          "format": "csv",
+          "generated_path": "forces.csv"
+        }
+      ],
+      "checks": [
+        {
+          "id": "particle-count",
+          "pointer": "/particles",
+          "comparison": "equals",
+          "description": {
+            "ja": "粒子数",
+            "en": "Particle count"
+          },
+          "expected": 192
+        },
+        {
+          "id": "relative-force-error",
+          "pointer": "/relative_rms_force_error",
+          "comparison": "maximum",
+          "description": {
+            "ja": "直接和に対する相対RMS力誤差",
+            "en": "Relative RMS force error against direct sum"
+          },
+          "tolerance": 0.05
+        },
+        {
+          "id": "fully-opened-error",
+          "pointer": "/fully_opened_max_absolute_error",
+          "comparison": "maximum",
+          "description": {
+            "ja": "完全に開いたツリーと直接和の最大差",
+            "en": "Maximum fully-opened tree/direct difference"
+          },
+          "tolerance": 2e-13
+        },
+        {
+          "id": "reported-checks",
+          "pointer": "/checks",
+          "comparison": "all_true",
+          "description": {
+            "ja": "runnerの検証結果",
+            "en": "Runner validation flags"
+          }
+        },
+        {
+          "id": "input-provenance",
+          "pointer": "/input_sha256",
+          "comparison": "equals",
+          "description": {
+            "ja": "実行に用いた入力ハッシュ",
+            "en": "Executed input hash"
+          },
+          "expected": "28c1943856caba029f30fd344c5f790da8054b9028021ceddf935ed68c9e03f6"
+        }
+      ],
+      "expected_failures": [],
+      "references": [
+        {
+          "type": "same-kernel-direct-sum",
+          "url": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/examples/barnes-hut/reference/result.json",
+          "description": {
+            "ja": "同じPlummer核の直接和。完全に開いたツリーとの一致と近似力の誤差を分ける。",
+            "en": "Same-Plummer-kernel direct sum, distinguishing fully opened tree agreement from approximation error."
+          }
+        },
+        {
+          "type": "primary-publication",
+          "url": "https://doi.org/10.1038/324446a0",
+          "description": {
+            "ja": "原法の文献：A hierarchical O(N log N) force-calculation algorithm (1986)",
+            "en": "Original method publication: A hierarchical O(N log N) force-calculation algorithm (1986)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "hydrogenic-atoms",
+      "name": {
+        "ja": "水素型原子：解析解と格子収束",
+        "en": "Hydrogenic atoms: analytic references and grid refinement"
+      },
+      "problem_id": "hydrogenic-atoms",
+      "method_ids": [
+        "schrodinger"
+      ],
+      "scope": {
+        "ja": "孤立した1電子のH・He⁺について、1s・2s・2p・3dのエネルギーと動径軌道を解析解と比較します。多電子原子や分子の直接解法ではありません。",
+        "en": "Isolated one-electron H and He⁺: compare 1s, 2s, 2p and 3d energies and radial orbitals against analytic solutions. Not a direct many-electron or molecular solver."
+      },
+      "assumptions": {
+        "ja": "非相対論・無限質量の点核。核電荷Z=1,2。縮約動径軌道を一様格子の2次中心差分で離散化。",
+        "en": "Nonrelativistic infinite-mass point nucleus, Z=1,2. Reduced radial orbitals use second-order central differences on a uniform mesh."
+      },
+      "units": {
+        "ja": "原子単位系：エネルギーhartree、距離bohr。",
+        "en": "Atomic units: energy in hartree, distance in bohr."
+      },
+      "boundaries": {
+        "ja": "孤立系、u(0)=u(r_max)=0。主計算r_max=60 bohr。H 1sの領域打切り依存は別に検査。",
+        "en": "Isolated boundaries, u(0)=u(r_max)=0. Main domain r_max=60 bohr; hydrogen 1s has a separate box-truncation study."
+      },
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-atoms/#hydrogenic",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-atoms/#hydrogenic"
+      },
+      "release": {
+        "family": "quantum-atoms",
+        "version": "2026-11-21",
+        "download": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/quantum-atoms-2026-11-21.zip",
+        "sha256": "f81c61b854e68b9750d960a17a133ee9a00ae7bd0c3ee268263caee626cf44c9",
+        "manifest": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/source-manifest.json",
+        "manifest_sha256": "c6d22b507028150eb09699fc0103d958e04764d1af9f98692f18ae111357d546",
+        "verification": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/verification.json",
+        "archive_directory": "quantum-atoms-2026-11-21"
+      },
+      "citation": {
+        "creator": "Hiroshi Koyama",
+        "title": {
+          "ja": "水素型原子：解析解と格子収束",
+          "en": "Hydrogenic atoms: analytic references and grid refinement"
+        },
+        "version": "2026-11-21",
+        "url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#hydrogenic-atoms-en",
+        "method_publications": [
+          "https://doi.org/10.1002/andp.19263840404"
+        ]
+      },
+      "terms": {
+        "code": "MIT",
+        "code_license": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/LICENSE",
+        "content_and_data": "https://hrkoyama.github.io/rights/",
+        "scope": {
+          "ja": "自作コードはMIT。入力・数値データ・図・本文はサイトの個別条件に従います。この台帳は利用許諾を拡大しません。",
+          "en": "Original code is MIT. Inputs, numerical data, figures and prose retain the site’s item-specific terms. This registry does not expand reuse permissions."
+        }
+      },
+      "execution_group": "quantum-atoms",
+      "shared_runner_cases": [
+        "hydrogenic-atoms",
+        "helium-ground-state"
+      ],
+      "inputs": {
+        "url": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/inputs.json",
+        "sha256": "8680ad9e5b04b5689b52849c71d849ddb98f9ecc9bea851a0f09d2ee2fcc6237",
+        "path": "inputs.json"
+      },
+      "dependencies": {
+        "core": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/requirements.txt",
+        "testing": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/requirements-dev.txt",
+        "plotting": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/requirements-dev.txt"
+      },
+      "commands": {
+        "install": "python -m pip install -r requirements-dev.txt",
+        "run": "python run.py --input inputs.json --reference reference-pyscf.json --output output --figures",
+        "tests": "python -m pytest -q",
+        "run_argv": [
+          "python",
+          "run.py",
+          "--input",
+          "inputs.json",
+          "--reference",
+          "reference-pyscf.json",
+          "--output",
+          "{output}",
+          "--figures"
+        ],
+        "tests_argv": [
+          "python",
+          "-m",
+          "pytest",
+          "-q"
+        ]
+      },
+      "outputs": [
+        {
+          "url": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/results/results.json",
+          "sha256": "953896b55df923dcbf13ced8fdb60b699918597cded8e986807b241f1192e739",
+          "path": "results/results.json",
+          "id": "results",
+          "format": "json",
+          "generated_path": "results.json"
+        },
+        {
+          "url": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/results/profiles/hydrogenic-z1-n1-l0.csv",
+          "sha256": "b00c67ed623bbd98d3ea29feed6ac89446f54d17cfd6a2ef97d9be46eb2d4cff",
+          "path": "results/profiles/hydrogenic-z1-n1-l0.csv",
+          "id": "hydrogenic-z1-n1-l0",
+          "format": "csv",
+          "generated_path": "profiles/hydrogenic-z1-n1-l0.csv"
+        },
+        {
+          "url": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/results/profiles/hydrogenic-z1-n2-l0.csv",
+          "sha256": "ca41c51afb53299779ac47de455ce12238e57e59bb77a885776960a6b3f7429f",
+          "path": "results/profiles/hydrogenic-z1-n2-l0.csv",
+          "id": "hydrogenic-z1-n2-l0",
+          "format": "csv",
+          "generated_path": "profiles/hydrogenic-z1-n2-l0.csv"
+        },
+        {
+          "url": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/results/profiles/hydrogenic-z1-n2-l1.csv",
+          "sha256": "506ce166c04e8b752b39a4d213a5ba27225c611e632056c37b98e214ff13b4ef",
+          "path": "results/profiles/hydrogenic-z1-n2-l1.csv",
+          "id": "hydrogenic-z1-n2-l1",
+          "format": "csv",
+          "generated_path": "profiles/hydrogenic-z1-n2-l1.csv"
+        },
+        {
+          "url": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/results/profiles/hydrogenic-z1-n3-l2.csv",
+          "sha256": "834d641826f32f21dde2b7cee1985845c29489a5cee1c80d8f925fbabe8a9d77",
+          "path": "results/profiles/hydrogenic-z1-n3-l2.csv",
+          "id": "hydrogenic-z1-n3-l2",
+          "format": "csv",
+          "generated_path": "profiles/hydrogenic-z1-n3-l2.csv"
+        },
+        {
+          "url": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/results/profiles/hydrogenic-z2-n1-l0.csv",
+          "sha256": "7237ffefc37504bab5050a6c35f84b9b1284b2e1ecde9001e684319148a1e82c",
+          "path": "results/profiles/hydrogenic-z2-n1-l0.csv",
+          "id": "hydrogenic-z2-n1-l0",
+          "format": "csv",
+          "generated_path": "profiles/hydrogenic-z2-n1-l0.csv"
+        },
+        {
+          "url": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/results/profiles/hydrogenic-z2-n2-l0.csv",
+          "sha256": "325acf636fee554d4dca765d8d824f46df5291c016261efccd28f328b19734ce",
+          "path": "results/profiles/hydrogenic-z2-n2-l0.csv",
+          "id": "hydrogenic-z2-n2-l0",
+          "format": "csv",
+          "generated_path": "profiles/hydrogenic-z2-n2-l0.csv"
+        },
+        {
+          "url": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/results/profiles/hydrogenic-z2-n2-l1.csv",
+          "sha256": "c15d122c7dd9363296a77e61a987db71e823910705825ae7748ac325d1c4f066",
+          "path": "results/profiles/hydrogenic-z2-n2-l1.csv",
+          "id": "hydrogenic-z2-n2-l1",
+          "format": "csv",
+          "generated_path": "profiles/hydrogenic-z2-n2-l1.csv"
+        },
+        {
+          "url": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/results/profiles/hydrogenic-z2-n3-l2.csv",
+          "sha256": "0b3c44b4035123ba7c385a8137b98bffba50e45e62f8b646e393c027a80d0ab6",
+          "path": "results/profiles/hydrogenic-z2-n3-l2.csv",
+          "id": "hydrogenic-z2-n3-l2",
+          "format": "csv",
+          "generated_path": "profiles/hydrogenic-z2-n3-l2.csv"
+        }
+      ],
+      "checks": [
+        {
+          "id": "normalization",
+          "pointer": "/hydrogenic/refinement",
+          "comparison": "abs_difference",
+          "description": {
+            "ja": "動径軌道の規格化",
+            "en": "Reduced-orbital normalization"
+          },
+          "field": "norm",
+          "expected": 1,
+          "tolerance": 1e-12
+        },
+        {
+          "id": "eigen-residual",
+          "pointer": "/hydrogenic/refinement",
+          "comparison": "maximum",
+          "description": {
+            "ja": "全固有値問題の残差",
+            "en": "All eigenpair residuals"
+          },
+          "field": "eigen_residual",
+          "tolerance": 1e-07,
+          "units": "hartree"
+        },
+        {
+          "id": "analytic-energy-fine-grid",
+          "pointer": "/hydrogenic/refinement",
+          "comparison": "maximum",
+          "description": {
+            "ja": "最細格子の解析解との差",
+            "en": "Finest-grid analytic energy errors"
+          },
+          "field": "energy_error",
+          "where": {
+            "dr": 0.01
+          },
+          "tolerance": 0.00021,
+          "units": "hartree"
+        },
+        {
+          "id": "energy-refinement",
+          "pointer": "/checks/hydrogenic_exact_energy_errors_reduce",
+          "comparison": "equals",
+          "description": {
+            "ja": "格子細分による誤差低減",
+            "en": "Energy-error reduction under refinement"
+          },
+          "expected": true
+        }
+      ],
+      "expected_failures": [],
+      "references": [
+        {
+          "type": "analytic",
+          "url": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-atoms/#hydrogenic",
+          "description": {
+            "ja": "E_n=−Z²/(2n²)とLaguerre動径解。有限格子の誤差と箱の誤差を分ける。",
+            "en": "E_n=−Z²/(2n²) and Laguerre radial solutions, separating finite-grid and finite-box error."
+          }
+        },
+        {
+          "type": "primary-publication",
+          "url": "https://doi.org/10.1002/andp.19263840404",
+          "description": {
+            "ja": "原法の文献：Schrödinger, E. (1926), Quantisierung als Eigenwertproblem",
+            "en": "Original method publication: Schrödinger, E. (1926), Quantisierung als Eigenwertproblem"
+          }
+        }
+      ]
+    },
+    {
+      "id": "helium-ground-state",
+      "name": {
+        "ja": "He：閉殻HF・交換のみLDA",
+        "en": "Helium: closed-shell HF and exchange-only LDA"
+      },
+      "problem_id": "helium-ground-state",
+      "method_ids": [
+        "hartree-fock",
+        "kohn-sham-dft",
+        "scf",
+        "hartree-poisson",
+        "xc-functionals"
+      ],
+      "scope": {
+        "ja": "Heの球対称1s²・閉殻HFとスピン非偏極Dirac交換のみLDAを比較します。電子相関・分子・周期系は含みません。",
+        "en": "Compare spherical 1s² closed-shell helium HF and spin-unpolarized Dirac exchange-only LDA. No electron correlation, molecules or periodic systems."
+      },
+      "assumptions": {
+        "ja": "非相対論・無限質量の点核、2電子が単一1s空間軌道を二重占有。2次中心差分と線形密度混合。HF交換の局所還元はこの2電子問題に限定。",
+        "en": "Nonrelativistic infinite-mass point nucleus, two electrons doubly occupying a single 1s spatial orbital. Second-order central differences and linear density mixing. Local HF exchange reduction is specific to this two-electron problem."
+      },
+      "units": {
+        "ja": "原子単位系：エネルギーhartree、距離bohr。",
+        "en": "Atomic units: energy in hartree, distance in bohr."
+      },
+      "boundaries": {
+        "ja": "球対称の孤立系、u(0)=u(r_max)=0。主計算r_max=16 bohr。格子幅と領域打切りを別々に検査。",
+        "en": "Spherical isolated system, u(0)=u(r_max)=0. Main domain r_max=16 bohr; mesh and box truncation are studied separately."
+      },
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-atoms/#helium",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-atoms/#helium"
+      },
+      "release": {
+        "family": "quantum-atoms",
+        "version": "2026-11-21",
+        "download": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/quantum-atoms-2026-11-21.zip",
+        "sha256": "f81c61b854e68b9750d960a17a133ee9a00ae7bd0c3ee268263caee626cf44c9",
+        "manifest": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/source-manifest.json",
+        "manifest_sha256": "c6d22b507028150eb09699fc0103d958e04764d1af9f98692f18ae111357d546",
+        "verification": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/verification.json",
+        "archive_directory": "quantum-atoms-2026-11-21"
+      },
+      "citation": {
+        "creator": "Hiroshi Koyama",
+        "title": {
+          "ja": "He：閉殻HF・交換のみLDA",
+          "en": "Helium: closed-shell HF and exchange-only LDA"
+        },
+        "version": "2026-11-21",
+        "url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#helium-ground-state-en",
+        "method_publications": [
+          "https://doi.org/10.1103/RevModPhys.23.69",
+          "https://doi.org/10.1103/PhysRev.140.A1133",
+          "https://doi.org/10.1017/S0305004100016108"
+        ]
+      },
+      "terms": {
+        "code": "MIT",
+        "code_license": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/LICENSE",
+        "content_and_data": "https://hrkoyama.github.io/rights/",
+        "scope": {
+          "ja": "自作コードはMIT。入力・数値データ・図・本文はサイトの個別条件に従います。この台帳は利用許諾を拡大しません。",
+          "en": "Original code is MIT. Inputs, numerical data, figures and prose retain the site’s item-specific terms. This registry does not expand reuse permissions."
+        }
+      },
+      "execution_group": "quantum-atoms",
+      "shared_runner_cases": [
+        "hydrogenic-atoms",
+        "helium-ground-state"
+      ],
+      "inputs": {
+        "url": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/inputs.json",
+        "sha256": "8680ad9e5b04b5689b52849c71d849ddb98f9ecc9bea851a0f09d2ee2fcc6237",
+        "path": "inputs.json"
+      },
+      "dependencies": {
+        "core": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/requirements.txt",
+        "testing": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/requirements-dev.txt",
+        "plotting": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/requirements-dev.txt"
+      },
+      "commands": {
+        "install": "python -m pip install -r requirements-dev.txt",
+        "run": "python run.py --input inputs.json --reference reference-pyscf.json --output output --figures",
+        "tests": "python -m pytest -q",
+        "run_argv": [
+          "python",
+          "run.py",
+          "--input",
+          "inputs.json",
+          "--reference",
+          "reference-pyscf.json",
+          "--output",
+          "{output}",
+          "--figures"
+        ],
+        "tests_argv": [
+          "python",
+          "-m",
+          "pytest",
+          "-q"
+        ]
+      },
+      "outputs": [
+        {
+          "url": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/results/results.json",
+          "sha256": "953896b55df923dcbf13ced8fdb60b699918597cded8e986807b241f1192e739",
+          "path": "results/results.json",
+          "id": "results",
+          "format": "json",
+          "generated_path": "results.json"
+        },
+        {
+          "url": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/results/profiles/helium-hf.csv",
+          "sha256": "d06863e6b740b53cce7cd85ff05f915f68a2e8e42838e59538c5d63d3382d176",
+          "path": "results/profiles/helium-hf.csv",
+          "id": "helium-hf",
+          "format": "csv",
+          "generated_path": "profiles/helium-hf.csv"
+        },
+        {
+          "url": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/results/profiles/helium-lda_x.csv",
+          "sha256": "4d48d7640e370ef764d6bbf6548e49c17a476d1a41397e7991f2903077f4f4eb",
+          "path": "results/profiles/helium-lda_x.csv",
+          "id": "helium-lda_x",
+          "format": "csv",
+          "generated_path": "profiles/helium-lda_x.csv"
+        }
+      ],
+      "checks": [
+        {
+          "id": "scf-convergence",
+          "pointer": "/helium/refinement",
+          "comparison": "equals",
+          "description": {
+            "ja": "全格子のSCF収束",
+            "en": "SCF convergence on every mesh"
+          },
+          "field": "converged",
+          "expected": true
+        },
+        {
+          "id": "electron-count",
+          "pointer": "/helium/refinement",
+          "comparison": "abs_difference",
+          "description": {
+            "ja": "電子数",
+            "en": "Electron number"
+          },
+          "field": "electron_count",
+          "expected": 2,
+          "tolerance": 1e-12
+        },
+        {
+          "id": "density-residual",
+          "pointer": "/helium/refinement",
+          "comparison": "maximum",
+          "description": {
+            "ja": "入力出力密度のL1残差",
+            "en": "Input-output density L1 residual"
+          },
+          "field": "density_residual",
+          "tolerance": 1e-09
+        },
+        {
+          "id": "orbital-residual",
+          "pointer": "/helium/refinement",
+          "comparison": "maximum",
+          "description": {
+            "ja": "出力密度での軌道残差",
+            "en": "Output-density orbital residual"
+          },
+          "field": "orbital_residual",
+          "tolerance": 1e-07,
+          "units": "hartree"
+        },
+        {
+          "id": "energy-identity",
+          "pointer": "/helium/refinement",
+          "comparison": "maximum",
+          "description": {
+            "ja": "エネルギー恒等式の誤差",
+            "en": "Energy-accounting identity error"
+          },
+          "field": "energy_identity_error",
+          "tolerance": 1e-10,
+          "units": "hartree"
+        },
+        {
+          "id": "independent-energy",
+          "pointer": "/helium/independent_comparison",
+          "comparison": "absolute_maximum",
+          "description": {
+            "ja": "h²外挿と独立参照の差（誤差の保証ではない）",
+            "en": "h²-extrapolated difference from independent references, not a certified bound"
+          },
+          "field": "extrapolated_reference_difference",
+          "tolerance": 1e-08,
+          "units": "hartree"
+        },
+        {
+          "id": "independent-density",
+          "pointer": "/helium/independent_comparison",
+          "comparison": "maximum",
+          "description": {
+            "ja": "独立参照との密度L1差",
+            "en": "Density L1 difference from independent references"
+          },
+          "field": "radial_density_l1_difference",
+          "tolerance": 5e-05
+        }
+      ],
+      "expected_failures": [
+        {
+          "id": "iteration-limit-is-failure",
+          "pointer": "/helium/expected_nonconvergence",
+          "comparison": "equals",
+          "description": {
+            "ja": "最大1反復は未収束と判定",
+            "en": "One iteration is reported as unconverged"
+          },
+          "field": "converged",
+          "expected": false
+        },
+        {
+          "id": "failure-reason",
+          "pointer": "/helium/expected_nonconvergence",
+          "comparison": "equals",
+          "description": {
+            "ja": "終了理由を保存",
+            "en": "Save termination reason"
+          },
+          "field": "reason",
+          "expected": "max_iterations"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/reference-pyscf.json",
+          "sha256": "0fcf5800a54f5429e258e304d58c43214d20f22703625e76d703639ea79c36d9",
+          "path": "reference-pyscf.json",
+          "type": "independently-computed-finite-basis",
+          "description": {
+            "ja": "PySCF 2.11.0 / LibxcのGaussian基底参照。外挿値・有限格子値・参照を区別。参照scriptの再実行は今回の共通runnerの測定に含まない。",
+            "en": "PySCF 2.11.0 / Libxc finite-Gaussian references. Distinguish extrapolation, finite-grid values and references. Regenerating the independent reference is outside this measured runner."
+          }
+        },
+        {
+          "type": "primary-publication",
+          "url": "https://doi.org/10.1103/RevModPhys.23.69",
+          "description": {
+            "ja": "原法の文献：Roothaan, C. C. J. (1951), New Developments in Molecular Orbital Theory",
+            "en": "Original method publication: Roothaan, C. C. J. (1951), New Developments in Molecular Orbital Theory"
+          }
+        },
+        {
+          "type": "primary-publication",
+          "url": "https://doi.org/10.1103/PhysRev.140.A1133",
+          "description": {
+            "ja": "原法の文献：Kohn, W.; Sham, L. J. (1965), Self-Consistent Equations Including Exchange and Correlation Effects",
+            "en": "Original method publication: Kohn, W.; Sham, L. J. (1965), Self-Consistent Equations Including Exchange and Correlation Effects"
+          }
+        },
+        {
+          "type": "primary-publication",
+          "url": "https://doi.org/10.1017/S0305004100016108",
+          "description": {
+            "ja": "原法の文献：Dirac, P. A. M. (1930), Note on Exchange Phenomena in the Thomas Atom",
+            "en": "Original method publication: Dirac, P. A. M. (1930), Note on Exchange Phenomena in the Thomas Atom"
+          }
+        }
+      ]
+    }
+  ],
+  "url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json",
+  "catalog_source": {
+    "url": "https://hrkoyama.github.io/catalog/atlas-execution-examples.json",
+    "sha256": "c7377c00a8c5b9e79619ac2e509833cedc41948a37e9a08dec26e23066e822e4"
+  }
+}

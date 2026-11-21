@@ -18,7 +18,8 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-atoms/#hydrogenic",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-atoms/#hydrogenic"
-      }
+      },
+      "execution_id": "hydrogenic-atoms"
     },
     {
       "id": "helium-ground-state",
@@ -32,7 +33,8 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-atoms/#helium",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-atoms/#helium"
-      }
+      },
+      "execution_id": "helium-ground-state"
     }
   ],
   "scope": {
@@ -60,5 +62,7 @@
     "independent_density_profiles": true,
     "expected_failures_reported": true,
     "independent_basis_refinement": true
-  }
+  },
+  "execution_registry": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json",
+  "execution_guide": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/"
 }

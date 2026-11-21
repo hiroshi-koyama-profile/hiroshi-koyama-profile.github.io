@@ -63,6 +63,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/stability/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/stability/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#advection-sine",
       "run_commands": [],
       "image": "/numerical-methods-atlas/gallery/previews/advection-sine.png",
@@ -115,6 +116,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/limiters/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/limiters/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#advection-square",
       "run_commands": [],
       "image": "/numerical-methods-atlas/gallery/previews/advection-square.png",
@@ -160,6 +162,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/equation-gallery/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/equation-gallery/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#burgers-shock",
       "run_commands": [],
       "image": "/numerical-methods-atlas/gallery/previews/burgers-shock.png",
@@ -205,6 +208,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/equation-gallery/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/equation-gallery/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#burgers-fan",
       "run_commands": [],
       "image": "/numerical-methods-atlas/gallery/previews/burgers-fan.png",
@@ -250,6 +254,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/equation-gallery/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/equation-gallery/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#traffic-jam",
       "run_commands": [],
       "image": "/numerical-methods-atlas/gallery/previews/traffic-jam.png",
@@ -295,6 +300,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/equation-gallery/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/equation-gallery/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#traffic-fan",
       "run_commands": [],
       "image": "/numerical-methods-atlas/gallery/previews/traffic-fan.png",
@@ -344,6 +350,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/elliptic/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/elliptic/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#heat-periodic",
       "run_commands": [
         "python -m pytest -q tests/test_linear.py -k test_spectral_heat_exact_mode_decay"
@@ -392,6 +399,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/elliptic/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/elliptic/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#heat-dirichlet",
       "run_commands": [
         "python -m pytest -q tests/test_linear.py -k test_diffusion_matches_exact_and_refines"
@@ -456,6 +464,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/benchmarks/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/benchmarks/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#sod",
       "run_commands": [],
       "image": "/numerical-methods-atlas/gallery/previews/sod.png",
@@ -506,6 +515,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/benchmarks/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/benchmarks/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#lax",
       "run_commands": [
         "python -m pytest -q tests/test_numerics.py -k test_benchmark_default_horizon_smoke",
@@ -560,6 +570,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/reconstruction/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/reconstruction/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#shu-osher",
       "run_commands": [],
       "image": "/numerical-methods-atlas/gallery/previews/shu-osher.png",
@@ -606,6 +617,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/experiments/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/experiments/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#entropy-1d",
       "run_commands": [],
       "image": "/numerical-methods-atlas/gallery/previews/entropy-1d.png",
@@ -657,6 +669,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/reconstruction/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/reconstruction/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#moving-contact",
       "run_commands": [],
       "image": "/numerical-methods-atlas/gallery/previews/moving-contact.png",
@@ -710,6 +723,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/shock-expansion/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/shock-expansion/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#strong-shock",
       "run_commands": [],
       "image": "/numerical-methods-atlas/gallery/previews/strong-shock.png",
@@ -756,6 +770,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/benchmarks/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/benchmarks/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#double-rarefaction",
       "run_commands": [
         "python -m pytest -q tests/test_numerics.py -k test_benchmark_default_horizon_smoke"
@@ -806,6 +821,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/benchmarks/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/benchmarks/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#dam-break",
       "run_commands": [
         "python -m pytest -q tests/test_numerics.py -k test_benchmark_default_horizon_smoke"
@@ -857,6 +873,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/benchmarks/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/benchmarks/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#isothermal-jump",
       "run_commands": [
         "python -m pytest -q tests/test_numerics.py -k test_benchmark_default_horizon_smoke"
@@ -905,6 +922,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/double-mach/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/double-mach/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#double-mach",
       "run_commands": [],
       "image": "/numerical-methods-atlas/assets/movies/double-mach/frame-080.webp",
@@ -953,6 +971,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/nasa-2d/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/nasa-2d/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#nasa-wedge",
       "run_commands": [],
       "image": "/numerical-methods-atlas/assets/comparisons/wedge-m2-mc.png",
@@ -1001,6 +1020,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/nasa-2d/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/nasa-2d/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#forward-step",
       "run_commands": [],
       "image": "/numerical-methods-atlas/assets/comparisons/step-m3-mc.png",
@@ -1046,6 +1066,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/reconstruction/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/reconstruction/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#entropy-2d",
       "run_commands": [
         "python -m pytest -q tests/test_muscl2d.py -k test_smooth_2d_cell_average_refinement_and_periodic_conservation"
@@ -1089,6 +1110,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/shock-expansion/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/shock-expansion/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#cylinder-forebody",
       "run_commands": [],
       "image": "/numerical-methods-atlas/assets/shock-expansion/forebody-48-0-density.png",
@@ -1130,6 +1152,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/carbuncle/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/carbuncle/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#odd-even",
       "run_commands": [],
       "image": "/numerical-methods-atlas/assets/shock-methods/planar-128-0.png",
@@ -1171,6 +1194,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/keep/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/keep/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#isentropic-vortex",
       "run_commands": [],
       "image": "/numerical-methods-atlas/assets/movies/keep-vortex/frame-080.webp",
@@ -1223,6 +1247,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/mhd/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/mhd/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#orszag-tang",
       "run_commands": [],
       "image": "/numerical-methods-atlas/assets/movies/orszag-tang-ct/frame-080.webp",
@@ -1264,6 +1289,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/mhd/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/mhd/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#brio-wu",
       "run_commands": [],
       "image": "/numerical-methods-atlas/assets/mhd-tests/brio-wu.png",
@@ -1305,6 +1331,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/mhd/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/mhd/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#circular-alfven",
       "run_commands": [],
       "image": "/numerical-methods-atlas/assets/mhd-tests/alfven.png",
@@ -1346,6 +1373,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/mhd/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/mhd/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#magnetic-loop",
       "run_commands": [],
       "image": "/numerical-methods-atlas/assets/mhd-tests/field-loop.png",
@@ -1391,6 +1419,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/incompressible/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/incompressible/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#taylor-green",
       "run_commands": [],
       "image": "/numerical-methods-atlas/assets/field-taylor-green.png",
@@ -1436,6 +1465,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/lattice-boltzmann/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/lattice-boltzmann/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#lbm-shear",
       "run_commands": [
         "python -m pytest -q tests/test_new_models.py -k test_lbm_shear_viscosity_refines"
@@ -1483,6 +1513,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/lattice-boltzmann/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/lattice-boltzmann/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#channel-poiseuille",
       "run_commands": [
         "python -m pytest -q tests/test_new_models.py -k test_lbm_channel_halfway_wall_refinement"
@@ -1530,6 +1561,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/elliptic/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/elliptic/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#poisson-1d-dirichlet",
       "run_commands": [
         "python -m pytest -q tests/test_linear.py -k test_poisson_second_order"
@@ -1577,6 +1609,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/elliptic/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/elliptic/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#poisson-1d-neumann",
       "run_commands": [
         "python -m pytest -q tests/test_linear.py -k test_neumann_compatibility_and_mean_gauge"
@@ -1624,6 +1657,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/elliptic/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/elliptic/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#poisson-1d-mixed",
       "run_commands": [
         "python -m pytest -q tests/test_linear.py -k test_mixed_dirichlet_neumann"
@@ -1671,6 +1705,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/elliptic/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/elliptic/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#poisson-1d-robin",
       "run_commands": [
         "python -m pytest -q tests/test_linear.py -k test_robin_second_order_with_manufactured_exponential"
@@ -1717,6 +1752,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/elliptic/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/elliptic/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#poisson-2d-broad",
       "run_commands": [],
       "image": "/numerical-methods-atlas/assets/poisson-comparison/manufactured-63-fields.png",
@@ -1761,6 +1797,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/elliptic/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/elliptic/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#poisson-2d-localized",
       "run_commands": [],
       "image": "/numerical-methods-atlas/assets/poisson-comparison/localized-63-fields.png",
@@ -1813,6 +1850,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/fem/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/fem/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#poisson-2d-sine",
       "run_commands": [],
       "image": "/numerical-methods-atlas/assets/field-fem-poisson.png",
@@ -1858,6 +1896,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/elliptic/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/elliptic/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#poisson-2d-uniform",
       "run_commands": [
         "python -m pytest -q tests/test_multigrid.py -k test_multigrid_against_cg_and_residual"
@@ -1905,6 +1944,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/elliptic/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/elliptic/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#poisson-2d-random",
       "run_commands": [
         "python -m pytest -q tests/test_linear.py -k test_poisson_cg_for_general_forcing_satisfies_discrete_residual"
@@ -1952,6 +1992,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/particle-gravity/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/particle-gravity/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#poisson-3d-periodic",
       "run_commands": [],
       "image": "/numerical-methods-atlas/assets/field-poisson-3d.png",
@@ -1997,6 +2038,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/hyperbolic-diffusion/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/hyperbolic-diffusion/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#poisson-1d-periodic",
       "run_commands": [
         "python -m pytest -q tests/test_new_models.py -k test_hyperbolic_diffusion_steady_refinement_and_failure"
@@ -2044,6 +2086,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/sparse-nonlinear/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/sparse-nonlinear/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#bratu",
       "run_commands": [
         "python -m pytest -q tests/test_sparse_fem.py -k test_bratu_newton_krylov_refines_to_continuous_reference"
@@ -2091,6 +2134,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/sparse-nonlinear/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/sparse-nonlinear/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#sparse-advection-diffusion",
       "run_commands": [
         "python -m pytest -q tests/test_sparse_fem.py -k test_nonsymmetric_solve_true_residual_and_error"
@@ -2134,8 +2178,20 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/particle-gravity/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/particle-gravity/"
       },
+      "execution_examples": [
+        {
+          "id": "barnes-hut",
+          "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json",
+          "guide": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#barnes-hut-ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#barnes-hut-en"
+          }
+        }
+      ],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#isolated-particles",
-      "run_commands": [],
+      "run_commands": [
+        "python examples/barnes-hut/run.py --input examples/barnes-hut/input.json --output output"
+      ],
       "image": "/numerical-methods-atlas/gallery/previews/isolated-particles.png",
       "image_sha256": "2ed17564aa4a2ceb5570b27b3374d39fc1fec762a9419c939f0f1d329d232722",
       "width": 832,
@@ -2179,6 +2235,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/particle-gravity/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/particle-gravity/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#periodic-particles",
       "run_commands": [
         "python -m pytest -q tests/test_particle_gravity.py -k test_pm_self_force_and_total_internal_force_with_matched_cic"
@@ -2226,6 +2283,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/gravity-boundaries/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/gravity-boundaries/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#isolated-convolution",
       "run_commands": [
         "python -m pytest -q tests/test_gravity_boundaries.py -k test_isolated_doubling_equals_direct_nonperiodic_discrete_convolution"
@@ -2269,6 +2327,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/gravity-boundaries/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/gravity-boundaries/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#uniform-slab",
       "run_commands": [],
       "image": "/numerical-methods-atlas/assets/gravity-boundaries.png",
@@ -2310,6 +2369,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/gravity-boundaries/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/gravity-boundaries/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#sinusoidal-sheet",
       "run_commands": [],
       "image": "/numerical-methods-atlas/assets/gravity-boundaries.png",
@@ -2358,6 +2418,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/time-integration/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/time-integration/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#harmonic-oscillator",
       "run_commands": [],
       "image": "/numerical-methods-atlas/gallery/previews/harmonic-oscillator.png",
@@ -2403,6 +2464,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/symplectic/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/symplectic/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#quartic-oscillator",
       "run_commands": [],
       "image": "/numerical-methods-atlas/gallery/previews/quartic-oscillator.png",
@@ -2449,6 +2511,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/runge-kutta/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/runge-kutta/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#nonlinear-exp-ode",
       "run_commands": [
         "python -m pytest -q tests/test_runge_kutta.py -k test_rk_order_conditions_and_manufactured_nonlinear_time_dependence"
@@ -2500,6 +2563,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/stiff-integration/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/stiff-integration/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#stiff-cosine",
       "run_commands": [
         "python -m pytest -q tests/test_new_models.py -k test_stiff_decay_and_local_error_control"
@@ -2547,6 +2611,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/stiff-integration/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/stiff-integration/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#nonlinear-rational-ode",
       "run_commands": [
         "python -m pytest -q tests/test_new_models.py -k test_implicit_orders_on_nonautonomous_nonlinear_exact_solution"
@@ -2593,6 +2658,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/basis-functions/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/basis-functions/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#smooth-function-projection",
       "run_commands": [],
       "image": "/numerical-methods-atlas/gallery/previews/smooth-function-projection.png",
@@ -2638,6 +2704,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/basis-functions/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/basis-functions/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#jump-function-projection",
       "run_commands": [],
       "image": "/numerical-methods-atlas/gallery/previews/jump-function-projection.png",
@@ -2684,6 +2751,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/sparse-nonlinear/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/sparse-nonlinear/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#cubic-root",
       "run_commands": [
         "python -m pytest -q tests/test_sparse_fem.py -k test_damped_newton_backtracks_and_reports_failure"
@@ -2731,6 +2799,7 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/runge-kutta/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/runge-kutta/"
       },
+      "execution_examples": [],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#nonlinear-rational-decay",
       "run_commands": [],
       "image": "/numerical-methods-atlas/gallery/previews/nonlinear-rational-decay.png",
@@ -2784,6 +2853,16 @@
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-atoms/#hydrogenic"
       },
       "code_verification": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/verification.json",
+      "execution_examples": [
+        {
+          "id": "hydrogenic-atoms",
+          "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json",
+          "guide": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#hydrogenic-atoms-ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#hydrogenic-atoms-en"
+          }
+        }
+      ],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#hydrogenic-atoms",
       "run_commands": [
         "python -m pytest -q",
@@ -2840,6 +2919,16 @@
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-atoms/#helium"
       },
       "code_verification": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/verification.json",
+      "execution_examples": [
+        {
+          "id": "helium-ground-state",
+          "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json",
+          "guide": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#helium-ground-state-ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#helium-ground-state-en"
+          }
+        }
+      ],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#helium-ground-state",
       "run_commands": [
         "python -m pytest -q",
@@ -2917,6 +3006,6 @@
     "numerical-methods-atlas/gallery/preview-manifest.json": "46fc64b6a2c21e4d9b2e53114b2cc7caa52edd1f4d9c7654eb67ccc2f96edb99",
     "numerical-methods-atlas/gallery/calculations.json": "d98cd75e1c58177bfc716e8b68d6bfba1358d5135ac8e2ee0989eb3df77942a6",
     "numerical-methods-atlas/gallery/verification.json": "46c39543afa9d943dfef896fadbc8f84d847f1a145d9b1427a2336de7a3a50f9",
-    "numerical-methods-atlas/test-cases/index.json": "0e36c9a8aede54de151c8f3cbfda220771a280d2c820c57d94b6511b50bd965a"
+    "numerical-methods-atlas/test-cases/index.json": "4b273eebe4e9c40aeaad4e9573836b15700d09cc3bae0098263142c585871aca"
   }
 }

@@ -54,6 +54,12 @@ Google Search Consoleの対象プロパティは `https://hrkoyama.github.io/`�
 
 原子計算の正本は `catalog/atlas-quantum-examples.json` と別系列の `code/quantum-atoms/<edition>/`。同梱 `run.py` と `reference_pyscf.py` は別実装であり、参照側に教育用コードの関数を流用しない。PySCFの交換のみ汎関数は `LDA_X,` と明示する。有限格子値・h²外挿の推定・有限基底の独立参照値を別々に表示する。新しい原子計算版は必要な依存関係を用意したPythonで `scripts/package-quantum-atoms.py --edition YYYY-MM-DD` を実行する。このコマンドはZIPを別フォルダへ展開し、検査と固定入力全計算・画像生成を実行して、ハッシュと実際の結果を記録する。公開済みZIPは上書きできない。`build-quantum-examples.py` は通常の更新時にその記録と全ファイルのハッシュを確認して日英HTML/JSONを生成し、計算は再実行しない。関連する6手法の `quantum_examples` を別系列コードへ結び、旧版の `code_modules` に混ぜない。
 
+公開済みの実行例を結ぶ正本は `catalog/atlas-execution-examples.json`。Barnes–Hut、水素型原子、Heの3例について、例ID・対応する手法/問題・版・入力・実行場所・依存関係・コマンド・出力・数値検査・失敗判定・引用・既存の利用条件を記録する。`build-atlas-execution-examples.py` が不変な配布物と入力/参照結果のハッシュ、保存結果が受入条件を満たすことを確認し、`numerical-methods-atlas/code-and-data/examples.json` を生成する。`build-atlas-execution-guide.py` はこの情報から日英の取得・実行案内を生成する。方法/問題のJSONと原子計算の章も同じ実行例へリンクする。例を追加しても独立問題数や実装済み手法数を自動では増やさない。
+
+共通手順の実行確認には、依存関係を導入済みのPythonを指定し、`python scripts/verify-atlas-execution-examples.py --python /path/to/python --output report.json` を使う。通常は公開registry、ZIP、入力、参照をHTTPSで取得し、安全に別の一時フォルダへ展開する。プログラム終了と数値条件の合格を別に記録し、新しいJSON/CSVのハッシュも残す。水素型原子とHeは同じrunnerの1回の実行を共有する。初公開前のみ `--registry catalog/atlas-execution-examples.json` を指定できる。この場合も科学計算のファイルは全て公開URLから取得し、どの入力経路かをレポートに記す。依存関係を自動でインストールしない。全411検査/23検査や独立PySCF参照の再生成とは別の実行確認である。
+
+公開用の追加実行記録は `numerical-methods-atlas/code-and-data/verification/` に保存し、台帳の `verification_receipt` を対応するURLにする。registryの内容と記録内のSHA-256が一致することを生成時に確認する。通常のrefreshは保存済み記録を参照し、ネット取得や科学計算を繰り返さない。レシピを変えた場合は記録を取り直し、古い記録を新しい条件の成功と表示しない。コードのMIT、入力・数値データ・図・本文の個別条件、第三者資料の条件は別のまま保持する。
+
 現在の作業順序と専門AIを2027年以降に繰り延べる決定は `catalog/atlas-work-queue.json` が正本。専門AIや独立した基盤モデルが実装済みであると表示しない。数値検証例は実際に固定入力で計算し、独立参照・残差・収束・終了理由・コードと環境の版を記録してから台帳の状態を変更する。
 
 数式一覧は `coverage.json` の全 `kind=equation` 項目とID・実装状態・章を完全照合する。一部だけの代表一覧へ戻さない。数式はLaTeXで保存し、同梱のKaTeXで静的HTML・MathMLにするため、新たなパッケージ取得は不要。モデル追加・章内の見出し変更時は全項目との件数一致だけでなくID集合と日英の節リンクも検査する。文献解説のみのモデルを計算例ありに変更せず、相対論や生物モデルの代表形・縮約・模式式の条件を残す。

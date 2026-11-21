@@ -22,12 +22,16 @@ math=json.loads(subprocess.run(['node','scripts/render-atlas-math.cjs'],cwd=ROOT
 assets=ATLAS/'assets/quantum-atoms';assets.mkdir(parents=True,exist_ok=True)
 for name in ['hydrogenic.png','helium.png','convergence.png','scf.png']:shutil.copyfile(base/'results'/name,assets/name)
 public={**config,'code_base':ORIGIN+config['code_base'],'download':ORIGIN+url(config['archive']),'results':ORIGIN+url('results/results.json'),'independent_reference':ORIGIN+url('reference-pyscf.json'),'source_manifest':ORIGIN+url('source-manifest.json'),'verification':ORIGIN+url('verification.json'),'archive_sha256':verification['archive_sha256'],'tests_passed':verification['passed'],'checks':result['checks'],'cases':[{**x,'reading':{l:ORIGIN+f'/numerical-methods-atlas/{l}/read/quantum-atoms/#{x["section"]}' for l in ['ja','en']}} for x in config['cases']]}
+public['execution_registry']=ORIGIN+'/numerical-methods-atlas/code-and-data/examples.json'
+public['execution_guide']=ORIGIN+'/numerical-methods-atlas/code-and-data/'
+for case in public['cases']:case['execution_id']=case['id']
 for lang in ['ja','en']:
     ja=lang=='ja';route=f'/numerical-methods-atlas/{lang}/read/quantum-atoms/'
     title='水素型原子とHe：実行・検証例' if ja else 'Hydrogenic atoms and helium: runnable validation examples'
     body='<p class="eyebrow">QUANTUM ATOMS · FIXED INPUTS · VERIFIED CODE</p><h1>'+title+'</h1><p class="intro">'+('解析解から自己無撞着計算へ。水素型原子の動径方程式と、Heの閉殻HF・交換のみLDAを実際に計算し、誤差と適用範囲を確かめます。' if ja else 'From analytic references to self-consistency: run hydrogenic radial equations and closed-shell HF / exchange-only LDA for helium, with measured errors and explicit limits.')+'</p>'
     body+='<p class="resource-summary">'+(f'2つの問題群、公開コードの検査{verification["passed"]}件通過。配布ZIPを別フォルダへ展開し、固定入力の計算と画像生成を再実行しました。' if ja else f'Two problem families; {verification["passed"]} packaged checks passed. The ZIP was independently extracted and its fixed-input calculations and figures reproduced.')+'</p>'
     body+='<nav class="resource-nav">'+''.join(link(u,t) for u,t in [(f'/numerical-methods-atlas/{lang}/read/quantum-chemistry/','量子化学・DFTの解説' if ja else 'Quantum chemistry / DFT reading'),('#hydrogenic','水素型原子' if ja else 'Hydrogenic atoms'),('#helium','He'),('#download','取得・実行' if ja else 'Download and run'),('#limits','適用範囲' if ja else 'Scope')])+'</nav>'
+    body+='<p>'+link('/numerical-methods-atlas/code-and-data/?lang='+lang,'Barnes–Hut・水素型原子・Heの共通実行・検証手順' if ja else 'Shared execution and validation guide for Barnes–Hut, hydrogenic atoms and helium')+'</p>'
     body+=p('横長の表と数式は左右にスクロールできます。' if ja else 'Wide tables and equations scroll horizontally.')
     body+=p('原子単位系（エネルギー：hartree、距離：bohr）。非相対論、無限質量の点核、孤立境界、一様動径格子の2次中心差分を用います。Heは球対称1s²・2電子に限定し、相関エネルギーは含みません。' if ja else 'Atomic units: hartree for energy and bohr for distance. Nonrelativistic, infinite-mass point nuclei, isolated boundaries and second-order uniform radial differences. Helium is restricted to spherical 1s² with two electrons and no correlation energy.')
     body+='<section><h2 id="hydrogenic">'+('水素型原子：解析解で確かめる' if ja else 'Hydrogenic atoms: check analytic energies and shapes')+'</h2><div class="quantum-math">'+''.join(math['radial'])+'</div>'

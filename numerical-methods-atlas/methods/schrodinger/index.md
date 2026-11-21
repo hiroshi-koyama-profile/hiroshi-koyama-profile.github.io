@@ -50,6 +50,8 @@ Commands (from extracted atomic edition):
 python -m pytest -q
 python run.py --input inputs.json --output output --figures
 
+Common execution records: [{"id": "hydrogenic-atoms", "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json", "guide": {"ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#hydrogenic-atoms-ja", "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#hydrogenic-atoms-en"}}]
+
 Next: Separate domain and resolution errors for oscillator and hydrogenic models.
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/methods/schrodinger/

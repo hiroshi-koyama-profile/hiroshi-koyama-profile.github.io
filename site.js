@@ -13,6 +13,12 @@
     const url = destination ? new URL(destination.pathname + destination.search, location.origin) : new URL(location.href);
     url.searchParams.set('lang', language);
     url.hash = location.hash;
+    if (!destination && document.body.dataset.siteLanguageAnchors === 'suffix') {
+      let id;
+      try { id = decodeURIComponent(location.hash.slice(1)); } catch { id = ''; }
+      const counterpart = id.replace(/-(ja|en)$/, '-' + language);
+      if (counterpart !== id && document.getElementById(counterpart)) url.hash = counterpart;
+    }
     return url;
   }
   function apply(language) {
