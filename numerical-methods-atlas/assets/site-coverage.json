@@ -6,7 +6,8 @@
     "equations": "Named equation/model entries, not scalar component equations or mathematically disjoint families. Includes frameworks and auxiliary formulations; variants share one entry except the three separately explained SR/GR fluid systems. Biological entries are imported once from their own catalog.",
     "methods": "Named numerical methods and building blocks with a reading chapter. Aliases count once; RK stages, dimensions, parameter combinations, mesh layouts and theoretical conditions do not add methods. A family and a separately explained algorithm may both appear. Not a count of mutually exclusive end-to-end solvers.",
     "papers": "Unique bibliographic publications classified as journal articles or conference papers, deduplicated by DOI or author/title/year. Includes reviews, translations and explicitly labeled accepted papers; not a claim that every full text was inspected. Books, chapters, reports, preprints and documentation are separate.",
-    "references": "Unique cataloged works across all publication types. An original publication and a later translation are separate works; duplicate DOI records are not. NASA case links in prose are not catalog records."
+    "references": "Unique cataloged works across all publication types. An original publication and a later translation are separate works; duplicate DOI records are not. NASA case links in prose are not catalog records.",
+    "test_problems": "Count independent problems across published atlas results and the verified public code edition. Distinguish governing equations, dimensions, boundary conditions and named initial/source problems; merge solver, mesh, step-size, parameter-sweep, random-seed and presentation variants of the same problem. Repeated Sod exhibits, wedge Mach variants and CT/GLM variants do not add problems. Exclude reference-only evaluations, planned/literature-only entries, diagrams, and local identity/invariant/input-error unit checks. Static-force, boundary-value, approximation and algebraic problems are included; not every entry is a time-evolving simulation."
   },
   "counts": {
     "equations": 42,
@@ -26,7 +27,10 @@
     "biological_entries": 22,
     "gallery_cases": 9,
     "gallery_equations": 7,
-    "reading_chapters": 47
+    "reading_chapters": 47,
+    "test_problems": 58,
+    "saved_test_problems": 49,
+    "code_test_problems": 9
   },
   "items": [
     {
@@ -2110,5 +2114,11 @@
     "catalog/biological-models.json": "f0b55e0832cb17304b6d1bfdb626f2b66bb6e5c27a3730981ceb2b4fb151ab82",
     "catalog/references.json": "0880b7808eae809d8238e9999cac8f27f1ba64143ba506d25c5b0243948ea16d",
     "scripts/build_coverage.py": "aa5736f70653801129a25f8b18726a6f993dc1c09bbbf68e4dcab48090cb7d0d"
+  },
+  "test_inventory": {
+    "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/",
+    "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/index.json",
+    "catalog": "catalog/atlas-test-problems.json",
+    "reviewed_on": "2026-11-21"
   }
 }

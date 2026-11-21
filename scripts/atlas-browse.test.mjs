@@ -19,13 +19,17 @@ test('the three browse routes are available in both languages before the purpose
     assert.ok(html.includes('data-atlas-word-search'));
   }
 });
-test('prominent counts use the coverage definitions and actual profile cases',()=>{
+test('prominent counts use the atlas-wide problem inventory, with scoped wave cases retained',()=>{
+  const inventory=JSON.parse(read('numerical-methods-atlas/test-cases/index.json'));
+  assert.equal(coverage.counts.test_problems,inventory.problems.length);
+  assert.ok(coverage.counts.test_problems>coverage.counts.gallery_cases);
   assert.equal(coverage.counts.gallery_cases,JSON.parse(read('numerical-methods-atlas/equation-gallery.json')).cases.length);
   assert.equal(coverage.counts.methods,coverage.items.filter(x=>x.kind==='method').length);
   assert.equal(coverage.counts.equations,coverage.items.filter(x=>x.kind==='equation').length);
   for(const lang of ['ja','en']){
     configureLocale({},lang);const html=atlasMetrics();
-    for(const key of ['methods','papers','equations','gallery_cases'])assert.ok(html.includes('<strong>'+coverage.counts[key]+'</strong>'));
+    for(const key of ['methods','papers','equations','test_problems'])assert.ok(html.includes('<strong>'+coverage.counts[key]+'</strong>'));
+    assert.ok(html.includes('/numerical-methods-atlas/test-cases/'));
     assert.equal((html.match(/<a href=/g)||[]).length,4);
   }
 });

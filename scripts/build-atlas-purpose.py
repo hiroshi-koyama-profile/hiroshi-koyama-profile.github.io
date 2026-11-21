@@ -22,10 +22,11 @@ def browse(lang):
     return '<section class="page-width atlas-ways" aria-labelledby="atlas-ways-'+lang+'"><h2 id="atlas-ways-'+lang+'">'+html.escape(c['browse_title'])+'</h2><div class="atlas-way-grid">'+''.join(cards)+'</div></section>'
 def metrics(lang):
     counts=coverage['counts'];c=copy[lang]['metrics']
-    routes={'methods':'#/coverage?kind=method','papers':'#/references','equations':'#/coverage?kind=equation','gallery_cases':'#/equations'}
+    routes={key:'/numerical-methods-atlas/?lang='+lang+value for key,value in {'methods':'#/coverage?kind=method','papers':'#/references','equations':'#/coverage?kind=equation'}.items()}
+    routes['test_problems']='/numerical-methods-atlas/test-cases/?lang='+lang
     result='<div class="summary-counts atlas-metrics">'
-    for key in ['methods','papers','equations','gallery_cases']:
-        result+='<a href="/numerical-methods-atlas/?lang='+lang+routes[key]+'"><strong>'+str(counts[key])+'</strong><span>'+html.escape(c[key]['label'])+'</span><small>'+html.escape(c[key]['note'].format(**counts))+'</small></a>'
+    for key in ['methods','papers','equations','test_problems']:
+        result+='<a href="'+routes[key]+'"><strong>'+str(counts[key])+'</strong><span>'+html.escape(c[key]['label'])+'</span><small>'+html.escape(c[key]['note'].format(**counts))+'</small></a>'
     return result+'</div>'
 def render(lang):
     c=copy[lang]

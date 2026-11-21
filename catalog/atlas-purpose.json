@@ -43,9 +43,9 @@
         "label": "方程式・モデル",
         "note": "実例{local_equations}・文献解説{reading_equations}"
       },
-      "gallery_cases": {
-        "label": "波形テスト",
-        "note": "{gallery_equations}方程式系・計算済みの比較"
+      "test_problems": {
+        "label": "テスト計算",
+        "note": "全分野の独立問題・重複を除く"
       }
     }
   },
@@ -93,9 +93,9 @@
         "label": "Equations & models",
         "note": "{local_equations} example-linked; {reading_equations} reading-only"
       },
-      "gallery_cases": {
-        "label": "Wave-profile cases",
-        "note": "{gallery_equations} equation families; computed profiles"
+      "test_problems": {
+        "label": "Test problems",
+        "note": "Independent problems; variants merged"
       }
     }
   }

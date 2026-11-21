@@ -7,7 +7,7 @@ export function coverageHighlights(data){
   {n:c.papers,label:'Journal & conference papers',note:`${c.journal_articles} journal · ${c.conference_papers} conference · ${c.references} sources in all`,href:'#/references',className:'citation-highlight'},
   {n:c.equations,label:'Equation & model entries',note:`${c.local_equations} with local examples · ${c.reading_equations} reading only`,href:'#/coverage?kind=equation',className:''},
   {n:c.methods,label:'Methods & building blocks',note:`${c.local_methods} with local examples · ${c.reading_methods} reading only`,href:'#/coverage?kind=method',className:''},
-  {n:c.gallery_cases,label:'Equation-gallery cases',note:`${c.gallery_equations} equation families · saved numerical profiles`,href:'#/equations',className:''}
+  {n:c.test_problems,label:currentLanguage()==='ja'?'テスト計算':'Test problems',note:currentLanguage()==='ja'?'全分野の独立問題・重複を除く':'Independent problems across all atlas domains',href:'/numerical-methods-atlas/test-cases/',className:''}
  ];
  return `<section class="coverage-highlights page-width" aria-label="The atlas in numbers"><div class="coverage-metric-grid">${metrics.map(m=>`<a class="coverage-metric ${m.className}" href="${m.href}"><span class="coverage-number">${m.n}</span><h2>${m.label}</h2><p>${m.note}</p><span aria-hidden="true" class="coverage-arrow">↗</span></a>`).join('')}</div><div class="coverage-footnote"><p>Named entries, with scope shown. Paper totals include reviews, translations and accepted records. ${c.reading_chapters} reading chapters.</p><a class="text-link" href="#/coverage">See what is counted →</a></div></section>`;
 }

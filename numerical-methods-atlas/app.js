@@ -1,10 +1,10 @@
-import {homeOverviewPage,wireHomeOverview} from './home-overview.js?v=d7298b84e266';
+import {homeOverviewPage,wireHomeOverview} from './home-overview.js?v=2a1d4fade09c';
 import {readingURL,rewriteReadingLinks} from './reading-urls.js';
 import {expansionPage,wireExpansion} from './shock-expansion.js';
 import {referencePage as exactPage,wireReferences} from './reference-solutions.js';
 import {glossaryPage,wireGlossary} from './glossary.js';
 import {configureLocale,currentLanguage,resolveLanguage,t,translateText,localizeTree,observeLocalization,languageURL,captureControls,restoreControls} from './i18n.js';
-import {coveragePage,wireCoverage} from './coverage.js';
+import {coveragePage,wireCoverage} from './coverage.js?v=6ff11947c360';
 import {equationsPage,wireEquations,disposeEquations} from './equations.js';
 import {basisPage,wireBasis} from './basis.js';
 import {cipPage,wireCIP} from './cip.js';

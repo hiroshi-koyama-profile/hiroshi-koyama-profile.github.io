@@ -9,6 +9,7 @@ for command in [
     [sys.executable, 'scripts/build-public-resources.py'],
     [sys.executable, 'scripts/build-atlas-resources.py'],
     [sys.executable, 'scripts/build-thermostat-reading.py'],
+    [sys.executable, 'scripts/build-atlas-test-problems.py'],
     [sys.executable, 'scripts/build-atlas-equations.py'],
     [sys.executable, 'scripts/build-atlas-search.py'],
     [sys.executable, 'scripts/build-atlas-purpose.py'],

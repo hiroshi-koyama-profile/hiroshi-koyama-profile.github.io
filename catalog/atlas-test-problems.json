@@ -1,0 +1,1246 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-11-21",
+  "policy": {
+    "ja": "アトラス全体の公開済み計算データ、および検証済み公開コード版の独立したテスト問題を数えます。方程式・次元・境界条件・名前を付けた初期値やソースの違いで問題を区別し、同じ問題の手法・格子数・刻み幅・パラメータ走査・乱数種・表示形式の違いは統合します。Sodの重複掲載、楔のMach数違い、CT/GLMの違いも加算しません。参照式の評価のみ、予定・文献調査のみ、図のみ、局所的な恒等式・不変量・入力エラー等の単体検査は総数に含めません。静的な力・境界値・関数近似・代数方程式の問題を含み、全件が時間発展シミュレーションという意味ではありません。",
+    "en": "Count independent problems across published atlas results and the verified public code edition. Distinguish governing equations, dimensions, boundary conditions and named initial/source problems; merge solver, mesh, step-size, parameter-sweep, random-seed and presentation variants of the same problem. Repeated Sod exhibits, wedge Mach variants and CT/GLM variants do not add problems. Exclude reference-only evaluations, planned/literature-only entries, diagrams, and local identity/invariant/input-error unit checks. Static-force, boundary-value, approximation and algebraic problems are included; not every entry is a time-evolving simulation."
+  },
+  "groups": [
+    {
+      "id": "transport",
+      "ja": "移流・拡散・スカラー保存則",
+      "en": "Transport, diffusion and scalar laws"
+    },
+    {
+      "id": "fluid",
+      "ja": "圧縮性流体・衝撃波",
+      "en": "Compressible flow and shocks"
+    },
+    {
+      "id": "mhd",
+      "ja": "MHD",
+      "en": "MHD"
+    },
+    {
+      "id": "viscous",
+      "ja": "非圧縮流・粘性・格子Boltzmann",
+      "en": "Incompressible, viscous and lattice-Boltzmann flow"
+    },
+    {
+      "id": "elliptic",
+      "ja": "楕円型・非線形境界値・疎行列",
+      "en": "Elliptic, nonlinear boundary-value and sparse problems"
+    },
+    {
+      "id": "gravity",
+      "ja": "重力・粒子力・境界核",
+      "en": "Gravity, particle forces and boundary kernels"
+    },
+    {
+      "id": "time",
+      "ja": "時間積分・振動子・硬い方程式",
+      "en": "Time integration, oscillators and stiff equations"
+    },
+    {
+      "id": "approximation",
+      "ja": "関数近似・非線形代数方程式",
+      "en": "Function approximation and nonlinear algebra"
+    }
+  ],
+  "problems": [
+    {
+      "id": "advection-sine",
+      "group": "transport",
+      "name": {
+        "ja": "周期正弦波の線形移流",
+        "en": "Periodic sine-wave advection"
+      },
+      "chapter": "stability",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/equation-gallery.json",
+          "json_pointer": "/cases",
+          "where": {
+            "id": "advection"
+          }
+        },
+        {
+          "path": "numerical-methods-atlas/cip.json",
+          "json_pointer": "/cases",
+          "where": {
+            "profile": "sine"
+          }
+        },
+        {
+          "path": "numerical-methods-atlas/limiters.json",
+          "json_pointer": "/cases",
+          "where": {
+            "profile": "sine"
+          }
+        },
+        {
+          "path": "numerical-methods-atlas/experiments.json",
+          "json_pointer": "/dg"
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "advection-square",
+      "group": "transport",
+      "name": {
+        "ja": "周期矩形波の線形移流",
+        "en": "Periodic square-wave advection"
+      },
+      "chapter": "limiters",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/limiters.json",
+          "json_pointer": "/cases",
+          "where": {
+            "profile": "square"
+          }
+        },
+        {
+          "path": "numerical-methods-atlas/cip.json",
+          "json_pointer": "/cases",
+          "where": {
+            "profile": "square"
+          }
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "burgers-shock",
+      "group": "transport",
+      "name": {
+        "ja": "Burgers衝撃波",
+        "en": "Burgers shock"
+      },
+      "chapter": "equation-gallery",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/equation-gallery.json",
+          "json_pointer": "/cases",
+          "where": {
+            "id": "burgers-shock"
+          }
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "burgers-fan",
+      "group": "transport",
+      "name": {
+        "ja": "Burgers膨張波",
+        "en": "Burgers rarefaction"
+      },
+      "chapter": "equation-gallery",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/equation-gallery.json",
+          "json_pointer": "/cases",
+          "where": {
+            "id": "burgers-rarefaction"
+          }
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "traffic-jam",
+      "group": "transport",
+      "name": {
+        "ja": "交通流の渋滞衝撃波",
+        "en": "Traffic jam shock"
+      },
+      "chapter": "equation-gallery",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/equation-gallery.json",
+          "json_pointer": "/cases",
+          "where": {
+            "id": "traffic-upstream-jam"
+          }
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "traffic-fan",
+      "group": "transport",
+      "name": {
+        "ja": "交通流の希薄化波",
+        "en": "Traffic clearing fan"
+      },
+      "chapter": "equation-gallery",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/equation-gallery.json",
+          "json_pointer": "/cases",
+          "where": {
+            "id": "traffic-clearing-fan"
+          }
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "heat-periodic",
+      "group": "transport",
+      "name": {
+        "ja": "周期Fourierモードの熱拡散",
+        "en": "Periodic Fourier-mode heat decay"
+      },
+      "chapter": "elliptic",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/equation-gallery.json",
+          "json_pointer": "/cases",
+          "where": {
+            "id": "heat"
+          }
+        },
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_linear.py",
+          "python_symbol": "test_spectral_heat_exact_mode_decay"
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "heat-dirichlet",
+      "group": "transport",
+      "name": {
+        "ja": "Dirichlet境界の熱拡散",
+        "en": "Heat decay with Dirichlet boundaries"
+      },
+      "chapter": "elliptic",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/validation.json",
+          "json_pointer": "/metrics/diffusion_ftcs"
+        },
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_linear.py",
+          "python_symbol": "test_diffusion_matches_exact_and_refines"
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "sod",
+      "group": "fluid",
+      "name": {
+        "ja": "Sod衝撃波管",
+        "en": "Sod shock tube"
+      },
+      "chapter": "benchmarks",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/equation-gallery.json",
+          "json_pointer": "/cases",
+          "where": {
+            "id": "sod"
+          }
+        },
+        {
+          "path": "numerical-methods-atlas/sod.json",
+          "json_pointer": "/curves"
+        },
+        {
+          "path": "numerical-methods-atlas/assets/reconstruction/reconstruction.json",
+          "json_pointer": "/problems",
+          "where": {
+            "id": "sod"
+          }
+        },
+        {
+          "path": "numerical-methods-atlas/assets/shock-expansion/shock-expansion.json",
+          "json_pointer": "/problems",
+          "where": {
+            "id": "sod"
+          }
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "lax",
+      "group": "fluid",
+      "name": {
+        "ja": "Lax衝撃波管",
+        "en": "Lax shock tube"
+      },
+      "chapter": "benchmarks",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/lax-entropy.png",
+          "artifact": "image"
+        },
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_numerics.py",
+          "python_symbol": "test_benchmark_default_horizon_smoke"
+        },
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_reference_solutions.py",
+          "python_symbol": "test_euler_matches_existing_independent_reference"
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "shu-osher",
+      "group": "fluid",
+      "name": {
+        "ja": "Shu–Osher衝撃波・エントロピー波干渉",
+        "en": "Shu–Osher shock/entropy interaction"
+      },
+      "chapter": "reconstruction",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/reconstruction/reconstruction.json",
+          "json_pointer": "/problems",
+          "where": {
+            "id": "shu-osher"
+          }
+        },
+        {
+          "path": "numerical-methods-atlas/assets/shock-expansion/shock-expansion.json",
+          "json_pointer": "/problems",
+          "where": {
+            "id": "shu-osher"
+          }
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "entropy-1d",
+      "group": "fluid",
+      "name": {
+        "ja": "1次元Eulerエントロピー波",
+        "en": "One-dimensional Euler entropy wave"
+      },
+      "chapter": "experiments",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/experiments.json",
+          "json_pointer": "/entropy"
+        },
+        {
+          "path": "numerical-methods-atlas/assets/validation.json",
+          "json_pointer": "/metrics/entropy_weno5_density_L1"
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "moving-contact",
+      "group": "fluid",
+      "name": {
+        "ja": "移動接触不連続",
+        "en": "Moving contact discontinuity"
+      },
+      "chapter": "reconstruction",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/reconstruction/reconstruction.json",
+          "json_pointer": "/problems",
+          "where": {
+            "id": "moving-contact"
+          }
+        },
+        {
+          "path": "numerical-methods-atlas/assets/shock-expansion/shock-expansion.json",
+          "json_pointer": "/problems",
+          "where": {
+            "id": "moving-contact"
+          }
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "strong-shock",
+      "group": "fluid",
+      "name": {
+        "ja": "1次元の強い圧力ジャンプ",
+        "en": "One-dimensional strong pressure jump"
+      },
+      "chapter": "shock-expansion",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/shock-expansion/shock-expansion.json",
+          "json_pointer": "/problems",
+          "where": {
+            "id": "strong-shock"
+          }
+        },
+        {
+          "path": "numerical-methods-atlas/assets/shock-expansion/shock-expansion.json",
+          "json_pointer": "/ppm_cases",
+          "where": {
+            "problem": "strong-shock",
+            "status": "completed"
+          }
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "double-rarefaction",
+      "group": "fluid",
+      "name": {
+        "ja": "Euler二重膨張波",
+        "en": "Euler double rarefaction"
+      },
+      "chapter": "benchmarks",
+      "evidence": [
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_numerics.py",
+          "python_symbol": "test_benchmark_default_horizon_smoke"
+        }
+      ],
+      "availability": "verified-code-check"
+    },
+    {
+      "id": "dam-break",
+      "group": "fluid",
+      "name": {
+        "ja": "湿潤床ダム崩壊",
+        "en": "Wet-bed dam break"
+      },
+      "chapter": "benchmarks",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/equation-gallery.json",
+          "json_pointer": "/cases",
+          "where": {
+            "id": "dam-break"
+          }
+        },
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_numerics.py",
+          "python_symbol": "test_benchmark_default_horizon_smoke"
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "isothermal-jump",
+      "group": "fluid",
+      "name": {
+        "ja": "等温流体の密度ジャンプ",
+        "en": "Isothermal density jump"
+      },
+      "chapter": "benchmarks",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/equation-gallery.json",
+          "json_pointer": "/cases",
+          "where": {
+            "id": "isothermal"
+          }
+        },
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_numerics.py",
+          "python_symbol": "test_benchmark_default_horizon_smoke"
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "double-mach",
+      "group": "fluid",
+      "name": {
+        "ja": "二重Mach反射",
+        "en": "Double Mach reflection"
+      },
+      "chapter": "double-mach",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/double-mach-run.json",
+          "json_pointer": "/problem"
+        },
+        {
+          "path": "numerical-methods-atlas/assets/movies/shock-catalog.json",
+          "json_pointer": "/movies"
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "nasa-wedge",
+      "group": "fluid",
+      "name": {
+        "ja": "15度楔の斜め衝撃波（Mach数の違いを統合）",
+        "en": "15-degree wedge shock (Mach variants merged)"
+      },
+      "chapter": "nasa-2d",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/shock-gallery.json",
+          "json_pointer": "/wedges"
+        },
+        {
+          "path": "numerical-methods-atlas/assets/comparisons/euler-comparison.json",
+          "json_pointer": "/cases",
+          "where": {
+            "kind": "wedge"
+          }
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "forward-step",
+      "group": "fluid",
+      "name": {
+        "ja": "Mach 3前向きステップ",
+        "en": "Mach-3 forward-facing step"
+      },
+      "chapter": "nasa-2d",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/shock-gallery.json",
+          "json_pointer": "/forward_step"
+        },
+        {
+          "path": "numerical-methods-atlas/assets/comparisons/euler-comparison.json",
+          "json_pointer": "/cases",
+          "where": {
+            "id": "forward-step"
+          }
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "entropy-2d",
+      "group": "fluid",
+      "name": {
+        "ja": "2次元の滑らかなEulerエントロピー波",
+        "en": "Smooth two-dimensional Euler entropy wave"
+      },
+      "chapter": "reconstruction",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/comparisons/euler-comparison.json",
+          "json_pointer": "/smooth"
+        },
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_muscl2d.py",
+          "python_symbol": "test_smooth_2d_cell_average_refinement_and_periodic_conservation"
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "cylinder-forebody",
+      "group": "fluid",
+      "name": {
+        "ja": "円柱前面の弓形衝撃波",
+        "en": "Cylinder-forebody bow shock"
+      },
+      "chapter": "shock-expansion",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/shock-expansion/shock-expansion.json",
+          "json_pointer": "/body_runs"
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "odd-even",
+      "group": "fluid",
+      "name": {
+        "ja": "定常平面衝撃波のodd–even診断",
+        "en": "Stationary-shock odd–even diagnostic"
+      },
+      "chapter": "carbuncle",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/shock-methods/robustness.json",
+          "json_pointer": "/runs"
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "isentropic-vortex",
+      "group": "fluid",
+      "name": {
+        "ja": "周期移動等エントロピー渦",
+        "en": "Periodic moving isentropic vortex"
+      },
+      "chapter": "keep",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/keep-vortex.json",
+          "json_pointer": "/studies"
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "orszag-tang",
+      "group": "mhd",
+      "name": {
+        "ja": "Orszag–Tang渦（CT・GLM・発散誤差摂動を統合）",
+        "en": "Orszag–Tang vortex (CT/GLM/error variants merged)"
+      },
+      "chapter": "mhd",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/validation.json",
+          "json_pointer": "/metrics/orszag_tang_ct"
+        },
+        {
+          "path": "numerical-methods-atlas/assets/validation.json",
+          "json_pointer": "/metrics/orszag_tang_glm"
+        },
+        {
+          "path": "numerical-methods-atlas/assets/movies/catalog.json",
+          "json_pointer": "/movies",
+          "where": {
+            "chapter": "mhd"
+          }
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "brio-wu",
+      "group": "mhd",
+      "name": {
+        "ja": "Brio–Wu衝撃波管",
+        "en": "Brio–Wu shock tube"
+      },
+      "chapter": "mhd",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/mhd-tests/mhd-tests.json",
+          "json_pointer": "/brio_wu"
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "circular-alfven",
+      "group": "mhd",
+      "name": {
+        "ja": "円偏波Alfvén波",
+        "en": "Circularly polarized Alfvén wave"
+      },
+      "chapter": "mhd",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/mhd-tests/mhd-tests.json",
+          "json_pointer": "/alfven"
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "magnetic-loop",
+      "group": "mhd",
+      "name": {
+        "ja": "磁場ループの移流",
+        "en": "Magnetic field-loop advection"
+      },
+      "chapter": "mhd",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/mhd-tests/mhd-tests.json",
+          "json_pointer": "/field_loop"
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "taylor-green",
+      "group": "viscous",
+      "name": {
+        "ja": "周期Taylor–Green渦",
+        "en": "Periodic Taylor–Green vortex"
+      },
+      "chapter": "incompressible",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/solver-foundations.json",
+          "json_pointer": "/mac"
+        },
+        {
+          "path": "numerical-methods-atlas/assets/multidimensional-fields.json",
+          "json_pointer": "/mac"
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "lbm-shear",
+      "group": "viscous",
+      "name": {
+        "ja": "周期せん断波の粘性減衰",
+        "en": "Viscous decay of a periodic shear wave"
+      },
+      "chapter": "lattice-boltzmann",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/solver-foundations.json",
+          "json_pointer": "/lbm/shear_amplitude"
+        },
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_new_models.py",
+          "python_symbol": "test_lbm_shear_viscosity_refines"
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "channel-poiseuille",
+      "group": "viscous",
+      "name": {
+        "ja": "平行平板Poiseuille流",
+        "en": "Plane Poiseuille channel flow"
+      },
+      "chapter": "lattice-boltzmann",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/solver-foundations.json",
+          "json_pointer": "/lbm/channel_relative_l2"
+        },
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_new_models.py",
+          "python_symbol": "test_lbm_channel_halfway_wall_refinement"
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "poisson-1d-dirichlet",
+      "group": "elliptic",
+      "name": {
+        "ja": "1次元Poisson・Dirichlet製造解",
+        "en": "1D Poisson / smooth Dirichlet manufactured solutions"
+      },
+      "chapter": "elliptic",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/poisson-comparison/comparison.json",
+          "json_pointer": "/one_dimensional"
+        },
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_linear.py",
+          "python_symbol": "test_poisson_second_order"
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "poisson-1d-neumann",
+      "group": "elliptic",
+      "name": {
+        "ja": "1次元Poisson・純Neumann境界",
+        "en": "1D Poisson / pure Neumann boundaries"
+      },
+      "chapter": "elliptic",
+      "evidence": [
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_linear.py",
+          "python_symbol": "test_neumann_compatibility_and_mean_gauge"
+        }
+      ],
+      "availability": "verified-code-check"
+    },
+    {
+      "id": "poisson-1d-mixed",
+      "group": "elliptic",
+      "name": {
+        "ja": "1次元Poisson・Dirichlet/Neumann混合境界",
+        "en": "1D Poisson / mixed Dirichlet-Neumann boundaries"
+      },
+      "chapter": "elliptic",
+      "evidence": [
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_linear.py",
+          "python_symbol": "test_mixed_dirichlet_neumann"
+        }
+      ],
+      "availability": "verified-code-check"
+    },
+    {
+      "id": "poisson-1d-robin",
+      "group": "elliptic",
+      "name": {
+        "ja": "1次元Poisson・Robin境界の製造解",
+        "en": "1D Poisson / Robin manufactured solutions"
+      },
+      "chapter": "elliptic",
+      "evidence": [
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_linear.py",
+          "python_symbol": "test_robin_second_order_with_manufactured_exponential"
+        }
+      ],
+      "availability": "verified-code-check"
+    },
+    {
+      "id": "poisson-2d-broad",
+      "group": "elliptic",
+      "name": {
+        "ja": "2次元Poisson・広帯域の滑らかな製造解",
+        "en": "2D Poisson / broad smooth manufactured forcing"
+      },
+      "chapter": "elliptic",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/poisson-comparison/comparison.json",
+          "json_pointer": "/cases",
+          "where": {
+            "id": "manufactured"
+          }
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "poisson-2d-localized",
+      "group": "elliptic",
+      "name": {
+        "ja": "2次元Poisson・局在ソース",
+        "en": "2D Poisson / localized source"
+      },
+      "chapter": "elliptic",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/poisson-comparison/comparison.json",
+          "json_pointer": "/cases",
+          "where": {
+            "id": "localized"
+          }
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "poisson-2d-sine",
+      "group": "elliptic",
+      "name": {
+        "ja": "2次元Poisson・正弦単一モード（FEMを含む）",
+        "en": "2D Poisson / single sine mode, including FEM"
+      },
+      "chapter": "fem",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/poisson-comparison/comparison.json",
+          "json_pointer": "/cases",
+          "where": {
+            "id": "single-mode"
+          }
+        },
+        {
+          "path": "numerical-methods-atlas/assets/multidimensional-fields.json",
+          "json_pointer": "/fem"
+        },
+        {
+          "path": "numerical-methods-atlas/assets/solver-foundations.json",
+          "json_pointer": "/fem"
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "poisson-2d-uniform",
+      "group": "elliptic",
+      "name": {
+        "ja": "2次元Poisson・一様ソース",
+        "en": "2D Poisson / uniform source"
+      },
+      "chapter": "elliptic",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/validation.json",
+          "json_pointer": "/metrics/multigrid"
+        },
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_multigrid.py",
+          "python_symbol": "test_multigrid_against_cg_and_residual"
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "poisson-2d-random",
+      "group": "elliptic",
+      "name": {
+        "ja": "2次元Poisson・乱数ソースの離散残差",
+        "en": "2D Poisson / random-source discrete residual"
+      },
+      "chapter": "elliptic",
+      "evidence": [
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_linear.py",
+          "python_symbol": "test_poisson_cg_for_general_forcing_satisfies_discrete_residual"
+        }
+      ],
+      "availability": "verified-code-check"
+    },
+    {
+      "id": "poisson-3d-periodic",
+      "group": "elliptic",
+      "name": {
+        "ja": "3次元周期Poisson・Fourier製造解",
+        "en": "3D periodic Poisson / Fourier manufactured solution"
+      },
+      "chapter": "particle-gravity",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/multidimensional-fields.json",
+          "json_pointer": "/poisson3d"
+        },
+        {
+          "path": "numerical-methods-atlas/assets/particle-gravity.json",
+          "json_pointer": "/periodic_pm/manufactured_potential_max_error"
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "poisson-1d-periodic",
+      "group": "elliptic",
+      "name": {
+        "ja": "1次元周期Poisson・擬似時間による定常解",
+        "en": "1D periodic Poisson / pseudo-time steady solution"
+      },
+      "chapter": "hyperbolic-diffusion",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/solver-foundations.json",
+          "json_pointer": "/hyperbolic_diffusion"
+        },
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_new_models.py",
+          "python_symbol": "test_hyperbolic_diffusion_steady_refinement_and_failure"
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "bratu",
+      "group": "elliptic",
+      "name": {
+        "ja": "1次元Bratu非線形境界値問題",
+        "en": "One-dimensional Bratu boundary-value problem"
+      },
+      "chapter": "sparse-nonlinear",
+      "evidence": [
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_sparse_fem.py",
+          "python_symbol": "test_bratu_newton_krylov_refines_to_continuous_reference"
+        }
+      ],
+      "availability": "verified-code-check"
+    },
+    {
+      "id": "sparse-advection-diffusion",
+      "group": "elliptic",
+      "name": {
+        "ja": "非対称移流拡散離散系の製造解",
+        "en": "Nonsymmetric advection-diffusion discrete manufactured system"
+      },
+      "chapter": "sparse-nonlinear",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/solver-foundations.json",
+          "json_pointer": "/krylov"
+        },
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_sparse_fem.py",
+          "python_symbol": "test_nonsymmetric_solve_true_residual_and_error"
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "isolated-particles",
+      "group": "gravity",
+      "name": {
+        "ja": "孤立粒子群の軟化重力（ツリー・直接和）",
+        "en": "Isolated softened particle gravity: tree versus direct sum"
+      },
+      "chapter": "particle-gravity",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/particle-gravity.json",
+          "json_pointer": "/isolated_tree"
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "periodic-particles",
+      "group": "gravity",
+      "name": {
+        "ja": "周期PM粒子群の質量・内力",
+        "en": "Periodic PM particle mass and internal force"
+      },
+      "chapter": "particle-gravity",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/particle-gravity.json",
+          "json_pointer": "/periodic_pm"
+        },
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_particle_gravity.py",
+          "python_symbol": "test_pm_self_force_and_total_internal_force_with_matched_cic"
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "isolated-convolution",
+      "group": "gravity",
+      "name": {
+        "ja": "孤立FFTと非周期直接畳み込み",
+        "en": "Isolated FFT versus direct nonperiodic convolution"
+      },
+      "chapter": "gravity-boundaries",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/gravity-boundaries.json",
+          "json_pointer": "/isolated_boundary_point_max_error"
+        },
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_gravity_boundaries.py",
+          "python_symbol": "test_isolated_doubling_equals_direct_nonperiodic_discrete_convolution"
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "uniform-slab",
+      "group": "gravity",
+      "name": {
+        "ja": "一様平面スラブの重力",
+        "en": "Uniform plane-slab gravity"
+      },
+      "chapter": "gravity-boundaries",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/gravity-boundaries.json",
+          "json_pointer": "/uniform_slab_gauge_aligned_max_error"
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "sinusoidal-sheet",
+      "group": "gravity",
+      "name": {
+        "ja": "正弦波状薄層の重力",
+        "en": "Sinusoidal sheet gravity"
+      },
+      "chapter": "gravity-boundaries",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/gravity-boundaries.json",
+          "json_pointer": "/sinusoidal_sheet_max_error"
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "harmonic-oscillator",
+      "group": "time",
+      "name": {
+        "ja": "調和振動子（複素ODE表示も統合）",
+        "en": "Harmonic oscillator, including complex-ODE form"
+      },
+      "chapter": "time-integration",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/foundations.json",
+          "json_pointer": "/time"
+        },
+        {
+          "path": "numerical-methods-atlas/hamiltonian.json",
+          "json_pointer": "/cases",
+          "where": {
+            "system": "harmonic"
+          }
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "quartic-oscillator",
+      "group": "time",
+      "name": {
+        "ja": "4次ポテンシャルの非線形振動子",
+        "en": "Nonlinear quartic-potential oscillator"
+      },
+      "chapter": "symplectic",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/hamiltonian.json",
+          "json_pointer": "/cases",
+          "where": {
+            "system": "quartic"
+          }
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "nonlinear-exp-ode",
+      "group": "time",
+      "name": {
+        "ja": "指数関数を厳密解に持つ非線形・非自律ODE",
+        "en": "Nonlinear nonautonomous ODE with exponential exact solution"
+      },
+      "chapter": "runge-kutta",
+      "evidence": [
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_runge_kutta.py",
+          "python_symbol": "test_rk_order_conditions_and_manufactured_nonlinear_time_dependence"
+        }
+      ],
+      "availability": "verified-code-check"
+    },
+    {
+      "id": "stiff-cosine",
+      "group": "time",
+      "name": {
+        "ja": "硬い余弦追従ODE",
+        "en": "Stiff cosine-tracking ODE"
+      },
+      "chapter": "stiff-integration",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/solver-foundations.json",
+          "json_pointer": "/stiff"
+        },
+        {
+          "path": "numerical-methods-atlas/assets/solver-foundations.json",
+          "json_pointer": "/adaptive"
+        },
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_new_models.py",
+          "python_symbol": "test_stiff_decay_and_local_error_control"
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "nonlinear-rational-ode",
+      "group": "time",
+      "name": {
+        "ja": "有理関数を厳密解に持つ非線形・非自律ODE",
+        "en": "Nonlinear nonautonomous ODE with rational exact solution"
+      },
+      "chapter": "stiff-integration",
+      "evidence": [
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_new_models.py",
+          "python_symbol": "test_implicit_orders_on_nonautonomous_nonlinear_exact_solution"
+        }
+      ],
+      "availability": "verified-code-check"
+    },
+    {
+      "id": "smooth-function-projection",
+      "group": "approximation",
+      "name": {
+        "ja": "滑らかな関数の多項式補間・射影",
+        "en": "Polynomial interpolation and projection of a smooth function"
+      },
+      "chapter": "basis-functions",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/basis.json",
+          "json_pointer": "/approximations",
+          "where": {
+            "profile": "smooth"
+          }
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "jump-function-projection",
+      "group": "approximation",
+      "name": {
+        "ja": "不連続関数の多項式補間・射影",
+        "en": "Polynomial interpolation and projection of a jump function"
+      },
+      "chapter": "basis-functions",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/basis.json",
+          "json_pointer": "/approximations",
+          "where": {
+            "profile": "jump"
+          }
+        }
+      ],
+      "availability": "saved-output"
+    },
+    {
+      "id": "cubic-root",
+      "group": "approximation",
+      "name": {
+        "ja": "減衰Newton法による3次方程式の求根",
+        "en": "Damped Newton root of a cubic equation"
+      },
+      "chapter": "sparse-nonlinear",
+      "evidence": [
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_sparse_fem.py",
+          "python_symbol": "test_damped_newton_backtracks_and_reports_failure"
+        }
+      ],
+      "availability": "verified-code-check"
+    },
+    {
+      "id": "nonlinear-rational-decay",
+      "group": "time",
+      "name": {
+        "ja": "有理減衰ODE（y′ = −y²）",
+        "en": "Rational-decay ODE (y′ = −y²)"
+      },
+      "chapter": "runge-kutta",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/runge-kutta.json",
+          "json_pointer": "/nonlinear_problem"
+        },
+        {
+          "path": "numerical-methods-atlas/runge-kutta.json",
+          "json_pointer": "/cases"
+        }
+      ],
+      "availability": "saved-output"
+    }
+  ],
+  "excluded_examples": {
+    "ja": [
+      "生物モデル22項目：文献調査のみ",
+      "参照解ライブラリ18項目：参照評価を重複加算しない",
+      "球面格子・接続図：流体計算ではない",
+      "基底行列・Fourier記号・分散関係・正値性・幾何保存則等の局所検査：独立した問題数にはしない",
+      "AMR・並列化・混合精度、予定中のサーモスタット・DFT等"
+    ],
+    "en": [
+      "22 biological entries: literature surveys",
+      "18 reference-library entries: do not add reference evaluations again",
+      "Spherical and connectivity diagrams: no flow solve",
+      "Local basis-matrix, Fourier-symbol, dispersion, positivity and geometric-conservation checks: not separate problems",
+      "AMR, parallelization, mixed precision, and planned thermostats/DFT"
+    ]
+  }
+}
