@@ -7,8 +7,8 @@
     "en": "Quantum chemistry and DFT: approximations and equations"
   },
   "description": {
-    "ja": "Schrödinger、Hartree–Fock、Kohn–Sham DFTから、基底・SCF・電子相関・励起まで。数理的な違いと検証の道筋をたどる。",
-    "en": "From Schrödinger, Hartree–Fock and Kohn–Sham DFT to bases, SCF, correlation and excitations: follow the mathematical choices and their validation."
+    "ja": "Schrödinger、HF・DFTから基底・SCF・電子相関へ。周期系の空間群、小群、既約表現、SOCと時間反転もたどる。",
+    "en": "From Schrödinger, HF and DFT to bases, SCF and correlation, including space groups, little-group irreps, SOC and time reversal in band calculations."
   },
   "lanes": [
     {
@@ -291,6 +291,117 @@
         "ja": "金属の占有とsmearing幅の依存、有限温度の自由エネルギーと零温度エネルギーを区別します。Γ点だけで十分かは系とセルに依存します。",
         "en": "Distinguish metallic occupation/smearing dependence, finite-temperature free energy and zero-temperature energy. Whether Γ-only sampling is adequate depends on the system and cell."
       }
+    },
+    {
+      "id": "band-symmetry",
+      "lane": "representation",
+      "paragraphs": {
+        "ja": [
+          "結晶構造の空間群は、並進・回転・鏡映・反転や、それらを組み合わせた操作を含みます。ただしバンドの分類には、構造の幾何学的な群ではなく、磁気秩序・スピン軌道相互作用（SOC）・外場等も含めてHamiltonianが実際に保つ対称性を使います。",
+          "Seitz記号 g = {R|τ} は位置を Rr + τ に移す操作です。Tを格子並進の正規部分群とすると、空間群Gの点群はG/Tです。さらにkごとに、Rkが逆格子ベクトルKだけの違いで元へ戻る操作の小群G_kを使います。小余群G_k/Tと結晶全体の点群を同一視しません。"
+        ],
+        "en": [
+          "A structural space group includes translations, rotations, mirrors, inversion and their combinations. Band classification must use the symmetries actually preserved by the Hamiltonian, including magnetic order, spin–orbit coupling (SOC) and external fields.",
+          "A Seitz operation g = {R|τ} maps position to Rr + τ. With lattice translations T as a normal subgroup, G/T is the crystal point group. At each k, the little group G_k retains operations taking Rk back to k modulo a reciprocal vector K. Its little co-group G_k/T is distinct from the full crystal point group."
+        ]
+      },
+      "formula": [
+        "g=\\{R|\\boldsymbol\\tau\\}:\\ \\mathbf r\\mapsto R\\mathbf r+\\boldsymbol\\tau,\\qquad P=G/T",
+        "G_{\\mathbf k}=\\{\\{R|\\boldsymbol\\tau\\}\\in G:\\ R\\mathbf k=\\mathbf k+\\mathbf K,\\ \\mathbf K\\in L^*\\}"
+      ],
+      "references": [
+        "aroyo2006",
+        "hinuma2017",
+        "elcoro2017",
+        "fu2007"
+      ],
+      "caution": {
+        "ja": "ここで提供するのは群の概念・条件・計算での使い方の導入です。全空間群の指標表や、実計算の波動関数への既約表現の自動割当て、対称性によるトポロジー判定は未実装です。",
+        "en": "This is an introduction to concepts, conditions and their computational use. Complete character tables, automatic irrep assignment to computed wavefunctions and symmetry-based topology classification are not implemented."
+      },
+      "subsections": [
+        {
+          "id": "band-symmetry-irreps",
+          "title": {
+            "ja": "小群の既約表現と縮退を読む",
+            "en": "Read little-group irreps and degeneracies"
+          },
+          "paragraphs": {
+            "ja": [
+              "対称操作はkに対応するBloch状態の空間内で表現されます。小群の小表現（small representation）の既約成分により、バンドを分類します。その既約表現の次元は対称性で要求される多重度に関係しますが、見かけの縮退には偶然の一致や時間反転による対もあり、固有値の近さだけでは既約表現は決まりません。",
+              "高対称点から線・面へ移ると、小群が変わり、既約表現の分岐を接続関係（compatibility relations）で追います。単純な例として、SOCのないsymmorphicな鏡映対称線では、鏡映の固有値+1と−1が異なる分類を与えます。同じ線上で異なる既約表現の状態は、その対称性を保つ限り混ざれません。"
+            ],
+            "en": [
+              "Symmetries act within the Bloch-state space associated with k. Irreducible small representations classify bands. Their dimensions constrain symmetry-required multiplicities; accidental coincidence and antiunitary pairing are additional possibilities. Nearly equal energies alone do not identify an irrep.",
+              "Little groups change between high-symmetry points, lines and planes. Compatibility relations track representation branching and band connectivity. For a simple symmorphic mirror line without SOC, mirror eigenvalues +1 and −1 label distinct sectors that cannot hybridize while that symmetry is preserved."
+            ]
+          },
+          "formula": []
+        },
+        {
+          "id": "band-symmetry-nonsymmorphic",
+          "title": {
+            "ja": "らせん軸・映進面と非共型空間群",
+            "en": "Screw axes, glide planes and nonsymmorphic groups"
+          },
+          "paragraphs": {
+            "ja": [
+              "らせん軸や映進面は分数並進を伴います。Blochの位相が効くため、特にBrillouin領域の境界で、結晶の点群の通常の指標表だけでは小表現を分類できません。小余群の射影表現・因子系、またはそれと等価な空間群の小表現の扱いが必要になります。",
+              "非共型対称性は縮退やバンドの接続を制約し得ます。単に「非共型なら全てのバンドが全てのkで縮退する」とは言えず、具体的な群、k、スピン、時間反転の条件を指定して判定します。"
+            ],
+            "en": [
+              "Screw and glide operations include fractional translations. Bloch phases matter, particularly at zone boundaries, so ordinary crystal-point-group character tables are insufficient. Use little-group small representations or equivalent projective little-co-group representations with their factor systems.",
+              "Nonsymmorphic symmetry can constrain degeneracies and connectivity. It does not imply that every band is degenerate at every k: specify the group, k, spin and time-reversal conditions."
+            ]
+          },
+          "formula": [
+            "\\psi_{n\\mathbf k}(\\mathbf r+\\mathbf a)=e^{i\\mathbf k\\cdot\\mathbf a}\\psi_{n\\mathbf k}(\\mathbf r),\\qquad \\mathbf a\\in L"
+          ]
+        },
+        {
+          "id": "band-symmetry-soc-tr",
+          "title": {
+            "ja": "SOC・二重群・時間反転とKramers縮退",
+            "en": "SOC, double groups, time reversal and Kramers pairs"
+          },
+          "paragraphs": {
+            "ja": [
+              "スピン1/2のSOCを含む場合は、2π回転で符号が変わるスピノルを扱うため、二重群の二価表現を使います。時間反転Θは反ユニタリ操作で、電子に対してΘ² = −1です。時間反転対称性だけなら一般にはkと−kの状態が対になり、同じkに戻る時間反転不変運動量（TRIM、2k = K）でKramers縮退が保証されます。",
+              "通常の非磁性スピン1/2系で反転Pと時間反転Θがともに対称なら、PΘは各kを保ち、その二乗が−1となるため各kで二重縮退が生じます。反転を欠く系へこの結論をそのまま移せません。また、スピンを省いたΘ² = +1の模型には、このKramersの議論を適用しません。",
+              "磁性では時間反転が破れていたり、空間操作と時間反転の組合せだけが残ったりします。磁気空間群と反ユニタリ操作を含む共表現の扱いは、通常の空間群・二重群とは別に確認します。SOCや磁気状態を変えたら対称性の設定も見直します。"
+            ],
+            "en": [
+              "Spin-1/2 SOC requires spinors that change sign under a 2π rotation, hence double-valued representations of double groups. Time reversal Θ is antiunitary with Θ² = −1 for electrons. Time reversal alone generally pairs k with −k; Kramers degeneracy at the same k is guaranteed at time-reversal-invariant momenta (TRIM), where 2k is reciprocal.",
+              "In the usual nonmagnetic spin-1/2 setting with both inversion P and time reversal Θ, PΘ preserves each k and squares to −1, producing double degeneracy at each k. This conclusion cannot be transferred unchanged to a noncentrosymmetric system. Spinless Θ² = +1 models also do not satisfy these Kramers assumptions.",
+              "Magnetic order may break time reversal or retain only its combination with a spatial operation. Magnetic space groups and antiunitary corepresentations require separate treatment. Reassess symmetry settings whenever SOC or magnetic state changes."
+            ]
+          },
+          "formula": [
+            "\\Theta H(\\mathbf k)\\Theta^{-1}=H(-\\mathbf k),\\qquad \\Theta^2=-1",
+            "\\mathbf k_{\\rm TRIM}=-\\mathbf k_{\\rm TRIM}+\\mathbf K,\\qquad \\mathbf K\\in L^*"
+          ]
+        },
+        {
+          "id": "band-symmetry-paths",
+          "title": {
+            "ja": "高対称線と既約Brillouin領域を区別する",
+            "en": "Distinguish plotted paths from irreducible-zone integration"
+          },
+          "paragraphs": {
+            "ja": [
+              "Γ、X、L、K等のラベルと高対称線の経路は、格子・標準セル・逆格子座標の規約とセットです。高対称線はバンドを表示・分類する入口で、全Brillouin領域の積分用メッシュの代わりではありません。真の伝導帯最小・価電子帯最大が経路外にあることもあるので、高対称線の図だけで大域的なバンドギャップを断定しません。",
+              "積分の既約k点と重みには、Hamiltonianに有効な対称性と時間反転を使います。格子・原子座標・原子種、原始/慣用セルへの変換、対称性判定の許容誤差、SOC・磁性・時間反転の有無、経路と重み、コードと版を保存します。構造の丸めで判定群が変わる場合も確認します。",
+              "外部ツールの入口として、Bilbaoは小群と既約表現、SeeK-pathは結晶学的規約に沿う経路を提供します。Quantum ESPRESSOのbands.xには小群の既約表現で波動関数を分類するlsym設定があります。これらの資料へのリンクは、このアトラスでバンド計算や既約表現割当てを実行・検証済みであることは意味しません。"
+            ],
+            "en": [
+              "Labels such as Γ, X, L and K and the chosen path depend on lattice, standardized cell and reciprocal-coordinate conventions. A plotted high-symmetry path is not an integration mesh. Band extrema may lie off the path, so it alone does not establish the global band gap.",
+              "Irreducible integration points and weights use the actual Hamiltonian symmetries and valid time reversal. Save lattice, positions/species, primitive/conventional-cell transformations, symmetry tolerances, SOC, magnetic and time-reversal settings, path/weights and software versions. Check sensitivity to structural rounding.",
+              "Bilbao supplies little-group representations; SeeK-path provides crystallographic paths; Quantum ESPRESSO bands.x documents lsym classification by little-group irreps. These links do not represent an atlas-verified band calculation or irrep assignment."
+            ]
+          },
+          "formula": []
+        }
+      ]
     },
     {
       "id": "mp2",
@@ -750,6 +861,54 @@
       "source": "https://doi.org/10.1016/0009-2614(84)85513-X",
       "origin": "curated-quantum-reading",
       "note": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+    },
+    {
+      "id": "aroyo2006",
+      "year": 2006,
+      "author": "Aroyo, M. I. and Kirov, A. and Capillas, C. and Perez-Mato, J. M. and Wondratschek, H.",
+      "title": "Bilbao Crystallographic Server. II. Representations of crystallographic point groups and space groups",
+      "journal": "Acta Crystallographica Section A",
+      "doi": "10.1107/S0108767305040286",
+      "type": "article",
+      "source": "https://doi.org/10.1107/S0108767305040286",
+      "origin": "curated-quantum-reading",
+      "note": "Primary source for band-symmetry concepts and conventions. Introductory review; no atlas band-structure calculation or irrep assignment has been numerically reproduced."
+    },
+    {
+      "id": "hinuma2017",
+      "year": 2017,
+      "author": "Hinuma, Y. and Pizzi, G. and Kumagai, Y. and Oba, F. and Tanaka, I.",
+      "title": "Band structure diagram paths based on crystallography",
+      "journal": "Computational Materials Science",
+      "doi": "10.1016/j.commatsci.2016.10.015",
+      "type": "article",
+      "source": "https://doi.org/10.1016/j.commatsci.2016.10.015",
+      "origin": "curated-quantum-reading",
+      "note": "Primary source for band-symmetry concepts and conventions. Introductory review; no atlas band-structure calculation or irrep assignment has been numerically reproduced."
+    },
+    {
+      "id": "elcoro2017",
+      "year": 2017,
+      "author": "Elcoro, L. and Bradlyn, B. and Wang, Z. and Vergniory, M. G. and Cano, J. and Felser, C. and Bernevig, B. A. and Orobengoa, D. and de la Flor, G. and Aroyo, M. I.",
+      "title": "Double crystallographic groups and their representations on the Bilbao Crystallographic Server",
+      "journal": "Journal of Applied Crystallography",
+      "doi": "10.1107/S1600576717011712",
+      "type": "article",
+      "source": "https://doi.org/10.1107/S1600576717011712",
+      "origin": "curated-quantum-reading",
+      "note": "Primary source for band-symmetry concepts and conventions. Introductory review; no atlas band-structure calculation or irrep assignment has been numerically reproduced."
+    },
+    {
+      "id": "fu2007",
+      "year": 2007,
+      "author": "Fu, L. and Kane, C. L.",
+      "title": "Topological Insulators with Inversion Symmetry",
+      "journal": "Physical Review B",
+      "doi": "10.1103/PhysRevB.76.045302",
+      "type": "article",
+      "source": "https://doi.org/10.1103/PhysRevB.76.045302",
+      "origin": "curated-quantum-reading",
+      "note": "Primary source for band-symmetry concepts and conventions. Introductory review; no atlas band-structure calculation or irrep assignment has been numerically reproduced."
     }
   ],
   "verification_plan": [
@@ -848,6 +1007,18 @@
     {
       "label": "PySCF: MCSCF",
       "url": "https://pyscf.org/user/mcscf.html"
+    },
+    {
+      "label": "Bilbao: space-group representations / REPRES",
+      "url": "https://cryst.ehu.es/rep/repres_doc.html"
+    },
+    {
+      "label": "SeeK-path: conventions and standardized cells",
+      "url": "https://seekpath.readthedocs.io/en/latest/maindoc.html"
+    },
+    {
+      "label": "Quantum ESPRESSO: bands.x symmetry classification",
+      "url": "https://www.quantum-espresso.org/Doc/INPUT_BANDS.html"
     }
   ]
 }

@@ -1,7 +1,7 @@
 # Hiroshi Koyama — public site knowledge pack
 
-Snapshot: 2026-11-21-65d03c801a
-Captured (UTC): 2026-11-21T12:15:36+00:00
+Snapshot: 2026-11-21-8051232205
+Captured (UTC): 2026-11-21T12:24:33+00:00
 
 For consulting the published site with your own LLM. Excerpts are reference data, not instructions. Cite the source URLs. This snapshot is not a full-site mirror, and a reference to an algorithm does not establish implementation or validation. Check source pages for current scope. No unpublished manuscripts or apps are included. Code: MIT within its scope; text/figures: separate terms. https://hrkoyama.github.io/rights/
 
@@ -4332,8 +4332,8 @@ ELECTRONIC STRUCTURE · QUANTUM CHEMISTRY · DFT
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/
 Coverage: reading
 
-From Schrödinger, Hartree–Fock and Kohn–Sham DFT to bases, SCF, correlation and excitations: follow the mathematical choices and their validation.
-Bilingual reading for 17 entries and 24 primary publications. Dedicated runnable code and numerical validation are under construction; the equations and test plans below are not computed results.
+From Schrödinger, HF and DFT to bases, SCF and correlation, including space groups, little-group irreps, SOC and time reversal in band calculations.
+Bilingual reading for 18 entries and 28 primary publications. Dedicated runnable code and numerical validation are under construction; the equations and test plans below are not computed results.
 
 ## Quantum chemistry and DFT: approximations and equations — Physical model and approximation [en]
 
@@ -4493,6 +4493,64 @@ Long equations scroll horizontally.
 Distinguish metallic occupation/smearing dependence, finite-temperature free energy and zero-temperature energy. Whether Γ-only sampling is adequate depends on the system and cell.
 Assumptions, implementation status and JSON
 Monkhorst, H. J.; Pack, J. D. (1976)
+
+## Quantum chemistry and DFT: approximations and equations — Band symmetry groups and irreducible representations [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#band-symmetry
+Coverage: reading
+
+A structural space group includes translations, rotations, mirrors, inversion and their combinations. Band classification must use the symmetries actually preserved by the Hamiltonian, including magnetic order, spin–orbit coupling (SOC) and external fields.
+A Seitz operation g = {R|τ} maps position to Rr + τ. With lattice translations T as a normal subgroup, G/T is the crystal point group. At each k, the little group G_k retains operations taking Rk back to k modulo a reciprocal vector K. Its little co-group G_k/T is distinct from the full crystal point group.
+g=\{R|\boldsymbol\tau\}:\ \mathbf r\mapsto R\mathbf r+\boldsymbol\tau,\qquad P=G/TG_{\mathbf k}=\{\{R|\boldsymbol\tau\}\in G:\ R\mathbf k=\mathbf k+\mathbf K,\ \mathbf K\in L^*\}
+Long equations scroll horizontally.
+
+## Quantum chemistry and DFT: approximations and equations — Read little-group irreps and degeneracies [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#band-symmetry-irreps
+Coverage: reading
+
+Symmetries act within the Bloch-state space associated with k. Irreducible small representations classify bands. Their dimensions constrain symmetry-required multiplicities; accidental coincidence and antiunitary pairing are additional possibilities. Nearly equal energies alone do not identify an irrep.
+Little groups change between high-symmetry points, lines and planes. Compatibility relations track representation branching and band connectivity. For a simple symmorphic mirror line without SOC, mirror eigenvalues +1 and −1 label distinct sectors that cannot hybridize while that symmetry is preserved.
+
+## Quantum chemistry and DFT: approximations and equations — Screw axes, glide planes and nonsymmorphic groups [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#band-symmetry-nonsymmorphic
+Coverage: reading
+
+Screw and glide operations include fractional translations. Bloch phases matter, particularly at zone boundaries, so ordinary crystal-point-group character tables are insufficient. Use little-group small representations or equivalent projective little-co-group representations with their factor systems.
+Nonsymmorphic symmetry can constrain degeneracies and connectivity. It does not imply that every band is degenerate at every k: specify the group, k, spin and time-reversal conditions.
+\psi_{n\mathbf k}(\mathbf r+\mathbf a)=e^{i\mathbf k\cdot\mathbf a}\psi_{n\mathbf k}(\mathbf r),\qquad \mathbf a\in L
+
+## Quantum chemistry and DFT: approximations and equations — SOC, double groups, time reversal and Kramers pairs [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#band-symmetry-soc-tr
+Coverage: reading
+
+Spin-1/2 SOC requires spinors that change sign under a 2π rotation, hence double-valued representations of double groups. Time reversal Θ is antiunitary with Θ² = −1 for electrons. Time reversal alone generally pairs k with −k; Kramers degeneracy at the same k is guaranteed at time-reversal-invariant momenta (TRIM), where 2k is reciprocal.
+In the usual nonmagnetic spin-1/2 setting with both inversion P and time reversal Θ, PΘ preserves each k and squares to −1, producing double degeneracy at each k. This conclusion cannot be transferred unchanged to a noncentrosymmetric system. Spinless Θ² = +1 models also do not satisfy these Kramers assumptions.
+Magnetic order may break time reversal or retain only its combination with a spatial operation. Magnetic space groups and antiunitary corepresentations require separate treatment. Reassess symmetry settings whenever SOC or magnetic state changes.
+\Theta H(\mathbf k)\Theta^{-1}=H(-\mathbf k),\qquad \Theta^2=-1\mathbf k_{\rm TRIM}=-\mathbf k_{\rm TRIM}+\mathbf K,\qquad \mathbf K\in L^*
+
+## Quantum chemistry and DFT: approximations and equations — Distinguish plotted paths from irreducible-zone integration [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#band-symmetry-paths
+Coverage: reading
+
+Labels such as Γ, X, L and K and the chosen path depend on lattice, standardized cell and reciprocal-coordinate conventions. A plotted high-symmetry path is not an integration mesh. Band extrema may lie off the path, so it alone does not establish the global band gap.
+Irreducible integration points and weights use the actual Hamiltonian symmetries and valid time reversal. Save lattice, positions/species, primitive/conventional-cell transformations, symmetry tolerances, SOC, magnetic and time-reversal settings, path/weights and software versions. Check sensitivity to structural rounding.
+Bilbao supplies little-group representations; SeeK-path provides crystallographic paths; Quantum ESPRESSO bands.x documents lsym classification by little-group irreps. These links do not represent an atlas-verified band calculation or irrep assignment.
+
+## Quantum chemistry and DFT: approximations and equations — Distinguish plotted paths from irreducible-zone integration [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#band-symmetry-paths
+Coverage: reading
+
+This is an introduction to concepts, conditions and their computational use. Complete character tables, automatic irrep assignment to computed wavefunctions and symmetry-based topology classification are not implemented.
+Assumptions, implementation status and JSON
+Aroyo, M. I.; Kirov, A.; Capillas, C.; Perez-Mato, J. M.; Wondratschek, H. (2006)
+Hinuma, Y.; Pizzi, G.; Kumagai, Y.; Oba, F.; Tanaka, I. (2017)
+Elcoro, L.; Bradlyn, B.; Wang, Z.; Vergniory, M. G.; Cano, J.; Felser, C.; Bernevig, B. A.; Orobengoa, D.; de la Flor, G.; Aroyo, M. I. (2017)
+Fu, L.; Kane, C. L. (2007)
 
 ## Quantum chemistry and DFT: approximations and equations — MP2 perturbation theory [en]
 
@@ -4671,7 +4729,11 @@ Coverage: reading
 Perdew, J. P.; Burke, K.; Ernzerhof, M. (1996). Generalized Gradient Approximation Made Simple. Physical Review Letters.
 Adamo, C.; Barone, V. (1999). Toward reliable density functional methods without adjustable parameters: The PBE0 model. The Journal of Chemical Physics.
 White, S. R.; Martin, R. L. (1999). Ab initio quantum chemistry using the density matrix renormalization group. The Journal of Chemical Physics.
+Aroyo, M. I.; Kirov, A.; Capillas, C.; Perez-Mato, J. M.; Wondratschek, H. (2006). Bilbao Crystallographic Server. II. Representations of crystallographic point groups and space groups. Acta Crystallographica Section A.
+Fu, L.; Kane, C. L. (2007). Topological Insulators with Inversion Symmetry. Physical Review B.
 Sun, J.; Ruzsinszky, A.; Perdew, J. P. (2015). Strongly Constrained and Appropriately Normed Semilocal Density Functional. Physical Review Letters.
+Elcoro, L.; Bradlyn, B.; Wang, Z.; Vergniory, M. G.; Cano, J.; Felser, C.; Bernevig, B. A.; Orobengoa, D.; de la Flor, G.; Aroyo, M. I. (2017). Double crystallographic groups and their representations on the Bilbao Crystallographic Server. Journal of Applied Crystallography.
+Hinuma, Y.; Pizzi, G.; Kumagai, Y.; Oba, F.; Tanaka, I. (2017). Band structure diagram paths based on crystallography. Computational Materials Science.
 
 ## Quantum chemistry and DFT: approximations and equations — Official implementation documentation [en]
 
@@ -4685,6 +4747,9 @@ PySCF: MP2
 PySCF: configuration interaction
 PySCF: coupled cluster
 PySCF: MCSCF
+Bilbao: space-group representations / REPRES
+SeeK-path: conventions and standardized cells
+Quantum ESPRESSO: bands.x symmetry classification
 
 ## Quantum chemistry and DFT: approximations and equations — Official implementation documentation [en]
 
@@ -6595,6 +6660,10 @@ Coverage: reading
 
 White, S. R.; Martin, R. L. (1999). Ab initio quantum chemistry using the density matrix renormalization group. The Journal of Chemical Physics.
 Knowles, P. J.; Handy, N. C. (1984). A new determinant-based full configuration interaction method. Chemical Physics Letters.
+Aroyo, M. I.; Kirov, A.; Capillas, C.; Perez-Mato, J. M.; Wondratschek, H. (2006). Bilbao Crystallographic Server. II. Representations of crystallographic point groups and space groups. Acta Crystallographica Section A.
+Hinuma, Y.; Pizzi, G.; Kumagai, Y.; Oba, F.; Tanaka, I. (2017). Band structure diagram paths based on crystallography. Computational Materials Science.
+Elcoro, L.; Bradlyn, B.; Wang, Z.; Vergniory, M. G.; Cano, J.; Felser, C.; Bernevig, B. A.; Orobengoa, D.; de la Flor, G.; Aroyo, M. I. (2017). Double crystallographic groups and their representations on the Bilbao Crystallographic Server. Journal of Applied Crystallography.
+Fu, L.; Kane, C. L. (2007). Topological Insulators with Inversion Symmetry. Physical Review B.
 
 ## Relativistic hydrodynamics: SRHD, GRHD, and GRMHD [en]
 
@@ -6902,14 +6971,14 @@ The focus is mathematical methods, formulations, applicability and verification.
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/
 Coverage: reading
 
-Bilingual introductions to 17 entries, representative equations and primary references; no dedicated implementations or numerical verification.
+Bilingual introductions to 18 entries, representative equations and primary references; no dedicated implementations or numerical verification.
 
 ## Implementation roadmap — 2026 · Representative runnable quantum-chemistry and DFT checks [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/
 Coverage: reading
 
-Validate hydrogenic atoms, exchange-only LDA for spherical helium, then H₂; mark implemented only after actual result verification.
+Validate hydrogenic atoms, exchange-only LDA for spherical helium, then H₂; mark implemented only after actual result verification. Periodic examples must also check space/little groups, SOC/time-reversal settings and irrep assignments.
 
 ## Implementation roadmap — 2027 · Atlas-based specialist AI and model research [en]
 
@@ -7203,7 +7272,7 @@ extracting symbolic models from deep learning.
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/#planned-quantum-chemistry-and-dft
 Coverage: reading
 
-Introductions, representative formulas and primary references are available for 17 entries. Dedicated code and numerical validation are next. These entries are counted as reading-only, without implementation or verification claims.
+Introductions, representative formulas and primary references are available for 18 entries. Dedicated code and numerical validation are next. These entries are counted as reading-only, without implementation or verification claims.
 Bilingual overview and planned numerical examples
 
 ## Implementation roadmap — Verified Euler and MHD comparisons# [en]
@@ -7634,7 +7703,7 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/site-coverage
 Coverage: reading
 
 Published web edition, counted 2026-11-21. These are counts of catalog entries and documented examples, not a claim that every entry is a verified end-to-end solver.
-46 equation/model entries · 107 methods and building blocks · 164 journal/conference papers · 201 total sources.
+46 equation/model entries · 108 methods and building blocks · 168 journal/conference papers · 205 total sources.
 There are 9 saved-profile equation-gallery cases across 7 equation families, and 49 reading chapters including this inventory.
 
 ## Site coverage and counting rules — Equations and models# [en]
@@ -7729,7 +7798,7 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/site-coverage
 Coverage: reading
 
 Named numerical methods and building blocks with a reading chapter. Aliases count once; RK stages, dimensions, parameter combinations, mesh layouts and theoretical conditions do not add methods. A family and a separately explained algorithm may both appear. Not a count of mutually exclusive end-to-end solvers.
-85 entries have scoped local examples; 22 are reading-only. Reconstruction limiters, preconditioners and coupling operators are building blocks, not complete PDE solvers. Mesh layouts, CFL conditions and theorems are not counted as numerical methods.
+85 entries have scoped local examples; 23 are reading-only. Reconstruction limiters, preconditioners and coupling operators are building blocks, not complete PDE solvers. Mesh layouts, CFL conditions and theorems are not counted as numerical methods.
 
 ## Site coverage and counting rules — Spatial discretization# [en]
 
@@ -7882,7 +7951,7 @@ Coverage: reading
 
 Unique bibliographic publications classified as journal articles or conference papers, deduplicated by DOI or author/title/year. Includes reviews, translations and explicitly labeled accepted papers; not a claim that every full text was inspected. Books, chapters, reports, preprints and documentation are separate.
 Unique cataloged works across all publication types. An original publication and a later translation are separate works; duplicate DOI records are not. NASA case links in prose are not catalog records.
-161 journal-article records, including reviews, translations and explicitly labeled accepted papers.
+165 journal-article records, including reviews, translations and explicitly labeled accepted papers.
 3 conference papers.
 22 books.
 2 book chapters.
@@ -7921,6 +7990,7 @@ Coulomb and Hartree potentials
 LDA, GGA and hybrid functionals
 Pseudopotentials and PAW
 Periodic electronic structure and k-point sampling
+Band symmetry groups and irreducible representations
 MP2 perturbation theory
 Configuration interaction / CI
 Coupled cluster / CCSD(T)
@@ -11660,8 +11730,8 @@ ELECTRONIC STRUCTURE · QUANTUM CHEMISTRY · DFT
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/
 Coverage: reading
 
-Schrödinger、Hartree–Fock、Kohn–Sham DFTから、基底・SCF・電子相関・励起まで。数理的な違いと検証の道筋をたどる。
-17項目の日英解説と24件の一次文献を公開。専用の実行コード・数値検証例はUnder constructionです。以下の式や検証計画を、計算済みの結果とは区別しています。
+Schrödinger、HF・DFTから基底・SCF・電子相関へ。周期系の空間群、小群、既約表現、SOCと時間反転もたどる。
+18項目の日英解説と28件の一次文献を公開。専用の実行コード・数値検証例はUnder constructionです。以下の式や検証計画を、計算済みの結果とは区別しています。
 
 ## 量子化学・DFT：何を近似し、何を解くか — 物理モデル・近似 [ja]
 
@@ -11821,6 +11891,64 @@ k点密度とシフト、対称性、占有・smearing、セル、基底カッ�
 金属の占有とsmearing幅の依存、有限温度の自由エネルギーと零温度エネルギーを区別します。Γ点だけで十分かは系とセルに依存します。
 条件・実装状況・JSON
 Monkhorst, H. J.; Pack, J. D. (1976)
+
+## 量子化学・DFT：何を近似し、何を解くか — バンド計算の対称群・既約表現 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#band-symmetry
+Coverage: reading
+
+結晶構造の空間群は、並進・回転・鏡映・反転や、それらを組み合わせた操作を含みます。ただしバンドの分類には、構造の幾何学的な群ではなく、磁気秩序・スピン軌道相互作用（SOC）・外場等も含めてHamiltonianが実際に保つ対称性を使います。
+Seitz記号 g = {R|τ} は位置を Rr + τ に移す操作です。Tを格子並進の正規部分群とすると、空間群Gの点群はG/Tです。さらにkごとに、Rkが逆格子ベクトルKだけの違いで元へ戻る操作の小群G_kを使います。小余群G_k/Tと結晶全体の点群を同一視しません。
+g=\{R|\boldsymbol\tau\}:\ \mathbf r\mapsto R\mathbf r+\boldsymbol\tau,\qquad P=G/TG_{\mathbf k}=\{\{R|\boldsymbol\tau\}\in G:\ R\mathbf k=\mathbf k+\mathbf K,\ \mathbf K\in L^*\}
+長い式は横にスクロールできます。
+
+## 量子化学・DFT：何を近似し、何を解くか — 小群の既約表現と縮退を読む [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#band-symmetry-irreps
+Coverage: reading
+
+対称操作はkに対応するBloch状態の空間内で表現されます。小群の小表現（small representation）の既約成分により、バンドを分類します。その既約表現の次元は対称性で要求される多重度に関係しますが、見かけの縮退には偶然の一致や時間反転による対もあり、固有値の近さだけでは既約表現は決まりません。
+高対称点から線・面へ移ると、小群が変わり、既約表現の分岐を接続関係（compatibility relations）で追います。単純な例として、SOCのないsymmorphicな鏡映対称線では、鏡映の固有値+1と−1が異なる分類を与えます。同じ線上で異なる既約表現の状態は、その対称性を保つ限り混ざれません。
+
+## 量子化学・DFT：何を近似し、何を解くか — らせん軸・映進面と非共型空間群 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#band-symmetry-nonsymmorphic
+Coverage: reading
+
+らせん軸や映進面は分数並進を伴います。Blochの位相が効くため、特にBrillouin領域の境界で、結晶の点群の通常の指標表だけでは小表現を分類できません。小余群の射影表現・因子系、またはそれと等価な空間群の小表現の扱いが必要になります。
+非共型対称性は縮退やバンドの接続を制約し得ます。単に「非共型なら全てのバンドが全てのkで縮退する」とは言えず、具体的な群、k、スピン、時間反転の条件を指定して判定します。
+\psi_{n\mathbf k}(\mathbf r+\mathbf a)=e^{i\mathbf k\cdot\mathbf a}\psi_{n\mathbf k}(\mathbf r),\qquad \mathbf a\in L
+
+## 量子化学・DFT：何を近似し、何を解くか — SOC・二重群・時間反転とKramers縮退 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#band-symmetry-soc-tr
+Coverage: reading
+
+スピン1/2のSOCを含む場合は、2π回転で符号が変わるスピノルを扱うため、二重群の二価表現を使います。時間反転Θは反ユニタリ操作で、電子に対してΘ² = −1です。時間反転対称性だけなら一般にはkと−kの状態が対になり、同じkに戻る時間反転不変運動量（TRIM、2k = K）でKramers縮退が保証されます。
+通常の非磁性スピン1/2系で反転Pと時間反転Θがともに対称なら、PΘは各kを保ち、その二乗が−1となるため各kで二重縮退が生じます。反転を欠く系へこの結論をそのまま移せません。また、スピンを省いたΘ² = +1の模型には、このKramersの議論を適用しません。
+磁性では時間反転が破れていたり、空間操作と時間反転の組合せだけが残ったりします。磁気空間群と反ユニタリ操作を含む共表現の扱いは、通常の空間群・二重群とは別に確認します。SOCや磁気状態を変えたら対称性の設定も見直します。
+\Theta H(\mathbf k)\Theta^{-1}=H(-\mathbf k),\qquad \Theta^2=-1\mathbf k_{\rm TRIM}=-\mathbf k_{\rm TRIM}+\mathbf K,\qquad \mathbf K\in L^*
+
+## 量子化学・DFT：何を近似し、何を解くか — 高対称線と既約Brillouin領域を区別する [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#band-symmetry-paths
+Coverage: reading
+
+Γ、X、L、K等のラベルと高対称線の経路は、格子・標準セル・逆格子座標の規約とセットです。高対称線はバンドを表示・分類する入口で、全Brillouin領域の積分用メッシュの代わりではありません。真の伝導帯最小・価電子帯最大が経路外にあることもあるので、高対称線の図だけで大域的なバンドギャップを断定しません。
+積分の既約k点と重みには、Hamiltonianに有効な対称性と時間反転を使います。格子・原子座標・原子種、原始/慣用セルへの変換、対称性判定の許容誤差、SOC・磁性・時間反転の有無、経路と重み、コードと版を保存します。構造の丸めで判定群が変わる場合も確認します。
+外部ツールの入口として、Bilbaoは小群と既約表現、SeeK-pathは結晶学的規約に沿う経路を提供します。Quantum ESPRESSOのbands.xには小群の既約表現で波動関数を分類するlsym設定があります。これらの資料へのリンクは、このアトラスでバンド計算や既約表現割当てを実行・検証済みであることは意味しません。
+
+## 量子化学・DFT：何を近似し、何を解くか — 高対称線と既約Brillouin領域を区別する [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#band-symmetry-paths
+Coverage: reading
+
+ここで提供するのは群の概念・条件・計算での使い方の導入です。全空間群の指標表や、実計算の波動関数への既約表現の自動割当て、対称性によるトポロジー判定は未実装です。
+条件・実装状況・JSON
+Aroyo, M. I.; Kirov, A.; Capillas, C.; Perez-Mato, J. M.; Wondratschek, H. (2006)
+Hinuma, Y.; Pizzi, G.; Kumagai, Y.; Oba, F.; Tanaka, I. (2017)
+Elcoro, L.; Bradlyn, B.; Wang, Z.; Vergniory, M. G.; Cano, J.; Felser, C.; Bernevig, B. A.; Orobengoa, D.; de la Flor, G.; Aroyo, M. I. (2017)
+Fu, L.; Kane, C. L. (2007)
 
 ## 量子化学・DFT：何を近似し、何を解くか — MP2摂動論 [ja]
 
@@ -11999,7 +12127,11 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemi
 Coverage: reading
 
 White, S. R.; Martin, R. L. (1999). Ab initio quantum chemistry using the density matrix renormalization group. The Journal of Chemical Physics.
+Aroyo, M. I.; Kirov, A.; Capillas, C.; Perez-Mato, J. M.; Wondratschek, H. (2006). Bilbao Crystallographic Server. II. Representations of crystallographic point groups and space groups. Acta Crystallographica Section A.
+Fu, L.; Kane, C. L. (2007). Topological Insulators with Inversion Symmetry. Physical Review B.
 Sun, J.; Ruzsinszky, A.; Perdew, J. P. (2015). Strongly Constrained and Appropriately Normed Semilocal Density Functional. Physical Review Letters.
+Elcoro, L.; Bradlyn, B.; Wang, Z.; Vergniory, M. G.; Cano, J.; Felser, C.; Bernevig, B. A.; Orobengoa, D.; de la Flor, G.; Aroyo, M. I. (2017). Double crystallographic groups and their representations on the Bilbao Crystallographic Server. Journal of Applied Crystallography.
+Hinuma, Y.; Pizzi, G.; Kumagai, Y.; Oba, F.; Tanaka, I. (2017). Band structure diagram paths based on crystallography. Computational Materials Science.
 
 ## 量子化学・DFT：何を近似し、何を解くか — 実装を調べるための公式資料 [ja]
 
@@ -12013,6 +12145,9 @@ PySCF: MP2
 PySCF: configuration interaction
 PySCF: coupled cluster
 PySCF: MCSCF
+Bilbao: space-group representations / REPRES
+SeeK-path: conventions and standardized cells
+Quantum ESPRESSO: bands.x symmetry classification
 
 ## Euler再構成：PPM・特性変数・WENO-Z・AUSM [ja]
 
@@ -13829,6 +13964,10 @@ Coverage: reading
 
 White, S. R.; Martin, R. L. (1999). Ab initio quantum chemistry using the density matrix renormalization group. The Journal of Chemical Physics.
 Knowles, P. J.; Handy, N. C. (1984). A new determinant-based full configuration interaction method. Chemical Physics Letters.
+Aroyo, M. I.; Kirov, A.; Capillas, C.; Perez-Mato, J. M.; Wondratschek, H. (2006). Bilbao Crystallographic Server. II. Representations of crystallographic point groups and space groups. Acta Crystallographica Section A.
+Hinuma, Y.; Pizzi, G.; Kumagai, Y.; Oba, F.; Tanaka, I. (2017). Band structure diagram paths based on crystallography. Computational Materials Science.
+Elcoro, L.; Bradlyn, B.; Wang, Z.; Vergniory, M. G.; Cano, J.; Felser, C.; Bernevig, B. A.; Orobengoa, D.; de la Flor, G.; Aroyo, M. I. (2017). Double crystallographic groups and their representations on the Bilbao Crystallographic Server. Journal of Applied Crystallography.
+Fu, L.; Kane, C. L. (2007). Topological Insulators with Inversion Symmetry. Physical Review B.
 
 ## 相対論的流体力学：SRHD、GRHD、GRMHD [ja]
 
@@ -14003,14 +14142,14 @@ Coverage: reading
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/
 Coverage: reading
 
-17項目の日英解説、代表式、一次文献。専用実装・数値検証は含まない。
+18項目の日英解説、代表式、一次文献。専用実装・数値検証は含まない。
 
 ## 実装ロードマップ — 2026 · 量子化学・DFTの代表的な実行・検証例 [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/
 Coverage: reading
 
-水素型原子、球対称Heの交換のみLDA、小分子H₂を順に検証。実行結果の確認後にのみ実装済みへ変更する。
+水素型原子、球対称Heの交換のみLDA、小分子H₂を順に検証。実行結果の確認後にのみ実装済みへ変更する。 周期系では空間群・小群・SOC・時間反転の条件と既約表現の割当ても照合する。
 
 ## 実装ロードマップ — 2027 · アトラスを核とする専門AI・モデル研究 [ja]
 
@@ -14172,7 +14311,7 @@ Coverage: reading
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/#planned-quantum-chemistry-and-dft
 Coverage: reading
 
-17項目の導入解説・代表式・一次文献を公開しました。専用コードと数値検証は次段階です。解説のみとして収録台帳へ加え、実装済み・検証済みとは表示していません。
+18項目の導入解説・代表式・一次文献を公開しました。専用コードと数値検証は次段階です。解説のみとして収録台帳へ加え、実装済み・検証済みとは表示していません。
 日英の解説と計算例の計画
 
 ## 実装ロードマップ — 検証付きEuler・MHD比較# [ja]
@@ -14460,7 +14599,7 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/site-coverage
 Coverage: reading
 
 公開Web版、集計日2026-11-21。数えるのはカタログ項目と記載した実験例です。すべての項目が検証済みの完全なソルバーであるという意味ではありません。
-方程式・モデル46項目・計算法と構成要素107項目・学術誌／会議論文164件・全参考資料201件。
+方程式・モデル46項目・計算法と構成要素108項目・学術誌／会議論文168件・全参考資料205件。
 保存済み計算を用いる方程式ギャラリーは7系統・9例、読書章はこの一覧を含め49章です。
 
 ## 収録範囲と数え方 — 方程式とモデル# [ja]
@@ -14556,7 +14695,7 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/site-coverage
 Coverage: reading
 
 名前付きの離散化法、積分法、線形・非線形解法、連成演算子を数えます。パラメータの違いでは増やしません。
-ローカル実験のある項目は85、文献解説のみは22です。再構成の制限関数、前処理、連成演算子は構成要素であり、完全なPDEソルバーではありません。格子配置、CFL条件、定理は計算法の数に含めません。
+ローカル実験のある項目は85、文献解説のみは23です。再構成の制限関数、前処理、連成演算子は構成要素であり、完全なPDEソルバーではありません。格子配置、CFL条件、定理は計算法の数に含めません。
 
 ## 収録範囲と数え方 — 空間離散化# [ja]
 
@@ -14708,7 +14847,7 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/site-coverage
 Coverage: reading
 
 論文数は学術誌論文と会議論文です。総説、翻訳、採録済みであることを明記した論文も含みます。全参考資料は、それに書籍、章、技術資料、文書、個別に識別したプレプリント等を加えた、重複を除く出版物の数です。
-161件：学術誌論文（総説・翻訳・採録済み論文を含む）
+165件：学術誌論文（総説・翻訳・採録済み論文を含む）
 3件：会議論文
 22件：書籍
 2件：書籍の章
@@ -14740,6 +14879,7 @@ Coulomb・Hartreeポテンシャル
 LDA・GGA・hybrid汎関数
 擬ポテンシャル・PAW
 周期電子状態とk点
+バンド計算の対称群・既約表現
 MP2摂動論
 配置間相互作用（CI）
 結合クラスター・CCSD(T)

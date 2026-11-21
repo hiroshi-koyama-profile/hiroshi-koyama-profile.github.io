@@ -190,6 +190,7 @@ block=f'''\n## Method records and executable code
 - [Code, inputs and verification]({ORIGIN}/numerical-methods-atlas/code-and-data/): Public ZIP, file hashes, dependencies and standalone verification. Original implementation code is MIT within its scope; datasets and content retain separate terms.
 - [Code edition manifest]({ORIGIN}{CODE}source-manifest.json): Direct file URLs are the public_base_url plus each listed path. The archive contains no Git history or private manuscripts.
 - [Code edition verification]({ORIGIN}{CODE}verification.json): {verification['passed']} passed, {verification['skipped']} intentionally inapplicable cases skipped in an independent extraction. No Ewald/PME/SPME or DFT implementation is included in this edition.
+- [Quantum chemistry and DFT]({ORIGIN}/numerical-methods-atlas/en/read/quantum-chemistry/): {sum(x['group']['id']=='quantum' for x in METHODS)} bilingual introductory topics, primary references, representative formulas and explicit planned checks; no dedicated numerical solver yet. Canonical text and references: /catalog/atlas-quantum.json. Atlas-based specialist AI is deferred to 2027 or later in /catalog/atlas-work-queue.json.
 '''
 text=guide.read_text()
 text=re.sub(r'\n## Method records and executable code\n.*?(?=\n## |\Z)',lambda _:block,text,flags=re.S) if '\n## Method records and executable code\n' in text else text+block

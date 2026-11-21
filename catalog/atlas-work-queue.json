@@ -11,8 +11,8 @@
         "en": "Quantum chemistry and DFT: map and formulations"
       },
       "scope": {
-        "ja": "17項目の日英解説、代表式、一次文献。専用実装・数値検証は含まない。",
-        "en": "Bilingual introductions to 17 entries, representative equations and primary references; no dedicated implementations or numerical verification."
+        "ja": "18項目の日英解説、代表式、一次文献。専用実装・数値検証は含まない。",
+        "en": "Bilingual introductions to 18 entries, representative equations and primary references; no dedicated implementations or numerical verification."
       }
     },
     {
@@ -24,8 +24,8 @@
         "en": "Representative runnable quantum-chemistry and DFT checks"
       },
       "scope": {
-        "ja": "水素型原子、球対称Heの交換のみLDA、小分子H₂を順に検証。実行結果の確認後にのみ実装済みへ変更する。",
-        "en": "Validate hydrogenic atoms, exchange-only LDA for spherical helium, then H₂; mark implemented only after actual result verification."
+        "ja": "水素型原子、球対称Heの交換のみLDA、小分子H₂を順に検証。実行結果の確認後にのみ実装済みへ変更する。 周期系では空間群・小群・SOC・時間反転の条件と既約表現の割当ても照合する。",
+        "en": "Validate hydrogenic atoms, exchange-only LDA for spherical helium, then H₂; mark implemented only after actual result verification. Periodic examples must also check space/little groups, SOC/time-reversal settings and irrep assignments."
       }
     },
     {

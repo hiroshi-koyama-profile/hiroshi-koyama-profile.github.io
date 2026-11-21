@@ -29,7 +29,8 @@ refs={x['id']:x for x in data['references']}
 assert len(refs)==len(data['references'])
 assert len({x['doi'].lower() for x in refs.values()})==len(refs)
 assert all(x['references'] and all(r in refs for r in x['references']) for x in data['sections'])
-math=json.loads(subprocess.run(['node','scripts/render-atlas-math.cjs'],cwd=ROOT,input=json.dumps(data['sections']),text=True,capture_output=True,check=True).stdout)['rendered']
+math_records=data['sections']+[child for x in data['sections'] for child in x.get('subsections',[])]
+math=json.loads(subprocess.run(['node','scripts/render-atlas-math.cjs'],cwd=ROOT,input=json.dumps(math_records),text=True,capture_output=True,check=True).stdout)['rendered']
 def link(url,label):return '<a href="'+esc(url)+'">'+esc(label)+'</a>'
 def paragraph(text):return '<p>'+esc(text)+'</p>'
 def reference(r):return esc(r['author'].replace(' and ','; '))+f' ({r["year"]}). '+link(r['source'],r['title'])+'. '+esc(r['journal'])+'.'
@@ -37,7 +38,7 @@ bodies={}
 for lang in ['ja','en']:
     ja=lang=='ja';route=f'/numerical-methods-atlas/{lang}/read/quantum-chemistry/'
     body='<p class="eyebrow">ELECTRONIC STRUCTURE · QUANTUM CHEMISTRY · DFT</p><h1>'+esc(data['title'][lang])+'</h1><p class="intro">'+esc(data['description'][lang])+'</p>'
-    body+='<p class="resource-summary">'+('17項目の日英解説と24件の一次文献を公開。専用の実行コード・数値検証例はUnder constructionです。以下の式や検証計画を、計算済みの結果とは区別しています。' if ja else 'Bilingual reading for 17 entries and 24 primary publications. Dedicated runnable code and numerical validation are under construction; the equations and test plans below are not computed results.')+'</p>'
+    body+='<p class="resource-summary">'+(f'{len(methods)}項目の日英解説と{len(refs)}件の一次文献を公開。専用の実行コード・数値検証例はUnder constructionです。以下の式や検証計画を、計算済みの結果とは区別しています。' if ja else f'Bilingual reading for {len(methods)} entries and {len(refs)} primary publications. Dedicated runnable code and numerical validation are under construction; the equations and test plans below are not computed results.')+'</p>'
     body+='<nav class="resource-nav">'+''.join(link(u,t) for u,t in [('/numerical-methods-atlas/?lang='+lang,'アトラス冒頭' if ja else 'Atlas home'),('/numerical-methods-atlas/methods/?lang='+lang+'#quantum-'+lang,'手法の見取り図' if ja else 'Method map'),('/numerical-methods-atlas/equations/?lang='+lang+'#quantum-'+lang,'数式から探す' if ja else 'Browse by equation'),('#verification','実行・検証の計画' if ja else 'Runnable-example plan'),('#sources','一次文献と公式資料' if ja else 'Primary sources and documentation')])+'</nav>'
     body+='<h2 id="how-to-read">'+('最初に分けて考える3つのこと' if ja else 'Three choices to keep separate')+'</h2><div class="quantum-terms">'
     choices=[('物理モデル・近似','Physical model and approximation','HF、KS-DFT、MP2、CI、CC等。どの多電子状態やエネルギーを近似するか。','HF, KS-DFT, MP2, CI or CC: which many-electron states and energies are approximated?'),('表現・離散化','Representation and discretization','基底、格子、擬ポテンシャル、k点。モデルを有限の計算問題にする方法。','Basis, grid, pseudopotential and k sampling: how is the model made finite?'),('方程式の解き方','Equation solver','固有値計算、SCF、混合、DIIS。選んだ離散問題をどこまで解いたか。','Eigensolvers, SCF, mixing and DIIS: how accurately is the chosen discrete problem solved?')]
@@ -53,6 +54,10 @@ for lang in ['ja','en']:
         if math[x['id']]:
             body+='<div class="quantum-math">'+''.join(math[x['id']])+'</div>'
             if any(len(f)>90 for f in x['formula']):body+='<p class="quantum-scroll-note">'+('長い式は横にスクロールできます。' if ja else 'Long equations scroll horizontally.')+'</p>'
+        for child in x.get('subsections',[]):
+            body+='<section class="quantum-subsection"><h3 id="'+child['id']+'">'+esc(child['title'][lang])+'</h3>'+''.join(paragraph(p) for p in child['paragraphs'][lang])
+            if math[child['id']]:body+='<div class="quantum-math">'+''.join(math[child['id']])+'</div>'
+            body+='</section>'
         body+='<p class="quantum-caution">'+esc(x['caution'][lang])+'</p><p>'+link('/numerical-methods-atlas/methods/'+x['id']+'/?lang='+lang,'条件・実装状況・JSON' if ja else 'Assumptions, implementation status and JSON')+'</p><ul>'
         body+=''.join('<li>'+link('#ref-'+r,refs[r]['author'].replace(' and ','; ')+f' ({refs[r]["year"]})')+'</li>' for r in x['references'])+'</ul></section>'
     body+='<section><h2 id="verification">'+('次に付ける実行・検証例' if ja else 'Next runnable validation examples')+'</h2>'+paragraph('以下は計画で、まだ計算結果ではありません。同じ入力と停止条件を公開し、独立した参照、数値誤差、モデルの限界を別々に示します。現行58問題の総数には加えていません。' if ja else 'These are plans, not results, and are not added to the current 58-problem inventory. Publish explicit inputs and stopping rules, with independent references, numerical error and model limitations distinguished.')
@@ -127,7 +132,7 @@ for lang in ['ja','en']:
             text=re.sub(re.escape(start)+r'.*?'+re.escape(end),'',text,flags=re.S)
             if name=='roadmap':
                 heading='量子化学・DFT：解説公開、検証例は次段階' if ja else 'Quantum chemistry and DFT: reading available, numerical validation next'
-                current='<h2 id="planned-quantum-chemistry-and-dft">'+heading+'</h2>'+paragraph('17項目の導入解説・代表式・一次文献を公開しました。専用コードと数値検証は次段階です。解説のみとして収録台帳へ加え、実装済み・検証済みとは表示していません。' if ja else 'Introductions, representative formulas and primary references are available for 17 entries. Dedicated code and numerical validation are next. These entries are counted as reading-only, without implementation or verification claims.')
+                current='<h2 id="planned-quantum-chemistry-and-dft">'+heading+'</h2>'+paragraph(f'{len(methods)}項目の導入解説・代表式・一次文献を公開しました。専用コードと数値検証は次段階です。解説のみとして収録台帳へ加え、実装済み・検証済みとは表示していません。' if ja else f'Introductions, representative formulas and primary references are available for {len(methods)} entries. Dedicated code and numerical validation are next. These entries are counted as reading-only, without implementation or verification claims.')
                 current+='<p>'+link(f'/numerical-methods-atlas/{lang}/read/quantum-chemistry/','日英の解説と計算例の計画' if ja else 'Bilingual overview and planned numerical examples')+'</p>'
                 text=re.sub(r'<h2 id="planned-quantum-chemistry-and-dft"[^>]*>.*?(?=<h2|\Z)',lambda m:current,text,flags=re.S)
                 if doc is not None:
@@ -159,13 +164,11 @@ for lang in ['ja','en']:
     url=ORIGIN+f'/numerical-methods-atlas/{lang}/read/quantum-chemistry/'
     if url not in existing:ET.SubElement(ET.SubElement(xml.getroot(),ns+'url'),ns+'loc').text=url
 ET.register_namespace('',ns[1:-1]);xml.write(path,encoding='utf-8',xml_declaration=True)
-path=ROOT/'llms.txt';text=re.sub(r'^- \[Quantum chemistry and DFT\].*\n?','',path.read_text(),flags=re.M)
-path.write_text(text.rstrip()+'\n- [Quantum chemistry and DFT]('+ORIGIN+'/numerical-methods-atlas/en/read/quantum-chemistry/): 17 bilingual introductory topics, primary references, representative formulas and explicit planned checks; no dedicated numerical solver yet. Canonical text and references: /catalog/atlas-quantum.json. Atlas-based specialist AI is deferred to 2027 or later in /catalog/atlas-work-queue.json.\n')
 messages=ATLAS/'locales/messages.json';translations=load(messages)
 new_copy={
     'planned.quantum.eyebrow':{'ja':'導入解説 / 量子化学・DFT','en':'READING / QUANTUM CHEMISTRY + DFT'},
     'planned.quantum.title':{'ja':'基底関数から電子状態計算へ。','en':'From basis functions to electronic structure.'},
-    'planned.quantum.scope':{'ja':'Schrödinger、HF・DFT、基底・SCF、電子相関・励起まで17項目の導入を日英で公開しています。','en':'Bilingual introductions to 17 entries cover Schrödinger, HF and DFT, bases, SCF, correlation and excitations.'},
+    'planned.quantum.scope':{'ja':f'Schrödinger、HF・DFT、基底・SCF、バンドの対称群、電子相関・励起まで{len(methods)}項目の導入を日英で公開しています。','en':f'Bilingual introductions to {len(methods)} entries cover Schrödinger, HF and DFT, bases, SCF, band symmetry, correlation and excitations.'},
     'planned.quantum.status':{'ja':'導入解説と一次文献を公開。専用の実行コードと数値検証はUnder constructionです。','en':'Introductory reading and primary references are available. Dedicated runnable code and numerical checks are under construction.'},
     'planned.quantum.link':{'ja':'量子化学・DFTの解説を読む','en':'Read the quantum chemistry and DFT overview'},
     'home-map.future':{'ja':'量子化学・DFTの導入解説を公開しました。専用の計算例と検証は今後の作業として区別しています。','en':'Quantum chemistry and DFT now have introductory readings. Dedicated runnable examples and validation remain planned.'},
@@ -183,4 +186,4 @@ text,n=re.subn(r'const plannedQuantumNotice = [^\n]+',lambda m:notice,text);asse
 for filename in ['references.json','locales/messages.json']:
     text=re.sub("'"+re.escape(filename)+r"(?:[?]v=[a-f0-9]+)?'","'"+filename+'?v='+sha(ATLAS/filename)[:12]+"'",text)
 app.write_text(text)
-print('Built bilingual quantum reading: 17 topics, 24 primary publications; counts:',counts['methods'],counts['equations'],counts['papers'])
+print('Built bilingual quantum reading:',len(methods),'topics,',len(refs),'primary publications; counts:',counts['methods'],counts['equations'],counts['papers'])

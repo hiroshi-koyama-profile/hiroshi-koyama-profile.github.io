@@ -1,0 +1,113 @@
+{
+  "id": "band-symmetry",
+  "name": {
+    "ja": "バンド計算の対称群・既約表現",
+    "en": "Band symmetry groups and irreducible representations"
+  },
+  "group": {
+    "id": "quantum",
+    "ja": "電子状態・量子化学",
+    "en": "Electronic structure & quantum chemistry"
+  },
+  "summary": {
+    "ja": "空間群、小群、非共型対称性、SOCの二重群、時間反転とKramers縮退を区別する。",
+    "en": "Distinguish space/little groups, nonsymmorphic symmetry, SOC double groups, time reversal and Kramers pairing."
+  },
+  "status": "reading-only",
+  "origin": "curated-quantum-reading",
+  "reading": {
+    "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#band-symmetry",
+    "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#band-symmetry"
+  },
+  "code_modules": [],
+  "test_files": [],
+  "references": [
+    {
+      "id": "aroyo2006",
+      "label": "Aroyo, M. I.; Kirov, A.; Capillas, C.; Perez-Mato, J. M.; Wondratschek, H. (2006), Bilbao Crystallographic Server. II. Representations of crystallographic point groups and space groups",
+      "url": "https://doi.org/10.1107/S0108767305040286",
+      "kind": "primary-paper",
+      "scope": "Primary source for band-symmetry concepts and conventions. Introductory review; no atlas band-structure calculation or irrep assignment has been numerically reproduced."
+    },
+    {
+      "id": "hinuma2017",
+      "label": "Hinuma, Y.; Pizzi, G.; Kumagai, Y.; Oba, F.; Tanaka, I. (2017), Band structure diagram paths based on crystallography",
+      "url": "https://doi.org/10.1016/j.commatsci.2016.10.015",
+      "kind": "primary-paper",
+      "scope": "Primary source for band-symmetry concepts and conventions. Introductory review; no atlas band-structure calculation or irrep assignment has been numerically reproduced."
+    },
+    {
+      "id": "elcoro2017",
+      "label": "Elcoro, L.; Bradlyn, B.; Wang, Z.; Vergniory, M. G.; Cano, J.; Felser, C.; Bernevig, B. A.; Orobengoa, D.; de la Flor, G.; Aroyo, M. I. (2017), Double crystallographic groups and their representations on the Bilbao Crystallographic Server",
+      "url": "https://doi.org/10.1107/S1600576717011712",
+      "kind": "primary-paper",
+      "scope": "Primary source for band-symmetry concepts and conventions. Introductory review; no atlas band-structure calculation or irrep assignment has been numerically reproduced."
+    },
+    {
+      "id": "fu2007",
+      "label": "Fu, L.; Kane, C. L. (2007), Topological Insulators with Inversion Symmetry",
+      "url": "https://doi.org/10.1103/PhysRevB.76.045302",
+      "kind": "primary-paper",
+      "scope": "Primary source for band-symmetry concepts and conventions. Introductory review; no atlas band-structure calculation or irrep assignment has been numerically reproduced."
+    }
+  ],
+  "assumptions": [
+    "Introductory formulation and comparison, not a verified executable solver.",
+    "Representative electronic-structure formulas use nonrelativistic Born–Oppenheimer theory unless the section explicitly states otherwise."
+  ],
+  "units": "Atomic units in the displayed electronic equations (hbar = m_e = e = 4 pi epsilon_0 = 1); dimensionless conventions are stated where needed.",
+  "boundary_conditions": "Isolated or periodic conditions must be selected for each physical system; no numerical boundary-value example is published here yet.",
+  "next_deliverable": {
+    "ja": "同じ結晶をSOC・磁性・構造許容誤差の条件を明示して分類し、小群・既約表現・縮退を独立した出典と照合する。",
+    "en": "Classify an explicit crystal with stated SOC, magnetism and structural tolerances, and compare little groups, irreps and degeneracies against independent sources."
+  },
+  "limitations": {
+    "ja": "群の概念・代表式・一次文献を公開。専用の実装と実計算の既約表現の割当てはUnder construction。ここで提供するのは群の概念・条件・計算での使い方の導入です。全空間群の指標表や、実計算の波動関数への既約表現の自動割当て、対称性によるトポロジー判定は未実装です。",
+    "en": "Introductory group concepts, representative equations and primary sources are available. No dedicated implementation or verified band-irrep assignment is provided yet. This is an introduction to concepts, conditions and their computational use. Complete character tables, automatic irrep assignment to computed wavefunctions and symmetry-based topology classification are not implemented."
+  },
+  "metadata_review": {
+    "level": "curated introductory formulation with primary publication and official-documentation entry points; full derivation audit and numerical examples pending",
+    "on": "2026-11-21"
+  },
+  "aliases": [
+    "対称群",
+    "群論",
+    "space group",
+    "point group",
+    "little group",
+    "小群",
+    "既約表現",
+    "irreps",
+    "バンド計算",
+    "対称性",
+    "Kramers",
+    "二重群",
+    "double group",
+    "nonsymmorphic",
+    "glide",
+    "screw",
+    "SOC",
+    "TRIM",
+    "Bilbao",
+    "SeeK-path"
+  ],
+  "assumptions_ja": [
+    "定式化と比較の導入解説であり、実行・検証済みソルバーではありません。",
+    "代表式は、各節に別記する場合を除き非相対論・Born–Oppenheimerの電子状態問題を想定します。"
+  ],
+  "units_ja": "表示する電子状態の式は原子単位系（ℏ = m_e = e = 4πε₀ = 1）。無次元量や占有の規約は各節に明記。",
+  "boundary_conditions_ja": "孤立・周期を対象系ごとに選ぶ必要があります。この導入には実行済みの境界値計算例はまだありません。",
+  "caution": {
+    "ja": "ここで提供するのは群の概念・条件・計算での使い方の導入です。全空間群の指標表や、実計算の波動関数への既約表現の自動割当て、対称性によるトポロジー判定は未実装です。",
+    "en": "This is an introduction to concepts, conditions and their computational use. Complete character tables, automatic irrep assignment to computed wavefunctions and symmetry-based topology classification are not implemented."
+  },
+  "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/band-symmetry/",
+  "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/band-symmetry/index.json",
+  "markdown_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/band-symmetry/index.md",
+  "code_urls": [],
+  "test_urls": [],
+  "run_commands": [],
+  "run_from": null,
+  "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
+  "code_edition": null
+}

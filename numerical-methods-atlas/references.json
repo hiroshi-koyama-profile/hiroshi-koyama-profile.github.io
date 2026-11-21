@@ -2359,5 +2359,53 @@
     "source": "https://doi.org/10.1016/0009-2614(84)85513-X",
     "origin": "curated-quantum-reading",
     "note": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+  },
+  {
+    "id": "aroyo2006",
+    "year": 2006,
+    "author": "Aroyo, M. I. and Kirov, A. and Capillas, C. and Perez-Mato, J. M. and Wondratschek, H.",
+    "title": "Bilbao Crystallographic Server. II. Representations of crystallographic point groups and space groups",
+    "journal": "Acta Crystallographica Section A",
+    "doi": "10.1107/S0108767305040286",
+    "type": "article",
+    "source": "https://doi.org/10.1107/S0108767305040286",
+    "origin": "curated-quantum-reading",
+    "note": "Primary source for band-symmetry concepts and conventions. Introductory review; no atlas band-structure calculation or irrep assignment has been numerically reproduced."
+  },
+  {
+    "id": "hinuma2017",
+    "year": 2017,
+    "author": "Hinuma, Y. and Pizzi, G. and Kumagai, Y. and Oba, F. and Tanaka, I.",
+    "title": "Band structure diagram paths based on crystallography",
+    "journal": "Computational Materials Science",
+    "doi": "10.1016/j.commatsci.2016.10.015",
+    "type": "article",
+    "source": "https://doi.org/10.1016/j.commatsci.2016.10.015",
+    "origin": "curated-quantum-reading",
+    "note": "Primary source for band-symmetry concepts and conventions. Introductory review; no atlas band-structure calculation or irrep assignment has been numerically reproduced."
+  },
+  {
+    "id": "elcoro2017",
+    "year": 2017,
+    "author": "Elcoro, L. and Bradlyn, B. and Wang, Z. and Vergniory, M. G. and Cano, J. and Felser, C. and Bernevig, B. A. and Orobengoa, D. and de la Flor, G. and Aroyo, M. I.",
+    "title": "Double crystallographic groups and their representations on the Bilbao Crystallographic Server",
+    "journal": "Journal of Applied Crystallography",
+    "doi": "10.1107/S1600576717011712",
+    "type": "article",
+    "source": "https://doi.org/10.1107/S1600576717011712",
+    "origin": "curated-quantum-reading",
+    "note": "Primary source for band-symmetry concepts and conventions. Introductory review; no atlas band-structure calculation or irrep assignment has been numerically reproduced."
+  },
+  {
+    "id": "fu2007",
+    "year": 2007,
+    "author": "Fu, L. and Kane, C. L.",
+    "title": "Topological Insulators with Inversion Symmetry",
+    "journal": "Physical Review B",
+    "doi": "10.1103/PhysRevB.76.045302",
+    "type": "article",
+    "source": "https://doi.org/10.1103/PhysRevB.76.045302",
+    "origin": "curated-quantum-reading",
+    "note": "Primary source for band-symmetry concepts and conventions. Introductory review; no atlas band-structure calculation or irrep assignment has been numerically reproduced."
   }
 ]

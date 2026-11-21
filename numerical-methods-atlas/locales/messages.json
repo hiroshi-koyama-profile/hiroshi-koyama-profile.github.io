@@ -5121,8 +5121,8 @@
     "en": "From basis functions to electronic structure."
   },
   "planned.quantum.scope": {
-    "ja": "Schrödinger、HF・DFT、基底・SCF、電子相関・励起まで17項目の導入を日英で公開しています。",
-    "en": "Bilingual introductions to 17 entries cover Schrödinger, HF and DFT, bases, SCF, correlation and excitations."
+    "ja": "Schrödinger、HF・DFT、基底・SCF、バンドの対称群、電子相関・励起まで18項目の導入を日英で公開しています。",
+    "en": "Bilingual introductions to 18 entries cover Schrödinger, HF and DFT, bases, SCF, band symmetry, correlation and excitations."
   },
   "planned.quantum.status": {
     "ja": "導入解説と一次文献を公開。専用の実行コードと数値検証はUnder constructionです。",

@@ -12,7 +12,7 @@ const coverage=json('numerical-methods-atlas/coverage.json');
 
 test('each curated quantum topic has bilingual equations, valid source links and explicit limits without solver claims',()=>{
   assert.deepEqual(data.sections.map(x=>x.id).sort(),methods.map(x=>x.id).sort());
-  assert.equal(methods.length,17);
+  assert.equal(methods.length,18);
   const references=new Map(data.references.map(x=>[x.id,x]));
   for(const x of methods){
     assert.equal(x.status,'reading-only');
@@ -95,4 +95,17 @@ test('planned quantum calculations do not inflate test-problem counts and specia
   const translations=json('numerical-methods-atlas/locales/messages.json');
   assert.ok(!translations['home-map.future'].ja.includes('未着手分野'));
   assert.ok(!translations['planned.quantum.status'].en.includes('have not started'));
+});
+
+test('band symmetry distinguishes little groups, SOC and antiunitary assumptions from a verified band calculation',()=>{
+  const s=data.sections.find(x=>x.id==='band-symmetry');
+  assert.ok(s&&s.subsections.length===4);
+  assert.ok(s.formula.some(f=>f.includes('G_{\\mathbf k}')));
+  assert.ok(s.subsections.find(x=>x.id==='band-symmetry-soc-tr').formula.some(f=>f.includes('\\Theta^2=-1')));
+  for(const lang of ['ja','en']){
+    const page=read(`numerical-methods-atlas/${lang}/read/quantum-chemistry/index.html`);
+    for(const child of s.subsections)assert.ok(page.includes('id="'+child.id+'"'));
+    assert.ok(page.includes(lang==='ja'?'高対称線の図だけで大域的なバンドギャップを断定しません':'it alone does not establish the global band gap'));
+  }
+  assert.ok(read('llms.txt').includes(data.sections.length+' bilingual introductory topics'));
 });
