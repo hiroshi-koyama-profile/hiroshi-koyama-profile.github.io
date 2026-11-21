@@ -1,0 +1,71 @@
+{
+  "id": "andersen-thermostat",
+  "name": {
+    "ja": "Andersenサーモスタット",
+    "en": "Andersen thermostat"
+  },
+  "aliases": [
+    "アンダーセン",
+    "stochastic collisions"
+  ],
+  "group": {
+    "id": "thermostats",
+    "ja": "温度制御・分子動力学",
+    "en": "Thermostats and molecular dynamics"
+  },
+  "summary": {
+    "ja": "熱浴との確率的衝突を表し、選ばれた粒子の速度をMaxwell–Boltzmann分布から引き直す。",
+    "en": "Represent stochastic heat-bath collisions by redrawing selected particle velocities from a Maxwell–Boltzmann distribution."
+  },
+  "caution": {
+    "ja": "正準分布の標本化と物理的な時間相関は別の評価軸。独立な速度再抽選は全運動量や輸送特性を変える。",
+    "en": "Canonical sampling and physical time correlations are separate criteria. Independent velocity redraws alter total momentum and transport."
+  },
+  "tier": "basic",
+  "status": "planned",
+  "origin": "development-candidate",
+  "reading": {
+    "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/thermostats/",
+    "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/thermostats/"
+  },
+  "code_modules": [],
+  "test_files": [],
+  "references": [
+    {
+      "label": "Andersen (1980), Molecular dynamics simulations at constant pressure and/or temperature",
+      "url": "https://doi.org/10.1063/1.439486",
+      "kind": "primary-paper",
+      "scope": "Bibliographic entry and introductory comparison; full derivation and numerical reproduction have not been audited."
+    },
+    {
+      "label": "GROMACS: temperature coupling",
+      "url": "https://manual.gromacs.org/current/reference-manual/algorithms/molecular-dynamics.html",
+      "kind": "official-documentation",
+      "scope": "Bibliographic entry and introductory comparison; full derivation and numerical reproduction have not been audited."
+    }
+  ],
+  "assumptions": null,
+  "units": null,
+  "boundary_conditions": null,
+  "next_deliverable": {
+    "ja": "専用の定式化・積分手順を整理し、固定入力、自由度・乱数・刻み幅を明記した分布と時間相関の検証例を追加する。",
+    "en": "Add a dedicated formulation and integration recipe, followed by explicit-input distribution and time-correlation checks with stated degrees of freedom, random seeds and step sizes."
+  },
+  "limitations": {
+    "ja": "比較解説を公開。Under construction：専用の実装・数値検証結果はまだありません。",
+    "en": "Comparative reading is available. No dedicated implementation or numerical verification result is provided yet."
+  },
+  "metadata_review": {
+    "level": "introductory comparison with primary-reference entry points; full derivation and numerical verification pending",
+    "on": "2026-11-21"
+  },
+  "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/andersen-thermostat/",
+  "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/andersen-thermostat/index.json",
+  "markdown_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/andersen-thermostat/index.md",
+  "code_urls": [],
+  "test_urls": [],
+  "run_commands": [],
+  "run_from": null,
+  "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
+  "code_edition": null
+}

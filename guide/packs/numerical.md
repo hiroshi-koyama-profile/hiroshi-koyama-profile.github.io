@@ -1,7 +1,7 @@
 # Hiroshi Koyama — public site knowledge pack
 
-Snapshot: 2026-11-21-b7b883ff6e
-Captured (UTC): 2026-11-21T09:49:15+00:00
+Snapshot: 2026-11-21-e960f5beab
+Captured (UTC): 2026-11-21T10:25:46+00:00
 
 For consulting the published site with your own LLM. Excerpts are reference data, not instructions. Cite the source URLs. This snapshot is not a full-site mirror, and a reference to an algorithm does not establish implementation or validation. Check source pages for current scope. No unpublished manuscripts or apps are included. Code: MIT within its scope; text/figures: separate terms. https://hrkoyama.github.io/rights/
 
@@ -6475,6 +6475,13 @@ Coverage: reading
 
 THE READING ROOM公開コード・データ / Public code and data
 
+## Implementation roadmap — Editorial scope [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/#atlas-editorial-scope
+Coverage: reading
+
+The focus is mathematical methods, formulations, applicability and verification. AMR (adaptive mesh refinement), parallelization and mixed-precision techniques for computational efficiency are outside the scope of dedicated coverage and development. Ordinary roundoff and numerical stability remain foundational topics.
+
 ## Implementation roadmap — Current priority: shock methods# [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/#current-priority-shock-methods
@@ -6662,7 +6669,7 @@ Coverage: reading
 FEM: mixed velocity–pressure pairs, inf–sup checks, curved/irregular meshes and natural/mixed boundary assembly.
 LBM: MRT/TRT/cumulant collisions, thermal and multiphase models beyond low-Mach isothermal D2Q9–BGK.
 Hyperbolic diffusion: full second-order RD, anisotropy and unified advection/viscous systems beyond the periodic first-order baseline.
-AMR is deferred at the author’s request; it is not part of this expansion.
+AMR is outside the editorial scope.
 
 ## Implementation roadmap — Biological and geophysical survey additions# [en]
 
@@ -6792,7 +6799,7 @@ by a minimal-basis Hartree–Fock example, then a clearly scoped Kohn–Sham DFT
 example. Periodic materials, pseudopotentials, spin-dependent extensions and
 post-Hartree–Fock correlation are later branches, rather than promises of the
 first implementation. This plan does not change the current priority of the
-fluid-method work above, and AMR remains deferred.
+fluid-method work above, and AMR is outside the editorial scope.
 The next editorial priority is to connect shared equations to multiple
 verified discretizations, cost/error evidence and explicit failure cases,
 while retaining separate labels for surveys, prototypes and verified models.
@@ -8275,6 +8282,197 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/textbooks/#ho
 Coverage: reading
 
 Historical atlas →Computed gallery →
+
+## Thermostats: temperature control and distributions [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/thermostats/
+Coverage: reading
+
+MOLECULAR DYNAMICS / THERMOSTATS
+
+## Thermostats: temperature control and distributions — Thermostats: temperature control and distributions [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/thermostats/
+Coverage: reading
+
+Compare fluctuations, ergodicity and time correlations as well as mean temperature, from Nosé–Hoover and velocity rescaling to stochastic and momentum-conserving methods.
+Comparative introductions and reference entry points for 12 methods. Dedicated code and measured verification results are under construction.
+
+## Thermostats: temperature control and distributions — Define the controlled temperature [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/thermostats/#temperature
+Coverage: reading
+
+With kinetic energy K and f active degrees of freedom, the kinetic temperature is T = 2K / (f k_B). Count constraints and removed center-of-mass motion consistently, and separate thermal motion from streaming. State whether rotational degrees of freedom are included.
+
+## Thermostats: temperature control and distributions — Equal mean temperature does not imply equal distributions [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/thermostats/#fluctuations
+Coverage: reading
+
+For f independent momentum degrees of freedom with classical quadratic kinetic energy, canonical equilibrium gives 2K/(k_B T₀) a chi-square distribution with f degrees of freedom. Its mean K is f k_B T₀/2 and variance is f(k_B T₀)²/2. Direct rescaling v ← √(T₀/T) v fixes K immediately after application, removing these fluctuations. CSVR instead uses a stochastic factor to generate fluctuations.
+
+## Thermostats: temperature control and distributions — Separate sampling from dynamics [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/thermostats/#dynamics
+Coverage: reading
+
+An invariant distribution does not ensure adequate finite-time exploration. Even correct equilibrium sampling can coexist with friction- or collision-induced changes in velocity autocorrelations and diffusion. Assess integration error, heat-bath coupling time and random-seed dependence.
+
+## Thermostats: temperature control and distributions — Direct velocity rescaling [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/thermostats/#velocity-rescaling
+Coverage: reading
+
+Multiply velocities by a common factor to set the kinetic energy at each application. Simple deterministic rescaling does not reproduce canonical kinetic-energy fluctuations.
+A comparison case for distinguishing temperature control from canonical sampling. Ratio-based rescaling is undefined at T=0; the application interval also matters.
+Other names: ベロシティースケーリング / ベロシティスケーリング / velocity scaling / simple velocity rescaling
+Method status, JSON and Markdown
+GROMACS: temperature coupling
+
+## Thermostats: temperature control and distributions — Berendsen weak-coupling thermostat [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/thermostats/#berendsen-thermostat
+Coverage: reading
+
+Relax the temperature difference over a chosen coupling time using velocity scaling. Fluctuations are suppressed, so this is not a correct canonical sampler.
+Treat as a historical relaxation method; do not assume correct NVT fluctuations or response properties.
+Other names: ベルンゼン / Berendsen thermostat / weak coupling
+Method status, JSON and Markdown
+Berendsen et al. (1984), Molecular dynamics with coupling to an external bath
+GROMACS: temperature coupling
+
+## Thermostats: temperature control and distributions — Andersen thermostat [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/thermostats/#andersen-thermostat
+Coverage: reading
+
+Represent stochastic heat-bath collisions by redrawing selected particle velocities from a Maxwell–Boltzmann distribution.
+Canonical sampling and physical time correlations are separate criteria. Independent velocity redraws alter total momentum and transport.
+Other names: アンダーセン / stochastic collisions
+Method status, JSON and Markdown
+Andersen (1980), Molecular dynamics simulations at constant pressure and/or temperature
+GROMACS: temperature coupling
+
+## Thermostats: temperature control and distributions — Langevin thermostat [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/thermostats/#langevin-thermostat
+Coverage: reading
+
+Add friction and random forces to the equations of motion. The fluctuation–dissipation relation connects friction and noise at the target equilibrium temperature.
+Friction changes dynamical correlations and diffusion. Finite-step sampling errors must be assessed together with the integration scheme.
+Other names: ランジュバン / ランジュヴァン / friction and noise
+Method status, JSON and Markdown
+Bussi & Parrinello (2007), Accurate sampling using Langevin dynamics
+LAMMPS: fix langevin
+
+## Thermostats: temperature control and distributions — Nosé extended-system thermostat [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/thermostats/#nose-thermostat
+Coverage: reading
+
+Introduce additional heat-bath degrees of freedom and time scaling: a starting point for deterministic constant-temperature molecular dynamics.
+Distinguish the original extended Hamiltonian from the real-time Nosé–Hoover equations. An invariant distribution alone does not establish ergodicity.
+Other names: ノセ / 能勢 / Nose thermostat / extended system
+Method status, JSON and Markdown
+Nosé (1984), A unified formulation of the constant temperature molecular dynamics methods
+
+## Thermostats: temperature control and distributions — Nosé–Hoover thermostat [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/thermostats/#nose-hoover
+Coverage: reading
+
+A deterministic method with a dynamically adjusted heat-bath friction variable. The canonical distribution is invariant, but small systems can fail to explore it ergodically.
+Check nonergodicity in systems such as harmonic oscillators and dependence on bath mass or coupling time. Mean temperature is insufficient validation.
+Other names: のせフーバー / ノセフーバー / ノセ・フーバー / 能勢・フーバー / Nose-Hoover
+Method status, JSON and Markdown
+Hoover (1985), Canonical dynamics: Equilibrium phase-space distributions
+GROMACS: temperature coupling
+
+## Thermostats: temperature control and distributions — Nosé–Hoover chains [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/thermostats/#nose-hoover-chains
+Coverage: reading
+
+Couple heat-bath variables to further heat baths in a chain. This extension addresses sampling problems of a single thermostat.
+Chain length, masses and substeps matter. Adding a chain does not universally guarantee ergodicity.
+Other names: ノセ・フーバー鎖 / NHC / Nose-Hoover chain
+Method status, JSON and Markdown
+Martyna, Klein & Tuckerman (1992), Nosé–Hoover chains: The canonical ensemble via continuous dynamics
+LAMMPS: fix nvt / tchain
+
+## Thermostats: temperature control and distributions — Stochastic velocity rescaling (CSVR) [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/thermostats/#stochastic-velocity-rescaling
+Coverage: reading
+
+Use a stochastic global scale factor designed to generate canonical kinetic-energy fluctuations. This is distinct from directly fixing the kinetic energy.
+Assess equilibrium distributions separately from real-time dynamics. State the coupling time, integration step and degree-of-freedom count.
+Other names: Bussi–Donadio–Parrinello / Bussi thermostat / v-rescale / canonical velocity rescaling / 確率的速度スケーリング
+Method status, JSON and Markdown
+Bussi, Donadio & Parrinello (2007), Canonical sampling through velocity rescaling
+Author preprint: arXiv:0803.4060
+
+## Thermostats: temperature control and distributions — Gaussian isokinetic thermostat [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/thermostats/#gaussian-isokinetic
+Coverage: reading
+
+Constrain kinetic energy continuously using a constraint force, connecting nonequilibrium molecular dynamics with constrained mechanics.
+Distinguish fixed kinetic energy from the fluctuating canonical kinetic energy at finite system size. Configurational and full phase-space distributions differ.
+Other names: ガウス等運動エネルギー / isokinetic constraint
+Method status, JSON and Markdown
+Evans & Morriss, Statistical Mechanics of Nonequilibrium Liquids, §5.2
+
+## Thermostats: temperature control and distributions — Generalized Langevin equation (GLE) [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/thermostats/#generalized-langevin
+Coverage: reading
+
+Use memory kernels and colored noise, or auxiliary variables representing them, to tailor the frequency response of a heat bath.
+Separate classical equilibrium fluctuation–dissipation settings from nonequilibrium approximations to nuclear quantum effects; neither is an electronic-structure solver.
+Other names: 一般化ランジュバン / colored-noise thermostat / 有色雑音
+Method status, JSON and Markdown
+Ceriotti, Bussi & Parrinello (2009), Langevin Equation with Colored Noise for Constant-Temperature Molecular Dynamics Simulations
+LAMMPS: fix gle
+
+## Thermostats: temperature control and distributions — DPD pair thermostat [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/thermostats/#dpd-thermostat
+Coverage: reading
+
+Control temperature using dissipative and random pair forces. Standard symmetric pair forces conserve the pair’s total momentum.
+Relevant when momentum transport matters. Verify matched friction/noise, radial weights and finite-step effects.
+Other names: 散逸粒子動力学 / dissipative particle dynamics / pairwise thermostat
+Method status, JSON and Markdown
+Español & Warren (1995), Statistical Mechanics of Dissipative Particle Dynamics
+LAMMPS: pair_style dpd / dpd/tstat
+
+## Thermostats: temperature control and distributions — Lowe–Andersen thermostat [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/thermostats/#lowe-andersen
+Coverage: reading
+
+Stochastically redraw a component of a nearby pair’s relative velocity while preserving the pair’s center-of-mass momentum.
+Distinguish from independent-particle Andersen collisions. Collision frequency and neighbor radius affect transport such as viscosity and diffusion.
+Other names: ロウ・アンダーセン / Lowe Andersen
+Method status, JSON and Markdown
+Lowe (1999), An alternative approach to dissipative particle dynamics
+
+## Thermostats: temperature control and distributions — Planned runnable checks [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/thermostats/#verification
+Coverage: reading
+
+This is a verification plan, not measured results. Start with harmonic oscillators and ideal gases, then a small Lennard–Jones system. Compare mean temperature, kinetic-energy and position distributions, autocorrelations, and coupling-time and step-size dependence. Record multiple independent random streams and correlation-aware uncertainty. Include a small-system example where Nosé–Hoover does not explore adequately.
+
+## Thermostats: temperature control and distributions — Sources and review scope [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/thermostats/#source-scope
+Coverage: reading
+
+An introduction linking original-paper DOIs, author preprints and official GROMACS/LAMMPS documentation. Full equation audits and numerical reproductions have not been performed. The Gaussian isokinetic entry currently links an originator-authored monograph; individual original-paper curation remains open.
+Citation and reuse · Method registry / JSON
 
 ## Time integration and leapfrog [en]
 
@@ -12966,6 +13164,13 @@ Coverage: reading
 解説章公開コード・データ / Public code and data
 英語原文が更新されています。この日本語訳は旧版に対応します。
 
+## 実装ロードマップ — 収録方針 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/#atlas-editorial-scope
+Coverage: reading
+
+数値計算の数理的な手法・定式化・適用条件・検証を中心に扱います。AMR（適応格子細分化）、並列化、mixed precision（混合精度）などの計算効率化・実装上の技巧は、独立した収録・開発の対象から外します。通常の丸め誤差や数値安定性は基礎として扱います。
+
 ## 実装ロードマップ — 現在の最優先：衝撃波手法# [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/#current-priority-shock-methods
@@ -13080,7 +13285,7 @@ Web実装済み：HLLD、Brio–Wu、Alfvén波の格子細分化、弱い磁場
 FEM：速度・圧力混合対、inf–sup、曲線・不規則格子、自然・混合境界組立て。
 LBM：低Mach等温D2Q9–BGKを超えるMRT／TRT／キュムラント、熱的・多相モデル。
 双曲型拡散：周期1次基準を超える完全2次RD、異方性、移流・粘性の統一系。
-著者の要望によりAMRは保留で、今回の拡張に含みません。
+収録方針によりAMRは対象外です。
 
 ## 実装ロードマップ — 生物・地球流体の調査追加# [ja]
 
@@ -13119,7 +13324,7 @@ Coverage: reading
  Kohn–Sham密度汎関数法（DFT）：密度・有効ポテンシャル・交換相関近似を解説。使用するLDAモデルを明示して開始し、GGA以降は個別に検証します。
  SCF反復と混合：減衰、密度・ポテンシャル混合、Pulay／DIIS加速を比較。電子数、固有値問題とSCFの残差、エネルギー変化、未収束を報告します。
  検証例：1電子の参照解、小さな原子・分子を使い、基底・格子の細分化と独立した参照コードで確認。離散化誤差、SCF許容誤差、物理モデルの差を分けます。
-最初の到達点は、検証済みの1電子固有値ソルバー、最小基底のHartree–Fock例、適用範囲を明示したKohn–Sham DFT例の順です。周期物質、擬ポテンシャル、スピン依存の拡張、post-Hartree–Fock相関は後続の独立課題とし、初期実装の完成範囲には含めません。この予定の追加で上記の流体計算法の優先順位は変えず、AMRも引き続き保留します。
+最初の到達点は、検証済みの1電子固有値ソルバー、最小基底のHartree–Fock例、適用範囲を明示したKohn–Sham DFT例の順です。周期物質、擬ポテンシャル、スピン依存の拡張、post-Hartree–Fock相関は後続の独立課題とし、初期実装の完成範囲には含めません。この予定の追加で上記の流体計算法の優先順位は変えず、AMRは収録対象外です。
 今後の編集は、同じ方程式を複数の検証済み離散化、コスト・誤差、明示した失敗へ結び付けることを優先し、調査・試作・検証済みモデルの表示を維持します。
 
 ## 実装ロードマップ — 検証付きEuler・MHD比較# [ja]
@@ -14343,6 +14548,197 @@ Hockney, R. W.; Eastwood, J. W. Computer Simulation Using Particles. McGraw-Hill
 Amazon Japan ↗
 出版社・書誌情報 ↗
 hockney1981book
+
+## サーモスタット：温度制御と分布の比較 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/thermostats/
+Coverage: reading
+
+MOLECULAR DYNAMICS / THERMOSTATS
+
+## サーモスタット：温度制御と分布の比較 — サーモスタット：温度制御と分布の比較 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/thermostats/
+Coverage: reading
+
+温度の平均だけでなく、揺らぎ・エルゴード性・時間相関を比べる。Nosé–Hoover、速度スケーリングから確率的・運動量保存型の手法まで。
+12項目の比較解説と原文献への入口を公開。専用コード・実測の検証結果は準備中です。
+
+## サーモスタット：温度制御と分布の比較 — 何の温度を制御するか [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/thermostats/#temperature
+Coverage: reading
+
+運動エネルギーをK、有効自由度数をfとすると、運動温度は T = 2K / (f k_B)。拘束や重心運動の除去に応じてfを数え、流れがある場合は熱運動と平均流を区別する。回転自由度を含むかも明記する。
+
+## サーモスタット：温度制御と分布の比較 — 同じ平均温度でも分布は違う [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/thermostats/#fluctuations
+Coverage: reading
+
+古典的な二次形式の運動エネルギーを持つf個の独立な運動量自由度では、正準平衡で 2K/(k_B T₀) は自由度fのχ²分布。平均Kはf k_B T₀/2、分散はf(k_B T₀)²/2となる。単純な速度スケーリング v ← √(T₀/T) v は適用直後のKを固定し、この揺らぎを再現しない。CSVRは確率的な係数で揺らぎを生成する別の手法である。
+
+## サーモスタット：温度制御と分布の比較 — 分布の標本化と運動の再現を分ける [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/thermostats/#dynamics
+Coverage: reading
+
+正しい不変分布を持っていても、有限時間の軌道が十分に探索するとは限らない。また平衡分布が正しくても、摩擦や衝突で速度自己相関や拡散は変わり得る。有限時間刻みの誤差、熱浴の結合時間、乱数依存性まで含めて評価する。
+
+## サーモスタット：温度制御と分布の比較 — 単純な速度スケーリング [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/thermostats/#velocity-rescaling
+Coverage: reading
+
+全粒子の速度に共通係数を掛け、適用時の運動エネルギーを目標値に合わせる。単純な決定論的操作では正準分布の運動エネルギー揺らぎを再現しない。
+温度への到達と正準分布の標本化を区別するための比較対象。T=0では比による再スケーリングを定義できず、適用間隔も結果に影響する。
+別名・表記：ベロシティースケーリング / ベロシティスケーリング / velocity scaling / simple velocity rescaling
+項目の状況・JSON・Markdown
+GROMACS: temperature coupling
+
+## サーモスタット：温度制御と分布の比較 — Berendsen弱結合サーモスタット [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/thermostats/#berendsen-thermostat
+Coverage: reading
+
+目標温度との差を緩和時間で減衰させる速度スケーリング。温度の揺らぎが抑制され、正しい正準分布の生成器にはならない。
+歴史的な温度緩和法として扱い、NVTでの揺らぎ・応答の測定にはそのまま使わない。
+別名・表記：ベルンゼン / Berendsen thermostat / weak coupling
+項目の状況・JSON・Markdown
+Berendsen et al. (1984), Molecular dynamics with coupling to an external bath
+GROMACS: temperature coupling
+
+## サーモスタット：温度制御と分布の比較 — Andersenサーモスタット [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/thermostats/#andersen-thermostat
+Coverage: reading
+
+熱浴との確率的衝突を表し、選ばれた粒子の速度をMaxwell–Boltzmann分布から引き直す。
+正準分布の標本化と物理的な時間相関は別の評価軸。独立な速度再抽選は全運動量や輸送特性を変える。
+別名・表記：アンダーセン / stochastic collisions
+項目の状況・JSON・Markdown
+Andersen (1980), Molecular dynamics simulations at constant pressure and/or temperature
+GROMACS: temperature coupling
+
+## サーモスタット：温度制御と分布の比較 — Langevinサーモスタット [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/thermostats/#langevin-thermostat
+Coverage: reading
+
+摩擦と確率力を運動方程式に加える。平衡の温度を指定するには摩擦と雑音を揺動散逸関係で結ぶ。
+摩擦は実時間の相関・拡散に影響する。有限刻みでの標本化誤差は積分法と刻み幅も含めて調べる。
+別名・表記：ランジュバン / ランジュヴァン / friction and noise
+項目の状況・JSON・Markdown
+Bussi & Parrinello (2007), Accurate sampling using Langevin dynamics
+LAMMPS: fix langevin
+
+## サーモスタット：温度制御と分布の比較 — Noséの拡張系 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/thermostats/#nose-thermostat
+Coverage: reading
+
+熱浴を表す追加自由度と時間のスケーリングを導入する、決定論的な定温度分子動力学の出発点。
+元の拡張Hamiltonianと実時間でのNosé–Hoover方程式を区別する。分布の不変性だけでは軌道のエルゴード性は保証されない。
+別名・表記：ノセ / 能勢 / Nose thermostat / extended system
+項目の状況・JSON・Markdown
+Nosé (1984), A unified formulation of the constant temperature molecular dynamics methods
+
+## サーモスタット：温度制御と分布の比較 — Nosé–Hooverサーモスタット [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/thermostats/#nose-hoover
+Coverage: reading
+
+熱浴変数により摩擦係数を動的に調整する決定論的手法。正準分布を不変分布に持つが、小自由度系では十分に探索できない場合がある。
+調和振動子などでの非エルゴード性、熱浴質量・結合時間の依存性を確認する。温度の平均値だけを合格条件にしない。
+別名・表記：のせフーバー / ノセフーバー / ノセ・フーバー / 能勢・フーバー / Nose-Hoover
+項目の状況・JSON・Markdown
+Hoover (1985), Canonical dynamics: Equilibrium phase-space distributions
+GROMACS: temperature coupling
+
+## サーモスタット：温度制御と分布の比較 — Nosé–Hoover chain [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/thermostats/#nose-hoover-chains
+Coverage: reading
+
+熱浴変数にも別の熱浴を結合し、鎖状の拡張系を作る。単一熱浴での標本化の問題を改善するための発展形。
+鎖の長さ、質量、サブステップに依存する。鎖を加えるだけで任意の系のエルゴード性を保証するものではない。
+別名・表記：ノセ・フーバー鎖 / NHC / Nose-Hoover chain
+項目の状況・JSON・Markdown
+Martyna, Klein & Tuckerman (1992), Nosé–Hoover chains: The canonical ensemble via continuous dynamics
+LAMMPS: fix nvt / tchain
+
+## サーモスタット：温度制御と分布の比較 — 確率的速度リスケーリング（CSVR） [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/thermostats/#stochastic-velocity-rescaling
+Coverage: reading
+
+全体の速度に確率的な係数を掛け、正準分布の運動エネルギー揺らぎを生成するよう設計する。単純な速度固定とは別手法。
+分布の正しさと実時間の運動の再現を別々に調べる。結合時間・積分刻み・自由度数を明記する。
+別名・表記：Bussi–Donadio–Parrinello / Bussi thermostat / v-rescale / canonical velocity rescaling / 確率的速度スケーリング
+項目の状況・JSON・Markdown
+Bussi, Donadio & Parrinello (2007), Canonical sampling through velocity rescaling
+Author preprint: arXiv:0803.4060
+
+## サーモスタット：温度制御と分布の比較 — Gaussian isokineticサーモスタット [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/thermostats/#gaussian-isokinetic
+Coverage: reading
+
+拘束力により運動エネルギーを連続時間で一定に保つ。非平衡分子動力学と拘束力学を結ぶ手法。
+有限自由度で運動エネルギーが揺らぐ正準分布とは区別する。配置分布と位相空間全体の分布を混同しない。
+別名・表記：ガウス等運動エネルギー / isokinetic constraint
+項目の状況・JSON・Markdown
+Evans & Morriss, Statistical Mechanics of Nonequilibrium Liquids, §5.2
+
+## サーモスタット：温度制御と分布の比較 — 一般化Langevin・GLE [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/thermostats/#generalized-langevin
+Coverage: reading
+
+記憶核と有色雑音、またはそれを表す補助変数を使い、周波数ごとの熱浴応答を設計する。
+古典平衡用の揺動散逸関係と、核の量子効果を近似する非平衡設定を分ける。量子化学ソルバーそのものではない。
+別名・表記：一般化ランジュバン / colored-noise thermostat / 有色雑音
+項目の状況・JSON・Markdown
+Ceriotti, Bussi & Parrinello (2009), Langevin Equation with Colored Noise for Constant-Temperature Molecular Dynamics Simulations
+LAMMPS: fix gle
+
+## サーモスタット：温度制御と分布の比較 — DPDサーモスタット [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/thermostats/#dpd-thermostat
+Coverage: reading
+
+粒子対に散逸力と確率力を加えて温度を制御する。標準的な対称な対力は対の全運動量を保存する。
+流体的な運動量輸送を扱う場合の候補。摩擦・雑音の対応、距離重み、有限刻みの影響を検証する。
+別名・表記：散逸粒子動力学 / dissipative particle dynamics / pairwise thermostat
+項目の状況・JSON・Markdown
+Español & Warren (1995), Statistical Mechanics of Dissipative Particle Dynamics
+LAMMPS: pair_style dpd / dpd/tstat
+
+## サーモスタット：温度制御と分布の比較 — Lowe–Andersenサーモスタット [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/thermostats/#lowe-andersen
+Coverage: reading
+
+近傍粒子対の相対速度の一成分を確率的に再抽選し、対の重心運動量を保つ衝突型の温度制御。
+独立な粒子速度を引き直すAndersen法と区別する。衝突頻度や近傍半径は粘性・拡散などの輸送に影響する。
+別名・表記：ロウ・アンダーセン / Lowe Andersen
+項目の状況・JSON・Markdown
+Lowe (1999), An alternative approach to dissipative particle dynamics
+
+## サーモスタット：温度制御と分布の比較 — 次に付ける実行・検証例 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/thermostats/#verification
+Coverage: reading
+
+以下は検証の計画であり、測定結果ではない。まず調和振動子・理想気体、次に小さなLennard–Jones系で、平均温度、Kの分布、位置分布、自己相関、結合時間と刻み幅への依存を比較する。複数の独立な乱数系列と相関を考慮した不確かさを記録する。Nosé–Hooverには小自由度系で探索が不十分になる例も付ける。
+
+## サーモスタット：温度制御と分布の比較 — 出典と確認範囲 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/thermostats/#source-scope
+Coverage: reading
+
+原論文のDOIと著者公開版、GROMACS・LAMMPS公式資料への案内を付けた導入です。原論文の全式の監査や数値再現は未実施です。Gaussian isokineticは提案者による教科書への入口を付けており、個別原論文の整理は継続中です。
+引用と利用条件 · Method registry / JSON
 
 ## 時間積分とleapfrog法 [ja]
 

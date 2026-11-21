@@ -61,3 +61,59 @@ test('discovery routes expose the catalog and downloads without private GitHub d
   assert.ok(read('llms.txt').includes('/numerical-methods-atlas/methods/'));
   for(const name of ['index.html','content.en.json','content.ja.json','content.json'])assert.doesNotMatch(read('numerical-methods-atlas/'+name),/https:\/\/github\.com\/koyamarium\/(?:numerical-methods-atlas|the-art-of-numerical-algorithms)/);
 });
+
+test('thermostat overview is bilingual and distinguishes comparisons from executable examples',()=>{
+  const methods=data.methods.filter(x=>x.group.id==='thermostats');
+  assert.equal(methods.length,12);
+  assert.equal(methods.filter(x=>x.tier==='basic').length,8);
+  assert.ok(methods.every(x=>x.status==='planned'&&!x.code_modules.length&&x.references.length));
+  for(const id of ['velocity-rescaling','stochastic-velocity-rescaling','nose-hoover'])assert.ok(methods.some(x=>x.id===id));
+  for(const lang of ['ja','en']){
+    const route=`/numerical-methods-atlas/${lang}/read/thermostats/`;
+    const html=read(route.slice(1)+'index.html');
+    assert.ok(html.includes(`hreflang="${lang==='ja'?'en':'ja'}"`));
+    assert.ok(read(`numerical-methods-atlas/${lang}/read/index.html`).includes(route));
+    assert.ok(JSON.parse(read('guide/index.json')).pages.some(x=>x.url==='https://hrkoyama.github.io'+route));
+  }
+  const html=read('numerical-methods-atlas/methods/nose-hoover/index.html');
+  assert.ok(html.includes('のせフーバー')&&html.includes('比較解説あり・実装予定'));
+  assert.ok(html.includes('/ja/read/thermostats/'));
+});
+
+test('the atlas purpose statement is available before and after client rendering',async()=>{
+  const copy=JSON.parse(read('catalog/atlas-purpose.json'));
+  const {configureLocale}=await import('../numerical-methods-atlas/i18n.js');
+  const {atlasPurpose}=await import('../numerical-methods-atlas/atlas-purpose.js');
+  const fallback=read('numerical-methods-atlas/index.html');
+  const module=read('numerical-methods-atlas/home-overview.js');
+  assert.ok(module.indexOf('${atlasPurpose()}')<module.indexOf('${homeSearchPage()}'));
+  for(const lang of ['ja','en']){
+    configureLocale({},lang);
+    assert.ok(fallback.includes(copy[lang].title));
+    assert.ok(atlasPurpose().includes(copy[lang].title));
+  }
+});
+
+test('atlas-local search includes the map and new method names with safe destinations',async()=>{
+  const {searchChapters}=await import('../numerical-methods-atlas/home-search.js');
+  const index=JSON.parse(read('numerical-methods-atlas/home-search-index.json'));
+  assert.equal(new Set(index.entries.map(x=>x.id)).size,index.entries.length);
+  assert.equal(searchChapters(index,'手法の見取り図','ja')[0]?.url,'/numerical-methods-atlas/methods/?lang=ja');
+  for(const [query,id] of [['のせフーバー','nose-hoover'],['ベロシティースケーリング','velocity-rescaling'],['CSVR','stochastic-velocity-rescaling']])assert.ok(searchChapters(index,query,'ja').some(x=>x.url===`/numerical-methods-atlas/methods/${id}/?lang=ja`));
+  const entry={id:'x',title:{ja:'needle',en:'needle'},headings:{ja:[],en:[]},keywords:[],routes:{ja:'https://evil.example/'}};
+  assert.equal(searchChapters({entries:[entry]},'needle','ja')[0].url,null);
+});
+
+test('efficiency techniques are excluded consistently from the map and roadmap',()=>{
+  const excluded=data.editorial_policy.excluded_topics.map(x=>x.id);
+  assert.deepEqual(excluded,['amr','parallelization','mixed-precision']);
+  assert.ok(data.methods.every(x=>!excluded.includes(x.id)));
+  assert.ok(!existsSync(new URL('numerical-methods-atlas/methods/amr/index.html',root)));
+  for(const lang of ['ja','en']){
+    const statement=data.editorial_policy.statement[lang];
+    assert.ok(read('numerical-methods-atlas/index.html').includes(statement));
+    assert.ok(read('numerical-methods-atlas/methods/index.html').includes(statement));
+    assert.ok(read(`numerical-methods-atlas/${lang}/read/roadmap/index.html`).includes(statement));
+  }
+  assert.doesNotMatch(read('numerical-methods-atlas/en/read/roadmap/index.html'),/AMR remains deferred/);
+});

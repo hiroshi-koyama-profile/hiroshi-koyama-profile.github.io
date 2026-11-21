@@ -44,6 +44,10 @@ Google Search Consoleの対象プロパティは `https://hrkoyama.github.io/`�
 
 手法情報の正本は `catalog/atlas-methods.json`。`scripts/build-atlas-resources.py` が手法一覧と個別のHTML・JSON・Markdown、取得案内を生成する。予定項目にコードや検証済み状態を付けない。関連コードの割当てが章単位か手法単位かを区別し、単位・境界等の未整理はnullと確認範囲で明示する。英語しかない解説は英語のURLへ案内する。
 
+収録方針は同じ台帳の `editorial_policy` を正本とする。数理的な手法・定式化・適用条件・検証を中心に扱い、AMR・並列化・mixed precisionなどの計算効率化・実装上の技巧は独立した収録・開発の対象から外す。通常の丸め誤差と数値安定性は基礎に含む。除外したAMRを予定項目として復活させない。
+
+アトラス冒頭の日英の目的説明は `catalog/atlas-purpose.json`。`build-atlas-purpose.py` が取り込み後の動的ホームと静的本文に適用し、収録方針をロードマップにも反映する。`build-atlas-search.py` は既存章に公開手法台帳を加え、アトラス内の検索も更新する。サーモスタット比較は台帳の `thermostats` 群から `build-thermostat-reading.py` で生成する。比較解説を公開済みでも、専用コードと検証結果が揃うまでは `planned` のままにする。これらはすべて `refresh-site.py` に含まれ、教材の再取り込み後にも再生成できる。
+
 公開コードは `code/numerical-methods-atlas/<edition>/` にあり、編集可能なPython、検査、必要データ、依存関係、ライセンス、ハッシュ目録、ZIP、独立実行の検証記録を含む。公開済みの版のファイルは上書きしない。変更時は新しい版を用意し、目録・ZIP・独立実行結果を揃えてから台帳の `code_edition` と `code_base` を更新する。旧版のURLと配布物を保持する。Git履歴や未公開原稿を配布物へ含めない。
 
 新しい版のフォルダを前版から用意してコード・入力を編集し、Gitに追加する前に `python3 scripts/package-code-edition.py --edition YYYY-MM-DD` で目録とZIPを作る。必要な依存関係を一時環境に入れ、そのPythonで `scripts/verify-code-edition.py --edition YYYY-MM-DD` を実行する。これはZIPを別の一時フォルダに展開して検査し、実際の合否・環境を `verification.json` に保存する。検証スクリプトは依存関係の自動インストールや外部へのデータ送信を行わない。すでにGitに登録されたZIPは包装スクリプトで上書きできない。

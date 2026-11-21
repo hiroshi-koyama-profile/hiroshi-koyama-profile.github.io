@@ -12,6 +12,13 @@ ATLAS=ROOT/'numerical-methods-atlas'
 ORIGIN='https://hrkoyama.github.io'
 DATA=json.loads((ROOT/'catalog/atlas-methods.json').read_text())
 METHODS=DATA['methods']
+# Remove obsolete generated records when the editorial catalog excludes a topic.
+active_ids={x['id'] for x in METHODS}
+for directory in (ATLAS/'methods').glob('*'):
+    if directory.is_dir() and directory.name not in active_ids:
+        assert {p.name for p in directory.iterdir()} <= {'index.html','index.json','index.md'},directory
+        for p in directory.iterdir():p.unlink()
+        directory.rmdir()
 existing_count=sum(x['origin']=='existing-coverage-catalog' for x in METHODS)
 example_count=sum(x['status']=='educational-example' for x in METHODS)
 reading_count=sum(x['status']=='reading-only' for x in METHODS)
@@ -32,6 +39,10 @@ for name,digest in manifest['files'].items():
     assert hashlib.sha256((release/name).read_bytes()).hexdigest()==digest,name
 esc=html.escape
 STATUS={'educational-example':{'ja':'教育用例・関連コードあり','en':'Educational example / related code'},'reading-only':{'ja':'解説あり・専用実装なし','en':'Reading only / no dedicated implementation'},'planned':{'ja':'Under construction / 収録予定','en':'Under construction / planned'}}
+def status(x,lang):
+    if x['status']=='planned' and x['reading']:
+        return '比較解説あり・実装予定' if lang=='ja' else 'Comparative reading / implementation planned'
+    return STATUS[x['status']][lang]
 def link(url,label):return '<a href="'+esc(url)+'">'+esc(label)+'</a>'
 def page(title_ja,title_en,url,sections,structured=None):
     metadata='' if structured is None else '<script type="application/ld+json">'+json.dumps(structured,ensure_ascii=False).replace('<','\\u003c')+'</script>'
@@ -62,6 +73,7 @@ for lang in ['ja','en']:
     body='<section data-site-language="'+lang+'" lang="'+lang+'"><p class="eyebrow">NUMERICAL METHODS / OPEN RESEARCH RESOURCES</p><h1>'+('手法の見取り図' if ja else 'A map of numerical methods')+'</h1><p class="intro resource-lead">'+intro+'</p>'+nav(lang)
     body+='<p class="resource-summary">'+(f'既存{existing_count}項目のうち教育用例{example_count}・解説のみ{reading_count}、拡張候補{planned_count}。教育用例は完成した汎用ソルバーの数ではありません。公開コード配布版の既存検査は{verification["passed"]}件通過・{verification["skipped"]}件対象外です。' if ja else f'{existing_count} existing entries: {example_count} with scoped educational examples and {reading_count} reading-only. Another {planned_count} are development candidates. These are not counts of complete production solvers. The code edition passes {verification["passed"]} existing checks, with {verification["skipped"]} inapplicable cases skipped.')+'</p>'
     body+='<p>'+('幅広い数値計算を結ぶ拡張中の地図です。未収録の分野もあり、すべての手法や原論文を網羅するという意味ではありません。' if ja else 'An expanding cross-field map, with gaps still to fill; not a claim to exhaust every method or original paper.')+'</p>'
+    body+='<p><strong>'+esc(DATA['editorial_policy']['title'][lang])+':</strong> '+esc(DATA['editorial_policy']['statement'][lang])+'</p>'
     body+='<p>'+link('index.json','手法台帳 / JSON' if ja else 'Method registry / JSON')+' · '+link('/catalog/atlas-methods.json','正本データ' if ja else 'Catalog source')+' · '+link('/using/','使い方と引用' if ja else 'Use and citation')+'</p>'
     body+='<nav class="resource-nav" aria-label="Method groups">'+''.join(link('#'+g['id']+'-'+lang,g[lang]) for g in DATA['groups'])+'</nav>'
     for group in DATA['groups']:
@@ -69,7 +81,7 @@ for lang in ['ja','en']:
         if not rows:continue
         body+='<section id="'+group['id']+'-'+lang+'"><h2>'+esc(group[lang])+'</h2><ul class="method-list">'
         for x in rows:
-            body+='<li>'+link(x['id']+'/',x['name'][lang])+'<br><span class="resource-status">'+STATUS[x['status']][lang]+'</span><p>'+esc(x['summary'][lang])+'</p></li>'
+            body+='<li>'+link(x['id']+'/',x['name'][lang])+'<br><span class="resource-status">'+status(x,lang)+'</span><p>'+esc(x['summary'][lang])+'</p></li>'
         body+='</ul></section>'
     body+='</section>';sections.append(body)
 write('/numerical-methods-atlas/methods/index.html',page('手法の見取り図','A map of numerical methods','/numerical-methods-atlas/methods/',''.join(sections)))
@@ -80,13 +92,15 @@ for x in METHODS:
     url='/numerical-methods-atlas/methods/'+x['id']+'/'
     sections=[]
     for lang in ['ja','en']:
-        ja=lang=='ja';body='<section data-site-language="'+lang+'" lang="'+lang+'"><p class="eyebrow">'+esc(x['group'][lang])+'</p><h1>'+esc(x['name'][lang])+'</h1><p class="resource-status">'+STATUS[x['status']][lang]+'</p><p class="intro">'+esc(x['summary'][lang])+'</p>'+nav(lang)
+        ja=lang=='ja';body='<section data-site-language="'+lang+'" lang="'+lang+'"><p class="eyebrow">'+esc(x['group'][lang])+'</p><h1>'+esc(x['name'][lang])+'</h1><p class="resource-status">'+status(x,lang)+'</p><p class="intro">'+esc(x['summary'][lang])+'</p>'+nav(lang)
+        if x.get('aliases'):body+='<p>'+('別名・表記：' if ja else 'Other names: ')+esc(' / '.join(x['aliases']))+'</p>'
         if x['status']=='planned':
             body+='<h2>'+('次の成果物' if ja else 'Next deliverable')+'</h2><p>'+esc(x['next_deliverable'][lang])+'</p>'
-        else:
+        if x['reading']:
             reading=x['reading'].get(lang) or x['reading']['en']
             label=('解説章を読む' if lang in x['reading'] else '英語の解説を読む（日本語版未公開）') if ja else 'Read the chapter'
             body+='<h2>'+('解説と位置付け' if ja else 'Read the formulation')+'</h2><p>'+link(reading,label)+'</p>'
+        if x.get('caution'):body+='<h2>'+('比較するときの注意' if ja else 'Comparison notes')+'</h2><p>'+esc(x['caution'][lang])+'</p>'
         if x.get('assumptions'):
             body+='<h2>'+('この例の前提' if ja else 'Assumptions for this example')+'</h2><ul>'+''.join('<li>'+esc(a)+'</li>' for a in (x.get('assumptions_ja',x['assumptions']) if ja else x['assumptions']))+'</ul>'
         if x.get('boundary_conditions'):
@@ -113,6 +127,8 @@ for x in METHODS:
     record=public_record(x)
     write(url+'index.json',json.dumps(record,ensure_ascii=False,indent=2)+'\n')
     md='# '+x['name']['en']+' / '+x['name']['ja']+'\n\nStatus: '+x['status']+'\n\n'+x['summary']['en']+'\n\n'+x['summary']['ja']+'\n\n'+x['limitations']['en']+'\n\n'
+    if x.get('aliases'):md+='Other names: '+', '.join(x['aliases'])+'\n\n'
+    if x.get('caution'):md+='Comparison notes: '+x['caution']['en']+'\n\n'+x['caution']['ja']+'\n\n'
     md+='\n'.join('- Reading ('+lang+'): '+ORIGIN+u for lang,u in x['reading'].items())+'\n\n'
     md+='\n'.join('- Code: '+ORIGIN+CODE+'numart/'+name+'.py' for name in x['code_modules'])+'\n\n'
     md+='\n'.join('- Reference: '+r['url']+' — '+r['scope'] for r in x['references'])+'\n\n'
@@ -158,6 +174,10 @@ for p in ATLAS.glob('content*.json'):
     json.loads(text)
     p.write_text(text)
 xml=ET.parse(ATLAS/'sitemap.xml');root=xml.getroot();existing={n.text for n in root.findall('.//{*}loc')};ns='{http://www.sitemaps.org/schemas/sitemap/0.9}'
+for node in list(root):
+    loc=node.find(ns+'loc')
+    match=re.fullmatch(ORIGIN+r'/numerical-methods-atlas/methods/([^/]+)/',loc.text or '') if loc is not None else None
+    if match and match.group(1) not in active_ids:root.remove(node)
 for path in ['/numerical-methods-atlas/methods/','/numerical-methods-atlas/code-and-data/']+['/numerical-methods-atlas/methods/'+x['id']+'/' for x in METHODS]:
     if ORIGIN+path not in existing:ET.SubElement(ET.SubElement(root,ns+'url'),ns+'loc').text=ORIGIN+path
 ET.register_namespace('',ns[1:-1]);xml.write(ATLAS/'sitemap.xml',encoding='utf-8',xml_declaration=True)
@@ -166,6 +186,7 @@ block=f'''\n## Method records and executable code
 
 - [Method map]({ORIGIN}/numerical-methods-atlas/methods/): {existing_count} existing method/building-block entries and {planned_count} separately labeled development candidates. Planned entries have no dedicated solver or verification result.
 - [Method registry / JSON]({ORIGIN}/numerical-methods-atlas/methods/index.json): Names, status, reading routes, chapter-related Python modules, tests, reference links and explicit metadata gaps. Each entry has a stable HTML URL, index.json and index.md. Null assumptions or boundaries mean not yet curated, not unrestricted applicability.
+- Editorial scope: {DATA['editorial_policy']['statement']['en']}
 - [Code, inputs and verification]({ORIGIN}/numerical-methods-atlas/code-and-data/): Public ZIP, file hashes, dependencies and standalone verification. Original implementation code is MIT within its scope; datasets and content retain separate terms.
 - [Code edition manifest]({ORIGIN}{CODE}source-manifest.json): Direct file URLs are the public_base_url plus each listed path. The archive contains no Git history or private manuscripts.
 - [Code edition verification]({ORIGIN}{CODE}verification.json): {verification['passed']} passed, {verification['skipped']} intentionally inapplicable cases skipped in an independent extraction. No Ewald/PME/SPME or DFT implementation is included in this edition.

@@ -1,0 +1,58 @@
+#!/usr/bin/env python3
+"""Retain the bilingual public purpose statement through upstream site imports."""
+from pathlib import Path
+import hashlib
+import html
+import json
+import re
+
+ROOT=Path(__file__).resolve().parents[1]
+ATLAS=ROOT/'numerical-methods-atlas'
+copy=json.loads((ROOT/'catalog/atlas-purpose.json').read_text())
+policy=json.loads((ROOT/'catalog/atlas-methods.json').read_text())['editorial_policy']
+def render(lang):
+    c=copy[lang]
+    links=[('/numerical-methods-atlas/methods/',c['map']),('/numerical-methods-atlas/code-and-data/',c['code']),('/using/',c['using'])]
+    return '<section class="page-width atlas-purpose" aria-labelledby="atlas-purpose-title-'+lang+'"><h2 id="atlas-purpose-title-'+lang+'">'+html.escape(c['title'])+'</h2>'+''.join('<p>'+html.escape(p)+'</p>' for p in c['paragraphs'])+'<p><strong>'+html.escape(policy['title'][lang])+':</strong> '+html.escape(policy['statement'][lang])+'</p><nav aria-label="Atlas resources">'+''.join('<a href="'+url+'">'+html.escape(label)+'</a>' for url,label in links)+'</nav></section>'
+sections={lang:render(lang) for lang in copy}
+module=ATLAS/'atlas-purpose.js'
+module.write_text("// Generated from catalog/atlas-purpose.json.\nimport {currentLanguage} from './i18n.js';\nconst sections="+json.dumps(sections,ensure_ascii=False)+";\nexport const atlasPurpose=()=>sections[currentLanguage()];\n")
+digest=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()[:12]
+overview=ATLAS/'home-overview.js';text=overview.read_text()
+text=re.sub(r"import \{atlasPurpose\} from './atlas-purpose[.]js(?:[?]v=[a-f0-9]+)?';\n?",'',text)
+marker=' ${homeSearchPage()}'
+text=text.replace(' ${atlasPurpose()}\n','')
+assert text.count(marker)==1,'Review upstream homepage layout before adapting'
+text="import {atlasPurpose} from './atlas-purpose.js?v="+digest(module)+"';\n"+text.replace(marker,' ${atlasPurpose()}\n'+marker)
+overview.write_text(text)
+app=ATLAS/'app.js';text=app.read_text()
+text,count=re.subn(r"from './home-overview[.]js(?:[?]v=[a-f0-9]+)?'","from './home-overview.js?v="+digest(overview)+"'",text)
+assert count==1,'Review upstream homepage module import'
+app.write_text(text)
+page=ATLAS/'index.html';text=page.read_text()
+text=re.sub(r'<!-- atlas-purpose-fallback -->.*?<!-- /atlas-purpose-fallback -->','',text,flags=re.S)
+fallback='<!-- atlas-purpose-fallback -->'+''.join('<div data-site-language="'+lang+'" lang="'+lang+'">'+sections[lang]+'</div>' for lang in copy)+'<!-- /atlas-purpose-fallback -->'
+text=text.replace('</main>',fallback+'</main>')
+text=re.sub(r'<link rel="stylesheet" href="/styles/atlas-purpose.css(?:[?]v=[a-f0-9]+)?">\n?','',text)
+text=text.replace('</head>','<link rel="stylesheet" href="/styles/atlas-purpose.css?v='+digest(ROOT/'styles/atlas-purpose.css')+'">\n</head>')
+text=re.sub(r'src="app.js(?:[?]v=[a-f0-9]+)?"','src="app.js?v='+digest(app)+'"',text)
+page.write_text(text)
+# Keep the older roadmap wording consistent in both static and runtime editions.
+replacements={
+ '著者の要望によりAMRは保留で、今回の拡張に含みません。':'収録方針によりAMRは対象外です。',
+ 'AMRも引き続き保留します。':'AMRは収録対象外です。',
+ 'AMR is deferred at the author’s request; it is not part of this expansion.':'AMR is outside the editorial scope.',
+ 'and AMR remains deferred.':'and AMR is outside the editorial scope.'
+}
+def adapt_roadmap(text,lang):
+    for old,new in replacements.items():text=text.replace(old,new)
+    text=re.sub(r'<!-- atlas-scope -->.*?<!-- /atlas-scope -->','',text,flags=re.S)
+    block='<!-- atlas-scope --><section><h2 id="atlas-editorial-scope">'+html.escape(policy['title'][lang])+'</h2><p>'+html.escape(policy['statement'][lang])+'</p></section><!-- /atlas-scope -->'
+    return re.sub(r'(</h1>)',lambda m:m.group(1)+block,text,count=1)
+for lang in ['ja','en']:
+    roadmap=ATLAS/lang/'read/roadmap/index.html';roadmap.write_text(adapt_roadmap(roadmap.read_text(),lang))
+for content in ATLAS.glob('content*.json'):
+    data=json.loads(content.read_text());lang='ja' if '.ja.' in content.name else 'en'
+    data['roadmap']['html']=adapt_roadmap(data['roadmap']['html'],lang)
+    content.write_text(json.dumps(data,ensure_ascii=False,separators=(',',':'))+'\n')
+print('Built bilingual atlas purpose statement for the live homepage and static fallback.')

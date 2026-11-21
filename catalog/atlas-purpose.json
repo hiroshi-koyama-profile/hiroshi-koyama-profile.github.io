@@ -1,0 +1,24 @@
+{
+  "ja": {
+    "title": "人とAIが、根拠をたどり、計算を確かめるために",
+    "paragraphs": [
+      "大学院生・研究者と、その調査や実装を支援するAIのための数値計算資料集です。広い分野の見取り図から、各手法の考え方・適用条件・一次文献へ、さらに実行できるコード・入力データ・検証結果へとたどれるアトラスを目指しています。",
+      "大切にするのは、手法を知ることに加え、「この条件で使えるか」「実装をどう確かめるか」を判断できることです。人が読んで理解でき、AIも調査中に発見・参照し、公開されたコードやデータを取得して確かめられる形を整えます。",
+      "解説のみ・実装あり・収録予定を区別して表示します。未収録の分野も含めて段階的に広げ、代表的な手法から実行・検証例を充実させていきます。"
+    ],
+    "map": "手法の見取り図",
+    "code": "公開コード・入力・検証",
+    "using": "資料の使い方・引用"
+  },
+  "en": {
+    "title": "For people and AI to trace evidence and check calculations",
+    "paragraphs": [
+      "A numerical-computation resource for graduate students, researchers and the AI assistants supporting their research and implementation. The aim is to connect a cross-field method map with explanations, assumptions and original papers, then with runnable code, input data and verification results.",
+      "Beyond knowing a method, readers need to judge whether it fits their conditions and how to check an implementation. We are organizing material so people can understand it and AI agents can discover and cite it during research, retrieve public code and data, and check the results.",
+      "Reading-only entries, available implementations and planned coverage are labeled separately. Coverage will grow in stages, with runnable verification examples developed first for representative methods."
+    ],
+    "map": "Method map",
+    "code": "Public code, inputs and checks",
+    "using": "Use and citation"
+  }
+}

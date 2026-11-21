@@ -9,6 +9,11 @@ test('the named method map is the first result in Japanese and English',()=>{
     assert.equal(search(query,lang)[0]?.url,'/numerical-methods-atlas/methods/',query);
   }
 });
+test('thermostat spellings resolve to explicit method records',()=>{
+  for(const [query,id] of [['のせフーバー','nose-hoover'],['Nose-Hoover','nose-hoover'],['ベロシティースケーリング','velocity-rescaling'],['CSVR','stochastic-velocity-rescaling']]){
+    assert.ok(search(query,'ja').some(x=>x.url===`/numerical-methods-atlas/methods/${id}/`),query);
+  }
+});
 test('astronomy translations collapse to the chosen language and the actual chapter ranks first',()=>{
   assert.equal(search('Lane Emden','ja')[0].url,'/astronomy-step-by-step/ja/advanced/lane-emden/');
   assert.equal(search('Lane Emden','en')[0].url,'/astronomy-step-by-step/en/advanced/lane-emden/');

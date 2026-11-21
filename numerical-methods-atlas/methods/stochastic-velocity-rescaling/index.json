@@ -1,0 +1,74 @@
+{
+  "id": "stochastic-velocity-rescaling",
+  "name": {
+    "ja": "確率的速度リスケーリング（CSVR）",
+    "en": "Stochastic velocity rescaling (CSVR)"
+  },
+  "aliases": [
+    "Bussi–Donadio–Parrinello",
+    "Bussi thermostat",
+    "v-rescale",
+    "canonical velocity rescaling",
+    "確率的速度スケーリング"
+  ],
+  "group": {
+    "id": "thermostats",
+    "ja": "温度制御・分子動力学",
+    "en": "Thermostats and molecular dynamics"
+  },
+  "summary": {
+    "ja": "全体の速度に確率的な係数を掛け、正準分布の運動エネルギー揺らぎを生成するよう設計する。単純な速度固定とは別手法。",
+    "en": "Use a stochastic global scale factor designed to generate canonical kinetic-energy fluctuations. This is distinct from directly fixing the kinetic energy."
+  },
+  "caution": {
+    "ja": "分布の正しさと実時間の運動の再現を別々に調べる。結合時間・積分刻み・自由度数を明記する。",
+    "en": "Assess equilibrium distributions separately from real-time dynamics. State the coupling time, integration step and degree-of-freedom count."
+  },
+  "tier": "basic",
+  "status": "planned",
+  "origin": "development-candidate",
+  "reading": {
+    "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/thermostats/",
+    "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/thermostats/"
+  },
+  "code_modules": [],
+  "test_files": [],
+  "references": [
+    {
+      "label": "Bussi, Donadio & Parrinello (2007), Canonical sampling through velocity rescaling",
+      "url": "https://doi.org/10.1063/1.2408420",
+      "kind": "primary-paper",
+      "scope": "Bibliographic entry and introductory comparison; full derivation and numerical reproduction have not been audited."
+    },
+    {
+      "label": "Author preprint: arXiv:0803.4060",
+      "url": "https://arxiv.org/abs/0803.4060",
+      "kind": "primary-paper",
+      "scope": "Bibliographic entry and introductory comparison; full derivation and numerical reproduction have not been audited."
+    }
+  ],
+  "assumptions": null,
+  "units": null,
+  "boundary_conditions": null,
+  "next_deliverable": {
+    "ja": "専用の定式化・積分手順を整理し、固定入力、自由度・乱数・刻み幅を明記した分布と時間相関の検証例を追加する。",
+    "en": "Add a dedicated formulation and integration recipe, followed by explicit-input distribution and time-correlation checks with stated degrees of freedom, random seeds and step sizes."
+  },
+  "limitations": {
+    "ja": "比較解説を公開。Under construction：専用の実装・数値検証結果はまだありません。",
+    "en": "Comparative reading is available. No dedicated implementation or numerical verification result is provided yet."
+  },
+  "metadata_review": {
+    "level": "introductory comparison with primary-reference entry points; full derivation and numerical verification pending",
+    "on": "2026-11-21"
+  },
+  "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/stochastic-velocity-rescaling/",
+  "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/stochastic-velocity-rescaling/index.json",
+  "markdown_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/stochastic-velocity-rescaling/index.md",
+  "code_urls": [],
+  "test_urls": [],
+  "run_commands": [],
+  "run_from": null,
+  "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
+  "code_edition": null
+}

@@ -26,6 +26,11 @@
       "en": "Time integration"
     },
     {
+      "id": "thermostats",
+      "ja": "温度制御・分子動力学",
+      "en": "Thermostats and molecular dynamics"
+    },
+    {
       "id": "solvers",
       "ja": "線形・非線形解法",
       "en": "Linear & nonlinear solvers"
@@ -6185,43 +6190,6 @@
       }
     },
     {
-      "id": "amr",
-      "name": {
-        "ja": "適応格子細分化（AMR）",
-        "en": "Adaptive mesh refinement / AMR"
-      },
-      "group": {
-        "id": "space",
-        "ja": "空間離散化",
-        "en": "Spatial discretization"
-      },
-      "summary": {
-        "ja": "局所細分化と保存的な粗密格子接続を整理する。",
-        "en": "Map local refinement and conservative coarse/fine coupling."
-      },
-      "status": "planned",
-      "origin": "development-candidate",
-      "reading": {},
-      "code_modules": [],
-      "test_files": [],
-      "references": [],
-      "assumptions": null,
-      "units": null,
-      "boundary_conditions": null,
-      "next_deliverable": {
-        "ja": "格子階層と保存量を明示する模型。",
-        "en": "A model with explicit mesh hierarchy and conservation checks."
-      },
-      "limitations": {
-        "ja": "Under construction。専用の実装・検証結果はまだありません。",
-        "en": "Under construction. No dedicated implementation or verification result is provided yet."
-      },
-      "metadata_review": {
-        "level": "candidate outline; scientific derivation and literature review incomplete",
-        "on": "2026-11-21"
-      }
-    },
-    {
       "id": "amg",
       "name": {
         "ja": "代数的マルチグリッド（AMG）",
@@ -6849,6 +6817,775 @@
         "level": "candidate outline; scientific derivation and literature review incomplete",
         "on": "2026-11-21"
       }
+    },
+    {
+      "id": "velocity-rescaling",
+      "name": {
+        "ja": "単純な速度スケーリング",
+        "en": "Direct velocity rescaling"
+      },
+      "aliases": [
+        "ベロシティースケーリング",
+        "ベロシティスケーリング",
+        "velocity scaling",
+        "simple velocity rescaling"
+      ],
+      "group": {
+        "id": "thermostats",
+        "ja": "温度制御・分子動力学",
+        "en": "Thermostats and molecular dynamics"
+      },
+      "summary": {
+        "ja": "全粒子の速度に共通係数を掛け、適用時の運動エネルギーを目標値に合わせる。単純な決定論的操作では正準分布の運動エネルギー揺らぎを再現しない。",
+        "en": "Multiply velocities by a common factor to set the kinetic energy at each application. Simple deterministic rescaling does not reproduce canonical kinetic-energy fluctuations."
+      },
+      "caution": {
+        "ja": "温度への到達と正準分布の標本化を区別するための比較対象。T=0では比による再スケーリングを定義できず、適用間隔も結果に影響する。",
+        "en": "A comparison case for distinguishing temperature control from canonical sampling. Ratio-based rescaling is undefined at T=0; the application interval also matters."
+      },
+      "tier": "basic",
+      "status": "planned",
+      "origin": "development-candidate",
+      "reading": {
+        "ja": "/numerical-methods-atlas/ja/read/thermostats/",
+        "en": "/numerical-methods-atlas/en/read/thermostats/"
+      },
+      "code_modules": [],
+      "test_files": [],
+      "references": [
+        {
+          "label": "GROMACS: temperature coupling",
+          "url": "https://manual.gromacs.org/current/reference-manual/algorithms/molecular-dynamics.html",
+          "kind": "official-documentation",
+          "scope": "Bibliographic entry and introductory comparison; full derivation and numerical reproduction have not been audited."
+        }
+      ],
+      "assumptions": null,
+      "units": null,
+      "boundary_conditions": null,
+      "next_deliverable": {
+        "ja": "専用の定式化・積分手順を整理し、固定入力、自由度・乱数・刻み幅を明記した分布と時間相関の検証例を追加する。",
+        "en": "Add a dedicated formulation and integration recipe, followed by explicit-input distribution and time-correlation checks with stated degrees of freedom, random seeds and step sizes."
+      },
+      "limitations": {
+        "ja": "比較解説を公開。Under construction：専用の実装・数値検証結果はまだありません。",
+        "en": "Comparative reading is available. No dedicated implementation or numerical verification result is provided yet."
+      },
+      "metadata_review": {
+        "level": "introductory comparison with primary-reference entry points; full derivation and numerical verification pending",
+        "on": "2026-11-21"
+      }
+    },
+    {
+      "id": "berendsen-thermostat",
+      "name": {
+        "ja": "Berendsen弱結合サーモスタット",
+        "en": "Berendsen weak-coupling thermostat"
+      },
+      "aliases": [
+        "ベルンゼン",
+        "Berendsen thermostat",
+        "weak coupling"
+      ],
+      "group": {
+        "id": "thermostats",
+        "ja": "温度制御・分子動力学",
+        "en": "Thermostats and molecular dynamics"
+      },
+      "summary": {
+        "ja": "目標温度との差を緩和時間で減衰させる速度スケーリング。温度の揺らぎが抑制され、正しい正準分布の生成器にはならない。",
+        "en": "Relax the temperature difference over a chosen coupling time using velocity scaling. Fluctuations are suppressed, so this is not a correct canonical sampler."
+      },
+      "caution": {
+        "ja": "歴史的な温度緩和法として扱い、NVTでの揺らぎ・応答の測定にはそのまま使わない。",
+        "en": "Treat as a historical relaxation method; do not assume correct NVT fluctuations or response properties."
+      },
+      "tier": "basic",
+      "status": "planned",
+      "origin": "development-candidate",
+      "reading": {
+        "ja": "/numerical-methods-atlas/ja/read/thermostats/",
+        "en": "/numerical-methods-atlas/en/read/thermostats/"
+      },
+      "code_modules": [],
+      "test_files": [],
+      "references": [
+        {
+          "label": "Berendsen et al. (1984), Molecular dynamics with coupling to an external bath",
+          "url": "https://doi.org/10.1063/1.448118",
+          "kind": "primary-paper",
+          "scope": "Bibliographic entry and introductory comparison; full derivation and numerical reproduction have not been audited."
+        },
+        {
+          "label": "GROMACS: temperature coupling",
+          "url": "https://manual.gromacs.org/current/reference-manual/algorithms/molecular-dynamics.html",
+          "kind": "official-documentation",
+          "scope": "Bibliographic entry and introductory comparison; full derivation and numerical reproduction have not been audited."
+        }
+      ],
+      "assumptions": null,
+      "units": null,
+      "boundary_conditions": null,
+      "next_deliverable": {
+        "ja": "専用の定式化・積分手順を整理し、固定入力、自由度・乱数・刻み幅を明記した分布と時間相関の検証例を追加する。",
+        "en": "Add a dedicated formulation and integration recipe, followed by explicit-input distribution and time-correlation checks with stated degrees of freedom, random seeds and step sizes."
+      },
+      "limitations": {
+        "ja": "比較解説を公開。Under construction：専用の実装・数値検証結果はまだありません。",
+        "en": "Comparative reading is available. No dedicated implementation or numerical verification result is provided yet."
+      },
+      "metadata_review": {
+        "level": "introductory comparison with primary-reference entry points; full derivation and numerical verification pending",
+        "on": "2026-11-21"
+      }
+    },
+    {
+      "id": "andersen-thermostat",
+      "name": {
+        "ja": "Andersenサーモスタット",
+        "en": "Andersen thermostat"
+      },
+      "aliases": [
+        "アンダーセン",
+        "stochastic collisions"
+      ],
+      "group": {
+        "id": "thermostats",
+        "ja": "温度制御・分子動力学",
+        "en": "Thermostats and molecular dynamics"
+      },
+      "summary": {
+        "ja": "熱浴との確率的衝突を表し、選ばれた粒子の速度をMaxwell–Boltzmann分布から引き直す。",
+        "en": "Represent stochastic heat-bath collisions by redrawing selected particle velocities from a Maxwell–Boltzmann distribution."
+      },
+      "caution": {
+        "ja": "正準分布の標本化と物理的な時間相関は別の評価軸。独立な速度再抽選は全運動量や輸送特性を変える。",
+        "en": "Canonical sampling and physical time correlations are separate criteria. Independent velocity redraws alter total momentum and transport."
+      },
+      "tier": "basic",
+      "status": "planned",
+      "origin": "development-candidate",
+      "reading": {
+        "ja": "/numerical-methods-atlas/ja/read/thermostats/",
+        "en": "/numerical-methods-atlas/en/read/thermostats/"
+      },
+      "code_modules": [],
+      "test_files": [],
+      "references": [
+        {
+          "label": "Andersen (1980), Molecular dynamics simulations at constant pressure and/or temperature",
+          "url": "https://doi.org/10.1063/1.439486",
+          "kind": "primary-paper",
+          "scope": "Bibliographic entry and introductory comparison; full derivation and numerical reproduction have not been audited."
+        },
+        {
+          "label": "GROMACS: temperature coupling",
+          "url": "https://manual.gromacs.org/current/reference-manual/algorithms/molecular-dynamics.html",
+          "kind": "official-documentation",
+          "scope": "Bibliographic entry and introductory comparison; full derivation and numerical reproduction have not been audited."
+        }
+      ],
+      "assumptions": null,
+      "units": null,
+      "boundary_conditions": null,
+      "next_deliverable": {
+        "ja": "専用の定式化・積分手順を整理し、固定入力、自由度・乱数・刻み幅を明記した分布と時間相関の検証例を追加する。",
+        "en": "Add a dedicated formulation and integration recipe, followed by explicit-input distribution and time-correlation checks with stated degrees of freedom, random seeds and step sizes."
+      },
+      "limitations": {
+        "ja": "比較解説を公開。Under construction：専用の実装・数値検証結果はまだありません。",
+        "en": "Comparative reading is available. No dedicated implementation or numerical verification result is provided yet."
+      },
+      "metadata_review": {
+        "level": "introductory comparison with primary-reference entry points; full derivation and numerical verification pending",
+        "on": "2026-11-21"
+      }
+    },
+    {
+      "id": "langevin-thermostat",
+      "name": {
+        "ja": "Langevinサーモスタット",
+        "en": "Langevin thermostat"
+      },
+      "aliases": [
+        "ランジュバン",
+        "ランジュヴァン",
+        "friction and noise"
+      ],
+      "group": {
+        "id": "thermostats",
+        "ja": "温度制御・分子動力学",
+        "en": "Thermostats and molecular dynamics"
+      },
+      "summary": {
+        "ja": "摩擦と確率力を運動方程式に加える。平衡の温度を指定するには摩擦と雑音を揺動散逸関係で結ぶ。",
+        "en": "Add friction and random forces to the equations of motion. The fluctuation–dissipation relation connects friction and noise at the target equilibrium temperature."
+      },
+      "caution": {
+        "ja": "摩擦は実時間の相関・拡散に影響する。有限刻みでの標本化誤差は積分法と刻み幅も含めて調べる。",
+        "en": "Friction changes dynamical correlations and diffusion. Finite-step sampling errors must be assessed together with the integration scheme."
+      },
+      "tier": "basic",
+      "status": "planned",
+      "origin": "development-candidate",
+      "reading": {
+        "ja": "/numerical-methods-atlas/ja/read/thermostats/",
+        "en": "/numerical-methods-atlas/en/read/thermostats/"
+      },
+      "code_modules": [],
+      "test_files": [],
+      "references": [
+        {
+          "label": "Bussi & Parrinello (2007), Accurate sampling using Langevin dynamics",
+          "url": "https://doi.org/10.1103/PhysRevE.75.056707",
+          "kind": "primary-paper",
+          "scope": "Bibliographic entry and introductory comparison; full derivation and numerical reproduction have not been audited."
+        },
+        {
+          "label": "LAMMPS: fix langevin",
+          "url": "https://docs.lammps.org/fix_langevin.html",
+          "kind": "official-documentation",
+          "scope": "Bibliographic entry and introductory comparison; full derivation and numerical reproduction have not been audited."
+        }
+      ],
+      "assumptions": null,
+      "units": null,
+      "boundary_conditions": null,
+      "next_deliverable": {
+        "ja": "専用の定式化・積分手順を整理し、固定入力、自由度・乱数・刻み幅を明記した分布と時間相関の検証例を追加する。",
+        "en": "Add a dedicated formulation and integration recipe, followed by explicit-input distribution and time-correlation checks with stated degrees of freedom, random seeds and step sizes."
+      },
+      "limitations": {
+        "ja": "比較解説を公開。Under construction：専用の実装・数値検証結果はまだありません。",
+        "en": "Comparative reading is available. No dedicated implementation or numerical verification result is provided yet."
+      },
+      "metadata_review": {
+        "level": "introductory comparison with primary-reference entry points; full derivation and numerical verification pending",
+        "on": "2026-11-21"
+      }
+    },
+    {
+      "id": "nose-thermostat",
+      "name": {
+        "ja": "Noséの拡張系",
+        "en": "Nosé extended-system thermostat"
+      },
+      "aliases": [
+        "ノセ",
+        "能勢",
+        "Nose thermostat",
+        "extended system"
+      ],
+      "group": {
+        "id": "thermostats",
+        "ja": "温度制御・分子動力学",
+        "en": "Thermostats and molecular dynamics"
+      },
+      "summary": {
+        "ja": "熱浴を表す追加自由度と時間のスケーリングを導入する、決定論的な定温度分子動力学の出発点。",
+        "en": "Introduce additional heat-bath degrees of freedom and time scaling: a starting point for deterministic constant-temperature molecular dynamics."
+      },
+      "caution": {
+        "ja": "元の拡張Hamiltonianと実時間でのNosé–Hoover方程式を区別する。分布の不変性だけでは軌道のエルゴード性は保証されない。",
+        "en": "Distinguish the original extended Hamiltonian from the real-time Nosé–Hoover equations. An invariant distribution alone does not establish ergodicity."
+      },
+      "tier": "basic",
+      "status": "planned",
+      "origin": "development-candidate",
+      "reading": {
+        "ja": "/numerical-methods-atlas/ja/read/thermostats/",
+        "en": "/numerical-methods-atlas/en/read/thermostats/"
+      },
+      "code_modules": [],
+      "test_files": [],
+      "references": [
+        {
+          "label": "Nosé (1984), A unified formulation of the constant temperature molecular dynamics methods",
+          "url": "https://doi.org/10.1063/1.447334",
+          "kind": "primary-paper",
+          "scope": "Bibliographic entry and introductory comparison; full derivation and numerical reproduction have not been audited."
+        }
+      ],
+      "assumptions": null,
+      "units": null,
+      "boundary_conditions": null,
+      "next_deliverable": {
+        "ja": "専用の定式化・積分手順を整理し、固定入力、自由度・乱数・刻み幅を明記した分布と時間相関の検証例を追加する。",
+        "en": "Add a dedicated formulation and integration recipe, followed by explicit-input distribution and time-correlation checks with stated degrees of freedom, random seeds and step sizes."
+      },
+      "limitations": {
+        "ja": "比較解説を公開。Under construction：専用の実装・数値検証結果はまだありません。",
+        "en": "Comparative reading is available. No dedicated implementation or numerical verification result is provided yet."
+      },
+      "metadata_review": {
+        "level": "introductory comparison with primary-reference entry points; full derivation and numerical verification pending",
+        "on": "2026-11-21"
+      }
+    },
+    {
+      "id": "nose-hoover",
+      "name": {
+        "ja": "Nosé–Hooverサーモスタット",
+        "en": "Nosé–Hoover thermostat"
+      },
+      "aliases": [
+        "のせフーバー",
+        "ノセフーバー",
+        "ノセ・フーバー",
+        "能勢・フーバー",
+        "Nose-Hoover"
+      ],
+      "group": {
+        "id": "thermostats",
+        "ja": "温度制御・分子動力学",
+        "en": "Thermostats and molecular dynamics"
+      },
+      "summary": {
+        "ja": "熱浴変数により摩擦係数を動的に調整する決定論的手法。正準分布を不変分布に持つが、小自由度系では十分に探索できない場合がある。",
+        "en": "A deterministic method with a dynamically adjusted heat-bath friction variable. The canonical distribution is invariant, but small systems can fail to explore it ergodically."
+      },
+      "caution": {
+        "ja": "調和振動子などでの非エルゴード性、熱浴質量・結合時間の依存性を確認する。温度の平均値だけを合格条件にしない。",
+        "en": "Check nonergodicity in systems such as harmonic oscillators and dependence on bath mass or coupling time. Mean temperature is insufficient validation."
+      },
+      "tier": "basic",
+      "status": "planned",
+      "origin": "development-candidate",
+      "reading": {
+        "ja": "/numerical-methods-atlas/ja/read/thermostats/",
+        "en": "/numerical-methods-atlas/en/read/thermostats/"
+      },
+      "code_modules": [],
+      "test_files": [],
+      "references": [
+        {
+          "label": "Hoover (1985), Canonical dynamics: Equilibrium phase-space distributions",
+          "url": "https://doi.org/10.1103/PhysRevA.31.1695",
+          "kind": "primary-paper",
+          "scope": "Bibliographic entry and introductory comparison; full derivation and numerical reproduction have not been audited."
+        },
+        {
+          "label": "GROMACS: temperature coupling",
+          "url": "https://manual.gromacs.org/current/reference-manual/algorithms/molecular-dynamics.html",
+          "kind": "official-documentation",
+          "scope": "Bibliographic entry and introductory comparison; full derivation and numerical reproduction have not been audited."
+        }
+      ],
+      "assumptions": null,
+      "units": null,
+      "boundary_conditions": null,
+      "next_deliverable": {
+        "ja": "専用の定式化・積分手順を整理し、固定入力、自由度・乱数・刻み幅を明記した分布と時間相関の検証例を追加する。",
+        "en": "Add a dedicated formulation and integration recipe, followed by explicit-input distribution and time-correlation checks with stated degrees of freedom, random seeds and step sizes."
+      },
+      "limitations": {
+        "ja": "比較解説を公開。Under construction：専用の実装・数値検証結果はまだありません。",
+        "en": "Comparative reading is available. No dedicated implementation or numerical verification result is provided yet."
+      },
+      "metadata_review": {
+        "level": "introductory comparison with primary-reference entry points; full derivation and numerical verification pending",
+        "on": "2026-11-21"
+      }
+    },
+    {
+      "id": "nose-hoover-chains",
+      "name": {
+        "ja": "Nosé–Hoover chain",
+        "en": "Nosé–Hoover chains"
+      },
+      "aliases": [
+        "ノセ・フーバー鎖",
+        "NHC",
+        "Nose-Hoover chain"
+      ],
+      "group": {
+        "id": "thermostats",
+        "ja": "温度制御・分子動力学",
+        "en": "Thermostats and molecular dynamics"
+      },
+      "summary": {
+        "ja": "熱浴変数にも別の熱浴を結合し、鎖状の拡張系を作る。単一熱浴での標本化の問題を改善するための発展形。",
+        "en": "Couple heat-bath variables to further heat baths in a chain. This extension addresses sampling problems of a single thermostat."
+      },
+      "caution": {
+        "ja": "鎖の長さ、質量、サブステップに依存する。鎖を加えるだけで任意の系のエルゴード性を保証するものではない。",
+        "en": "Chain length, masses and substeps matter. Adding a chain does not universally guarantee ergodicity."
+      },
+      "tier": "basic",
+      "status": "planned",
+      "origin": "development-candidate",
+      "reading": {
+        "ja": "/numerical-methods-atlas/ja/read/thermostats/",
+        "en": "/numerical-methods-atlas/en/read/thermostats/"
+      },
+      "code_modules": [],
+      "test_files": [],
+      "references": [
+        {
+          "label": "Martyna, Klein & Tuckerman (1992), Nosé–Hoover chains: The canonical ensemble via continuous dynamics",
+          "url": "https://doi.org/10.1063/1.463940",
+          "kind": "primary-paper",
+          "scope": "Bibliographic entry and introductory comparison; full derivation and numerical reproduction have not been audited."
+        },
+        {
+          "label": "LAMMPS: fix nvt / tchain",
+          "url": "https://docs.lammps.org/fix_nh.html",
+          "kind": "official-documentation",
+          "scope": "Bibliographic entry and introductory comparison; full derivation and numerical reproduction have not been audited."
+        }
+      ],
+      "assumptions": null,
+      "units": null,
+      "boundary_conditions": null,
+      "next_deliverable": {
+        "ja": "専用の定式化・積分手順を整理し、固定入力、自由度・乱数・刻み幅を明記した分布と時間相関の検証例を追加する。",
+        "en": "Add a dedicated formulation and integration recipe, followed by explicit-input distribution and time-correlation checks with stated degrees of freedom, random seeds and step sizes."
+      },
+      "limitations": {
+        "ja": "比較解説を公開。Under construction：専用の実装・数値検証結果はまだありません。",
+        "en": "Comparative reading is available. No dedicated implementation or numerical verification result is provided yet."
+      },
+      "metadata_review": {
+        "level": "introductory comparison with primary-reference entry points; full derivation and numerical verification pending",
+        "on": "2026-11-21"
+      }
+    },
+    {
+      "id": "stochastic-velocity-rescaling",
+      "name": {
+        "ja": "確率的速度リスケーリング（CSVR）",
+        "en": "Stochastic velocity rescaling (CSVR)"
+      },
+      "aliases": [
+        "Bussi–Donadio–Parrinello",
+        "Bussi thermostat",
+        "v-rescale",
+        "canonical velocity rescaling",
+        "確率的速度スケーリング"
+      ],
+      "group": {
+        "id": "thermostats",
+        "ja": "温度制御・分子動力学",
+        "en": "Thermostats and molecular dynamics"
+      },
+      "summary": {
+        "ja": "全体の速度に確率的な係数を掛け、正準分布の運動エネルギー揺らぎを生成するよう設計する。単純な速度固定とは別手法。",
+        "en": "Use a stochastic global scale factor designed to generate canonical kinetic-energy fluctuations. This is distinct from directly fixing the kinetic energy."
+      },
+      "caution": {
+        "ja": "分布の正しさと実時間の運動の再現を別々に調べる。結合時間・積分刻み・自由度数を明記する。",
+        "en": "Assess equilibrium distributions separately from real-time dynamics. State the coupling time, integration step and degree-of-freedom count."
+      },
+      "tier": "basic",
+      "status": "planned",
+      "origin": "development-candidate",
+      "reading": {
+        "ja": "/numerical-methods-atlas/ja/read/thermostats/",
+        "en": "/numerical-methods-atlas/en/read/thermostats/"
+      },
+      "code_modules": [],
+      "test_files": [],
+      "references": [
+        {
+          "label": "Bussi, Donadio & Parrinello (2007), Canonical sampling through velocity rescaling",
+          "url": "https://doi.org/10.1063/1.2408420",
+          "kind": "primary-paper",
+          "scope": "Bibliographic entry and introductory comparison; full derivation and numerical reproduction have not been audited."
+        },
+        {
+          "label": "Author preprint: arXiv:0803.4060",
+          "url": "https://arxiv.org/abs/0803.4060",
+          "kind": "primary-paper",
+          "scope": "Bibliographic entry and introductory comparison; full derivation and numerical reproduction have not been audited."
+        }
+      ],
+      "assumptions": null,
+      "units": null,
+      "boundary_conditions": null,
+      "next_deliverable": {
+        "ja": "専用の定式化・積分手順を整理し、固定入力、自由度・乱数・刻み幅を明記した分布と時間相関の検証例を追加する。",
+        "en": "Add a dedicated formulation and integration recipe, followed by explicit-input distribution and time-correlation checks with stated degrees of freedom, random seeds and step sizes."
+      },
+      "limitations": {
+        "ja": "比較解説を公開。Under construction：専用の実装・数値検証結果はまだありません。",
+        "en": "Comparative reading is available. No dedicated implementation or numerical verification result is provided yet."
+      },
+      "metadata_review": {
+        "level": "introductory comparison with primary-reference entry points; full derivation and numerical verification pending",
+        "on": "2026-11-21"
+      }
+    },
+    {
+      "id": "gaussian-isokinetic",
+      "name": {
+        "ja": "Gaussian isokineticサーモスタット",
+        "en": "Gaussian isokinetic thermostat"
+      },
+      "aliases": [
+        "ガウス等運動エネルギー",
+        "isokinetic constraint"
+      ],
+      "group": {
+        "id": "thermostats",
+        "ja": "温度制御・分子動力学",
+        "en": "Thermostats and molecular dynamics"
+      },
+      "summary": {
+        "ja": "拘束力により運動エネルギーを連続時間で一定に保つ。非平衡分子動力学と拘束力学を結ぶ手法。",
+        "en": "Constrain kinetic energy continuously using a constraint force, connecting nonequilibrium molecular dynamics with constrained mechanics."
+      },
+      "caution": {
+        "ja": "有限自由度で運動エネルギーが揺らぐ正準分布とは区別する。配置分布と位相空間全体の分布を混同しない。",
+        "en": "Distinguish fixed kinetic energy from the fluctuating canonical kinetic energy at finite system size. Configurational and full phase-space distributions differ."
+      },
+      "tier": "advanced",
+      "status": "planned",
+      "origin": "development-candidate",
+      "reading": {
+        "ja": "/numerical-methods-atlas/ja/read/thermostats/",
+        "en": "/numerical-methods-atlas/en/read/thermostats/"
+      },
+      "code_modules": [],
+      "test_files": [],
+      "references": [
+        {
+          "label": "Evans & Morriss, Statistical Mechanics of Nonequilibrium Liquids, §5.2",
+          "url": "https://press-files.anu.edu.au/downloads/press/p47571/html/ch05s02.html",
+          "kind": "author-monograph",
+          "scope": "Bibliographic entry and introductory comparison; full derivation and numerical reproduction have not been audited."
+        }
+      ],
+      "assumptions": null,
+      "units": null,
+      "boundary_conditions": null,
+      "next_deliverable": {
+        "ja": "専用の定式化・積分手順を整理し、固定入力、自由度・乱数・刻み幅を明記した分布と時間相関の検証例を追加する。",
+        "en": "Add a dedicated formulation and integration recipe, followed by explicit-input distribution and time-correlation checks with stated degrees of freedom, random seeds and step sizes."
+      },
+      "limitations": {
+        "ja": "比較解説を公開。Under construction：専用の実装・数値検証結果はまだありません。",
+        "en": "Comparative reading is available. No dedicated implementation or numerical verification result is provided yet."
+      },
+      "metadata_review": {
+        "level": "introductory comparison with primary-reference entry points; full derivation and numerical verification pending",
+        "on": "2026-11-21"
+      }
+    },
+    {
+      "id": "generalized-langevin",
+      "name": {
+        "ja": "一般化Langevin・GLE",
+        "en": "Generalized Langevin equation (GLE)"
+      },
+      "aliases": [
+        "一般化ランジュバン",
+        "colored-noise thermostat",
+        "有色雑音"
+      ],
+      "group": {
+        "id": "thermostats",
+        "ja": "温度制御・分子動力学",
+        "en": "Thermostats and molecular dynamics"
+      },
+      "summary": {
+        "ja": "記憶核と有色雑音、またはそれを表す補助変数を使い、周波数ごとの熱浴応答を設計する。",
+        "en": "Use memory kernels and colored noise, or auxiliary variables representing them, to tailor the frequency response of a heat bath."
+      },
+      "caution": {
+        "ja": "古典平衡用の揺動散逸関係と、核の量子効果を近似する非平衡設定を分ける。量子化学ソルバーそのものではない。",
+        "en": "Separate classical equilibrium fluctuation–dissipation settings from nonequilibrium approximations to nuclear quantum effects; neither is an electronic-structure solver."
+      },
+      "tier": "advanced",
+      "status": "planned",
+      "origin": "development-candidate",
+      "reading": {
+        "ja": "/numerical-methods-atlas/ja/read/thermostats/",
+        "en": "/numerical-methods-atlas/en/read/thermostats/"
+      },
+      "code_modules": [],
+      "test_files": [],
+      "references": [
+        {
+          "label": "Ceriotti, Bussi & Parrinello (2009), Langevin Equation with Colored Noise for Constant-Temperature Molecular Dynamics Simulations",
+          "url": "https://doi.org/10.1103/PhysRevLett.102.020601",
+          "kind": "primary-paper",
+          "scope": "Bibliographic entry and introductory comparison; full derivation and numerical reproduction have not been audited."
+        },
+        {
+          "label": "LAMMPS: fix gle",
+          "url": "https://docs.lammps.org/fix_gle.html",
+          "kind": "official-documentation",
+          "scope": "Bibliographic entry and introductory comparison; full derivation and numerical reproduction have not been audited."
+        }
+      ],
+      "assumptions": null,
+      "units": null,
+      "boundary_conditions": null,
+      "next_deliverable": {
+        "ja": "専用の定式化・積分手順を整理し、固定入力、自由度・乱数・刻み幅を明記した分布と時間相関の検証例を追加する。",
+        "en": "Add a dedicated formulation and integration recipe, followed by explicit-input distribution and time-correlation checks with stated degrees of freedom, random seeds and step sizes."
+      },
+      "limitations": {
+        "ja": "比較解説を公開。Under construction：専用の実装・数値検証結果はまだありません。",
+        "en": "Comparative reading is available. No dedicated implementation or numerical verification result is provided yet."
+      },
+      "metadata_review": {
+        "level": "introductory comparison with primary-reference entry points; full derivation and numerical verification pending",
+        "on": "2026-11-21"
+      }
+    },
+    {
+      "id": "dpd-thermostat",
+      "name": {
+        "ja": "DPDサーモスタット",
+        "en": "DPD pair thermostat"
+      },
+      "aliases": [
+        "散逸粒子動力学",
+        "dissipative particle dynamics",
+        "pairwise thermostat"
+      ],
+      "group": {
+        "id": "thermostats",
+        "ja": "温度制御・分子動力学",
+        "en": "Thermostats and molecular dynamics"
+      },
+      "summary": {
+        "ja": "粒子対に散逸力と確率力を加えて温度を制御する。標準的な対称な対力は対の全運動量を保存する。",
+        "en": "Control temperature using dissipative and random pair forces. Standard symmetric pair forces conserve the pair’s total momentum."
+      },
+      "caution": {
+        "ja": "流体的な運動量輸送を扱う場合の候補。摩擦・雑音の対応、距離重み、有限刻みの影響を検証する。",
+        "en": "Relevant when momentum transport matters. Verify matched friction/noise, radial weights and finite-step effects."
+      },
+      "tier": "advanced",
+      "status": "planned",
+      "origin": "development-candidate",
+      "reading": {
+        "ja": "/numerical-methods-atlas/ja/read/thermostats/",
+        "en": "/numerical-methods-atlas/en/read/thermostats/"
+      },
+      "code_modules": [],
+      "test_files": [],
+      "references": [
+        {
+          "label": "Español & Warren (1995), Statistical Mechanics of Dissipative Particle Dynamics",
+          "url": "https://doi.org/10.1209/0295-5075/30/4/001",
+          "kind": "primary-paper",
+          "scope": "Bibliographic entry and introductory comparison; full derivation and numerical reproduction have not been audited."
+        },
+        {
+          "label": "LAMMPS: pair_style dpd / dpd/tstat",
+          "url": "https://docs.lammps.org/pair_dpd.html",
+          "kind": "official-documentation",
+          "scope": "Bibliographic entry and introductory comparison; full derivation and numerical reproduction have not been audited."
+        }
+      ],
+      "assumptions": null,
+      "units": null,
+      "boundary_conditions": null,
+      "next_deliverable": {
+        "ja": "専用の定式化・積分手順を整理し、固定入力、自由度・乱数・刻み幅を明記した分布と時間相関の検証例を追加する。",
+        "en": "Add a dedicated formulation and integration recipe, followed by explicit-input distribution and time-correlation checks with stated degrees of freedom, random seeds and step sizes."
+      },
+      "limitations": {
+        "ja": "比較解説を公開。Under construction：専用の実装・数値検証結果はまだありません。",
+        "en": "Comparative reading is available. No dedicated implementation or numerical verification result is provided yet."
+      },
+      "metadata_review": {
+        "level": "introductory comparison with primary-reference entry points; full derivation and numerical verification pending",
+        "on": "2026-11-21"
+      }
+    },
+    {
+      "id": "lowe-andersen",
+      "name": {
+        "ja": "Lowe–Andersenサーモスタット",
+        "en": "Lowe–Andersen thermostat"
+      },
+      "aliases": [
+        "ロウ・アンダーセン",
+        "Lowe Andersen"
+      ],
+      "group": {
+        "id": "thermostats",
+        "ja": "温度制御・分子動力学",
+        "en": "Thermostats and molecular dynamics"
+      },
+      "summary": {
+        "ja": "近傍粒子対の相対速度の一成分を確率的に再抽選し、対の重心運動量を保つ衝突型の温度制御。",
+        "en": "Stochastically redraw a component of a nearby pair’s relative velocity while preserving the pair’s center-of-mass momentum."
+      },
+      "caution": {
+        "ja": "独立な粒子速度を引き直すAndersen法と区別する。衝突頻度や近傍半径は粘性・拡散などの輸送に影響する。",
+        "en": "Distinguish from independent-particle Andersen collisions. Collision frequency and neighbor radius affect transport such as viscosity and diffusion."
+      },
+      "tier": "advanced",
+      "status": "planned",
+      "origin": "development-candidate",
+      "reading": {
+        "ja": "/numerical-methods-atlas/ja/read/thermostats/",
+        "en": "/numerical-methods-atlas/en/read/thermostats/"
+      },
+      "code_modules": [],
+      "test_files": [],
+      "references": [
+        {
+          "label": "Lowe (1999), An alternative approach to dissipative particle dynamics",
+          "url": "https://doi.org/10.1209/epl/i1999-00365-x",
+          "kind": "primary-paper",
+          "scope": "Bibliographic entry and introductory comparison; full derivation and numerical reproduction have not been audited."
+        }
+      ],
+      "assumptions": null,
+      "units": null,
+      "boundary_conditions": null,
+      "next_deliverable": {
+        "ja": "専用の定式化・積分手順を整理し、固定入力、自由度・乱数・刻み幅を明記した分布と時間相関の検証例を追加する。",
+        "en": "Add a dedicated formulation and integration recipe, followed by explicit-input distribution and time-correlation checks with stated degrees of freedom, random seeds and step sizes."
+      },
+      "limitations": {
+        "ja": "比較解説を公開。Under construction：専用の実装・数値検証結果はまだありません。",
+        "en": "Comparative reading is available. No dedicated implementation or numerical verification result is provided yet."
+      },
+      "metadata_review": {
+        "level": "introductory comparison with primary-reference entry points; full derivation and numerical verification pending",
+        "on": "2026-11-21"
+      }
     }
-  ]
+  ],
+  "editorial_policy": {
+    "reviewed_on": "2026-11-21",
+    "title": {
+      "ja": "収録方針",
+      "en": "Editorial scope"
+    },
+    "statement": {
+      "ja": "数値計算の数理的な手法・定式化・適用条件・検証を中心に扱います。AMR（適応格子細分化）、並列化、mixed precision（混合精度）などの計算効率化・実装上の技巧は、独立した収録・開発の対象から外します。通常の丸め誤差や数値安定性は基礎として扱います。",
+      "en": "The focus is mathematical methods, formulations, applicability and verification. AMR (adaptive mesh refinement), parallelization and mixed-precision techniques for computational efficiency are outside the scope of dedicated coverage and development. Ordinary roundoff and numerical stability remain foundational topics."
+    },
+    "excluded_topics": [
+      {
+        "id": "amr",
+        "name": {
+          "ja": "適応格子細分化（AMR）",
+          "en": "Adaptive mesh refinement (AMR)"
+        }
+      },
+      {
+        "id": "parallelization",
+        "name": {
+          "ja": "並列化",
+          "en": "Parallelization"
+        }
+      },
+      {
+        "id": "mixed-precision",
+        "name": {
+          "ja": "混合精度演算",
+          "en": "Mixed-precision arithmetic"
+        }
+      }
+    ]
+  }
 }

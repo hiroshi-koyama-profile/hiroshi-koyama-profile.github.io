@@ -532,6 +532,9 @@
     <loc>https://hrkoyama.github.io/numerical-methods-atlas/en/read/textbooks/</loc>
   </url>
   <url>
+    <loc>https://hrkoyama.github.io/numerical-methods-atlas/en/read/thermostats/</loc>
+  </url>
+  <url>
     <loc>https://hrkoyama.github.io/numerical-methods-atlas/en/read/time-integration/</loc>
   </url>
   <url>
@@ -673,6 +676,9 @@
     <loc>https://hrkoyama.github.io/numerical-methods-atlas/ja/read/textbooks/</loc>
   </url>
   <url>
+    <loc>https://hrkoyama.github.io/numerical-methods-atlas/ja/read/thermostats/</loc>
+  </url>
+  <url>
     <loc>https://hrkoyama.github.io/numerical-methods-atlas/ja/read/time-integration/</loc>
   </url>
   <url>
@@ -688,7 +694,7 @@
     <loc>https://hrkoyama.github.io/numerical-methods-atlas/methods/amg/</loc>
   </url>
   <url>
-    <loc>https://hrkoyama.github.io/numerical-methods-atlas/methods/amr/</loc>
+    <loc>https://hrkoyama.github.io/numerical-methods-atlas/methods/andersen-thermostat/</loc>
   </url>
   <url>
     <loc>https://hrkoyama.github.io/numerical-methods-atlas/methods/ausm/</loc>
@@ -707,6 +713,9 @@
   </url>
   <url>
     <loc>https://hrkoyama.github.io/numerical-methods-atlas/methods/bdf2/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/numerical-methods-atlas/methods/berendsen-thermostat/</loc>
   </url>
   <url>
     <loc>https://hrkoyama.github.io/numerical-methods-atlas/methods/bicgstab/</loc>
@@ -760,6 +769,9 @@
     <loc>https://hrkoyama.github.io/numerical-methods-atlas/methods/dmrg/</loc>
   </url>
   <url>
+    <loc>https://hrkoyama.github.io/numerical-methods-atlas/methods/dpd-thermostat/</loc>
+  </url>
+  <url>
     <loc>https://hrkoyama.github.io/numerical-methods-atlas/methods/dsmc/</loc>
   </url>
   <url>
@@ -797,6 +809,12 @@
   </url>
   <url>
     <loc>https://hrkoyama.github.io/numerical-methods-atlas/methods/gauss-seidel/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/numerical-methods-atlas/methods/gaussian-isokinetic/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/numerical-methods-atlas/methods/generalized-langevin/</loc>
   </url>
   <url>
     <loc>https://hrkoyama.github.io/numerical-methods-atlas/methods/glm/</loc>
@@ -868,6 +886,9 @@
     <loc>https://hrkoyama.github.io/numerical-methods-atlas/methods/kutta3/</loc>
   </url>
   <url>
+    <loc>https://hrkoyama.github.io/numerical-methods-atlas/methods/langevin-thermostat/</loc>
+  </url>
+  <url>
     <loc>https://hrkoyama.github.io/numerical-methods-atlas/methods/lax-friedrichs/</loc>
   </url>
   <url>
@@ -881,6 +902,9 @@
   </url>
   <url>
     <loc>https://hrkoyama.github.io/numerical-methods-atlas/methods/low-mach-preconditioning/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/numerical-methods-atlas/methods/lowe-andersen/</loc>
   </url>
   <url>
     <loc>https://hrkoyama.github.io/numerical-methods-atlas/methods/mc/</loc>
@@ -917,6 +941,15 @@
   </url>
   <url>
     <loc>https://hrkoyama.github.io/numerical-methods-atlas/methods/nodal-basis/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/numerical-methods-atlas/methods/nose-hoover-chains/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/numerical-methods-atlas/methods/nose-hoover/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/numerical-methods-atlas/methods/nose-thermostat/</loc>
   </url>
   <url>
     <loc>https://hrkoyama.github.io/numerical-methods-atlas/methods/optimization/</loc>
@@ -1027,6 +1060,9 @@
     <loc>https://hrkoyama.github.io/numerical-methods-atlas/methods/step-doubling/</loc>
   </url>
   <url>
+    <loc>https://hrkoyama.github.io/numerical-methods-atlas/methods/stochastic-velocity-rescaling/</loc>
+  </url>
+  <url>
     <loc>https://hrkoyama.github.io/numerical-methods-atlas/methods/superbee/</loc>
   </url>
   <url>
@@ -1052,6 +1088,9 @@
   </url>
   <url>
     <loc>https://hrkoyama.github.io/numerical-methods-atlas/methods/van-leer/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/numerical-methods-atlas/methods/velocity-rescaling/</loc>
   </url>
   <url>
     <loc>https://hrkoyama.github.io/numerical-methods-atlas/methods/verlet/</loc>

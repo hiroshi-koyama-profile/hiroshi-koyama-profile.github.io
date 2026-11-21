@@ -1,0 +1,67 @@
+{
+  "id": "velocity-rescaling",
+  "name": {
+    "ja": "単純な速度スケーリング",
+    "en": "Direct velocity rescaling"
+  },
+  "aliases": [
+    "ベロシティースケーリング",
+    "ベロシティスケーリング",
+    "velocity scaling",
+    "simple velocity rescaling"
+  ],
+  "group": {
+    "id": "thermostats",
+    "ja": "温度制御・分子動力学",
+    "en": "Thermostats and molecular dynamics"
+  },
+  "summary": {
+    "ja": "全粒子の速度に共通係数を掛け、適用時の運動エネルギーを目標値に合わせる。単純な決定論的操作では正準分布の運動エネルギー揺らぎを再現しない。",
+    "en": "Multiply velocities by a common factor to set the kinetic energy at each application. Simple deterministic rescaling does not reproduce canonical kinetic-energy fluctuations."
+  },
+  "caution": {
+    "ja": "温度への到達と正準分布の標本化を区別するための比較対象。T=0では比による再スケーリングを定義できず、適用間隔も結果に影響する。",
+    "en": "A comparison case for distinguishing temperature control from canonical sampling. Ratio-based rescaling is undefined at T=0; the application interval also matters."
+  },
+  "tier": "basic",
+  "status": "planned",
+  "origin": "development-candidate",
+  "reading": {
+    "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/thermostats/",
+    "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/thermostats/"
+  },
+  "code_modules": [],
+  "test_files": [],
+  "references": [
+    {
+      "label": "GROMACS: temperature coupling",
+      "url": "https://manual.gromacs.org/current/reference-manual/algorithms/molecular-dynamics.html",
+      "kind": "official-documentation",
+      "scope": "Bibliographic entry and introductory comparison; full derivation and numerical reproduction have not been audited."
+    }
+  ],
+  "assumptions": null,
+  "units": null,
+  "boundary_conditions": null,
+  "next_deliverable": {
+    "ja": "専用の定式化・積分手順を整理し、固定入力、自由度・乱数・刻み幅を明記した分布と時間相関の検証例を追加する。",
+    "en": "Add a dedicated formulation and integration recipe, followed by explicit-input distribution and time-correlation checks with stated degrees of freedom, random seeds and step sizes."
+  },
+  "limitations": {
+    "ja": "比較解説を公開。Under construction：専用の実装・数値検証結果はまだありません。",
+    "en": "Comparative reading is available. No dedicated implementation or numerical verification result is provided yet."
+  },
+  "metadata_review": {
+    "level": "introductory comparison with primary-reference entry points; full derivation and numerical verification pending",
+    "on": "2026-11-21"
+  },
+  "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/velocity-rescaling/",
+  "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/velocity-rescaling/index.json",
+  "markdown_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/velocity-rescaling/index.md",
+  "code_urls": [],
+  "test_urls": [],
+  "run_commands": [],
+  "run_from": null,
+  "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
+  "code_edition": null
+}

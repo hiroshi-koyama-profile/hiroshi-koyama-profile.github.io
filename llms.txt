@@ -80,8 +80,10 @@ This file is a discovery guide, not a complete mirror of the site or evidence th
 
 ## Method records and executable code
 
-- [Method map](https://hrkoyama.github.io/numerical-methods-atlas/methods/): 90 existing method/building-block entries and 41 separately labeled development candidates. Planned entries have no dedicated solver or verification result.
+- [Method map](https://hrkoyama.github.io/numerical-methods-atlas/methods/): 90 existing method/building-block entries and 52 separately labeled development candidates. Planned entries have no dedicated solver or verification result.
 - [Method registry / JSON](https://hrkoyama.github.io/numerical-methods-atlas/methods/index.json): Names, status, reading routes, chapter-related Python modules, tests, reference links and explicit metadata gaps. Each entry has a stable HTML URL, index.json and index.md. Null assumptions or boundaries mean not yet curated, not unrestricted applicability.
+- Editorial scope: The focus is mathematical methods, formulations, applicability and verification. AMR (adaptive mesh refinement), parallelization and mixed-precision techniques for computational efficiency are outside the scope of dedicated coverage and development. Ordinary roundoff and numerical stability remain foundational topics.
 - [Code, inputs and verification](https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/): Public ZIP, file hashes, dependencies and standalone verification. Original implementation code is MIT within its scope; datasets and content retain separate terms.
 - [Code edition manifest](https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/source-manifest.json): Direct file URLs are the public_base_url plus each listed path. The archive contains no Git history or private manuscripts.
 - [Code edition verification](https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/verification.json): 411 passed, 6 intentionally inapplicable cases skipped in an independent extraction. No Ewald/PME/SPME or DFT implementation is included in this edition.
+- [Thermostats: comparison and planned checks](https://hrkoyama.github.io/numerical-methods-atlas/en/read/thermostats/): 12 method introductions with primary-reference entry points; dedicated implementations are not available yet.

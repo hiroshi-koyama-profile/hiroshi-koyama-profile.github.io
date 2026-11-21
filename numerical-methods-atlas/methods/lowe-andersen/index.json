@@ -1,0 +1,65 @@
+{
+  "id": "lowe-andersen",
+  "name": {
+    "ja": "Lowe–Andersenサーモスタット",
+    "en": "Lowe–Andersen thermostat"
+  },
+  "aliases": [
+    "ロウ・アンダーセン",
+    "Lowe Andersen"
+  ],
+  "group": {
+    "id": "thermostats",
+    "ja": "温度制御・分子動力学",
+    "en": "Thermostats and molecular dynamics"
+  },
+  "summary": {
+    "ja": "近傍粒子対の相対速度の一成分を確率的に再抽選し、対の重心運動量を保つ衝突型の温度制御。",
+    "en": "Stochastically redraw a component of a nearby pair’s relative velocity while preserving the pair’s center-of-mass momentum."
+  },
+  "caution": {
+    "ja": "独立な粒子速度を引き直すAndersen法と区別する。衝突頻度や近傍半径は粘性・拡散などの輸送に影響する。",
+    "en": "Distinguish from independent-particle Andersen collisions. Collision frequency and neighbor radius affect transport such as viscosity and diffusion."
+  },
+  "tier": "advanced",
+  "status": "planned",
+  "origin": "development-candidate",
+  "reading": {
+    "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/thermostats/",
+    "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/thermostats/"
+  },
+  "code_modules": [],
+  "test_files": [],
+  "references": [
+    {
+      "label": "Lowe (1999), An alternative approach to dissipative particle dynamics",
+      "url": "https://doi.org/10.1209/epl/i1999-00365-x",
+      "kind": "primary-paper",
+      "scope": "Bibliographic entry and introductory comparison; full derivation and numerical reproduction have not been audited."
+    }
+  ],
+  "assumptions": null,
+  "units": null,
+  "boundary_conditions": null,
+  "next_deliverable": {
+    "ja": "専用の定式化・積分手順を整理し、固定入力、自由度・乱数・刻み幅を明記した分布と時間相関の検証例を追加する。",
+    "en": "Add a dedicated formulation and integration recipe, followed by explicit-input distribution and time-correlation checks with stated degrees of freedom, random seeds and step sizes."
+  },
+  "limitations": {
+    "ja": "比較解説を公開。Under construction：専用の実装・数値検証結果はまだありません。",
+    "en": "Comparative reading is available. No dedicated implementation or numerical verification result is provided yet."
+  },
+  "metadata_review": {
+    "level": "introductory comparison with primary-reference entry points; full derivation and numerical verification pending",
+    "on": "2026-11-21"
+  },
+  "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/lowe-andersen/",
+  "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/lowe-andersen/index.json",
+  "markdown_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/lowe-andersen/index.md",
+  "code_urls": [],
+  "test_urls": [],
+  "run_commands": [],
+  "run_from": null,
+  "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
+  "code_edition": null
+}

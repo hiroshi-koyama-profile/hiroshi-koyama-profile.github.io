@@ -1,0 +1,72 @@
+{
+  "id": "langevin-thermostat",
+  "name": {
+    "ja": "Langevinサーモスタット",
+    "en": "Langevin thermostat"
+  },
+  "aliases": [
+    "ランジュバン",
+    "ランジュヴァン",
+    "friction and noise"
+  ],
+  "group": {
+    "id": "thermostats",
+    "ja": "温度制御・分子動力学",
+    "en": "Thermostats and molecular dynamics"
+  },
+  "summary": {
+    "ja": "摩擦と確率力を運動方程式に加える。平衡の温度を指定するには摩擦と雑音を揺動散逸関係で結ぶ。",
+    "en": "Add friction and random forces to the equations of motion. The fluctuation–dissipation relation connects friction and noise at the target equilibrium temperature."
+  },
+  "caution": {
+    "ja": "摩擦は実時間の相関・拡散に影響する。有限刻みでの標本化誤差は積分法と刻み幅も含めて調べる。",
+    "en": "Friction changes dynamical correlations and diffusion. Finite-step sampling errors must be assessed together with the integration scheme."
+  },
+  "tier": "basic",
+  "status": "planned",
+  "origin": "development-candidate",
+  "reading": {
+    "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/thermostats/",
+    "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/thermostats/"
+  },
+  "code_modules": [],
+  "test_files": [],
+  "references": [
+    {
+      "label": "Bussi & Parrinello (2007), Accurate sampling using Langevin dynamics",
+      "url": "https://doi.org/10.1103/PhysRevE.75.056707",
+      "kind": "primary-paper",
+      "scope": "Bibliographic entry and introductory comparison; full derivation and numerical reproduction have not been audited."
+    },
+    {
+      "label": "LAMMPS: fix langevin",
+      "url": "https://docs.lammps.org/fix_langevin.html",
+      "kind": "official-documentation",
+      "scope": "Bibliographic entry and introductory comparison; full derivation and numerical reproduction have not been audited."
+    }
+  ],
+  "assumptions": null,
+  "units": null,
+  "boundary_conditions": null,
+  "next_deliverable": {
+    "ja": "専用の定式化・積分手順を整理し、固定入力、自由度・乱数・刻み幅を明記した分布と時間相関の検証例を追加する。",
+    "en": "Add a dedicated formulation and integration recipe, followed by explicit-input distribution and time-correlation checks with stated degrees of freedom, random seeds and step sizes."
+  },
+  "limitations": {
+    "ja": "比較解説を公開。Under construction：専用の実装・数値検証結果はまだありません。",
+    "en": "Comparative reading is available. No dedicated implementation or numerical verification result is provided yet."
+  },
+  "metadata_review": {
+    "level": "introductory comparison with primary-reference entry points; full derivation and numerical verification pending",
+    "on": "2026-11-21"
+  },
+  "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/langevin-thermostat/",
+  "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/langevin-thermostat/index.json",
+  "markdown_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/langevin-thermostat/index.md",
+  "code_urls": [],
+  "test_urls": [],
+  "run_commands": [],
+  "run_from": null,
+  "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
+  "code_edition": null
+}

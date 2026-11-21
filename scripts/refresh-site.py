@@ -8,6 +8,9 @@ ROOT = Path(__file__).resolve().parents[1]
 for command in [
     [sys.executable, 'scripts/build-public-resources.py'],
     [sys.executable, 'scripts/build-atlas-resources.py'],
+    [sys.executable, 'scripts/build-thermostat-reading.py'],
+    [sys.executable, 'scripts/build-atlas-search.py'],
+    [sys.executable, 'scripts/build-atlas-purpose.py'],
     ['node', 'scripts/build-site-chrome.mjs'],
     [sys.executable, 'scripts/build-sitemap.py'],
     [sys.executable, 'scripts/build-guide.py', '--local-site', '.'],

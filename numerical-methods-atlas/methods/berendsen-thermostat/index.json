@@ -1,0 +1,72 @@
+{
+  "id": "berendsen-thermostat",
+  "name": {
+    "ja": "Berendsen弱結合サーモスタット",
+    "en": "Berendsen weak-coupling thermostat"
+  },
+  "aliases": [
+    "ベルンゼン",
+    "Berendsen thermostat",
+    "weak coupling"
+  ],
+  "group": {
+    "id": "thermostats",
+    "ja": "温度制御・分子動力学",
+    "en": "Thermostats and molecular dynamics"
+  },
+  "summary": {
+    "ja": "目標温度との差を緩和時間で減衰させる速度スケーリング。温度の揺らぎが抑制され、正しい正準分布の生成器にはならない。",
+    "en": "Relax the temperature difference over a chosen coupling time using velocity scaling. Fluctuations are suppressed, so this is not a correct canonical sampler."
+  },
+  "caution": {
+    "ja": "歴史的な温度緩和法として扱い、NVTでの揺らぎ・応答の測定にはそのまま使わない。",
+    "en": "Treat as a historical relaxation method; do not assume correct NVT fluctuations or response properties."
+  },
+  "tier": "basic",
+  "status": "planned",
+  "origin": "development-candidate",
+  "reading": {
+    "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/thermostats/",
+    "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/thermostats/"
+  },
+  "code_modules": [],
+  "test_files": [],
+  "references": [
+    {
+      "label": "Berendsen et al. (1984), Molecular dynamics with coupling to an external bath",
+      "url": "https://doi.org/10.1063/1.448118",
+      "kind": "primary-paper",
+      "scope": "Bibliographic entry and introductory comparison; full derivation and numerical reproduction have not been audited."
+    },
+    {
+      "label": "GROMACS: temperature coupling",
+      "url": "https://manual.gromacs.org/current/reference-manual/algorithms/molecular-dynamics.html",
+      "kind": "official-documentation",
+      "scope": "Bibliographic entry and introductory comparison; full derivation and numerical reproduction have not been audited."
+    }
+  ],
+  "assumptions": null,
+  "units": null,
+  "boundary_conditions": null,
+  "next_deliverable": {
+    "ja": "専用の定式化・積分手順を整理し、固定入力、自由度・乱数・刻み幅を明記した分布と時間相関の検証例を追加する。",
+    "en": "Add a dedicated formulation and integration recipe, followed by explicit-input distribution and time-correlation checks with stated degrees of freedom, random seeds and step sizes."
+  },
+  "limitations": {
+    "ja": "比較解説を公開。Under construction：専用の実装・数値検証結果はまだありません。",
+    "en": "Comparative reading is available. No dedicated implementation or numerical verification result is provided yet."
+  },
+  "metadata_review": {
+    "level": "introductory comparison with primary-reference entry points; full derivation and numerical verification pending",
+    "on": "2026-11-21"
+  },
+  "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/berendsen-thermostat/",
+  "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/berendsen-thermostat/index.json",
+  "markdown_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/berendsen-thermostat/index.md",
+  "code_urls": [],
+  "test_urls": [],
+  "run_commands": [],
+  "run_from": null,
+  "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
+  "code_edition": null
+}

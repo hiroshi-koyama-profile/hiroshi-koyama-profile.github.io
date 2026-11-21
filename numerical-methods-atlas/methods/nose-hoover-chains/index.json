@@ -1,0 +1,72 @@
+{
+  "id": "nose-hoover-chains",
+  "name": {
+    "ja": "Nosé–Hoover chain",
+    "en": "Nosé–Hoover chains"
+  },
+  "aliases": [
+    "ノセ・フーバー鎖",
+    "NHC",
+    "Nose-Hoover chain"
+  ],
+  "group": {
+    "id": "thermostats",
+    "ja": "温度制御・分子動力学",
+    "en": "Thermostats and molecular dynamics"
+  },
+  "summary": {
+    "ja": "熱浴変数にも別の熱浴を結合し、鎖状の拡張系を作る。単一熱浴での標本化の問題を改善するための発展形。",
+    "en": "Couple heat-bath variables to further heat baths in a chain. This extension addresses sampling problems of a single thermostat."
+  },
+  "caution": {
+    "ja": "鎖の長さ、質量、サブステップに依存する。鎖を加えるだけで任意の系のエルゴード性を保証するものではない。",
+    "en": "Chain length, masses and substeps matter. Adding a chain does not universally guarantee ergodicity."
+  },
+  "tier": "basic",
+  "status": "planned",
+  "origin": "development-candidate",
+  "reading": {
+    "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/thermostats/",
+    "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/thermostats/"
+  },
+  "code_modules": [],
+  "test_files": [],
+  "references": [
+    {
+      "label": "Martyna, Klein & Tuckerman (1992), Nosé–Hoover chains: The canonical ensemble via continuous dynamics",
+      "url": "https://doi.org/10.1063/1.463940",
+      "kind": "primary-paper",
+      "scope": "Bibliographic entry and introductory comparison; full derivation and numerical reproduction have not been audited."
+    },
+    {
+      "label": "LAMMPS: fix nvt / tchain",
+      "url": "https://docs.lammps.org/fix_nh.html",
+      "kind": "official-documentation",
+      "scope": "Bibliographic entry and introductory comparison; full derivation and numerical reproduction have not been audited."
+    }
+  ],
+  "assumptions": null,
+  "units": null,
+  "boundary_conditions": null,
+  "next_deliverable": {
+    "ja": "専用の定式化・積分手順を整理し、固定入力、自由度・乱数・刻み幅を明記した分布と時間相関の検証例を追加する。",
+    "en": "Add a dedicated formulation and integration recipe, followed by explicit-input distribution and time-correlation checks with stated degrees of freedom, random seeds and step sizes."
+  },
+  "limitations": {
+    "ja": "比較解説を公開。Under construction：専用の実装・数値検証結果はまだありません。",
+    "en": "Comparative reading is available. No dedicated implementation or numerical verification result is provided yet."
+  },
+  "metadata_review": {
+    "level": "introductory comparison with primary-reference entry points; full derivation and numerical verification pending",
+    "on": "2026-11-21"
+  },
+  "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/nose-hoover-chains/",
+  "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/nose-hoover-chains/index.json",
+  "markdown_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/nose-hoover-chains/index.md",
+  "code_urls": [],
+  "test_urls": [],
+  "run_commands": [],
+  "run_from": null,
+  "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
+  "code_edition": null
+}

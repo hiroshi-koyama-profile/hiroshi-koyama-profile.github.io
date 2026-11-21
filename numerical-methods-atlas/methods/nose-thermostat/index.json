@@ -1,0 +1,67 @@
+{
+  "id": "nose-thermostat",
+  "name": {
+    "ja": "Noséの拡張系",
+    "en": "Nosé extended-system thermostat"
+  },
+  "aliases": [
+    "ノセ",
+    "能勢",
+    "Nose thermostat",
+    "extended system"
+  ],
+  "group": {
+    "id": "thermostats",
+    "ja": "温度制御・分子動力学",
+    "en": "Thermostats and molecular dynamics"
+  },
+  "summary": {
+    "ja": "熱浴を表す追加自由度と時間のスケーリングを導入する、決定論的な定温度分子動力学の出発点。",
+    "en": "Introduce additional heat-bath degrees of freedom and time scaling: a starting point for deterministic constant-temperature molecular dynamics."
+  },
+  "caution": {
+    "ja": "元の拡張Hamiltonianと実時間でのNosé–Hoover方程式を区別する。分布の不変性だけでは軌道のエルゴード性は保証されない。",
+    "en": "Distinguish the original extended Hamiltonian from the real-time Nosé–Hoover equations. An invariant distribution alone does not establish ergodicity."
+  },
+  "tier": "basic",
+  "status": "planned",
+  "origin": "development-candidate",
+  "reading": {
+    "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/thermostats/",
+    "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/thermostats/"
+  },
+  "code_modules": [],
+  "test_files": [],
+  "references": [
+    {
+      "label": "Nosé (1984), A unified formulation of the constant temperature molecular dynamics methods",
+      "url": "https://doi.org/10.1063/1.447334",
+      "kind": "primary-paper",
+      "scope": "Bibliographic entry and introductory comparison; full derivation and numerical reproduction have not been audited."
+    }
+  ],
+  "assumptions": null,
+  "units": null,
+  "boundary_conditions": null,
+  "next_deliverable": {
+    "ja": "専用の定式化・積分手順を整理し、固定入力、自由度・乱数・刻み幅を明記した分布と時間相関の検証例を追加する。",
+    "en": "Add a dedicated formulation and integration recipe, followed by explicit-input distribution and time-correlation checks with stated degrees of freedom, random seeds and step sizes."
+  },
+  "limitations": {
+    "ja": "比較解説を公開。Under construction：専用の実装・数値検証結果はまだありません。",
+    "en": "Comparative reading is available. No dedicated implementation or numerical verification result is provided yet."
+  },
+  "metadata_review": {
+    "level": "introductory comparison with primary-reference entry points; full derivation and numerical verification pending",
+    "on": "2026-11-21"
+  },
+  "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/nose-thermostat/",
+  "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/nose-thermostat/index.json",
+  "markdown_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/nose-thermostat/index.md",
+  "code_urls": [],
+  "test_urls": [],
+  "run_commands": [],
+  "run_from": null,
+  "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
+  "code_edition": null
+}
