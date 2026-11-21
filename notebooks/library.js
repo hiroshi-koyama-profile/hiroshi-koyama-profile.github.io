@@ -2,34 +2,98 @@
   'use strict';
   const books = window.NOTEBOOKS.notebooks;
   const $ = id => document.getElementById(id);
-  let group='all';
-  const countPages=items=>items.reduce((n,b)=>n+b.frames.length,0);
-  $('book-total').textContent=String(books.length).padStart(2,'0');
-  $('page-total').textContent=countPages(books).toLocaleString('ja-JP');
-  const preferred=[books.find(b=>b.id==='n060'),books.find(b=>b.id==='n087'),books.find(b=>b.id==='n049')].filter(Boolean);
-  const featured=preferred.length ? preferred : books.slice(0,3);
-  featured.forEach(b=>{const im=document.createElement('img');im.src=b.frames[0].thumb;im.alt='';$('library-collage').append(im);});
-  function render(){
-    const query=$('search').value.trim().toLocaleLowerCase();
-    const shown=books.filter(b=>(group==='all'||b.group===group)&&`${b.display_title} ${b.source} ${b.lecture_title||''} ${b.lecturer||''} ${b.lecture_year||''}`.toLocaleLowerCase().includes(query));
-    $('result-count').textContent=`${shown.length} 冊 / ${countPages(shown).toLocaleString('ja-JP')} ページ`;
-    const grid=$('library-grid');grid.replaceChildren();
-    for(const b of shown){
-      const link=document.createElement('a');link.className='notebook-card';link.href=`notebook.html?id=${encodeURIComponent(b.id)}`;
-      const cover=document.createElement('div');cover.className='cover';
-      const im=document.createElement('img');im.src=b.frames[0].thumb;im.alt='';im.loading='lazy';cover.append(im);
-      const copy=document.createElement('div');copy.className='card-copy';
-      const small=document.createElement('small');small.textContent=`${b.group.toUpperCase()} / ${b.id.toUpperCase()}`;
-      const title=document.createElement('h2');title.textContent=b.lecture_title||b.display_title;
-      const source=document.createElement('p');source.className='original-name';source.textContent=b.source.split('/').pop();
-      const meta=document.createElement('div');meta.className='card-meta';
-      const status=document.createElement('span');status.textContent=`${b.lecturer||'講師未確認'} / ${b.lecture_year?b.lecture_year+'年'+(b.metadata_status==='from_original'?'（仮）':''):'年未確認'}`;
-      const count=document.createElement('span');count.textContent=`${b.frames.length} ページ ↗`;
-      meta.append(status,count);copy.append(small,title,source,meta);link.append(cover,copy);grid.append(link);
-    }
-    if(!shown.length){const p=document.createElement('p');p.className='empty-results';p.textContent='一致するノートがありません。検索語を変えてください。';grid.append(p);}
-    document.querySelectorAll('[data-group]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.group===group)));
+  const groupNames = {'kyoto-u': ['京都大学', 'Kyoto University'], 'u-tokyo': ['東京大学', 'The University of Tokyo']};
+  let group = 'all';
+  const countPages = items => items.reduce((n, book) => n + book.frames.length, 0);
+  function english() {
+    const selected = document.querySelector('[data-site-lang][aria-current="page"]');
+    const requested = selected?.dataset.siteLang || new URL(location.href).searchParams.get('lang');
+    if (requested === 'ja' || requested === 'en') return requested === 'en';
+    try { return localStorage.getItem('hrkoyama.home.language') === 'en'; } catch { return false; }
   }
-  document.querySelectorAll('[data-group]').forEach(b=>b.addEventListener('click',()=>{group=b.dataset.group;render();}));
-  $('search').addEventListener('input',render);render();
+  function wording(element, ja, en) {
+    element.dataset.uiJa = ja;
+    element.dataset.uiEn = en;
+    element.textContent = english() ? en : ja;
+    return element;
+  }
+  function label(tag, ja, en, className) {
+    const element = wording(document.createElement(tag), ja, en);
+    if (className) element.className = className;
+    return element;
+  }
+  function university(book) {
+    return groupNames[book.group] || [book.group, book.group];
+  }
+  function sourceDetails(book) {
+    const details = document.createElement('details');
+    details.className = 'original-info';
+    details.append(label('summary', '原本情報', 'Original record'));
+    const list = document.createElement('dl');
+    for (const [ja, en, value] of [
+      ['ノートID', 'Notebook ID', book.id.toUpperCase()],
+      ['元ファイル名', 'Original filename', book.source.split('/').pop()],
+      ['保存元', 'Original location', book.source],
+      ['整理用見出し', 'Archive title', book.display_title]
+    ]) {
+      const term = label('dt', ja, en);
+      const detail = document.createElement('dd');
+      detail.textContent = value;
+      list.append(term, detail);
+    }
+    details.append(list);
+    return details;
+  }
+  function render() {
+    $('book-total').textContent = String(books.length);
+    $('page-total').textContent = countPages(books).toLocaleString(english() ? 'en-US' : 'ja-JP');
+    $('search').placeholder = english() ? 'Subject, instructor, year or original filename' : '科目・講師名・年・元ファイル名';
+    const query = $('search').value.trim().toLocaleLowerCase();
+    const shown = books.filter(book => (group === 'all' || book.group === group) &&
+      `${book.display_title} ${book.source} ${book.id} ${book.lecture_title || ''} ${book.lecturer || ''} ${book.lecture_year || ''} ${university(book).join(' ')}`.toLocaleLowerCase().includes(query));
+    wording($('result-count'), `${shown.length} 冊 / ${countPages(shown).toLocaleString('ja-JP')} ページ`, `${shown.length} notebooks / ${countPages(shown).toLocaleString('en-US')} pages`);
+    const grid = $('library-grid');
+    grid.replaceChildren();
+    for (const book of shown) {
+      const card = document.createElement('article');
+      card.className = 'notebook-card';
+      const open = document.createElement('a');
+      open.className = 'notebook-open';
+      open.href = `notebook.html?id=${encodeURIComponent(book.id)}`;
+      const cover = document.createElement('div');
+      cover.className = 'cover';
+      const image = document.createElement('img');
+      image.src = book.frames[0].thumb;
+      image.alt = '';
+      image.loading = 'lazy';
+      image.width = 290;
+      image.height = 406;
+      cover.append(image);
+      const copy = document.createElement('div');
+      copy.className = 'card-copy';
+      const names = university(book);
+      const school = label('p', names[0], names[1], 'card-school');
+      const title = document.createElement('h2');
+      title.textContent = book.lecture_title || book.display_title;
+      if (!book.lecture_title) title.append(label('span', '整理用の見出し', 'Archive title', 'card-title-note'));
+      const pages = label('p', `${book.frames.length} ページ`, `${book.frames.length} pages`, 'card-pages');
+      const instructorJa = book.lecturer || '講師未確認';
+      const instructorEn = book.lecturer || 'Instructor unconfirmed';
+      const provisional = book.metadata_status === 'from_original';
+      const yearJa = book.lecture_year ? `${book.lecture_year}年${provisional ? '（仮）' : ''}` : '年未確認';
+      const yearEn = book.lecture_year ? `${book.lecture_year}${provisional ? ' (provisional)' : ''}` : 'Year unconfirmed';
+      const meta = label('p', `${instructorJa} / ${yearJa}`, `${instructorEn} / ${yearEn}`, 'card-meta');
+      const action = label('span', 'ノートを読む', 'Read this notebook', 'card-action');
+      copy.append(school, title, pages, meta, action);
+      open.append(cover, copy);
+      card.append(open, sourceDetails(book));
+      grid.append(card);
+    }
+    if (!shown.length) grid.append(label('p', '一致するノートがありません。検索語を変えてください。', 'No notebooks match. Try another search term.', 'empty-results'));
+    document.querySelectorAll('[data-group]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.group === group)));
+  }
+  document.querySelectorAll('[data-group]').forEach(button => button.addEventListener('click', () => { group = button.dataset.group; render(); }));
+  $('search').addEventListener('input', render);
+  document.addEventListener('archive-language-change', render);
+  render();
 })();

@@ -19,3 +19,47 @@
 .privacy-note{margin:23px 0 27px;padding:20px 24px;background:var(--pale);border-left:3px solid var(--green)}.privacy-note h3{font-size:14px;font-weight:600;line-height:1.9;margin:0 0 8px}.privacy-note p{font-size:12px;line-height:2;color:var(--muted);margin:7px 0 0;max-width:1000px}.research-panel .primary-button:disabled,.manual-entry button:disabled{opacity:.5;cursor:default}@media(max-width:560px){.privacy-note{padding:17px 18px}.privacy-note h3{font-size:13px}.privacy-note p{font-size:11px}}
 
 .thesis-detail{margin-top:24px;padding-top:20px;border-top:1px solid var(--line)}.thesis-detail h4{font:19px/1.7 var(--serif);font-weight:400;margin:0 0 8px;overflow-wrap:anywhere}.thesis-detail p{font-size:11px;line-height:1.9;color:var(--muted);margin:8px 0}.thesis-detail .thesis-english{font:italic 13px/1.8 Georgia,serif;overflow-wrap:anywhere}.thesis-links{display:flex;flex-wrap:wrap;gap:8px 18px;margin:14px 0}.thesis-links a{font-size:11px;line-height:1.9}.thesis-detail .thesis-note{font-size:10px;margin-top:13px}
+
+/* Readable prose and task controls, independently of the lineage diagram. */
+.hero .intro,.section-intro,.panel-intro,.detail-description,.edge-evidence,
+.share-section p:not(.eyebrow):not(.share-status),.review-edge p,.unresolved p,.no-js{font-size:16px;line-height:1.85}
+.hero-kicker,.hero-footnote,.graph-toolbar p,.graph-key,.graph-key .graph-count,
+.detail-institution,.detail-milestone,.edge-heading h3,.evidence-link,.locator,
+.source-self,.source-row p,.source-row .source-publisher,.method-note p,
+.workflow span,.field-help,.flow-note b,.flow-note p,.review-sources a,
+.review-check,.privacy-note p,.thesis-detail p,.thesis-links a,.thesis-detail .thesis-note{font-size:14px;line-height:1.85}
+.hero .eyebrow,.section-heading .eyebrow,.small-label,.prototype-tag,
+.destination-label,.badge,.edge-period,.source-row>.source-kind,.updated,
+.share-status,.result-status,.card-preview figcaption,.export-hint{font-size:12px;line-height:1.8}
+.header nav,.hero-choices .primary-button,.hero-choices .hero-action,
+.primary-button,.secondary-button,.text-button,.try-strip a,
+.research-panel .primary-button,.result-actions button{font-size:14px;min-height:44px;line-height:1.8}
+.research-panel .field-group label,.research-panel form>label,.manual-entry label,
+.optional-grid label,.mode-field legend,.field-group label,.manual-entry summary,
+.research-panel summary,.optional-fields summary,.your-evidence summary{font-size:14px;line-height:1.8}
+.required-label,.research-panel .required-label{font-size:12px}
+.request-fields input,.request-fields select,input,textarea,select{font-size:16px}
+#research-prompt,#research-answer,#copy-fallback{font-size:14px;line-height:1.8}
+input::placeholder,textarea::placeholder{font-size:14px}
+.mode-choice{font-size:14px;min-height:44px}
+.privacy-note{margin:18px 0 24px}
+.privacy-note h3{font-size:16px}
+.privacy-note details{margin-top:10px}
+.privacy-note summary{cursor:pointer;min-height:44px;font-size:14px;line-height:1.8;display:list-item}
+.workflow{margin-bottom:16px}
+.review-edge h5,.source-row h3{font-size:16px}
+.research-panel .create-error,.create-error{font-size:14px;line-height:1.8}
+@media(max-width:560px){
+ .hero{padding-top:28px;padding-bottom:30px}
+ .hero h1{font-size:42px;margin-bottom:18px}
+ .hero-choices{gap:12px 20px}
+ .hero-choices .primary-button,.hero-choices .hero-action{font-size:14px}
+ .mini-root{font-size:12px;line-height:1.8}
+ .hero-footnote{margin-top:16px}
+ .workflow span{font-size:14px}
+ .research-panel{padding:20px 18px}
+ .research-panel form>label,.research-panel .primary-button,.mode-choice{font-size:14px}
+ .flow-note p,.review-edge p,.review-check,.privacy-note p{font-size:14px}
+}
+
+@media(max-width:560px){.workflow{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.workflow li{display:block}.workflow b{display:block;margin-bottom:6px}.workflow span{font-size:14px;line-height:1.7}.privacy-note{padding:16px 18px}.privacy-note>p:first-child{margin-top:0}}

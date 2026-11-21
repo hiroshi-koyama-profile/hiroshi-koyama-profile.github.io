@@ -41,3 +41,7 @@
 .book-guide-link{margin:0 0 42px}
 @media(max-width:700px){.reading-guide{padding-top:30px}.reading-head{margin-bottom:35px}.reading-head h1{font-size:31px}.reading-head .dek{font-size:16px}.reading-guide .section-heading h2{font-size:23px}.book-grid{grid-template-columns:1fr;gap:18px}.book-card{padding:22px}.book-card h3{font-size:22px}.book-top{grid-template-columns:84px minmax(0,1fr);gap:14px}.book-cover{width:84px;height:126px}.book-cover-fallback{padding:7px;gap:6px;border-left-width:3px}.book-cover-title{font-size:10px}.book-cover-author{font-size:7px}.book-cover-type{font-size:6px}.book-guide-link{margin-bottom:30px}}
 @media print{.reading-guide{padding:0}.reading-jumps{display:none}.book-grid{display:block}.book-card{margin-bottom:22px}.book-card h3{font-size:21px}.book-links{font-size:10px}}
+
+/* Bibliographic details are reading material, not decorative microcopy. */
+.reading-head>p,.book-card>p,.book-card dd,.reading-note{font-size:16px;line-height:1.95}.reading-jumps,.book-subject,.book-links,.book-connections a{font-size:14px;line-height:1.9}.book-card .book-authors{font-size:15px}.book-card .book-edition,.book-card .book-isbn,.book-isbn code,.book-card dt,.book-connections h4,.book-cover-credit{font-size:13px;line-height:1.9}
+@media(max-width:700px){.reading-head>p,.book-card>p,.book-card dd{font-size:16px}.book-links{gap:12px 18px}.book-card{padding:22px}.book-card .book-edition,.book-cover-credit{font-size:13px}}

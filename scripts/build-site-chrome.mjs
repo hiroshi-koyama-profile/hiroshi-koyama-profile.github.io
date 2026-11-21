@@ -2,6 +2,30 @@ import { readFile, writeFile, readdir } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { decorateSite } from './site-chrome.mjs';
 const root = new URL('../', import.meta.url);
+// Each archive keeps its own design; changed viewing assets must reach readers
+// even when their browser has cached the previous stylesheet or module.
+const archiveAssets = /^(?:astronomy-step-by-step|notebooks|academic-roots|guide|gordon-bell|the-art-of-thermal-instability)\/|^styles\/home\.css$/;
+const assetVersions = new Map();
+async function versionViewingAssets(html, pageUrl) {
+  const refs = [...html.matchAll(/\b(?:href|src)="([^"#]+\.(?:css|js|mjs)(?:\?[^"#]*)?)"/g)];
+  for (const match of refs) {
+    const original = match[1];
+    if (/^(?:[a-z]+:|\/\/)/i.test(original)) continue;
+    const assetUrl = original.startsWith('/') ? new URL(original.slice(1), root) : new URL(original, pageUrl);
+    const path = decodeURIComponent(assetUrl.pathname.slice(root.pathname.length));
+    if (!assetUrl.pathname.startsWith(root.pathname) || !archiveAssets.test(path)) continue;
+    if (!assetVersions.has(path)) {
+      const bytes = await readFile(new URL(path, root));
+      assetVersions.set(path, createHash('sha256').update(bytes).digest('hex').slice(0, 12));
+    }
+    const [pathname, query = ''] = original.split('?');
+    const params = new URLSearchParams(query.replaceAll('&amp;', '&'));
+    params.set('v', assetVersions.get(path));
+    const updated = pathname + '?' + params.toString().replaceAll('&', '&amp;');
+    html = html.replaceAll('="' + original + '"', '="' + updated + '"');
+  }
+  return html;
+}
 async function walk(dir) {
   for (const entry of await readdir(dir, {withFileTypes:true})) {
     if (entry.name.startsWith('.')) continue;
@@ -11,7 +35,8 @@ async function walk(dir) {
       const path = decodeURIComponent(url.pathname.slice(root.pathname.length));
       const reading = /^numerical-methods-atlas\/(en|ja)\/read\//.exec(path);
       const fixed = reading ? reading[1] : path === 'academic-roots/index.html' || path.startsWith('notebooks/') ? 'ja' : path.startsWith('gordon-bell/') || path.startsWith('the-art-of-thermal-instability/') ? 'en' : '';
-      await writeFile(url, decorateSite(await readFile(url,'utf8'), {contentLanguage:fixed}));
+      const decorated = decorateSite(await readFile(url,'utf8'), {contentLanguage:fixed});
+      await writeFile(url, await versionViewingAssets(decorated, url));
     }
   }
 }

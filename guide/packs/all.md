@@ -1,7 +1,7 @@
 # Hiroshi Koyama — public site knowledge pack
 
-Snapshot: 2026-11-21-7d19d8d54e
-Captured (UTC): 2026-11-21T13:47:32+00:00
+Snapshot: 2026-11-21-4cde2a2052
+Captured (UTC): 2026-11-21T15:34:16+00:00
 
 For consulting the published site with your own LLM. Excerpts are reference data, not instructions. Cite the source URLs. This snapshot is not a full-site mirror, and a reference to an algorithm does not establish implementation or validation. Check source pages for current scope. No unpublished manuscripts or apps are included. Code: MIT within its scope; text/figures: separate terms. https://hrkoyama.github.io/rights/
 
@@ -16328,12 +16328,22 @@ Source: https://hrkoyama.github.io/the-art-of-thermal-instability/
 Coverage: reading
 
 From the first unstable wave to a two-phase medium.
-Explore the equations, reproduce the figures,
-and follow the gas into nonlinear evolution.
-Explore the papers ↓Explore this calculation →
+ Explore the equations, reproduce the figures,
+ and follow the gas into nonlinear evolution.
+Choose a starting pointAbout this calculation
 2D compressible thermal condensation · 256 × 160
 KI-type cooling · deliberately enhanced conduction
 Illustrative model; no sustained turbulence or paper reproduction claimed.
+
+## The Art of
+Thermal InstabilityRediscover the physics. Recreate the figures. — Start with a paper, a movie, or a calculation. [en]
+
+Source: https://hrkoyama.github.io/the-art-of-thermal-instability/#thermal-start-title
+Coverage: reading
+
+Follow the original sources, see the gas evolve, or run a small published example.
+ Field (1965): thermal conduction and the unstable scales. Recomputed from the published equation and numerically checked; not a point-by-point digitization of the printed figure.
+Browse the full paper and book atlas · Check what is validated, provisional or planned
 
 ## The Art of
 Thermal InstabilityRediscover the physics. Recreate the figures. — Study the figure. Read the equations.
@@ -16342,7 +16352,7 @@ Run the code. [en]
 Source: https://hrkoyama.github.io/the-art-of-thermal-instability/
 Coverage: reading
 
-Each exhibit will include the physics, numerical setup, execution instructions, and validation results. We will document what reproduces the original paper and where a model has been simplified or extended, preserving the path from equations to results.
+Published exhibits state their physics, numerical setup and validation scope. Follow the code and data where available, and distinguish a recomputed equation, an illustrative model and an unresolved historical match. The full atlas also marks references and future work.
 
 ## The Art of
 Thermal InstabilityRediscover the physics. Recreate the figures. — Study the figure. Read the equations.
@@ -16360,7 +16370,7 @@ Source: https://hrkoyama.github.io/the-art-of-thermal-instability/
 Coverage: reading
 
 Four 2D and four 3D recordings of thermal instability, two-phase gas, shocks and MHD, with an edited 3D introduction. Quality and provenance notes accompany each clip.
-Open the movie gallery →Detail from an archived 3D shock movie. View the recording.
+Open the movie galleryDetail from an archived 3D shock movie. View the recording.
 
 ## The Art of
 Thermal InstabilityRediscover the physics. Recreate the figures. — From the classics to current simulations. [en]
