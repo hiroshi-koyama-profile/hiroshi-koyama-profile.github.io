@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "reviewed_on": "2026-11-21",
+  "reviewed_on": "2026-11-22",
   "title": {
     "ja": "数値計算法アトラス：現行の整備計画",
     "en": "Numerical Methods Atlas: current development plan"
@@ -86,7 +86,7 @@
     {
       "id": "method-assumptions-review",
       "target_year": 2026,
-      "state": "planned",
+      "state": "published",
       "track": "current",
       "title": {
         "ja": "主要24手法の条件・制約・文献を整理",
@@ -96,7 +96,27 @@
         "ja": "代表例に関わる手法から、何を解くか、使える条件、避ける条件、確認した範囲と原典を整理する。未確認と適用対象外を区別し、章単位の関連文献を個別手法の検証と混同しない。",
         "en": "Start with methods used by representative examples: what they solve, applicable and unsuitable conditions, checked scope and original sources. Distinguish unknown from not applicable, and chapter-related references from method-specific verification."
       },
-      "priority": "P0"
+      "priority": "P0",
+      "progress": {
+        "ja": "主要24手法を日英で個別整理。問題・採用形・使える条件・避ける条件、単位と境界、制約、文献の役割と実際の確認範囲を公開。専用実装や新しい数値検証の完了とは区別します。",
+        "en": "Published method-specific bilingual records for 24 priority methods: problems, adopted variants, use/avoid conditions, units, boundaries, limits, source roles and actual review depth. This is distinct from dedicated implementation or new numerical validation."
+      },
+      "links": [
+        {
+          "url": "/numerical-methods-atlas/methods/?lang=ja",
+          "label": {
+            "ja": "主要24手法を含む手法台帳",
+            "en": "Method map including the 24 reviewed records"
+          }
+        },
+        {
+          "url": "/numerical-methods-atlas/methods/reviewed.json",
+          "label": {
+            "ja": "個別整理した24手法 / JSON",
+            "en": "24 reviewed method records / JSON"
+          }
+        }
+      ]
     },
     {
       "id": "representative-recipes",

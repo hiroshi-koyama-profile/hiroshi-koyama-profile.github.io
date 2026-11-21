@@ -70,6 +70,10 @@ Google Search Consoleの対象プロパティは `https://hrkoyama.github.io/`�
 
 公開用の追加実行記録は `numerical-methods-atlas/code-and-data/verification/` に保存し、台帳の `verification_receipt` を対応するURLにする。registryの内容と記録内のSHA-256が一致することを生成時に確認する。通常のrefreshは保存済み記録を参照し、ネット取得や科学計算を繰り返さない。レシピを変えた場合は記録を取り直し、古い記録を新しい条件の成功と表示しない。コードのMIT、入力・数値データ・図・本文の個別条件、第三者資料の条件は別のまま保持する。
 
+主要24手法の個別条件は `catalog/atlas-methods.json` の `priority_review` / `method_review` を正本とする。問題・実際の採用形・使う条件・避ける条件・単位・境界・制約を日英で記載し、`specified` / 理由付き `not-applicable` / `unknown` を区別する。原法・採用変種・定式化・参照解・背景の文献役割と、本文の該当箇所／抄録・書誌／書誌のみの確認範囲を保存する。この整理で数値検証済みの状態へ格上げしない。Ewald/PME/SPMEは実装前の比較仕様であり、重力PMの核・境界・符号と区別する。
+
+一次文献の書誌は `catalog/atlas-method-primary-references.json` から `build-atlas-method-sources.py` が統合する。DOI・既存ID・同じ題名と年を照合し、URL別名や複数手法からの引用を重複加算しない。文献統合を量子章生成より先に実行し、全体の文献数・BibTeX・日英文献一覧を揃える。`atlas_method_review.py` は条件の欠落と状態・文献の確認範囲を検査し、HTML/Markdownと `/numerical-methods-atlas/methods/reviewed.json` へ同じ内容を出す。
+
 現在の作業順序と専門AIを2027年以降に繰り延べる決定は `catalog/atlas-work-queue.json` が正本。専門AIや独立した基盤モデルが実装済みであると表示しない。数値検証例は実際に固定入力で計算し、独立参照・残差・収束・終了理由・コードと環境の版を記録してから台帳の状態を変更する。
 
 数式一覧は `coverage.json` の全 `kind=equation` 項目とID・実装状態・章を完全照合する。一部だけの代表一覧へ戻さない。数式はLaTeXで保存し、同梱のKaTeXで静的HTML・MathMLにするため、新たなパッケージ取得は不要。モデル追加・章内の見出し変更時は全項目との件数一致だけでなくID集合と日英の節リンクも検査する。文献解説のみのモデルを計算例ありに変更せず、相対論や生物モデルの代表形・縮約・模式式の条件を残す。

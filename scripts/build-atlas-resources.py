@@ -6,12 +6,15 @@ import html
 import json
 import re
 import xml.etree.ElementTree as ET
+from atlas_method_review import (validate_method_reviews, review_intro, field_note,
+                                 verification_html, references_html, review_markdown)
 
 ROOT=Path(__file__).resolve().parents[1]
 ATLAS=ROOT/'numerical-methods-atlas'
 ORIGIN='https://hrkoyama.github.io'
 DATA=json.loads((ROOT/'catalog/atlas-methods.json').read_text())
 METHODS=DATA['methods']
+REVIEWED=validate_method_reviews(DATA)
 EXECUTION_RECORDS=json.loads((ROOT/'catalog/atlas-execution-examples.json').read_text())['examples']
 EXECUTION_REGISTRY=ORIGIN+'/numerical-methods-atlas/code-and-data/examples.json'
 def execution_links(method_id):
@@ -90,18 +93,28 @@ for lang in ['ja','en']:
     body+='<p>'+('幅広い数値計算を結ぶ拡張中の地図です。未収録の分野もあり、すべての手法や原論文を網羅するという意味ではありません。' if ja else 'An expanding cross-field map, with gaps still to fill; not a claim to exhaust every method or original paper.')+'</p>'
     body+='<p><strong>'+esc(DATA['editorial_policy']['title'][lang])+':</strong> '+esc(DATA['editorial_policy']['statement'][lang])+'</p>'
     body+='<p>'+link('index.json','手法台帳 / JSON' if ja else 'Method registry / JSON')+' · '+link('/catalog/atlas-methods.json','正本データ' if ja else 'Catalog source')+' · '+link('/using/','使い方と引用' if ja else 'Use and citation')+'</p>'
+    if REVIEWED:
+        body+='<details class="reviewed-methods" id="reviewed-'+lang+'"><summary>'+('主要24手法：条件・制約・一次文献を個別整理' if ja else '24 priority methods: curated conditions, limits and primary sources')+'</summary><p>'+('解く問題、採用形、使える条件・避ける条件、単位と境界、既存の確認範囲を同じ順で読めます。文献を整理した状態と、専用コードが実装・検証された状態は別です。' if ja else 'Read the problem, adopted formulation, suitable and unsuitable conditions, units, boundaries and existing checks in a common order. Source curation and a numerically verified dedicated implementation are separate states.')+'</p><p>'+link('reviewed.json','主要24手法 / JSON' if ja else '24 reviewed records / JSON')+'</p><ul class="reviewed-links">'+''.join('<li>'+link(x['id']+'/?lang='+lang,x['name'][lang])+'</li>' for x in REVIEWED)+'</ul></details>'
     body+='<nav class="resource-nav" aria-label="Method groups">'+''.join(link('#'+g['id']+'-'+lang,g[lang]) for g in DATA['groups'])+'</nav>'
     for group in DATA['groups']:
         rows=[x for x in METHODS if x['group']['id']==group['id']]
         if not rows:continue
         body+='<section id="'+group['id']+'-'+lang+'"><h2>'+esc(group[lang])+'</h2><ul class="method-list">'
         for x in rows:
-            body+='<li>'+link(x['id']+'/',x['name'][lang])+'<br><span class="resource-status">'+status(x,lang)+'</span><p>'+esc(x['summary'][lang])+'</p></li>'
+            badge=('<span class="method-curated">'+('条件・文献を個別整理' if ja else 'Conditions and sources curated')+'</span>') if x.get('method_review') else ''
+            body+='<li>'+link(x['id']+'/',x['name'][lang])+'<br><span class="resource-status">'+status(x,lang)+'</span>'+badge+'<p>'+esc(x['summary'][lang])+'</p></li>'
         body+='</ul></section>'
     body+='</section>';sections.append(body)
 write('/numerical-methods-atlas/methods/index.html',page('手法の見取り図','A map of numerical methods','/numerical-methods-atlas/methods/',''.join(sections)))
 published={**DATA,'methods':[public_record(x) for x in METHODS],'code_release':{'download':ORIGIN+CODE+archive,'manifest':ORIGIN+CODE+'source-manifest.json','verification':ORIGIN+CODE+'verification.json','sha256':archive_hash}}
 write('/numerical-methods-atlas/methods/index.json',json.dumps(published,ensure_ascii=False,indent=2)+'\n')
+if REVIEWED:
+    reviewed={'schema_version':1,'reviewed_on':DATA['priority_review']['on'],
+              'scope':DATA['priority_review']['scope'],'method_count':len(REVIEWED),
+              'review_kind':'method conditions, primary sources and existing code inspected; no new numerical runs',
+              'catalog_source':ORIGIN+'/catalog/atlas-methods.json',
+              'methods':[public_record(x) for x in REVIEWED]}
+    write('/numerical-methods-atlas/methods/reviewed.json',json.dumps(reviewed,ensure_ascii=False,indent=2)+'\n')
 
 for x in METHODS:
     url='/numerical-methods-atlas/methods/'+x['id']+'/'
@@ -109,6 +122,7 @@ for x in METHODS:
     for lang in ['ja','en']:
         ja=lang=='ja';body='<section data-site-language="'+lang+'" lang="'+lang+'"><p class="eyebrow">'+esc(x['group'][lang])+'</p><h1>'+esc(x['name'][lang])+'</h1><p class="resource-status">'+status(x,lang)+'</p><p class="intro">'+esc(x['summary'][lang])+'</p>'+nav(lang)
         if x.get('aliases'):body+='<p>'+('別名・表記：' if ja else 'Other names: ')+esc(' / '.join(x['aliases']))+'</p>'
+        if x.get('method_review'):body+=review_intro(x,lang)
         if x['status']=='planned':
             body+='<h2>'+('次の成果物' if ja else 'Next deliverable')+'</h2><p>'+esc(x['next_deliverable'][lang])+'</p>'
         if x['reading']:
@@ -117,9 +131,13 @@ for x in METHODS:
             body+='<h2>'+('解説と位置付け' if ja else 'Read the formulation')+'</h2><p>'+link(reading,label)+'</p>'
         if x.get('caution'):body+='<h2>'+('比較するときの注意' if ja else 'Comparison notes')+'</h2><p>'+esc(x['caution'][lang])+'</p>'
         if x.get('assumptions'):
-            body+='<h2>'+('この例の前提' if ja else 'Assumptions for this example')+'</h2><ul>'+''.join('<li>'+esc(a)+'</li>' for a in (x.get('assumptions_ja',x['assumptions']) if ja else x['assumptions']))+'</ul>'
+            body+='<h2>'+(('前提・比較仕様' if ja else 'Assumptions and comparison specification') if x.get('method_review') else ('この例の前提' if ja else 'Assumptions for this example'))+'</h2><ul>'+''.join('<li>'+esc(a)+'</li>' for a in (x.get('assumptions_ja',x['assumptions']) if ja else x['assumptions']))+'</ul>'
+            if x.get('method_review'):body+=field_note(x,'assumptions',lang)
         if x.get('boundary_conditions'):
-            body+='<p><strong>'+('境界条件' if ja else 'Boundaries')+':</strong> '+esc(x.get('boundary_conditions_ja',x['boundary_conditions']) if ja else x['boundary_conditions'])+'</p><p><strong>'+('単位系' if ja else 'Units')+':</strong> '+esc(x.get('units_ja',x['units']) if ja else x['units'])+'</p>'
+            body+='<p><strong>'+('境界条件' if ja else 'Boundaries')+':</strong> '+esc(x.get('boundary_conditions_ja',x['boundary_conditions']) if ja else x['boundary_conditions'])+'</p>'
+            if x.get('method_review'):body+=field_note(x,'boundary_conditions',lang)
+            body+='<p><strong>'+('単位系' if ja else 'Units')+':</strong> '+esc(x.get('units_ja',x['units']) if ja else x['units'])+'</p>'
+            if x.get('method_review'):body+=field_note(x,'units',lang)
         if x['code_modules']:
             body+='<h2>'+('関連コードと検証' if ja else 'Related code and checks')+'</h2><p>'+('この章に関係する実装と検査です。各ファイルが、その名前の手法のすべての変種を検証するわけではありません。' if ja else 'Chapter-related implementations and checks. These files do not verify every variant of the named method.')+'</p><ul class="resource-files">'
             body+=''.join('<li>'+link(CODE+'numart/'+name+'.py','numart/'+name+'.py')+'</li>' for name in x['code_modules'])
@@ -136,9 +154,12 @@ for x in METHODS:
             example=x['example']
             body+='<h2>'+('固定入力から計算する' if ja else 'Run an explicit input')+'</h2><p>'+('192粒子の座標・質量を保存した入力を使い、ツリーと直接和の力を計算します。出力は誤差と検査を記録するJSON、粒子ごとの力を記録するCSVです。' if ja else 'Use explicit positions and masses for 192 particles. Compute tree and direct-sum forces, then export error/check records as JSON and particle forces as CSV.')+'</p><p>'+link(example['input'],'入力 / Input JSON')+' · '+link(example['runner'],'実行コード / Runner')+' · '+link(example['reference'],'参照出力 / Reference JSON')+' · '+link(example['forces'],'力のデータ / Force CSV')+'</p><pre><code>'+esc(example['command'])+'</code></pre>'
         body+='<h2>'+('適用範囲と残る作業' if ja else 'Scope and remaining work')+'</h2><p>'+esc(x['limitations'][lang])+'</p>'
+        if x.get('method_review'):body+=field_note(x,'limitations',lang)+verification_html(x,lang)
         if x['metadata_review']['level'].startswith('chapter-linked') and not x.get('assumptions'):
             body+='<p>'+('この項目の条件・単位の個別整理は継続中です。空欄は適用条件がないことを意味しません。解説章とコードの条件を確認してください。' if ja else 'Method-record assumptions and units are still being curated. Missing fields do not mean unrestricted applicability; consult the chapter and code.')+'</p>'
-        if x['references']:
+        if x.get('method_review'):
+            body+=references_html(x,lang)
+        elif x['references']:
             body+='<h2>'+('文献への入口' if ja else 'Reference entry points')+'</h2><ul>'+''.join('<li>'+link(r['url'],r.get('label',r['url']))+'</li>' for r in x['references'])+'</ul><p>'+('書誌や章の参照先の案内です。原文・式の確認範囲は元の章とJSONのscope欄を参照してください。' if ja else 'Bibliographic and chapter reference links. Consult the chapter and JSON scope fields for the extent of source review.')+'</p>'
         else:
             body+='<p>'+('一次文献の個別整理は今後の作業です。' if ja else 'Dedicated primary-reference curation remains to be completed.')+'</p>'
@@ -151,6 +172,7 @@ for x in METHODS:
     md='# '+x['name']['en']+' / '+x['name']['ja']+'\n\nStatus: '+x['status']+'\n\n'+x['summary']['en']+'\n\n'+x['summary']['ja']+'\n\n'+x['limitations']['en']+'\n\n'
     if x.get('aliases'):md+='Other names: '+', '.join(x['aliases'])+'\n\n'
     if x.get('caution'):md+='Comparison notes: '+x['caution']['en']+'\n\n'+x['caution']['ja']+'\n\n'
+    if x.get('method_review'):md+=review_markdown(x)+'\n\n'
     md+='\n'.join('- Reading ('+lang+'): '+ORIGIN+u for lang,u in x['reading'].items())+'\n\n'
     md+='\n'.join('- Code: '+ORIGIN+CODE+'numart/'+name+'.py' for name in x['code_modules'])+'\n\n'
     md+='\n'.join('- Reference: '+r['url']+' — '+r['scope'] for r in x['references'])+'\n\n'
@@ -211,6 +233,7 @@ block=f'''\n## Method records and executable code
 
 - [Method map]({ORIGIN}/numerical-methods-atlas/methods/): {existing_count} existing method/building-block entries and {planned_count} separately labeled development candidates. Planned entries have no dedicated solver or verification result.
 - [Method registry / JSON]({ORIGIN}/numerical-methods-atlas/methods/index.json): Names, status, reading routes, chapter-related Python modules, tests, reference links and explicit metadata gaps. Each entry has a stable HTML URL, index.json and index.md. Null assumptions or boundaries mean not yet curated, not unrestricted applicability.
+- [Reviewed priority methods / JSON]({ORIGIN}/numerical-methods-atlas/methods/reviewed.json): {len(REVIEWED)} method-specific records with problems, adopted variants, use/avoid conditions, units, boundary conventions, explicit specified/not-applicable/unknown states, source roles and actual source-check depth. Metadata review is not a new numerical verification run; planned methods retain their status.
 - Editorial scope: {DATA['editorial_policy']['statement']['en']}
 - [Code, inputs and verification]({ORIGIN}/numerical-methods-atlas/code-and-data/): Public ZIP, file hashes, dependencies and standalone verification. Original implementation code is MIT within its scope; datasets and content retain separate terms.
 - [Shared execution records / JSON]({EXECUTION_REGISTRY}): three existing examples (Barnes–Hut, hydrogenic atoms, helium) with fixed inputs, versioned downloads, commands, outputs, numeric acceptance rules, failure scope and citation. Follow each record’s guide URL and the linked public-download rerun receipt. The atomic examples share one runner.

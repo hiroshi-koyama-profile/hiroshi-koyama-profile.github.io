@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "edition": "Published web edition",
-  "counted_on": "2026-11-21",
+  "counted_on": "2026-11-22",
   "policy": {
     "equations": "Named equation/model entries, not scalar component equations or mathematically disjoint families. Includes frameworks and auxiliary formulations; variants share one entry except the three separately explained SR/GR fluid systems. Biological entries are imported once from their own catalog.",
     "methods": "Named numerical methods and building blocks with a reading chapter. Aliases count once; RK stages, dimensions, parameter combinations, mesh layouts and theoretical conditions do not add methods. A family and a separately explained algorithm may both appear. Not a count of mutually exclusive end-to-end solvers.",
@@ -12,9 +12,9 @@
   "counts": {
     "equations": 46,
     "methods": 108,
-    "papers": 168,
-    "references": 205,
-    "journal_articles": 165,
+    "papers": 181,
+    "references": 218,
+    "journal_articles": 178,
     "conference_papers": 3,
     "books": 22,
     "chapters": 2,
@@ -2329,6 +2329,84 @@
       "identity": "doi:10.1088/0067-0049/217/2/24"
     },
     {
+      "id": "courant1952-180365",
+      "type": "article",
+      "identity": "doi:10.1002/cpa.3160050303",
+      "origin": "curated-method-metadata"
+    },
+    {
+      "id": "davis1988-53e27b",
+      "type": "article",
+      "identity": "doi:10.1137/0909030",
+      "origin": "curated-method-metadata"
+    },
+    {
+      "id": "butcher1963-a03cee",
+      "type": "article",
+      "identity": "doi:10.1017/s1446788700027932",
+      "origin": "curated-method-metadata"
+    },
+    {
+      "id": "verlet1967-7d42ed",
+      "type": "article",
+      "identity": "doi:10.1103/physrev.159.98",
+      "origin": "curated-method-metadata"
+    },
+    {
+      "id": "hestenes1952-5a277d",
+      "type": "article",
+      "identity": "doi:10.6028/jres.049.044",
+      "origin": "curated-method-metadata"
+    },
+    {
+      "id": "armijo1966-b665c2",
+      "type": "article",
+      "identity": "doi:10.2140/pjm.1966.16.1",
+      "origin": "curated-method-metadata"
+    },
+    {
+      "id": "dembo1982-bc19d7",
+      "type": "article",
+      "identity": "doi:10.1137/0719025",
+      "origin": "curated-method-metadata"
+    },
+    {
+      "id": "eastwood1974-a0a7f3",
+      "type": "article",
+      "identity": "doi:10.1016/0021-9991(74)90044-8",
+      "origin": "curated-method-metadata"
+    },
+    {
+      "id": "fock1930",
+      "type": "article",
+      "identity": "doi:10.1007/bf01340294",
+      "origin": "curated-method-metadata"
+    },
+    {
+      "id": "pyscf2020",
+      "type": "article",
+      "identity": "doi:10.1063/5.0006074",
+      "origin": "curated-method-metadata"
+    },
+    {
+      "id": "ewald1921",
+      "type": "article",
+      "identity": "doi:10.1002/andp.19213690304",
+      "origin": "curated-method-metadata"
+    },
+    {
+      "id": "darden1993pme",
+      "type": "article",
+      "identity": "doi:10.1063/1.464397",
+      "origin": "curated-method-metadata"
+    },
+    {
+      "id": "essmann1995spme",
+      "type": "article",
+      "identity": "doi:10.1063/1.470117",
+      "origin": "curated-method-metadata"
+    },
+    {
       "id": "schrodinger1926",
       "type": "article",
       "identity": "doi:10.1002/andp.19263840404",
@@ -2511,7 +2589,8 @@
   },
   "public_extension_sha256": {
     "catalog/atlas-quantum.json": "7fa67bfbe031fe39dc59847a77021ef3c9ce0cb750e0455dfac850975c6af672",
-    "catalog/atlas-methods.json": "a3401da010ebe86d2f6643fdc388d368851e93a262b60ac6bedc0844c10d2d5c",
-    "catalog/atlas-equations.json": "abd7c1cc2732b5062cc58e7bb7d08c8ef6df1c88d974fd31d4b6181012ba6433"
+    "catalog/atlas-methods.json": "cb7e2793a16e81d202644d9c00fb35085d5a8b42c62d01d2b6a6b736cc12080a",
+    "catalog/atlas-equations.json": "abd7c1cc2732b5062cc58e7bb7d08c8ef6df1c88d974fd31d4b6181012ba6433",
+    "catalog/atlas-method-primary-references.json": "e946aabc548e150d0e0aadd61f3ab61d95af6e67393370fff1b2400509b7c39b"
   }
 }

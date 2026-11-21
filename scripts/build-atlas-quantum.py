@@ -122,8 +122,8 @@ for path in [ATLAS/'coverage.json',ATLAS/'assets/site-coverage.json']:
         rows=[x for x in coverage['items'] if x['kind']==kind]
         c[kind+'s']=len(rows);c['local_'+kind+'s']=sum(x['status']=='local-example' for x in rows);c['reading_'+kind+'s']=sum(x['status']=='reading' for x in rows)
     c.update(references=len(coverage['publications']),journal_articles=pub['article'],conference_papers=pub['inproceedings'],papers=pub['article']+pub['inproceedings'],reading_chapters=len({p.parent for p in (ATLAS/'en/read').glob('*/index.html')}))
-    coverage['counted_on']=data['reviewed_on']
-    coverage['public_extension_sha256']={f:sha(ROOT/f) for f in ['catalog/atlas-quantum.json','catalog/atlas-methods.json','catalog/atlas-equations.json']}
+    coverage['counted_on']=max(coverage['counted_on'],data['reviewed_on'])
+    coverage['public_extension_sha256']={f:sha(ROOT/f) for f in ['catalog/atlas-quantum.json','catalog/atlas-methods.json','catalog/atlas-equations.json','catalog/atlas-method-primary-references.json']}
     write(path,coverage)
 
 # Public roadmap rendering is separate from imported development history.
@@ -227,7 +227,7 @@ for lang in ['ja','en']:
                 text,updated_headings=adapt_roadmap_history(text,doc[name]['headings'] if doc is not None else None,lang,roadmap_headings)
                 if doc is not None:doc[name]['headings']=updated_headings
             if name=='site-coverage':
-                text=re.sub(r'(counted |集計日)\d{4}-\d\d-\d\d',lambda m:m[1]+data['reviewed_on'],text)
+                text=re.sub(r'(counted |集計日)\d{4}-\d\d-\d\d',lambda m:m[1]+coverage['counted_on'],text)
                 if ja:
                     text=re.sub(r'方程式・モデル\d+項目・計算法と構成要素\d+項目・学術誌／会議論文\d+件・全参考資料\d+件。',f'方程式・モデル{counts["equations"]}項目・計算法と構成要素{counts["methods"]}項目・学術誌／会議論文{counts["papers"]}件・全参考資料{counts["references"]}件。',text)
                     text=re.sub(r'ローカル実験のある項目は\d+、文献解説のみは\d+で、',f'ローカル実験のある項目は{counts["local_equations"]}、文献解説のみは{counts["reading_equations"]}で、',text)

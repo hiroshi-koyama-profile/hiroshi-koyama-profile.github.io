@@ -10,8 +10,8 @@
     "en": "Linear & nonlinear solvers"
   },
   "summary": {
-    "ja": "「Armijo減衰Newton法」の考え方と適用範囲を、解説章・一次文献・関連する教育用コードからたどります。",
-    "en": "Read about Armijo-damped Newton, follow the original references and inspect related educational code and checks."
+    "ja": "非線形方程式 F(x)=0 を、Jacobianから求めたNewton方向と残差ノルムの十分減少による減衰で解く。公開例は密行列解法または前処理付きGMRESの内部解法を選べる。",
+    "en": "Solve F(x)=0 using a Jacobian-based Newton direction and damping that requires sufficient decrease of the residual norm. The example supports a dense or preconditioned GMRES inner solve."
   },
   "status": "educational-example",
   "origin": "existing-coverage-catalog",
@@ -28,26 +28,154 @@
   "code_mapping_scope": "Related chapter modules and test files; not a claim that each test covers every named method.",
   "references": [
     {
-      "url": "https://doi.org/10.1137/0907058",
-      "label": "GMRES: A generalized minimal residual algorithm for solving nonsymmetric linear systems (1986)",
-      "scope": "Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation."
+      "url": "https://doi.org/10.2140/pjm.1966.16.1",
+      "label": "Armijo, L. (1966). Minimization of functions having Lipschitz continuous first partial derivatives.",
+      "scope": "Source for sufficient-decrease and halving-backtracking ideas; the atlas adapts the test to ||F||, not to the paper's steepest-descent problem.",
+      "role": "adopted-variant",
+      "kind": "primary-research",
+      "supports": {
+        "ja": "十分減少と刻みの半減という考え方の根拠。原論文の最小化の収束定理を、この非線形方程式実装の保証とはしない。",
+        "en": "Supports sufficient decrease and step halving; the minimization theorem is not a convergence certificate for this root solver."
+      },
+      "verification": {
+        "checked_on": "2026-11-22",
+        "level": "full-text",
+        "url": "https://msp.org/pjm/1966/16-1/pjm-v16-n1-p01-s.pdf",
+        "locator": "Printed pp. 1–3; convergence theorem and Corollary 2, equation (2)."
+      },
+      "bibliography_id": "armijo1966-b665c2"
     },
     {
-      "url": "https://doi.org/10.1137/0913035",
-      "label": "Bi-CGSTAB: A Fast and Smoothly Converging Variant of Bi-CG for the Solution of Nonsymmetric Linear Systems (1992)",
-      "scope": "Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation."
+      "url": "https://doi.org/10.1137/0719025",
+      "label": "Dembo, R. S., Eisenstat, S. C. & Steihaug, T. (1982). Inexact Newton Methods.",
+      "scope": "Newton equations and approximate inner linear solves; context for the GMRES path, not proof of the atlas's particular forcing rule.",
+      "role": "formulation",
+      "kind": "primary-research",
+      "supports": {
+        "ja": "Newton方程式を近似的に解く定式化。今回確認したのは抄録であり、実装固有の内部許容誤差の定理適合は未確認。",
+        "en": "Formulates approximate Newton solves; only the abstract was reviewed, not a theorem audit of the implemented inner tolerance."
+      },
+      "verification": {
+        "checked_on": "2026-11-22",
+        "level": "abstract-and-metadata",
+        "url": "https://epubs.siam.org/doi/abs/10.1137/0719025",
+        "locator": "Publisher abstract and bibliographic metadata, as returned by web search; direct full text not reviewed."
+      },
+      "bibliography_id": "dembo1982-bc19d7"
     }
   ],
-  "assumptions": null,
-  "units": null,
-  "boundary_conditions": null,
+  "assumptions": [
+    "The caller supplies F and its Jacobian; the basic setting is a square differentiable system with a nonsingular Jacobian near the root.",
+    "Starting at one, the step is halved until ||F(x+αs)||₂ ≤ (1−10⁻⁴α)||F(x)||₂; failure is returned below α=2⁻²⁰.",
+    "The GMRES path still uses an explicitly supplied Jacobian; CSR uses ILU(0), otherwise Jacobi preconditioning. Inner and outer absolute residual criteria differ."
+  ],
+  "units": "No intrinsic physical unit; the caller defines unknown and residual scales. Components are not nondimensionalized automatically, so scale them consistently before using the norm and absolute tolerance.",
+  "boundary_conditions": "Newton has no intrinsic physical boundary. F/Jacobian assembly supplies it; the existing Bratu test encodes zero Dirichlet values at both ends of [0,1].",
   "limitations": {
-    "ja": "対象方程式・境界条件・検証の範囲は解説章と各コードを確認してください。教育用例は汎用ソルバーの完成を意味しません。",
-    "en": "See the chapter and implementation for equations, boundaries and checked scope. Educational examples are not complete general-purpose solvers."
+    "ja": "初期値、Jacobianの非特異性、残差の尺度に依存し、大域的収束は保証しない。特異な密行列解法や前処理構築は例外となることがあり、すべてが失敗理由の戻り値に変換されるわけではない。行列なしJv、信頼領域、継続法は備えない。",
+    "en": "Convergence depends on the initial guess, Jacobian nonsingularity and residual scaling; global convergence is not guaranteed. Singular dense solves or preconditioner construction may raise exceptions rather than return a failure reason. No matrix-free Jv, trust region or continuation is provided."
   },
   "metadata_review": {
-    "level": "chapter-linked; detailed method-specific curation in progress",
-    "on": "2026-11-21"
+    "level": "method-specific sources and implementation inspected; no new numerical rerun",
+    "on": "2026-11-22"
+  },
+  "assumptions_ja": [
+    "FとJacobianを利用者が与える。平方の微分可能な系と、解の近くで非特異なJacobianが基本となる。",
+    "長さ1から1/2ずつ減らし、||F(x+αs)||₂ ≤ (1−10⁻⁴α)||F(x)||₂ を要求する。α<2⁻²⁰で失敗を返す。",
+    "GMRES経路でもJacobianは明示的に与える。CSRならILU(0)、それ以外ならJacobi前処理を使い、内部残差と外部絶対残差を区別する。"
+  ],
+  "units_ja": "固有の物理単位はなく、未知数・残差の尺度は呼び出し側が決める。単位・桁の違う残差成分を自動で無次元化しないため、ノルムと絶対許容誤差を使う前に尺度を揃える。",
+  "boundary_conditions_ja": "Newton法自体に物理境界はない。境界はFとJacobianの組立て側が指定する。既存Bratu検査は [0,1] の両端零Dirichletを内部未知数の残差へ組み込む。",
+  "method_review": {
+    "version": 1,
+    "on": "2026-11-22",
+    "problem": {
+      "ja": "微分可能な平方の非線形連立方程式 F(x)=0。",
+      "en": "A differentiable square nonlinear system F(x)=0."
+    },
+    "variant": {
+      "ja": "残差ノルムのArmijo型十分減少を用いる減衰Newton。内部線形解法はdenseまたはGMRESで、Jacobianは明示指定。",
+      "en": "Damped Newton with an Armijo-type residual-norm decrease test; explicit Jacobian and dense/GMRES inner solve."
+    },
+    "use_when": {
+      "ja": [
+        "Jacobianを与えられ、根の候補に近い初期値があるとき。",
+        "非線形問題で線形解法の誤差と減衰の作用を分けて確認するとき。"
+      ],
+      "en": [
+        "A Jacobian and an initial guess near a candidate root are available.",
+        "Examining the separate effects of inner linear accuracy and damping."
+      ]
+    },
+    "avoid_when": {
+      "ja": [
+        "Jacobianが特異になる点や、解が複数ある問題を初期値依存なしに解きたい場合。",
+        "制約付き最適化やJacobianなしの巨大問題をこのまま解く場合。"
+      ],
+      "en": [
+        "Requiring initial-guess-independent results near singular Jacobians or multiple roots.",
+        "Direct use for constrained optimization or very large Jacobian-free problems."
+      ]
+    },
+    "fields": {
+      "assumptions": {
+        "state": "specified",
+        "reason": {
+          "ja": "受理不等式、半減、Jacobianと内部解法を確認した。",
+          "en": "Inspected the acceptance inequality, halving, Jacobian and inner solvers."
+        }
+      },
+      "units": {
+        "state": "specified",
+        "reason": {
+          "ja": "ソルバーによる尺度変換はなく絶対ノルムを使う。",
+          "en": "No automatic scaling; the solver uses an absolute norm."
+        }
+      },
+      "boundary_conditions": {
+        "state": "not-applicable",
+        "reason": {
+          "ja": "境界は残差とJacobianの定義に属する。",
+          "en": "Boundaries belong to the supplied residual/Jacobian."
+        }
+      },
+      "limitations": {
+        "state": "specified",
+        "reason": {
+          "ja": "失敗理由と例外が返る経路を区別した。",
+          "en": "Distinguished returned failures from exception paths."
+        }
+      }
+    },
+    "verification": {
+      "kind": "source-and-code-inspection",
+      "summary": {
+        "ja": "krylov.newtonと、立方関数での後退・反復上限、1次元BratuのNewton–GMRES格子細分化を扱う既存検査定義を読んだ。今回は再実行していない。",
+        "en": "Inspected krylov.newton and existing cubic backtracking/iteration-limit and 1D Bratu Newton–GMRES refinement tests; no rerun."
+      },
+      "evidence": [
+        {
+          "url": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/numart/krylov.py",
+          "kind": "implementation",
+          "label": "newton"
+        },
+        {
+          "url": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/tests/test_sparse_fem.py",
+          "kind": "test",
+          "label": "test_damped_newton_backtracks_and_reports_failure; test_bratu_newton_krylov_refines_to_continuous_reference"
+        }
+      ],
+      "not_checked": {
+        "ja": [
+          "一般初期値からの大域的収束、特異点や分岐への対応。",
+          "実装固有の内部許容誤差が文献の収束定理を満たすことの証明。"
+        ],
+        "en": [
+          "Global convergence, singular points and bifurcations.",
+          "Proof that the implemented inner tolerance satisfies a particular literature convergence theorem."
+        ]
+      }
+    }
   },
   "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/newton/",
   "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/newton/index.json",

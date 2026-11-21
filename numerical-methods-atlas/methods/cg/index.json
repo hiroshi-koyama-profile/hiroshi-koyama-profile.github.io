@@ -10,8 +10,8 @@
     "en": "Linear & nonlinear solvers"
   },
   "summary": {
-    "ja": "「共役勾配法」の考え方と適用範囲を、解説章・一次文献・関連する教育用コードからたどります。",
-    "en": "Read about Conjugate gradients, follow the original references and inspect related educational code and checks."
+    "ja": "実対称正定値な連立一次方程式を共役方向で反復的に解く。公開例は単位正方形・零Dirichlet Poisson方程式の五点差分を、行列を組み立てずに扱う前処理なしCG。",
+    "en": "Solve real SPD linear systems by conjugate directions. The public example is unpreconditioned matrix-free CG for the five-point zero-Dirichlet Poisson operator on a unit square."
   },
   "status": "educational-example",
   "origin": "existing-coverage-catalog",
@@ -32,31 +32,146 @@
   "code_mapping_scope": "Related chapter modules and test files; not a claim that each test covers every named method.",
   "references": [
     {
-      "url": "https://doi.org/10.1017/S0305004100023197",
-      "label": "A practical method for numerical evaluation of solutions of partial differential equations of the heat-conduction type (1947)",
-      "scope": "Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation."
-    },
-    {
-      "url": "https://doi.org/10.1090/S0025-5718-1977-0431719-X",
-      "label": "Multi-level adaptive solutions to boundary-value problems (1977)",
-      "scope": "Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation."
-    },
-    {
-      "url": "https://doi.org/10.1137/1.9780898719505",
-      "label": "A Multigrid Tutorial (2000)",
-      "scope": "Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation."
+      "url": "https://doi.org/10.6028/jres.049.044",
+      "label": "Hestenes, M. R. & Stiefel, E. (1952). Methods of Conjugate Gradients for Solving Linear Systems.",
+      "scope": "Real SPD conjugate-gradient recurrence; not the heat time integrator used elsewhere in the chapter.",
+      "role": "original-method",
+      "kind": "primary-research",
+      "supports": {
+        "ja": "実対称正定値系に対するCGの反復式と、丸め誤差がある場合の有限回終了の限界。",
+        "en": "CG recurrence for real SPD systems and the qualification of finite termination in floating-point arithmetic."
+      },
+      "verification": {
+        "checked_on": "2026-11-22",
+        "level": "full-text",
+        "url": "https://nvlpubs.nist.gov/nistpubs/jres/049/6/v49.n06.a08.pdf",
+        "locator": "Sections 2–3, especially (3:1) and the discussion of rounding error, pp. 410–411."
+      },
+      "bibliography_id": "hestenes1952-5a277d"
     }
   ],
-  "assumptions": null,
-  "units": null,
-  "boundary_conditions": null,
+  "assumptions": [
+    "The operator must be real SPD and the right-hand side finite; the example discretizes constant-coefficient −Δu=f on a uniform square grid.",
+    "Inner products are Euclidean array products; the current implementation starts from zero and has no preconditioner.",
+    "poisson_comparison.solve stops on a recomputed true relative residual; linear.poisson_2d uses a recurrence residual with tolerance×max(1,initial residual)."
+  ],
+  "units": "CG has no intrinsic physical unit. The public Poisson coordinates have unit dimensionless length; dimensionally [f]=[u]/[length]². Residual norms are unweighted array norms.",
+  "boundary_conditions": "CG itself supplies no physical boundary condition. The public 2D Poisson examples impose u=0 on every side of [0,1]² by zero padding.",
   "limitations": {
-    "ja": "対象方程式・境界条件・検証の範囲は解説章と各コードを確認してください。教育用例は汎用ソルバーの完成を意味しません。",
-    "en": "See the chapter and implementation for equations, boundaries and checked scope. Educational examples are not complete general-purpose solvers."
+    "ja": "非対称・不定・特異な系にそのまま適用しない。前処理、一般疎行列入力、純Neumannの零空間処理はこのCG例にはない。小さい残差は離散化誤差の保証ではなく、単一固有モードの速い終了を一般的性能と解釈しない。",
+    "en": "Do not apply this variant directly to nonsymmetric, indefinite or singular systems. This CG example has no preconditioner, general sparse-matrix interface or pure-Neumann nullspace handling. A small residual does not certify discretization accuracy; rapid termination for one eigenmode is not a general performance result."
   },
   "metadata_review": {
-    "level": "chapter-linked; detailed method-specific curation in progress",
-    "on": "2026-11-21"
+    "level": "method-specific sources and implementation inspected; no new numerical rerun",
+    "on": "2026-11-22"
+  },
+  "assumptions_ja": [
+    "作用素は実対称正定値で、右辺は有限。ここでは定係数の −Δu=f を一様正方格子で離散化する。",
+    "内積は配列成分のEuclidean内積。既存実装の初期値は零で、前処理は用いない。",
+    "poisson_comparison.solve は再計算した真の相対残差を停止に使う。linear.poisson_2d は反復残差と tolerance×max(1,初期残差) を使う。"
+  ],
+  "units_ja": "CG自体に固有の物理単位はない。公開Poisson例は長さ1の無次元座標で、次元を与えるなら [f]=[u]/[長さ]²。残差は格子体積で重み付けしない配列ノルム。",
+  "boundary_conditions_ja": "代数解法としてのCGは境界を定めない。公開2次元Poisson例は [0,1]² の全辺で u=0 をゼロ埋め込みにより課す。",
+  "method_review": {
+    "version": 1,
+    "on": "2026-11-22",
+    "problem": {
+      "ja": "Poisson方程式の離散化などから得られる、実対称正定値系 Ax=b。",
+      "en": "Real SPD systems Ax=b, including a discrete Poisson equation."
+    },
+    "variant": {
+      "ja": "五点差分作用素を直接適用する前処理なしの線形CG。共通比較経路では各反復で真の残差を再計算する。",
+      "en": "Unpreconditioned linear CG with a matrix-free five-point operator; the comparison path recomputes the true residual each iteration."
+    },
+    "use_when": {
+      "ja": [
+        "SPDが分かっている離散系で、行列積だけから解を求めたいとき。",
+        "同じ格子・右辺・真の残差基準で他のPoisson解法と比較するとき。"
+      ],
+      "en": [
+        "The discretized system is known to be SPD and a matrix-free solve is desired.",
+        "Comparing Poisson solvers on the same grid, forcing and true-residual criterion."
+      ]
+    },
+    "avoid_when": {
+      "ja": [
+        "移流による非対称系、鞍点系、零空間を残した周期・Neumann系。",
+        "反復回数だけで計算時間や連続解の精度を保証したい場合。"
+      ],
+      "en": [
+        "Nonsymmetric advection systems, saddle-point systems or periodic/Neumann systems with an untreated nullspace.",
+        "Claims about runtime or continuous-solution accuracy based only on iteration count."
+      ]
+    },
+    "fields": {
+      "assumptions": {
+        "state": "specified",
+        "reason": {
+          "ja": "CGの再帰式、前処理の有無、二つの停止条件をコードで区別した。",
+          "en": "Inspected the CG recurrence, absence of preconditioning and two stopping rules."
+        }
+      },
+      "units": {
+        "state": "specified",
+        "reason": {
+          "ja": "単位正方形と配列ノルムの規約を明記した。",
+          "en": "Specified the unit-square and array-norm conventions."
+        }
+      },
+      "boundary_conditions": {
+        "state": "not-applicable",
+        "reason": {
+          "ja": "CGの固有要件ではない。公開例の零Dirichlet条件は別途明記した。",
+          "en": "Not intrinsic to CG; the examples' zero-Dirichlet condition is separately stated."
+        }
+      },
+      "limitations": {
+        "state": "specified",
+        "reason": {
+          "ja": "SPDの要件と既存例の範囲に限定した。",
+          "en": "Limited the claim to the SPD requirement and existing examples."
+        }
+      }
+    },
+    "verification": {
+      "kind": "source-and-code-inspection",
+      "summary": {
+        "ja": "linear.poisson_2d、poisson_comparison.solve、既存の一般右辺の離散残差・共通残差基準・単一モードの検査定義を読んだ。今回は再実行していない。",
+        "en": "Inspected linear.poisson_2d, poisson_comparison.solve and existing tests for general-forcing discrete residuals, matched stopping criteria and the single-mode case; no rerun."
+      },
+      "evidence": [
+        {
+          "url": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/numart/linear.py",
+          "kind": "implementation",
+          "label": "poisson_2d"
+        },
+        {
+          "url": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/numart/poisson_comparison.py",
+          "kind": "implementation",
+          "label": "solve(method='cg'), problem"
+        },
+        {
+          "url": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/tests/test_linear.py",
+          "kind": "test",
+          "label": "test_poisson_cg_for_general_forcing_satisfies_discrete_residual"
+        },
+        {
+          "url": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/tests/test_poisson_comparison.py",
+          "kind": "test",
+          "label": "matched true-residual and single-mode tests"
+        }
+      ],
+      "not_checked": {
+        "ja": [
+          "一般SPD行列に対する性能・条件数依存の新しい測定。",
+          "前処理付きCGや非SPD拡張。"
+        ],
+        "en": [
+          "New general-SPD performance or condition-number measurements.",
+          "Preconditioned CG or non-SPD extensions."
+        ]
+      }
+    }
   },
   "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/cg/",
   "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/cg/index.json",

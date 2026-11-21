@@ -10,8 +10,8 @@
     "en": "Linear & nonlinear solvers"
   },
   "summary": {
-    "ja": "「幾何マルチグリッドVサイクル」の考え方と適用範囲を、解説章・一次文献・関連する教育用コードからたどります。",
-    "en": "Read about Geometric multigrid V-cycle, follow the original references and inspect related educational code and checks."
+    "ja": "細格子で平滑化し、粗格子で滑らかな誤差を補正する幾何学的多重格子法。公開実装は単位正方形の零Dirichlet Poisson問題に対する固定階層のV-cycle。",
+    "en": "Geometric multigrid combines fine-grid smoothing with coarse-grid correction of smooth error. The public implementation is a fixed-hierarchy V-cycle for zero-Dirichlet Poisson on the unit square."
   },
   "status": "educational-example",
   "origin": "existing-coverage-catalog",
@@ -32,31 +32,141 @@
   "code_mapping_scope": "Related chapter modules and test files; not a claim that each test covers every named method.",
   "references": [
     {
-      "url": "https://doi.org/10.1017/S0305004100023197",
-      "label": "A practical method for numerical evaluation of solutions of partial differential equations of the heat-conduction type (1947)",
-      "scope": "Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation."
-    },
-    {
       "url": "https://doi.org/10.1090/S0025-5718-1977-0431719-X",
-      "label": "Multi-level adaptive solutions to boundary-value problems (1977)",
-      "scope": "Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation."
-    },
-    {
-      "url": "https://doi.org/10.1137/1.9780898719505",
-      "label": "A Multigrid Tutorial (2000)",
-      "scope": "Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation."
+      "label": "Brandt, A. (1977). Multi-Level Adaptive Solutions to Boundary-Value Problems.",
+      "scope": "Multilevel interaction for boundary-value solvers; the atlas implements only a fixed nested-grid geometric V-cycle.",
+      "role": "formulation",
+      "kind": "primary-research",
+      "supports": {
+        "ja": "粗密の格子間で情報を交換する多重格子法の一次研究。論文中の適応格子機能を実装済みとはしない。",
+        "en": "Primary multilevel boundary-value research; its adaptive capabilities are not claimed for the fixed-grid atlas example."
+      },
+      "verification": {
+        "checked_on": "2026-11-22",
+        "level": "abstract-and-metadata",
+        "url": "https://web.stanford.edu/class/cme324/classics/brandt.pdf",
+        "locator": "Abstract on printed p. 333 available in indexed primary-paper text; full PDF fetched but no readable body extracted. Author bibliography separately checked."
+      },
+      "bibliography_id": "brandt1977"
     }
   ],
-  "assumptions": null,
-  "units": null,
-  "boundary_conditions": null,
+  "assumptions": [
+    "Constant-coefficient −Δu=f on a uniform square interior grid with n=2^k−1 per axis.",
+    "Coarse operators are rediscretized five-point operators; restriction is full weighting, prolongation bilinear, with three red-black Gauss–Seidel pre/post sweeps by default.",
+    "The one-unknown coarsest problem is solved exactly. Entry points use either mixed absolute/relative residual stopping or the comparison's true relative residual."
+  ],
+  "units": "The public problem uses dimensionless [0,1]² and h=1/(n+1). Dimensionally [f]=[u]/[length]²; residual norms have no mesh weights.",
+  "boundary_conditions": "u=0 on all sides of [0,1]². Error corrections also have homogeneous Dirichlet boundaries, implemented by zero padding.",
   "limitations": {
-    "ja": "対象方程式・境界条件・検証の範囲は解説章と各コードを確認してください。教育用例は汎用ソルバーの完成を意味しません。",
-    "en": "See the chapter and implementation for equations, boundaries and checked scope. Educational examples are not complete general-purpose solvers."
+    "ja": "固定された正方形・定係数・入れ子格子の教育例。AMG、不規則格子、適応細分化、強い異方性や不連続係数用の特別な平滑化は実装しない。Brandt論文の全機能や任意問題での最適計算量を示すものではない。",
+    "en": "An educational fixed-square, constant-coefficient nested-grid example. It does not implement AMG, irregular meshes, adaptive refinement or specialized smoothing for strong anisotropy/discontinuous coefficients. It does not establish all capabilities of Brandt's paper or optimal work for arbitrary problems."
   },
   "metadata_review": {
-    "level": "chapter-linked; detailed method-specific curation in progress",
-    "on": "2026-11-21"
+    "level": "method-specific sources and implementation inspected; no new numerical rerun",
+    "on": "2026-11-22"
+  },
+  "assumptions_ja": [
+    "定係数の −Δu=f、正方形の一様内部格子、各軸 n=2^k−1 の入れ子格子を仮定する。",
+    "粗格子作用素は五点差分の再離散化。full weighting制限、双線形補間、red-black Gauss–Seidelの前後各3回平滑化を標準とする。",
+    "最粗格子1未知数は厳密に解く。停止判定は公開入口により絶対値を併用した残差または共通比較用の真の相対残差。"
+  ],
+  "units_ja": "公開問題は無次元の [0,1]²、h=1/(n+1)。次元を与える場合 [f]=[u]/[長さ]²、残差ノルムは格子重みなし。",
+  "boundary_conditions_ja": "[0,1]² の全辺で u=0。誤差補正も零Dirichletで、ゼロ埋め込みにより境界値を入れる。",
+  "method_review": {
+    "version": 1,
+    "on": "2026-11-22",
+    "problem": {
+      "ja": "定係数Poisson方程式の五点差分連立系。",
+      "en": "The five-point discrete system for constant-coefficient Poisson."
+    },
+    "variant": {
+      "ja": "再離散化した粗格子作用素とfull weighting/双線形転送を使う、red-black GSの幾何V-cycle。",
+      "en": "Geometric V-cycle with rediscretized coarse operators, full weighting, bilinear transfer and red-black GS."
+    },
+    "use_when": {
+      "ja": [
+        "規則的な入れ子正方格子のPoissonを解くとき。",
+        "緩和だけでは減りにくい滑らかな誤差と粗格子補正を比較して学ぶとき。"
+      ],
+      "en": [
+        "Solving Poisson on a regular nested square hierarchy.",
+        "Studying smooth-error removal by coarse correction versus relaxation alone."
+      ]
+    },
+    "avoid_when": {
+      "ja": [
+        "非入れ子格子、曲がった領域、係数の強い異方性をそのまま入力する場合。",
+        "この例をそのままAMGや汎用楕円ソルバーとみなす場合。"
+      ],
+      "en": [
+        "Direct input of non-nested meshes, curved domains or strongly anisotropic coefficients.",
+        "Treating this example as AMG or a general elliptic solver."
+      ]
+    },
+    "fields": {
+      "assumptions": {
+        "state": "specified",
+        "reason": {
+          "ja": "格子条件・転送・平滑化・粗格子解法を関数から確認した。",
+          "en": "Inspected grid restrictions, transfer, smoothing and coarse solve."
+        }
+      },
+      "units": {
+        "state": "specified",
+        "reason": {
+          "ja": "単位正方形とhの規約を確認した。",
+          "en": "Checked unit-square and h conventions."
+        }
+      },
+      "boundary_conditions": {
+        "state": "specified",
+        "reason": {
+          "ja": "作用素と転送は零Dirichletのゼロ埋め込みを使う。",
+          "en": "Operator and transfer use zero padding for zero Dirichlet boundaries."
+        }
+      },
+      "limitations": {
+        "state": "specified",
+        "reason": {
+          "ja": "実装された幾何V-cycleの範囲に限定した。",
+          "en": "Scoped to the implemented geometric V-cycle."
+        }
+      }
+    },
+    "verification": {
+      "kind": "source-and-code-inspection",
+      "summary": {
+        "ja": "multigrid.pyの全関数と、固定点・転送・CG照合・残差・緩和との比較・非入れ子格子拒否の既存検査を読んだ。今回は再実行していない。",
+        "en": "Inspected multigrid.py and existing fixed-point, transfer, CG-agreement, residual, relaxation-comparison and non-nested-grid rejection tests; no rerun."
+      },
+      "evidence": [
+        {
+          "url": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/numart/multigrid.py",
+          "kind": "implementation",
+          "label": "v_cycle, solve_poisson_multigrid, restrict_full_weighting, prolong_bilinear"
+        },
+        {
+          "url": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/numart/poisson_comparison.py",
+          "kind": "implementation",
+          "label": "solve(method='multigrid')"
+        },
+        {
+          "url": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/tests/test_multigrid.py",
+          "kind": "test",
+          "label": "existing multigrid consistency and convergence tests"
+        }
+      ],
+      "not_checked": {
+        "ja": [
+          "異方性・不連続係数や一般境界での頑健性。",
+          "新しい収束率・計算時間測定。"
+        ],
+        "en": [
+          "Robustness for anisotropy, discontinuous coefficients or general boundaries.",
+          "New convergence-rate or timing measurements."
+        ]
+      }
+    }
   },
   "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/multigrid/",
   "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/multigrid/index.json",

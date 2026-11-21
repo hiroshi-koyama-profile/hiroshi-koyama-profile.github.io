@@ -10,8 +10,8 @@
     "en": "Riemann fluxes & corrections"
   },
   "summary": {
-    "ja": "「HLLC」の考え方と適用範囲を、解説章・一次文献・関連する教育用コードからたどります。",
-    "en": "Read about HLLC, follow the original references and inspect related educational code and checks."
+    "ja": "HLL近似Riemann流束に接触波を加え、Euler方程式の密度接触面を捉えやすくする界面流束。公開例はDavis型の左右音響波速を用いる理想気体・1次元版である。",
+    "en": "An approximate Riemann flux that restores the contact wave missing from HLL, improving Euler contact resolution. The released implementation is one-dimensional and perfect-gas, with Davis-type outer acoustic speeds."
   },
   "status": "educational-example",
   "origin": "existing-coverage-catalog",
@@ -32,36 +32,179 @@
   "code_mapping_scope": "Related chapter modules and test files; not a claim that each test covers every named method.",
   "references": [
     {
+      "url": "https://doi.org/10.1007/BF01414629",
+      "label": "Toro, Spruce & Speares (1994). Restoration of the contact surface in the HLL-Riemann solver.",
+      "scope": "Original HLLC contact-restoration source; no claim that all wave-speed estimates or WAF experiments in the paper are implemented.",
+      "role": "original-method",
+      "kind": "primary-research",
+      "supports": {
+        "ja": "HLL近似解へ接触波を復元する考え方の原報。論文中の各波速推定やWAF計算をすべて再現したという意味ではない。",
+        "en": "Primary source for restoring the contact wave missing from HLL. Its complete wave-speed alternatives and WAF experiments were not audited."
+      },
+      "verification": {
+        "checked_on": "2026-11-22",
+        "level": "abstract-and-metadata",
+        "url": "https://link.springer.com/article/10.1007/BF01414629",
+        "locator": "Publisher abstract and bibliographic record; full text not reviewed."
+      },
+      "bibliography_id": "hllc1994"
+    },
+    {
+      "url": "https://doi.org/10.1137/0909030",
+      "label": "Davis (1988). Simplified Second-Order Godunov-Type Methods.",
+      "scope": "Wave-speed-estimation lineage for the Davis-type min/max acoustic bounds identified in riemann.py; the precise local formula was inspected in code, not checked against the full article.",
+      "role": "adopted-variant",
+      "kind": "primary-research",
+      "supports": {
+        "ja": "近似Riemann解の外側波速推定に関する一次文献。本実装のmin/max音響波速式はコードで確認し、原論文全式との照合は未実施。",
+        "en": "Primary paper on bounds for approximate Riemann solvers. The exact min/max formula used here was verified in local code; the full paper was not compared."
+      },
+      "verification": {
+        "checked_on": "2026-11-22",
+        "level": "abstract-and-metadata",
+        "url": "https://epubs.siam.org/doi/10.1137/0909030",
+        "locator": "Publisher abstract and metadata; wave-speed formulae in full text not reviewed."
+      },
+      "bibliography_id": "davis1988-53e27b"
+    },
+    {
       "url": "https://doi.org/10.1016/0021-9991(78)90023-2",
-      "label": "A survey of several finite difference methods for systems of nonlinear hyperbolic conservation laws (1978)",
-      "scope": "Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation."
-    },
-    {
-      "url": "https://doi.org/10.1016/0021-9991(89)90222-2",
-      "label": "Efficient implementation of essentially non-oscillatory shock-capturing schemes, II (1989)",
-      "scope": "Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation."
-    },
-    {
-      "url": "https://doi.org/10.1016/0021-9991(91)90211-3",
-      "label": "On Godunov-type methods near low densities (1991)",
-      "scope": "Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation."
-    },
-    {
-      "url": "https://doi.org/10.1017/CBO9780511791253",
-      "label": "Finite Volume Methods for Hyperbolic Problems (2002)",
-      "scope": "Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation."
+      "label": "Sod (1978). A survey of several finite difference methods for systems of nonlinear hyperbolic conservation laws.",
+      "scope": "Historical shock-tube comparison used as a benchmark source. The atlas reference is its own non-vacuum ideal-gas Riemann evaluator, with a bracketed numerical pressure solve.",
+      "role": "reference-solution",
+      "kind": "primary-research",
+      "supports": {
+        "ja": "Sod衝撃波管という比較課題の出典。参照値は本サイトの非真空・理想気体Riemann解評価器で求め、論文表を転記した値とは区別する。",
+        "en": "Benchmark provenance for the Sod shock tube. Atlas reference values come from its non-vacuum ideal-gas Riemann evaluator, rather than transcribed paper tables."
+      },
+      "verification": {
+        "checked_on": "2026-11-22",
+        "level": "abstract-and-metadata",
+        "url": "https://www.sciencedirect.com/science/article/pii/0021999178900232",
+        "locator": "Publisher-indexed abstract and bibliographic record; detailed initial-state tables not reviewed."
+      },
+      "bibliography_id": "sod1978"
     }
   ],
-  "assumptions": null,
-  "units": null,
-  "boundary_conditions": null,
+  "assumptions": [
+    "Left/right states are perfect-gas Euler variables (ρ,ρu,E), finite with ρ>0 and p>0, using a physical γ>1.",
+    "Outer speeds are S_L=min(u_L−c_L,u_R−c_R) and S_R=max(u_L+c_L,u_R+c_R); the contact speed and two star states are computed algebraically.",
+    "HLLC supplies an interface flux. Reconstruction, time integration, CFL control and boundary states are provided by the caller.",
+    "The local HLLC branch accepts Euler only; availability of HLL for another model does not make this HLLC implementation applicable to it."
+  ],
+  "units": "Use one consistent unit system on both sides. ρ is density, u, c and wave speeds are length/time, and p and E are energy/volume. Numerical fluxes have conserved-variable units times length/time. γ is dimensionless; released examples are nondimensional.",
+  "boundary_conditions": "Physical boundary conditions do not belong to the interface-flux function. The caller constructs left/right states; the existing one-dimensional solver uses periodic, fixed-initial-endpoint or extrapolated-edge states.",
   "limitations": {
-    "ja": "対象方程式・境界条件・検証の範囲は解説章と各コードを確認してください。教育用例は汎用ソルバーの完成を意味しません。",
-    "en": "See the chapter and implementation for equations, boundaries and checked scope. Educational examples are not complete general-purpose solvers."
+    "ja": "接触波の復元は一般的な正値性・エントロピー安定性の保証ではない。このDavis型波速版を、強い希薄波・真空や一般EOS、MHD、相対論的流体に追加処理なしで用いない。静止接触の一致テストも、移動衝撃波や全問題での厳密性を意味しない。",
+    "en": "Contact restoration is not a general positivity or entropy-stability guarantee. This Davis-speed version should not be extended without additional treatment to strong rarefactions, vacuum, general equations of state, MHD or relativistic flow. Exact agreement for a stationary contact does not imply an exact solution for moving shocks or arbitrary problems."
   },
   "metadata_review": {
-    "level": "chapter-linked; detailed method-specific curation in progress",
-    "on": "2026-11-21"
+    "level": "method-specific source-and-code inspection; no numerical rerun; reference access recorded individually",
+    "on": "2026-11-22"
+  },
+  "assumptions_ja": [
+    "左右状態は理想気体Eulerの(ρ,ρu,E)、有限かつρ>0、p>0で、物理的な比熱比γ>1を使う。",
+    "外側波速はS_L=min(u_L−c_L,u_R−c_R)、S_R=max(u_L+c_L,u_R+c_R)。接触速度と左右star状態を代数的に計算する。",
+    "HLLCは界面流束であり、再構成、時間積分、CFLと境界状態は呼び出し側が与える。",
+    "本実装のHLLC分岐はEuler専用であり、HLLを使える他のモデルにも自動適用できるわけではない。"
+  ],
+  "units_ja": "左右で同じ単位系を使う。ρは密度、uとcと各波速は長さ/時間、pとEはエネルギー/体積。数値流束は保存量×長さ/時間の単位を持つ。γは無次元で、公開例も無次元。",
+  "boundary_conditions_ja": "界面流束そのものには物理境界条件を指定しない。呼び出し元が左右状態を作る。既存1次元solverは周期・端点初期値固定・端値外挿を用いる。",
+  "method_review": {
+    "version": 1,
+    "on": "2026-11-22",
+    "problem": {
+      "ja": "セル界面の左右Euler状態から、接触波を含む近似保存流束を求める。",
+      "en": "Compute a contact-resolving approximate conservative flux from left/right Euler states."
+    },
+    "variant": {
+      "ja": "riemann.numerical_flux(...,solver='hllc')。Davis型外側波速、左右star状態、接触波を使う理想気体Euler版。",
+      "en": "riemann.numerical_flux(...,solver='hllc'): perfect-gas Euler HLLC with Davis-type outer speeds, two star states and a contact wave."
+    },
+    "use_when": {
+      "ja": [
+        "正の理想気体状態から、HLLより鮮明な密度接触面を求めたい。",
+        "再構成・時間積分・境界条件を別に選ぶGodunov型solverの流束部品が必要。"
+      ],
+      "en": [
+        "Density contacts should be sharper than with HLL for positive perfect-gas states.",
+        "A flux component is needed in a Godunov-type solver that separately selects reconstruction, time integration and boundaries."
+      ]
+    },
+    "avoid_when": {
+      "ja": [
+        "真空や極端な希薄波に対して正値性の保証が必須。",
+        "非理想気体、浅水、MHD等のための別のHLLC定式化が必要。"
+      ],
+      "en": [
+        "Guaranteed positivity is required near vacuum or extreme rarefactions.",
+        "A different HLLC formulation is needed for nonideal gases, shallow water or MHD."
+      ]
+    },
+    "fields": {
+      "assumptions": {
+        "state": "specified",
+        "reason": {
+          "ja": "numerical_fluxのEuler型検査と波速・star状態の式を確認。",
+          "en": "Inspected the Euler type restriction and wave-speed/star-state formulae."
+        }
+      },
+      "units": {
+        "state": "specified",
+        "reason": {
+          "ja": "Eulerの保存変数と波速の次元から指定。",
+          "en": "Specified from Euler conserved variables and wave-speed dimensions."
+        }
+      },
+      "boundary_conditions": {
+        "state": "not-applicable",
+        "reason": {
+          "ja": "流束関数は左右状態を受け取り、境界を設定しない。",
+          "en": "The flux function accepts two states and does not impose boundaries."
+        }
+      },
+      "limitations": {
+        "state": "specified",
+        "reason": {
+          "ja": "局所の静止接触テストと一般的保証を区別。",
+          "en": "Separates a local stationary-contact test from general guarantees."
+        }
+      }
+    },
+    "verification": {
+      "kind": "source-and-code-inspection",
+      "summary": {
+        "ja": "riemann.pyのnumerical_fluxのHLL/HLLC分岐、exact_eulerの非真空検査と圧力の区間二分探索を読んだ。test_flux_consistency・test_hllc_stationary_contact_is_exact・Sod参照値/精度のテストを確認。再実行なし。",
+        "en": "Read the HLL/HLLC branches of numerical_flux, the non-vacuum check and bracketed pressure bisection in exact_euler. Inspected flux consistency, stationary-contact and Sod reference/accuracy tests. No rerun was performed."
+      },
+      "evidence": [
+        {
+          "url": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/numart/riemann.py",
+          "kind": "implementation",
+          "label": "numerical_flux HLL/HLLC branches; exact_euler"
+        },
+        {
+          "url": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/numart/solvers.py",
+          "kind": "implementation",
+          "label": "solve numerical_flux call; _pad"
+        },
+        {
+          "url": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/tests/test_numerics.py",
+          "kind": "test",
+          "label": "test_flux_consistency; test_hllc_stationary_contact_is_exact; test_exact_sod_star_and_regions; test_sod_accuracy_and_refinement"
+        }
+      ],
+      "not_checked": {
+        "ja": [
+          "Toroら・Davis・Sod各論文の全文との逐式・数値表照合。",
+          "今回の再実行、全状態での正値性・エントロピー安定性、他の波速推定やEOS。"
+        ],
+        "en": [
+          "No full-text equation/table audit of Toro et al., Davis or Sod.",
+          "No new runs, all-state positivity/entropy proof, alternative wave-speed estimates or equations of state."
+        ]
+      }
+    }
   },
   "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/hllc/",
   "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/hllc/index.json",

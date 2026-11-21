@@ -10,8 +10,8 @@
     "en": "Electronic structure & quantum chemistry"
   },
   "summary": {
-    "ja": "交換を含む平均場と、基底を用いた分子のSCF計算を扱う。",
-    "en": "Study exchange-containing mean-field models and molecular SCF calculations."
+    "ja": "単一Slater行列式により交換を含む平均場を求める。公開実装は球対称He 1s²の閉殻解に限り、1個の空間軌道で成立する局所交換への簡約を用いる。",
+    "en": "Find an exchange-containing mean field in a single Slater determinant. The released implementation is restricted to spherical closed-shell helium 1s² and uses the local reduction valid for one occupied spatial orbital."
   },
   "status": "educational-example",
   "origin": "curated-quantum-reading",
@@ -23,31 +23,82 @@
   "test_files": [],
   "references": [
     {
+      "id": "fock1930",
+      "label": "Fock, V. (1930). Näherungsmethode zur Lösung des quantenmechanischen Mehrkörperproblems.",
+      "url": "https://doi.org/10.1007/BF01340294",
+      "role": "original-method",
+      "kind": "primary-research",
+      "scope": "Original exchange-containing mean-field formulation; the released helium-specific reduction is established separately by code inspection.",
+      "supports": {
+        "ja": "行列式の対称性と交換項を含む平均場の原論文。He用局所簡約の今回の根拠は公開コードの点検と区別する。",
+        "en": "Original exchange-containing mean-field formulation; the released helium-specific reduction is established separately by code inspection."
+      },
+      "verification": {
+        "checked_on": "2026-11-22",
+        "level": "abstract-and-metadata",
+        "url": "https://link.springer.com/article/10.1007/BF01340294",
+        "locator": "Publisher Zusammenfassung and bibliographic record; subscription full text not read"
+      },
+      "bibliography_id": "fock1930"
+    },
+    {
       "id": "roothaan1951",
-      "label": "Roothaan, C. C. J. (1951), New Developments in Molecular Orbital Theory",
+      "label": "Roothaan, C. C. J. (1951). New Developments in Molecular Orbital Theory.",
       "url": "https://doi.org/10.1103/RevModPhys.23.69",
-      "kind": "primary-paper",
-      "scope": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+      "role": "context",
+      "kind": "primary-research",
+      "scope": "Context for basis-expanded molecular HF, not the implementation used by the released radial helium code.",
+      "supports": {
+        "ja": "分子の基底展開によるHFとの関係を示す。公開する動径Heコードの実装方式ではない。",
+        "en": "Context for basis-expanded molecular HF, not the implementation used by the released radial helium code."
+      },
+      "verification": {
+        "checked_on": "2026-11-22",
+        "level": "metadata",
+        "url": "https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.23.69",
+        "locator": "Publisher bibliographic record; abstract/full paper not available in retrieved view"
+      },
+      "bibliography_id": "roothaan1951"
+    },
+    {
+      "id": "pyscf2020",
+      "label": "Sun, Q. et al. (2020). Recent developments in the PySCF program package.",
+      "url": "https://doi.org/10.1063/5.0006074",
+      "role": "reference-solution",
+      "kind": "primary-research",
+      "scope": "Identifies the independent reference software; specific helium values and versions come from the saved JSON and reference script, not this paper.",
+      "supports": {
+        "ja": "独立参照ソフトウェアの論文。特定のHe参照値・実行版は保存JSONと参照スクリプトに記録。",
+        "en": "Identifies the independent reference software; specific helium values and versions come from the saved JSON and reference script, not this paper."
+      },
+      "verification": {
+        "checked_on": "2026-11-22",
+        "level": "abstract-and-metadata",
+        "url": "https://pubs.aip.org/aip/jcp/article-abstract/153/2/024109/1061482/Recent-developments-in-the-PySCF-program-package?redirectedFrom=fulltext",
+        "locator": "Publisher-indexed abstract/bibliography and author preprint abstract https://arxiv.org/abs/2002.12531; full paper not read"
+      },
+      "bibliography_id": "pyscf2020"
     }
   ],
   "assumptions": [
-    "Nonrelativistic isolated atom; infinite-mass point nucleus.",
-    "Reduced radial orbitals on a second-order uniform finite-difference grid.",
-    "He is restricted to a closed-shell spherical 1s² state; both HF and LDA_X omit correlation."
+    "Nonrelativistic isolated He with Z=2, an infinite-mass point nucleus and two opposite-spin electrons occupying the same spherical 1s spatial orbital.",
+    "Normalize integral |u|^2 dr=1 and define p=2|u|^2=4 pi r^2 n, so integral p dr=2.",
+    "For this occupied orbital only, the Fock equation reduces to the effective field -2/r+v_H/2 and E_x=-E_H/2; no general nonlocal Fock operator is implemented.",
+    "Single-determinant exchange is included; electron correlation is omitted."
   ],
-  "units": "Atomic units in the displayed electronic equations (hbar = m_e = e = 4 pi epsilon_0 = 1); dimensionless conventions are stated where needed.",
-  "boundary_conditions": "u(0)=u(r_max)=0; hydrogenic r_max=60 bohr, He r_max=16 bohr, with separate domain studies.",
+  "units": "Atomic units (hbar=m_e=e=4 pi epsilon_0=1): r in bohr, energies/effective potentials in hartree, and normalized reduced orbitals u in bohr^(-1/2). Positive electron-number density n(r) is in bohr^(-3); radial number density p(r)=4 pi r^2 n(r) is in bohr^(-1), with integral p dr=N. p is not signed charge density.",
+  "boundary_conditions": "Helium reduced orbital: u(0)=u(r_max)=0, baseline r_max=16 bohr with a separate 4/8/12/16-bohr domain study. The Hartree field is finite at the origin and joins N/r outside the density; it is not fixed to zero at r_max.",
   "next_deliverable": {
     "ja": "小分子・最小基底の入力と独立した参照値の照合。",
     "en": "Small-molecule minimal-basis inputs checked against an independent reference."
   },
   "limitations": {
-    "ja": "Heの球対称・単一1s空間軌道を二重占有する閉殻HFのみ。交換演算子の局所還元はこの2電子問題に限ります。",
-    "en": "Only spherical helium with one doubly occupied 1s spatial orbital; the local HF exchange reduction is specific to this two-electron problem."
+    "ja": "この局所交換の簡約を多軌道・開殻・分子・周期系へそのまま拡張できない。UHF/ROHF、分子積分、軌道安定性解析は未実装。保存PySCF RHF参照は独立な有限Gaussian基底計算であり、相関を含むHeの厳密エネルギーではない。格子・箱幅・SCF収束と物理モデル誤差を区別する。",
+    "en": "The local exchange reduction cannot be transferred unchanged to multi-orbital, open-shell, molecular or periodic systems. UHF/ROHF, molecular integrals and orbital-stability analysis are not implemented. Saved PySCF RHF references are independent finite-Gaussian-basis calculations, not exact correlated helium energies. Separate grid, domain and SCF convergence from physical model error."
   },
   "metadata_review": {
-    "level": "scoped radial educational implementation; analytic and independently computed PySCF reference checks; see separate quantum-atoms code edition",
-    "on": "2026-11-21"
+    "level": "method-specific primary-source and released-code inspection; saved 2026-11-21 results read; no new numerical run",
+    "on": "2026-11-22"
   },
   "aliases": [
     "HF",
@@ -57,12 +108,13 @@
     "ハートリー・フォック"
   ],
   "assumptions_ja": [
-    "非相対論・孤立原子・無限質量の点核。",
-    "一様動径格子と2次中心差分による縮約動径軌道。",
-    "Heは閉殻・球対称1s²に限定し、HFとLDA_Xともに相関を含まない。"
+    "Z=2の孤立He、無限質量の点核、非相対論。逆スピンの2電子が同じ球対称1s空間軌道を占有する。",
+    "∫|u|²dr=1とし、p=2|u|²=4πr²n、∫p dr=2と定義する。",
+    "この占有軌道に限り有効場は−2/r+v_H/2、交換エネルギーはE_x=−E_H/2に簡約される。一般の非局所Fock演算子は実装していない。",
+    "単一行列式の交換を含み、電子相関を含まない。"
   ],
-  "units_ja": "表示する電子状態の式は原子単位系（ℏ = m_e = e = 4πε₀ = 1）。無次元量や占有の規約は各節に明記。",
-  "boundary_conditions_ja": "u(0)=u(r_max)=0。水素型はr_max=60 bohr、Heは16 bohrを基本に領域依存を別途検査。",
+  "units_ja": "原子単位系（ℏ=mₑ=e=4πε₀=1）。rはbohr、エネルギー・有効ポテンシャルはhartree、規格化した縮約軌道uはbohr⁻¹ᐟ²。正の電子数密度n(r)はbohr⁻³、動径電子数密度p(r)=4πr²n(r)はbohr⁻¹、∫p dr=N。pは符号付き電荷密度ではありません。",
+  "boundary_conditions_ja": "He縮約軌道にu(0)=u(r_max)=0（基本r_max=16 bohr、別途4/8/12/16 bohrの領域検査）。Hartree場は原点で有限、密度の外ではN/rへ接続し、r_maxで0には固定しません。",
   "caution": {
     "ja": "HFの解は一般に一意とは限りません。SCFが停止しても基底収束・軌道安定性・正しい電子状態の確認が必要です。分子解離では単一参照の限界が現れます。",
     "en": "HF solutions need not be unique. SCF termination does not prove basis convergence, orbital stability or the desired electronic state. Bond dissociation can expose single-reference limitations."
@@ -73,6 +125,112 @@
   "example_scope": {
     "ja": "Heの球対称・単一1s空間軌道を二重占有する閉殻HFのみ。交換演算子の局所還元はこの2電子問題に限ります。",
     "en": "Only spherical helium with one doubly occupied 1s spatial orbital; the local HF exchange reduction is specific to this two-electron problem."
+  },
+  "method_review": {
+    "version": 1,
+    "on": "2026-11-22",
+    "problem": {
+      "ja": "交換を含む単一行列式近似のHe閉殻基底状態を求める。",
+      "en": "Find the closed-shell helium ground state in a single-determinant approximation with exchange."
+    },
+    "variant": {
+      "ja": "同一1s空間軌道を2電子が占有する動径HF。占有軌道上での交換簡約によりv_eff=−2/r+v_H/2。",
+      "en": "Radial HF for two electrons occupying one common 1s spatial orbital; exchange acting on that orbital reduces v_eff to -2/r+v_H/2."
+    },
+    "use_when": {
+      "ja": [
+        "He 1s²で直接項・交換項・二重計数補正の関係を学ぶ。",
+        "同じ非相対論RHFモデルの格子解と独立Gaussian基底参照を比較する。"
+      ],
+      "en": [
+        "Study Coulomb, exchange and double-counting terms in helium 1s².",
+        "Compare the grid solution with an independent Gaussian-basis reference for the same nonrelativistic RHF model."
+      ]
+    },
+    "avoid_when": {
+      "ja": [
+        "多軌道、開殻、分子、周期系へ局所交換−v_H/2を流用する。",
+        "相関エネルギーや多参照性をこのHF値で説明する。"
+      ],
+      "en": [
+        "Reusing local exchange -v_H/2 for multi-orbital, open-shell, molecular or periodic systems.",
+        "Using this HF value to describe correlation energy or multireference physics."
+      ]
+    },
+    "fields": {
+      "assumptions": {
+        "state": "specified",
+        "reason": {
+          "ja": "helium('hf')の占有・p=2u²・交換簡約を確認。",
+          "en": "Checked occupations, p=2u^2 and the exchange reduction in helium('hf')."
+        }
+      },
+      "units": {
+        "state": "specified",
+        "reason": {
+          "ja": "u、p、nとエネルギー成分の規約を確認。",
+          "en": "Checked conventions for u, p, n and energy components."
+        }
+      },
+      "boundary_conditions": {
+        "state": "specified",
+        "reason": {
+          "ja": "軌道Dirichlet条件と孤立系Hartree境界を区別。",
+          "en": "Distinguished orbital Dirichlet conditions from isolated Hartree boundaries."
+        }
+      },
+      "limitations": {
+        "state": "specified",
+        "reason": {
+          "ja": "一般Fock解法・相関・安定性解析を検証したと読めない範囲を明示。",
+          "en": "Explicitly excludes claims of a general Fock solver, correlation or stability analysis."
+        }
+      }
+    },
+    "verification": {
+      "kind": "source-and-code-inspection",
+      "summary": {
+        "ja": "既存公開版の実装・検査・保存結果を読んだ点検であり、この点検では再実行していません。helium('hf')、エネルギー会計恒等式・格子依存・初期値比較の検査、保存PySCF RHF比較と参照生成コードを確認。",
+        "en": "This inspection reads the released implementation, tests and saved results; it does not rerun the calculation. Inspected helium('hf'), tests for energy accounting, grid refinement and alternative starts, saved PySCF RHF comparisons and the independent reference generator."
+      },
+      "evidence": [
+        {
+          "url": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/atomic_radial.py",
+          "kind": "implementation",
+          "label": "helium(model='hf'); E_H/2 and E_x=-E_H/2 reduction"
+        },
+        {
+          "url": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/test_atomic_radial.py",
+          "kind": "tests",
+          "label": "test_helium_scf_and_independent_reference; test_alternative_start_and_explicit_nonconvergence"
+        },
+        {
+          "url": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/reference_pyscf.py",
+          "kind": "independent-reference",
+          "label": "calculate: independent PySCF RHF Gaussian-basis reference"
+        },
+        {
+          "url": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/reference-pyscf.json",
+          "kind": "saved-reference",
+          "label": "Saved RHF energies, basis convergence and environment"
+        },
+        {
+          "url": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/results/results.json",
+          "kind": "saved-output",
+          "label": "helium.refinement; helium.independent_comparison; energy-accounting and convergence checks"
+        }
+      ],
+      "not_checked": {
+        "ja": [
+          "新規再実行、一般の交換積分・開殻HF・分子の検証は行っていない。",
+          "初期値の比較は全停留解の列挙や軌道安定性の証明ではない。"
+        ],
+        "en": [
+          "No new run or validation of general exchange integrals, open-shell HF or molecules.",
+          "Alternative starts do not enumerate all stationary solutions or prove orbital stability."
+        ]
+      }
+    }
   },
   "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/hartree-fock/",
   "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/hartree-fock/index.json",

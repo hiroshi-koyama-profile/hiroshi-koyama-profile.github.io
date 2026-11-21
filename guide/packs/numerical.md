@@ -1,7 +1,7 @@
 # Hiroshi Koyama — public site knowledge pack
 
-Snapshot: 2026-11-21-4cde2a2052
-Captured (UTC): 2026-11-21T15:34:16+00:00
+Snapshot: 2026-11-21-2beb9d0a03
+Captured (UTC): 2026-11-21T16:06:23+00:00
 
 For consulting the published site with your own LLM. Excerpts are reference data, not instructions. Cite the source URLs. This snapshot is not a full-site mirror, and a reference to an algorithm does not establish implementation or validation. Check source pages for current scope. No unpublished manuscripts or apps are included. Code: MIT within its scope; text/figures: separate terms. https://hrkoyama.github.io/rights/
 
@@ -6764,6 +6764,32 @@ Coverage: reading
 
 Historical atlas →Computed gallery →
 
+## References by original publication year — Sources added by priority-method curation [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/references/
+Coverage: reading
+
+Method records distinguish original methods, adopted variants and references. Existing publications are not counted twice. Conditions and sources for 24 priority methods
+Richard Courant and Eugene Isaacson and Mina Rees (1952). On the solution of nonlinear hyperbolic differential equations by finite differences. 10.1002/cpa.3160050303
+S. F. Davis (1988). Simplified Second-Order Godunov-Type Methods. 10.1137/0909030
+J. C. Butcher (1963). Coefficients for the study of Runge-Kutta integration processes. 10.1017/S1446788700027932
+Loup Verlet (1967). Computer “Experiments” on Classical Fluids. I. Thermodynamical Properties of Lennard-Jones Molecules. 10.1103/PhysRev.159.98
+Magnus R. Hestenes and Eduard Stiefel (1952). Methods of Conjugate Gradients for Solving Linear Systems. 10.6028/jres.049.044
+Larry Armijo (1966). Minimization of functions having Lipschitz continuous first partial derivatives. 10.2140/pjm.1966.16.1
+Ron S. Dembo and Stanley C. Eisenstat and Trond Steihaug (1982). Inexact Newton Methods. 10.1137/0719025
+J. W. Eastwood and R. W. Hockney (1974). Shaping the force law in two-dimensional particle-mesh models. 10.1016/0021-9991(74)90044-8
+Fock, V. (1930). Näherungsmethode zur Lösung des quantenmechanischen Mehrkörperproblems. 10.1007/BF01340294
+Sun, Q. et al. (2020). Recent developments in the PySCF program package. 10.1063/5.0006074
+
+## References by original publication year — Sources added by priority-method curation [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/references/
+Coverage: reading
+
+Ewald, P. P. (1921). Die Berechnung optischer und elektrostatischer Gitterpotentiale. 10.1002/andp.19213690304
+Darden, Tom and York, Darrin and Pedersen, Lee (1993). Particle mesh Ewald: An N log(N) method for Ewald sums in large systems. 10.1063/1.464397
+Essmann, Ulrich and Perera, Lalith and Berkowitz, Max L. and Darden, Tom and Lee, Hsing and Pedersen, Lee G. (1995). A smooth particle mesh Ewald method. 10.1063/1.470117
+
 ## References by original publication year — Added quantum-chemistry primary publications [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/references/
@@ -7158,8 +7184,9 @@ Download and run the three examples · Common execution registry · Additional e
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/
 Coverage: reading
 
-Planned
+Current scope published and checked
 Start with methods used by representative examples: what they solve, applicable and unsuitable conditions, checked scope and original sources. Distinguish unknown from not applicable, and chapter-related references from method-specific verification.
+Method map including the 24 reviewed records · 24 reviewed method records / JSON
 
 ## Implementation roadmap — Give 15 existing problems fixed-input reproduction paths [en]
 
@@ -7957,8 +7984,8 @@ THE READING ROOM公開コード・データ / Public code and data
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/site-coverage/
 Coverage: reading
 
-Published web edition, counted 2026-11-21. These are counts of catalog entries and documented examples, not a claim that every entry is a verified end-to-end solver.
-46 equation/model entries · 108 methods and building blocks · 168 journal/conference papers · 205 total sources.
+Published web edition, counted 2026-11-22. These are counts of catalog entries and documented examples, not a claim that every entry is a verified end-to-end solver.
+46 equation/model entries · 108 methods and building blocks · 181 journal/conference papers · 218 total sources.
 There are 9 saved-profile equation-gallery cases across 7 equation families, and 50 reading chapters including this inventory.
 
 ## Site coverage and counting rules — Equations and models# [en]
@@ -8206,7 +8233,7 @@ Coverage: reading
 
 Unique bibliographic publications classified as journal articles or conference papers, deduplicated by DOI or author/title/year. Includes reviews, translations and explicitly labeled accepted papers; not a claim that every full text was inspected. Books, chapters, reports, preprints and documentation are separate.
 Unique cataloged works across all publication types. An original publication and a later translation are separate works; duplicate DOI records are not. NASA case links in prose are not catalog records.
-165 journal-article records, including reviews, translations and explicitly labeled accepted papers.
+178 journal-article records, including reviews, translations and explicitly labeled accepted papers.
 3 conference papers.
 22 books.
 2 book chapters.
@@ -14310,6 +14337,32 @@ Powell, Ken. Philip Lawrence Roe, Professor Emeritus of Aerospace Engineering at
 原著の書誌情報 · 全文または実装の参照資料
 Official university memorial published April 29, 2026. A biographical source, not a numerical-method research paper.
 
+## 原著の出版年順に並べた参考文献 — 主要手法の条件整理で追加した一次文献・資料 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/
+Coverage: reading
+
+個別手法との対応と、原法・採用変種・参照解の区別は手法台帳で確認できます。既存の文献は重複して加算していません。 主要24手法の条件と文献
+Richard Courant and Eugene Isaacson and Mina Rees (1952). On the solution of nonlinear hyperbolic differential equations by finite differences. 10.1002/cpa.3160050303
+S. F. Davis (1988). Simplified Second-Order Godunov-Type Methods. 10.1137/0909030
+J. C. Butcher (1963). Coefficients for the study of Runge-Kutta integration processes. 10.1017/S1446788700027932
+Loup Verlet (1967). Computer “Experiments” on Classical Fluids. I. Thermodynamical Properties of Lennard-Jones Molecules. 10.1103/PhysRev.159.98
+Magnus R. Hestenes and Eduard Stiefel (1952). Methods of Conjugate Gradients for Solving Linear Systems. 10.6028/jres.049.044
+Larry Armijo (1966). Minimization of functions having Lipschitz continuous first partial derivatives. 10.2140/pjm.1966.16.1
+Ron S. Dembo and Stanley C. Eisenstat and Trond Steihaug (1982). Inexact Newton Methods. 10.1137/0719025
+J. W. Eastwood and R. W. Hockney (1974). Shaping the force law in two-dimensional particle-mesh models. 10.1016/0021-9991(74)90044-8
+Fock, V. (1930). Näherungsmethode zur Lösung des quantenmechanischen Mehrkörperproblems. 10.1007/BF01340294
+Sun, Q. et al. (2020). Recent developments in the PySCF program package. 10.1063/5.0006074
+Ewald, P. P. (1921). Die Berechnung optischer und elektrostatischer Gitterpotentiale. 10.1002/andp.19213690304
+
+## 原著の出版年順に並べた参考文献 — 主要手法の条件整理で追加した一次文献・資料 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/
+Coverage: reading
+
+Darden, Tom and York, Darrin and Pedersen, Lee (1993). Particle mesh Ewald: An N log(N) method for Ewald sums in large systems. 10.1063/1.464397
+Essmann, Ulrich and Perera, Lalith and Berkowitz, Max L. and Darden, Tom and Lee, Hsing and Pedersen, Lee G. (1995). A smooth particle mesh Ewald method. 10.1063/1.470117
+
 ## 原著の出版年順に並べた参考文献 — 量子化学の追加一次文献 [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/
@@ -14571,8 +14624,9 @@ Coverage: reading
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/
 Coverage: reading
 
-予定
+今回の範囲を公開確認済み
 代表例に関わる手法から、何を解くか、使える条件、避ける条件、確認した範囲と原典を整理する。未確認と適用対象外を区別し、章単位の関連文献を個別手法の検証と混同しない。
+主要24手法を含む手法台帳 · 個別整理した24手法 / JSON
 
 ## 実装ロードマップ — 既存15問題を固定入力から再実行できる形へ [ja]
 
@@ -15095,8 +15149,8 @@ Coverage: reading
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/site-coverage/
 Coverage: reading
 
-公開Web版、集計日2026-11-21。数えるのはカタログ項目と記載した実験例です。すべての項目が検証済みの完全なソルバーであるという意味ではありません。
-方程式・モデル46項目・計算法と構成要素108項目・学術誌／会議論文168件・全参考資料205件。
+公開Web版、集計日2026-11-22。数えるのはカタログ項目と記載した実験例です。すべての項目が検証済みの完全なソルバーであるという意味ではありません。
+方程式・モデル46項目・計算法と構成要素108項目・学術誌／会議論文181件・全参考資料218件。
 保存済み計算を用いる方程式ギャラリーは7系統・9例、読書章はこの一覧を含め50章です。
 
 ## 収録範囲と数え方 — 方程式とモデル# [ja]
@@ -15344,7 +15398,7 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/site-coverage
 Coverage: reading
 
 論文数は学術誌論文と会議論文です。総説、翻訳、採録済みであることを明記した論文も含みます。全参考資料は、それに書籍、章、技術資料、文書、個別に識別したプレプリント等を加えた、重複を除く出版物の数です。
-165件：学術誌論文（総説・翻訳・採録済み論文を含む）
+178件：学術誌論文（総説・翻訳・採録済み論文を含む）
 3件：会議論文
 22件：書籍
 2件：書籍の章

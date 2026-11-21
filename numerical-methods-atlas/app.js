@@ -1,4 +1,4 @@
-import {homeOverviewPage,wireHomeOverview} from './home-overview.js?v=b67784662362';
+import {homeOverviewPage,wireHomeOverview} from './home-overview.js?v=ab3e5ef36dd9';
 import {readingURL,rewriteReadingLinks} from './reading-urls.js';
 import {expansionPage,wireExpansion} from './shock-expansion.js';
 import {referencePage as exactPage,wireReferences} from './reference-solutions.js';
@@ -117,7 +117,7 @@ const eras = [
  ['1994–2026','Particles meet a Riemann problem','Inutsuka · Iwasaki · Kitajima · Seno','Trace GSPH through its detailed 2002 formulation, particle MHD, and special-relativistic SRGSPH. Literature and a staged implementation plan.','gsph','inutsuka2002']
 ].sort((a,b)=>parseInt(a[0],10)-parseInt(b[0],10));
 let documents, references, sod, experiments, foundations, coverage, translationStatus, localeCatalog, glossary;
-const atlasDocumentVersions = {"ja": "77224149b038", "en": "276ed1dac634"};
+const atlasDocumentVersions = {"ja": "25971ce2254a", "en": "6e73f5c3ec71"};
 const documentCache = new Map();
 const originalShell = new Map([...document.querySelectorAll('.site-header,.site-footer,#figure-dialog,.skip-link')].map(element => [element, element.innerHTML]));
 let navigationVersion = 0, switching = false;
@@ -306,7 +306,7 @@ async function route(options={}) {
 document.querySelector('.skip-link').addEventListener('click',e=>{e.preventDefault();main.focus();main.scrollIntoView();});
 document.querySelector('#figure-dialog').addEventListener('click',e=>{if(e.target===e.currentTarget)e.currentTarget.close();});
 try {
- [localeCatalog,references,sod,experiments,foundations,coverage,translationStatus,glossary,site]=await Promise.all(['locales/messages.json?v=d940c918f722','references.json?v=29fd42d3d747','sod.json','experiments.json','foundations.json','coverage.json?v=92a9884b39cf','translation-status.json','glossary.json','site.json'].map(async file=>{const response=await fetch(file);if(!response.ok)throw Error(`Cannot load ${file}`);return response.json();}));
+ [localeCatalog,references,sod,experiments,foundations,coverage,translationStatus,glossary,site]=await Promise.all(['locales/messages.json?v=d940c918f722','references.json?v=03e8aaeb8522','sod.json','experiments.json','foundations.json','coverage.json?v=d107be369287','translation-status.json','glossary.json','site.json'].map(async file=>{const response=await fetch(file);if(!response.ok)throw Error(`Cannot load ${file}`);return response.json();}));
  repo=site.repositoryUrl;
  references.sort((a,b)=>a.year-b.year||a.id.localeCompare(b.id));
  let saved;try{saved=localStorage.getItem('hrkoyama.home.language') || localStorage.getItem('numart-language');}catch{}

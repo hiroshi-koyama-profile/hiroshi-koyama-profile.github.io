@@ -10,8 +10,8 @@
     "en": "Particle fields & gravity"
   },
   "summary": {
-    "ja": "CICで格子へ質量を割り当て、FFTで周期Poisson方程式を解き、粒子へ力を戻す例です。",
-    "en": "Deposit mass with CIC, solve periodic Poisson with FFTs and interpolate forces back to particles."
+    "ja": "周期3次元粒子の質量をCICで格子へ割り当て、平均密度を除いたPoisson方程式をFFTで解き、格子加速度を同じCICで粒子へ戻す。公開例は連続Fourier記号 −4πG/k² とスペクトル微分を使う。",
+    "en": "Deposit periodic 3D particle mass by CIC, FFT-solve Poisson after removing mean density, and interpolate acceleration back with matched CIC. The example uses the continuum Fourier symbol −4πG/k² and spectral derivatives."
   },
   "status": "educational-example",
   "origin": "existing-coverage-catalog",
@@ -28,41 +28,137 @@
   "code_mapping_scope": "Related chapter modules and test files; not a claim that each test covers every named method.",
   "references": [
     {
-      "url": "https://doi.org/10.1038/324446a0",
-      "label": "A hierarchical O(N log N) force-calculation algorithm (1986)",
-      "scope": "Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation."
-    },
-    {
-      "url": "https://doi.org/10.1016/0021-9991(87)90140-9",
-      "label": "A fast algorithm for particle simulations (1987)",
-      "scope": "Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation."
-    },
-    {
-      "url": "https://arxiv.org/abs/astro-ph/0505010",
-      "label": "The cosmological simulation code GADGET-2 (2005)",
-      "scope": "Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation."
+      "url": "https://doi.org/10.1016/0021-9991(74)90044-8",
+      "label": "Eastwood, J. W. & Hockney, R. W. (1974). Shaping the force law in two-dimensional particle-mesh models.",
+      "scope": "Primary PM charge-sharing/CIC and Fourier-force-shaping research in 2D; context for assignment and mesh-force errors, not a derivation of this 3D gravity implementation.",
+      "role": "formulation",
+      "kind": "primary-research",
+      "supports": {
+        "ja": "PMのCICを含む割当てと格子の力の誤差に直接関係する一次研究。2次元の論文であり、本実装の3次元Green関数を検証する文献とはしない。",
+        "en": "Directly supports PM assignment/CIC and mesh-force error context; this 2D paper is not a validation of the implemented 3D Green function."
+      },
+      "verification": {
+        "checked_on": "2026-11-22",
+        "level": "abstract-and-metadata",
+        "url": "https://www.sciencedirect.com/science/article/pii/0021999174900448",
+        "locator": "Publisher abstract and metadata returned by web search; full text not reviewed."
+      },
+      "bibliography_id": "eastwood1974-a0a7f3"
     }
   ],
   "assumptions": [
-    "3D periodic box; mean density removed",
-    "Matched CIC assignment and interpolation; zero Fourier mode fixed"
+    "A cubic periodic box, positive finite particle masses, finite positions, cubic n³ mesh with n≥4 and L>0; coordinates wrap modulo L in every axis.",
+    "CIC deposits to eight vertices with product-linear weights divided by cell volume; interpolation uses the same weights. No CIC-window deconvolution is applied.",
+    "∇²φ=4πG(ρ−meanρ), with φ̂(0)=0. Nonzero modes use −4πG/k² and acceleration is −∇φ. On even meshes, each derivative zeroes its own-axis Nyquist mode to retain a real odd operator."
   ],
-  "units": "Dimensionless examples; G=1 and box length specified by the example.",
-  "boundary_conditions": "3D periodic",
+  "units": "pm_acceleration is a dimensionless G=1 example. L and positions share a length unit; density, potential and acceleration scale as M/L³, GM/L and GM/L². Only the lower-level periodic_poisson accepts a positive gravity parameter.",
+  "boundary_conditions": "Periodic in all directions with box length L. Mean removal enforces periodic-Poisson compatibility, while zeroing k=0 fixes the additive potential gauge. This is not the isolated-force problem.",
   "limitations": {
-    "ja": "格子Poissonと粒子結合の例で、近接力の直接和比較やEwald・PME・SPMEの実装ではありません。",
-    "en": "A mesh-Poisson and particle-coupling example; not a near-pair direct-sum benchmark or an Ewald, PME or SPME implementation."
+    "ja": "格子以下の近接力を直接補正しないPMのみの静的例。CIC平滑化、格子異方性・aliasing・有限解像度があり、連続Fourier Green関数を有限差分Laplacianの離散逆作用素と混同しない。P3M・TreePM分割・Ewald・PME/SPME・宇宙膨張・時間積分は含まない。",
+    "en": "A static PM-only example without direct short-range correction. CIC smoothing, grid anisotropy, aliasing and finite resolution remain; the continuum Fourier Green function is not the inverse symbol of a finite-difference Laplacian. No P3M, TreePM split, Ewald, PME/SPME, expansion or time integration is included."
   },
   "metadata_review": {
-    "level": "chapter-linked; detailed method-specific curation in progress",
-    "on": "2026-11-21"
+    "level": "method-specific sources and implementation inspected; no new numerical rerun",
+    "on": "2026-11-22"
   },
   "assumptions_ja": [
-    "3次元周期箱・平均密度を差し引く",
-    "CICの割当てと補間を対応させ、Fourierゼロモードを固定"
+    "立方体の周期箱、正かつ有限の粒子質量、有限位置、立方n³格子でn≥4、L>0を使う。位置は各軸でLを法として折り返す。",
+    "CICは8隅への積線形重みで密度を作り、格子体積で割る。粒子へ戻す補間も同じ重み。CIC窓の逆補正は行わない。",
+    "∇²φ=4πG(ρ−平均ρ)、φ̂(0)=0。非零モードは −4πG/k²、加速度は−∇φ。偶数格子の微分は各軸の対応Nyquistモードを零にして実の奇作用素を保つ。"
   ],
-  "units_ja": "無次元の例。G=1と箱の長さを計算条件に明記します。",
-  "boundary_conditions_ja": "3次元周期境界。",
+  "units_ja": "pm_accelerationはG=1固定の無次元例。L・位置には同じ長さ単位を使い、ρは質量/L³、φはGM/L、加速度はGM/L²に対応する。下位関数periodic_poissonのみ正のgravityを指定できる。",
+  "boundary_conditions_ja": "全方向周期、箱長L。平均密度を除くことで周期Poissonの整合性を満たし、k=0を零に固定してポテンシャルの加法定数を選ぶ。孤立境界の力とは同一問題でない。",
+  "method_review": {
+    "version": 1,
+    "on": "2026-11-22",
+    "problem": {
+      "ja": "平均密度を差し引いた、周期粒子系の格子上重力Poisson問題と粒子加速度。",
+      "en": "Periodic particle gravity through the mesh Poisson problem for density contrast."
+    },
+    "variant": {
+      "ja": "8点CIC割当て/補間、連続k²記号のFFT Poisson、k=0固定、スペクトル加速度。",
+      "en": "Eight-vertex CIC deposition/interpolation, FFT Poisson with continuum k², fixed zero mode and spectral acceleration."
+    },
+    "use_when": {
+      "ja": [
+        "周期系で粒子と格子の結合、質量保存、零モードを調べるとき。",
+        "単一Fourierモードにより重力の符号・ゲージを確かめるとき。"
+      ],
+      "en": [
+        "Studying particle/mesh coupling, mass conservation and the zero mode in a periodic system.",
+        "Checking gravitational sign and gauge with a single Fourier mode."
+      ]
+    },
+    "avoid_when": {
+      "ja": [
+        "孤立境界や格子以下の近接力をこのまま必要とする場合。",
+        "この例をEwald/PME/SPMEの誤差制御付き置換とみなす場合。"
+      ],
+      "en": [
+        "Direct use for isolated boundaries or accurately resolved subgrid pair forces.",
+        "Treating this example as an error-controlled Ewald/PME/SPME substitute."
+      ]
+    },
+    "fields": {
+      "assumptions": {
+        "state": "specified",
+        "reason": {
+          "ja": "CIC、Green関数、重力符号、零・Nyquistモードをコードで確認した。",
+          "en": "Checked CIC, Green function, gravitational sign and zero/Nyquist modes in code."
+        }
+      },
+      "units": {
+        "state": "specified",
+        "reason": {
+          "ja": "上位G=1と下位gravity指定を区別した。",
+          "en": "Distinguished top-level G=1 from lower-level gravity selection."
+        }
+      },
+      "boundary_conditions": {
+        "state": "specified",
+        "reason": {
+          "ja": "周期折返し・平均除去・ポテンシャルのゲージを確認した。",
+          "en": "Checked periodic wrapping, mean removal and potential gauge."
+        }
+      },
+      "limitations": {
+        "state": "specified",
+        "reason": {
+          "ja": "PMのみ・静的・格子有限解像度の範囲を明記した。",
+          "en": "Specified PM-only static scope and finite grid resolution."
+        }
+      }
+    },
+    "verification": {
+      "kind": "source-and-code-inspection",
+      "summary": {
+        "ja": "cic_deposit/interpolate、periodic_poisson、pm_accelerationと、質量/周期折返し、正弦密度のφと引力符号、平均除去・ゲージ、CIC自己力・全内力の既存検査を読んだ。今回は再実行していない。",
+        "en": "Inspected cic_deposit/interpolate, periodic_poisson, pm_acceleration and existing mass/wrapping, sinusoidal potential/attraction sign, mean/gauge, CIC self-force and total-internal-force tests; no rerun."
+      },
+      "evidence": [
+        {
+          "url": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/numart/particle_gravity.py",
+          "kind": "implementation",
+          "label": "cic_deposit, cic_interpolate, periodic_poisson, pm_acceleration"
+        },
+        {
+          "url": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/tests/test_particle_gravity.py",
+          "kind": "test",
+          "label": "periodic CIC mass/wrap, sinusoid/gauge/mean and matched-CIC self/total-force tests"
+        }
+      ],
+      "not_checked": {
+        "ja": [
+          "3次元のPM窓・aliasing・格子異方性の新しい定量誤差解析。",
+          "直接和やEwaldと異なる境界を揃えた独立の固定実行例、時間積分。"
+        ],
+        "en": [
+          "New quantitative 3D PM-window, aliasing or grid-anisotropy analysis.",
+          "An independent fixed run matching boundaries to direct/Ewald references, and time integration."
+        ]
+      }
+    }
+  },
   "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/pm/",
   "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/pm/index.json",
   "markdown_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/pm/index.md",

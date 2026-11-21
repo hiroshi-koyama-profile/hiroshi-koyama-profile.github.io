@@ -2,18 +2,122 @@
 
 Status: planned
 
-Distinguish smooth B-spline PME from the original PME formulation.
+SPME replaces Lagrange interpolation with cardinal B-splines for smooth approximate energies and forces. Specify spline order, mesh and differentiation when comparing with original PME.
 
-滑らかなB-spline補間を用いるPMEを、元のPMEと区別して整理する。
+PMEの補間をcardinal B-splineへ置き換え、滑らかな近似エネルギーと力を得るSPMEです。補間次数・格子・微分法を固定し、原PMEとの差を説明します。
 
-Under construction. No dedicated implementation or verification result is provided yet.
-
-
+Under construction. No dedicated implementation or verification result is provided yet. Dispersion terms, intramolecular exclusions, general cells, slab corrections and timing comparisons remain unverified.
 
 
+## 条件と確認範囲 (ja)
 
-- Reference: https://doi.org/10.1063/1.470117 — Bibliographic or official-documentation entry point; source equations are not audited for this planned entry.
-- Reference: https://manual.gromacs.org/current/reference-manual/functions/long-range-electrostatics.html — Bibliographic or official-documentation entry point; source equations are not audited for this planned entry.
+problem: 周期像を含む中性点電荷のCoulombエネルギーと力。孤立重力や電子密度のHartree場とは区別します。
+
+variant: 実装前の比較仕様：Essmannら（1995）のB-spline構造因子と、近似エネルギーの解析微分。原論文の全変種を実装したという意味ではありません。
+
+use_when:
+- 原PMEとの補間差を明らかにし、滑らかなエネルギー・力を同条件で比較したい場合。
+- 補間次数・格子密度・力の評価法を固定し、直接Ewaldの収束値と比較できる場合。
+
+avoid_when:
+- 「PME」と呼ぶだけで、B-spline次数・窓の補正・FFT規格化・微分法を省略する場合。
+- 解析的な力を用いれば、有限格子で運動量とエネルギーの双方が厳密保存すると仮定する場合。
+- 孤立・slab・非中性系を、同じ3D中性仕様のまま扱う場合。
+
+assumptions [specified]:
+- 最初の検証仕様は、立方体セル内の重なりのない点電荷と3次元周期Coulomb相互作用です。総電荷はゼロとし、一様中和背景は含めません。
+- 同一粒子の同一セル項（i=j, n=0）のみを除外し、自己の周期像との相互作用は残します。自己エネルギー補正を別に扱います。
+- 分割係数・実空間打切り・逆空間または格子条件を明示します。静電ポテンシャルの平均をゼロにする選択と、巨視的な表面項の境界規約は別です。
+- 構造因子をcardinal B-splineで近似し、補間のFourier補正とFFT規格化を揃えます。最初の比較候補は4次（3次多項式）補間ですが、未実装です。
+ここでは実装前の比較仕様として記載し、計算済みの条件とは区別します。
+
+units [specified]:
+比較仕様：長さℓ₀、電荷q₀、Coulomb係数kₑを固定。エネルギー単位はkₑq₀²/ℓ₀、力はkₑq₀²/ℓ₀²、分割係数は長さの逆数です。kₑ=1の無次元化とSIを混ぜず、周期重力PMの符号・規約を流用しません。
+ここでは実装前の比較仕様として記載し、計算済みの条件とは区別します。
+
+boundary_conditions [specified]:
+3次元周期・中性セル。最初の比較では外部導体（tin-foil）規約で巨視的表面項をゼロとし、平均ポテンシャルを別途固定します。真空外部・slab・孤立境界の結果とは直接比較しません。
+ここでは実装前の比較仕様として記載し、計算済みの条件とは区別します。
+
+limitations [specified]:
+Under construction。専用の実装・検証結果はまだありません。条件と原典を整理した段階で、長距離分散力や分子内除外、一般格子、slab補正、実行速度の比較は未確認です。
+文献整理と専用実装・数値検証の完了を区別します。
+
+Review: 原典の該当箇所と既存台帳の実装予定状態を照合しました。アトラスに専用の実装・実行入力・数値検証結果はなく、今回も計算は実行していません。
+
+Not checked:
+- 実装コード・固定入力・数値残差・収束率・性能は未検証。
+- 原論文の全導出と全数値例の再現は行っていません。
+
+Evidence:
+
+
+References:
+- [original-method / primary-research] Essmann, U.; Perera, L.; Berkowitz, M. L.; Darden, T.; Lee, H.; Pedersen, L. G. (1995). A smooth particle mesh Ewald method. — https://doi.org/10.1063/1.470117
+  中性点電荷のEwald項と補正、cardinal B-splineによる構造因子、滑らかなエネルギーと力の評価を確認。
+  full-text (2026-11-22); Sections II–IV, Eqs. (2.1)–(2.5), (4.1)–(4.8), and Appendix A surface-term discussion; https://biomolmd.org/mw/images/e/e0/Spme.pdf
+- [context / primary-research] Darden, T.; York, D.; Pedersen, L. (1993). Particle mesh Ewald: An N·log(N) method for Ewald sums in large systems. — https://doi.org/10.1063/1.464397
+  置き換えられるLagrange版PMEの原典です。B-splineを用いる本文献の採用形とは区別します。
+  full-text (2026-11-22); Introduction and Method, printed pp. 10089–10090, Eqs. (2)–(9); https://theory.rutgers.edu/resources/pdfs/1.464397.pdf
+
+## Conditions and review scope (en)
+
+problem: Coulomb energy and forces for neutral point charges and periodic images, distinct from isolated gravity or an electron-density Hartree field.
+
+variant: Pre-implementation specification: Essmann et al. (1995) B-spline structure factors and analytic differentiation of the approximate energy, not implementation of every paper variant.
+
+use_when:
+- Comparing interpolation choices with original PME while seeking smooth energy and forces.
+- Checking specified spline order, mesh density and force differentiation against a converged direct-Ewald reference.
+
+avoid_when:
+- Leaving spline order, interpolation-window correction, FFT normalization or differentiation unspecified under a generic PME label.
+- Assuming analytic forces alone guarantee both exact momentum and energy conservation on a finite mesh.
+- Applying the neutral 3D specification unchanged to isolated, slab or nonneutral systems.
+
+assumptions [specified]:
+- The initial validation specification is noncoincident point charges in a cubic, triply periodic Coulomb cell with zero net charge and no uniform neutralizing background.
+- Omit only i=j in the same cell (n=0); retain periodic self images and account separately for the self-energy correction.
+- Specify splitting, real cutoff and reciprocal/mesh parameters. The mean-potential gauge and the macroscopic surface convention are different choices.
+- Approximate structure factors with cardinal B-splines and matching Fourier correction/FFT normalization. Fourth-order (cubic) interpolation is an initial comparison candidate, not implemented code.
+Specified here as a pre-implementation comparison convention, not an executed setup.
+
+units [specified]:
+Comparison convention: fixed length ℓ₀, charge q₀ and Coulomb prefactor kₑ; energy unit kₑq₀²/ℓ₀ and force unit kₑq₀²/ℓ₀². The splitting coefficient has inverse-length units. Do not mix reduced kₑ=1 and SI conventions or reuse gravitational-PM signs.
+Specified here as a pre-implementation comparison convention, not an executed setup.
+
+boundary_conditions [specified]:
+Triply periodic neutral cell; the initial comparison specifies a conducting (tin-foil) exterior with zero macroscopic surface term and separately fixes the mean-potential gauge. Vacuum-exterior, slab and isolated-boundary results are different problems.
+Specified here as a pre-implementation comparison convention, not an executed setup.
+
+limitations [specified]:
+Under construction. No dedicated implementation or verification result is provided yet. Dispersion terms, intramolecular exclusions, general cells, slab corrections and timing comparisons remain unverified.
+Source curation is separate from completion of implementation and numerical validation.
+
+Review: Checked relevant source passages and the catalog’s planned status. The atlas has no dedicated implementation, runnable input or numerical validation result for this entry; no calculation was run in this review.
+
+Not checked:
+- No implementation, fixed inputs, numerical residuals, convergence rates or performance have been verified.
+- Not a reproduction of every derivation or numerical example in the original papers.
+
+Evidence:
+
+
+References:
+- [original-method / primary-research] Essmann, U.; Perera, L.; Berkowitz, M. L.; Darden, T.; Lee, H.; Pedersen, L. G. (1995). A smooth particle mesh Ewald method. — https://doi.org/10.1063/1.470117
+  Neutral-charge Ewald terms and corrections, cardinal B-spline structure factors and smooth energy/force evaluation.
+  full-text (2026-11-22); Sections II–IV, Eqs. (2.1)–(2.5), (4.1)–(4.8), and Appendix A surface-term discussion; https://biomolmd.org/mw/images/e/e0/Spme.pdf
+- [context / primary-research] Darden, T.; York, D.; Pedersen, L. (1993). Particle mesh Ewald: An N·log(N) method for Ewald sums in large systems. — https://doi.org/10.1063/1.464397
+  Original Lagrange PME being modified; distinct from the B-spline formulation specified here.
+  full-text (2026-11-22); Introduction and Method, printed pp. 10089–10090, Eqs. (2)–(9); https://theory.rutgers.edu/resources/pdfs/1.464397.pdf
+
+
+
+
+
+
+- Reference: https://doi.org/10.1063/1.470117 — Neutral-charge Ewald terms and corrections, cardinal B-spline structure factors and smooth energy/force evaluation.
+- Reference: https://doi.org/10.1063/1.464397 — Original Lagrange PME being modified; distinct from the B-spline formulation specified here.
 
 Next: A comparison with explicit interpolation order, mesh and force convention.
 
