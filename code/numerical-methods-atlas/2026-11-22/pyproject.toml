@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "numart-atlas"
+version = "0.1.1"
+description = "Educational numerical-method examples with scoped verification"
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.24", "matplotlib>=3.7"]
+
+[tool.setuptools.packages.find]
+include = ["numart*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

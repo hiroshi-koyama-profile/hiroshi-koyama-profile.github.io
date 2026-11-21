@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "problem_id": "stiff-cosine",
+  "parameters": {
+    "method": "sdirk2",
+    "rate": 1000.0,
+    "initial": 1.0,
+    "final_time": 1.0,
+    "step_counts": [
+      1000,
+      2000,
+      4000
+    ],
+    "decay_rate": 100000000.0,
+    "decay_step": 1.0
+  },
+  "status": "passed",
+  "passed": true,
+  "metrics": {
+    "maximum_error": 1.8557163583565739e-09,
+    "minimum_observed_order": 1.9418603474701042,
+    "final_error": 1.0049505672071746e-09,
+    "final_time_error": 0.0,
+    "maximum_state_magnitude": 1.0,
+    "stiff_decay_error": 4.828426678472041e-08
+  },
+  "checks": {
+    "analytic-error": true,
+    "resolved-refinement": true,
+    "bounded-state": true,
+    "stiff-decay": true,
+    "final-time": true
+  },
+  "acceptance": [
+    {
+      "id": "analytic-error",
+      "metric": "maximum_error",
+      "comparison": "maximum",
+      "tolerance": 1e-06,
+      "description": {
+        "ja": "細かい固定刻みの全時刻で解析解と比較。",
+        "en": "Compare the finest fixed-step trajectory with the analytic solution at all times."
+      },
+      "observed": 1.8557163583565739e-09,
+      "passed": true
+    },
+    {
+      "id": "resolved-refinement",
+      "metric": "minimum_observed_order",
+      "comparison": "minimum",
+      "tolerance": 1.7,
+      "description": {
+        "ja": "指定した細分化で観測次数を調べる。硬い粗格子で一律2次とは仮定しない。",
+        "en": "Check observed order on the supplied refinement; do not assume uniform second order on coarse stiff steps."
+      },
+      "observed": 1.9418603474701042,
+      "passed": true
+    },
+    {
+      "id": "bounded-state",
+      "metric": "maximum_state_magnitude",
+      "comparison": "maximum",
+      "tolerance": 1.01,
+      "description": {
+        "ja": "この初期値の余弦追従解が有界。",
+        "en": "Bounded cosine tracking for this supplied initial condition."
+      },
+      "observed": 1.0,
+      "passed": true
+    },
+    {
+      "id": "stiff-decay",
+      "metric": "stiff_decay_error",
+      "comparison": "maximum",
+      "tolerance": 1e-06,
+      "description": {
+        "ja": "別の強減衰1段問題を解析的指数減衰と比較。",
+        "en": "Compare a separate very stiff one-step decay with analytic exponential decay."
+      },
+      "observed": 4.828426678472041e-08,
+      "passed": true
+    },
+    {
+      "id": "final-time",
+      "metric": "final_time_error",
+      "comparison": "maximum",
+      "tolerance": 1e-14,
+      "description": {
+        "ja": "指定した終端時刻に到達。",
+        "en": "Reach the specified final time."
+      },
+      "observed": 0.0,
+      "passed": true
+    }
+  ],
+  "table": {
+    "file": "solution.csv",
+    "columns": [
+      "time",
+      "y",
+      "y_exact",
+      "absolute_error"
+    ],
+    "rows": 4001
+  },
+  "details": {
+    "equation": "y'=-rate*(y-cos(t))-sin(t)",
+    "reference": "y(t)=cos(t)+(y(0)-1)*exp(-rate*t)",
+    "row_layout": "One row per time of the finest fixed-step trajectory.",
+    "refinement": [
+      {
+        "steps": 1000,
+        "h": 0.001,
+        "rate_times_h": 1.0,
+        "maximum_error": 2.7932287705034753e-08
+      },
+      {
+        "steps": 2000,
+        "h": 0.0005,
+        "rate_times_h": 0.5,
+        "maximum_error": 7.270232416090039e-09
+      },
+      {
+        "steps": 4000,
+        "h": 0.00025,
+        "rate_times_h": 0.25,
+        "maximum_error": 1.8557163583565739e-09
+      }
+    ],
+    "observed_orders": [
+      1.9418603474701042,
+      1.9700252702582879
+    ],
+    "decay_reference": {
+      "equation": "y'=-decay_rate*y; y(0)=1",
+      "time": 1.0,
+      "computed": -4.828426678472041e-08,
+      "exact": 0.0
+    },
+    "scope": "Classical order two is not assumed for unresolved stiff transients or coarse rate*h; fixed-step Newton tolerances are those of the released solver."
+  },
+  "input_sha256": "53efd235fef8241ed7774f37696b97ef466217ae3244afa1430389c6fa23cd30"
+}

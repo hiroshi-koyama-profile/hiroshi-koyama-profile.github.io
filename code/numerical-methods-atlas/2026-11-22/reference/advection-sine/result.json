@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "problem_id": "advection-sine",
+  "parameters": {
+    "coarse_n": 64,
+    "fine_n": 128,
+    "domain": [
+      0,
+      1
+    ],
+    "mean": 1,
+    "amplitude": 0.2,
+    "mode": 1,
+    "speed": 1,
+    "final_time": 1,
+    "cfl": 0.5,
+    "method": "upwind"
+  },
+  "status": "passed",
+  "passed": true,
+  "metrics": {
+    "density_l1_error_coarse": 0.018209965086589647,
+    "density_l1_error_fine": 0.009450387328989247,
+    "fine_to_coarse_error_ratio": 0.5189678993920087,
+    "mean_conservation_error": 0.0,
+    "maximum_principle_excess": 0.0,
+    "courant_abs": 0.5,
+    "steps_fine": 256,
+    "final_time": 1.0
+  },
+  "checks": {
+    "analytic-error": true,
+    "refinement": true,
+    "periodic-conservation": true,
+    "maximum-principle": true,
+    "stable-courant": true
+  },
+  "acceptance": [
+    {
+      "id": "analytic-error",
+      "metric": "density_l1_error_fine",
+      "comparison": "maximum",
+      "tolerance": 0.02,
+      "description": {
+        "ja": "解析移流解に対する平均絶対誤差が0.02以下（振幅0.2の10%）。",
+        "en": "Mean absolute error against analytic transport is at most 0.02 (10% of the 0.2 amplitude)."
+      },
+      "observed": 0.009450387328989247,
+      "passed": true
+    },
+    {
+      "id": "refinement",
+      "metric": "fine_to_coarse_error_ratio",
+      "comparison": "maximum",
+      "tolerance": 0.65,
+      "description": {
+        "ja": "格子倍増で解析解誤差が減る（1次風上法の実測比較、形式次数の証明ではない）。",
+        "en": "Doubling the grid reduces analytic-reference error (an observed comparison for first-order upwind, not a formal-order proof)."
+      },
+      "observed": 0.5189678993920087,
+      "passed": true
+    },
+    {
+      "id": "periodic-conservation",
+      "metric": "mean_conservation_error",
+      "comparison": "maximum",
+      "tolerance": 1e-12,
+      "description": {
+        "ja": "周期境界の平均値を丸め誤差の範囲で保存する。",
+        "en": "The periodic mean is conserved to rounding accuracy."
+      },
+      "observed": 0.0,
+      "passed": true
+    },
+    {
+      "id": "maximum-principle",
+      "metric": "maximum_principle_excess",
+      "comparison": "maximum",
+      "tolerance": 1e-12,
+      "description": {
+        "ja": "CFL制限内で初期標本の値域を超えない。",
+        "en": "The update remains inside the initial sampled range under the CFL restriction."
+      },
+      "observed": 0.0,
+      "passed": true
+    },
+    {
+      "id": "stable-courant",
+      "metric": "courant_abs",
+      "comparison": "maximum",
+      "tolerance": 1,
+      "description": {
+        "ja": "実際のCourant数の絶対値が1以下。",
+        "en": "The actual absolute Courant number is at most one."
+      },
+      "observed": 0.5,
+      "passed": true
+    }
+  ],
+  "table": {
+    "file": "solution.csv",
+    "columns": [
+      "x",
+      "initial",
+      "computed",
+      "exact_pde",
+      "absolute_error"
+    ],
+    "rows": 128
+  },
+  "details": {
+    "reference_kind": "analytic translated periodic sine, not the discrete amplification factor",
+    "row_layout": "one row per fine-grid cell-center sample at final_time",
+    "scheme": "first-order upwind plus forward Euler; fixed step chosen at or below input CFL",
+    "refinement": "L1 sample error versus the continuous PDE solution; no fitted formal-order claim"
+  },
+  "input_sha256": "c2f31548c6df3db8cb6a5e3eb14e0b1130738e8144d6757a2a44c9cdaa356ccc"
+}

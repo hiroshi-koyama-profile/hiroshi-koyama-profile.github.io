@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "problem_id": "poisson-2d-sine",
+  "parameters": {
+    "interior_nodes": [
+      15,
+      31,
+      63
+    ],
+    "fem_subdivisions": [
+      4,
+      8,
+      16
+    ],
+    "domain": [
+      0,
+      1,
+      0,
+      1
+    ],
+    "boundary_value": 0,
+    "forcing": "2*pi^2*sin(pi*x)*sin(pi*y)",
+    "finite_difference_solvers": [
+      "cg",
+      "multigrid"
+    ],
+    "relative_tolerance": 1e-11,
+    "max_steps": 2000,
+    "fem_error_quadrature_order": 8
+  },
+  "acceptance": [
+    {
+      "id": "cg-continuous-error",
+      "metric": "fd_finest_cg_linf_error",
+      "comparison": "maximum",
+      "tolerance": 0.0003,
+      "description": {
+        "ja": "CGの連続解最大誤差。63内部点で正弦モードの2次差分誤差に余裕を持たせる。",
+        "en": "CG continuous-solution maximum error, allowing margin for the second-order sine-mode error on 63 interior nodes."
+      }
+    },
+    {
+      "id": "mg-continuous-error",
+      "metric": "fd_finest_multigrid_linf_error",
+      "comparison": "maximum",
+      "tolerance": 0.0003,
+      "description": {
+        "ja": "多重格子の連続解最大誤差。CGと同じ離散問題を使う。",
+        "en": "Multigrid continuous-solution maximum error for the same discrete problem as CG."
+      }
+    },
+    {
+      "id": "fd-second-order",
+      "metric": "fd_minimum_observed_order",
+      "comparison": "minimum",
+      "tolerance": 1.9,
+      "description": {
+        "ja": "CGと多重格子の最大誤差がともに2次収束する。",
+        "en": "Both CG and multigrid maximum errors show second-order refinement."
+      }
+    },
+    {
+      "id": "fd-discrete-residual",
+      "metric": "fd_maximum_true_relative_residual",
+      "comparison": "maximum",
+      "tolerance": 1e-9,
+      "description": {
+        "ja": "独立な五点差分で再計算した相対残差。内部停止1e-11より緩い再評価上限。",
+        "en": "Relative residual from a separately evaluated five-point stencil; the check leaves margin above the 1e-11 solver target."
+      }
+    },
+    {
+      "id": "matched-fd-solutions",
+      "metric": "fd_maximum_cg_multigrid_difference",
+      "comparison": "maximum",
+      "tolerance": 1e-9,
+      "description": {
+        "ja": "同じ五点差分解を求めるCGと多重格子の一致。連続解参照とは区別する。",
+        "en": "CG/multigrid agreement for the same five-point system; this is a numerical cross-check, separate from the analytic solution."
+      }
+    },
+    {
+      "id": "fem-l2-error",
+      "metric": "fem_finest_l2_error",
+      "comparison": "maximum",
+      "tolerance": 0.01,
+      "description": {
+        "ja": "16分割P1要素の要素内L2誤差。節点最大誤差ではない。",
+        "en": "Element-interior L2 error for the 16-subdivision P1 mesh, not a nodal maximum norm."
+      }
+    },
+    {
+      "id": "fem-h1-seminorm-error",
+      "metric": "fem_finest_h1_seminorm_error",
+      "comparison": "maximum",
+      "tolerance": 0.3,
+      "description": {
+        "ja": "16分割P1要素の勾配誤差のH1半ノルム。L2誤差と分ける。",
+        "en": "H1 seminorm of the P1 gradient error on the 16-subdivision mesh, separate from L2 value error."
+      }
+    },
+    {
+      "id": "fem-second-order-l2",
+      "metric": "fem_minimum_l2_order",
+      "comparison": "minimum",
+      "tolerance": 1.8,
+      "description": {
+        "ja": "滑らかな解に対するP1のL2誤差の期待次数2を確認する。",
+        "en": "Checks the expected order-two P1 L2 refinement for the smooth solution."
+      }
+    },
+    {
+      "id": "fem-first-order-h1",
+      "metric": "fem_minimum_h1_seminorm_order",
+      "comparison": "minimum",
+      "tolerance": 0.9,
+      "description": {
+        "ja": "滑らかな解に対するP1のH1半ノルム誤差の期待次数1を確認する。",
+        "en": "Checks the expected order-one P1 H1-seminorm refinement for the smooth solution."
+      }
+    },
+    {
+      "id": "fem-assembled-residual",
+      "metric": "fem_maximum_interior_true_relative_residual",
+      "comparison": "maximum",
+      "tolerance": 1e-9,
+      "description": {
+        "ja": "組立て剛性行列の内部自由度残差。境界行の反力を残差に混ぜない。",
+        "en": "Assembled stiffness residual on interior degrees of freedom; boundary reactions are excluded."
+      }
+    },
+    {
+      "id": "fem-dirichlet-boundary",
+      "metric": "fem_boundary_maximum_absolute_value",
+      "comparison": "maximum",
+      "tolerance": 1e-12,
+      "description": {
+        "ja": "P1要素の全周零Dirichlet条件。",
+        "en": "Zero Dirichlet values around the P1 domain boundary."
+      }
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "problem_id": "poisson-1d-dirichlet",
+  "parameters": {
+    "interior_nodes": [
+      15,
+      31,
+      63
+    ],
+    "domain": [
+      0,
+      1
+    ],
+    "boundary_values": [
+      0,
+      0
+    ],
+    "forcing": "pi^2*sin(pi*x)",
+    "solver": "thomas"
+  },
+  "acceptance": [
+    {
+      "id": "continuous-error",
+      "metric": "finest_linf_error",
+      "comparison": "maximum",
+      "tolerance": 0.0003,
+      "description": {
+        "ja": "63内部点の連続解最大誤差。2次差分の主要誤差π²h²/12に余裕を持つ上限。",
+        "en": "Continuous-solution maximum error at 63 interior nodes; the bound allows margin above the leading π²h²/12 error."
+      }
+    },
+    {
+      "id": "second-order-refinement",
+      "metric": "minimum_observed_order",
+      "comparison": "minimum",
+      "tolerance": 1.9,
+      "description": {
+        "ja": "格子幅を半減したときの最大誤差の次数が1.9以上。",
+        "en": "Maximum-error refinement order is at least 1.9 when spacing halves."
+      }
+    },
+    {
+      "id": "discrete-residual",
+      "metric": "maximum_true_relative_residual",
+      "comparison": "maximum",
+      "tolerance": 1e-10,
+      "description": {
+        "ja": "独立な差分式で再計算した離散相対残差。離散化誤差とは別の確認。",
+        "en": "Discrete relative residual recomputed with a separate stencil; distinct from discretization error."
+      }
+    },
+    {
+      "id": "dirichlet-boundary",
+      "metric": "boundary_maximum_absolute_value",
+      "comparison": "maximum",
+      "tolerance": 1e-14,
+      "description": {
+        "ja": "両端の零Dirichlet条件。",
+        "en": "Zero Dirichlet values at both endpoints."
+      }
+    }
+  ]
+}

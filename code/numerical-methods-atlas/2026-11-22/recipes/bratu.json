@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "problem_id": "bratu",
+  "parameters": {
+    "interior_nodes": [
+      31,
+      63,
+      127
+    ],
+    "domain": [
+      0,
+      1
+    ],
+    "boundary_values": [
+      0,
+      0
+    ],
+    "beta": 1,
+    "branch": "lower",
+    "initial_guess": 0,
+    "nonlinear_tolerance": 1e-10,
+    "max_iterations": 30,
+    "linear_solver": "gmres"
+  },
+  "acceptance": [
+    {
+      "id": "nonlinear-convergence",
+      "metric": "all_converged",
+      "comparison": "equals",
+      "tolerance": 0,
+      "description": {
+        "ja": "全格子でNewton–GMRESが指定の非線形残差許容値に到達する。",
+        "en": "Newton–GMRES reaches its nonlinear residual tolerance on every grid."
+      },
+      "expected": true
+    },
+    {
+      "id": "lower-branch-continuous-error",
+      "metric": "finest_linf_error",
+      "comparison": "maximum",
+      "tolerance": 0.00001,
+      "description": {
+        "ja": "β=1の小さい枝の解析解と一致する。127内部点の2次離散誤差に余裕を持つ上限。",
+        "en": "Agreement with the analytic lower branch at β=1; margin above the second-order error at 127 interior nodes."
+      }
+    },
+    {
+      "id": "second-order-refinement",
+      "metric": "minimum_observed_order",
+      "comparison": "minimum",
+      "tolerance": 1.8,
+      "description": {
+        "ja": "小さい枝で格子幅半減により連続解誤差が2次で減る。",
+        "en": "Second-order continuous-solution error reduction on the lower branch."
+      }
+    },
+    {
+      "id": "independent-nonlinear-residual",
+      "metric": "maximum_independent_residual_l2",
+      "comparison": "maximum",
+      "tolerance": 1e-8,
+      "description": {
+        "ja": "独立に再評価した非線形差分残差のEuclideanノルム。",
+        "en": "Euclidean norm of the independently recomputed nonlinear difference residual."
+      }
+    },
+    {
+      "id": "dirichlet-boundary",
+      "metric": "boundary_maximum_absolute_value",
+      "comparison": "maximum",
+      "tolerance": 1e-14,
+      "description": {
+        "ja": "両端の零Dirichlet条件。",
+        "en": "Zero Dirichlet values at both endpoints."
+      }
+    }
+  ]
+}

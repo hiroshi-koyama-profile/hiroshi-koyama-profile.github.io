@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "problem_id": "smooth-function-projection",
+  "parameters": {
+    "domain": [
+      -1,
+      1
+    ],
+    "function": "exp(x)",
+    "degrees": [
+      2,
+      4,
+      6,
+      8
+    ],
+    "projection_quadrature_order": 32,
+    "reference_quadrature_orders": [
+      64,
+      96
+    ],
+    "interpolation_nodes": "gll",
+    "evaluation_points": 201
+  },
+  "status": "passed",
+  "passed": true,
+  "metrics": {
+    "finest_projection_l2_error": 9.653888233607264e-09,
+    "finest_gll_interpolation_l2_error": 1.4538963000012312e-08,
+    "minimum_projection_error_reduction": 80.6704064404387,
+    "minimum_interpolation_error_reduction": 92.88522241446563,
+    "maximum_independent_coefficient_difference": 1.001968319732082e-13,
+    "maximum_projection_orthogonality_defect": 2.54438729580561e-15,
+    "maximum_reference_quadrature_disagreement": 5.605325231750058e-17
+  },
+  "checks": {
+    "projection-l2-error": true,
+    "interpolation-l2-error": true,
+    "projection-degree-refinement": true,
+    "interpolation-degree-refinement": true,
+    "independent-modal-coefficients": true,
+    "projection-orthogonality": true,
+    "quadrature-reference-agreement": true
+  },
+  "acceptance": [
+    {
+      "id": "projection-l2-error",
+      "metric": "finest_projection_l2_error",
+      "comparison": "maximum",
+      "tolerance": 2e-08,
+      "description": {
+        "ja": "exp(x)の8次L2射影の値誤差。高次モードの既知の急減に基づく保守的上限。",
+        "en": "Value error of degree-eight L2 projection of exp(x), with a conservative bound for rapidly decaying smooth-function modes."
+      },
+      "observed": 9.653888233607264e-09,
+      "passed": true
+    },
+    {
+      "id": "interpolation-l2-error",
+      "metric": "finest_gll_interpolation_l2_error",
+      "comparison": "maximum",
+      "tolerance": 5e-08,
+      "description": {
+        "ja": "同じ8次GLL節点補間を別の高次求積で評価する。",
+        "en": "Degree-eight GLL interpolation evaluated using separate higher-order quadrature."
+      },
+      "observed": 1.4538963000012312e-08,
+      "passed": true
+    },
+    {
+      "id": "projection-degree-refinement",
+      "metric": "minimum_projection_error_reduction",
+      "comparison": "minimum",
+      "tolerance": 10,
+      "description": {
+        "ja": "次数を2ずつ上げたとき射影誤差が少なくとも10分の1になる。",
+        "en": "Projection error falls by at least a factor ten for each two-degree increase."
+      },
+      "observed": 80.6704064404387,
+      "passed": true
+    },
+    {
+      "id": "interpolation-degree-refinement",
+      "metric": "minimum_interpolation_error_reduction",
+      "comparison": "minimum",
+      "tolerance": 10,
+      "description": {
+        "ja": "次数を2ずつ上げたとき補間誤差が少なくとも10分の1になる。",
+        "en": "Interpolation error falls by at least a factor ten for each two-degree increase."
+      },
+      "observed": 92.88522241446563,
+      "passed": true
+    },
+    {
+      "id": "independent-modal-coefficients",
+      "metric": "maximum_independent_coefficient_difference",
+      "comparison": "maximum",
+      "tolerance": 1e-11,
+      "description": {
+        "ja": "独立のLegendre再帰式と96点求積による係数との一致。射影と同じ求積を繰り返さない。",
+        "en": "Agreement with coefficients from a separate Legendre recurrence and 96-point quadrature, not repeated projection quadrature."
+      },
+      "observed": 1.001968319732082e-13,
+      "passed": true
+    },
+    {
+      "id": "projection-orthogonality",
+      "metric": "maximum_projection_orthogonality_defect",
+      "comparison": "maximum",
+      "tolerance": 1e-12,
+      "description": {
+        "ja": "残差とP0からPpの内積を高次求積で評価し、L2射影の直交性を確認する。",
+        "en": "Higher-order quadrature checks residual orthogonality against P0 through Pp."
+      },
+      "observed": 2.54438729580561e-15,
+      "passed": true
+    },
+    {
+      "id": "quadrature-reference-agreement",
+      "metric": "maximum_reference_quadrature_disagreement",
+      "comparison": "maximum",
+      "tolerance": 1e-12,
+      "description": {
+        "ja": "64点と96点求積でL2誤差の評価が一致し、参照求積の不足を検知する。",
+        "en": "L2-error estimates agree between 64- and 96-point rules, detecting inadequate reference quadrature."
+      },
+      "observed": 5.605325231750058e-17,
+      "passed": true
+    }
+  ],
+  "table": {
+    "file": "solution.csv",
+    "columns": [
+      "degree",
+      "x",
+      "projection",
+      "gll_interpolation",
+      "reference",
+      "projection_absolute_error",
+      "interpolation_absolute_error"
+    ],
+    "rows": 804
+  },
+  "details": {
+    "reference_type": "Analytic exp(x) values; L2 norms and independent modal coefficients use higher-order Gauss quadrature, not an exact integral claim.",
+    "degree_refinement": [
+      {
+        "degree": 2,
+        "projection_l2_error": 0.037954888117749115,
+        "gll_interpolation_l2_error": 0.0702125535820976,
+        "independent_coefficient_maximum_difference": 1.73749903353837e-14
+      },
+      {
+        "degree": 4,
+        "projection_l2_error": 0.000470493329493416,
+        "gll_interpolation_l2_error": 0.0007559066098673941,
+        "independent_coefficient_maximum_difference": 3.464589726220879e-14
+      },
+      {
+        "degree": 6,
+        "projection_l2_error": 2.788062280048106e-06,
+        "gll_interpolation_l2_error": 4.28928235311551e-06,
+        "independent_coefficient_maximum_difference": 6.286646008456243e-14
+      },
+      {
+        "degree": 8,
+        "projection_l2_error": 9.653888233607264e-09,
+        "gll_interpolation_l2_error": 1.4538963000012312e-08,
+        "independent_coefficient_maximum_difference": 1.001968319732082e-13
+      }
+    ],
+    "independence": "Projection uses released project_legendre at the input order. Reference coefficients and orthogonality use a separately coded three-term Legendre recurrence with two higher quadrature orders. No comparison merely repeats the projection quadrature.",
+    "table_layout": "Each degree contributes evaluation_points rows on the same inclusive [-1,1] grid. Projection, GLL interpolation and exp(x) align at each row coordinate.",
+    "scope": "Smooth-function p refinement only; no discontinuity or general spectral-element PDE validation."
+  },
+  "input_sha256": "97e6d8f9819e62d2c16e99a7364e05526cbed382d0615f63d73596f512c2b7ea"
+}

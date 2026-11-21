@@ -3,6 +3,9 @@
 from pathlib import Path
 import argparse
 import datetime
+import csv
+import math
+import time
 import hashlib
 import importlib.metadata
 import json
@@ -49,6 +52,21 @@ with tempfile.TemporaryDirectory(prefix='atlas-edition-check-') as name:
             print(demo_result.stderr,file=sys.stderr);raise SystemExit(demo_result.returncode)
         output=json.loads((temporary/'demo/result.json').read_text())
         examples.append({'case':'barnes-hut','relative_rms_force_error':output['relative_rms_force_error'],'checks':output['checks'],'force_csv_rows':sum(1 for _ in (temporary/'demo/forces.csv').open())-1})
+    recipe_runner=temporary/prefix/'run_recipe.py'
+    if recipe_runner.is_file() and result.returncode==0:
+        for source in sorted((temporary/prefix/'recipes').glob('*.json')):
+            output=temporary/('recipe-'+source.stem)
+            started=time.monotonic()
+            run=subprocess.run([sys.executable,str(recipe_runner),'--input',str(source),'--output',str(output)],cwd=temporary/prefix,text=True,capture_output=True,timeout=180,env={**os.environ,'PYTHONDONTWRITEBYTECODE':'1'})
+            if run.returncode:
+                print(run.stderr,file=sys.stderr);raise SystemExit(run.returncode)
+            document=json.loads((output/'result.json').read_text())
+            if document.get('passed') is not True or not document.get('checks') or not all(v is True for v in document['checks'].values()):raise ValueError('Recipe acceptance failed: '+source.stem)
+            if document['input_sha256']!=hashlib.sha256(source.read_bytes()).hexdigest():raise ValueError('Recipe input provenance mismatch')
+            with (output/'solution.csv').open(newline='') as handle:table=list(csv.reader(handle))
+            if not table or table[0]!=document['table']['columns'] or len(table)-1!=document['table']['rows']:raise ValueError('Recipe output table mismatch')
+            if not all(len(row)==len(table[0]) and all(math.isfinite(float(value)) for value in row) for row in table[1:]):raise ValueError('Recipe CSV must contain aligned finite rows')
+            examples.append({'case':source.stem,'input_sha256':document['input_sha256'],'checks':document['checks'],'metrics':document['metrics'],'elapsed_seconds':time.monotonic()-started,'csv_rows':len(table)-1,'output_sha256':{name:hashlib.sha256((output/name).read_bytes()).hexdigest() for name in ['result.json','solution.csv']}})
     report={'schema_version':1,'verified_on':datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9))).date().isoformat(),'edition':args.edition,
             'archive_sha256':hashlib.sha256(archive.read_bytes()).hexdigest(),'execution':'Archive extracted to an independent temporary directory; tests used only packaged source and data.',
             'python':'.'.join(map(str,sys.version_info[:3])),**{p:importlib.metadata.version(p) for p in ['numpy','matplotlib','pytest']},

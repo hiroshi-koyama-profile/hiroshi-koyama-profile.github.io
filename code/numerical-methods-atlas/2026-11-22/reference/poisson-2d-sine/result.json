@@ -1,0 +1,285 @@
+{
+  "schema_version": 1,
+  "problem_id": "poisson-2d-sine",
+  "parameters": {
+    "interior_nodes": [
+      15,
+      31,
+      63
+    ],
+    "fem_subdivisions": [
+      4,
+      8,
+      16
+    ],
+    "domain": [
+      0,
+      1,
+      0,
+      1
+    ],
+    "boundary_value": 0,
+    "forcing": "2*pi^2*sin(pi*x)*sin(pi*y)",
+    "finite_difference_solvers": [
+      "cg",
+      "multigrid"
+    ],
+    "relative_tolerance": 1e-11,
+    "max_steps": 2000,
+    "fem_error_quadrature_order": 8
+  },
+  "status": "passed",
+  "passed": true,
+  "metrics": {
+    "fd_finest_cg_linf_error": 0.0002008218097049319,
+    "fd_finest_multigrid_linf_error": 0.0002008218092508507,
+    "fd_minimum_observed_order": 2.0005215337575426,
+    "fd_maximum_true_relative_residual": 8.225869530859639e-12,
+    "fd_maximum_cg_multigrid_difference": 5.892175636290631e-12,
+    "fem_finest_l2_error": 0.0053774350099373034,
+    "fem_finest_h1_seminorm_error": 0.21753633635952838,
+    "fem_minimum_l2_order": 1.9037478085949007,
+    "fem_minimum_h1_seminorm_order": 0.9575364541653995,
+    "fem_maximum_interior_true_relative_residual": 3.1814633402790833e-12,
+    "fem_boundary_maximum_absolute_value": 0.0
+  },
+  "checks": {
+    "cg-continuous-error": true,
+    "mg-continuous-error": true,
+    "fd-second-order": true,
+    "fd-discrete-residual": true,
+    "matched-fd-solutions": true,
+    "fem-l2-error": true,
+    "fem-h1-seminorm-error": true,
+    "fem-second-order-l2": true,
+    "fem-first-order-h1": true,
+    "fem-assembled-residual": true,
+    "fem-dirichlet-boundary": true
+  },
+  "acceptance": [
+    {
+      "id": "cg-continuous-error",
+      "metric": "fd_finest_cg_linf_error",
+      "comparison": "maximum",
+      "tolerance": 0.0003,
+      "description": {
+        "ja": "CGの連続解最大誤差。63内部点で正弦モードの2次差分誤差に余裕を持たせる。",
+        "en": "CG continuous-solution maximum error, allowing margin for the second-order sine-mode error on 63 interior nodes."
+      },
+      "observed": 0.0002008218097049319,
+      "passed": true
+    },
+    {
+      "id": "mg-continuous-error",
+      "metric": "fd_finest_multigrid_linf_error",
+      "comparison": "maximum",
+      "tolerance": 0.0003,
+      "description": {
+        "ja": "多重格子の連続解最大誤差。CGと同じ離散問題を使う。",
+        "en": "Multigrid continuous-solution maximum error for the same discrete problem as CG."
+      },
+      "observed": 0.0002008218092508507,
+      "passed": true
+    },
+    {
+      "id": "fd-second-order",
+      "metric": "fd_minimum_observed_order",
+      "comparison": "minimum",
+      "tolerance": 1.9,
+      "description": {
+        "ja": "CGと多重格子の最大誤差がともに2次収束する。",
+        "en": "Both CG and multigrid maximum errors show second-order refinement."
+      },
+      "observed": 2.0005215337575426,
+      "passed": true
+    },
+    {
+      "id": "fd-discrete-residual",
+      "metric": "fd_maximum_true_relative_residual",
+      "comparison": "maximum",
+      "tolerance": 1e-09,
+      "description": {
+        "ja": "独立な五点差分で再計算した相対残差。内部停止1e-11より緩い再評価上限。",
+        "en": "Relative residual from a separately evaluated five-point stencil; the check leaves margin above the 1e-11 solver target."
+      },
+      "observed": 8.225869530859639e-12,
+      "passed": true
+    },
+    {
+      "id": "matched-fd-solutions",
+      "metric": "fd_maximum_cg_multigrid_difference",
+      "comparison": "maximum",
+      "tolerance": 1e-09,
+      "description": {
+        "ja": "同じ五点差分解を求めるCGと多重格子の一致。連続解参照とは区別する。",
+        "en": "CG/multigrid agreement for the same five-point system; this is a numerical cross-check, separate from the analytic solution."
+      },
+      "observed": 5.892175636290631e-12,
+      "passed": true
+    },
+    {
+      "id": "fem-l2-error",
+      "metric": "fem_finest_l2_error",
+      "comparison": "maximum",
+      "tolerance": 0.01,
+      "description": {
+        "ja": "16分割P1要素の要素内L2誤差。節点最大誤差ではない。",
+        "en": "Element-interior L2 error for the 16-subdivision P1 mesh, not a nodal maximum norm."
+      },
+      "observed": 0.0053774350099373034,
+      "passed": true
+    },
+    {
+      "id": "fem-h1-seminorm-error",
+      "metric": "fem_finest_h1_seminorm_error",
+      "comparison": "maximum",
+      "tolerance": 0.3,
+      "description": {
+        "ja": "16分割P1要素の勾配誤差のH1半ノルム。L2誤差と分ける。",
+        "en": "H1 seminorm of the P1 gradient error on the 16-subdivision mesh, separate from L2 value error."
+      },
+      "observed": 0.21753633635952838,
+      "passed": true
+    },
+    {
+      "id": "fem-second-order-l2",
+      "metric": "fem_minimum_l2_order",
+      "comparison": "minimum",
+      "tolerance": 1.8,
+      "description": {
+        "ja": "滑らかな解に対するP1のL2誤差の期待次数2を確認する。",
+        "en": "Checks the expected order-two P1 L2 refinement for the smooth solution."
+      },
+      "observed": 1.9037478085949007,
+      "passed": true
+    },
+    {
+      "id": "fem-first-order-h1",
+      "metric": "fem_minimum_h1_seminorm_order",
+      "comparison": "minimum",
+      "tolerance": 0.9,
+      "description": {
+        "ja": "滑らかな解に対するP1のH1半ノルム誤差の期待次数1を確認する。",
+        "en": "Checks the expected order-one P1 H1-seminorm refinement for the smooth solution."
+      },
+      "observed": 0.9575364541653995,
+      "passed": true
+    },
+    {
+      "id": "fem-assembled-residual",
+      "metric": "fem_maximum_interior_true_relative_residual",
+      "comparison": "maximum",
+      "tolerance": 1e-09,
+      "description": {
+        "ja": "組立て剛性行列の内部自由度残差。境界行の反力を残差に混ぜない。",
+        "en": "Assembled stiffness residual on interior degrees of freedom; boundary reactions are excluded."
+      },
+      "observed": 3.1814633402790833e-12,
+      "passed": true
+    },
+    {
+      "id": "fem-dirichlet-boundary",
+      "metric": "fem_boundary_maximum_absolute_value",
+      "comparison": "maximum",
+      "tolerance": 1e-12,
+      "description": {
+        "ja": "P1要素の全周零Dirichlet条件。",
+        "en": "Zero Dirichlet values around the P1 domain boundary."
+      },
+      "observed": 0.0,
+      "passed": true
+    }
+  ],
+  "table": {
+    "file": "solution.csv",
+    "columns": [
+      "method_code",
+      "resolution",
+      "x",
+      "y",
+      "solution",
+      "reference",
+      "absolute_error"
+    ],
+    "rows": 8739
+  },
+  "details": {
+    "analytic_solution": "sin(pi*x)*sin(pi*y)",
+    "finite_difference_refinement": [
+      {
+        "method": "cg",
+        "interior_nodes": 15,
+        "linf_error": 0.0032189644400797413,
+        "true_relative_residual": 6.084932258185706e-15,
+        "iterations_or_cycles": 1
+      },
+      {
+        "method": "multigrid",
+        "interior_nodes": 15,
+        "linf_error": 0.0032189644341875656,
+        "true_relative_residual": 8.225869530859639e-12,
+        "iterations_or_cycles": 8
+      },
+      {
+        "method": "cg",
+        "interior_nodes": 31,
+        "linf_error": 0.0008035776793722249,
+        "true_relative_residual": 2.6298878169314288e-14,
+        "iterations_or_cycles": 1
+      },
+      {
+        "method": "multigrid",
+        "interior_nodes": 31,
+        "linf_error": 0.0008035776789769855,
+        "true_relative_residual": 5.584159230169375e-13,
+        "iterations_or_cycles": 9
+      },
+      {
+        "method": "cg",
+        "interior_nodes": 63,
+        "linf_error": 0.0002008218097049319,
+        "true_relative_residual": 1.1738261181598693e-13,
+        "iterations_or_cycles": 1
+      },
+      {
+        "method": "multigrid",
+        "interior_nodes": 63,
+        "linf_error": 0.0002008218092508507,
+        "true_relative_residual": 6.412836426786033e-13,
+        "iterations_or_cycles": 9
+      }
+    ],
+    "fem_refinement": [
+      {
+        "subdivisions_per_axis": 4,
+        "l2_error": 0.0790754536252813,
+        "h1_seminorm_error": 0.8385483442178424,
+        "interior_true_relative_residual": 7.722738200758098e-16
+      },
+      {
+        "subdivisions_per_axis": 8,
+        "l2_error": 0.02113277345580294,
+        "h1_seminorm_error": 0.4317982830064737,
+        "interior_true_relative_residual": 2.9836656137564722e-12
+      },
+      {
+        "subdivisions_per_axis": 16,
+        "l2_error": 0.0053774350099373034,
+        "h1_seminorm_error": 0.21753633635952838,
+        "interior_true_relative_residual": 3.1814633402790833e-12
+      }
+    ],
+    "fem_l2_orders": [
+      1.9037478085949007,
+      1.9744920294668968
+    ],
+    "fem_h1_seminorm_orders": [
+      0.9575364541653995,
+      0.9891011038360994
+    ],
+    "fem_error_definition": "L2 integrates the value error; H1 seminorm integrates the gradient error inside each triangle. These are not nodal norms.",
+    "table_layout": "Finest meshes only. method_code 0=CG, 1=multigrid, 2=P1 FEM. resolution is interior nodes per axis for FD and cells per axis before triangle splitting for FEM. Reference is evaluated at each row coordinate, including boundary nodes.",
+    "scope": "The sine source is one discrete eigenmode, so rapid CG termination is not a general performance benchmark. FEM and FD use different meshes; their continuous-error norms are reported separately."
+  },
+  "input_sha256": "e4928dda7da5eb43bbb33c8739be6d8cc28e0bd6bed9ba6635899daad4c1c244"
+}

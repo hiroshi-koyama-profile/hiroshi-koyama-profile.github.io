@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "problem_id": "harmonic-oscillator",
+  "parameters": {
+    "system": "harmonic",
+    "method": "verlet",
+    "initial": [
+      1.0,
+      0.2
+    ],
+    "final_time": 20.0,
+    "step_counts": [
+      200,
+      400,
+      800
+    ]
+  },
+  "acceptance": [
+    {
+      "id": "analytic-state",
+      "metric": "max_state_error",
+      "comparison": "maximum",
+      "tolerance": 0.001,
+      "description": {
+        "ja": "全時刻の位相空間誤差を解析解と比較。",
+        "en": "Compare phase-space error with the analytic solution over all output times."
+      }
+    },
+    {
+      "id": "refinement",
+      "metric": "minimum_observed_order",
+      "comparison": "minimum",
+      "tolerance": 1.9,
+      "description": {
+        "ja": "終端状態誤差の観測次数が2次に整合。",
+        "en": "Endpoint-error refinement is consistent with second order."
+      }
+    },
+    {
+      "id": "energy-envelope",
+      "metric": "max_relative_energy_deviation",
+      "comparison": "maximum",
+      "tolerance": 0.0002,
+      "description": {
+        "ja": "元のHamiltonianの相対偏差を有限区間で測る。厳密保存とは呼ばない。",
+        "en": "Measure relative deviation of the original Hamiltonian over this finite interval; not exact conservation."
+      }
+    },
+    {
+      "id": "time-reversal",
+      "metric": "reversal_error",
+      "comparison": "maximum",
+      "tolerance": 1e-11,
+      "description": {
+        "ja": "固定刻みを逆向きに戻した状態差。",
+        "en": "State difference after reversing the same fixed steps."
+      }
+    },
+    {
+      "id": "final-time",
+      "metric": "final_time_error",
+      "comparison": "maximum",
+      "tolerance": 1e-14,
+      "description": {
+        "ja": "指定した終端時刻に到達。",
+        "en": "Reach the specified final time."
+      }
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "problem_id": "shu-osher",
+  "parameters": {
+    "coarse_n": 100,
+    "fine_n": 200,
+    "reference_n": 800,
+    "domain": [
+      -5,
+      5
+    ],
+    "discontinuity": -4,
+    "gamma": 1.4,
+    "left": [
+      3.857143,
+      2.629369,
+      10.33333
+    ],
+    "ambient_density": 1,
+    "density_amplitude": 0.2,
+    "angular_wavenumber": 5,
+    "ambient_velocity": 0,
+    "ambient_pressure": 1,
+    "final_time": 1.8,
+    "cfl": 0.3,
+    "boundary": "fixed",
+    "method": "weno-z",
+    "basis": "characteristic",
+    "epsilon": 1e-06
+  },
+  "status": "passed",
+  "passed": true,
+  "metrics": {
+    "density_l1_error_coarse": 0.0909684781406223,
+    "density_l1_error_fine": 0.06034109484095713,
+    "fine_to_coarse_error_ratio": 0.6633187239614994,
+    "minimum_density": 0.7971533365437261,
+    "minimum_pressure": 0.9999989784392186,
+    "physical_boundary_balance_relative_defect": 0.00024561754605276995,
+    "mass_balance_absolute_defect": 0.007637902325864587,
+    "momentum_balance_absolute_defect": 2.1968560304230778e-10,
+    "energy_balance_absolute_defect": 1.628166046430124e-09,
+    "steps_fine": 563,
+    "final_time_error": 0.0,
+    "reference_n": 800,
+    "rejected_steps": 0
+  },
+  "checks": {
+    "numerical-reference-error": true,
+    "empirical-refinement": true,
+    "positive-density": true,
+    "positive-pressure": true,
+    "boundary-balance": true,
+    "reached-time": true
+  },
+  "acceptance": [
+    {
+      "id": "numerical-reference-error",
+      "metric": "density_l1_error_fine",
+      "comparison": "maximum",
+      "tolerance": 0.15,
+      "description": {
+        "ja": "800点の同一手法の数値参照に対する平均密度差が0.15以下。厳密解誤差ではない。",
+        "en": "Mean density disagreement with the same-method 800-point numerical reference is at most 0.15; this is not exact-solution error."
+      },
+      "observed": 0.06034109484095713,
+      "passed": true
+    },
+    {
+      "id": "empirical-refinement",
+      "metric": "fine_to_coarse_error_ratio",
+      "comparison": "maximum",
+      "tolerance": 0.95,
+      "description": {
+        "ja": "100→200点で高解像度参照との差が減る。収束次数は主張しない。",
+        "en": "The discrepancy with the higher-resolution reference decreases from 100 to 200 points; no convergence order is claimed."
+      },
+      "observed": 0.6633187239614994,
+      "passed": true
+    },
+    {
+      "id": "positive-density",
+      "metric": "minimum_density",
+      "comparison": "minimum",
+      "tolerance": 1e-08,
+      "description": {
+        "ja": "最小密度が正である。",
+        "en": "Minimum density remains positive."
+      },
+      "observed": 0.7971533365437261,
+      "passed": true
+    },
+    {
+      "id": "positive-pressure",
+      "metric": "minimum_pressure",
+      "comparison": "minimum",
+      "tolerance": 1e-08,
+      "description": {
+        "ja": "最小圧力が正である。",
+        "en": "Minimum gas pressure remains positive."
+      },
+      "observed": 0.9999989784392186,
+      "passed": true
+    },
+    {
+      "id": "boundary-balance",
+      "metric": "physical_boundary_balance_relative_defect",
+      "comparison": "maximum",
+      "tolerance": 0.002,
+      "description": {
+        "ja": "物理境界流束に対する近似収支を0.2%以内にする。固定ゴーストのFD境界離散化誤差を含み、丸め誤差保存を主張しない。",
+        "en": "Approximate physical-flux balance remains within 0.2%; fixed-ghost FD boundary discretization error is included, so roundoff conservation is not claimed."
+      },
+      "observed": 0.00024561754605276995,
+      "passed": true
+    },
+    {
+      "id": "reached-time",
+      "metric": "final_time_error",
+      "comparison": "maximum",
+      "tolerance": 1e-14,
+      "description": {
+        "ja": "指定した終端時刻まで進んだ。",
+        "en": "The requested final time is reached."
+      },
+      "observed": 0.0,
+      "passed": true
+    }
+  ],
+  "table": {
+    "file": "solution.csv",
+    "columns": [
+      "x",
+      "density",
+      "velocity",
+      "pressure",
+      "reference_density",
+      "reference_velocity",
+      "reference_pressure",
+      "density_absolute_error"
+    ],
+    "rows": 200
+  },
+  "details": {
+    "reference_kind": "same-method higher-resolution numerical reference, linearly interpolated in conserved variables to the two sample grids; not exact and not an independent solver",
+    "row_layout": "one fine-grid location per row; reference at the identical final time and location",
+    "representation": "pointwise finite-difference values, not finite-volume cell averages",
+    "conservation": "integral(final)-integral(initial)-T*(physical left flux-physical right flux); FD fixed ghosts can leave boundary discretization error",
+    "refinement": "coarse and fine L1 sample errors against the stated reference; ratio is empirical, not a proof of formal order"
+  },
+  "input_sha256": "302a761bb5cd20d049999da230eda0b873daaed9cafefafc7779374b6210accf"
+}

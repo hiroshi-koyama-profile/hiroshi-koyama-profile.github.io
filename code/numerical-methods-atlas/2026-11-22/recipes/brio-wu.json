@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "problem_id": "brio-wu",
+  "parameters": {
+    "coarse_n": 64,
+    "fine_n": 128,
+    "reference_n": 512,
+    "domain": [
+      0,
+      1
+    ],
+    "discontinuity": 0.5,
+    "gamma": 2,
+    "left": [
+      1,
+      0,
+      0,
+      0,
+      1,
+      0.75,
+      1,
+      0
+    ],
+    "right": [
+      0.125,
+      0,
+      0,
+      0,
+      0.1,
+      0.75,
+      -1,
+      0
+    ],
+    "final_time": 0.1,
+    "cfl": 0.35,
+    "solver": "hlld",
+    "limiter": "mc",
+    "boundary": "edge-extrapolation",
+    "mu0": 1
+  },
+  "acceptance": [
+    {
+      "id": "numerical-reference-error",
+      "metric": "density_l1_error_fine",
+      "comparison": "maximum",
+      "tolerance": 0.03,
+      "description": {
+        "ja": "512セル参照を保存変数でブロック平均した密度との差が平均0.03以下。厳密解ではない。",
+        "en": "Mean density discrepancy from the conservatively restricted 512-cell reference is at most 0.03; the reference is not exact."
+      }
+    },
+    {
+      "id": "empirical-refinement",
+      "metric": "fine_to_coarse_error_ratio",
+      "comparison": "maximum",
+      "tolerance": 0.95,
+      "description": {
+        "ja": "64→128セルで高解像度参照との差が減る。形式次数は主張しない。",
+        "en": "The discrepancy with the higher-resolution reference decreases from 64 to 128 cells; no formal order is claimed."
+      }
+    },
+    {
+      "id": "longitudinal-field",
+      "metric": "longitudinal_field_max_error",
+      "comparison": "maximum",
+      "tolerance": 1e-12,
+      "description": {
+        "ja": "1次元で一定の縦磁場Bx=0.75を保存する。",
+        "en": "The constant one-dimensional longitudinal field Bx=0.75 is retained."
+      }
+    },
+    {
+      "id": "no-positivity-retry",
+      "metric": "retried_steps",
+      "comparison": "maximum",
+      "tolerance": 0,
+      "description": {
+        "ja": "この標準入力では正値性失敗による再試行がない。HLLE流束への切替回数は別途記録する。",
+        "en": "This standard input needs no positivity-failure time-step retry; HLLE flux fallbacks are separately reported."
+      }
+    },
+    {
+      "id": "positive-density",
+      "metric": "minimum_density",
+      "comparison": "minimum",
+      "tolerance": 1e-8,
+      "description": {
+        "ja": "最小密度が正である。",
+        "en": "Minimum density remains positive."
+      }
+    },
+    {
+      "id": "positive-pressure",
+      "metric": "minimum_pressure",
+      "comparison": "minimum",
+      "tolerance": 1e-8,
+      "description": {
+        "ja": "最小圧力が正である。",
+        "en": "Minimum gas pressure remains positive."
+      }
+    },
+    {
+      "id": "boundary-balance",
+      "metric": "physical_boundary_balance_relative_defect",
+      "comparison": "maximum",
+      "tolerance": 1e-10,
+      "description": {
+        "ja": "遠方の物理境界流束を差し引いた相対収支誤差。",
+        "en": "Relative integral balance defect after subtracting physical far-field boundary fluxes."
+      }
+    },
+    {
+      "id": "reached-time",
+      "metric": "final_time_error",
+      "comparison": "maximum",
+      "tolerance": 1e-14,
+      "description": {
+        "ja": "指定した終端時刻まで進んだ。",
+        "en": "The requested final time is reached."
+      }
+    }
+  ]
+}

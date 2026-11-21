@@ -1,0 +1,223 @@
+{
+  "schema_version": 1,
+  "problem_id": "periodic-particles",
+  "parameters": {
+    "positions": [
+      [
+        0.625095466604667,
+        0.8972138009695755,
+        0.7756856902451935
+      ],
+      [
+        0.22520718999059186,
+        0.30016628491122543,
+        0.8735534453962619
+      ],
+      [
+        0.005265304565574724,
+        0.8212284183827663,
+        0.7970694287520462
+      ],
+      [
+        0.4679349528437208,
+        0.3030324268193135,
+        0.2784256121007733
+      ],
+      [
+        0.2548695876541246,
+        0.4450763058826466,
+        0.5045482589579533
+      ],
+      [
+        0.5534973520744925,
+        0.9955002834343927,
+        0.7926619192137531
+      ],
+      [
+        0.6221792294411627,
+        0.9889601476818849,
+        0.21530869823559895
+      ],
+      [
+        0.16021203385784455,
+        0.6125396042730308,
+        0.04394200796138337
+      ],
+      [
+        0.03568027877359614,
+        0.5148888202713703,
+        0.4662060253252891
+      ],
+      [
+        0.9171677731928523,
+        0.6292262544910104,
+        0.5141176465995139
+      ],
+      [
+        0.49687343539350426,
+        0.24751492202733083,
+        0.01179402554250586
+      ],
+      [
+        0.19240214398531064,
+        0.6920321208818392,
+        0.2006067239869952
+      ],
+      [
+        0.3695363106022067,
+        0.0037342420520759534,
+        0.8300477298017456
+      ],
+      [
+        0.15446108106143985,
+        0.26759930456378545,
+        0.8803321539808286
+      ],
+      [
+        0.5097908098684232,
+        0.8471502463658693,
+        0.6397171669425262
+      ],
+      [
+        0.7417709473618571,
+        0.09149560506304566,
+        0.5411438213764888
+      ],
+      [
+        0.50777223630035,
+        0.8713393766928806,
+        0.3612640590141576
+      ],
+      [
+        0.5981840672072131,
+        0.05925164234550362,
+        0.3876318011107287
+      ],
+      [
+        0.32303634625820665,
+        0.15019972907045187,
+        0.8163381038190757
+      ]
+    ],
+    "masses": [
+      0.045412906091257296,
+      0.07635969201961595,
+      0.0562850712144007,
+      0.0570629761140084,
+      0.058763951140306796,
+      0.06074962421989511,
+      0.03360543960036752,
+      0.04855597598029766,
+      0.03818965825712384,
+      0.046603273497758266,
+      0.030812649891035285,
+      0.07579581286127626,
+      0.03692143107073017,
+      0.06050769565221631,
+      0.0413321510396569,
+      0.07095469054198007,
+      0.06001453014116611,
+      0.03261542395311285,
+      0.06945704671379446
+    ],
+    "mesh_size": 24,
+    "length": 1.0,
+    "gravity": 1.0,
+    "periodic_shift": [
+      1,
+      -2,
+      3
+    ],
+    "single_position": [
+      0.234,
+      0.421,
+      0.653
+    ],
+    "single_mass": 1.0,
+    "density_background": 1.0,
+    "density_amplitude": 0.2,
+    "density_mode": 1
+  },
+  "acceptance": [
+    {
+      "id": "mass",
+      "metric": "mass_relative_error",
+      "comparison": "maximum",
+      "tolerance": 1e-13,
+      "description": {
+        "ja": "CIC格子へ沈着した総質量。",
+        "en": "Total mass deposited onto the CIC mesh."
+      }
+    },
+    {
+      "id": "internal-force",
+      "metric": "internal_net_force_relative",
+      "comparison": "maximum",
+      "tolerance": 1e-12,
+      "description": {
+        "ja": "質量重み付き内力和を力の大きさの総和で規格化。粒子力の精度とは別。",
+        "en": "Normalize net internal force by the sum of force magnitudes; separate from particle-force accuracy."
+      }
+    },
+    {
+      "id": "self-force",
+      "metric": "single_particle_self_acceleration",
+      "comparison": "maximum",
+      "tolerance": 1e-12,
+      "description": {
+        "ja": "同じCIC配置・補間を使う単粒子の自己加速度。",
+        "en": "Single-particle self-acceleration with matched CIC assignment/interpolation."
+      }
+    },
+    {
+      "id": "periodic-wrap-force",
+      "metric": "periodic_shift_acceleration_max_error",
+      "comparison": "maximum",
+      "tolerance": 1e-11,
+      "description": {
+        "ja": "整数箱長の移動で粒子加速度が不変。",
+        "en": "Acceleration is invariant under integer-box translations."
+      }
+    },
+    {
+      "id": "periodic-wrap-density",
+      "metric": "periodic_shift_density_relative_error",
+      "comparison": "maximum",
+      "tolerance": 1e-12,
+      "description": {
+        "ja": "整数箱長移動による沈着密度の相対差。",
+        "en": "Relative deposited-density difference under integer-box translations."
+      }
+    },
+    {
+      "id": "gauge",
+      "metric": "potential_mean_absolute",
+      "comparison": "maximum",
+      "tolerance": 1e-12,
+      "description": {
+        "ja": "周期ポテンシャルの平均0の規約。",
+        "en": "Zero-mean periodic potential gauge."
+      }
+    },
+    {
+      "id": "analytic-mesh-potential",
+      "metric": "manufactured_potential_max_error",
+      "comparison": "maximum",
+      "tolerance": 1e-12,
+      "description": {
+        "ja": "別に与えた正弦密度の解析的格子ポテンシャルと比較。",
+        "en": "Compare a separate sinusoidal density with its analytic mesh potential."
+      }
+    },
+    {
+      "id": "analytic-mesh-force",
+      "metric": "manufactured_acceleration_max_error",
+      "comparison": "maximum",
+      "tolerance": 1e-12,
+      "description": {
+        "ja": "同じ正弦密度の解析的格子加速度と比較。",
+        "en": "Compare the same sinusoidal density with its analytic mesh acceleration."
+      }
+    }
+  ]
+}

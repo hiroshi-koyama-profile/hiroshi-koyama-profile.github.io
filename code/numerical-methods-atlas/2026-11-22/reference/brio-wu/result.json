@@ -1,0 +1,198 @@
+{
+  "schema_version": 1,
+  "problem_id": "brio-wu",
+  "parameters": {
+    "coarse_n": 64,
+    "fine_n": 128,
+    "reference_n": 512,
+    "domain": [
+      0,
+      1
+    ],
+    "discontinuity": 0.5,
+    "gamma": 2,
+    "left": [
+      1,
+      0,
+      0,
+      0,
+      1,
+      0.75,
+      1,
+      0
+    ],
+    "right": [
+      0.125,
+      0,
+      0,
+      0,
+      0.1,
+      0.75,
+      -1,
+      0
+    ],
+    "final_time": 0.1,
+    "cfl": 0.35,
+    "solver": "hlld",
+    "limiter": "mc",
+    "boundary": "edge-extrapolation",
+    "mu0": 1
+  },
+  "status": "passed",
+  "passed": true,
+  "metrics": {
+    "density_l1_error_coarse": 0.010888912602459128,
+    "density_l1_error_fine": 0.005437423717860979,
+    "fine_to_coarse_error_ratio": 0.4993541519134797,
+    "minimum_density": 0.11689998292121226,
+    "minimum_pressure": 0.08748649270528241,
+    "longitudinal_field_max_error": 0.0,
+    "physical_boundary_balance_relative_defect": 1.167558485990776e-15,
+    "mass_balance_absolute_defect": 1.1102230246251565e-16,
+    "energy_balance_absolute_defect": 1.5543122344752192e-15,
+    "hlle_fallback_faces": 0,
+    "retried_steps": 0,
+    "steps_fine": 139,
+    "reference_n": 512,
+    "final_time_error": 0.0
+  },
+  "checks": {
+    "numerical-reference-error": true,
+    "empirical-refinement": true,
+    "longitudinal-field": true,
+    "no-positivity-retry": true,
+    "positive-density": true,
+    "positive-pressure": true,
+    "boundary-balance": true,
+    "reached-time": true
+  },
+  "acceptance": [
+    {
+      "id": "numerical-reference-error",
+      "metric": "density_l1_error_fine",
+      "comparison": "maximum",
+      "tolerance": 0.03,
+      "description": {
+        "ja": "512セル参照を保存変数でブロック平均した密度との差が平均0.03以下。厳密解ではない。",
+        "en": "Mean density discrepancy from the conservatively restricted 512-cell reference is at most 0.03; the reference is not exact."
+      },
+      "observed": 0.005437423717860979,
+      "passed": true
+    },
+    {
+      "id": "empirical-refinement",
+      "metric": "fine_to_coarse_error_ratio",
+      "comparison": "maximum",
+      "tolerance": 0.95,
+      "description": {
+        "ja": "64→128セルで高解像度参照との差が減る。形式次数は主張しない。",
+        "en": "The discrepancy with the higher-resolution reference decreases from 64 to 128 cells; no formal order is claimed."
+      },
+      "observed": 0.4993541519134797,
+      "passed": true
+    },
+    {
+      "id": "longitudinal-field",
+      "metric": "longitudinal_field_max_error",
+      "comparison": "maximum",
+      "tolerance": 1e-12,
+      "description": {
+        "ja": "1次元で一定の縦磁場Bx=0.75を保存する。",
+        "en": "The constant one-dimensional longitudinal field Bx=0.75 is retained."
+      },
+      "observed": 0.0,
+      "passed": true
+    },
+    {
+      "id": "no-positivity-retry",
+      "metric": "retried_steps",
+      "comparison": "maximum",
+      "tolerance": 0,
+      "description": {
+        "ja": "この標準入力では正値性失敗による再試行がない。HLLE流束への切替回数は別途記録する。",
+        "en": "This standard input needs no positivity-failure time-step retry; HLLE flux fallbacks are separately reported."
+      },
+      "observed": 0,
+      "passed": true
+    },
+    {
+      "id": "positive-density",
+      "metric": "minimum_density",
+      "comparison": "minimum",
+      "tolerance": 1e-08,
+      "description": {
+        "ja": "最小密度が正である。",
+        "en": "Minimum density remains positive."
+      },
+      "observed": 0.11689998292121226,
+      "passed": true
+    },
+    {
+      "id": "positive-pressure",
+      "metric": "minimum_pressure",
+      "comparison": "minimum",
+      "tolerance": 1e-08,
+      "description": {
+        "ja": "最小圧力が正である。",
+        "en": "Minimum gas pressure remains positive."
+      },
+      "observed": 0.08748649270528241,
+      "passed": true
+    },
+    {
+      "id": "boundary-balance",
+      "metric": "physical_boundary_balance_relative_defect",
+      "comparison": "maximum",
+      "tolerance": 1e-10,
+      "description": {
+        "ja": "遠方の物理境界流束を差し引いた相対収支誤差。",
+        "en": "Relative integral balance defect after subtracting physical far-field boundary fluxes."
+      },
+      "observed": 1.167558485990776e-15,
+      "passed": true
+    },
+    {
+      "id": "reached-time",
+      "metric": "final_time_error",
+      "comparison": "maximum",
+      "tolerance": 1e-14,
+      "description": {
+        "ja": "指定した終端時刻まで進んだ。",
+        "en": "The requested final time is reached."
+      },
+      "observed": 0.0,
+      "passed": true
+    }
+  ],
+  "table": {
+    "file": "solution.csv",
+    "columns": [
+      "x",
+      "density",
+      "reference_density",
+      "velocity_x",
+      "reference_velocity_x",
+      "velocity_y",
+      "reference_velocity_y",
+      "velocity_z",
+      "reference_velocity_z",
+      "pressure",
+      "reference_pressure",
+      "magnetic_x",
+      "reference_magnetic_x",
+      "magnetic_y",
+      "reference_magnetic_y",
+      "magnetic_z",
+      "reference_magnetic_z"
+    ],
+    "rows": 128
+  },
+  "details": {
+    "reference_kind": "same HLLD/MC/SSPRK2 solver on a higher-resolution grid; conservative block restriction to each tested grid; not exact or an independent solver",
+    "row_layout": "one fine cell per row; reference conserved cell averages are block-averaged before conversion to primitive variables",
+    "conservation": "all eight integral balances subtract T*(physical left flux-physical right flux); nonzero momentum changes are expected",
+    "scheme": "unchanged numart.mhd_tests.solve_1d, HLLD with counted HLLE fallback, MC primitive reconstruction and SSPRK2",
+    "refinement": "empirical L1 density disagreement with the restricted numerical reference, not a formal convergence-rate or MHD uniqueness claim"
+  },
+  "input_sha256": "faf47e55ad28b23f154021809d351ac853c4145790b6f54692031c081c9c7f4b"
+}

@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "problem_id": "taylor-green",
+  "parameters": {
+    "grid_sizes": [
+      16,
+      32,
+      64
+    ],
+    "final_time": 0.5,
+    "viscosity": 0.1,
+    "cfl": 0.2,
+    "time_refinement_factor": 2
+  },
+  "acceptance": [
+    {
+      "id": "analytic-velocity",
+      "metric": "velocity_rms_error",
+      "comparison": "maximum",
+      "tolerance": 0.0001,
+      "description": {
+        "ja": "細格子の速度を各MAC座標で解析解と比較。",
+        "en": "Compare finest-grid velocity with the analytic solution at its MAC locations."
+      }
+    },
+    {
+      "id": "combined-refinement",
+      "metric": "minimum_observed_order",
+      "comparison": "minimum",
+      "tolerance": 1.9,
+      "description": {
+        "ja": "空間・安定時間刻みを共に細分化した速度の観測次数。",
+        "en": "Observed velocity order under combined spatial/stable-time-step refinement."
+      }
+    },
+    {
+      "id": "divergence",
+      "metric": "maximum_divergence",
+      "comparison": "maximum",
+      "tolerance": 1e-12,
+      "description": {
+        "ja": "全時間履歴で離散発散を確認。",
+        "en": "Check discrete divergence over the whole time history."
+      }
+    },
+    {
+      "id": "pressure-gauge",
+      "metric": "pressure_mean_absolute",
+      "comparison": "maximum",
+      "tolerance": 1e-12,
+      "description": {
+        "ja": "圧力平均0の規約。",
+        "en": "Zero-mean pressure gauge."
+      }
+    },
+    {
+      "id": "energy",
+      "metric": "relative_final_energy_error",
+      "comparison": "maximum",
+      "tolerance": 0.001,
+      "description": {
+        "ja": "解析的平均運動エネルギーの減衰と比較。",
+        "en": "Compare with analytic mean kinetic-energy decay."
+      }
+    },
+    {
+      "id": "energy-monotonicity",
+      "metric": "maximum_energy_increase",
+      "comparison": "maximum",
+      "tolerance": 1e-13,
+      "description": {
+        "ja": "粘性系での時間履歴の運動エネルギー増加を検出。",
+        "en": "Detect kinetic-energy increases in the viscous time history."
+      }
+    },
+    {
+      "id": "time-sensitivity",
+      "metric": "time_change_to_combined_error_ratio",
+      "comparison": "maximum",
+      "tolerance": 0.1,
+      "description": {
+        "ja": "同じ細格子でCFLを半分にした変化が元の解析解誤差の10%以下。誤差上界ではない。",
+        "en": "At fixed finest grid, halving CFL changes velocity by at most 10% of the original analytic error; not an error bound."
+      }
+    },
+    {
+      "id": "final-time",
+      "metric": "final_time_error",
+      "comparison": "maximum",
+      "tolerance": 1e-14,
+      "description": {
+        "ja": "指定した終端時刻に到達。",
+        "en": "Reach the specified final time."
+      }
+    }
+  ]
+}

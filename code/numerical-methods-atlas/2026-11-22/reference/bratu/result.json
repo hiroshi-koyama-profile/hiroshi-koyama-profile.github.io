@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "problem_id": "bratu",
+  "parameters": {
+    "interior_nodes": [
+      31,
+      63,
+      127
+    ],
+    "domain": [
+      0,
+      1
+    ],
+    "boundary_values": [
+      0,
+      0
+    ],
+    "beta": 1,
+    "branch": "lower",
+    "initial_guess": 0,
+    "nonlinear_tolerance": 1e-10,
+    "max_iterations": 30,
+    "linear_solver": "gmres"
+  },
+  "status": "passed",
+  "passed": true,
+  "metrics": {
+    "all_converged": true,
+    "lambda": 1.572895465931855,
+    "finest_linf_error": 2.709430092034948e-06,
+    "minimum_observed_order": 2.000144542430704,
+    "maximum_independent_residual_l2": 5.557303337224856e-11,
+    "boundary_maximum_absolute_value": 0.0
+  },
+  "checks": {
+    "nonlinear-convergence": true,
+    "lower-branch-continuous-error": true,
+    "second-order-refinement": true,
+    "independent-nonlinear-residual": true,
+    "dirichlet-boundary": true
+  },
+  "acceptance": [
+    {
+      "id": "nonlinear-convergence",
+      "metric": "all_converged",
+      "comparison": "equals",
+      "tolerance": 0,
+      "description": {
+        "ja": "全格子でNewton–GMRESが指定の非線形残差許容値に到達する。",
+        "en": "Newton–GMRES reaches its nonlinear residual tolerance on every grid."
+      },
+      "expected": true,
+      "observed": true,
+      "passed": true
+    },
+    {
+      "id": "lower-branch-continuous-error",
+      "metric": "finest_linf_error",
+      "comparison": "maximum",
+      "tolerance": 1e-05,
+      "description": {
+        "ja": "β=1の小さい枝の解析解と一致する。127内部点の2次離散誤差に余裕を持つ上限。",
+        "en": "Agreement with the analytic lower branch at β=1; margin above the second-order error at 127 interior nodes."
+      },
+      "observed": 2.709430092034948e-06,
+      "passed": true
+    },
+    {
+      "id": "second-order-refinement",
+      "metric": "minimum_observed_order",
+      "comparison": "minimum",
+      "tolerance": 1.8,
+      "description": {
+        "ja": "小さい枝で格子幅半減により連続解誤差が2次で減る。",
+        "en": "Second-order continuous-solution error reduction on the lower branch."
+      },
+      "observed": 2.000144542430704,
+      "passed": true
+    },
+    {
+      "id": "independent-nonlinear-residual",
+      "metric": "maximum_independent_residual_l2",
+      "comparison": "maximum",
+      "tolerance": 1e-08,
+      "description": {
+        "ja": "独立に再評価した非線形差分残差のEuclideanノルム。",
+        "en": "Euclidean norm of the independently recomputed nonlinear difference residual."
+      },
+      "observed": 5.557303337224856e-11,
+      "passed": true
+    },
+    {
+      "id": "dirichlet-boundary",
+      "metric": "boundary_maximum_absolute_value",
+      "comparison": "maximum",
+      "tolerance": 1e-14,
+      "description": {
+        "ja": "両端の零Dirichlet条件。",
+        "en": "Zero Dirichlet values at both endpoints."
+      },
+      "observed": 0.0,
+      "passed": true
+    }
+  ],
+  "table": {
+    "file": "solution.csv",
+    "columns": [
+      "x",
+      "solution",
+      "reference",
+      "absolute_error"
+    ],
+    "rows": 129
+  },
+  "details": {
+    "equation": "-u_xx=lambda*exp(u)",
+    "analytic_solution": "u(x)=2*log(cosh(beta/2)/cosh(beta*(x-1/2))); lambda=2*beta^2/cosh(beta/2)^2",
+    "branch_selection": "beta*tanh(beta/2)<2 parameterizes the small/lower solution branch; the nonlinear solve starts at zero. No upper-branch continuation is attempted.",
+    "refinement": [
+      {
+        "interior_nodes": 31,
+        "linf_error": 4.3372573085787014e-05,
+        "independent_residual_l2": 2.795204723481298e-11,
+        "newton_iterations": 3,
+        "minimum_step_length": 1.0
+      },
+      {
+        "interior_nodes": 63,
+        "linf_error": 1.083880624483391e-05,
+        "independent_residual_l2": 3.9312550378389684e-11,
+        "newton_iterations": 3,
+        "minimum_step_length": 1.0
+      },
+      {
+        "interior_nodes": 127,
+        "linf_error": 2.709430092034948e-06,
+        "independent_residual_l2": 5.557303337224856e-11,
+        "newton_iterations": 3,
+        "minimum_step_length": 1.0
+      }
+    ],
+    "observed_orders": [
+      2.00057716275608,
+      2.000144542430704
+    ],
+    "table_layout": "Finest mesh with both boundary nodes; analytic and computed values share x."
+  },
+  "input_sha256": "dc20c276f82f6dee68843ccc1cd7e225719bfea103cf2b8715a0a4091955eea9"
+}

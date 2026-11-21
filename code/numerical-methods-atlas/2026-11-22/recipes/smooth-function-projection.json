@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "problem_id": "smooth-function-projection",
+  "parameters": {
+    "domain": [
+      -1,
+      1
+    ],
+    "function": "exp(x)",
+    "degrees": [
+      2,
+      4,
+      6,
+      8
+    ],
+    "projection_quadrature_order": 32,
+    "reference_quadrature_orders": [
+      64,
+      96
+    ],
+    "interpolation_nodes": "gll",
+    "evaluation_points": 201
+  },
+  "acceptance": [
+    {
+      "id": "projection-l2-error",
+      "metric": "finest_projection_l2_error",
+      "comparison": "maximum",
+      "tolerance": 2e-8,
+      "description": {
+        "ja": "exp(x)の8次L2射影の値誤差。高次モードの既知の急減に基づく保守的上限。",
+        "en": "Value error of degree-eight L2 projection of exp(x), with a conservative bound for rapidly decaying smooth-function modes."
+      }
+    },
+    {
+      "id": "interpolation-l2-error",
+      "metric": "finest_gll_interpolation_l2_error",
+      "comparison": "maximum",
+      "tolerance": 5e-8,
+      "description": {
+        "ja": "同じ8次GLL節点補間を別の高次求積で評価する。",
+        "en": "Degree-eight GLL interpolation evaluated using separate higher-order quadrature."
+      }
+    },
+    {
+      "id": "projection-degree-refinement",
+      "metric": "minimum_projection_error_reduction",
+      "comparison": "minimum",
+      "tolerance": 10,
+      "description": {
+        "ja": "次数を2ずつ上げたとき射影誤差が少なくとも10分の1になる。",
+        "en": "Projection error falls by at least a factor ten for each two-degree increase."
+      }
+    },
+    {
+      "id": "interpolation-degree-refinement",
+      "metric": "minimum_interpolation_error_reduction",
+      "comparison": "minimum",
+      "tolerance": 10,
+      "description": {
+        "ja": "次数を2ずつ上げたとき補間誤差が少なくとも10分の1になる。",
+        "en": "Interpolation error falls by at least a factor ten for each two-degree increase."
+      }
+    },
+    {
+      "id": "independent-modal-coefficients",
+      "metric": "maximum_independent_coefficient_difference",
+      "comparison": "maximum",
+      "tolerance": 1e-11,
+      "description": {
+        "ja": "独立のLegendre再帰式と96点求積による係数との一致。射影と同じ求積を繰り返さない。",
+        "en": "Agreement with coefficients from a separate Legendre recurrence and 96-point quadrature, not repeated projection quadrature."
+      }
+    },
+    {
+      "id": "projection-orthogonality",
+      "metric": "maximum_projection_orthogonality_defect",
+      "comparison": "maximum",
+      "tolerance": 1e-12,
+      "description": {
+        "ja": "残差とP0からPpの内積を高次求積で評価し、L2射影の直交性を確認する。",
+        "en": "Higher-order quadrature checks residual orthogonality against P0 through Pp."
+      }
+    },
+    {
+      "id": "quadrature-reference-agreement",
+      "metric": "maximum_reference_quadrature_disagreement",
+      "comparison": "maximum",
+      "tolerance": 1e-12,
+      "description": {
+        "ja": "64点と96点求積でL2誤差の評価が一致し、参照求積の不足を検知する。",
+        "en": "L2-error estimates agree between 64- and 96-point rules, detecting inadequate reference quadrature."
+      }
+    }
+  ]
+}

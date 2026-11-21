@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "problem_id": "harmonic-oscillator",
+  "parameters": {
+    "system": "harmonic",
+    "method": "verlet",
+    "initial": [
+      1.0,
+      0.2
+    ],
+    "final_time": 20.0,
+    "step_counts": [
+      200,
+      400,
+      800
+    ]
+  },
+  "status": "passed",
+  "passed": true,
+  "metrics": {
+    "final_state_error": 0.00048084059316178364,
+    "max_state_error": 0.0005123241259968384,
+    "minimum_observed_order": 2.000338953225959,
+    "max_relative_energy_deviation": 0.0001502403047225316,
+    "reversal_error": 5.978733960281817e-16,
+    "final_time_error": 0.0
+  },
+  "checks": {
+    "analytic-state": true,
+    "refinement": true,
+    "energy-envelope": true,
+    "time-reversal": true,
+    "final-time": true
+  },
+  "acceptance": [
+    {
+      "id": "analytic-state",
+      "metric": "max_state_error",
+      "comparison": "maximum",
+      "tolerance": 0.001,
+      "description": {
+        "ja": "全時刻の位相空間誤差を解析解と比較。",
+        "en": "Compare phase-space error with the analytic solution over all output times."
+      },
+      "observed": 0.0005123241259968384,
+      "passed": true
+    },
+    {
+      "id": "refinement",
+      "metric": "minimum_observed_order",
+      "comparison": "minimum",
+      "tolerance": 1.9,
+      "description": {
+        "ja": "終端状態誤差の観測次数が2次に整合。",
+        "en": "Endpoint-error refinement is consistent with second order."
+      },
+      "observed": 2.000338953225959,
+      "passed": true
+    },
+    {
+      "id": "energy-envelope",
+      "metric": "max_relative_energy_deviation",
+      "comparison": "maximum",
+      "tolerance": 0.0002,
+      "description": {
+        "ja": "元のHamiltonianの相対偏差を有限区間で測る。厳密保存とは呼ばない。",
+        "en": "Measure relative deviation of the original Hamiltonian over this finite interval; not exact conservation."
+      },
+      "observed": 0.0001502403047225316,
+      "passed": true
+    },
+    {
+      "id": "time-reversal",
+      "metric": "reversal_error",
+      "comparison": "maximum",
+      "tolerance": 1e-11,
+      "description": {
+        "ja": "固定刻みを逆向きに戻した状態差。",
+        "en": "State difference after reversing the same fixed steps."
+      },
+      "observed": 5.978733960281817e-16,
+      "passed": true
+    },
+    {
+      "id": "final-time",
+      "metric": "final_time_error",
+      "comparison": "maximum",
+      "tolerance": 1e-14,
+      "description": {
+        "ja": "指定した終端時刻に到達。",
+        "en": "Reach the specified final time."
+      },
+      "observed": 0.0,
+      "passed": true
+    }
+  ],
+  "table": {
+    "file": "solution.csv",
+    "columns": [
+      "time",
+      "q",
+      "p",
+      "q_exact",
+      "p_exact",
+      "energy",
+      "energy_exact",
+      "state_error"
+    ],
+    "rows": 801
+  },
+  "details": {
+    "reference": "q=q0*cos(t)+p0*sin(t); p=-q0*sin(t)+p0*cos(t), H=(q^2+p^2)/2",
+    "row_layout": "One row per time of the finest trajectory, including t=0 and final_time.",
+    "refinement": [
+      {
+        "steps": 200,
+        "h": 0.1,
+        "endpoint_error": 0.00770251445877014,
+        "maximum_state_error": 0.008201164456001418
+      },
+      {
+        "steps": 400,
+        "h": 0.05,
+        "endpoint_error": 0.0019238143090939074,
+        "maximum_state_error": 0.0020494970836700114
+      },
+      {
+        "steps": 800,
+        "h": 0.025,
+        "endpoint_error": 0.00048084059316178364,
+        "maximum_state_error": 0.0005123241259968384
+      }
+    ],
+    "observed_orders": [
+      2.001359931779967,
+      2.000338953225959
+    ],
+    "scope": "Symplectic/time-symmetric does not imply exact conservation of the original energy or absence of phase error."
+  },
+  "input_sha256": "b498106a876b71e8d6d3444c57b4e6cea0fd2a000d786a5ab3b91ec64804f4b4"
+}
