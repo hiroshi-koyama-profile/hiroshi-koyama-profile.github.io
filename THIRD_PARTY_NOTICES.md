@@ -7,6 +7,7 @@
 - Linked and quoted material retains the original rights and conditions. No third-party runtime or font is bundled by these three archives.
 
 - `numerical-methods-atlas/` retains its MIT, content-scope and upstream KaTeX/Marked notices, including `vendor/licenses/`. Code licensing does not license cited papers or externally supplied content.
+- `scripts/vendor/katex.cjs` is the unmodified KaTeX 0.19.1 minified distribution used for offline equation typesetting; its MIT license is retained in `scripts/vendor/katex-LICENSE.txt`. It produces static HTML and MathML and requires no visitor-side service or network call. The existing atlas KaTeX stylesheet and fonts serve the rendered formulas.
 - `the-art-of-thermal-instability/` retains scientific provenance, model limitations and per-asset/source notices. Its copied public viewing/build outputs do not include private source PDFs.
 - `guide/` contains bounded excerpts from the two public research sites, for source-grounded consultation; original texts and third-party sources retain their own conditions.
 

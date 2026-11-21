@@ -50,6 +50,8 @@ Google Search Consoleの対象プロパティは `https://hrkoyama.github.io/`�
 
 人向けの入口は文字・数式・絵の3つ。入口の文言も `catalog/atlas-purpose.json`、数式一覧の代表形と解説先は `catalog/atlas-equations.json` を編集する。数式一覧は `build-atlas-equations.py` で生成する。冒頭の数値は取り込み済み `coverage.json` の定義に従う。学術論文数を一次論文数と呼ばず、波形テスト数を全サイトのテスト問題総数や自動検査件数と混同しない。掲載する数式の行数と方程式・モデルの種類数も区別する。
 
+数式一覧は `coverage.json` の全 `kind=equation` 項目とID・実装状態・章を完全照合する。一部だけの代表一覧へ戻さない。数式はLaTeXで保存し、同梱のKaTeXで静的HTML・MathMLにするため、新たなパッケージ取得は不要。モデル追加・章内の見出し変更時は42項目との件数一致だけでなくID集合と日英の節リンクも検査する。文献解説のみのモデルを計算例ありに変更せず、相対論や生物モデルの代表形・縮約・模式式の条件を残す。
+
 全体のテスト問題の正本は `catalog/atlas-test-problems.json`。`build-atlas-test-problems.py` が根拠となるJSONの要素・検証関数・結果図を確認し、重複を除いた問題台帳、分野別集計、参照ファイルのハッシュを公開する。`coverage.json` と `assets/site-coverage.json` の `test_problems` はこの台帳から生成し、冒頭と収録一覧に表示する。`gallery_cases` は波形比較だけの従来の件数として残す。格子・手法・刻み・パラメータ・画像・動画の違いで同じ問題を加算しない。追加した計算例は既存問題との重複と根拠を確認して台帳に追記する。予定・参照評価のみ・局所の単体検査は別扱いとし、公開コード版の検証記録は書き換えない。
 
 公開コードは `code/numerical-methods-atlas/<edition>/` にあり、編集可能なPython、検査、必要データ、依存関係、ライセンス、ハッシュ目録、ZIP、独立実行の検証記録を含む。公開済みの版のファイルは上書きしない。変更時は新しい版を用意し、目録・ZIP・独立実行結果を揃えてから台帳の `code_edition` と `code_base` を更新する。旧版のURLと配布物を保持する。Git履歴や未公開原稿を配布物へ含めない。

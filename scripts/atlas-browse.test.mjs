@@ -38,11 +38,41 @@ test('equation records link to existing chapters in both languages and expose a 
   const published=JSON.parse(read('numerical-methods-atlas/equations/index.json'));
   const html=read('numerical-methods-atlas/equations/index.html');
   assert.equal(new Set(source.equations.map(x=>x.id)).size,source.equations.length);
+  const models=coverage.items.filter(x=>x.kind==='equation');
+  assert.deepEqual(source.equations.map(x=>x.id).sort(),models.map(x=>x.id).sort());
+  assert.equal(source.equations.length,coverage.counts.equations);
   assert.equal(published.equations.length,source.equations.length);
   for(const x of source.equations){
     assert.ok(x.formula.length&&x.note.ja&&x.note.en);
     for(const lang of ['ja','en'])assert.ok(existsSync(new URL(`numerical-methods-atlas/${lang}/read/${x.chapter}/index.html`,root)));
   }
-  assert.equal((html.match(/class="equation-entry"/g)||[]).length,2*source.equations.length);
+  assert.equal((html.match(/data-equation-id=/g)||[]).length,2*source.equations.length);
   assert.ok(html.includes('全'+coverage.counts.equations+'方程式・モデル'));
+  assert.equal(published.counts.local_example,coverage.counts.local_equations);
+  assert.equal(published.counts.reading_only,coverage.counts.reading_equations);
+});
+
+test('every displayed model has static math and valid deep links without inflating implementation status',()=>{
+  const published=JSON.parse(read('numerical-methods-atlas/equations/index.json'));
+  const html=read('numerical-methods-atlas/equations/index.html');
+  assert.equal(published.equations.filter(x=>x.id.startsWith('bio-')).length,22);
+  for(const x of published.equations){
+    const expected=coverage.items.find(item=>item.kind==='equation'&&item.id===x.id);
+    assert.equal(x.status,expected.status);
+    assert.equal(x.chapter,expected.chapter);
+    for(const [lang,url] of Object.entries(x.reading)){
+      const target=new URL(url),path=target.pathname.slice(1)+'index.html';
+      assert.ok(existsSync(new URL(path,root)));
+      if(target.hash)assert.ok(read(path).includes('id="'+target.hash.slice(1)+'"'),x.id+' '+lang);
+      assert.ok(html.includes('id="'+x.id+'-'+lang+'"'));
+    }
+    if(x.id.startsWith('bio-')){
+      assert.equal(x.status,'reading');
+      assert.ok(x.reading.ja.includes('#')&&x.reading.en.includes('#'));
+    }
+  }
+  assert.ok(html.includes('katex-mathml')&&html.includes('application/x-tex'));
+  assert.ok(!html.includes('katex-error'));
+  assert.ok(!html.includes('This initial index is separate'));
+  assert.ok(html.includes('id="advection-ja"')&&html.includes('id="diffusion-ja"')&&html.includes('id="poisson-ja"'));
 });
