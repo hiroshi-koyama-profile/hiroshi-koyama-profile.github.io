@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-11-21",
+  "scope": "Public outcomes and bounded next questions. A queue entry is not an implemented result.",
+  "current_focus": "Make the published research resources discoverable and usable, with working code/data links and explicit verification limits. New scientific implementations remain queued.",
+  "items": [
+    {"id": "ki-potential", "state": "published", "title": "KI2002: pressure-dependent potential wells", "url": "ki-2002/#potential", "outcome": "Shared normalization at 0.9, 1 and 1.1 saturation pressure; code, configuration, CSV and independent checks. No compressible front speed is inferred."},
+    {"id": "cover-movie", "state": "published", "title": "Illustrative 2D thermal-condensation movie", "url": "ti-2d/", "outcome": "Movie, initial/final states and numerical benchmarks. Enhanced conduction broadens interfaces; this is not a historical reproduction or sustained turbulence."},
+    {"id": "kim-eigenfunctions", "state": "planned", "title": "Kim & Kim2013: coupled Figure9 eigenfunctions", "url": "kim-kim-2013/", "outcome": "Source-audited specification only; no solver yet. Completion requires coupled components, one common amplitude/phase convention, boundary/domain convergence and an independent comparison."},
+    {"id": "compressible-explanation", "state": "planned", "title": "Compressible flow versus reduced reaction–diffusion models", "url": "essays/biophysical-fronts.html", "outcome": "Explain pressure, momentum, advection and compressional work using existing equations. Nearly uniform pressure does not imply zero flow. A new simulation is a separate task."},
+    {"id": "iwasaki-diagnostic", "state": "planned", "title": "Iwasaki2012: one missing branch or critical-flux example", "url": "iwasaki-2012/", "outcome": "Choose one bounded trajectory diagnostic and preserve the nine existing classifications. A full map recomputation is not required."},
+    {"id": "schwarz-diagnostic", "state": "planned", "title": "Schwarz1972: timing and mesh sensitivity", "url": "schwarz-1972/nonlinear.html", "outcome": "Reuse existing resolution studies and separate source-reading, model and discretization uncertainties. Continuum convergence of the narrow conductive layer is not established."},
+    {"id": "fgh-coefficients", "state": "deferred", "title": "FGH1969: historical coefficient recovery", "url": "fgh-1969/two-phase.html", "outcome": "Restart only with a recoverable historical rate/cross-section, a checkable convention explaining a residual, or equivalent new evidence. Do not tune rates to force the original curve."}
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "id": "van-albada",
+  "name": {
+    "ja": "切り詰めたVan Albada勾配制限",
+    "en": "Clipped Van Albada limiter"
+  },
+  "group": {
+    "id": "limiters",
+    "ja": "制限関数と許容性",
+    "en": "Limiters & admissibility"
+  },
+  "summary": {
+    "ja": "「切り詰めたVan Albada勾配制限」の考え方と適用範囲を、解説章・一次文献・関連する教育用コードからたどります。",
+    "en": "Read about Clipped Van Albada limiter, follow the original references and inspect related educational code and checks."
+  },
+  "status": "educational-example",
+  "origin": "existing-coverage-catalog",
+  "reading": {
+    "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/limiters/",
+    "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/limiters/"
+  },
+  "code_modules": [
+    "limiters",
+    "tvd",
+    "solvers"
+  ],
+  "test_files": [
+    "test_limiters"
+  ],
+  "code_mapping_scope": "Related chapter modules and test files; not a claim that each test covers every named method.",
+  "references": [
+    {
+      "url": "https://doi.org/10.1137/0721062",
+      "label": "High Resolution Schemes Using Flux Limiters for Hyperbolic Conservation Laws (1984)",
+      "scope": "Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation."
+    }
+  ],
+  "assumptions": null,
+  "units": null,
+  "boundary_conditions": null,
+  "limitations": {
+    "ja": "対象方程式・境界条件・検証の範囲は解説章と各コードを確認してください。教育用例は汎用ソルバーの完成を意味しません。",
+    "en": "See the chapter and implementation for equations, boundaries and checked scope. Educational examples are not complete general-purpose solvers."
+  },
+  "metadata_review": {
+    "level": "chapter-linked; detailed method-specific curation in progress",
+    "on": "2026-11-21"
+  },
+  "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/van-albada/",
+  "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/van-albada/index.json",
+  "markdown_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/van-albada/index.md",
+  "code_urls": [
+    "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/numart/limiters.py",
+    "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/numart/tvd.py",
+    "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/numart/solvers.py"
+  ],
+  "test_urls": [
+    "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/tests/test_limiters.py"
+  ],
+  "run_commands": [
+    "python -m pytest -q tests/test_limiters.py"
+  ],
+  "run_from": "Extracted code edition directory",
+  "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
+  "code_edition": "2026-11-21"
+}

@@ -1,0 +1,46 @@
+{
+  "id": "adjoint",
+  "name": {
+    "ja": "随伴法・逆問題",
+    "en": "Adjoint methods and inverse problems"
+  },
+  "group": {
+    "id": "stochastic",
+    "ja": "最適化・確率・逆問題",
+    "en": "Optimization & stochastic methods"
+  },
+  "summary": {
+    "ja": "感度計算、観測、パラメータ同定を結び付ける。",
+    "en": "Connect sensitivities, observations and parameter identification."
+  },
+  "status": "planned",
+  "origin": "development-candidate",
+  "reading": {},
+  "code_modules": [],
+  "test_files": [],
+  "references": [],
+  "assumptions": null,
+  "units": null,
+  "boundary_conditions": null,
+  "next_deliverable": {
+    "ja": "差分勾配との照合と小規模逆問題。",
+    "en": "Finite-difference gradient checks and a small inverse problem."
+  },
+  "limitations": {
+    "ja": "Under construction。専用の実装・検証結果はまだありません。",
+    "en": "Under construction. No dedicated implementation or verification result is provided yet."
+  },
+  "metadata_review": {
+    "level": "candidate outline; scientific derivation and literature review incomplete",
+    "on": "2026-11-21"
+  },
+  "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/adjoint/",
+  "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/adjoint/index.json",
+  "markdown_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/adjoint/index.md",
+  "code_urls": [],
+  "test_urls": [],
+  "run_commands": [],
+  "run_from": null,
+  "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
+  "code_edition": null
+}

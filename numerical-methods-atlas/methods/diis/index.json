@@ -1,0 +1,52 @@
+{
+  "id": "diis",
+  "name": {
+    "ja": "Pulay / DIIS加速",
+    "en": "Pulay / DIIS acceleration"
+  },
+  "group": {
+    "id": "quantum",
+    "ja": "電子状態・量子化学",
+    "en": "Electronic structure & quantum chemistry"
+  },
+  "summary": {
+    "ja": "反復履歴を利用してSCF等の収束を加速する。",
+    "en": "Use iteration history to accelerate SCF and related sequences."
+  },
+  "status": "planned",
+  "origin": "development-candidate",
+  "reading": {},
+  "code_modules": [],
+  "test_files": [],
+  "references": [
+    {
+      "label": "Pulay (1980), Convergence acceleration of iterative sequences. The case of SCF iteration",
+      "url": "https://doi.org/10.1016/0009-2614(80)80396-4",
+      "scope": "Bibliographic or official-documentation entry point; source equations are not audited for this planned entry."
+    }
+  ],
+  "assumptions": null,
+  "units": null,
+  "boundary_conditions": null,
+  "next_deliverable": {
+    "ja": "減衰反復とDIISを、同じ停止条件と失敗例で比較。",
+    "en": "Compare damping and DIIS under the same stopping criteria, including failures."
+  },
+  "limitations": {
+    "ja": "Under construction。専用の実装・検証結果はまだありません。",
+    "en": "Under construction. No dedicated implementation or verification result is provided yet."
+  },
+  "metadata_review": {
+    "level": "candidate outline; scientific derivation and literature review incomplete",
+    "on": "2026-11-21"
+  },
+  "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/diis/",
+  "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/diis/index.json",
+  "markdown_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/diis/index.md",
+  "code_urls": [],
+  "test_urls": [],
+  "run_commands": [],
+  "run_from": null,
+  "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
+  "code_edition": null
+}

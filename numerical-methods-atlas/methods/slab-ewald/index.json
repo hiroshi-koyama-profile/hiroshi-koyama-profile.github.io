@@ -1,0 +1,46 @@
+{
+  "id": "slab-ewald",
+  "name": {
+    "ja": "スラブ静電場と2次元周期Ewald",
+    "en": "Slab electrostatics and 2D-periodic Ewald"
+  },
+  "group": {
+    "id": "long-range",
+    "ja": "重力と長距離相互作用",
+    "en": "Particle fields & gravity"
+  },
+  "summary": {
+    "ja": "平面周期・垂直開放の境界条件と、3次元周期の補正を区別する。",
+    "en": "Separate plane-periodic open-normal boundaries from corrections to 3D periodicity."
+  },
+  "status": "planned",
+  "origin": "development-candidate",
+  "reading": {},
+  "code_modules": [],
+  "test_files": [],
+  "references": [],
+  "assumptions": null,
+  "units": null,
+  "boundary_conditions": null,
+  "next_deliverable": {
+    "ja": "中性条件と境界を明記した文献・検証系の選定。",
+    "en": "Select references and a neutral benchmark with explicit boundaries."
+  },
+  "limitations": {
+    "ja": "Under construction。専用の実装・検証結果はまだありません。",
+    "en": "Under construction. No dedicated implementation or verification result is provided yet."
+  },
+  "metadata_review": {
+    "level": "candidate outline; scientific derivation and literature review incomplete",
+    "on": "2026-11-21"
+  },
+  "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/slab-ewald/",
+  "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/slab-ewald/index.json",
+  "markdown_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/slab-ewald/index.md",
+  "code_urls": [],
+  "test_urls": [],
+  "run_commands": [],
+  "run_from": null,
+  "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
+  "code_edition": null
+}

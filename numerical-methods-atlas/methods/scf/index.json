@@ -1,0 +1,57 @@
+{
+  "id": "scf",
+  "name": {
+    "ja": "自己無撞着場反復（SCF）",
+    "en": "Self-consistent field iteration / SCF"
+  },
+  "group": {
+    "id": "quantum",
+    "ja": "電子状態・量子化学",
+    "en": "Electronic structure & quantum chemistry"
+  },
+  "summary": {
+    "ja": "密度や有効ポテンシャルを反復し、収束と未収束を診断する。",
+    "en": "Iterate densities or effective potentials and diagnose convergence or failure."
+  },
+  "status": "planned",
+  "origin": "development-candidate",
+  "reading": {},
+  "code_modules": [],
+  "test_files": [],
+  "references": [
+    {
+      "label": "Roothaan (1951), New Developments in Molecular Orbital Theory",
+      "url": "https://doi.org/10.1103/RevModPhys.23.69",
+      "scope": "Bibliographic or official-documentation entry point; source equations are not audited for this planned entry."
+    },
+    {
+      "label": "PySCF: self-consistent field methods",
+      "url": "https://pyscf.org/user/scf",
+      "scope": "Bibliographic or official-documentation entry point; source equations are not audited for this planned entry."
+    }
+  ],
+  "assumptions": null,
+  "units": null,
+  "boundary_conditions": null,
+  "next_deliverable": {
+    "ja": "電子数・残差・エネルギー変化を保存する基準例。",
+    "en": "A baseline recording electron number, residuals and energy changes."
+  },
+  "limitations": {
+    "ja": "Under construction。専用の実装・検証結果はまだありません。",
+    "en": "Under construction. No dedicated implementation or verification result is provided yet."
+  },
+  "metadata_review": {
+    "level": "candidate outline; scientific derivation and literature review incomplete",
+    "on": "2026-11-21"
+  },
+  "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/scf/",
+  "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/scf/index.json",
+  "markdown_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/scf/index.md",
+  "code_urls": [],
+  "test_urls": [],
+  "run_commands": [],
+  "run_from": null,
+  "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
+  "code_edition": null
+}

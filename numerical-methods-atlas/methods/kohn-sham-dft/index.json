@@ -1,0 +1,57 @@
+{
+  "id": "kohn-sham-dft",
+  "name": {
+    "ja": "Kohn–Sham密度汎関数法",
+    "en": "Kohn–Sham density functional theory / DFT"
+  },
+  "group": {
+    "id": "quantum",
+    "ja": "電子状態・量子化学",
+    "en": "Electronic structure & quantum chemistry"
+  },
+  "summary": {
+    "ja": "密度・有効ポテンシャル・交換相関近似とSCFをつなぐ。",
+    "en": "Connect density, effective potential, exchange-correlation approximations and SCF."
+  },
+  "status": "planned",
+  "origin": "development-candidate",
+  "reading": {},
+  "code_modules": [],
+  "test_files": [],
+  "references": [
+    {
+      "label": "Hohenberg & Kohn (1964), Inhomogeneous Electron Gas",
+      "url": "https://doi.org/10.1103/PhysRev.136.B864",
+      "scope": "Publisher title and abstract checked; full derivation not audited for this entry."
+    },
+    {
+      "label": "Kohn & Sham (1965), Self-Consistent Equations Including Exchange and Correlation Effects",
+      "url": "https://doi.org/10.1103/PhysRev.140.A1133",
+      "scope": "Publisher title and abstract checked; full derivation not audited for this entry."
+    }
+  ],
+  "assumptions": null,
+  "units": null,
+  "boundary_conditions": null,
+  "next_deliverable": {
+    "ja": "交換相関モデルを固定した小さな系の実行・検証例。",
+    "en": "A small reproducible case with a specified exchange-correlation model."
+  },
+  "limitations": {
+    "ja": "Under construction。専用の実装・検証結果はまだありません。",
+    "en": "Under construction. No dedicated implementation or verification result is provided yet."
+  },
+  "metadata_review": {
+    "level": "candidate outline; scientific derivation and literature review incomplete",
+    "on": "2026-11-21"
+  },
+  "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/kohn-sham-dft/",
+  "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/kohn-sham-dft/index.json",
+  "markdown_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/kohn-sham-dft/index.md",
+  "code_urls": [],
+  "test_urls": [],
+  "run_commands": [],
+  "run_from": null,
+  "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
+  "code_edition": null
+}

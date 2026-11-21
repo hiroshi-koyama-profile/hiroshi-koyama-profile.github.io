@@ -1,0 +1,101 @@
+{
+  "id": "glm",
+  "name": {
+    "ja": "GLM発散クリーニング",
+    "en": "GLM divergence cleaning"
+  },
+  "group": {
+    "id": "coupling",
+    "ja": "連成・拘束・粒子法",
+    "en": "Coupling, constraints & particles"
+  },
+  "summary": {
+    "ja": "「GLM発散クリーニング」の考え方と適用範囲を、解説章・一次文献・関連する教育用コードからたどります。",
+    "en": "Read about GLM divergence cleaning, follow the original references and inspect related educational code and checks."
+  },
+  "status": "educational-example",
+  "origin": "existing-coverage-catalog",
+  "reading": {
+    "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/mhd/",
+    "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/mhd/"
+  },
+  "code_modules": [
+    "mhd",
+    "hlld",
+    "mhd_tests"
+  ],
+  "test_files": [
+    "test_hlld"
+  ],
+  "code_mapping_scope": "Related chapter modules and test files; not a claim that each test covers every named method.",
+  "references": [
+    {
+      "url": "https://doi.org/10.1017/S002211207900210X",
+      "label": "Small-scale structure of two-dimensional magnetohydrodynamic turbulence (1979)",
+      "scope": "Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation."
+    },
+    {
+      "url": "https://doi.org/10.1093/mnras/staa877",
+      "label": "https://doi.org/10.1093/mnras/staa877",
+      "scope": "Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation."
+    },
+    {
+      "url": "https://doi.org/10.1086/166684",
+      "label": "Simulation of magnetohydrodynamic flows: A constrained transport method (1988)",
+      "scope": "Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation."
+    },
+    {
+      "url": "https://doi.org/10.1006/jcph.2000.6519",
+      "label": "The ∇·B = 0 Constraint in Shock-Capturing Magnetohydrodynamics Codes (2000)",
+      "scope": "Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation."
+    },
+    {
+      "url": "https://doi.org/10.1006/jcph.2001.6961",
+      "label": "Hyperbolic Divergence Cleaning for the MHD Equations (2002)",
+      "scope": "Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation."
+    },
+    {
+      "url": "https://doi.org/10.1016/j.jcp.2005.02.017",
+      "label": "A multi-state HLL approximate Riemann solver for ideal magnetohydrodynamics (2005)",
+      "scope": "Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation."
+    },
+    {
+      "url": "https://doi.org/10.1016/0021-9991(88)90120-9",
+      "label": "An upwind differencing scheme for the equations of ideal magnetohydrodynamics (1988)",
+      "scope": "Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation."
+    },
+    {
+      "url": "https://arxiv.org/abs/0911.3410",
+      "label": "A second-order unsplit Godunov scheme for cell-centered MHD: The CTU-GLM scheme (2010)",
+      "scope": "Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation."
+    }
+  ],
+  "assumptions": null,
+  "units": null,
+  "boundary_conditions": null,
+  "limitations": {
+    "ja": "対象方程式・境界条件・検証の範囲は解説章と各コードを確認してください。教育用例は汎用ソルバーの完成を意味しません。",
+    "en": "See the chapter and implementation for equations, boundaries and checked scope. Educational examples are not complete general-purpose solvers."
+  },
+  "metadata_review": {
+    "level": "chapter-linked; detailed method-specific curation in progress",
+    "on": "2026-11-21"
+  },
+  "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/glm/",
+  "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/glm/index.json",
+  "markdown_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/glm/index.md",
+  "code_urls": [
+    "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/numart/mhd.py",
+    "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/numart/hlld.py",
+    "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/numart/mhd_tests.py"
+  ],
+  "test_urls": [
+    "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/tests/test_hlld.py"
+  ],
+  "run_commands": [
+    "python -m pytest -q tests/test_hlld.py"
+  ],
+  "run_from": "Extracted code edition directory",
+  "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
+  "code_edition": "2026-11-21"
+}

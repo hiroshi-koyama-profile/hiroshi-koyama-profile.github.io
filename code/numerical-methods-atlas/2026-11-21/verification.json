@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "verified_on": "2026-11-21",
+  "edition": "2026-11-21",
+  "archive_sha256": "f17c0cfcf6956a2677dcdc874235806ae9c5453514be02e6d3274732bcdebe4f",
+  "execution": "Archive extracted to an independent temporary directory; tests used only packaged source and data.",
+  "python": "3.12.14",
+  "numpy": "2.0.2",
+  "matplotlib": "3.9.4",
+  "pytest": "8.3.5",
+  "command": "python -m pytest -q",
+  "tests": 417,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 6,
+  "passed": 411,
+  "skipped_cases": [
+    {
+      "case": "test_flux_consistency[hlle-eq1]",
+      "reason": "HLLC/Roe are intentionally Euler-only"
+    },
+    {
+      "case": "test_flux_consistency[hlle-eq2]",
+      "reason": "HLLC/Roe are intentionally Euler-only"
+    },
+    {
+      "case": "test_flux_consistency[hllc-eq1]",
+      "reason": "HLLC/Roe are intentionally Euler-only"
+    },
+    {
+      "case": "test_flux_consistency[hllc-eq2]",
+      "reason": "HLLC/Roe are intentionally Euler-only"
+    },
+    {
+      "case": "test_flux_consistency[roe-eq1]",
+      "reason": "HLLC/Roe are intentionally Euler-only"
+    },
+    {
+      "case": "test_flux_consistency[roe-eq2]",
+      "reason": "HLLC/Roe are intentionally Euler-only"
+    }
+  ],
+  "runnable_examples": [
+    {
+      "case": "barnes-hut",
+      "relative_rms_force_error": 0.0028910490118654836,
+      "checks": {
+        "fixed_case_relative_force_error": true,
+        "fully_opened_tree_matches_direct_sum": true
+      },
+      "force_csv_rows": 192
+    }
+  ],
+  "scope": "Existing educational checks; not all source-paper figures or production use. Timing and floating-point behavior may differ across platforms."
+}

@@ -20,7 +20,8 @@ def page(title, body, filename):
 </head><body data-content-language="en"><header><a class="brand" href="./">The Art of Thermal Instability</a><nav aria-label="Research resources"><a href="progress.html">Progress &amp; next questions</a><a href="code-and-data.html">Code &amp; data</a><a href="catalog.json">Paper catalog</a></nav></header>
 <main class="exhibit" id="main">{body}</main><footer><a href="./#atlas">Paper atlas</a><a href="/using/">Use &amp; cite these resources</a><a href="/rights/">Rights &amp; AI policy</a></footer></body></html>'''
 
-queue = json.loads((THERMAL / 'work-queue.json').read_text())
+queue = json.loads((ROOT / 'catalog/thermal-work-queue.json').read_text())
+(THERMAL / 'work-queue.json').write_text(json.dumps(queue,ensure_ascii=False,indent=2)+'\n')
 sections = []
 for state, label in [('published', 'Published outcomes'), ('planned', 'Next scientific questions'), ('deferred', 'Deferred until new evidence')]:
     entries = ''.join(f'<article id="{esc(x["id"])}"><h3><a href="{esc(x["url"])}">{esc(x["title"])}</a></h3><p><strong>{state.capitalize()}.</strong> {esc(x["outcome"])}</p></article>' for x in queue['items'] if x['state'] == state)

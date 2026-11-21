@@ -1,0 +1,46 @@
+{
+  "id": "fdtd",
+  "name": {
+    "ja": "Yee FDTD",
+    "en": "Yee finite-difference time-domain method"
+  },
+  "group": {
+    "id": "coupling",
+    "ja": "連成・拘束・粒子法",
+    "en": "Coupling, constraints & particles"
+  },
+  "summary": {
+    "ja": "Maxwell方程式の格子上の変数配置と時間更新を扱う。",
+    "en": "Connect staggered Maxwell fields and time updates."
+  },
+  "status": "planned",
+  "origin": "development-candidate",
+  "reading": {},
+  "code_modules": [],
+  "test_files": [],
+  "references": [],
+  "assumptions": null,
+  "units": null,
+  "boundary_conditions": null,
+  "next_deliverable": {
+    "ja": "真空波・導体空洞からCFLと分散を検証。",
+    "en": "Check CFL and dispersion with vacuum waves and a conducting cavity."
+  },
+  "limitations": {
+    "ja": "Under construction。専用の実装・検証結果はまだありません。",
+    "en": "Under construction. No dedicated implementation or verification result is provided yet."
+  },
+  "metadata_review": {
+    "level": "candidate outline; scientific derivation and literature review incomplete",
+    "on": "2026-11-21"
+  },
+  "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/fdtd/",
+  "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/fdtd/index.json",
+  "markdown_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/fdtd/index.md",
+  "code_urls": [],
+  "test_urls": [],
+  "run_commands": [],
+  "run_from": null,
+  "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
+  "code_edition": null
+}

@@ -1,0 +1,67 @@
+{
+  "id": "gsph",
+  "name": {
+    "ja": "Godunov SPH／GSPH",
+    "en": "Godunov SPH / GSPH"
+  },
+  "group": {
+    "id": "coupling",
+    "ja": "連成・拘束・粒子法",
+    "en": "Coupling, constraints & particles"
+  },
+  "summary": {
+    "ja": "「Godunov SPH／GSPH」の考え方と適用範囲を、解説章・一次文献からたどります。専用実装は公開していません。",
+    "en": "Read about Godunov SPH / GSPH, follow the original references. No dedicated implementation is distributed for this entry."
+  },
+  "status": "reading-only",
+  "origin": "existing-coverage-catalog",
+  "reading": {
+    "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/gsph/",
+    "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/gsph/"
+  },
+  "code_modules": [],
+  "test_files": [],
+  "code_mapping_scope": "Related chapter modules and test files; not a claim that each test covers every named method.",
+  "references": [
+    {
+      "url": "https://doi.org/10.1006/jcph.2002.7053",
+      "label": "Reformulation of Smoothed Particle Hydrodynamics with Riemann Solver (2002)",
+      "scope": "Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation."
+    },
+    {
+      "url": "https://doi.org/10.1111/j.1365-2966.2011.19588.x",
+      "label": "Smoothed particle magnetohydrodynamics with a Riemann solver and the method of characteristics (2011)",
+      "scope": "Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation."
+    },
+    {
+      "url": "https://arxiv.org/abs/1106.3389",
+      "label": "Smoothed particle magnetohydrodynamics with a Riemann solver and the method of characteristics (2011)",
+      "scope": "Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation."
+    },
+    {
+      "url": "https://doi.org/10.1016/j.jcp.2025.114448",
+      "label": "Special relativistic smoothed particle hydrodynamics based on Riemann solver (2026)",
+      "scope": "Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation."
+    }
+  ],
+  "assumptions": null,
+  "units": null,
+  "boundary_conditions": null,
+  "limitations": {
+    "ja": "対象方程式・境界条件・検証の範囲は解説章と各コードを確認してください。教育用例は汎用ソルバーの完成を意味しません。",
+    "en": "See the chapter and implementation for equations, boundaries and checked scope. Educational examples are not complete general-purpose solvers."
+  },
+  "metadata_review": {
+    "level": "chapter-linked; detailed method-specific curation in progress",
+    "on": "2026-11-21"
+  },
+  "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/gsph/",
+  "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/gsph/index.json",
+  "markdown_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/gsph/index.md",
+  "code_urls": [],
+  "test_urls": [],
+  "run_commands": [],
+  "run_from": null,
+  "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
+  "code_edition": null
+}

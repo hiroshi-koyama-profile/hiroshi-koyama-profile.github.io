@@ -1,0 +1,62 @@
+{
+  "id": "p3m",
+  "name": {
+    "ja": "P³M短距離補正",
+    "en": "P³M short-range correction"
+  },
+  "group": {
+    "id": "long-range",
+    "ja": "重力と長距離相互作用",
+    "en": "Particle fields & gravity"
+  },
+  "summary": {
+    "ja": "「P³M短距離補正」の考え方と適用範囲を、解説章・一次文献からたどります。専用実装は公開していません。",
+    "en": "Read about P³M short-range correction, follow the original references. No dedicated implementation is distributed for this entry."
+  },
+  "status": "reading-only",
+  "origin": "existing-coverage-catalog",
+  "reading": {
+    "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/particle-gravity/",
+    "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/particle-gravity/"
+  },
+  "code_modules": [],
+  "test_files": [],
+  "code_mapping_scope": "Related chapter modules and test files; not a claim that each test covers every named method.",
+  "references": [
+    {
+      "url": "https://doi.org/10.1038/324446a0",
+      "label": "A hierarchical O(N log N) force-calculation algorithm (1986)",
+      "scope": "Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation."
+    },
+    {
+      "url": "https://doi.org/10.1016/0021-9991(87)90140-9",
+      "label": "A fast algorithm for particle simulations (1987)",
+      "scope": "Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation."
+    },
+    {
+      "url": "https://arxiv.org/abs/astro-ph/0505010",
+      "label": "The cosmological simulation code GADGET-2 (2005)",
+      "scope": "Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation."
+    }
+  ],
+  "assumptions": null,
+  "units": null,
+  "boundary_conditions": null,
+  "limitations": {
+    "ja": "対象方程式・境界条件・検証の範囲は解説章と各コードを確認してください。教育用例は汎用ソルバーの完成を意味しません。",
+    "en": "See the chapter and implementation for equations, boundaries and checked scope. Educational examples are not complete general-purpose solvers."
+  },
+  "metadata_review": {
+    "level": "chapter-linked; detailed method-specific curation in progress",
+    "on": "2026-11-21"
+  },
+  "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/p3m/",
+  "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/p3m/index.json",
+  "markdown_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/p3m/index.md",
+  "code_urls": [],
+  "test_urls": [],
+  "run_commands": [],
+  "run_from": null,
+  "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
+  "code_edition": null
+}

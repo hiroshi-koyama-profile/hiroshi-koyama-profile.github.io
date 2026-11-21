@@ -1,0 +1,52 @@
+{
+  "id": "mp2",
+  "name": {
+    "ja": "MP2摂動論",
+    "en": "MP2 perturbation theory"
+  },
+  "group": {
+    "id": "quantum",
+    "ja": "電子状態・量子化学",
+    "en": "Electronic structure & quantum chemistry"
+  },
+  "summary": {
+    "ja": "平均場から電子相関を加える摂動的な方法を位置付ける。",
+    "en": "Locate perturbative electron correlation beyond mean field."
+  },
+  "status": "planned",
+  "origin": "development-candidate",
+  "reading": {},
+  "code_modules": [],
+  "test_files": [],
+  "references": [
+    {
+      "label": "Moller & Plesset (1934), Note on an Approximation Treatment for Many-Electron Systems",
+      "url": "https://doi.org/10.1103/PhysRev.46.618",
+      "scope": "Bibliographic or official-documentation entry point; source equations are not audited for this planned entry."
+    }
+  ],
+  "assumptions": null,
+  "units": null,
+  "boundary_conditions": null,
+  "next_deliverable": {
+    "ja": "一次文献と小分子の参照計算を選ぶ。",
+    "en": "Select primary references and a small-molecule benchmark."
+  },
+  "limitations": {
+    "ja": "Under construction。専用の実装・検証結果はまだありません。",
+    "en": "Under construction. No dedicated implementation or verification result is provided yet."
+  },
+  "metadata_review": {
+    "level": "candidate outline; scientific derivation and literature review incomplete",
+    "on": "2026-11-21"
+  },
+  "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/mp2/",
+  "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/mp2/index.json",
+  "markdown_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/mp2/index.md",
+  "code_urls": [],
+  "test_urls": [],
+  "run_commands": [],
+  "run_from": null,
+  "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
+  "code_edition": null
+}

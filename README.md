@@ -138,4 +138,4 @@ After adding or editing searchable pages, run the shared chrome build, rebuild t
 
 ## Maintenance and public resource guidance
 
-See [MAINTENANCE.md](MAINTENANCE.md) for the single refresh/check/publish sequence and bundle-based recovery. Run `python3 scripts/refresh-site.py` after any import or content change, followed by `node --test scripts/*.test.mjs`. Public usage and citation guidance is at `/using/`. The public thermal work record is `the-art-of-thermal-instability/work-queue.json`; its progress and download pages are regenerated from reviewed public content.
+See [MAINTENANCE.md](MAINTENANCE.md) for the single refresh/check/publish sequence and bundle-based recovery. Run `python3 scripts/refresh-site.py` after any import or content change, followed by `node --test scripts/*.test.mjs`. Public usage and citation guidance is at `/using/`. The public thermal work record is generated from `catalog/thermal-work-queue.json`; its JSON, progress and download pages are regenerated from reviewed public content. Supplemental catalog sources and versioned Python editions are kept outside imported website trees so a refresh does not delete the editing source.

@@ -1,0 +1,46 @@
+{
+  "id": "radiation-transport",
+  "name": {
+    "ja": "放射輸送・モーメント法",
+    "en": "Radiation transport and moment methods"
+  },
+  "group": {
+    "id": "coupling",
+    "ja": "連成・拘束・粒子法",
+    "en": "Coupling, constraints & particles"
+  },
+  "summary": {
+    "ja": "角度・周波数・流体との連成と閉包を位置付ける。",
+    "en": "Map angular/frequency representations, closures and fluid coupling."
+  },
+  "status": "planned",
+  "origin": "development-candidate",
+  "reading": {},
+  "code_modules": [],
+  "test_files": [],
+  "references": [],
+  "assumptions": null,
+  "units": null,
+  "boundary_conditions": null,
+  "next_deliverable": {
+    "ja": "自由流・拡散極限を分けた基準問題。",
+    "en": "Separate free-streaming and diffusion-limit benchmarks."
+  },
+  "limitations": {
+    "ja": "Under construction。専用の実装・検証結果はまだありません。",
+    "en": "Under construction. No dedicated implementation or verification result is provided yet."
+  },
+  "metadata_review": {
+    "level": "candidate outline; scientific derivation and literature review incomplete",
+    "on": "2026-11-21"
+  },
+  "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/radiation-transport/",
+  "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/radiation-transport/index.json",
+  "markdown_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/radiation-transport/index.md",
+  "code_urls": [],
+  "test_urls": [],
+  "run_commands": [],
+  "run_from": null,
+  "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
+  "code_edition": null
+}

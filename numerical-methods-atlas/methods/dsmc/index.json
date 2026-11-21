@@ -1,0 +1,46 @@
+{
+  "id": "dsmc",
+  "name": {
+    "ja": "DSMC・運動論輸送",
+    "en": "DSMC and kinetic transport"
+  },
+  "group": {
+    "id": "coupling",
+    "ja": "連成・拘束・粒子法",
+    "en": "Coupling, constraints & particles"
+  },
+  "summary": {
+    "ja": "粒子標本による衝突と輸送を連続体模型と比較する。",
+    "en": "Compare particle-sampled collisions and transport with continuum models."
+  },
+  "status": "planned",
+  "origin": "development-candidate",
+  "reading": {},
+  "code_modules": [],
+  "test_files": [],
+  "references": [],
+  "assumptions": null,
+  "units": null,
+  "boundary_conditions": null,
+  "next_deliverable": {
+    "ja": "統計誤差と保存量を記録する小規模模型。",
+    "en": "A small model recording statistical error and conservation."
+  },
+  "limitations": {
+    "ja": "Under construction。専用の実装・検証結果はまだありません。",
+    "en": "Under construction. No dedicated implementation or verification result is provided yet."
+  },
+  "metadata_review": {
+    "level": "candidate outline; scientific derivation and literature review incomplete",
+    "on": "2026-11-21"
+  },
+  "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/dsmc/",
+  "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/dsmc/index.json",
+  "markdown_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/dsmc/index.md",
+  "code_urls": [],
+  "test_urls": [],
+  "run_commands": [],
+  "run_from": null,
+  "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
+  "code_edition": null
+}

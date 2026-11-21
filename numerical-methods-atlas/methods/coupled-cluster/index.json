@@ -1,0 +1,46 @@
+{
+  "id": "coupled-cluster",
+  "name": {
+    "ja": "結合クラスター・CCSD(T)",
+    "en": "Coupled cluster / CCSD(T)"
+  },
+  "group": {
+    "id": "quantum",
+    "ja": "電子状態・量子化学",
+    "en": "Electronic structure & quantum chemistry"
+  },
+  "summary": {
+    "ja": "電子相関の励起階層と計算量・適用範囲を整理する。",
+    "en": "Map excitation hierarchies, cost and applicability in correlation calculations."
+  },
+  "status": "planned",
+  "origin": "development-candidate",
+  "reading": {},
+  "code_modules": [],
+  "test_files": [],
+  "references": [],
+  "assumptions": null,
+  "units": null,
+  "boundary_conditions": null,
+  "next_deliverable": {
+    "ja": "一次文献・参照実装・小分子例を選ぶ。",
+    "en": "Select original references, a reference implementation and a small molecule."
+  },
+  "limitations": {
+    "ja": "Under construction。専用の実装・検証結果はまだありません。",
+    "en": "Under construction. No dedicated implementation or verification result is provided yet."
+  },
+  "metadata_review": {
+    "level": "candidate outline; scientific derivation and literature review incomplete",
+    "on": "2026-11-21"
+  },
+  "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/coupled-cluster/",
+  "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/coupled-cluster/index.json",
+  "markdown_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/coupled-cluster/index.md",
+  "code_urls": [],
+  "test_urls": [],
+  "run_commands": [],
+  "run_from": null,
+  "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
+  "code_edition": null
+}

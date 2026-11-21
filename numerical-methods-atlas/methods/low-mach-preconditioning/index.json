@@ -1,0 +1,77 @@
+{
+  "id": "low-mach-preconditioning",
+  "name": {
+    "ja": "低Mach数のPDE前処理",
+    "en": "Low-Mach PDE preconditioning"
+  },
+  "group": {
+    "id": "coupling",
+    "ja": "連成・拘束・粒子法",
+    "en": "Coupling, constraints & particles"
+  },
+  "summary": {
+    "ja": "「低Mach数のPDE前処理」の考え方と適用範囲を、解説章・一次文献からたどります。専用実装は公開していません。",
+    "en": "Read about Low-Mach PDE preconditioning, follow the original references. No dedicated implementation is distributed for this entry."
+  },
+  "status": "reading-only",
+  "origin": "existing-coverage-catalog",
+  "reading": {
+    "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/advanced/",
+    "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/advanced/"
+  },
+  "code_modules": [],
+  "test_files": [],
+  "code_mapping_scope": "Related chapter modules and test files; not a claim that each test covers every named method.",
+  "references": [
+    {
+      "url": "https://doi.org/10.1016/0021-9991(87)90084-2",
+      "label": "Preconditioned methods for solving the incompressible and low speed compressible equations (1987)",
+      "scope": "Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation."
+    },
+    {
+      "url": "https://doi.org/10.2514/6.1991-1596",
+      "label": "Time dependent calculations using multigrid, with applications to unsteady flows past airfoils and wings (1991)",
+      "scope": "Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation."
+    },
+    {
+      "url": "https://doi.org/10.1016/0021-9991(81)90128-5",
+      "label": "Approximate Riemann solvers, parameter vectors, and difference schemes (1981)",
+      "scope": "Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation."
+    },
+    {
+      "url": "https://doi.org/10.1137/0725021",
+      "label": "On Godunov-Type Methods for Gas Dynamics (1988)",
+      "scope": "Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation."
+    },
+    {
+      "url": "https://doi.org/10.1016/0021-9991(91)90211-3",
+      "label": "On Godunov-type methods near low densities (1991)",
+      "scope": "Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation."
+    },
+    {
+      "url": "https://doi.org/10.1016/j.jcp.2007.11.003",
+      "label": "Very simple, carbuncle-free, boundary-layer-resolving, rotated-hybrid Riemann solvers (2008)",
+      "scope": "Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation."
+    }
+  ],
+  "assumptions": null,
+  "units": null,
+  "boundary_conditions": null,
+  "limitations": {
+    "ja": "対象方程式・境界条件・検証の範囲は解説章と各コードを確認してください。教育用例は汎用ソルバーの完成を意味しません。",
+    "en": "See the chapter and implementation for equations, boundaries and checked scope. Educational examples are not complete general-purpose solvers."
+  },
+  "metadata_review": {
+    "level": "chapter-linked; detailed method-specific curation in progress",
+    "on": "2026-11-21"
+  },
+  "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/low-mach-preconditioning/",
+  "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/low-mach-preconditioning/index.json",
+  "markdown_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/low-mach-preconditioning/index.md",
+  "code_urls": [],
+  "test_urls": [],
+  "run_commands": [],
+  "run_from": null,
+  "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
+  "code_edition": null
+}

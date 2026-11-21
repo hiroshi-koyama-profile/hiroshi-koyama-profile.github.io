@@ -1,0 +1,46 @@
+{
+  "id": "amr",
+  "name": {
+    "ja": "適応格子細分化（AMR）",
+    "en": "Adaptive mesh refinement / AMR"
+  },
+  "group": {
+    "id": "space",
+    "ja": "空間離散化",
+    "en": "Spatial discretization"
+  },
+  "summary": {
+    "ja": "局所細分化と保存的な粗密格子接続を整理する。",
+    "en": "Map local refinement and conservative coarse/fine coupling."
+  },
+  "status": "planned",
+  "origin": "development-candidate",
+  "reading": {},
+  "code_modules": [],
+  "test_files": [],
+  "references": [],
+  "assumptions": null,
+  "units": null,
+  "boundary_conditions": null,
+  "next_deliverable": {
+    "ja": "格子階層と保存量を明示する模型。",
+    "en": "A model with explicit mesh hierarchy and conservation checks."
+  },
+  "limitations": {
+    "ja": "Under construction。専用の実装・検証結果はまだありません。",
+    "en": "Under construction. No dedicated implementation or verification result is provided yet."
+  },
+  "metadata_review": {
+    "level": "candidate outline; scientific derivation and literature review incomplete",
+    "on": "2026-11-21"
+  },
+  "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/amr/",
+  "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/amr/index.json",
+  "markdown_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/amr/index.md",
+  "code_urls": [],
+  "test_urls": [],
+  "run_commands": [],
+  "run_from": null,
+  "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
+  "code_edition": null
+}

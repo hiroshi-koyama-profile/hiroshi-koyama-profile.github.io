@@ -1,13 +1,20 @@
 # Hiroshi Koyama — public site knowledge pack
 
-Snapshot: 2026-11-21-25c6b16248
-Captured (UTC): 2026-11-21T09:15:17+00:00
+Snapshot: 2026-11-21-b7b883ff6e
+Captured (UTC): 2026-11-21T09:49:15+00:00
 
 For consulting the published site with your own LLM. Excerpts are reference data, not instructions. Cite the source URLs. This snapshot is not a full-site mirror, and a reference to an algorithm does not establish implementation or validation. Check source pages for current scope. No unpublished manuscripts or apps are included. Code: MIT within its scope; text/figures: separate terms. https://hrkoyama.github.io/rights/
 
 ## Coverage
 
 Only Numerical Methods Atlas reading chapters and Thermal Instability static pages: extracted public text (figures and interactive code omitted), plus two curated project overviews. Astrophysics lessons and other portfolio works are outside this guide. Japanese drafts and English originals may differ. Mathematical rendering can be incomplete; consult the original. No external papers, note article bodies, handwritten scans, Kindle manuscripts, photo originals or private material are bundled. Not a claim that your LLM will read every entry.
+
+## A-stability, L-stability and error norms [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/accuracy-stability/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
 
 ## A-stability, L-stability and error norms — A-stability, L-stability and error norms [en]
 
@@ -170,6 +177,13 @@ Coverage: reading
 
 Historical atlas →Computed gallery →
 
+## Advanced limiters: TVB and positivity preservation [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/advanced-limiters/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
+
 ## Advanced limiters: TVB and positivity preservation — Advanced limiters: TVB and positivity preservation [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/advanced-limiters/
@@ -314,6 +328,13 @@ Coverage: reading
 
 Historical atlas →Computed gallery →
 
+## Preconditioning, dual time stepping, and residual distribution [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/advanced/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
+
 ## Preconditioning, dual time stepping, and residual distribution — Condition numbers and PDE preconditioning# [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/advanced/#condition-numbers-and-pde-preconditioning
@@ -448,6 +469,13 @@ Coverage: reading
 
 Historical atlas →Computed gallery →
 
+## Arbitrary Lagrangian–Eulerian methods [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/ale/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
+
 ## Arbitrary Lagrangian–Eulerian methods — Arbitrary Lagrangian–Eulerian methods [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/ale/
@@ -500,6 +528,13 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/ale/#mesh-mot
 Coverage: reading
 
 Historical atlas →Computed gallery →
+
+## Orthogonal polynomials and mesh basis functions [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/basis-functions/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
 
 ## Orthogonal polynomials and mesh basis functions — Orthogonal polynomials and mesh basis functions [en]
 
@@ -605,6 +640,13 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/basis-functio
 Coverage: reading
 
 Historical atlas →Computed gallery →
+
+## Benchmark library [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/benchmarks/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
 
 ## Benchmark library — Benchmark library [en]
 
@@ -742,6 +784,13 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/benchmarks/#e
 Coverage: reading
 
 Historical atlas →Computed gallery →
+
+## Biological model equations and numerical verification [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/biological-models/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
 
 ## Biological model equations and numerical verification — Biological model equations and numerical verification [en]
 
@@ -1150,6 +1199,13 @@ Coverage: reading
 
 Historical atlas →Computed gallery →
 
+## The carbuncle phenomenon [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/carbuncle/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
+
 ## The carbuncle phenomenon — The carbuncle phenomenon [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/carbuncle/
@@ -1261,6 +1317,13 @@ Coverage: reading
 
 Historical atlas →Computed gallery →
 
+## Chapman–Enskog expansion: from populations to transport [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/chapman-enskog/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
+
 ## Chapman–Enskog expansion: from populations to transport — Chapman–Enskog expansion: from populations to transport [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/chapman-enskog/
@@ -1337,6 +1400,13 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/chapman-ensko
 Coverage: reading
 
 Historical atlas →Computed gallery →
+
+## CIP: carry the value and the gradient [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/cip/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
 
 ## CIP: carry the value and the gradient — CIP: carry the value and the gradient [en]
 
@@ -1500,6 +1570,13 @@ Coverage: reading
 
 Historical atlas →Computed gallery →
 
+## Polar and cylindrical coordinates: tensors and viscosity [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/coordinates-viscosity/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
+
 ## Polar and cylindrical coordinates: tensors and viscosity — Polar and cylindrical coordinates: tensors and viscosity [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/coordinates-viscosity/
@@ -1634,6 +1711,13 @@ Coverage: reading
 
 Historical atlas →Computed gallery →
 
+## Double Mach Reflection [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/double-mach/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
+
 ## Double Mach Reflection — Double Mach Reflection [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/double-mach/
@@ -1695,6 +1779,13 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/double-mach/#
 Coverage: reading
 
 Historical atlas →Computed gallery →
+
+## Diffusion, elliptic equations, boundary conditions, and iteration [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/elliptic/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
 
 ## Diffusion, elliptic equations, boundary conditions, and iteration — Parabolic problems: evolving diffusion# [en]
 
@@ -1939,6 +2030,13 @@ Coverage: reading
 
 Historical atlas →Computed gallery →
 
+## Equation gallery: choose the equation before the algorithm [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/equation-gallery/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
+
 ## Equation gallery: choose the equation before the algorithm — Equation gallery: choose the equation before the algorithm [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/equation-gallery/
@@ -2043,6 +2141,13 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/equation-gall
 Coverage: reading
 
 Historical atlas →Computed gallery →
+
+## Interactive experiment guide [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/experiments/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
 
 ## Interactive experiment guide — Interactive experiment guide [en]
 
@@ -2230,6 +2335,13 @@ Coverage: reading
 
 Historical atlas →Computed gallery →
 
+## Continuous finite elements: from weak form to sparse assembly [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/fem/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
+
 ## Continuous finite elements: from weak form to sparse assembly — Continuous finite elements: from weak form to sparse assembly [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/fem/
@@ -2288,6 +2400,13 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/fem/#inspect-
 Coverage: reading
 
 Historical atlas →Computed gallery →
+
+## Spherical meshes and Arakawa A, B and C grids [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/geophysical-grids/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
 
 ## Spherical meshes and Arakawa A, B and C grids — Spherical meshes and Arakawa A, B and C grids [en]
 
@@ -2536,6 +2655,13 @@ Coverage: reading
 
 Historical atlas →Computed gallery →
 
+## Gravity kernels: isolated FFTs and a periodic slab [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/gravity-boundaries/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
+
 ## Gravity kernels: isolated FFTs and a periodic slab — Gravity kernels: isolated FFTs and a periodic slab [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/gravity-boundaries/
@@ -2631,6 +2757,13 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/gravity-bound
 Coverage: reading
 
 Historical atlas →Computed gallery →
+
+## Godunov smoothed particle hydrodynamics (GSPH) [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/gsph/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
 
 ## Godunov smoothed particle hydrodynamics (GSPH) — Godunov smoothed particle hydrodynamics (GSPH) [en]
 
@@ -2729,6 +2862,13 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/gsph/#special
 Coverage: reading
 
 Historical atlas →Computed gallery →
+
+## Historical atlas [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/history/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
 
 ## Historical atlas — Historical atlas [en]
 
@@ -2987,6 +3127,13 @@ Coverage: reading
 
 Historical atlas →Computed gallery →
 
+## Nishikawa's hyperbolic diffusion: iterate a first-order system [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/hyperbolic-diffusion/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
+
 ## Nishikawa's hyperbolic diffusion: iterate a first-order system — Nishikawa's hyperbolic diffusion: iterate a first-order system [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/hyperbolic-diffusion/
@@ -3047,6 +3194,13 @@ Coverage: reading
 
 Historical atlas →Computed gallery →
 
+## Incompressible flow: project with compatible discrete operators [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/incompressible/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
+
 ## Incompressible flow: project with compatible discrete operators — Incompressible flow: project with compatible discrete operators [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/incompressible/
@@ -3102,6 +3256,13 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/incompressibl
 Coverage: reading
 
 Historical atlas →Computed gallery →
+
+## KEEP schemes: preserve the smooth-flow balance, test the limits [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/keep/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
 
 ## KEEP schemes: preserve the smooth-flow balance, test the limits — KEEP schemes: preserve the smooth-flow balance, test the limits [en]
 
@@ -3195,6 +3356,13 @@ Coverage: reading
 
 Historical atlas →Computed gallery →
 
+## Lattice Boltzmann: collide, stream, recover fluid motion [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/lattice-boltzmann/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
+
 ## Lattice Boltzmann: collide, stream, recover fluid motion — Lattice Boltzmann: collide, stream, recover fluid motion [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/lattice-boltzmann/
@@ -3257,6 +3425,13 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/lattice-boltz
 Coverage: reading
 
 Historical atlas →Computed gallery →
+
+## Slope limiters: minmod, Superbee, MC, van Leer, and van Albada [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/limiters/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
 
 ## Slope limiters: minmod, Superbee, MC, van Leer, and van Albada — Slope limiters: minmod, Superbee, MC, van Leer, and van Albada [en]
 
@@ -3386,6 +3561,13 @@ Coverage: reading
 
 Historical atlas →Computed gallery →
 
+## Structured, unstructured, and triangular meshes [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/meshes/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
+
 ## Structured, unstructured, and triangular meshes — Structured, unstructured, and triangular meshes [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/meshes/
@@ -3446,6 +3628,13 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/meshes/#varia
 Coverage: reading
 
 Historical atlas →Computed gallery →
+
+## MHD: constrained transport and divergence cleaning [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/mhd/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
 
 ## MHD: constrained transport and divergence cleaning — MHD: constrained transport and divergence cleaning [en]
 
@@ -3638,6 +3827,13 @@ Coverage: reading
 
 Historical atlas →Computed gallery →
 
+## Time-dependent tests: movies and saved states [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/movies/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
+
 ## Time-dependent tests: movies and saved states — Time-dependent tests: movies and saved states [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/movies/
@@ -3739,6 +3935,13 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/movies/#recon
 Coverage: reading
 
 Historical atlas →Computed gallery →
+
+## NASA 2D verification and validation case catalog [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/nasa-2d/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
 
 ## NASA 2D verification and validation case catalog — NASA 2D verification and validation case catalog [en]
 
@@ -3941,6 +4144,13 @@ Coverage: reading
 
 Historical atlas →Computed gallery →
 
+## Particle gravity: PM, P³M, Tree, multipoles, and multigrid [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/particle-gravity/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
+
 ## Particle gravity: PM, P³M, Tree, multipoles, and multigrid — Particle gravity: PM, P³M, Tree, multipoles, and multigrid [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/particle-gravity/
@@ -4032,6 +4242,13 @@ Coverage: reading
 
 Historical atlas →Computed gallery →
 
+## Particle methods and smoothed particle hydrodynamics [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/particles-sph/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
+
 ## Particle methods and smoothed particle hydrodynamics — Particle methods and smoothed particle hydrodynamics [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/particles-sph/
@@ -4102,6 +4319,13 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/particles-sph
 Coverage: reading
 
 Historical atlas →Computed gallery →
+
+## Euler reconstruction: PPM, characteristics, WENO-Z and AUSM [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/reconstruction/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
 
 ## Euler reconstruction: PPM, characteristics, WENO-Z and AUSM — Euler reconstruction: PPM, characteristics, WENO-Z and AUSM [en]
 
@@ -4238,6 +4462,13 @@ Coverage: reading
 
 Historical atlas →Computed gallery →
 
+## Exact and reference solutions [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/reference-solutions/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
+
 ## Exact and reference solutions — Exact and reference solutions [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/reference-solutions/
@@ -4333,6 +4564,13 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/reference-sol
 Coverage: reading
 
 Historical atlas →Computed gallery →
+
+## References by original publication year [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/references/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
 
 ## References by original publication year — References by original publication year [en]
 
@@ -5943,6 +6181,13 @@ Coverage: reading
 
 Historical atlas →Computed gallery →
 
+## Relativistic hydrodynamics: SRHD, GRHD, and GRMHD [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/relativistic-hydrodynamics/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
+
 ## Relativistic hydrodynamics: SRHD, GRHD, and GRMHD — Relativistic hydrodynamics: SRHD, GRHD, and GRMHD [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/relativistic-hydrodynamics/
@@ -6157,6 +6402,13 @@ Coverage: reading
 
 Historical atlas →Computed gallery →
 
+## v0.1.0 — First edition [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/release-notes-v0.1.0/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
+
 ## v0.1.0 — First edition — v0.1.0 — First edition [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/release-notes-v0.1.0/
@@ -6215,6 +6467,13 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/release-notes
 Coverage: reading
 
 Historical atlas →Computed gallery →
+
+## Implementation roadmap [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
 
 ## Implementation roadmap — Current priority: shock methods# [en]
 
@@ -6566,6 +6825,13 @@ Coverage: reading
 
 Historical atlas →Computed gallery →
 
+## Remembering Philip L. Roe [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roe-memorial/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
+
 ## Remembering Philip L. Roe — Remembering Philip L. Roe [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roe-memorial/
@@ -6606,6 +6872,13 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roe-memorial/
 Coverage: reading
 
 Historical atlas →Computed gallery →
+
+## Runge–Kutta families: stages, order, stability, and SSP [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/runge-kutta/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
 
 ## Runge–Kutta families: stages, order, stability, and SSP — Runge–Kutta families: stages, order, stability, and SSP [en]
 
@@ -6782,6 +7055,13 @@ Coverage: reading
 
 Historical atlas →Computed gallery →
 
+## Traced PPM, AUSM variants and curved bow shocks [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/shock-expansion/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
+
 ## Traced PPM, AUSM variants and curved bow shocks — Traced PPM, AUSM variants and curved bow shocks [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/shock-expansion/
@@ -6938,6 +7218,13 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/shock-expansi
 Coverage: reading
 
 Historical atlas →Computed gallery →
+
+## Site coverage and counting rules [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/site-coverage/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
 
 ## Site coverage and counting rules — Site coverage and counting rules [en]
 
@@ -7216,6 +7503,13 @@ Coverage: reading
 
 Historical atlas →Computed gallery →
 
+## Sparse and nonlinear systems: measure the actual residual [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/sparse-nonlinear/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
+
 ## Sparse and nonlinear systems: measure the actual residual — Sparse and nonlinear systems: measure the actual residual [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/sparse-nonlinear/
@@ -7270,6 +7564,13 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/sparse-nonlin
 Coverage: reading
 
 Historical atlas →Computed gallery →
+
+## Differences, CFL, von Neumann analysis, and Lax [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/stability/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
 
 ## Differences, CFL, von Neumann analysis, and Lax — Differences, CFL, von Neumann analysis, and Lax [en]
 
@@ -7379,6 +7680,13 @@ Coverage: reading
 
 Historical atlas →Computed gallery →
 
+## Stiff integration: solve the stage, control the time error [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/stiff-integration/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
+
 ## Stiff integration: solve the stage, control the time error — Stiff integration: solve the stage, control the time error [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/stiff-integration/
@@ -7436,6 +7744,13 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/stiff-integra
 Coverage: reading
 
 Historical atlas →Computed gallery →
+
+## Symplectic integration: a canonical map, not an exact energy promise [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/symplectic/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
 
 ## Symplectic integration: a canonical map, not an exact energy promise — Symplectic integration: a canonical map, not an exact energy promise [en]
 
@@ -7522,6 +7837,13 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/symplectic/#c
 Coverage: reading
 
 Historical atlas →Computed gallery →
+
+## Textbooks: where to look next [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/textbooks/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
 
 ## Textbooks: where to look next — Textbooks: where to look next [en]
 
@@ -7954,6 +8276,13 @@ Coverage: reading
 
 Historical atlas →Computed gallery →
 
+## Time integration and leapfrog [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/time-integration/
+Coverage: reading
+
+THE READING ROOM公開コード・データ / Public code and data
+
 ## Time integration and leapfrog — Time integration and leapfrog [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/time-integration/
@@ -8016,11 +8345,18 @@ Coverage: reading
 
 Historical atlas →Computed gallery →
 
+## A安定性、L安定性、誤差ノルム [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/accuracy-stability/
+Coverage: reading
+
+解説章公開コード・データ / Public code and data
+日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
+
 ## A安定性、L安定性、誤差ノルム — A安定性、L安定性、誤差ノルム [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/accuracy-stability/
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 A安定性（A-stability）とL安定性（L-stability）は、線形の減衰モードに対する時間積分法の応答を表します。一方、L1・L2・L∞は誤差の大きさと分布を測ります。安定な手法でも誤差は大きくなり得ます。また、代数残差が小さくてもPDEの誤差が小さいとは限りません。
 
@@ -8028,7 +8364,6 @@ A安定性（A-stability）とL安定性（L-stability）は、線形の減衰�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/accuracy-stability/#a-stability-concerns-the-whole-left-half-plane
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 1ステップ法をy′=λyに適用し、z=λΔtと置きます。安定性関数を使うと、
 y_{n+1}=R(z)y_n,\qquad
@@ -8040,7 +8375,6 @@ y_{n+1}=R(z)y_n,\qquad
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/accuracy-stability/#l-stability-also-damps-infinitely-stiff-modes
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 L安定な1ステップ法はA安定であり、さらに次を満たします。
 \lim_{|z|\to\infty,\;\operatorname{Re}z<0}R(z)=0.
@@ -8058,7 +8392,6 @@ R(z)=\frac{1+(1-2\gamma)z}{(1-\gamma z)^2}.
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/accuracy-stability/#continuous-l1-l2-and-l-errors
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 領域Ω上のスカラー誤差e(x)=u_h(x)−u_ref(x)について、
 \|e\|_{L^1}=\int_\Omega |e|\,dV,\qquad
@@ -8071,7 +8404,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/accuracy-stability/#discrete-weights-and-the-reference-representation
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 有限体積法で、数値セル平均と参照セル平均の誤差をe_i、正のセル体積をV_iとすると、
 E_1=\sum_iV_i|e_i|,\qquad
@@ -8085,7 +8417,6 @@ E_\infty=\max_i|e_i|.
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/accuracy-stability/#convergence-shocks-and-algebraic-residuals
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 同じ物理時刻と誤差規約で計算を揃えたとき、実測収束次数は、
 p_{obs}=\frac{\log(E_{coarse}/E_{fine})}{\log(h_{coarse}/h_{fine})}.
@@ -8097,7 +8428,6 @@ Ax=bの残差はr=b−Axです。解誤差はx_num−x_exact=−A^(−1)rなの�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/accuracy-stability/#where-the-atlas-reports-each-quantity
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 方程式ギャラリー：保存した単位区間の分布についてL1／MAE、L2／RMS、標本上のL∞を報告します。厳密セル平均、Eulerの参照点値、参照解なしを区別します。
 ブラウザー安定性実験：点値のL1／MAEと増幅係数を報告します。再構成した有限体積関数のノルムを測るものではありません。
@@ -8106,11 +8436,18 @@ P1 FEM：三角形内部でL2誤差とH1半ノルム誤差を積分します。
 硬い方程式の積分：受理した時間節点上の最大誤差を、非線形段階残差や局所誤差推定とは分けて報告します。
 各展示の既存の規約は維持します。この章の追加によって点値をセル平均に読み替えたり、未実施の最大誤差計算を保証したりはしません。
 
+## 発展的な勾配制限：TVBと正値性保存 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/advanced-limiters/
+Coverage: reading
+
+解説章公開コード・データ / Public code and data
+英語原文が更新されています。この日本語訳は旧版に対応します。
+
 ## 発展的な勾配制限：TVBと正値性保存 — 発展的な勾配制限：TVBと正値性保存 [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/advanced-limiters/
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 勾配制限ノートは、TVBスカラー実験と、別の保存的Euler状態スケーリングを含みます。滑らかな極値の精度低下と、許容できない熱力学状態という異なる失敗を扱います。
 
@@ -8118,7 +8455,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/advanced-limiters/#tvb-modified-minmod
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 候補増分vと隣接増分a、bに対して、
 \widetilde m(v,a,b)=
@@ -8134,7 +8470,6 @@ Cockburn・Shu（1989）はTVB RKDGの枠組みを発展させます。初版が
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/advanced-limiters/#positive-density-and-pressure-are-different-constraints
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 理想気体の保存変数U=(rho,m,E)について、
 p(U)=(\gamma-1)\left(E-\frac{|m|^2}{2\rho}\right),\qquad
@@ -8145,7 +8480,6 @@ p(U)=(\gamma-1)\left(E-\frac{|m|^2}{2\rho}\right),\qquad
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/advanced-limiters/#a-mean-preserving-scaling-building-block
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 許容される保存セル平均Ubarから始め、与えた全再構成点へ同じ係数を使います。
 \widehat U_\alpha=\bar U+\theta(U_\alpha-\bar U),\qquad 0\le\theta\le1.
@@ -8162,7 +8496,6 @@ Zhang・Shu（2010）の凸スケーリングの考え方を、単純な共通�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/advanced-limiters/#what-the-demonstration-actually-verifies
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 3節点セルはxi=−1、0、1、正のGauss–Lobatto重み(1/6,2/3,1/6)、gamma=1.4、Ubar=(1,0,2.5)です。生の状態をUbar+xi×deltaとし、密度違反にはdelta=(1.2,0,0)、圧力違反には(0,3,0)、両方の違反には(1.2,3,1)を選びます。実数演算で重み付き平均はUbarです。図は3節点だけを標本化し、epsilon_rho=epsilon_p=1e-8で、theta、制限後最小密度・圧力、保存平均の欠損を報告します。構成した再構成テストで、爆風や膨張波の時間積分ではありません。
 import numpy as np
@@ -8176,16 +8509,22 @@ limited, theta = positive_reconstruction(mean, raw)
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/advanced-limiters/#from-reconstruction-to-a-fully-discrete-guarantee
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 完全な正値性保存Euler法には、整合する正値性保存流束、界面状態を含む正の求積分解、対応する波速／CFL制約、必要な全段階での制限も必要です。SSP時間積分が前進Eulerの正値性を伝えるのは、その性質と刻み制約が既に成り立つ場合だけです。ソース項と境界処理にも独自の検証が必要です。
 この補助関数は既存のEuler MUSCL、差分WENO、CT／GLM、KEEPの時間更新へ接続していません。既存の限界はそのままです。今後は各段階の許容性・保存性、真空近傍の二重膨張波、強い爆風を確認してから、時間全体の正値性を主張すべきです。多次元・非理想状態方程式にも追加解析が必要です。
+
+## 前処理、二重時間積分、残差分配法 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/advanced/
+Coverage: reading
+
+解説章公開コード・データ / Public code and data
+日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 ## 前処理、二重時間積分、残差分配法 — 条件数とPDE前処理# [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/advanced/#condition-numbers-and-pde-preconditioning
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Ax=bの2ノルム条件数はκ₂(A)=σmax/σminです。特定の反復の収束率ではなく、摂動への感度を測ります。左前処理はP^{-1}Ax=P^{-1}b、右前処理はAP^{-1}y=b, x=P^{-1}yです。対称正定値系では、P^{-1/2}AP^{-1/2}によって対称性を保った比較ができます。
 conditioning_exampleはA=S B Sを構成し、Bを1次元Poisson行列、Sを対角スケーリングとします。対称Jacobiスケーリングによる条件数の変化を示すもので、Turkelの低Mach流前処理行列を実装するものではありません。
@@ -8195,7 +8534,6 @@ conditioning_exampleはA=S B Sを構成し、Bを1次元Poisson行列、Sを対�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/advanced/#dual-time-stepping
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 dU/dt+R(U)=0に物理時間のBDF2を適用すると、
 \frac{3U^{n+1}-4U^n+U^{n-1}}{2\Delta t}+R(U^{n+1})=0.
@@ -8208,7 +8546,6 @@ dual_time_advectionは最小の周期1次元例です。BDF1／BDF2の陰的風�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/advanced/#residual-distribution-schemes
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 要素残差Φ_K=∫K ∇·F(U) dVを節点へ配り、Σ_{i∈K} Φ_i^K=Φ_Kを保ちます。この保存条件が連続有限要素と風上の考え方をつなぎます。Abgrall（2006）の著者公開総説。
 rd_residualは1次元P1スカラー移流の最小例です。Φ_K=a(u_{i+1}-u_i)全体を下流節点へ与え、集中質量hで割ります。この場合に1次風上差分と等価であることをテストします。2次元三角形のN／LDA、非線形混合、時間整合質量行列、Euler系は未実装です。
@@ -8217,7 +8554,6 @@ rd_residualは1次元P1スカラー移流の最小例です。Φ_K=a(u_{i+1}-u_i
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/advanced/#roe-entropy-fixes-einfeldt-and-rotated-solvers
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 RoeはF_R-F_L=Ã(U_R-U_L)を満たす線形化と固有系を使います。初版はsqrt(ρ)重みのu、Hとã²=(γ-1)(H̃-ũ²/2)を作り、波強度と固有ベクトルによって散逸を加えます。Roe（1981）。
 エントロピー修正は、絶対値がδ未満の音響固有値を(λ²+δ²)/(2δ)で置き換えます。HLLEは、強い低密度膨張に対してEinfeldt型の左右波速を使う別の流束です。Roeのエントロピー修正、HLLEの正値性、カーバンクル処理は別の問題を扱います。Einfeldt（1988）、Einfeldtら（1991）。
@@ -8227,7 +8563,6 @@ RoeはF_R-F_L=Ã(U_R-U_L)を満たす線形化と固有系を使います。初�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/advanced/#roes-property-u
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Roeの1981年論文の著者公開全文、359〜360頁の4条件は、(i)固定した状態対ごとに保存変数空間から流束空間への線形写像である、(ii)状態が一致する極限で物理Jacobianになる、(iii)状態ジャンプを流束ジャンプへ厳密に写す、(iv)固有ベクトルが線形独立、です。2状態への依存そのものが線形という意味ではありません。物理的な理想気体Eulerでは、以下の構成は実数の音響・接触速度も持ちます。
 以下はアトラスで実装し、独立に検査する代数です。U=(ρ,ρu,E)、H=(E+p)/ρ、z=√ρ(1,u,H)とすると、
@@ -8244,11 +8579,18 @@ Roeの1981年論文の著者公開全文、359〜360頁の4条件は、(i)固定
 膨張不連続もジャンプ関係を満たし得ます。静止垂直衝撃波の左右を逆転した対はProperty Uを満たしますが、無修正Roe流束はエントロピーを満たすリーマン参照と異なります。ジャンプ性質とエントロピー選択を同一視できない数値反例です。エントロピー修正は追加の設計で、いずれも多次元のカーバンクル保証ではありません。
 python scripts/build_shock_robustness.pyで行列検査・移動／静止衝撃波・接触面・膨張反例を診断マニフェストに保存します。
 
+## 任意Lagrange–Euler法 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/ale/
+Coverage: reading
+
+解説章公開コード・データ / Public code and data
+日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
+
 ## 任意Lagrange–Euler法 — 任意Lagrange–Euler法 [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/ale/
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Euler型セルは固定され、流体が面を横切ります。Lagrange型セルは流体とともに動きます。ALEでは格子速度wを流速uとは独立に選べます。Hirt・Amsden・Cook（1974）は古典的な全速度ALE定式化を与えます。
 
@@ -8256,7 +8598,6 @@ Euler型セルは固定され、流体が面を横切ります。Lagrange型セ�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/ale/#the-flux-is-relative-to-the-moving-face
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 移動する検査体積K(t)にReynolds輸送定理を適用すると、
 \frac{d}{dt}\int_{K(t)}U\,dV
@@ -8267,7 +8608,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/ale/#geometry-must-obey-a-conservation-law-too
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 一様状態を一様に保つには、セル体積の変化と面運動を整合させます。
 \frac{d|K|}{dt}=\int_{\partial K}w\cdot n\,dS.
@@ -8277,7 +8617,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/ale/#a-reproducible-one-step-check
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 numart.geometry.moving_volume_uniform_testは、端点を固定して[0,1]の面を滑らかな正弦変位で変形します。面速度は実際の変位をdelta tで割った値です。定数スカラーqの示量量Vqを相対流束(a−w)qで更新し、新体積で割ります。両方に同じ変位を使います。
 import numpy as np
@@ -8290,16 +8629,22 @@ print(np.max(np.abs(q - 1)))
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/ale/#mesh-motion-remapping-and-distortion
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 完全なALE法は、頂点を動かし、Lagrangeまたは相対流束ステップを解き、より良い格子へ再配置する場合があります。保存的再配置、格子の絡まり、境界移動、時間整合性には追加の検証が必要です。総質量を保つ再配置でも、正値性や定数状態の保存に失敗する場合があります。
 格子の章で位相と運動を分け、座標の章で移動検査体積とテンソル基底の変更を区別してください。xをrへ置き換えたり、描画頂点を動かしたりするだけでALE法になるわけではありません。
+
+## テスト計算ライブラリ [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/benchmarks/
+Coverage: reading
+
+解説章公開コード・データ / Public code and data
+日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 ## テスト計算ライブラリ — テスト計算ライブラリ [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/benchmarks/
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 1次元の各Problemは、方程式、領域、終了時刻、境界、初期条件、参照解、引用キーを保持します。get_problem(name)により、すべての手法から同じ定義を使えます。配列の最後の軸が変数で、Eulerは(ρ,ρu,E)、浅水流は(h,hu)、等温流は(ρ,ρu)です。
 
@@ -8307,7 +8652,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/benchmarks/#smooth-problems
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 線形移流は周期区間[0,1]、速度a、初期値sin(2πx)を使います。厳密な平行移動解と差分・DG・Fourier法を比較します。DGはモード型Legendre P0／P1／P2、風上境界流束、SSPRK3です。Ppの空間次数と時間3次積分を区別してください。DGの未知数は要素数×(p+1)です。Fourier法は線形モードを時間方向に厳密に積分し、このギャラリーから同一コストや同一自由度での順位は導きません。非線形積、エイリアシング除去、Gibbs現象の処理は今後の課題です。
 entropy-waveはEulerのρ=1+0.2sin(2πx)、u=1,p=1,γ=1.4、周期区間[0,1]、t=1を使います。密度だけが移動する厳密解で、滑らかな解の精度と周期保存性を検証できます。等温Eulerには独立したエネルギー・エントロピー変数がないため、同じEulerエントロピー波問題は使えません。
@@ -8316,7 +8660,6 @@ entropy-waveはEulerのρ=1+0.2sin(2πx)、u=1,p=1,γ=1.4、周期区間[0,1]、
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/benchmarks/#shock-tubes
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Sod：[0,1]、x0=0.5、左(ρ,u,p)=(1,0,1)、右(0.125,0,0.1)、γ=1.4、t=0.2です。境界はゼロ勾配外挿で、主要な波は終了時刻までに境界へ達しません。厳密リーマンソルバーは二分法で整合する圧力を求め、衝撃波、接触波、膨張波を標本化します。真空を含む厳密解には対応していません。Sod（1978）、厳密解実装の参照先。
 Lax：[-5,5]、x0=0、左(0.445,0.698,3.528)、右(0.5,0,0.571)、γ=1.4、t=1.3、外挿境界です。LaxテストとLax–Friedrichs法は、同じ人名でも別の対象です。後の文献で使われる標準的なパラメータを採用し、1954年原論文の表との直接照合はしていません。
@@ -8326,7 +8669,6 @@ Shu–Osher：[-5,5]、x0=-4、t=1.8、γ=1.4、左(3.857143,2.629369,10.33333)�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/benchmarks/#low-densities-and-einfeldt-type-tests
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 double-rarefactionは[0,1]、x0=0.5、左(1,-2,0.4)、右(1,2,0.4)、γ=1.4、t=0.15です。強い膨張を起こすこの設定は1–2–3問題とも呼ばれます。選定した正値性テストでは区分一定再構成とHLLEを使います。この保証が高次MUSCLやWENOに移るわけではありません。Einfeldtら（1991）。
 
@@ -8334,7 +8676,6 @@ double-rarefactionは[0,1]、x0=0.5、左(1,-2,0.4)、右(1,2,0.4)、γ=1.4、t=
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/benchmarks/#shallow-water-and-isothermal-flow
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 dam-breakは平坦底面の浅水流で、g=1、左h=2、右h=1、u=0、[0,1]、t=0.1です。乾燥床、地形ソース、静水平衡を保つ離散化、濡れ・乾きの処理は未対応です。isothermalはp=cs²ρ、cs=1、左ρ=1、右ρ=0.125、u=0を同じ領域・時間区間で解きます。いずれも外挿境界です。初版ではソルバー、許容状態、保存形を検査します。参照解ライブラリに半解析Riemann状態と保存変数セル平均を追加し、方程式ギャラリーで使います。この2ケースの元のProblem.referenceは未設定のままです。新しい評価にはget_referenceを使ってください。LeVeque（2002）。
 
@@ -8342,7 +8683,6 @@ dam-breakは平坦底面の浅水流で、g=1、左h=2、右h=1、u=0、[0,1]、
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/benchmarks/#riemann-fluxes-and-reconstruction
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 RusanovとHLLはEuler・浅水・等温流に対応します。HLLC、Roe、HLLEは現在、理想気体Eulerだけに対応します。HLLは局所音響速度の最小・最大、HLLEはRoe平均を含むEinfeldt型推定を使います。Roeは音響固有値にδ=0.1ãの2次エントロピー平滑化を適用し、接触固有値は変更しません。低密度の正値性修正や、一般的なエントロピー安定流束の構成とは別です。
 MUSCLは基本変数についてminmod（既定）、Superbee、MC、van Leer、切り詰めたvan Albadaを選べます。勾配制限を参照してください。WENO5-JSは点値流束と大域LF分割を使う、成分別の有限差分実装です。後述の別章に特性再構成・WENO-Zを追加し、この従来ソルバーは変更していません。完全離散の正値性保存は今後の課題です。別の発展的な勾配制限ではTVB修正minmodとEulerの正値再構成スケーリングを実装していますが、これらのEuler時間更新とは結合していません。
@@ -8352,7 +8692,6 @@ MUSCLは基本変数についてminmod（既定）、Superbee、MC、van Leer、
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/benchmarks/#matching-the-benchmark-to-the-scheme
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 原型KEEPの展示では滑らかな等エントロピー渦と保存量診断を使います。素の中心流束には衝撃波安定化がなく、Sod／DMRソルバーとはしていません。動画ガイドでは、滑らかな流れ、衝撃波捕獲、MHDの計算を区別し、定常場は静止図で示します。
 
@@ -8360,7 +8699,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/benchmarks/#equation-first-scalar-comparisons
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 方程式ギャラリーでは、厳密なセル積分を持つBurgers・LWR交通流のリーマン問題、移流・熱拡散モードを加えています。既存のSod、水深が正のダム崩壊、等温流の基準計算にもつなぎ、参照解の規約を明示します。
 
@@ -8368,15 +8706,21 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/benchmarks/#expanded-reconstruction-and-flux-tests
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 新しい再構成章と操作できる比較に、制限付き放物線FV・保存特性変数・FD WENO-Z・変種を明示したAUSM系列基準例を追加しました。上記の従来コードは成分ごとの基準例として残します。平面衝撃波の感度とRoeのProperty Uは別に検証します。
+
+## 生物モデル方程式と数値検証 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/
+Coverage: reading
+
+解説章公開コード・データ / Public code and data
+日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 ## 生物モデル方程式と数値検証 — 生物モデル方程式と数値検証 [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 個体群の増殖から確率的な遺伝子制御、流体構造連成まで、22の生物・生物由来モデルを選び、保存則CFDの外へ方程式の地図を広げます。22項目すべてが文献調査とベンチマーク設計案です。この追加では生物ソルバーを実装しておらず、生物系のシミュレーション結果も示していません。
 以下は慣用的な簡略形・規格化形です。出典はモデルの系譜を示し、すべての係数や変数が原論文と一致するという意味ではありません。構造化カタログに、各項目の引用、数値的な課題、検証目標、範囲を記録しています。現代数理生物学の網羅的総説ではなく、数値計算の多様性を重視した選定です。出典確認日は2026年11月6日です。
@@ -8385,7 +8729,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#which-biological-questions-exercise-which-algorithms
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 個体群・生態： ロジスティック増殖、捕食被食、Fisher前線、交差拡散、レプリケータ動力学は、正値性、不変集合、長時間挙動、空間侵入を調べます。
 人口構造・感染症： 年齢輸送と区画モデルは、更新境界、収支、区画の非負性、閾値を調べます。
@@ -8400,7 +8743,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#historical-model-catalog
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 年は初期の出典または選んだ発展を指し、排他的な先取権の主張ではありません。後年の空間拡張、縮約、翻訳は各項目で区別します。
 
@@ -8408,7 +8750,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#01-1838-logistic-population-growth
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 個体群・生態・文献調査のみ。 環境収容力Kによる密度制限付き増殖です。生物系ODEの最も基本的な比較問題になります。
 \dot N=rN(1-N/K).
@@ -8421,7 +8762,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#02-1913-michaelismenten-and-full-enzyme-kinetics
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 生化学反応・文献調査のみ。 酵素の飽和反応です。質量作用則の全体系は過渡的な複合体Cを解き、縮約速度則は速い変数を消去します。
 E+S\mathrel{\mathop{\rightleftharpoons}^{k_1}_{k_{-1}}}C\mathrel{\mathop{\longrightarrow}^{k_2}}E+P,\qquad v=V_{\max}S/(K_M+S).
@@ -8434,7 +8774,6 @@ E+S\mathrel{\mathop{\rightleftharpoons}^{k_1}_{k_{-1}}}C\mathrel{\mathop{\longri
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#03-1920-lotkavolterra-predatorprey
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 個体群・生態・文献調査のみ。 被食者の増殖と捕食を結合したモデルで、位相平面と長時間積分のテストになります。
 \dot x=\alpha x-\beta xy,\qquad\dot y=\delta xy-\gamma y.
@@ -8446,7 +8785,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#04-1926-mckendrick-age-structured-population
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 構造化個体群の輸送・文献調査のみ。 個体は年齢aの方向へ単位速度で移動し、新生個体は非局所的な更新境界から入ります。
 \partial_t n+\partial_a n=-\mu(a)n,\qquad n(0,t)=\int_0^\infty b(a)n(a,t)\,da.
@@ -8459,7 +8797,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#05-1927-sir-and-seir-compartment-models
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 感染症区画・文献調査のみ。 閉じた一様混合系における規格化人口比のモデルです。SEIRでは曝露区画と発症への遷移率を追加します。
 \dot s=-\beta si,\quad\dot i=\beta si-\gamma i,\quad\dot r=\gamma i,\quad s+i+r=1.
@@ -8472,7 +8809,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#06-1937-fisherkpp-invasion-front
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 個体群・生態・文献調査のみ。 侵入個体群や有利な対立遺伝子の空間的な拡大を反応拡散前線で表します。
 u_t=D\Delta u+ru(1-u),\qquad 0\leq u\leq1.
@@ -8485,7 +8821,6 @@ u_t=D\Delta u+ru(1-u),\qquad 0\leq u\leq1.
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#07-1949-monod-growth-and-chemostat
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 生化学反応・文献調査のみ。 栄養制限を受ける生物量X、基質S、収率Y、希釈率dのケモスタットモデルです。d=0では閉じた回分培養になります。
 \mu(S)=\mu_{\max}\frac{S}{K_S+S},\quad\dot X=(\mu(S)-d)X,\quad\dot S=d(S_{in}-S)-\mu(S)X/Y.
@@ -8498,7 +8833,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#08-1952-hodgkinhuxley-membrane-dynamics
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 興奮系・文献調査のみ。 膜電位とゲート変数z=m,h,nでイオン性の興奮膜を記述します。ケーブルへの拡張では軸方向の電流を追加します。
 C_m\dot V=I_{app}-\bar g_{Na}m^3h(V-E_{Na})-\bar g_Kn^4(V-E_K)-g_L(V-E_L),\quad\dot z=\alpha_z(V)(1-z)-\beta_z(V)z.
@@ -8511,7 +8845,6 @@ C_m\dot V=I_{app}-\bar g_{Na}m^3h(V-E_{Na})-\bar g_Kn^4(V-E_K)-g_L(V-E_L),\quad\
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#09-1952-turing-reactiondiffusion-framework
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 模様形成・文献調査のみ。 一様な反応平衡のまわりで拡散駆動の模様が生じる枠組みです。f,gを一意に指定するモデルではありません。
 u_t=D_u\Delta u+f(u,v),\qquad v_t=D_v\Delta v+g(u,v).
@@ -8524,7 +8857,6 @@ u_t=D_u\Delta u+f(u,v),\qquad v_t=D_v\Delta v+g(u,v).
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#10-1961-fitzhughnagumo-excitation-and-recovery
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 興奮系・文献調査のみ。 速い興奮と遅い回復を規格化したモデルです。空間へ拡張するとパルス、不応期、らせん波を表します。
 v_t=D\Delta v+v-v^3/3-w+I,\qquad w_t=\epsilon(v+a-bw).
@@ -8537,7 +8869,6 @@ v_t=D\Delta v+v-v^3/3-w+I,\qquad w_t=\epsilon(v+a-bw).
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#11-1970-kellersegel-chemotaxis
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 走化性・文献調査のみ。 細胞密度nが走化性物質の勾配に沿って移動します。τc=0では化学物質の部分問題が楕円型になります。
 n_t=D_n\Delta n-\chi\nabla\cdot(n\nabla c),\qquad\tau_c c_t=D_c\Delta c+\alpha n-\lambda c.
@@ -8550,7 +8881,6 @@ n_t=D_n\Delta n-\chi\nabla\cdot(n\nabla c),\qquad\tau_c c_t=D_c\Delta c+\alpha n
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#12-1972-gierermeinhardt-activatorinhibitor
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 模様形成・文献調査のみ。 短距離の活性化と長距離の抑制を組み合わせた、代表的な簡略モデルです。
 a_t=D_a\Delta a+\rho a^2/h-\mu a+\sigma_a,\qquad h_t=D_h\Delta h+\rho_h a^2-\nu h.
@@ -8563,7 +8893,6 @@ a_t=D_a\Delta a+\rho a^2/h-\mu a+\sigma_a,\qquad h_t=D_h\Delta h+\rho_h a^2-\nu 
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#13-1972-fluidelastic-structure-and-immersed-boundaries
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 生体力学・文献調査のみ。 流体と変形構造の連成です。力・構成則を与えることで、弁や膜などの生物学的対象を扱えます。
 \rho(\boldsymbol u_t+\boldsymbol u\cdot\nabla\boldsymbol u)=-\nabla p+\mu\Delta\boldsymbol u+\boldsymbol f,\quad\nabla\cdot\boldsymbol u=0,\quad\boldsymbol X_t=\boldsymbol u(\boldsymbol X,t).
@@ -8576,7 +8905,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#14-1977-chemical-master-equation-and-gillespie-ssa
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 確率反応網・文献調査のみ。 整数分子数、反応ジャンプνj、反応傾向関数ajを用います。SSAはこの連続時間Markovモデルの軌道を標本化します。
 \partial_t P(\boldsymbol n,t)=\sum_j\left[a_j(\boldsymbol n-\boldsymbol\nu_j)P(\boldsymbol n-\boldsymbol\nu_j,t)-a_j(\boldsymbol n)P(\boldsymbol n,t)\right].
@@ -8589,7 +8917,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#15-1977-mackeyglass-delayed-physiological-feedback
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 遅延・遺伝子制御・文献調査のみ。 規格化した生理制御系の遅延フィードバックです。遅延が安定性と振動挙動を変えます。
 \dot x(t)=\frac{\beta x(t-\tau)}{1+x(t-\tau)^p}-\gamma x(t).
@@ -8602,7 +8929,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#16-1978-replicator-evolutionary-game-dynamics
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 進化動力学・文献調査のみ。 指定した行列ゲームで、各戦略の比率が相対利得に応じて増減します。
 \dot x_i=x_i[(A\boldsymbol x)_i-\boldsymbol x^TA\boldsymbol x],\qquad x_i\geq0,\quad\sum_i x_i=1.
@@ -8615,7 +8941,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#17-1979-schnakenberg-reactiondiffusion
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 模様形成・文献調査のみ。 単純な自己触媒反応則を空間へ拡張したもので、再現可能なTuring不安定性の発生テストに適しています。
 u_t=D_u\Delta u+a-u+u^2v,\qquad v_t=D_v\Delta v+b-u^2v.
@@ -8628,7 +8953,6 @@ u_t=D_u\Delta u+a-u+u^2v,\qquad v_t=D_v\Delta v+b-u^2v.
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#18-1979-shigesadakawasakiteramoto-cross-diffusion
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 個体群・生態・文献調査のみ。 密度依存の自己・相互分散を伴う競争が、空間的な棲み分けを生みます。
 u_t=\Delta[(d_1+\alpha_{11}u+\alpha_{12}v)u]+u(a_1-b_1u-c_1v),\quad v_t=\Delta[(d_2+\alpha_{21}u+\alpha_{22}v)v]+v(a_2-b_2u-c_2v).
@@ -8641,7 +8965,6 @@ u_t=\Delta[(d_1+\alpha_{11}u+\alpha_{12}v)u]+u(a_1-b_1u-c_1v),\quad v_t=\Delta[(
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#19-1983-grayscott-spatial-autocatalysis
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 模様形成・文献調査のみ。 供給と減衰を含む化学反応モデルです。空間へ拡張すると多様な斑点や波を生じます。
 u_t=D_u\Delta u-uv^2+F(1-u),\qquad v_t=D_v\Delta v+uv^2-(F+k)v.
@@ -8654,7 +8977,6 @@ u_t=D_u\Delta u-uv^2+F(1-u),\qquad v_t=D_v\Delta v+uv^2-(F+k)v.
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#20-1996-alievpanfilov-cardiac-excitation
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 興奮系・文献調査のみ。 心筋波と回復特性を表す、現象論的に縮約した興奮・回復モデルです。
 u_t=D\Delta u-ku(u-a)(u-1)-uv,\quad v_t=\left(\epsilon_0+\frac{\mu_1v}{u+\mu_2}\right)[-v-ku(u-b-1)].
@@ -8667,7 +8989,6 @@ u_t=D\Delta u-ku(u-a)(u-1)-uv,\quad v_t=\left(\epsilon_0+\frac{\mu_1v}{u+\mu_2}\
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#21-2000-repressilator-mrnaprotein-network
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 遅延・遺伝子制御・文献調査のみ。 3つの抑制遺伝子を環状に結びます。mRNAとタンパク質を両方保持すると状態変数は6つになります。
 \dot m_i=\frac{\alpha}{1+p_{i-1}^n}+\alpha_0-m_i,\quad\dot p_i=\beta(m_i-p_i),\qquad i=1,2,3\ \text{cyclic}.
@@ -8680,7 +9001,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#22-2000-genetic-toggle-switch
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 遅延・遺伝子制御・文献調査のみ。 相互抑制によって双安定スイッチが生じうる、規格化された遺伝子モデルです。
 \dot u=\frac{\alpha_1}{1+v^p}-u,\qquad\dot v=\frac{\alpha_2}{1+u^q}-v.
@@ -8693,7 +9013,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#a-verification-path-before-attractive-movies
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 最初の実装順として、ロジスティック／SIR → 酵素反応の全体系 → Fisher前線 → FitzHugh–Nagumoパルス → Schnakenbergモード → Keller–Segel凝集を提案します。捕食被食はHamilton系ノートと並行して長時間不変量を調べ、出生死滅SSAを最初の確率的分岐にできます。Gray–Scottはその後の視覚的な化学展示に向きますが、供給率、空間尺度、初期摂動、出典を明示します。これは実装順の提案で、歴史順とは別です。
 
@@ -8701,7 +9020,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#an-exact-nonlinear-front
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 尺度化したFisher方程式では、Ablowitz–Zeppetella（1979）の特殊な前線が、決定論的な比較基準になります。
 u(x,t)=\left[1+\exp\left(\sqrt{\frac r{6D}}(x-ct-x_0)\right)\right]^{-2},
@@ -8712,7 +9030,6 @@ u(x,t)=\left[1+\exp\left(\sqrt{\frac r{6D}}(x-ct-x_0)\right)\right]^{-2},
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#pattern-onset-is-a-quantitative-test
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 選んだ2種反応系の平衡でJacobian Jを作ります。連続体では波数ベクトルkのFourierモードを、次の作用素が発展させます。
 L(k)=J-|k|^2\operatorname{diag}(D_u,D_v).
@@ -8725,7 +9042,6 @@ L(k)=J-|k|^2\operatorname{diag}(D_u,D_v).
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#preserve-the-model-before-judging-the-method
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 将来の各計算では、有次元・規格化変数、全パラメータ、初期・境界条件、単位、必要なら乱数種、モデルの版と出典を指定します。収支には境界流束と生成項を含めます。すべての生物反応拡散問題が各種の質量を保存するわけではありません。値を切り詰める正値化は総量や絶滅閾値を変える場合があります。拡散部分を陰的に解くだけでは、分割更新全体の正値性は証明できません。
 確率反応網では、離散化・モデル近似と有限標本集団の統計的不確かさを分けます。非線形反応網でODE解が確率系の厳密な平均に一致するとは限りません。遅延方程式では履歴関数と補間則を記録します。生化学の縮約では、モデル縮約誤差と積分誤差を別々に測ります。
@@ -8734,17 +9050,23 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#sources-and-further-branches
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Murrayの第3版入門書（2002）は、これらの分野を横断する読書経路になります。PhysiomeのHodgkin–HuxleyワークスペースとAliev–Panfilovの符号化は、実装パラメータを選ぶ前に確認すべきモデルの版の参照先です。独立した検証データではありません。
 今後の独立した調査対象には、神経集団場、空間確率反応拡散、細胞内極性と質量保存反応網、細胞周期のサイズ構造、頂点・位相場による細胞力学、腫瘍と栄養の自由境界、遺伝的浮動を含む集団遺伝学などがあります。現在の22項目が生物モデルの全範囲を尽くすという主張ではありません。指定した方程式に対する数値検証と、生物個体や実験データに対する妥当性検証も異なります。
 方程式ギャラリー、歴史アトラス、全参考文献へ戻れます。
 
+## カーバンクル現象 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/carbuncle/
+Coverage: reading
+
+解説章公開コード・データ / Public code and data
+日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
+
 ## カーバンクル現象 — カーバンクル現象 [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/carbuncle/
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 強い衝撃波を多次元方式で捕獲すると、偽の膨らみ、筋、横方向に交互の状態が現れる場合があります。このカーバンクル不安定性は離散流体問題の性質で、衝撃波が鋭く見えるだけでは正確さを示せません。格子に沿う衝撃波は特に有効な検査です。
 Quirk（1994）はGodunov型ソルバーの失敗を示し、相補的な流束切替を動機付けます。Pandolfi・D’Ambrosio（2001）は衝撃波関連不安定性と局所的対策を解析します。以下の診断の問いはそれらを背景とし、普遍的な機構や新しい安定性証明を主張しません。
@@ -8753,7 +9075,6 @@ Quirk（1994）はGodunov型ソルバーの失敗を示し、相補的な流束�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/carbuncle/#why-a-one-dimensional-flux-can-fail-in-two-dimensions
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 面法線のRoe流束は、
 \widehat F_n=\tfrac12(F_n(U_L)+F_n(U_R))
@@ -8765,7 +9086,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/carbuncle/#three-different-questions
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 エントロピー修正：音速をまたぐ膨張波が許容されない膨張衝撃波になる問題に、小さな音響固有値の平滑化で対処します。それだけで多次元強衝撃波の安定性は保証しません。
 正値性：密度・圧力を許容範囲に保つ問題で、波速限界、適切なCFL、正値再構成を使います。正の状態でもカーバンクルは生じ得ます。
@@ -8776,7 +9096,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/carbuncle/#remedies-and-their-tradeoffs
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 2波HLL／HLLEやRusanovは、接触波解像ソルバーより接触・せん断へ多くの散逸を加えることが一般的です。センサーで鋭い流束と散逸的流束を局所混合する方法や、純粋な面法線処理が見落とす方向へ散逸を与える回転・多次元流束もあります。Nishikawa・Kitamura（2008）に回転ハイブリッド法があります。
 これらは設計の方向で、交換可能な保証ではありません。センサーは物理的なせん断層も減衰させ得て、過剰散逸は対象構造を失いながら不安定性を隠します。波速推定を明示してください。このアトラスの2次元基準はDavis型限界のHLLで、すべてのEinfeldt HLLE変種ではありません。
@@ -8785,7 +9104,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/carbuncle/#what-an-honest-comparison-must-measure
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 摂動付き平面強衝撃波、続いて管理した格子列の鈍頭物体流を使います。Mach数、面に対する衝撃波位置、摂動振幅・波長、境界、再構成、CFL、終了時刻を固定し、Roe、HLL／HLLE、提案ハイブリッドを比較します。格子をずらす・回す比較も繰り返します。
 周期的な横方向列について、選んだ衝撃波法線位置での交互密度診断の一例は、
@@ -8797,7 +9115,6 @@ A_\pi(i,t)=\left|\frac{1}{N_y}\sum_{j=0}^{N_y-1}(-1)^j
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/carbuncle/#status-in-this-edition
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 二重Mach反射は斜め衝撃波干渉の実際の1次HLL計算です。管理したRoe対HLLのカーバンクル比較ではなく、カーバンクルがない保証を与えません。後述の平面衝撃波節に管理した行摂動診断を追加しました。別の段階では、物体に沿う格子の円柱前半部スナップショットと対照計算を追加しました。物理的な円筒粘性応力と数値衝撃波散逸も別の演算子です。
 Roeの業績、流束のテスト、実装ロードマップへ進んでください。
@@ -8806,7 +9123,6 @@ Roeの業績、流束のテスト、実装ロードマップへ進んでくだ�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/carbuncle/#computed-planar-oddeven-diagnostic
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 条件を揃えた比較を開く。独立したテストとして、[0,1] × [0,0.25]、γ=1.4、上流(ρ,u,v,p)=(1.4,6,0,1)、厳密な垂直衝撃波の下流状態を使い、定常Mach 6衝撃波を計算します。x両端は固定、yは周期、セルは正方形です。64 × 16と128 × 32、t=0.2、空間1次・SSPRK2・CFL 0.3を比較します。衝撃波はx=0.5の面上、または右へ半セル移動した位置です。行ごとに±10⁻⁴Δxずらした波面を、保存平均としてx方向に厳密積分して初期化します。各設定に無摂動対照計算を用意します。
 無修正Roe、音響平滑化δ=0.1c̃付きRoe、Davis HLL、Einfeldt型HLLE、圧力センサー付きRoe／HLLE混合、共通音速・3次圧力分割のAUSM基準例を比較します。空間・時間設定は同じですが、刻み数・計算費用は等しいとは限りません。混合はS=max_neighbors |p_neighbor−p|/min(p_neighbor,p)、θ=clip((S−0.05)/0.2,0,1)、面では隣接セルの最大θを使い、F=(1−θ)F_Roe_fixed+θF_HLLEとします。x方向の圧力差でも近くの横方向面のHLLEが作動します。明示した教育用センサーであり、論文の回転ハイブリッドや普遍的対策ではありません。
@@ -8814,11 +9130,18 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 面に一致したRoeでは選んだ行モードが成長し、半セルの移動で応答が大きく変わります。エントロピー修正はこの位置依存性を除きません。HLL／HLLEや他の流束も、名称ではなく記録した条件で評価します。特殊なNyquist摂動では密度の行が分離しても横速度0の対称性を保つため、一般的な横運動の検査にはなりません。
 再現はpython scripts/build_shock_robustness.pyです。全摂動・対照履歴、設定、ソースハッシュと最終保存変数場を取得できます。原型Quirkの移動衝撃波・摂動格子ダクトや鈍頭物体のこぶではありません。円柱前半部は別段階の計算例として追加しました。他波長、格子回転、広いCFL・強度の検査は今後で、カーバンクルを生じないとの主張はしません。単一ジャンプの代数はProperty Uを参照してください。
 
+## Chapman–Enskog展開：分布から輸送へ [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/chapman-enskog/
+Coverage: reading
+
+解説章公開コード・データ / Public code and data
+日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
+
 ## Chapman–Enskog展開：分布から輸送へ — Chapman–Enskog展開：分布から輸送へ [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/chapman-enskog/
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Chapman–Enskog（チャップマン–エンスコッグ）展開は、運動論的な緩和と、ゆっくり変化する流体場を分けます。古典的な運動論はChapman・Cowlingの『The Mathematical Theory of Non-Uniform Gases』（初版1939年、第3版1970年）で扱われています。書籍の出版年は展開の発明年ではありません。この章では、外力なし・等温・低Mach数の格子BGKについて、独立した導出を示します。
 
@@ -8826,7 +9149,6 @@ Chapman–Enskog（チャップマン–エンスコッグ）展開は、運動�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/chapman-enskog/#a-small-parameter-and-solvability
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 遅い変化を整理するパラメータεを導入します。
 f_q=f_q^{(0)}+\epsilon f_q^{(1)}+\epsilon^2 f_q^{(2)}+\cdots,
@@ -8841,7 +9163,6 @@ f_q=f_q^{(0)}+\epsilon f_q^{(1)}+\epsilon^2 f_q^{(2)}+\cdots,
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/chapman-enskog/#keep-the-discrete-time-taylor-term
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 格子BGKの並進側をD_q=∂t+c_q·∇で展開します。格子時間単位のTaylor展開はD_q f_q + D_q² f_q/2から始まり、次数ごとに、
 f_q^{(0)}=f_q^{eq},\qquad
@@ -8857,16 +9178,22 @@ f_q^{(1)}=-\tau D_{1q} f_q^{eq},
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/chapman-enskog/#what-this-derivation-does-and-does-not-establish
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 D2Q9実験は式へ代入するだけでなく、せん断減衰から粘性を測ります。Qianら（1992）が格子モデルの出典で、BGKの原典は連続運動論の緩和を扱います。Guoら（2002）の外力離散化は別で、上の無外力の代数ではそのソース項を導出していません。
 打切った等温平衡に対して、小さな勾配と小さなMach数を仮定する、平衡近傍の形式的な漸近展開です。衝撃波近傍の安定性、任意の緩和時間、エネルギー方程式の回復、一般的な希薄気体Boltzmannソルバーとしての妥当性を保証しません。Burnett次数の輸送や熱的衝突モデルには、追加モーメントと解析が必要です。
+
+## CIP：値と勾配を運ぶ [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/cip/
+Coverage: reading
+
+解説章公開コード・データ / Public code and data
+英語原文が更新されています。この日本語訳は旧版に対応します。
 
 ## CIP：値と勾配を運ぶ — CIP：値と勾配を運ぶ [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/cip/
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 原型のcubic-interpolated pseudo-particle（CIP）は場と空間微分を保持し、風上の3次分布を再構成します。広い族はconstrained interpolation profileとも呼ばれます。CIPノートは定速周期スカラー移流の原型多項式を実装し、値だけの線形補間と比較して、拡散、勾配輸送、振動、細分化、保存性を調べます。
 歴史的出典はTakewaki–Nishiguchi–Yabe（1985）、Yabe–Aoki（1991）です。Saito–Obase–Abe-Ouchi（2020）はCIP族の値・勾配発展と有理関数型を説明しますが、氷床応用とRCIPはこの多項式例とは別です。
@@ -8875,7 +9202,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/cip/#characteristics-and-an-additional-unknown
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 定速aでは、
 f_t+a f_x=0,\qquad g=f_x,\qquad g_t+a g_x=0.
@@ -8888,7 +9214,6 @@ g_t+a g_x=-a_xg.
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/cip/#four-endpoint-constraints-determine-a-cubic
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 幅hの区間で規格化座標s∈[0,1]を使うと、
 P(s)=H_{00}(s)f_L+hH_{10}(s)g_L+H_{01}(s)f_R+hH_{11}(s)g_R,
@@ -8903,7 +9228,6 @@ H_{01}&=-2s^3+3s^2,&H_{11}&=s^3-s^2.
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/cip/#reproducible-scalar-tests
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 周期[0,1]にN=128の点x_i=i/Nを置きます。ノートはa=±1、Courant絶対値0.25、0.6、1、終了時刻0.25、1を選び、最終刻みを短縮します。設定ごとに終了時刻まで独立に解き、保存解間の補間はしません。
 滑らかな分布は1+0.2sin(2πx)で、初期gは解析微分または周期中心差分です。矩形パルスは[0.2,0.4)で1、他で0、初期勾配はゼロまたは中心差分です。標本化した不連続でゼロを使うのは明示した規約で、そこでの解析微分ではないため、矩形波の厳密勾配誤差は表示しません。
@@ -8914,7 +9238,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/cip/#why-a-sine-wave-is-not-a-conservation-proof
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 周期区分Hermite再構成の厳密積分は、
 M=\sum_i\left[\frac h2(f_i+f_{i+1})+
@@ -8930,7 +9253,6 @@ s=0.65,\qquad \Delta M=h\,s(1-s)(1-2s)=-0.0021328125.
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/cip/#conservative-and-shape-preserving-branches
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 CIP–CSL（Yabeら、2001）は積分制約と保存的半Lagrange輸送を導入します。有理CIP／RCIPは再構成を変え、別の変種は形状制約を加えます。保存性と有界性には独自の定義とテストが必要で、CIPという名称だけからは導けません。
 初版は原型の1次元3次式だけを実装します。CIP–CSL2／CSL4、RCIP、流体の移流・非移流分割、多次元混合微分、完全な圧縮性・多相ソルバーは読書の背景です。既存Euler衝撃波管の再構成と流束は変更していません。
@@ -8939,7 +9261,6 @@ CIP–CSL（Yabeら、2001）は積分制約と保存的半Lagrange輸送を導�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/cip/#reproduce
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 from numart.cip import solve_advection, mass_counterexample
 wave = solve_advection(profile="sine", speed=-1., cfl=0.6)
@@ -8949,11 +9270,18 @@ python scripts/build_cip.py
 python scripts/sync_web_content.py
 docs/figures/cip.jsonはCIP／線形の48組の設定、微分配列、診断、3つの収束系列、保存性反例、ソースハッシュを記録します。ブラウザーはPython計算結果を選びます。テストでは3次再構成・微分の厳密性、両方向、1セル移動、定数保存、滑らかな収束、振動、解析的質量変化の恒等式を確認します。
 
+## 極・円筒座標：テンソルと粘性 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/coordinates-viscosity/
+Coverage: reading
+
+解説章公開コード・データ / Public code and data
+日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
+
 ## 極・円筒座標：テンソルと粘性 — 極・円筒座標：テンソルと粘性 [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/coordinates-viscosity/
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 以下は円筒座標(r,phi,z)、phiはラジアン、r>0として、正規直交基底(e_r,e_phi,e_z)の物理成分を使います。平面極座標場はu_z=0、全z微分をゼロにします。座標基底のテンソル成分には別の計量因子があり、規約を混ぜると粘性力を誤ります。
 円筒流体方程式の導出はRichard Fitzpatrickの講義を参照してください。この章は一般の体積粘性の規約を明示し、解析的な場で検査します。
@@ -8962,7 +9290,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/coordinates-viscosity/#velocity-gradient-differentiate-the-basis-too
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 L_ij=e_i·((e_j·grad)u)とします。行は速度成分、列は微分方向です。
 L=\begin{pmatrix}
@@ -8979,7 +9306,6 @@ L=\begin{pmatrix}
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/coordinates-viscosity/#newtonian-stress-all-six-independent-components
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 全応力sigma=−p I+tau、せん断粘性mu、体積粘性zetaとして、3次元構成則は、
 \tau=2\mu D+\lambda\theta I,\qquad
@@ -9000,7 +9326,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/coordinates-viscosity/#stress-divergence-the-viscous-force-per-volume
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 対称な物理応力テンソルのf=div(tau)は、
 \begin{aligned}
@@ -9017,7 +9342,6 @@ f_z&=\partial_r\tau_{rz}+\frac1r\partial_\phi\tau_{\phi z}
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/coordinates-viscosity/#constant-viscosity-and-the-vector-laplacian
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 mu・lambdaが一定の場合に限り、力を、
 f=\mu\nabla^2 u+(\mu+\lambda)\nabla\theta.
@@ -9038,7 +9362,6 @@ f=\mu\nabla^2 u+(\mu+\lambda)\nabla\theta.
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/coordinates-viscosity/#axisymmetry-polar-slices-and-material-acceleration
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 軸対称はphi微分を消しますが、u_r/r、−u_phi/r、応力発散の計量項を消しません。旋回もあり得ます。3次元Newton流体の平面極座標断面では2mu/3補正とtau_zz=lambda thetaを残します。真の2次元構成モデルでは偏差のトレース減算が異なるため、別に宣言します。
 スカラー移流微分はD_s/Dt=partial_t+u_r partial_r+(u_phi/r)partial_phi+u_z partial_zです。ベクトル物質加速度には径・方位方向の追加項があります。
@@ -9051,7 +9374,6 @@ a_z=\frac{D_su_z}{Dt}.
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/coordinates-viscosity/#coordinate-basis-tensors-and-transformations
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 円筒座標基底は(partial_r,partial_phi,partial_z)=(e_r,r e_phi,e_z)、計量はdiag(1,r²,1)です。物理u_phi=r u^phi、物理tau_phi,phi=r² tau^{phi,phi}=tau_{phi,phi}^{coordinate}/r²となります。共変・反変・物理成分の配列は、この因子なしには交換できません。
 非ゼロChristoffel記号にはGamma^r_phi,phi=−r、Gamma^phi_r,phi=Gamma^phi_phi,r=1/rがあります。共変微分は上で明示した基底変化を取り込みます。列をe_r、e_phi、e_zとする直交行列Qで、L_cart=Q L_cyl Q^T、tau_cart=Q tau_cyl Q^Tと直交座標へ変換します。
@@ -9060,7 +9382,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/coordinates-viscosity/#analytic-checks-and-the-axis
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 剛体回転：u_phi=Omega rではLが反対称、D=0、粘性応力ゼロです。partial_r u_phiだけでは偽のせん断を生みます。
 円管Poiseuille流：u_z=Umax(1−r²/R²)でtau_rz=−2mu Umax r/R²、f_z=−4mu Umax/R²です。定常軸運動量にはdp/dz=f_zが必要です。
@@ -9078,11 +9399,18 @@ L = cylindrical_velocity_gradient(r, u, du)
 assert np.allclose(newtonian_stress(L), 0.)
 コードは指定点のテンソル恒等式を検査します。円筒Navier–StokesのPDEソルバー、軸境界方式、球座標実装は今後の課題です。
 
+## 二重Mach反射 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/double-mach/
+Coverage: reading
+
+解説章公開コード・データ / Public code and data
+英語原文が更新されています。この日本語訳は旧版に対応します。
+
 ## 二重Mach反射 — 二重Mach反射 [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/double-mach/
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 2次元理想気体Euler方程式で、壁に反射するMach 10衝撃波を計算します。Woodward・Colella（1984）に関連するテストで、現代の実装参照としてNASAのLAVAチュートリアルがあります。
 
@@ -9090,7 +9418,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/double-mach/#equations-and-initial-states
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 gamma=1.4、領域[0,4]×[0,1]、保存状態U=(rho,rho u,rho v,E)、E=p/(gamma−1)+rho(u²+v²)/2を使います。初期衝撃波は底壁のx=1/6で交わり、壁と60度です。
 x_s(y,0)=\frac16+\frac{y}{\sqrt3}.
@@ -9103,7 +9430,6 @@ x_s(y,t)=\frac16+\frac{y+20t}{\sqrt3}.
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/double-mach/#boundary-conditions-and-discretization
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 左は衝撃波後方状態、右はゼロ勾配流出です。底面のx<1/6は後方状態を供給し、残りの壁では法線運動量を反射します。上面はx_s(1,t)で両状態を選び、SSPRK2の各段階では対応時刻の境界を使います。
 区分一定有限体積、Davis型の最小・最大音響速度を使う2波HLL、非分割流束発散で計算し、刻みは、
@@ -9115,7 +9441,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/double-mach/#reproduce-and-inspect
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 python -m numart.cli run double-mach --n 64 --cfl 0.4 --output outputs/double-mach
 --nはNyを定め、Nx=4Nyです。solution.npz、run.json、double-mach.pngを保存します。ギャラリーには計算記録と保存状態配列があり、qの形状は(Nx,Ny,4)、x・yはセル中心です。記録には生成時のソースハッシュと作業ツリー状態を含めます。
@@ -9124,7 +9449,6 @@ python -m numart.cli run double-mach --n 64 --cfl 0.4 --output outputs/double-ma
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/double-mach/#what-the-figure-establishes
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 図は計算した入射・反射波形を密度と30等高線で示します。1次空間再構成は意図的に拡散的で、高解像度PPMや適応計算の細い壁面ジェットと巻上がりは解像しません。厳密終了時刻解、格子収束、原論文の図の数値化比較は含みません。
 テストでは同一状態流束、周期一様状態、入射波跳躍、移動上面・反射壁、粗格子の許容状態を確認します。反射模様全体の収束は示しておらず、高次再構成、細分化、独立参照コード比較が必要です。
@@ -9134,15 +9458,21 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/double-mach/#watch-the-reflection-evolve
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 保存状態の動画は同じ256×64計算の密度・圧力を示します。実際の物理時刻、ステップ、固定色範囲、フレーム検査、MP4出力があります。標本化の定義を参照してください。
+
+## 拡散、楕円型方程式、境界条件、反復法 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/elliptic/
+Coverage: reading
+
+解説章公開コード・データ / Public code and data
+日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 ## 拡散、楕円型方程式、境界条件、反復法 — 放物型問題：拡散を時間発展させる# [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/elliptic/#parabolic-problems-evolving-diffusion
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 区間[0,1]でゼロDirichlet境界と初期値sin(πx)を与え、u_t=νu_xxを解きます。参照解はu=exp(-νπ²t)sin(πx)です。numart.linear.diffusion_1dは内部節点の値を返します。
 空間2次中心差分とθ法を組み合わせると、
@@ -9159,7 +9489,6 @@ spectral_diffusionは別の周期問題を解き、各Fourier係数にexp(-νk²
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/elliptic/#thomas-elimination-from-implicit-steps-to-tridiagonal-systems
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 下側対角をa、対角をb、上側対角をcとすると、前進消去はm_i=a_i/b'_{i-1}、b'_i=b_i-m_i c_{i-1}、d'_i=d_i-m_i d'_{i-1}です。後退代入はx_i=(d'_i-c_i x_{i+1})/b'_iです。計算量と記憶量はともにO(N)です。
 thomasは入力を変更せず、小さなピボットでエラーにします。ピボット選択を行わないため、任意の三重対角行列に安全に使えるわけではありません。ここでの拡散行列は狭義対角優位です。1949年のThomas報告の原文は未確認で、歴史的な引用と現代の実装の検証は別の主張です。
@@ -9168,7 +9497,6 @@ thomasは入力を変更せず、小さなピボットでエラーにします�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/elliptic/#elliptic-problems-the-poisson-equation
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 符号規約は-Δu=fです。1次元では三重対角系とThomas消去、2次元では5点差分と行列を陽に作らない共役勾配法またはマルチグリッドを使います。既定の製造解は1次元のsin(πx)と2次元のsin(πx)sin(πy)です。線形方程式の残差と、連続解に対する離散化誤差を分けて確認します。
 
@@ -9176,7 +9504,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/elliptic/#dirichlet-neumann-and-robin-boundaries
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Dirichlet条件は値u=g_D、Neumann条件は外向き法線微分∂u/∂n=g_N、Robin条件はαu+β∂u/∂n=gを指定します。法線微分は左端で-u_x、右端で+u_xです。外向きの伝導熱流束は-k∂u/∂nなので、何を指定したかと符号の両方が重要です。
 poisson_boundary_1dにBoundary.dirichlet(value)、Boundary.neumann(value)、またはBoundary(alpha,beta,value)を渡します。Robin・Neumann条件では仮想点を消去し、端点の重みを半分にします。時間依存のdiffusion_1dは、現在ゼロDirichlet境界に対応しています。
@@ -9188,7 +9515,6 @@ poisson_boundary_1dにBoundary.dirichlet(value)、Boundary.neumann(value)、ま�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/elliptic/#spectral-radius-of-the-iteration-matrix
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Ax=bを解く定常反復x^{k+1}=T x^k+cでは、誤差はe^{k+1}=T e^kに従います。有限次元では、すべての初期誤差について収束することとρ(T)<1は同値です。ここでρ(T)=max |λ_i(T)|をスペクトル半径（spectral radius）と呼びます。べき級数の収束半径R=1/limsup |a_n|^{1/n}や、Newton反復の収束域とは異なります。
 A=D+L+Uとすると、JacobiはT=-D^{-1}(L+U)、Gauss–SeidelはT=-(D+L)^{-1}U、SORはT=(D+ωL)^{-1}[(1-ω)D-ωU]です。iteration_matrixとspectral_radiusで小行列の例を調べられます。非正規行列はρ<1でも一時的に誤差が増える場合があります。系の条件数κ(A)と反復行列のスペクトル半径ρ(T)は異なる性質を測ります。Netlib Templates。
@@ -9197,7 +9523,6 @@ A=D+L+Uとすると、JacobiはT=-D^{-1}(L+U)、Gauss–SeidelはT=-(D+L)^{-1}U�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/elliptic/#red-black-gaussseidel-and-sor
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 5点差分格子を(i+j) mod 2で2色に分けます。一方の色の更新は他方の色だけに依存するため、赤、黒の順に更新します。ω=1がGauss–Seidelで、SOR緩和には0<ω<2を使います。ただし、この範囲だけで任意の非対称系の収束を保証することはできません。実装対象は、対称正定値のDirichlet Poisson問題です。
 
@@ -9205,7 +9530,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/elliptic/#geometric-multigrid-v-cycle
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 細格子で赤黒Gauss–Seidelを3回スイープします。
 r_h=f_h-A_h u_hを計算します。
@@ -9220,7 +9544,6 @@ r_h=f_h-A_h u_hを計算します。
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/elliptic/#particle-and-disk-gravity
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 粒子重力の章はPM、P³M、ツリー、多重極、マルチグリッドをつなぎます。重力境界核はHockney–Eastwoodの孤立畳み込みとKoyama–OstrikerのスラブFourier核を加えます。既存のマルチグリッド例は2次元ゼロDirichlet演算子を維持し、3次元開放境界の重力ソルバーではありません。
 
@@ -9228,7 +9551,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/elliptic/#further-routes-to-diffusion-and-elliptic-problems
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 弱形式の組立ては連続P1 FEM、非対称系はGMRES／ILUと非線形解法、補助勾配による擬似時間反復は西川の双曲型拡散法を参照してください。方程式ギャラリーでは物理時間での熱拡散を別に示します。
 A安定性・L安定性とL1／L2／L∞誤差ノルムの定義と比較は、精度と安定性の共通ガイドを参照してください。
@@ -9237,7 +9559,6 @@ A安定性・L安定性とL1／L2／L∞誤差ノルムの定義と比較は、�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/elliptic/#same-system-poisson-comparison
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Poissonソルバーノートを開く。2次元の全手法で、単位正方形・ゼロDirichlet境界・定数係数・同じ五点差分SPD系を解きます。N=31,63,127は1辺の内部節点数で、未知数はN²です。反復初期値はすべて0とし、CGを含め毎回再計算した真の残差で停止します。
  (A_hu)_{ij}=\frac{4u_{ij}-u_{i-1,j}-u_{i+1,j}-u_{i,j-1}-u_{i,j+1}}{h^2},\quad
@@ -9253,17 +9574,23 @@ FFT経路は定義されたDST-Iを奇拡張とNumPy FFTで直交規格化して
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/elliptic/#timing-protocol-and-downloadable-evidence
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 N=7でコード経路を予備実行した後、各設定を3回計算し、中央値の試行自身の収束履歴を表示します。壁時計時間には設定・配列確保・毎単位の真の残差検査・履歴記録を含み、import、問題・参照生成、ファイルI/O、作図を除きます。試行間で因子分解・固有値を使い回しません。1次元計測にも最終残差検査を含めます。環境情報と3回すべての時間を保存します。Pythonループとコンパイル済みNumPy処理の費用が異なり、1台の診断実装の計測であって、実装・機械に依存しないアルゴリズム順位ではありません。
 直接法は完了点だけを描きます。長い履歴は表示点を間引き、残差10⁻¹⁴未満を表示下限に置きます。表・取得データは生の値を保持し、NPZには選択試行の全残差・時刻・最終場を保存します。CGの再帰残差は方向を決めますが、収束判定は真の残差です。履歴が単調に減るとは限りません。
 再現はpython scripts/build_poisson_comparison.pyです。設定・標本履歴・時間・ソースハッシュと場・選択試行の全履歴を取得できます。独立な正弦行列によるDST検査、密行列直接解との照合、真の残差・全手法の解の一致、ゼロ右辺、製造解の2次細分化をテストします。変数係数・異方性・非構造格子・周期／純Neumann零空間・並列性能は別の比較が必要です。
 
+## 方程式ギャラリー：計算法の前に方程式を選ぶ [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/equation-gallery/
+Coverage: reading
+
+解説章公開コード・データ / Public code and data
+日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
+
 ## 方程式ギャラリー：計算法の前に方程式を選ぶ — 方程式ギャラリー：計算法の前に方程式を選ぶ [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/equation-gallery/
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Web版の方程式ギャラリーでは、保存した分布、物理時刻の操作、固定した描画範囲、初期・境界条件、特性速度、計算法と論文へのリンクを用意しています。7系統の方程式に対して9ケースを収録しています。データはpython scripts/build_equation_gallery.pyで生成した計算結果です。
 
@@ -9271,7 +9598,6 @@ Web版の方程式ギャラリーでは、保存した分布、物理時刻の�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/equation-gallery/#translation-and-diffusion
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 線形移流u_t+u_x=0は周期正弦波を平行移動します。1次風上法と前進Euler法を組み合わせ、厳密に移動したセル平均と比較します。熱拡散u_t=0.02u_xxは同じFourierモードを減衰させます。空間中心差分と前進Euler法にνΔt/Δx²≤0.4を使います。いずれも離散平均を保存します。
 
@@ -9279,7 +9605,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/equation-gallery/#burgers-shocks-and-fans
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Burgers（1948）を古典的モデルの出典とし、この展示では非粘性のスカラー保存則を使います。
 u_t+(u^2/2)_x=0,\qquad f'(u)=u.
@@ -9289,7 +9614,6 @@ u_t+(u^2/2)_x=0,\qquad f'(u)=u.
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/equation-gallery/#traffic-a-jam-can-move-against-the-cars
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Lighthill–Whitham（1955）とRichards（1956）が独立に提案した古典的な交通流の出典です。この展示では規格化した2次の基本図を選びます。すべての交通流モデルがこの形を持つという主張ではありません。
 \rho_t+[\rho(1-\rho)]_x=0,\qquad 0\leq\rho\leq1.
@@ -9300,7 +9624,6 @@ Burgersと交通流には、MUSCL minmod、Godunov流束、SSPRK3、CFL≤0.4を
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/equation-gallery/#fluid-systems-and-kinetic-methods
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 既存のEuler Sod問題、水深が正の浅水ダム崩壊、等温流の密度跳躍を追加ケースとして接続しています。3ケースとも半解析Riemann解の保存変数セル平均を重ねます。既知の波面でGauss積分を分割し、24点・48点の差を積分の収束の目安とします。参照解ライブラリでは式、求根の残差、点値と平均の違いを説明します。乾床の参照式は、正値状態を要求する数値ソルバーを乾床に対応させるものではありません。モデルと正の水深に関する条件はテスト問題の定義で説明しています。
 格子Boltzmann法、Chapman–Enskog展開、周期非圧縮流、双曲型拡散法には別の計算展示があります。方程式、運動論モデル、離散化は異なる選択です。
@@ -9309,7 +9632,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/equation-gallery/#saved-times-and-reproducibility
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 スカラーのスナップショットは完了した計算ステップを観測するため、実際の時刻は要求した表示時刻と少しずれる場合があります。出力要求によって計算軌道は変わりません。既存の1次元流体系にはスナップショットAPIがないため、表示する各時刻は**個別に実行した計算（independent solves）**であることを明示し、それぞれ表示時刻で終了させています。再生はそれらの計算をつなぎ、途中の時間ステップが同一であることを意味しません。流出境界での平均変化には境界流束が含まれ、質量損失とは表示しません。
 分布とソースハッシュをダウンロード。追加の収束検証は、アトラス初期の検証記録と区別しています。
@@ -9318,16 +9640,22 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/equation-gallery/#additional-equation-maps
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 生物モデル調査は22系統のモデルを、原典と検証案とともに整理しています。生物の数値シミュレーションは追加していません。Arakawa格子の章では、線形回転浅水系のA／B／C Fourier記号を計算で比較します。新しい流体動画ではありません。これらの実装範囲は、上の9つの計算済みケースと区別します。
 A安定性・L安定性とL1／L2／L∞誤差ノルムの定義と比較は、精度と安定性の共通ガイドを参照してください。
+
+## インタラクティブ実験ガイド [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/experiments/
+Coverage: reading
+
+解説章公開コード・データ / Public code and data
+英語原文が更新されています。この日本語訳は旧版に対応します。
 
 ## インタラクティブ実験ガイド — インタラクティブ実験ガイド [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/experiments/
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Web版には安定性実験室と収束実験ノートがあります。実験室はブラウザーで計算し、収束ノートは初期ギャラリーの記録にある測定値を表示します。根拠となるデータの出所は異なります。
 
@@ -9335,7 +9663,6 @@ Web版には安定性実験室と収束実験ノートがあります。実験�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/experiments/#periodic-advection-in-the-browser
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 モデルは次の周期移流方程式です。
 u_t+a u_x=0,\qquad x\in[0,1],\qquad u(x+1,t)=u(x,t).
@@ -9349,7 +9676,6 @@ u(x,0)=\sin(2\pi x)+10^{-3}
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/experiments/#four-discrete-updates
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 numart.advection.difference_stepとブラウザーは、FTCS、風上、古典的Lax–Friedrichs、Lax–Wendroffを実装しています。風上法は速度の符号で差分の向きを切り替えます。背景は安定性の章を参照してください。FTCSでは、
 u_j^{n+1}=u_j^n-\frac C2(u_{j+1}^n-u_{j-1}^n),\qquad
@@ -9362,7 +9688,6 @@ G(\theta)=1-iC\sin\theta.
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/experiments/#reproducibility-and-export
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 ブラウザーの計算カーネルを、Python実装で作った24の参照ケースと比較しています。4手法、符号付きCourant数6通り、各ケース12回更新です。テストでは標本配列全体と複素Fourier増幅係数を比較します。別のテストで、CFL=1での厳密な1セル移動、方向反転、周期折返し、収束次数の算術を確認します。参照データはnumart/advection.pyのSHA-256を記録し、ソースが変わると参照データを更新するまでブラウザー数値テストは失敗します。
 実験データのダウンロードには、設定、格子座標、初期・計算・厳密標本、診断量、Python参照ハッシュを含めます。記録するのはJavaScriptによる計算です。ブラウザー内でPythonを実行しているという意味ではありません。
@@ -9381,7 +9706,6 @@ print("pointwise L1 error:", np.mean(abs(q - exact)))
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/experiments/#reading-a-refinement-study
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 ノートには初版のdocs/figures/validation.jsonの測定値を使います。ソースハッシュと実行環境のバージョンを含む元の記録をダウンロードできます。これらはブラウザー実験室より前のデータであり、新しい実行時間の測定ではありません。
 隣り合う格子間の実測次数は、
@@ -9397,7 +9721,6 @@ Eulerエントロピー波：終了時刻1、CFL 0.3、N=40,80,160で、基本�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/experiments/#temporal-trajectories-and-mesh-connectivity
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 時間積分ノートは、12手法についてPythonで計算したy′=i yの軌道を選択表示します。終了時刻は20で固定し、刻み幅、leapfrog初期化摂動、2つの特性根、標本誤差、振幅を示します。これは事前計算したODEの結果であり、空間安定性実験室のブラウザー内計算とは異なります。時間積分の定義を参照してください。
 格子エクスプローラーは、頂点とセルを明示した3つのデータセットを表示します。セルを選ぶと面を共有する隣接セルが強調されます。ドロップダウンとキーボード操作可能な多角形で同じ選択ができます。幾何は固定され、流体計算は行いません。格子の定義、ALE、SPHを参照してください。
@@ -9407,7 +9730,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/experiments/#hamiltonian-maps
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Hamilton系ノートは、Pythonで計算した30ケースを必要時に読み込みます。同じ固定刻みでエネルギー誤差を比較し、各写像の位相軌道や正方形境界の像を調べます。解析的な局所Jacobianの診断によって、シンプレクティック構造とエネルギー保存を区別します。定義を参照してください。データと図はpython scripts/build_hamiltonian.pyで再生成します。
 
@@ -9415,7 +9737,6 @@ Hamilton系ノートは、Pythonで計算した30ケースを必要時に読み�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/experiments/#nonsteady-movie-and-keep-exhibits
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 動画ギャラリーは、実際に保存した計算状態と物理時刻を、固定した色範囲とMP4出力で示します。KEEPは、厳密解のある滑らかな渦で評価し、空間・時間細分化とエントロピー診断を分けています。この滑らかな流れの計算から、衝撃波捕獲の性質は主張しません。
 
@@ -9423,7 +9744,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/experiments/#slope-limiters-and-advanced-reconstruction
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 勾配制限ノートはPythonで計算した45曲線と、滑らかな解の収束6例、Euler再構成の構成的な失敗3例を読み込みます。minmod、Superbee、MC、van Leer、切り詰めたvan Albadaを選び、スカラー周期問題の全変動と質量、同じHLLC流束によるSodを比較します。スカラー誤差は厳密セル平均を使い、Sodでは点値の規約を維持します。1次法と勾配無制限の比較例はスカラー移流だけに適用します。
 発展操作ではTVBのM=0、10、50を選び、保存的な正値状態スケーリングを示します。勾配の定義と追加の仮定を参照してください。python scripts/build_limiters.pyがソースハッシュ付きのdocs/figures/limiters.jsonを作り、標準の同期処理がWeb版へコピーします。スカラーTVBの例や正値再構成の補助関数だけでは、完全離散Euler法の正値性は保証されません。
@@ -9432,7 +9752,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/experiments/#rungekutta-family-notebook
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 RK法ノートでは固定刻みの陽的RK公式9種を比較します。3つのRK2法は線形安定性多項式を共有しますが、非線形y′=−y²では異なります。1ステップの幅を選び、実際の右辺評価に使う段階予測値を見て、標本化した安定領域と終了時刻の収束を比較します。形式次数、段数、非線形SSP係数、右辺評価回数を分けて表示します。RKの章で定義と条件付きSSPの仮定を説明します。python scripts/build_runge_kutta.pyが図示データとソース記録を作ります。振動子ノートには時間積分法が12種あり、陰的手法はスカラー線形モデルに限ります。
 
@@ -9440,16 +9759,22 @@ RK法ノートでは固定刻みの陽的RK公式9種を比較します。3つ�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/experiments/#cip-value-and-gradient-transport
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 CIPノートは、一様周期格子のスカラー移流で、原型の3次Hermite CIPと線形の点補間を比較します。独立に輸送する勾配、初期勾配の選択、滑らかな解の収束、矩形パルスのオーバーシュート、解析的な保存性の反例を示します。定義を参照してください。点値と有限体積平均は交換できません。同期前にpython scripts/build_cip.pyで再生成します。
 A安定性・L安定性とL1／L2／L∞誤差ノルムは、精度と安定性の共通ガイドを参照してください。
+
+## 連続有限要素法：弱形式から疎行列の組立てへ [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/fem/
+Coverage: reading
+
+解説章公開コード・データ / Public code and data
+英語原文が更新されています。この日本語訳は旧版に対応します。
 
 ## 連続有限要素法：弱形式から疎行列の組立てへ — 連続有限要素法：弱形式から疎行列の組立てへ [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/fem/
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 実装済み：区間とアフィン三角形上の連続P1要素、Dirichlet条件付きPoisson問題、整合質量行列、求積による誤差ノルム。アトラスの不連続Galerkin移流の例とは別です。
 
@@ -9457,7 +9782,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/fem/#1943-a-variational-route
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Courant（1943）は変分的な考え方の基礎文献です。この章の小さな実装は独立した現代的なP1の例で、原著の例の再現ではありません。
 −Δu=fに対し、境界でu=gを指定します。境界でゼロになる試験関数を掛け、部分積分すると、
@@ -9472,7 +9796,6 @@ K^K_{ij}=|K|\nabla\phi_i\cdot\nabla\phi_j,
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/fem/#inspect-the-evidence
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 製造解は単位正方形上のsin(πx)sin(πy)です。L2とH1半ノルム誤差は節点だけで測らず、要素内部で積分します。滑らかな解に対する期待次数は2と1です。テストではアフィンパッチ、ゼロでない境界値、境界消去前の定数零空間、整合質量の総量も確認します。
 from numart.fem import poisson_2d
@@ -9481,11 +9804,18 @@ print(result.residual, result.u.shape)
 python scripts/build_equation_gallery.pyで再現します。専用の計算記録に誤差とソースハッシュを残します。速度・圧力の混合要素、inf–sup条件、曲線格子、一般のNeumann／Robin条件の組立て、適応細分化は今後の課題です。現在の射影法の例はスタガード差分格子を使います。
 A安定性・L安定性とL1／L2／L∞誤差ノルムは、精度と安定性の共通ガイドを参照してください。
 
+## 球面メッシュとArakawa A・B・C格子 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/geophysical-grids/
+Coverage: reading
+
+解説章公開コード・データ / Public code and data
+日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
+
 ## 球面メッシュとArakawa A・B・C格子 — 球面メッシュとArakawa A・B・C格子 [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/geophysical-grids/
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 A／B／Cは格子上で異なる変数を置く位置を指定し、精度次数、セル形状、時間積分の分類ではありません。構造長方形格子はいずれの配置も使えます。従来の比較はArakawa–Lamb（1977）、機関による解説はECMWF数値計算法ノートを参照してください。
 本実装は、球面メッシュの幾何図、線形周期f平面浅水系の配置図と検証済みFourier記号です。A／B／Cの非線形気象・海洋モデルや、新しい完全な流体計算ではありません。
@@ -9494,7 +9824,6 @@ A／B／Cは格子上で異なる変数を置く位置を指定し、精度次�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/geophysical-grids/#spherical-meshes
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 メッシュの幾何と変数の配置は別の選択です。cubed-sphereにもC格子配置を使え、三角形メッシュにも辺法線速度を置けます。A／B／Cという名前だけでは、球面の接続関係や計量は決まりません。
 半径Rの球面で、緯度をφ、経度をλとすると、
@@ -9506,7 +9835,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/geophysical-grids/#yin-yang
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Kageyama–Sato（2004）は同じ形の緯度経度パッチ二つを組み合わせます。各パッチ自身の座標では、
  |\varphi|\leq\pi/4+\delta,\qquad |\lambda|\leq3\pi/4+\delta,
@@ -9520,7 +9848,6 @@ Kageyama–Sato（2004）は同じ形の緯度経度パッチ二つを組み合�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/geophysical-grids/#cubed-sphere
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 六面構成の代表的な文献はRonchi–Iacono–Paolucci（1996）です。この図では等角刻みの心射図法を選びます。外向き法線nと接方向e₁、e₂からなる面の正規直交フレームに対し、
  \boldsymbol{x}(\xi,\eta)=R\,
@@ -9533,7 +9860,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/geophysical-grids/#icosahedral
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 20枚の三角形から始め、辺の中点で各三角形を4分割し、新しい頂点を球面へ動径方向に投影します。細分化レベルLでは、
  F=20\,4^L,\qquad E=30\,4^L,\qquad V=10\,4^L+2,
@@ -9545,7 +9871,6 @@ ICONのモデル解説は三角形の幾何とC型配置を組み合わせる例
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/geophysical-grids/#spherical-interface-checks
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 チャート間で成分が異なっても、物理的な接ベクトルは一つです。同一のCartesian座標系で正規直交した接基底を列に持つ行列をE_A、E_Bとすると、
  \boldsymbol{v}=E_A\boldsymbol{u}_A=E_B\boldsymbol{u}_B,
@@ -9557,7 +9882,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/geophysical-grids/#a-b-and-c-specify-relative-placement
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 正方形セル幅Δで、自由表面摂動ηをスカラー中心(i+1/2,j+1/2)に置きます。uはx速度、vはy速度です。
 A格子：η、u、vを同じ中心に置きます。
@@ -9570,7 +9894,6 @@ C格子では面法線速度から自然にセル発散が得られ、スカラ�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/geophysical-grids/#rotation-and-gravity-waves-make-the-difference-visible
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 一定平均水深H、一定Coriolis係数fでは、
 u_t-fv=-g\eta_x,\qquad v_t+fu=-g\eta_y,
@@ -9592,7 +9915,6 @@ C:\quad &\widetilde k=2\sin(k\Delta/2)/\Delta,
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/geophysical-grids/#checkerboards-and-an-unresolved-deformation-radius
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 中心A格子の圧力勾配は、座標方向に最短の交互高さモードを見ません。B格子基準系は軸方向だけの零モードを除きますが、対角高さチェッカーボードを残します。C格子の勾配・発散はそのモードを結合しますが、単純Coriolis平均は一部の最短波で消えます。異なる演算子効果であり、単一の普遍的チェッカーボード診断ではありません。
 図はL_D/Δ=0.25、2で軸・対角波を比較します。この正方格子演算子では対角方向のA・Bは重なり、軸方向は異なります。変形半径が未解像だと、Coriolis平均はC格子の慣性周波数近傍の分岐を強く歪め得ます。「Cが常に最良」とは結論できません。解像された重力波、粗格子の地衡流調節、方向誤差は別のテストです。C配置を変えずにCoriolis離散化だけで比較は変わります。
@@ -9601,7 +9923,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/geophysical-grids/#d-and-e-vertical-staggering-and-magnetic-grids
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 D格子はCに対してu・vの面位置を交換し、uをy法線面、vをx法線面に置きます。矢印は依然として物理x・y成分なので、Cの速度配列を改名するだけではDの図になりません。E格子は一般にBを45度回転した配置と見なされ、添字と解像可能な波数集合を整合して扱う必要があります。説明のみで記号は未実装です。
 水平Arakawa配置と、Lorenz対Charney–Phillipsの鉛直配置は別です。同様にMHDのCTは面・辺で磁場発散恒等式を保ちますが、Arakawa C浅水法と同義ではありません。それぞれ整合する離散演算子が必要です。
@@ -9610,16 +9931,22 @@ D格子はCに対してu・vの面位置を交換し、uをy法線面、vをx法
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/geophysical-grids/#evidence-and-the-next-geophysical-benchmarks
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 numart.geophysical_gridsがA／B／C記号を供給します。独立に物理格子差分をFourier波へ作用させて比較し、歪Hermiteエネルギー構造、地衡流ゼロ分岐、長波の2次収束、異なる短波零モードを検査します。python scripts/build_geophysical_grids.pyで図を再現し、記録に仮定・標本周波数・ソースハッシュを残します。
 今後は地衡流調節、慣性重力波、沿岸Kelvin波、β平面Rossby波、続いて渦位と非線形エネルギー・エンストロフィー収支が適切です。現行の一定f記号は、β平面Rossby伝播、海岸、球面計量、地形、濡れ・乾きを検証しません。非線形Arakawa Jacobianやエネルギー・エンストロフィー保存浅水流束は別のアルゴリズムで、A／B／Cを選ぶだけでは不変量は得られません。
+
+## 重力核：孤立FFTと周期スラブ [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/gravity-boundaries/
+Coverage: reading
+
+解説章公開コード・データ / Public code and data
+日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 ## 重力核：孤立FFTと周期スラブ — 重力核：孤立FFTと周期スラブ [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/gravity-boundaries/
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 境界条件はPoissonソルバーの定義の一部です。有限の孤立質量、完全周期の密度偏差、上下が真空で水平周期の円盤は異なるGreen関数を持ち、配列のゼロ埋めだけでは適切な核を選べません。
 孤立構成はComputer Simulation Using ParticlesのHockney–Eastwood倍領域畳み込みに従います。円盤はKoyama・Ostriker（2009）、ApJ 693、1316–1345第2.3節・付録A（著者プレプリント）を参照します。水平周期、鉛直領域倍増、モード依存鏡像補正を使います。以下は独自に明示した変換規格化で核を導出・検査し、有限標本DFTと連続Fourier係数を区別します。
@@ -9628,7 +9955,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/gravity-boundaries/#isolated-gravity-linear-convolution-on-a-doubled-grid
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 G=1で3次元孤立ポテンシャルは、
 \phi(\boldsymbol x)=-\int\frac{\rho(\boldsymbol x')}{|\boldsymbol x-\boldsymbol x'|}\,d^3x'.
@@ -9643,7 +9969,6 @@ G=1で3次元孤立ポテンシャルは、
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/gravity-boundaries/#horizontal-fourier-transform-of-a-slab
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 x・yを周期とし、長さLzの鉛直区間外で密度をゼロにします。水平波数k_perpに対し、規約を、
 \widehat\rho_{\boldsymbol k}(z)=\frac1{L_xL_y}
@@ -9661,7 +9986,6 @@ k=\sqrt{k_x^2+k_y^2}.
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/gravity-boundaries/#the-vertical-fourier-coefficient-and-the-image-factor
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 必要な距離は|s|<Lzだけです。核を長さ2Lzの距離区間へ周期延長し、k_z,ell=pi ell/Lzとします。k>0の連続積分は、
 \widetilde{\mathcal G}_{k,\ell}
@@ -9681,7 +10005,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/gravity-boundaries/#a-sampled-dft-is-a-different-numerical-object
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 dz=Lz/Nz、s_jを2Nz個の符号付き鉛直格子差とすると、離散求積の乗数は、
 \widetilde{\mathcal G}^{\rm sampled}_{k,\ell}
@@ -9699,7 +10022,6 @@ slab_green_transformはsampledとcontinuumの両表現を公開します。slab_
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/gravity-boundaries/#check-the-boundary-physics-before-a-galaxy-calculation
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 import numpy as np
 from numart.gravity_boundaries import isolated_potential, slab_potential
@@ -9710,11 +10032,18 @@ phi_isolated = isolated_potential(rho, spacing=(1/8,1/8,1/16))
 核の検証記録にはソースハッシュと表示検査の実測誤差があります。
 通常の水平周期を使い、せん断周期の再配置はしません。実用化前には質量割当て、自己セル積分、鉛直求積精度、力の微分、重力・流体結合を検査する必要があります。粒子重力、マルチグリッド、Hamilton写像へ進んでください。
 
+## Godunov平滑化粒子流体力学（GSPH） [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/gsph/
+Coverage: reading
+
+解説章公開コード・データ / Public code and data
+日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
+
 ## Godunov平滑化粒子流体力学（GSPH） — Godunov平滑化粒子流体力学（GSPH） [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/gsph/
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 状況：出典に基づく文献ノートと実装計画。 既存のSPH例は場を再構成し、GSPH流体の時間発展は行いません。GSPHの計算結果は主張していません。
 
@@ -9722,7 +10051,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/gsph/#inutsuka39s-formulation
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Inutsuka（2002）は、流体方程式の畳み込みから粒子発展を導きます。粒子対のリーマン問題が相互作用の圧力・速度を与え、別に規定する衝撃波人工粘性を置き換えます。リーマン散逸自体は残ります。式の参照先は著者のプレプリント第2〜3節です。先行する1994年のGodunov-type SPHへの貢献も引用されていますが、その原報告は未確認です。
 共通のGaussian平滑化長で、比体積V=1/rhoを線形近似すると、重なり係数は原著式48〜52より、
@@ -9739,7 +10067,6 @@ V_{ij}^{2}(h)=D_{ij}^{2}+\frac{h^2 C_{ij}^{2}}4.
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/gsph/#connecting-the-existing-exhibits
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 実装への道は粒子カーネル、Eulerリーマンソルバー、移動粒子の時間積分を結びます。現在の補間はコンパクトな3次カーネル、上の導出はGaussianとその重なりを使います。幅の規約を明示する必要があります。既存の固定格子流束はF(U)を返しますが、GSPH対更新には向きを整合させた星状態の圧力・速度が必要です。流束関数の再利用だけでは完全な粒子相互作用は得られません。
 
@@ -9747,7 +10074,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/gsph/#a-staged-verification-plan
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 カーネル重なり、比体積再構成、対の向き、等質量・不等質量、一様圧力の整合性を確認します。
 整合した時間更新で対の力と内部エネルギーを進め、適応平滑化長を加える前に運動量・全エネルギーの変化を測ります。
@@ -9759,7 +10085,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/gsph/#the-mhd-branch
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Iwasaki・Inutsuka（2011）は粒子法を拡張し、圧縮性相互作用には磁気圧を含む非線形リーマン問題、Alfvén波には特性線を使います。論文はAlfvén波、衝撃波管、Orszag–Tang、ローター、磁化爆風のテストを含みます。別のGSPMHD実装への方向で、既存の格子CT／GLMはこれを実装していません。粒子磁場の発散と引張り不安定性には独自の検証が必要です。
 
@@ -9767,15 +10092,21 @@ Iwasaki・Inutsuka（2011）は粒子法を拡張し、圧縮性相互作用に�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/gsph/#special-relativistic-continuation
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Kitajima・Inutsuka・Seno（2026）は、相対論的リーマンソルバー、不等な粒子バリオン数、可変平滑化長を使うSRGSPHを開発しています。プレプリントは2025年、掲載号は2026年です。特殊相対論であり、一般相対論的流体ソルバーではありません。SRHD／GRHD発展の調査へ進んでください。
+
+## 数値計算法の歴史アトラス [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/history/
+Coverage: reading
+
+解説章公開コード・データ / Public code and data
+日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 ## 数値計算法の歴史アトラス — 数値計算法の歴史アトラス [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/history/
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 年は原著の出版年を基準とし、必要に応じて翻訳、再版、オンライン公開の年を区別します。このアトラスは代表的な出典をたどる読書の道案内であり、すべての発明や優先権を確定するものではありません。参考文献一覧では、未確認の事項も含め、各出典と実装の関係を記録しています。
 
@@ -9783,7 +10114,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/history/#classical-foundations-equations-differences-and-iteration
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 前進・後退・中心差分、Euler時間積分、Fourier展開、熱伝導、Laplace・Poisson方程式から始めます。Dirichlet、Neumann、Robin条件を導入する前に、境界の値と境界を通る流束を区別します。これらの数学的な起源は、後に数値流体力学で使われるようになる時代より前にあります。
 
@@ -9791,7 +10121,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/history/#1928-cfl-and-domains-of-dependence
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Courant–Friedrichs–Lewyは、連続問題の依存領域と離散ステンシルが届く範囲を比較します。線形移流でC=a Δt/Δxを変え、必要条件と十分条件を区別します。CFLの原論文、導出と実験を参照してください。
 
@@ -9799,7 +10128,6 @@ Courant–Friedrichs–Lewyは、連続問題の依存領域と離散ステン�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/history/#19391943-kinetic-asymptotics-and-variational-assembly
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Chapman–Cowlingの運動論の本は1939年に出版されました。これは書籍の出版年であり、Chapman–Enskog展開の発明年ではありません。Courant（1943）は変分問題と区分的な表現を結び付けます。P1 FEMの展示では、独立に作った疎行列Poisson問題を実装しています。
 
@@ -9807,7 +10135,6 @@ Chapman–Cowlingの運動論の本は1939年に出版されました。これ�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/history/#19471950-diffusion-implicit-methods-and-linear-stability
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Crank–Nicolson（1947）、一般に1949年の報告へ帰されるThomasの三重対角消去、Charney–Fjørtoft–von Neumannの数値予報研究（1950）における安定性解析へ進みます。Thomas報告の原文はここでは未確認です。1950年論文は歴史的な背景として扱い、von Neumann解析がその論文だけから始まったとは主張しません。拡散数r=ν Δt/Δx²をA安定性、単調性、陰的な線形方程式系へ結び付けます。拡散と線形ソルバー。
 Burgers（1948）は、並行する非線形モデルの分岐を与えます。方程式ギャラリーでは非粘性の衝撃波・膨張波問題を使い、原著の乱流解析を再現しているわけではありません。
@@ -9816,7 +10143,6 @@ Burgers（1948）は、並行する非線形モデルの分岐を与えます。
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/history/#19541961-lax-godunov-and-conservation-form
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Lax（1954）、Lax–Richtmyer（1956）、Godunov（1959）、Lax–Wendroff（1960）、Rusanov（1961）を通して、弱解、数値流束、衝撃波速度、数値粘性、分散へ進みます。線形問題の収束に関するLax–Richtmyer定理と、非線形保存的近似の弱極限に関するLax–Wendroff型の結果では、仮定が異なります。
 本実装のmethod="godunov"は、近似リーマン流束を使うGodunov型有限体積法を意味し、原著の厳密流束アルゴリズム全体の再現ではありません。
@@ -9826,7 +10152,6 @@ BGK（1954）は運動論的な緩和モデルを与えます。Lighthill–Whit
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/history/#19611977-relaxation-multigrid-and-local-and-global-bases
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Fedorenko（1961）、Reed–Hill（1973）、Gottlieb–Orszag（1977）、Brandt（1977）をたどります。Poisson反復を、高周波誤差の平滑化と、滑らかな誤差の粗格子補正に分けます。DGは要素ごとの多項式を境界流束でつなぎ、スペクトル法は大域基底を使います。それ以前のGalerkin法やFourierの考え方が数学的な背景です。Poissonとマルチグリッド、numart.advection.dg_advectionを参照してください。
 Chorin（1968）から非圧縮流の射影法へ進みます。Alexander（1977）はSDIRKの分岐を与えます。ソース項の扱いや適応誤差制御は、手法の線形安定性関数とは別の要素です。
@@ -9835,7 +10160,6 @@ Chorin（1968）から非圧縮流の射影法へ進みます。Alexander（1977
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/history/#19781983-shared-benchmarks-and-high-resolution-fluxes
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Sod（1978）、van LeerのMUSCL（1979）、Orszag–Tang（1979）、Roe（1981）、Harten–Lax–van Leer（1983）へ進みます。同じSod問題で接触波と音響波の解像度を比べます。初版のMUSCLはminmodと線の方法を使い、van Leerの原型であるLagrange移動・再配置とは異なります。原著の非圧縮Orszag–Tang研究と、今日の圧縮性テストの規格化も区別します。テスト問題の定義、MHD。
 
@@ -9843,7 +10167,6 @@ Sod（1978）、van LeerのMUSCL（1979）、Orszag–Tang（1979）、Roe（198
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/history/#19841989-tvd-slopes-and-tvb-extrema-relaxation
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Sweby（1984）はスカラー流束制限の条件を整理します。Cockburn–Shu（1989）はTVB RKDGの枠組みを発展させます。5種類の勾配制限を比較し、別の構成要素であるTVBと正値状態スケーリングを調べます。後者ではZhang–Shu（2010）の正値性の枠組みも紹介し、必要な流束、求積、CFL、SSP条件を示します。
 
@@ -9851,7 +10174,6 @@ Sweby（1984）はスカラー流束制限の条件を整理します。Cockburn
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/history/#19851991-cubic-profiles-and-transported-gradients
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Takewaki–Nishiguchi–Yabe（1985）とYabe–Aoki（1991）が、3次の値・勾配輸送であるCIPの系譜を発展させます。CIPの章では定速のスカラー例を計算し、後の保存型・有理関数型の分岐と区別します。構成したHermite場のテストにより、低拡散性と質量保存の保証を分けます。
 
@@ -9859,7 +10181,6 @@ Takewaki–Nishiguchi–Yabe（1985）とYabe–Aoki（1991）が、3次の値�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/history/#19871989-higher-order-preconditioning-and-magnetic-constraints
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 HartenらのENO（1987）、Turkelの低速流前処理（1987）、Einfeldt（1988）、Evans–HawleyのCT（1988）、Shu–Osher（1988、1989）、Cockburn–ShuのRKDG（1989）へ進みます。高次補間だけでは頑健な衝撃波捕獲は保証されず、エントロピー修正と正値性は別に扱う必要があります。Shu–Osher問題は衝撃波と滑らかな密度波を組み合わせます。
 
@@ -9867,7 +10188,6 @@ HartenらのENO（1987）、Turkelの低速流前処理（1987）、Einfeldt（1
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/history/#19911996-unsteady-iteration-low-densities-hllc-and-weno
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Einfeldtら（1991）、Jameson（1991）、Toro–Spruce–Speares（1994）、Liu–Osher–Chan（1994）、Jiang–Shu（1996）をたどり、物理時間と擬似時間、低密度での破綻、接触波の回復、非線形WENO重みを学びます。1994年のWENOの起源と、初版に実装したWENO5-JS（1996）を区別します。前処理と二重時間積分。
 
@@ -9875,7 +10195,6 @@ Einfeldtら（1991）、Jameson（1991）、Toro–Spruce–Speares（1994）、
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/history/#20002008-multidimensional-robustness-and-constraints
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Tóth（2000）、Dednerら（2002）、Abgrallの残差分配法の総説（2006）、Nishikawa–Kitamura（2008）をたどります。離散CT／GLM演算子、保存的な残差分配、回転ハイブリッド流束、カーバンクル不安定性を調べます。2006年はRDの総説の年であり、残差分配法の発明年ではありません。
 Inutsuka（2002）は、粒子対ごとのリーマン問題を使う畳み込みに基づいたSPH発展という、並行する粒子法の分岐を加えます。GSPHの章では1994年の先行研究、2002年の詳細な定式化、Iwasaki–Inutsuka（2011）によるMHD拡張を区別します。文献ノートと今後の流体ソルバーの計画であり、既存の静的なSPH再構成とは別です。
@@ -9884,7 +10203,6 @@ Inutsuka（2002）は、粒子対ごとのリーマン問題を使う畳み込�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/history/#20012009-ssp-inheritance-and-additional-rungekutta-stages
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Gottlieb–Shu–Tadmor（2001）、Spiteri–Ruuth（2002）、Gottlieb–Ketcheson–Shu（2009）は、スカラー線形安定性と、条件付きの非線形安定性の継承を区別します。SSPの分岐における発展であり、Runge–Kutta法そのものの起源ではありません。RK系譜の章はRK2の各種公式、RK4、SSPRK(s,p)を、実際の非線形段階と細分化で比較します。
 
@@ -9892,7 +10210,6 @@ Gottlieb–Shu–Tadmor（2001）、Spiteri–Ruuth（2002）、Gottlieb–Ketch
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/history/#relativistic-branch-19722026
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 SRHD／GRHD／GRMHDの調査は、WilsonのKerr背景計算（1972）、厳密SRリーマン解（1994）、Valencia（1997）、局所座標系ソルバー（1998）、相対論的な磁場制約、HARM（2003）、動的時空、非線形の基本変数回復を結び付けます。後の分岐には放射、DG–FD混合法、物理状態の制約、GPU向け合体コードを含みます。SRGSPH（2026）はInutsukaの粒子定式化へつながります。出典と出版状況は2026年11月6日時点の確認を記録しており、相対論ソルバーの実装は追加していません。
 
@@ -9900,7 +10217,6 @@ SRHD／GRHD／GRMHDの調査は、WilsonのKerr背景計算（1972）、厳密SR
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/history/#toward-modern-verification-and-validation
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 NASAの2次元テスト問題集では、数値的な検証（verification）と、実験に対する物理的な妥当性確認（validation）を区別します。今後の展示は原典、現在のデータ入手先、実装状況、検証根拠を結び付ける必要があります。
 
@@ -9908,7 +10224,6 @@ NASAの2次元テスト問題集では、数値的な検証（verification）と
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/history/#moving-meshes-particles-and-temporal-modes
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 固定格子の歴史には並行する分岐があります。Hirt・Amsden・Cook（1974）は古典的なALEの枠組みを与え、Gingold・Monaghan（1977）とLucy（1977）は独立した初期SPHの出典です。ALE、粒子、格子の各章で、幾何と運動の表現の違いをつなぎます。コードが実装するのは小さな再構成と幾何保存の例であり、原著の流体計算そのものではありません。
 時間積分の章は2ステップleapfrogの漸化式と計算モードの根を示します。時間フィルターの説明ではWilliams（2009）による後の改良を参照しますが、leapfrogの発明をその論文へ帰してはいません。
@@ -9918,7 +10233,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/history/#particle-fields-and-canonical-time-maps
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 HockneyのP³Mの解説（1981）、Barnes–Hut（1986）、Greengard–Rokhlin（1987）は格子・木・展開に基づく場の計算をつなぎます。Yoshida（1990）は高次のシンプレクティック合成への道を与えます。重力とHamilton写像の章では役割の違いを明示します。Koyama–Ostriker（2009）は、境界核の章にある円盤ポテンシャルFFTの参照文献です。
 
@@ -9926,7 +10240,6 @@ HockneyのP³Mの解説（1981）、Barnes–Hut（1986）、Greengard–Rokhlin
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/history/#smooth-flow-structure-and-honest-test-selection
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Kuya・Totani・Kawai（2018）は、圧縮性流れの離散化KEEPの系譜を導入します。KEEPの章では原型の直交座標2次形式を実装し、後のエントロピー、圧力平衡、時間方向への拡張と区別します。滑らかな渦の収束と保存状態による動画は衝撃波捕獲テストとは別です。運動エネルギーの整合性も見た目の滑らかさも、一般的な安定性の保証ではありません。
 
@@ -9934,7 +10247,6 @@ Kuya・Totani・Kawai（2018）は、圧縮性流れの離散化KEEPの系譜を
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/history/#parallel-solver-branches-19862010
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 GMRES（1986）とBiCGSTAB（1992）は非対称疎行列系のソルバーを与えます。Qianら（1992）とGuoら（2002）から、格子BGKと外力の展示へ進みます。Nishikawa（2007）は1階の双曲型拡散系を開発し、移流拡散への拡張は2010年に出版されました。解説では、原型の2次残差分配法と本実装の1次有限体積ベースラインを区別します。
 
@@ -9942,16 +10254,22 @@ GMRES（1986）とBiCGSTAB（1992）は非対称疎行列系のソルバーを�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/history/#biological-and-geophysical-branches
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 生物方程式の調査では、個体群増殖からLotka／Volterra、年齢構造、SIRへ進み、Fisher前線、Turing形態形成、興奮性膜、走化性、確率反応回路、合成遺伝子回路をたどります。原著、翻訳、簡約モデルにはそれぞれ出典注記があります。22項目はすべて文献調査のみです。
 Arakawa–Lamb（1977）は、変数配置を地球流体の波へ結び付けます。A／B／Cの章では、独立に計算したf平面の中心差分記号を比較します。水平格子の分類は、鉛直スタガード配置や非線形不変量の保存とは別の性質です。
+
+## 西川の双曲型拡散法：1階系を反復する [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/hyperbolic-diffusion/
+Coverage: reading
+
+解説章公開コード・データ / Public code and data
+日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 ## 西川の双曲型拡散法：1階系を反復する — 西川の双曲型拡散法：1階系を反復する [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/hyperbolic-diffusion/
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Hiroaki Nishikawa（2007）は、2次精度の残差分配法を含め、定常拡散への1階双曲型系の方法を導入します。2010年の拡張は移流と拡散を統一します。年はDOIに含まれる年ではなく、学術誌の出版年です。
 本実装は周期1次元の1次風上有限体積法とSSPRK2による基準例です。定常方程式の等価性を示し、原論文の2次多次元RD構成は実装していません。
@@ -9960,7 +10278,6 @@ Hiroaki Nishikawa（2007）は、2次精度の残差分配法を含め、定常�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/hyperbolic-diffusion/#evolve-the-solution-and-its-gradient
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 定常問題−νu_xx=fに対し、pと擬似時間τを導入します。
 \partial_\tau u-\nu\partial_x p=f,\qquad
@@ -9976,16 +10293,22 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/hyperbolic-diffusion/#residual-convergence-and-discretization-error
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 製造した定常参照解は、周期単位区間上で平均ゼロのsin(2πx)、外力はν(2π)²sin(2πx)です。初期平均で定数零モードを固定します。両方の方程式残差を測り、組合せたRMS診断では勾配残差を2πで尺度化します。残差が小さくても1次風上の空間誤差は消えません。N=32、64、128でその誤差を別に検査します。計算記録にはステップ数と擬似時間刻みを残し、同一コストでの高速化は主張しません。
 Thomas法とマルチグリッド、疎行列前処理、物理的な拡散のギャラリーと比較してください。異方的拡散、高次面再構成、粘性Navier–Stokesとの結合、完全なRD定式化は今後の拡張です。出版社の書誌情報と要旨は確認していますが、原論文の完全な再現は主張していません。
+
+## 非圧縮流：整合する離散演算子で射影する [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/incompressible/
+Coverage: reading
+
+解説章公開コード・データ / Public code and data
+日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 ## 非圧縮流：整合する離散演算子で射影する — 非圧縮流：整合する離散演算子で射影する [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/incompressible/
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 実装済み：単位密度・周期2次元Navier–StokesをMAC格子で扱い、対流・粘性を中心差分、時間を射影付きSSPRK2、Poissonを離散FFT逆演算で解きます。
 
@@ -9993,7 +10316,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/incompressible/#1968-the-projection-branch
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Chorin（1968）が射影法の原典です。本実装の周期RKモデルは原理を示し、原著の境界処理や時間刻みを再現するものではありません。
 速度成分は異なる面、圧力はセル中心に置きます。周期格子の内積でD=−Gᵀとなるよう発散Dと勾配Gを選ぶと、
@@ -10008,7 +10330,6 @@ DG\phi=D\boldsymbol u^*,\qquad
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/incompressible/#taylorgreen-verification
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 [0,2π)²、粘性νで、
 u=\sin x\cos y\,e^{-2\nu t},\qquad
@@ -10017,11 +10338,18 @@ v=-\cos x\sin y\,e^{-2\nu t}.
 再現可能な測定値には離散発散の絶対値の最大を含めます。陽的時間刻みには移流・粘性の両制約が残ります。粘着壁キャビティ、SIMPLE／PISO、円柱後流、混合FEM、乱流モデル、実験に対する妥当性確認は、この周期テストでは実装していません。別の低Mach数LBMモデルと比較してください。
 Arakawa A／B／C比較ではMAC配置を地球流体の文脈に置きます。面位置が一致しても、Coriolisや渦位のアルゴリズムが自動的に備わるわけではありません。
 
+## KEEP法：滑らかな流れの釣合いと限界を検証する [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/keep/
+Coverage: reading
+
+解説章公開コード・データ / Public code and data
+英語原文が更新されています。この日本語訳は旧版に対応します。
+
 ## KEEP法：滑らかな流れの釣合いと限界を検証する — KEEP法：滑らかな流れの釣合いと限界を検証する [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/keep/
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 KEEPはkinetic-energy and entropy preservingの略です。東北大学のYuichi Kuya、Kosuke Totani、Soshi Kawaiによる、圧縮性保存方程式間の低散逸な釣合いを目指す研究です。2018年の原論文を出発点とし、著者の2022年会議解説、特に第2.2節・式9が本実装の直交座標流束を示します。
 展示は原型の2次精度・算術平均・直交座標流束と周期境界、古典的RK4です。後のKEEPすべてを実装するものではありません。滑らかな渦の時間発展を再生できます。
@@ -10030,7 +10358,6 @@ KEEPはkinetic-energy and entropy preservingの略です。東北大学のYuichi
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/keep/#which-quantities-should-be-preserved
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 滑らかな周期非粘性流では、質量、運動量、全エネルギーは保存量です。ただし圧縮性流の運動エネルギー単独は一般に一定ではありません。圧力仕事が運動・内部エネルギーを交換します。K=integral rho |u|²/2として、
 \frac{dK}{dt}=\int p\,\nabla\cdot u\,dV.
@@ -10043,7 +10370,6 @@ S_* = \int\rho\log\left(\frac{p}{\rho^\gamma}\right)dV.
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/keep/#the-implemented-two-point-flux
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 上線を左右の算術平均、u_nを直交面の法線速度、e=p/[rho(gamma−1)]とすると、基準流束は、
 \begin{aligned}
@@ -10059,7 +10385,6 @@ F_E&=C\left[\frac12\boldsymbol u_L\cdot\boldsymbol u_R+\overline e\right]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/keep/#appropriate-first-test-smooth-isentropic-vortex-advection
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 gamma=1.4、周期正方形[−10,10]²、背景速度(1,0.5)、渦強度beta=3です。移動中心からの相対座標をX、Y、r²=X²+Y²として、参照解は、
 \begin{aligned}
@@ -10075,7 +10400,6 @@ T&=1-\frac{(\gamma-1)\beta^2}{8\gamma\pi^2}e^{1-r^2},&
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/keep/#appropriate-next-tests
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 圧縮性・非粘性3次元Taylor–Green渦は主要なKEEPテストです。周期箱[0,2 pi]³、参照密度、gamma、初期Mach数、速度振幅、初期圧力摂動、時間積分を固定します。格子・時間細分化で全エネルギー、運動エネルギー、圧力膨張、エントロピー、密度・温度RMS、解像スペクトルを追い、圧力仕事の交換と数値散逸を分けます。原論文は非粘性等方乱流も扱います。初版にはこれらの3次元計算はなく、2次元断面では3次元の渦伸長を置き換えられません。
 滑らかな一定圧力の密度波は圧力・速度平衡を検証する有用な診断ですが、その性質は流束の変種に依存します。本実装の原型算術平均流束はこの初期値に非ゼロの半離散圧力残差を生じ、通過したとせず限界をテストに記録します。Shimaら（2021）は圧力平衡保存の分割形を研究しています。
@@ -10084,7 +10408,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/keep/#caveats-entropy-shocks-and-the-scheme-version
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 保存型という名称は丸め誤差までの厳密なエントロピー保存ではありません。 著者は2022年解説で改善された挙動と厳密保存を区別します。Tamaki・Kuya・Kawai（2022）は残る誤差と調整可能な近似次数のKEEP再定義を扱います。本実装はその再定義や厳密な対数平均エントロピー保存流束ではありません。
 衝撃波にはエントロピー生成が必要です。 散逸なしの中心流束には、非振動で許容される衝撃波を選ぶ一般的な仕組みがありません。Sod、Shu–Osher、二重Mach反射を、この無安定化の基準法の受入れテストにはしていません。限界や振動の診断として衝撃波管を解くことはできますが、検証済みの衝撃波捕獲とは表示すべきではありません。KEEPを基にした全手法がすべての衝撃波管を解けないという普遍的主張にもできません。
@@ -10096,18 +10419,24 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/keep/#reproduce
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 python scripts/build_keep.py
 python -m pip install '.[movies]'
 python scripts/build_movies.py
 最初のコマンドが滑らかな解の誤差図とソース記録を作り、動画ビルドが動画ギャラリーへKEEP渦を加えます。衝撃波テスト、カーバンクル、シンプレクティックHamilton写像との違いも参照してください。流体のエネルギー・エントロピー整合性と、力学時間写像のシンプレクティック性は異なります。
 
+## 格子Boltzmann法：衝突、並進、流体運動の回復 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/lattice-boltzmann/
+Coverage: reading
+
+解説章公開コード・データ / Public code and data
+日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
+
 ## 格子Boltzmann法：衝突、並進、流体運動の回復 — 格子Boltzmann法：衝突、並進、流体運動の回復 [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/lattice-boltzmann/
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 実装済み：低Mach数・等温D2Q9–BGK、Guo体積力、周期境界、静止した中間壁バウンスバック。格子単位はΔx=Δt=ρ_ref=1、c_s²=1/3です。
 
@@ -10115,7 +10444,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/lattice-boltzmann/#1954-1992-2002
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Bhatnagar–Gross–Krook（1954）の緩和モデルは格子BGKに先行します。Qian–d'Humières–Lallemand（1992）が格子BGK、Guo–Zheng–Shi（2002）が本実装の外力離散化の出典です。異なる発展として扱います。
 D2Q9には静止分布1つ、軸方向4つ、対角方向4つがあり、それぞれの重みは4/9、1/9、1/36です。平衡分布は、
@@ -10137,16 +10465,22 @@ S_q=w_q\left(1-\frac1{2\tau}\right)
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/lattice-boltzmann/#two-independent-tests
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 周期的な横せん断波はexp(−νk²t)で減衰し、独立に粘性を測れます。外力駆動Poiseuille流の厳密分布はu_x=F_x y(H−y)/(2ρ_refν)です。壁は最外の流体節点中心ではなく、その半格子間隔外に置きます。τ=0.8、最大速度0.01を固定し、Ny=8、16、32で壁位置と細分化を検証します。初期過渡は最も遅い粘性減衰時間の12倍まで計算し、有限時間誤差と空間誤差を区別します。
 データ記録にはチャネル誤差、Mach数、力の設定、ステップ数があります。単体テストでは周期質量・運動量保存と平衡モーメントも確認します。BGKは単一緩和の基準例です。MRT／TRT、エントロピー型・キュムラント衝突、熱的・圧縮性LBM、移動壁、多相モデルは今後の拡張です。射影法の流れは別の離散系を解き、非圧縮性へのもうひとつの道を与えます。
+
+## 勾配制限：minmod、Superbee、MC、van Leer、van Albada [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/limiters/
+Coverage: reading
+
+解説章公開コード・データ / Public code and data
+英語原文が更新されています。この日本語訳は旧版に対応します。
 
 ## 勾配制限：minmod、Superbee、MC、van Leer、van Albada — 勾配制限：minmod、Superbee、MC、van Leer、van Albada [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/limiters/
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 勾配制限は、線形な高次再構成を局所勾配の非線形な選択に置き換えます。勾配制限ノートで、同じ格子・時間積分に対する5種の選択と、1次・無制限のスカラー基準例を比較できます。
 
@@ -10154,7 +10488,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/limiters/#reconstruction-and-the-ratio-convention
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 一様セルの後退・前進増分を、
 a_i=\bar u_i-\bar u_{i-1},\qquad b_i=\bar u_{i+1}-\bar u_i,
@@ -10168,7 +10501,6 @@ u_{i-1/2}^{R}=\bar u_i-\tfrac12s_i.
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/limiters/#five-limiter-functions
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 以下はいずれもr≤0でゼロです。r>0では、
 \begin{aligned}
@@ -10185,7 +10517,6 @@ Minmodは同符号の小さい増分を選びます。Superbeeはより圧縮的
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/limiters/#computed-comparisons
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 スカラー方程式u_t+a u_x=0を周期区間[0,1]で解きます。全計算は保存的有限体積、風上界面流束、SSPRK(3,3)、N=200、|a|dt/dx≤0.3、終了時刻1で、最終ステップを短縮します。a=±1の両方向を計算し、[0.2,0.4]の単位矩形パルスとsin(2πx)を使います。初期値・参照値は、部分的に覆われたセルや正弦波のsinc係数を含む厳密セル平均です。表示L1もこれを使います。周期全変動は末尾から先頭への跳びを含み、質量はdx×総和です。最大TVは初期状態を含む全保存フルステップ診断から求めます。
 1次比較は勾配ゼロです。無制限比較は同じ流束とSSPRK3で中心勾配(a+b)/2を使い、振動を生じ得ます。完全離散のLax–Wendroff法ではありません。
@@ -10196,7 +10527,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/limiters/#tvd-is-a-property-of-the-complete-scalar-update
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 このスカラーMUSCL演算子では、示した勾配条件と|a|dt/dx≤1/2によりTVDの前進Euler構成要素が得られ、SSPRK3はその範囲で凸安定性を保ちます。ソルバーもCFLをこの範囲に制限します。テストでは両方向、周期保存、フルステップ全変動、上下限、CFL=1/2のランダムデータ前進Eulerを確認します。
 同じ関数をEuler基本変数の各成分に使っても、一般の系のTVD定理、エントロピー条件、正のセル平均の保証にはなりません。特性再構成と完全離散正値性は別の拡張です。TVBの極値緩和と保存的正値スケーリングは発展的な勾配制限を参照してください。
@@ -10205,7 +10535,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/limiters/#reproduce-and-inspect
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 python -m numart.cli run sod --method muscl --riemann hllc --limiter superbee --n 200
 python scripts/build_limiters.py
@@ -10216,11 +10545,18 @@ sod = solve(get_problem("sod"), limiter="mc")
 pulse = solve_advection(profile="square", limiter="van-leer", speed=-1.)
 docs/figures/limiters.jsonは全描画配列、細分化、診断、ソースハッシュを記録します。ブラウザーはPython計算曲線を選び、別のPDE実装を実行しません。既定MUSCLはminmodのままで、制限関数オプションはWENO5や2次元Euler／MHD基準例には適用しません。
 
+## 構造格子、非構造格子、三角形格子 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/meshes/
+Coverage: reading
+
+解説章公開コード・データ / Public code and data
+英語原文が更新されています。この日本語訳は旧版に対応します。
+
 ## 構造格子、非構造格子、三角形格子 — 構造格子、非構造格子、三角形格子 [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/meshes/
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 格子は幾何と**接続関係（connectivity）**を表します。セル形状と添字付けは異なる選択です。三角形は構造格子を分割して作ることも、不規則な非構造三角形分割でつなぐこともできます。格子エクスプローラーで違いを確認できます。
 
@@ -10228,7 +10564,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/meshes/#structured-meshes
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 論理的な長方形格子では添字(i,j)を付けられ、隣接セルの添字を予測できます。直交長方形が最も単純な例ですが、物体適合の曲線格子でも構造的な添字を維持できます。その場合、計量項、面法線、セル体積は幾何から求めます。複数の添字空間を結ぶのがマルチブロック格子です。
 最初の例は単位正方形上の8×6の長方形セルです。同じ検査コードをすべての例に使えるよう、接続関係も明示的に出力します。
@@ -10237,7 +10572,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/meshes/#triangles-and-unstructured-connectivity
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 各長方形を2つに分ければ、基になる格子パターンを保ったまま形状を三角形へ変えられます。3つ目の例は、決定的に配置した不規則な内部点と固定正方形境界から三角形分割を作ります。MatplotlibのDelaunay三角形分割を使い、Triangleパッケージの呼出しではありません。ShewchukのTriangle論文は、歴史とアルゴリズムを学ぶ参照文献です。
 非構造ソルバーは通常、頂点、セル、面、所有セルと隣接セルの関係を記憶します。境界面には隣接セルが1つ、内部面には2つあります。この画面が強調するのは面を共有する隣接セルで、頂点だけを共有するすべてのセルではありません。番号の位置は頂点平均によるセル中心です。三角形では面積重心に一致します。
@@ -10246,7 +10580,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/meshes/#conservation-is-a-face-contract
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 面積|K|の有限体積Kに対して、
 \frac{d}{dt}(|K|\overline U_K)
@@ -10257,7 +10590,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/meshes/#quality-and-implementation-scope
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 小さな角度、歪み、縦横比、非直交性、体積の変動は、再構成や安定性にそれぞれ異なる影響を与えます。Delaunay接続だけで、適切な境界層解像度や任意点群の十分な最小角は保証されません。ここでは格子品質の最適化は行いません。
 numart.geometry.example_meshesが3例を供給します。テストでは正のセル面積、全体の単位面積、面隣接グラフの連結、相互的な隣接関係、これらの単連結領域での平面Euler関係V−E+F_cells=1を確認します。幾何・接続の実演であり、非構造Eulerや粘性流ソルバーは今後の課題です。
@@ -10267,15 +10599,21 @@ ALEの移動セル、SPH粒子、円筒座標の計量とテンソルへ進ん�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/meshes/#variable-staggering-is-another-choice
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Arakawa A／B／C配置は、与えられた格子上の中心、角、面にどの変数を置くかを指定します。構造・非構造の接続関係や時間次数とは独立です。対応する章では、Coriolis平均と検証したFourier記号を明示し、既存のMAC配置と回転浅水波を結び付けます。
+
+## MHD：制約輸送法と発散クリーニング [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/mhd/
+Coverage: reading
+
+解説章公開コード・データ / Public code and data
+英語原文が更新されています。この日本語訳は旧版に対応します。
 
 ## MHD：制約輸送法と発散クリーニング — MHD：制約輸送法と発散クリーニング [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/mhd/
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 GSPH／GSPMHDノートは別の粒子法の分岐を説明します。相対論的発展の調査は、CT、基本変数回復、動的時空を含むSRMHD・GRMHDをたどります。以下のNewton力学的な平面モデルは、どちらも実装していません。
 
@@ -10283,7 +10621,6 @@ GSPH／GSPMHDノートは別の粒子法の分岐を説明します。相対論�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/mhd/#problem-and-units
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 従来のOrszag–Tang基準例は周期単位正方形上の平面2次元理想MHDで、γ=5/3、μ0=1、vz=Bz=0です。配列添字は[x,y,variable]、状態はq=(ρ,mx,my,E,Bx,By,ψ)、E=p/(γ-1)+ρ(vx²+vy²)/2+(Bx²+By²)/2です。Orszag–Tangの初期条件は、
 \rho=\frac{25}{36\pi},\quad p=\frac5{12\pi},\quad
@@ -10295,7 +10632,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/mhd/#ct-share-the-same-edge-electric-field
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 磁場の法線成分をセル面に置き、角で共有するEzによって両方向を更新します。例えばBx <- Bx - Δt D_y Ez、By <- By + Δt D_x Ezです。対応する発散更新には-D_xD_y Ez+D_yD_x Ez=0が現れ、一致する離散発散を保存します。
 初版は、Rusanov面流束から求めた電場を算術平均する単純なflux-CTを使います。面のリーマン問題は共通の法線磁場を使い、基本変数の圧力を保つよう界面エネルギーを調整します。更新後のセル中心磁場は面から平均します。全エネルギーを非保存的に再設定することはありません。Evans–Hawleyの全座標系の詳細やAthenaの風上CTを再現するものではありません。Evans–Hawley（1988）、Tóth（2000）。
@@ -10304,7 +10640,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/mhd/#glm-transport-and-damp-divergence-errors
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 セル中心磁場Bと補助変数ψを用いて、
 \partial_t\mathbf B+\nabla\cdot(\mathbf v\mathbf B-\mathbf B\mathbf v)+\nabla\psi=0,
@@ -10316,7 +10651,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/mhd/#measuring-b
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 CTは面磁場の差分、GLMはセル中心磁場の中心差分を使います。異なる離散発散の値から直接順位を付けられないため、記録には演算子名を含めます。固定した比較的散逸の強いGLM波速と対称なOT初期値では、中心差分発散が極めて小さいままの場合があります。OTだけではクリーニング性能の根拠として不十分です。
 別の診断としてmagnetic_error=0.01でBx += 0.01sin(2πx)を加え、初期気体圧力を保つようエネルギーを調整します。これは標準OT問題ではありません。発散波の輸送・減衰を調べ、減衰と数値粘性による誤差減少を区別します。CTは初期の離散制約を保存しますが、既存の磁気単極子誤差を自動的に取り除くものではありません。
@@ -10325,7 +10659,6 @@ CTは面磁場の差分、GLMはセル中心磁場の中心差分を使います
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/mhd/#verification-scope
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 テストでは周期質量・全エネルギー、選定ケースの密度・圧力の正値性、CTの発散保存、GLMの注入誤差除去を確認します。後述のHLLD節にBrio–Wu、Alfvén波の格子細分化、磁場ループを追加しました。外部参照コードとの比較は今後の課題です。低解像度・1次OT図は、磁場制約の処理を学ぶ導入例です。
 
@@ -10333,7 +10666,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/mhd/#time-evolution
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 動画ギャラリーには、64²のOrszag–TangのCTとGLMの動画があります。実際の適応CFLスナップショット時刻と、それぞれの離散発散診断は異なります。再生から同一精度の順位は導きません。
 
@@ -10341,7 +10673,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/mhd/#hlld-and-standard-wave-tests
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 HLLDの比較を開く。新しい理想MHD計算は、上の平面Orszag–Tang基準例と異なり、速度・磁場の3成分をすべて保持します。μ0=1、q=(ρ,ρvx,ρvy,ρvz,E,Bx,By,Bz)、E=p/(γ−1)+ρ|v|²/2+|B|²/2です。HLLDは外側の高速波の間で接触波と2つの回転波を解像します。中間のstar／double-star状態では共通の法線磁場を使い、不正な状態ではHLLEに切り替え、面ごとの回数を記録します。原典の書誌はMiyoshi–Kusano（2005）、式の照合には公開されたAthena++ HLLD実装を使いました。独立した教育実装であり、Athena++の実行や原論文全体の再現ではありません。
 3テストとも基本変数のMC勾配・SSPRK2・面の正値性のための縮小を使い、時間刻み再試行・HLLE切替を記録します。保存平均値はクリップしません。選定ケースの正値性は一般的な頑健性の証明ではありません。
@@ -10353,7 +10684,6 @@ Brio–Wu：γ=2、[0,1]のx=0.5で、左(ρ,p,By)=(1,1,1)、右(0.125,0.1,−1)
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/mhd/#ct-contact-and-glm-scope-in-the-loop-test
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 CTは角のポテンシャルの離散回転から面磁場を初期化します。角のEMFの横方向微分には面の質量流束の符号による接触波の風上化を使います（Mignone–Del Zanna（2021）の式20〜22のCT-Contact）。格子に沿う1次元極限で面の誘導流束に一致します。UCT-HLLDではありません。SSPRKの各段階で共有回転により面発散を保存し、セル磁場を面から平均します。全エネルギーは再設定しません。
 GLMはセルAzの中心差分回転からセル磁場を初期化し、面で縦方向部分系を先に解きます。
@@ -10363,11 +10693,18 @@ HLLD／HLLEへ共通のBnを渡し、面の基本変数圧力を保ちます。B
 初期磁場の離散化と離散発散演算子が異なり、磁気エネルギー比は各計算自身の初期セル磁場エネルギーで規格化します。同一精度・同一計算費用でのCT／GLMの順位は導けません。128 × 64ではCTの最大面発散は4 × 10⁻¹⁶未満、GLMの最大中心差分発散は約3.7 × 10⁻⁴です。これらは演算子に依存するB/長さの次元の数値です。公開ループ計算のHLLE切替・再試行はすべて0でした。外部コードとの比較、強磁場ループ、UCT-HLLDは今後の課題です。
 再現はpython scripts/build_mhd_tests.pyです。設定・診断・ハッシュと計算済み保存変数配列を取得できます。
 
+## 時間依存テスト：動画と保存状態 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/movies/
+Coverage: reading
+
+解説章公開コード・データ / Public code and data
+英語原文が更新されています。この日本語訳は旧版に対応します。
+
 ## 時間依存テスト：動画と保存状態 — 時間依存テスト：動画と保存状態 [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/movies/
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 動画ギャラリーを開く。
 衝撃波反射、渦の移流、磁場形成など、時間発展自体が問いに含まれる場合に動画を使います。定常解、製造平衡分布、最終楕円場は静止図のままです。反復に対する残差はアルゴリズムの履歴で、物理時間の流体動画ではありません。
@@ -10376,7 +10713,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/movies/#five-computed-movies
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 二重Mach反射：256×64セルのMach 10・2次元Euler、t=0〜0.2、1次HLL、SSPRK2、CFL0.4。細い壁面ジェットは未解像です。設定を参照してください。
 CTのOrszag–Tang：64²の周期平面理想MHD、t=0〜0.5、1次Rusanov、前進Euler、CFL0.3。磁場発散はスタガード面演算子です。
@@ -10389,7 +10725,6 @@ Mach 3前向きステップ：240 × 80セル、t=0〜4、1次HLL・SSPRK2、CFL
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/movies/#actual-physical-times-unchanged-time-steps
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 初期・最終を含む81出力時刻を要求し、それぞれを最初に通過した完了計算状態を保存します。要求時刻へ合わせるための刻み短縮も、解の補間もしません。粗い1ステップが複数要求を越えれば同じ状態が代表します。全フレームに実時刻とステップ数を付けます。
 公開用動画は各81の異なる状態です。CT・GLMは時間刻みが違うため、同じフレーム番号でも途中の物理時刻は一致しない場合があります。比較前に時刻を確認してください。出力を有効にしても最終状態・数値履歴が不変であることをテストします。
@@ -10398,7 +10733,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/movies/#fixed-scales-and-explicit-playback
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 密度・圧力の色範囲は、各計算の全保存状態の最小・最大で固定します。範囲ラベルが一致しない限り、別動画の同じ色を同じ値と見なしてはいけません。プレーヤー横の最小・最大は表示状態の実測値で、正値性定理ではありません。
 再生を押すまで始まりません。一時停止、先頭・末尾、前後、保存フレームスライダー、速度、任意のループで検査できます。速度は表示速度で、シミュレーションを変えません。標準12fpsなら81フレームは6.75秒です。物理時刻は画像内にも残します。
@@ -10408,7 +10742,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/movies/#reproduce-and-verify
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 python -m pip install '.[movies]'
 python scripts/build_movies.py
@@ -10420,7 +10753,6 @@ python scripts/check_movies.py
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/movies/#multidimensional-still-fields
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 数値ギャラリーは2D・3Dの空間場を先頭に表示し、上記5動画への入口もまとめています。次元と分野の絞り込みを組み合わせられます。「全次元・診断図」では1次元比較とアルゴリズムの診断図も表示します。
 既存ソルバーから、次の3つの場の静止図を追加しました。
@@ -10434,7 +10766,6 @@ python scripts/build_multidimensional_gallery.pyで再現できます。定義�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/movies/#what-a-movie-does-not-establish
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 滑らかな見た目だけでは、格子収束、エントロピー不等式、衝撃波の頑健性、長時間乱流精度、実験一致は示せません。KEEP渦の収束には独立した滑らか誤差の測定があり、カーバンクルの章は衝撃波動画だけで多次元安定性を保証できない理由を説明します。
 
@@ -10442,15 +10773,21 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/movies/#reconstruction-comparison-clips
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Euler比較ページでは、同じ前向きステップ問題について1次・minmod・MCの動画を並べ、共通の色範囲と各81出力状態で比較できます。適応時間刻みの途中時刻は完全には一致しないため、フレーム内の実際の時刻を確認してください。再構成の比較であり、5物理問題の動画カタログの問題数は増えません。python scripts/build_euler_comparison.pyで生成し、各MP4を復号してフレーム数を確認します。
+
+## NASAの2次元検証・妥当性確認問題集 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/nasa-2d/
+Coverage: reading
+
+解説章公開コード・データ / Public code and data
+英語原文が更新されています。この日本語訳は旧版に対応します。
 
 ## NASAの2次元検証・妥当性確認問題集 — NASAの2次元検証・妥当性確認問題集 [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/nasa-2d/
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 公式のNPARC Verification and Validation Archive、CFL3Dテスト、Turbulence Modeling Resourceから始めてください。NASAのTMR案内は2026年2月のGitHub移行を説明します。
 15°楔の2ケースは、教育用Euler基準計算を追加しました。 それ以外のNASA項目は候補です。独立した実装による計算で、Wind-USの出力、実験による妥当性確認、NASAのソルバー・格子比較全体の再現ではありません。古典的なMach 3前向きステップと二重Mach反射も併せて示します。
@@ -10459,7 +10796,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/nasa-2d/#computed-shock-tests
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 ギャラリーで衝撃波を伴う場を見る。両楔は比熱比1.4、流入密度1・音速1の一様流から開始します。独立した物体適合格子はx=−0.5〜1、下壁y=max(x,0)tan(15°)、上端y=1.2です。Mach 2の弱い衝撃波が出口で上端へ届かない高さを使い、NASAのMach 2.5領域の高さ1とは異なります。流入・上端は一様流固定、流出は外挿、下壁は法線運動量を反射します。実際の四角形から面積・法線を求め、共有する面流束を逆符号で組み込んでセル総量を保存します。
 NASA楔、Mach 2.0：240 × 80セル、t=3のMach数・圧力分布と、理論上の弱い斜め衝撃波の線。120 × 40セルでも計算しています。NASA設定。
@@ -10472,7 +10808,6 @@ python scripts/build_shock_gallery.pyで再現し、--reuseでソースを照合
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/nasa-2d/#shock-containing-nasa-cases-still-to-implement
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Mach 5衝撃波・境界層干渉、Mach 7層流ランプ、Sajbenディフューザー、RAE 2822は後続候補です。各問題に必要な粘性・乱流・気体モデルも検証の一部であり、非粘性楔の図では代用できません。これらの計算展示はまだありません。
 
@@ -10480,7 +10815,6 @@ Mach 5衝撃波・境界層干渉、Mach 7層流ランプ、Sajbenディフュ�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/nasa-2d/#starting-with-euler-and-analytical-references
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 15度楔、Mach 2.0 — 基準計算済み：2格子の斜め衝撃波と壁圧。Roe／HLLEの手法比較は今後です。NASA問題。
 15度楔、Mach 2.5 — 基準計算済み：衝撃波角・下流状態の理論比較。次の膨張角の予定と対にする圧縮例。NASA問題。
@@ -10490,7 +10824,6 @@ Prandtl–Meyerの15度膨張、Mach 2.5：膨張扇と解析Mach・圧力関係
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/nasa-2d/#laminar-flow-unsteadiness-and-pressure-poisson-problems
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 駆動キャビティ：正方形内の中心線速度、主渦、隅渦。NASAは低Mach計算で非圧縮流を近似し、Ghiaらと比較します。NASA問題。
 Blasius層流平板：境界層分布、壁面摩擦、壁法線格子解像度。NASA問題。
@@ -10500,7 +10833,6 @@ Blasius層流平板：境界層分布、壁面摩擦、壁法線格子解像度�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/nasa-2d/#turbulence-models-separation-and-airfoils
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 ゼロ圧力勾配の乱流平板：壁面摩擦、乱流モデル実装、格子収束。TMR検証。
 2次元流路内バンプ：曲壁の圧力・摩擦を同じ乱流モデルのコード間で比較。TMR検証。
@@ -10517,7 +10849,6 @@ NASA壁面ハンプ：壁誘起の剥離・再付着。3次元効果を含む実
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/nasa-2d/#other-classical-2d-benchmarks
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 二重Mach反射、Mach 3前向きステップ、2次元リーマン配置、等エントロピー渦、奇偶衝撃波・カーバンクルも有用です。前二者の代表的出典はWoodward–Colella（1984）です。本二重Mach反射と上記ステップは実装済み1次HLL基準例で、滑らかなKEEP渦も計算済みです。リーマン配置と管理した奇偶衝撃波・カーバンクル比較は今後です。カーバンクルノートを参照してください。
 すべてをNASA発祥と呼んではいけません。ONERA M6は3次元翼で、軸対称バンプ・ジェットも平面2次元とは異なるため、主一覧から除きます。
@@ -10526,7 +10857,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/nasa-2d/#information-to-fix-for-each-implementation
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 原典、ケース番号、幾何、無次元化、Mach／Reynolds数、迎角、壁・遠方・流入・流出境界、格子列、正確な乱流モデル変種、収束残差、時間刻み、Cp／Cf／Cl／Cdの定義を記録します。残差減少だけでは格子収束や実験一致は示せません。実装時にはNASAの紹介ページだけでなく、元の測定論文も加えてください。
 Mach 2のMC計算はt=3でも局所的な時間変動が残り、最大保存変数更新率は約6.08です。定常収束解ではありません。密度誤差の改善と併せて更新率も公開します。
@@ -10535,18 +10865,24 @@ Mach 2のMC計算はt=3でも局所的な時間変動が残り、最大保存変
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/nasa-2d/#muscl-reconstruction-comparisons
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 1次・minmod・MCを比較する。新しい計算は音響HLL、SSPRK2、公称CFL 0.4を共通にしています。四角形の面積重心で基本変数の物理勾配を求め、面の中点へ再構成します。物体適合格子では、x方向の割線に伴う物理的なyの変位も補正します。共有面流束を両隣のセルへ加えます。制限関数はminmod(a,b)とMC(a,b)=minmod(2a,(a+b)/2,2b)です。制限関数の定義も参照してください。境界再構成では固体近傍を除き、流体側の状態を反射します。面の密度・圧力が非正になる場合は、セルごとに共通の係数で再構成偏差を縮めます。SSPRK2の段階が失敗したら時間刻みを半分にして再試行し、回数を記録します。保存平均値はクリップしません。これは検証した保護処理であり、このソルバー全体の正値性の一般的証明ではありません。
 両NASA楔について、120 × 40と240 × 80の格子で3再構成をt=3まで計算しました。壁圧・衝撃波角・積分密度誤差は前述の定義です。別の周期エントロピー波では速度(0.7,0.3)、圧力1、密度1+0.2sin(2πx)sin(2πy)を用い、初期化・比較とも厳密なセル平均値で行います。16²、32²、64²、128²でt=0.5まで計算し、比較ページに観測次数を表示します。この滑らかな問題ではMCが2次精度に近づきます。極値での制限関数の作動はminmodの観測次数に影響します。衝撃波誤差の収束領域は異なり、滑らかな解の2次精度の根拠にはなりません。
 前向きステップの比較には、同じ240 × 80格子でのminmod・MCの静止画と81状態の動画を加えました。3動画は密度・圧力の色範囲と要求出力時刻を共通にしますが、実際の途中時刻は適応時間刻み1段分ずれる場合があります。公称CFL・格子が同じでも計算費用は等しくありません。同一の物理問題を3再構成で比較しており、従来の1次動画も引き続き閲覧できます。角の処理は同じで、t=4は非定常流れです。
 再現はpython scripts/build_euler_comparison.pyです。比較の設定・診断・ハッシュと最終保存変数配列を取得できます。全軌道はローカルのoutputs/euler-comparisonへ保存します。
 
+## 粒子重力：PM、P³M、ツリー、多重極、マルチグリッド [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/particle-gravity/
+Coverage: reading
+
+解説章公開コード・データ / Public code and data
+日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
+
 ## 粒子重力：PM、P³M、ツリー、多重極、マルチグリッド — 粒子重力：PM、P³M、ツリー、多重極、マルチグリッド [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/particle-gravity/
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Poissonソルバーと粒子力アルゴリズムは、関係する問いに異なる表現で答えます。Green関数、境界、質量割当て、軟化、力演算子を先に固定します。周期PMと孤立直接和は別の問題なので、差をそのまま力精度とはできません。
 
@@ -10554,7 +10890,6 @@ Poissonソルバーと粒子力アルゴリズムは、関係する問いに異�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/particle-gravity/#particlemesh-mass-to-potential-to-force
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 3次元周期立方体では、
 \nabla^2\phi=4\pi G(\rho-\overline\rho),\qquad
@@ -10568,7 +10903,6 @@ PMは質量を格子へ割り当て、Poissonを解き、ポテンシャルを�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/particle-gravity/#p%C2%B3m-correct-the-near-field-without-counting-it-twice
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 粒子・粒子／粒子・格子法は格子力に短距離補正を加えます。
 \boldsymbol a_i=\boldsymbol a_i^{\rm PM}
@@ -10581,7 +10915,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/particle-gravity/#barneshut-tree-open-the-nearby-cells
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Barnes・Hut（1986）は粒子を八分木にまとめます。遠方セルは質量分布のモーメントで近似し、近方セルは再帰的に開きます。本実装の幾何受理条件はs/d<thetaで、sはセル辺長、dは重心までの距離です。標的を含むノードは常に開き、直接葉では自己相互作用を除きます。
 孤立参照はG=1とPlummer軟化です。
@@ -10594,7 +10927,6 @@ Barnes・Hut（1986）は粒子を八分木にまとめます。遠方セルは�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/particle-gravity/#multipole-expansion-monopole-and-second-moments
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 セル重心から標的へのR、源のずれdelta_a、総質量M、S=sum m_a delta_a delta_a^Tとします。重心の双極は消えます。s²=R²+epsilon²として、同じ軟化核のTaylor展開は、
 \phi(\boldsymbol R)\approx-G\left[
@@ -10607,7 +10939,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/particle-gravity/#treepm-a-different-near-field-evaluator
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 TreePMは格子長距離場とツリー短距離場を結びます。代表的なGaussianポテンシャル分割は、
 \widehat\phi_{\rm long}=\widehat\phi\,e^{-k^2r_s^2},\qquad
@@ -10618,7 +10949,6 @@ TreePMは格子長距離場とツリー短距離場を結びます。代表的�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/particle-gravity/#where-multigrid-belongs
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 マルチグリッドは対力の直接和ではなく、離散楕円型方程式を解きます。平滑化で振動誤差を減らし、制限・粗格子解・延長・補正で滑らかな成分を扱います。演算子・境界・粒子結合を指定すれば、粒子格子のPoisson解法を置き換えられます。
 既存実装は2次元5点負Laplacian、ゼロDirichlet境界で、孤立3次元粒子重力ではありません。有限孤立格子の境界値には多重極や開放境界構成が使え、近い箱面でphi=0とするだけでは一般に無限遠phi→0を再現しません。
@@ -10627,18 +10957,24 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/particle-gravity/#reproduce-the-static-checks
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 python scripts/build_particle_gravity.py
 図と測定記録を作ります。ツリー例は等質量192粒子、seed17、epsilon=0.03、開口角5種、モーメント次数2種です。誤差は||a_tree−a_direct||₂/||a_direct||₂です。受理ノード数と直接対数を報告しますが、操作コストが異なるため和を時間比較には使いません。
 PMは24³周期格子です。別の密度1+0.2cos(2pi x)はG=1でポテンシャル−0.2cos(2pi x)/piを持ちます。テストはCIC質量保存、周期折返し、定数補間、自己力、総力、製造モード、theta=0の厳密開放、選定した力誤差収束を扱います。標的ごとの近似ツリーは対運動量を厳密には保たない場合があるため、記録に総力診断を含めます。
 孤立FFTとスラブGreen関数、力と時間積分の追加要件を扱うシンプレクティック写像へ進んでください。
 
+## 粒子法と平滑化粒子流体力学 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/particles-sph/
+Coverage: reading
+
+解説章公開コード・データ / Public code and data
+日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
+
 ## 粒子法と平滑化粒子流体力学 — 粒子法と平滑化粒子流体力学 [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/particles-sph/
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Lagrange粒子は流れとともに移動しながら量を運びます。SPHは場の値や微分を、局所カーネルで重み付けした粒子和で近似します。独立した初期論文Gingold・Monaghan（1977）とLucy（1977）が歴史的な出発点です。以下の静的再構成は、原著の恒星計算を再現するものではありません。
 
@@ -10646,7 +10982,6 @@ Lagrange粒子は流れとともに移動しながら量を運びます。SPHは
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/particles-sph/#from-an-integral-to-particles
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 平滑化した場を、
 f_h(x)=\int f(x')W(x-x',h)\,dx'
@@ -10664,7 +10999,6 @@ W(x,h)=\frac{2}{3h}\begin{cases}
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/particles-sph/#partition-of-unity-and-correction
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 離散粒子集合では、粒子体積とWの積の総和は1とは限りません。Shepard規格化補間は、その総和で割ります。分母がゼロでなければ定数を再現しますが、この補間補正だけで保存的な運動、線形整合性、安定な圧力力が保証されるわけではありません。
 import numpy as np
@@ -10679,7 +11013,6 @@ f_corrected, _ = sph_reconstruct(x, p, np.sin(2*np.pi*p), h=0.04, normalize=True
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/particles-sph/#what-a-fluid-solver-would-additionally-need
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 密度推定または連続の式の更新、整合する圧力力、運動量・エネルギー発展、境界粒子、時間積分、近傍探索更新、衝撃波や引張り・ペアリング不安定性の扱いは、追加のモデル選択です。衝撃波捕獲SPHの人工粘性は、物理的なNewton流体の粘性応力テンソルと区別します。
 テストでは連続カーネルの規格化と、補正後の離散定数再現を確認します。初版はカーネル再構成のみで、SPH流体ソルバーではありません。時間積分では、粒子kick–drift leapfrogと1階ODEの2ステップleapfrogを混同しない理由を説明します。
@@ -10688,7 +11021,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/particles-sph/#particle-gravity-is-a-separate-operator
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 PM、P³M、ツリー、多重極は重力場を計算し、SPHカーネルは流体量と微分を再構成します。粒子重力、孤立・スラブ境界核、シンプレクティック時間積分で、自己重力粒子モデルの異なる構成要素を結び付けてください。
 
@@ -10696,15 +11028,21 @@ PM、P³M、ツリー、多重極は重力場を計算し、SPHカーネルは�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/particles-sph/#godunov-sph-the-riemann-solver-branch
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 InutsukaのGSPHは粒子流体と粒子対のリーマン問題を結び付けます。2002年の畳み込みによる導出、1994年の先行研究、Iwasaki・Inutsukaの2011年MHD拡張をたどる文献ノートと実装計画です。上のカーネル再構成はGSPH流体計算ではありません。
+
+## Euler再構成：PPM・特性変数・WENO-Z・AUSM [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/reconstruction/
+Coverage: reading
+
+解説章公開コード・データ / Public code and data
+日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 ## Euler再構成：PPM・特性変数・WENO-Z・AUSM — Euler再構成：PPM・特性変数・WENO-Z・AUSM [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/reconstruction/
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 計算済み比較を開く。1次元で再構成と数値流束を区別して調べます。従来の成分ごとのMUSCL／WENO基準例を残して拡張します。
 
@@ -10712,7 +11050,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/reconstruction/#what-is-compared
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 再構成表示では、保存変数成分／特性変数でのMUSCL・MC、制限付き放物線有限体積、有限差分WENO5-JS／Zを比較します。FVはHLLC、FDは大域Lax–Friedrichs流束分離を使い、ともにSSPRK3、公称CFL 0.3、同じ格子点数です。表現・流束・誤差ノルムが異なり、再構成だけの比較や同じ計算費用での順位ではありません。各手法内で基底だけを変える比較は条件を揃えています。
 別の流束表示は保存特性変数MUSCL・MCとSSPRK3を固定し、HLLC、音響エントロピー修正付きRoe、Einfeldt型HLLE、後述のAUSM基準例を切り替えます。
@@ -10721,7 +11058,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/reconstruction/#limited-parabolic-finite-volumes
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Colella–Woodward（1984）の再構成の考え方に沿い、セル平均と両端値から放物線を作ります。確認した公開資料は1982年の著者プレプリントで、最終学術誌版とは異なります。本実装は端値補間・単調性制約を含み、method of linesでSSPRK3と結合します。この経路には波追跡・接触面急峻化・衝撃波平坦化を含めません。それらを加えた直接Euler型は第2段階で提供します。Lagrange発展・remapは今後の課題です。
 セル平均Q、端値L,R、ξ∈[0,1]として、
@@ -10732,7 +11068,6 @@ Colella–Woodward（1984）の再構成の考え方に沿い、セル平均と�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/reconstruction/#characteristic-finite-difference-weno-z
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 各面でRoe平均の保存変数特性基底を固定します。正負の大域LF分離流束を射影し、特性成分ごとに再構成して面流束へ戻します。FDは点値を進める方式で、FVの状態再構成とは異なります。周期格子では共有流束差分により離散和を保存します。
 Z変種はJSの滑らかさ指標を使い、
@@ -10746,7 +11081,6 @@ Z変種はJSの滑らかさ指標を使い、
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/reconstruction/#ausm-keep-the-variant-explicit
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 AUSMの原典はLiou–Steffen（1993）です。本基準例は共通面音速a=(aL+aR)/2、亜音速のMach分割M±=±(M±1)²/4、3次圧力分割P±=(M±1)²(2∓M)/4を使います。超音速側は符号に従う風上分割です。式はFEST-3Dの公式AUSMソースと照合しました。定義を明示した独立のAUSM系列実装であり、FEST-3Dの計算結果や1993年の全音速・圧力選択肢の再現ではありません。
 Mf=M+(uL/a)+M−(uR/a)を使い、(ρ,ρu,ρv,ρH)を左のa max(Mf,0)と右のa min(Mf,0)で輸送します。pL P+(uL/a)+pR P−(uR/a)を法線運動量だけに加え、エネルギーには全エンタルピーを輸送します。一様場、両向き超音速、Mach ±1の分岐、静止・移動接触面、Euler問題を検証します。
@@ -10756,7 +11090,6 @@ AUSM+（1996）、AUSM+-up（2006）は新しい波追跡PPM比較で別々に�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/reconstruction/#problems-references-and-accuracy
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Sod：N=200、[0,1]、t=0.2、標準状態、外挿端。
 移動接触面：N=200、周期[0,1]、u=p=1、前半の密度1・後半2、1周t=1。
@@ -10765,11 +11098,18 @@ FVの初期値は保存量を積分します。Sodの最終密度誤差は解析
 別の滑らかな周期エントロピー波をN=32,64,128、t=0.2、CFL=0.25(32/N)^(2/3)で計算します。dt∝dx^(5/3)によりSSPRK3の時間誤差をO(dx⁵)へ抑えます。この問題のWENO観測次数は約5、極値制限のある放物線FVは約2です。衝撃波や任意の臨界点での5次精度保証ではありません。
 再現はpython scripts/build_reconstruction.pyです。分布・診断・ソースハッシュと保存変数配列を取得できます。正値性・再試行回数は、ここで示したテストの範囲です。
 
+## 厳密解・参照解ライブラリ [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/reference-solutions/
+Coverage: reading
+
+解説章公開コード・データ / Public code and data
+英語原文が更新されています。この日本語訳は旧版に対応します。
+
 ## 厳密解・参照解ライブラリ — 厳密解・参照解ライブラリ [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/reference-solutions/
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 検証用ライブラリでは「正解」が何を意味するかを明示します。参照解エクスプローラーには、式、仮定、出典、点値、1次元ではセル平均を備えた18ケースを収録しています。参照解を評価する機能であり、数値的なPDEの時間発展は行いません。
 
@@ -10777,7 +11117,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/reference-solutions/#four-different-reference-categories
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 解析解（analytic）：スカラーのエントロピー波、正弦波の移流・減衰、乾床・真空への膨張波、チャネル流、Taylor–Green流などの陽な式です。浮動小数点評価の丸め誤差は残ります。
 半解析解（semi-analytic）：Euler、水深が正の浅水流、等温流のRiemann解です。波の曲線は解析的ですが、中間状態の接続にはスカラー方程式の数値的な求根が必要です。
@@ -10789,7 +11128,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/reference-solutions/#included-fields-and-assumptions
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 スカラーには周期正弦波の移流と熱減衰、Burgersの衝撃波・膨張波、2次交通流モデルの衝撃波・膨張波があります。EulerにはSod、Lax、二重膨張波、生成される真空を収録し、比熱比1.4の理想気体を使います。浅水流には水深が正のダム崩壊、乾床への膨張、中央の乾燥領域を収録し、平坦な底面と重力1を使います。等温Eulerは一定音速1、初期密度は厳密に正とし、エネルギー方程式や有限の真空状態を持ちません。
 粘性流は単位幅の平面チャネルにおける定常Couette・Poiseuille速度分布と、周期的な2次元Taylor–Green渦です。チャネルの出力は速度であり、圧縮流の保存変数ではありません。Taylor–Greenは速度と平均ゼロに固定した圧力を返します。Poisson製造解は場と外力の両方を提供します。
@@ -10799,7 +11137,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/reference-solutions/#point-values-and-finite-volume-means
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 保存変数を有限体積法で比較するときは、次のセル平均を使います。
 \overline{\boldsymbol U}_i(t)=\frac{1}{x_{i+1/2}-x_{i-1/2}}
@@ -10816,7 +11153,6 @@ L_\infty=\max_i|e_i|.
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/reference-solutions/#riemann-construction-and-tolerances
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 自己相似変数xi=(x−x0)/tを使います。接続する未知量はEulerでは圧力、浅水では水深、等温流では密度です。正の未知量の対数に対して単調な波接続残差を挟み込み、二分法を適用します。対数区間幅の目標は2e−13、二分法は最大160回、最終残差は特性速度スケールの2e−10倍以内であることを検査します。残差が厳密にゼロなら、それ以前に停止できます。反復回数、最終区間幅、残差をケースごとに保存します。
 Eulerや浅水の膨張波が離れると、中央に真空・乾燥領域が生じる場合があります。その場合は正状態の求根を省略します。保存変数はすべてゼロです。真空中の速度は物理的に未定義ですが、低レベルの変換では表示上の規約としてゼロとします。等温流では有限の真空の代わりに、非常に小さい正の密度になります。float64の対応範囲を超える状態は、黙って切り詰めずエラーにします。
@@ -10826,7 +11162,6 @@ ClawpackのEulerの章と浅水の章は、波の構成と乾床・真空を説�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/reference-solutions/#viscous-and-manufactured-formulas
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 単位幅・単位密度・動粘性係数nuの平面チャネルでは、定常分布は次式です。
 u_{\rm Couette}(y)=y,\qquad
@@ -10843,7 +11178,6 @@ Webではy=pi/4のx方向断面を表示し、2次元セル面積平均ではあ
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/reference-solutions/#reuse-and-reproduce
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 import numpy as np
 from numart.reference_solutions import get_reference, riemann_reference
@@ -10861,11 +11195,18 @@ box_mean = tg.box_average([0., 0.], [.2, .3], t=.5)
 保存分布と図はMPLCONFIGDIR=.mplconfig python scripts/build_reference_solutions.pyで再生成できます。データと数値実装のソースハッシュをダウンロード。Pythonでは、既存の独立なEuler実装との比較、Rankine–Hugoniot条件とLax不等式、膨張波のPDE残差と不変量、全領域の収支、既知の積分、製造解の外力、Taylor–Greenの運動量・発散残差を検証します。Webのビルドでは保存データの形式、波の位置、ソースハッシュ、平均値の規約を検査します。
 Blasius、Sedov、Nohや追加の多次元参照解は今後の拡張です。LANL ExactPackはそれらを追加する際に参照できる独立した資料集です。現時点の依存ライブラリではなく、上のケースをExactPackと相互検証したという意味でもありません。
 
+## 原著の出版年順に並べた参考文献 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/
+Coverage: reading
+
+解説章公開コード・データ / Public code and data
+英語原文が更新されています。この日本語訳は旧版に対応します。
+
 ## 原著の出版年順に並べた参考文献 — 原著の出版年順に並べた参考文献 [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 原著論文・書籍と、実装を確認するために用いた資料を区別します。DOIの存在は、全文の閲覧や図の再現を意味しません。各出典注記に、公開原著、後年の解説、未確認の原資料を記しています。NASAの資料は2次元問題カタログにもあります。
 著者名・原題・誌名・出典注記は、英語版と共通の原表記を保持しています。見出しや案内は日本語です。
@@ -10875,7 +11216,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1847-verhulst1847
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Verhulst, Pierre-François. Sur la loi d’accroissement de la population (Deuxième mémoire). Mémoires de l’Académie royale de Belgique.
 原著の書誌情報 · 全文または実装の参照資料
@@ -10885,7 +11225,6 @@ Original archival text and metadata available. This is the later 1847 memoir, re
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1913-michaelis1913
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Michaelis, Leonor and Menten, Maud L.. Die Kinetik der Invertinwirkung. Biochemische Zeitschrift.
 原著の書誌情報 · 全文または実装の参照資料
@@ -10895,7 +11234,6 @@ Original 1913 bibliographic identification through the explicitly labeled Johnso
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1920-lotka1920
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Lotka, Alfred J.. Analytical Note on Certain Rhythmic Relations in Organic Systems. Proceedings of the National Academy of Sciences.
 原著の書誌情報 · 全文または実装の参照資料
@@ -10905,7 +11243,6 @@ Original bibliographic record checked. Early rhythmic organic-system model, befo
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1925-briggs1925
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Briggs, George E. and Haldane, J. B. S.. A Note on the Kinetics of Enzyme Action. Biochemical Journal.
 原著の書誌情報 · 全文または実装の参照資料
@@ -10915,7 +11252,6 @@ Original bibliographic record and original-paper search excerpt checked. Quasi-s
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1926-mckendrick1926
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 McKendrick, A. G.. Applications of Mathematics to Medical Problems. Proceedings of the Edinburgh Mathematical Society.
 原著の書誌情報 · 全文または実装の参照資料
@@ -10925,7 +11261,6 @@ Original first-page text checked: read January 1926, received August 1926, in th
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1926-volterra1926
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Volterra, Vito. Fluctuations in the Abundance of a Species considered Mathematically. Nature.
 原著の書誌情報 · 全文または実装の参照資料
@@ -10935,7 +11270,6 @@ Original publisher record and abstract checked. Independent ecological interacti
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1927-kermack1927
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Kermack, W. O. and McKendrick, A. G.. A contribution to the mathematical theory of epidemics. Proceedings of the Royal Society of London. Series A.
 原著の書誌情報 · 全文または実装の参照資料
@@ -10945,7 +11279,6 @@ Original publication identified separately from the 1991 reprint. The survey use
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1928-cfl1928
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Courant, Richard and Friedrichs, Kurt and Lewy, Hans. Über die partiellen Differenzengleichungen der mathematischen Physik. Mathematische Annalen.
 原著の書誌情報 · 全文または実装の参照資料
@@ -10955,7 +11288,6 @@ Originally published in 1928; the linked source is a later English translation. 
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1937-fisher1937
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Fisher, R. A.. The wave of advance of advantageous genes. Annals of Eugenics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -10965,7 +11297,6 @@ Original publisher metadata and original-text excerpt checked. Population-geneti
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1939-chapman1939
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Chapman, Sydney and Cowling, T. G.. The Mathematical Theory of Non-Uniform Gases. Cambridge University Press.
 原著の書誌情報 · 全文または実装の参照資料
@@ -10975,7 +11306,6 @@ Original-edition bibliographic preview checked; the 1939 book is not assigned as
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1943-courant1943
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Courant, Richard. Variational methods for the solution of problems of equilibrium and vibrations. Bulletin of the American Mathematical Society.
 原著の書誌情報 · 全文または実装の参照資料
@@ -10985,7 +11315,6 @@ Original variational reference. The atlas implements an independent continuous P
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1947-crank1947
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Crank, John and Nicolson, Phyllis. A practical method for numerical evaluation of solutions of partial differential equations of the heat-conduction type. Proceedings of the Cambridge Philosophical Society.
 原著の書誌情報 · 全文または実装の参照資料
@@ -10995,7 +11324,6 @@ Originally published in 1947; the linked source is a 1996 reprint. This edition 
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1948-burgers1948
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Burgers, Johannes M.. A mathematical model illustrating the theory of turbulence. Advances in Applied Mechanics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11005,7 +11333,6 @@ Publisher metadata and summary checked. Classical model reference; the gallery i
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1949-monod1949
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Monod, Jacques. The Growth of Bacterial Cultures. Annual Review of Microbiology.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11015,7 +11342,6 @@ Original publisher metadata checked and university-hosted original identified. H
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1949-thomas1949
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Thomas, Llewellyn Hilleth. Elliptic problems in linear difference equations over a network. Watson Scientific Computing Laboratory, Columbia University.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11025,7 +11351,6 @@ The original report and a holding URL have not been verified. This provisional r
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1950-charney1950
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Charney, Jule G. and Fjørtoft, Ragnar and von Neumann, John. Numerical Integration of the Barotropic Vorticity Equation. Tellus.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11035,7 +11360,6 @@ Publicly accessible original paper. Historical context for stability analysis; t
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1952-hodgkin1952
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Hodgkin, A. L. and Huxley, A. F.. A quantitative description of membrane current and its application to conduction and excitation in nerve. The Journal of Physiology.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11045,7 +11369,6 @@ Original publisher metadata and the existence of its 2019 modern-convention supp
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1952-turing1952
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Turing, Alan M.. The Chemical Basis of Morphogenesis. Philosophical Transactions of the Royal Society of London. Series B.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11055,7 +11378,6 @@ University-hosted original text inspected for the model setting and instability 
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1954-bgk1954
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Bhatnagar, P. L. and Gross, E. P. and Krook, M.. A Model for Collision Processes in Gases. I. Small Amplitude Processes in Charged and Neutral One-Component Systems. Physical Review.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11065,7 +11387,6 @@ Original publisher record checked. Continuous kinetic relaxation source, disting
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1954-lax1954
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Lax, Peter D.. Weak solutions of nonlinear hyperbolic equations and their numerical computation. Communications on Pure and Applied Mathematics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11075,7 +11396,6 @@ Publisher bibliographic record and abstract. Background on weak solutions and La
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1955-lighthill1955
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Lighthill, M. J. and Whitham, G. B.. On kinematic waves. II. A theory of traffic flow on long crowded roads. Proceedings of the Royal Society of London. Series A.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11085,7 +11405,6 @@ Original bibliographic record and publisher-supplied abstract checked. LWR traff
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1956-lax1956
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Lax, Peter D. and Richtmyer, Robert D.. Survey of the stability of linear finite difference equations. Communications on Pure and Applied Mathematics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11095,7 +11414,6 @@ Publicly accessible original paper. The equivalence theorem assumes a well-posed
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1956-richards1956
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Richards, Paul I.. Shock Waves on the Highway. Operations Research.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11105,7 +11423,6 @@ Original publisher record checked. Independent classical traffic-wave source; th
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1959-godunov1959
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Godunov, Sergei K.. A difference method for numerical calculation of discontinuous solutions of the equations of hydrodynamics. Matematicheskii Sbornik.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11115,7 +11432,6 @@ Original publication in 1959, accepted in 1956. The godunov option in this editi
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1960-lax1960
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Lax, Peter D. and Wendroff, Burton. Systems of conservation laws. Communications on Pure and Applied Mathematics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11125,7 +11441,6 @@ Publisher bibliographic record. Background for linear-advection Lax–Wendroff a
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1961-fedorenko1961
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Fedorenko, Radii P.. A relaxation method for solving elliptic difference equations. Zhurnal Vychislitelnoi Matematiki i Matematicheskoi Fiziki.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11135,7 +11450,6 @@ Original publication in 1961; English translation in 1962. A historical entry po
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1961-fitzhugh1961
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 FitzHugh, Richard. Impulses and Physiological States in Theoretical Models of Nerve Membrane. Biophysical Journal.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11145,7 +11459,6 @@ Original bibliographic record and abstract checked. Two-state excitable/oscillat
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1961-rusanov1961
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Rusanov, Vladimir V.. The calculation of the interaction of non-stationary shock waves with barriers. Zhurnal Vychislitelnoi Matematiki i Matematicheskoi Fiziki.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11155,7 +11468,6 @@ Russian original in 1961; English translation in 1962. This edition uses a moder
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1962-nagumo1962
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Nagumo, Jinichi and Arimoto, Suguru and Yoshizawa, Shuji. An Active Pulse Transmission Line Simulating Nerve Axon. Proceedings of the IRE.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11165,7 +11477,6 @@ Bibliographic cross-check only; full original not inspected. Independent electri
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1963-dahlquist1963
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Dahlquist, Germund G.. A special stability problem for linear multistep methods. BIT.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11175,7 +11486,6 @@ Original publisher metadata and abstract checked. Foundational A-stability refer
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1968-chorin1968
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Chorin, Alexandre Joel. Numerical solution of the Navier-Stokes equations. Mathematics of Computation.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11185,7 +11495,6 @@ Original publisher record and author-hosted original checked. Projection source;
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1970-keller1970
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Keller, Evelyn F. and Segel, Lee A.. Initiation of Slime Mold Aggregation Viewed as an Instability. Journal of Theoretical Biology.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11195,7 +11504,6 @@ University-hosted original formulation inspected. It includes more biochemical s
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1972-gierer1972
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Gierer, Alfred and Meinhardt, Hans. A theory of biological pattern formation. Kybernetik.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11205,7 +11513,6 @@ Original publisher metadata and abstract checked. Short-range activation/long-ra
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1972-peskin1972
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Peskin, Charles S.. Flow patterns around heart valves: A numerical method. Journal of Computational Physics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11215,7 +11522,6 @@ Bibliographic metadata cross-checked. Immersed-boundary fluid–structure source
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1972-wilson1972grhd
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Wilson, James R.. Numerical Study of Fluid Flow in a Kerr Space. The Astrophysical Journal.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11225,7 +11531,6 @@ Original paper inspected for the early Kerr-background gas-flow calculation. His
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1973-reed1973
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Reed, W. H. and Hill, T. R.. Triangular mesh methods for the neutron transport equation. Los Alamos Scientific Laboratory.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11235,7 +11540,6 @@ Public government-report record. This edition implements modal DG for 1D linear 
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1974-hirt1974
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Hirt, C. W. and Amsden, A. A. and Cook, J. L.. An arbitrary Lagrangian-Eulerian computing method for all flow speeds. Journal of Computational Physics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11245,7 +11549,6 @@ Publisher record and abstract. Historical ALE reference; the implemented example
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1974-vanleer1974
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 van Leer, Bram. Towards the ultimate conservative difference scheme. II. Monotonicity and conservation combined in a second-order scheme. Journal of Computational Physics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11255,7 +11558,6 @@ Publisher bibliographic record inspected. Historical monotonicity and conservati
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1977-alexander1977
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Alexander, Roger K.. Diagonally Implicit Runge-Kutta Methods for Stiff O.D.E.'s. SIAM Journal on Numerical Analysis.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11265,7 +11567,6 @@ Original publisher record checked. Source for the two-stage second-order L-stabl
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1977-arakawa1977
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Arakawa, Akio and Lamb, Vivian R.. Computational Design of the Basic Dynamical Processes of the UCLA General Circulation Model. Methods in Computational Physics: Advances in Research and Applications.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11275,7 +11576,6 @@ Original chapter and bibliographic identity located; full PDF extraction exceede
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1977-brandt1977
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Brandt, Achi. Multi-level adaptive solutions to boundary-value problems. Mathematics of Computation.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11285,7 +11585,6 @@ AMS-hosted original paper. This edition implements a fixed-grid geometric V-cycl
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1977-gillespie1977
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Gillespie, Daniel T.. Exact stochastic simulation of coupled chemical reactions. The Journal of Physical Chemistry.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11295,7 +11594,6 @@ University-hosted original inspected for the master-equation/SSA distinction, re
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1977-gingold1977
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Gingold, R. A. and Monaghan, J. J.. Smoothed particle hydrodynamics: theory and application to non-spherical stars. Monthly Notices of the Royal Astronomical Society.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11305,7 +11603,6 @@ Original publisher record. Early SPH paper; this edition implements static 1D ke
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1977-lucy1977
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Lucy, L. B.. A numerical approach to the testing of the fission hypothesis. The Astronomical Journal.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11315,7 +11612,6 @@ ADS-hosted original article. Independent early particle-method reference; the cu
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1977-mackey1977
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Mackey, Michael C. and Glass, Leon. Oscillation and Chaos in Physiological Control Systems. Science.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11325,7 +11621,6 @@ Publisher-supplied abstract and bibliographic metadata identified; original full
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1977-spectral1977
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Gottlieb, David and Orszag, Steven A.. Numerical Analysis of Spectral Methods: Theory and Applications. SIAM.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11335,7 +11630,6 @@ Publisher chapter information for a representative spectral-methods monograph. T
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1978-sod1978
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Sod, Gary A.. A survey of several finite difference methods for systems of nonlinear hyperbolic conservation laws. Journal of Computational Physics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11345,7 +11639,6 @@ The DOI identifies the original paper; the source is an implementation reference
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1978-taylor1978
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Taylor, Peter D. and Jonker, Leo B.. Evolutionary stable strategies and game dynamics. Mathematical Biosciences.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11355,7 +11648,6 @@ Original publisher metadata and abstract checked. Continuous evolutionary-game d
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1979-ablowitz1979
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Ablowitz, Mark J. and Zeppetella, Anthony. Explicit solutions of Fisher’s equation for a special wave speed. Bulletin of Mathematical Biology.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11365,7 +11657,6 @@ Original publisher metadata and abstract checked. Special normalized wave speed 
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1979-israel1979viscous
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Israel, W. and Stewart, J. M.. Transient relativistic thermodynamics and kinetic theory. Annals of Physics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11375,7 +11666,6 @@ Publisher bibliographic record inspected for the transient dissipative-fluid bra
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1979-orszag1979
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Orszag, Steven A. and Tang, Cha-Mei. Small-scale structure of two-dimensional magnetohydrodynamic turbulence. Journal of Fluid Mechanics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11385,7 +11675,6 @@ The original study concerns incompressible MHD. Distinguish it from the normaliz
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1979-schnakenberg1979
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Schnakenberg, Jürgen. Simple chemical reaction systems with limit cycle behaviour. Journal of Theoretical Biology.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11395,7 +11684,6 @@ Original publisher metadata and abstract checked. Autocatalytic reaction-network
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1979-shigesada1979
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Shigesada, Nanako and Kawasaki, Kohkichi and Teramoto, Ei. Spatial segregation of interacting species. Journal of Theoretical Biology.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11405,7 +11693,6 @@ Original publisher metadata and abstract checked. Cross-diffusion/segregation so
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1979-vanleer1979
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 van Leer, Bram. Towards the ultimate conservative difference scheme. V. A second-order sequel to Godunov's method. Journal of Computational Physics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11415,7 +11702,6 @@ Publisher bibliographic record and abstract. This edition uses selectable-limite
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1980-patankar1980
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Patankar, Suhas V.. Numerical Heat Transfer and Fluid Flow. CRC Press (current publisher record).
 原著の書誌情報 · 全文または実装の参照資料
@@ -11425,7 +11711,6 @@ Current publisher first-edition record and contents checked; copyright year 1980
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1981-hockney1981book
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Hockney, R. W. and Eastwood, J. W.. Computer Simulation Using Particles. McGraw-Hill.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11435,7 +11720,6 @@ Original book date is 1981, as cited by Barnes and Hut (1986); DOI identifies a 
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1981-hockney1981p3m
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Hockney, R. W.. The P³M Code. CCP5 Information Quarterly, June 1981.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11445,7 +11729,6 @@ Original newsletter scan hosted by CCP5. Describes mesh forces plus short-range 
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1981-roe1981
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Roe, Philip L.. Approximate Riemann solvers, parameter vectors, and difference schemes. Journal of Computational Physics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11455,7 +11738,6 @@ Author-uploaded original full text inspected, including the four Property U cond
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1983-gray1983
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Gray, Peter and Scott, Stephen K.. Autocatalytic reactions in the isothermal, continuous stirred tank reactor: Isolas and other forms of multistability. Chemical Engineering Science.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11465,7 +11747,6 @@ Original publisher metadata and abstract checked. Well-mixed chemical CSTR sourc
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1983-hll1983
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Harten, Amiram and Lax, Peter D. and van Leer, Bram. On Upstream Differencing and Godunov-Type Schemes for Hyperbolic Conservation Laws. SIAM Review.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11475,7 +11756,6 @@ Publicly accessible original paper. Background on HLL; the hll implementation he
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1984-colella1984ppm
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Colella, Phillip and Woodward, Paul R.. The Piecewise Parabolic Method (PPM) for gas-dynamical simulations. Journal of Computational Physics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11485,7 +11765,6 @@ Original 1984 journal metadata; linked public author report is the earlier July 
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1984-sweby1984
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Sweby, P. K.. High Resolution Schemes Using Flux Limiters for Hyperbolic Conservation Laws. SIAM Journal on Numerical Analysis.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11495,7 +11774,6 @@ Publisher record and abstract inspected. Historical scalar TVD flux-limiter fram
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1984-woodward1984
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Woodward, Paul and Colella, Phillip. The numerical simulation of two-dimensional fluid flow with strong shocks. Journal of Computational Physics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11505,7 +11783,6 @@ Author-uploaded original text, Section VI.b setup and corner treatment checked 6
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1985-takewaki1985cip
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Takewaki, H. and Nishiguchi, A. and Yabe, T.. Cubic interpolated pseudo-particle method (CIP) for solving hyperbolic-type equations. Journal of Computational Physics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11515,7 +11792,6 @@ Publisher bibliographic record and indexed abstract inspected; full-text retriev
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1986-barnes1986
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Barnes, Josh and Hut, Piet. A hierarchical O(N log N) force-calculation algorithm. Nature.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11525,7 +11801,6 @@ Original publisher record. The educational octree uses a geometric opening crite
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1986-saad1986
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Saad, Youcef and Schultz, Martin H.. GMRES: A generalized minimal residual algorithm for solving nonsymmetric linear systems. SIAM Journal on Scientific and Statistical Computing.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11535,7 +11810,6 @@ Original publisher metadata and abstract checked. Restarted GMRES source; the at
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1987-eno1987
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Harten, Amiram and Engquist, Bjorn and Osher, Stanley and Chakravarthy, Sukumar R.. Uniformly high order accurate essentially non-oscillatory schemes, III. Journal of Computational Physics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11545,7 +11819,6 @@ Original publication in 1987, distinct from the 1997 reprint. A standalone ENO i
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1987-greengard1987
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Greengard, L. and Rokhlin, V.. A fast algorithm for particle simulations. Journal of Computational Physics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11555,7 +11828,6 @@ Original paper hosted by a university course. FMM reading reference; multipole-t
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1987-turkel1987
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Turkel, Eli. Preconditioned methods for solving the incompressible and low speed compressible equations. Journal of Computational Physics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11565,7 +11837,6 @@ Publisher bibliographic record and abstract. Low-speed PDE preconditioning is di
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1988-brio1988
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Brio, Moysey and Wu, Cheng-chin. An upwind differencing scheme for the equations of ideal magnetohydrodynamics. Journal of Computational Physics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11575,7 +11846,6 @@ Original bibliographic record for the Brio-Wu coplanar shock tube. Publisher met
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1988-einfeldt1988
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Einfeldt, Bernd. On Godunov-Type Methods for Gas Dynamics. SIAM Journal on Numerical Analysis.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11585,7 +11855,6 @@ Publisher bibliographic record and abstract. Background for Einfeldt-type wave-s
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1988-evans1988
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Evans, Charles R. and Hawley, John F.. Simulation of magnetohydrodynamic flows: A constrained transport method. The Astrophysical Journal.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11595,7 +11864,6 @@ Publicly accessible original paper. This edition uses a Cartesian flux-CT-type c
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1988-shu1988
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Shu, Chi-Wang and Osher, Stanley. Efficient implementation of essentially non-oscillatory shock-capturing schemes. Journal of Computational Physics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11605,7 +11873,6 @@ Publisher bibliographic record and abstract. Background on TVD Runge–Kutta and
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1989-cockburn1989
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Cockburn, Bernardo and Shu, Chi-Wang. TVB Runge-Kutta local projection discontinuous Galerkin finite element method for conservation laws. II. General framework. Mathematics of Computation.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11615,7 +11882,6 @@ Original RKDG/TVB paper. Publisher full-text retrieval was unavailable; later au
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1989-shu1989
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Shu, Chi-Wang and Osher, Stanley. Efficient implementation of essentially non-oscillatory shock-capturing schemes, II. Journal of Computational Physics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11625,7 +11891,6 @@ The DOI identifies the original paper. Initial-condition parameters follow the l
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1990-yoshida1990
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Yoshida, Haruo. Construction of higher order symplectic integrators. Physics Letters A.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11635,7 +11900,6 @@ Original paper hosted by a university course. This edition implements the fourth
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1991-einfeldt1991
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Einfeldt, Bernd and Munz, Claus-Dieter and Roe, Philip L. and Sjögreen, Björn. On Godunov-type methods near low densities. Journal of Computational Physics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11645,7 +11909,6 @@ Publisher bibliographic record and abstract. Background on low-density positivit
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1991-fletcher1991v1
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Fletcher, Clive A. J.. Computational Techniques for Fluid Dynamics 1: Fundamental and General Techniques. Springer.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11655,7 +11918,6 @@ Publisher second-edition record and contents checked. Year follows the listed Ap
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1991-fletcher1991v2
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Fletcher, Clive A. J.. Computational Techniques for Fluid Dynamics 2: Specific Techniques for Different Flow Categories. Springer.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11665,7 +11927,6 @@ Publisher second-edition record and contents checked: print and copyright 1991; 
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1991-jameson1991
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Jameson, Antony. Time dependent calculations using multigrid, with applications to unsteady flows past airfoils and wings. 10th AIAA Computational Fluid Dynamics Conference.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11675,7 +11936,6 @@ The DOI identifies the original paper; the linked source is a later exposition b
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1991-yabe1991cip
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Yabe, T. and Aoki, T.. A universal solver for hyperbolic equations by cubic-polynomial interpolation I. One-dimensional solver. Computer Physics Communications.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11685,7 +11945,6 @@ Publisher indexed abstract and bibliographic data inspected; full-text retrieval
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1992-qian1992
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Qian, Y. H. and d'Humières, D. and Lallemand, P.. Lattice BGK Models for Navier-Stokes Equation. Europhysics Letters.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11695,7 +11954,6 @@ Original publisher metadata and abstract checked. Lattice BGK source. The D2Q9 m
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1992-vandervorst1992
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 van der Vorst, Henk A.. Bi-CGSTAB: A Fast and Smoothly Converging Variant of Bi-CG for the Solution of Nonsymmetric Linear Systems. SIAM Journal on Scientific and Statistical Computing.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11705,7 +11963,6 @@ Original publisher record checked. BiCGSTAB source; the educational implementati
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1993-liou1993
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Liou, Meng-Sing and Steffen, Christopher J., Jr.. A New Flux Splitting Scheme. Journal of Computational Physics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11715,7 +11972,6 @@ Original AUSM publisher metadata/abstract inspected; no full 1993-paper inspecti
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1993-pearson1993
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Pearson, John E.. Complex Patterns in a Simple System. Science.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11725,7 +11981,6 @@ Author preprint abstract and linked journal DOI checked. Spatial reaction–diff
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1994-hllc1994
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Toro, E. F. and Spruce, M. and Speares, W.. Restoration of the contact surface in the HLL-Riemann solver. Shock Waves.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11735,7 +11990,6 @@ Publisher bibliographic record and abstract. This edition uses HLLC with Davis-t
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1994-inutsuka1994
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Inutsuka, Shu-ichiro. Godunov-type SPH. Memorie della Società Astronomica Italiana.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11745,7 +11999,6 @@ Provisional historical record from reference 9 of Inutsuka (2002). The 1994 orig
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1994-marti1994srriemann
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Martí, José M. and Müller, Ewald. The analytical solution of the Riemann problem in relativistic hydrodynamics. Journal of Fluid Mechanics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11755,7 +12008,6 @@ Publisher abstract and bibliographic record inspected. Normal-flow SR Riemann re
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1994-quirk1994
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Quirk, James J.. A contribution to the great Riemann solver debate. International Journal for Numerical Methods in Fluids.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11765,7 +12017,6 @@ Original bibliographic record and abstract; background for shock instability and
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1994-templates1994
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Barrett, Richard and Berry, Michael and Chan, Tony F. and Demmel, James and Donato, June and Dongarra, Jack and Eijkhout, Victor and Pozo, Roldan and Romine, Charles and van der Vorst, Henk. Templates for the Solution of Linear Systems: Building Blocks for Iterative Methods. SIAM.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11775,7 +12026,6 @@ Publicly available author-side reference material for Jacobi, Gauss–Seidel, pr
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1994-weno1994
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Liu, Xu-Dong and Osher, Stanley and Chan, Tony. Weighted Essentially Non-oscillatory Schemes. Journal of Computational Physics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11785,7 +12035,6 @@ Publisher bibliographic record and abstract. Historical introduction to WENO; th
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1996-aliev1996
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Aliev, R. R. and Panfilov, A. V.. A simple two-variable model of cardiac excitation. Chaos, Solitons & Fractals.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11795,7 +12044,6 @@ Physiome-hosted model encoding and bibliographic identification checked; origina
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1996-godlewski1996book
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Godlewski, Edwige and Raviart, Pierre-Arnaud. Numerical Approximation of Hyperbolic Systems of Conservation Laws. Springer.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11805,7 +12053,6 @@ Publisher first-edition record, description and contents checked: Applied Mathem
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1996-jiang1996
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Jiang, Guang-Shan and Shu, Chi-Wang. Efficient Implementation of Weighted ENO Schemes. Journal of Computational Physics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11815,7 +12062,6 @@ Publicly accessible original paper. Reference for WENO5-JS flux reconstruction, 
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1996-liou1996
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Liou, Meng-Sing. A Sequel to AUSM: AUSM+. Journal of Computational Physics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11825,7 +12071,6 @@ Publisher metadata/abstract inspected. AUSM+ is a separately planned extension; 
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1996-ronchi1996
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Ronchi, C. and Iacono, R. and Paolucci, P. S.. The Cubed Sphere: A New Method for the Solution of Partial Differential Equations in Spherical Geometry. Journal of Computational Physics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11835,7 +12080,6 @@ Publisher bibliographic search record checked; full text not inspected. Atlas us
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1996-shewchuk1996
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Shewchuk, Jonathan Richard. Triangle: Engineering a 2D Quality Mesh Generator and Delaunay Triangulator. Springer.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11845,7 +12089,6 @@ Author-hosted paper. Mesh-generation reading reference; the example meshes use M
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1997-ascher1997
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Ascher, Uri M. and Ruuth, Steven J. and Spiteri, Raymond J.. Implicit-explicit Runge-Kutta methods for time-dependent partial differential equations. Applied Numerical Mathematics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11855,7 +12098,6 @@ IMEX RK reading reference; bibliographic metadata checked, full original text no
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1997-banyuls1997
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Banyuls, F. and Font, J. A. and Ibáñez, J. M. and Martí, J. M. and Miralles, J. A.. Numerical 3+1 General Relativistic Hydrodynamics: A Local Characteristic Approach. The Astrophysical Journal.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11865,7 +12107,6 @@ Author-institution bibliographic record checked; formulation context cross-check
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1998-pons1998grriemann
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Pons, J. A. and Font, J. A. and Ibáñez, J. M. and Martí, J. M. and Miralles, J. A.. General Relativistic Hydrodynamics with Special Relativistic Riemann Solvers. Astronomy and Astrophysics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11875,7 +12116,6 @@ Author abstract and original-paper scan inspected for the local Minkowskian-coor
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#1999-komissarov1999rmhd
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Komissarov, S. S.. A Godunov-type scheme for relativistic magnetohydrodynamics. Monthly Notices of the Royal Astronomical Society.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11885,7 +12125,6 @@ Original publisher abstract inspected for multidimensional Godunov-type relativi
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2000-briggs2000book
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Briggs, William L. and Henson, Van Emden and McCormick, Steve F.. A Multigrid Tutorial. SIAM.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11895,7 +12134,6 @@ Publisher book record, contents and front-matter metadata checked. Second editio
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2000-elowitz2000
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Elowitz, Michael B. and Leibler, Stanislas. A synthetic oscillatory network of transcriptional regulators. Nature.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11905,7 +12143,6 @@ Original publisher metadata and abstract checked. Repressilator source; mRNA and
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2000-gardner2000
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Gardner, Timothy S. and Cantor, Charles R. and Collins, James J.. Construction of a genetic toggle switch in Escherichia coli. Nature.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11915,7 +12152,6 @@ Original bibliographic record and abstract checked. Synthetic bistable gene-netw
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2000-toth2000
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Tóth, Gábor. The ∇·B = 0 Constraint in Shock-Capturing Magnetohydrodynamics Codes. Journal of Computational Physics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11925,7 +12161,6 @@ Author-hosted original paper. Reference for CT variants and differences between 
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2000-trefethen2000
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Trefethen, Lloyd N.. Spectral Methods in MATLAB. SIAM.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11935,7 +12170,6 @@ Author-maintained book page checked: SIAM 2000, sample chapters, programs and er
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2001-gottlieb2001ssp
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Gottlieb, Sigal and Shu, Chi-Wang and Tadmor, Eitan. Strong Stability-Preserving High-Order Time Discretization Methods. SIAM Review.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11945,7 +12179,6 @@ Author-hosted original manuscript inspected. Conditional inheritance of forward-
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2001-pandolfi2001
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Pandolfi, Maurizio and D’Ambrosio, Domenic. Numerical Instabilities in Upwind Methods: Analysis and Cures for the “Carbuncle” Phenomenon. Journal of Computational Physics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11955,7 +12188,6 @@ Publisher record and abstract. Linearized shock-instability analysis and localiz
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2001-trottenberg2001
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Trottenberg, Ulrich and Oosterlee, Cornelius W. and Schüller, Anton. Multigrid. Academic Press.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11965,7 +12197,6 @@ Publisher first-edition description and contents checked. Uses the conventional 
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2001-yabe2001csl
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Yabe, T. and Tanaka, R. and Nakamura, T. and Xiao, F.. An Exactly Conservative Semi-Lagrangian Scheme (CIP–CSL) in One Dimension. Monthly Weather Review.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11975,7 +12206,6 @@ Publisher indexed abstract and bibliographic data inspected; full-page retrieval
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2002-dedner2002
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Dedner, Andreas and Kemm, Friedemann and Kröner, Dietmar and Munz, Claus-Dieter and Schnitzer, Thomas and Wesenberg, Matthias. Hyperbolic Divergence Cleaning for the MHD Equations. Journal of Computational Physics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11985,7 +12215,6 @@ Publicly accessible original paper, published in 2002 despite 2001 appearing in 
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2002-guo2002
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Guo, Zhaoli and Zheng, Chuguang and Shi, Baochang. Discrete lattice effects on the forcing term in the lattice Boltzmann method. Physical Review E.
 原著の書誌情報 · 全文または実装の参照資料
@@ -11995,7 +12224,6 @@ Original publisher record and abstract checked. Force discretization source; the
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2002-inutsuka2002
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Inutsuka, Shu-ichiro. Reformulation of Smoothed Particle Hydrodynamics with Riemann Solver. Journal of Computational Physics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12005,7 +12233,6 @@ Author preprint and HTML sections 2–4 inspected for convolution, Gaussian over
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2002-leveque2002
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 LeVeque, Randall J.. Finite Volume Methods for Hyperbolic Problems. Cambridge University Press.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12015,7 +12242,6 @@ Publisher/author bibliographic records and Cambridge front matter checked. Paper
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2002-murray2002
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Murray, J. D.. Mathematical Biology I: An Introduction. Springer.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12025,7 +12251,6 @@ Publisher edition metadata checked: third edition print copyright 2002, later eB
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2002-riddaway2002
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Riddaway, R. W. and Hortal, M.. Numerical methods. ECMWF Meteorological Training Course Lecture Series.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12035,7 +12260,6 @@ Official teaching notes inspected for horizontal staggering and A–E grid relat
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2002-spiteri2002ssp
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Spiteri, Raymond J. and Ruuth, Steven J.. A New Class of Optimal High-Order Strong-Stability-Preserving Time Discretization Methods. SIAM Journal on Numerical Analysis.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12045,7 +12269,6 @@ Publisher record and abstract inspected. SSP methods with more stages than their
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2003-gammie2003harm
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Gammie, Charles F. and McKinney, Jonathan C. and Tóth, Gábor. HARM: A Numerical Scheme for General Relativistic Magnetohydrodynamics. The Astrophysical Journal.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12055,7 +12278,6 @@ Author abstract and publication metadata inspected. Conservative GRMHD, HLL, Tó
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2003-hairer2003
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Hairer, Ernst and Lubich, Christian and Wanner, Gerhard. Geometric numerical integration illustrated by the Störmer–Verlet method. Acta Numerica.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12065,7 +12287,6 @@ Original article hosted by a university course. Reference for symplecticity, rev
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2003-saad2003book
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Saad, Yousef. Iterative Methods for Sparse Linear Systems. SIAM.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12075,7 +12296,6 @@ Publisher second-edition record and author-maintained book page checked; origina
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2004-kageyama2004
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Kageyama, Akira and Sato, Tetsuya. The Yin-Yang Grid: An Overset Grid in Spherical Geometry. Geochemistry, Geophysics, Geosystems.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12085,7 +12305,6 @@ Author preprint inspected for patch bounds, coordinate rotation and vector trans
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2005-duez2005grmhd
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Duez, Matthew D. and Liu, Yuk Tung and Shapiro, Stuart L. and Stephens, Branson C.. Relativistic Magnetohydrodynamics in Dynamical Spacetimes: Numerical Methods and Tests. Physical Review D.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12095,7 +12314,6 @@ Author abstract and journal metadata inspected. Coupled Einstein–Maxwell–MHD
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2005-miyoshi2005
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Miyoshi, Takahiro and Kusano, Kanya. A multi-state HLL approximate Riemann solver for ideal magnetohydrodynamics. Journal of Computational Physics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12105,7 +12323,6 @@ Original HLLD bibliographic record; publisher abstract/metadata, not the complet
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2005-springel2005
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Springel, Volker. The cosmological simulation code GADGET-2. Monthly Notices of the Royal Astronomical Society.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12115,7 +12332,6 @@ Author preprint and publisher record. Reference for TreePM force splitting; the 
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2006-abgrall2006
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Abgrall, Rémi. Residual distribution schemes: Current status and future trends. Computers & Fluids.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12125,7 +12341,6 @@ Author-hosted review. The 2006 date identifies the review, rather than the origi
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2006-hairer2006book
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Hairer, Ernst and Lubich, Christian and Wanner, Gerhard. Geometric Numerical Integration: Structure-Preserving Algorithms for Ordinary Differential Equations. Springer.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12135,7 +12350,6 @@ Publisher second-edition record and description checked. Reading reference for s
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2006-liou2006
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Liou, Meng-Sing. A sequel to AUSM, Part II: AUSM+-up for all speeds. Journal of Computational Physics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12145,7 +12359,6 @@ Publisher metadata/abstract inspected. Planned all-speed AUSM-family extension; 
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2006-noble2006recovery
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Noble, Scott C. and Gammie, Charles F. and McKinney, Jonathan C. and Del Zanna, Luca. Primitive Variable Solvers for Conservative General Relativistic Magnetohydrodynamics. The Astrophysical Journal.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12155,7 +12368,6 @@ Author abstract and journal metadata inspected for nonlinear conserved-to-primit
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2007-hirsch2007
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Hirsch, Charles. Numerical Computation of Internal and External Flows: The Fundamentals of Computational Fluid Dynamics. Butterworth-Heinemann.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12165,7 +12377,6 @@ Publisher edition record and contents checked. Cites the 2007 second-edition fun
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2007-leveque2007
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 LeVeque, Randall J.. Finite Difference Methods for Ordinary and Partial Differential Equations: Steady-State and Time-Dependent Problems. SIAM.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12175,7 +12386,6 @@ Author-maintained book list checked for year, title, DOI and companion materials
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2007-nishikawa2007
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Nishikawa, Hiroaki. A first-order system approach for diffusion equation. I: Second-order residual-distribution schemes. Journal of Computational Physics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12185,7 +12395,6 @@ Original publisher metadata and abstract checked, full text not audited. The atl
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2008-borges2008
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Borges, Rafael and Carmona, Monique and Costa, Bruno and Don, Wai Sun. An improved weighted essentially non-oscillatory scheme for hyperbolic conservation laws. Journal of Computational Physics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12195,7 +12404,6 @@ Original 2008 publisher metadata/abstract inspected. A public 2006 three-author 
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2008-font2008grhd
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Font, José A.. Numerical Hydrodynamics and Magnetohydrodynamics in General Relativity. Living Reviews in Relativity.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12205,7 +12413,6 @@ Open author review inspected for formulations and historical context. Explicitly
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2008-hesthaven2008book
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Hesthaven, Jan S. and Warburton, Tim. Nodal Discontinuous Galerkin Methods: Algorithms, Analysis, and Applications. Springer.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12215,7 +12422,6 @@ Publisher copyright-edition record and contents checked: 2008. Reading reference
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2008-nishikawa2008
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Nishikawa, Hiroaki and Kitamura, Keiichi. Very simple, carbuncle-free, boundary-layer-resolving, rotated-hybrid Riemann solvers. Journal of Computational Physics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12225,7 +12431,6 @@ Publisher bibliographic record and abstract. The 2D rotated solver and carbuncle
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2009-gottlieb2009ssp
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Gottlieb, Sigal and Ketcheson, David I. and Shu, Chi-Wang. High Order Strong Stability Preserving Time Discretizations. Journal of Scientific Computing.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12235,7 +12440,6 @@ Author-hosted 2008 draft of the 2009 review inspected. Section 3.1 supplies the 
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2009-koyama2009
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Koyama, Hiroshi and Ostriker, Eve C.. Gas Properties and Implications for Galactic Star Formation in Numerical Models of the Turbulent, Multiphase Interstellar Medium. The Astrophysical Journal.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12245,7 +12449,6 @@ Published in 2009, with a December 2008 preprint. Section 2.3 and Appendix A giv
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2009-toro2009
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Toro, Eleuterio F.. Riemann Solvers and Numerical Methods for Fluid Dynamics: A Practical Introduction. Springer.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12255,7 +12458,6 @@ Publisher bibliographic record. Background for exact Riemann solutions and the s
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2009-williams2009
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Williams, Paul D.. A Proposed Modification to the Robert–Asselin Time Filter. Monthly Weather Review.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12265,7 +12467,6 @@ Publisher record identifies the time-filter paper. The ODE laboratory uses unfil
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2010-durran2010
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Durran, Dale R.. Numerical Methods for Fluid Dynamics: With Applications to Geophysics. Springer.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12275,7 +12476,6 @@ Publisher second-edition copyright record and description checked. Retitled revi
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2010-mignone2010glm
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Mignone, Andrea and Tzeferacos, Petros. A second-order unsplit Godunov scheme for cell-centered MHD: The CTU-GLM scheme. Journal of Computational Physics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12285,7 +12485,6 @@ Public author manuscript inspected for the conservative GLM equations and longit
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2010-nishikawa2010
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Nishikawa, Hiroaki. A first-order system approach for diffusion equation. II: Unification of advection and diffusion. Journal of Computational Physics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12295,7 +12494,6 @@ Original publisher metadata and abstract checked. Publication year is 2010 despi
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2010-zhangshu2010euler
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Zhang, Xiangxiong and Shu, Chi-Wang. On positivity-preserving high order discontinuous Galerkin schemes for compressible Euler equations on rectangular meshes. Journal of Computational Physics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12305,7 +12503,6 @@ Author-hosted manuscript inspected. Convex admissible Euler states, mean-preserv
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2011-iwasaki2011gsph
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Iwasaki, Kazunari and Inutsuka, Shu-ichiro. Smoothed particle magnetohydrodynamics with a Riemann solver and the method of characteristics. Monthly Notices of the Royal Astronomical Society.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12315,7 +12512,6 @@ Author preprint inspected for the split between compressive Riemann interactions
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2011-johnson2011
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Johnson, Kenneth A. and Goody, Roger S.. The Original Michaelis Constant: Translation of the 1913 Michaelis–Menten Paper. Biochemistry.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12325,7 +12521,6 @@ Translation bibliographic record checked. This is a 2011 translation/commentary 
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2013-golub2013
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Golub, Gene H. and Van Loan, Charles F.. Matrix Computations. Johns Hopkins University Press.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12335,7 +12530,6 @@ Fourth-edition publication and contents checked in the SIAM distribution record;
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2013-sadowski2013radiation
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Sądowski, Aleksander and Narayan, Ramesh and Tchekhovskoy, Alexander and Zhu, Yucong. Semi-implicit scheme for treating radiation under M1 closure in general relativistic conservative fluid dynamics codes. Monthly Notices of the Royal Astronomical Society.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12345,7 +12539,6 @@ Author abstract and public original inspected for covariant M1 radiation moments
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2013-wan2013icon
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Wan, H. and Giorgetta, M. A. and Zängl, G. and Restelli, M. and Majewski, D. and Bonaventura, L. and Fröhlich, K. and Reinert, D. and Rípodas, P. and Kornblueh, L. and Förstner, J.. The ICON-1.2 hydrostatic atmospheric dynamical core on triangular grids – Part 1: Formulation and performance of the baseline version. Geoscientific Model Development.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12355,7 +12548,6 @@ Official model-description record and abstract checked for the triangular-grid C
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2015-schneider2015cholla
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Schneider, Evan E. and Robertson, Brant E.. Cholla: A New Massively-Parallel Hydrodynamics Code for Astrophysical Simulation. The Astrophysical Journal Supplement Series.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12365,7 +12557,6 @@ The publicly available accepted author manuscript, especially Appendix A, was in
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2015-teukolsky2015
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Teukolsky, Saul A.. Short note on the mass matrix for Gauss-Lobatto grid points. Journal of Computational Physics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12375,7 +12566,6 @@ Author preprint posted in December 2014, full HTML consulted. Explains exact and
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2016-fitzpatrick2016
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Fitzpatrick, Richard. Fluid Equations in Cylindrical Coordinates. University of Texas at Austin.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12385,7 +12575,6 @@ Author lecture notes, dated January 22, 2016. Reference for cylindrical fluid op
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2018-kuya2018
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Kuya, Yuichi and Totani, Kosuke and Kawai, Soshi. Kinetic energy and entropy preserving schemes for compressible flows by split convective forms. Journal of Computational Physics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12395,7 +12584,6 @@ DOI identifies the original 2018 paper. The authors’ 2022 conference explanati
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2019-bemfica2019causality
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Bemfica, Fábio S. and Disconzi, Marcelo M. and Noronha, Jorge. Nonlinear causality of general first-order relativistic viscous hydrodynamics. Physical Review D.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12405,7 +12593,6 @@ Original author abstract and publisher record inspected. A first-gradient consti
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2019-kovtun2019stable
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Kovtun, Pavel. First-order relativistic hydrodynamics is stable. Journal of High Energy Physics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12415,7 +12602,6 @@ Author abstract and publisher record inspected for stable first-order hydrodynam
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2020-ferziger2020
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Ferziger, Joel H. and Perić, Milovan and Street, Robert L.. Computational Methods for Fluid Dynamics. Springer.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12425,7 +12611,6 @@ Publisher edition metadata and contents checked. Uses the fourth-edition copyrig
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2020-fest2020ausm
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 FEST-3D Team. FEST-3D documented AUSM source. .
 原著の書誌情報 · 全文または実装の参照資料
@@ -12435,7 +12620,6 @@ Official source documentation generated 10 February 2020. Consulted to cross-che
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2020-saito2020rcip
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Saito, Fuyuki and Obase, Takashi and Abe-Ouchi, Ayako. Implementation of the RCIP scheme and its performance for 1-D age computations in ice-sheet models. Geoscientific Model Development.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12445,7 +12629,6 @@ Open primary paper inspected. CIP-family value/gradient transport, velocity-grad
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2021-mignone2021uct
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Mignone, Andrea and Del Zanna, Luca. Systematic construction of upwind constrained transport schemes for MHD. Journal of Computational Physics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12455,7 +12638,6 @@ Public 2020 author manuscript inspected, especially CT-Contact equations 20-22. 
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2021-shima2021
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Shima, Nao and Kuya, Yuichi and Tamaki, Yoshiharu and Kawai, Soshi. Preventing spurious pressure oscillations in split convective form discretization for compressible flows. Journal of Computational Physics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12465,7 +12647,6 @@ Author-university publication record; published in 2021 despite 2020 in the DOI.
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2022-deppe2022dgfd
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Deppe, Nils and Hébert, François and Kidder, Lawrence E. and Teukolsky, Saul A.. A high-order shock capturing discontinuous Galerkin-finite-difference hybrid method for GRMHD. Classical and Quantum Gravity.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12475,7 +12656,6 @@ Author abstract and publication link inspected. Preprint 2021, journal publicati
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2022-kuya2022keep
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Kuya, Yuichi and Kawai, Soshi. Stable and non-dissipative kinetic-energy and entropy preserving (KEEP) schemes for compressible flows. Eleventh International Conference on Computational Fluid Dynamics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12485,7 +12665,6 @@ Official conference paper, inspected in full. Section 2.2 Eq. (9) specifies the 
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2022-quokka2022
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Wibking, Benjamin D. and Krumholz, Mark R.. quokka: a code for two-moment AMR radiation hydrodynamics on GPUs. Monthly Notices of the Royal Astronomical Society.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12495,7 +12674,6 @@ Section 3.1.5 of the public paper is the reference for the adopted Shu–Osher p
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2022-tamaki2022
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Tamaki, Yoshiharu and Kuya, Yuichi and Kawai, Soshi. Comprehensive analysis of entropy conservation property of non-dissipative schemes for compressible flows: KEEP scheme redefined. Journal of Computational Physics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12505,7 +12683,6 @@ Author-university record and abstract. Analyzes entropy-error terms and redefine
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2023-foucart2023neutrino
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Foucart, Francois. Neutrino transport in general relativistic neutron star merger simulations. Living Reviews in Computational Astrophysics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12515,7 +12692,6 @@ Open author review inspected for leakage, moment, and Monte Carlo transport, inc
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2024-asada2024
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Asada, Hiroyuki and Maruyama, Kanako and Kawai, Soshi. Temporal discretization for improving kinetic-energy and entropy preservation properties in KEEP schemes. Computers & Fluids.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12525,7 +12701,6 @@ Publisher record and abstract. Published in 2024 despite 2023 in the DOI. The au
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2024-deppe2024bns
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Deppe, Nils and Foucart, Francois and Bonilla, Marceline S. and others. Binary neutron star mergers using a discontinuous Galerkin-finite difference hybrid method. .
 原著の書誌情報 · 全文または実装の参照資料
@@ -12535,7 +12710,6 @@ Author abstract inspected. Cited as the June 2024 preprint, updated September 20
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2025-cao2025pcpdg
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Cao, Huihui and Peng, Manting and Wu, Kailiang. Robust discontinuous Galerkin methods maintaining physical constraints for general relativistic hydrodynamics. Journal of Computational Physics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12545,7 +12719,6 @@ Publisher abstract, highlights, and record inspected. PCP/OEDG GRHD and primitiv
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2025-fields2025athenak
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Fields, Jacob and Zhu, Hengrui and Radice, David and Stone, James M. and Cook, William and Bernuzzi, Sebastiano and Daszuta, Boris. Performance-Portable Binary Neutron Star Mergers with AthenaK. The Astrophysical Journal Supplement Series.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12555,7 +12728,6 @@ Author abstract and journal reference checked November 2026. Preprint 2024, jour
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2025-kalinani2025asterx
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Kalinani, Jay V. and Ji, Liwei and Ennoggi, Lorenzo and others. AsterX: a new open-source GPU-accelerated GRMHD code for dynamical spacetimes. Classical and Quantum Gravity.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12565,7 +12737,6 @@ Author paper and institution metadata inspected. Online December 2024, 2025 jour
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2026-amrvaclimiters
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 MPI-AMRVAC Team. Slope Limiters. .
 原著の書誌情報 · 全文または実装の参照資料
@@ -12575,7 +12746,6 @@ Official code documentation inspected in November 2026; access year only. Implem
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2026-clawpacklimiters
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Clawpack Development Team. Pyclaw Limiters. .
 原著の書誌情報 · 全文または実装の参照資料
@@ -12585,7 +12755,6 @@ Official implementation documentation inspected in November 2026; this is an acc
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2026-kitajima2026srgsph
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Kitajima, Kanta and Inutsuka, Shu-ichiro and Seno, Izumi. Special relativistic smoothed particle hydrodynamics based on Riemann solver. Journal of Computational Physics.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12595,7 +12764,6 @@ Publisher record and author abstract checked 6 November 2026. Journal issue 15 J
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2026-mitgcm-c-grid
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 MITgcm contributors. C grid staggering of variables. MITgcm documentation.
 原著の書誌情報 · 全文または実装の参照資料
@@ -12605,7 +12773,6 @@ Official living documentation checked on 6 November 2026. Year denotes access, n
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2026-musolino2026grace
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Musolino, Carlo and Ecker, Christian and Topolski, Konrad and Cassing, Marie and Miler, Keneth and Ng, Harry Ho-Yin and Pierre, Khalil and Most, Elias R. and Rezzolla, Luciano. Open-source framework for GPU-accelerated numerical relativity. Physical Review D (accepted).
 原著の書誌情報 · 全文または実装の参照資料
@@ -12615,7 +12782,6 @@ APS accepted-paper page checked 6 November 2026: accepted 2 November 2026, not a
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2026-nist-orthogonal
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 NIST Digital Library of Mathematical Functions. Classical orthogonal polynomials: definitions, weights and recurrence relations. .
 原著の書誌情報 · 全文または実装の参照資料
@@ -12625,7 +12791,6 @@ Living mathematical reference, checked November 2026. Sections 18.2, 18.3 and 18
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2026-numipediark
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Ketcheson, David I.. Numipedia: Runge–Kutta method records. .
 原著の書誌情報 · 全文または実装の参照資料
@@ -12635,17 +12800,23 @@ Author-maintained coefficient and stability records inspected in November 2026; 
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/#2026-powell2026
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Powell, Ken. Philip Lawrence Roe, Professor Emeritus of Aerospace Engineering at the University of Michigan, passed away April 26, 2026, at the age of 87. University of Michigan Aerospace Engineering.
 原著の書誌情報 · 全文または実装の参照資料
 Official university memorial published April 29, 2026. A biographical source, not a numerical-method research paper.
 
+## 相対論的流体力学：SRHD、GRHD、GRMHD [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/relativistic-hydrodynamics/
+Coverage: reading
+
+解説章公開コード・データ / Public code and data
+日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
+
 ## 相対論的流体力学：SRHD、GRHD、GRMHD — 相対論的流体力学：SRHD、GRHD、GRMHD [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/relativistic-hydrodynamics/
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 2026年11月6日確認の文献調査。 アトラスのNewton力学的Eulerライブラリには未実装です。保存的衝撃波捕獲、曲がった・動く幾何、磁場制約、物理状態回復、高次法、放射、可搬並列計算が相互に発展してきました。出版、プレプリント、受理の年を区別する、選定した読書の道案内であり、網羅調査やコードの順位ではありません。
 
@@ -12653,7 +12824,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/relativistic-hydrodynamics/#what-changes-from-the-existing-euler-examples
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 SRHDは平坦時空の相対論的物質、GRHDは与えた、またはEinstein方程式で進める曲がった計量、GRMHDは電磁寄与も扱います。Kerr背景の降着と動的時空の連星中性子星では、検証する系が異なります。
 c=G=1、計量符号(−,+,+,+)の理想流体方程式は、
@@ -12671,7 +12841,6 @@ D=\rho_0W,\quad S_i=\rho_0hW^2v_i,\quad
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/relativistic-hydrodynamics/#19721998-from-curved-background-flows-to-conservative-hrsc
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Wilson（1972）はKerrブラックホールへの気体落下の初期計算です。歴史的背景であり、固定背景流体が動的Einstein系全体を解くという意味ではありません。
 高解像度衝撃波捕獲（HRSC）は古典CFDの特性・保存法を相対論へ移します。Martí・Müller（1994）の厳密SRリーマン解は初期不連続に垂直な流れを対象とします。横速度のある多次元テストでは範囲が重要で、一般の横流れリーマン解ではありません。
@@ -12681,7 +12850,6 @@ Banyulsら（1997）は、Valenciaと呼ばれる3+1局所特性形式を示し�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/relativistic-hydrodynamics/#19992006-magnetic-constraints-and-dynamical-spacetime
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Komissarov（1999）は磁束保存を持つ多次元Godunov型相対論MHDを開発します。HARM、Gammie–McKinney–Tóth（2003）は保存形GRMHD、HLL、Tóth型CTを組み合わせ、ブラックホールトーラスなどを計算します。原型と後の動的時空の枠組みを区別します。
 Duezら（2005）は、時空にBSSN、物質に保存的衝撃波捕獲を使い、結合Einstein–Maxwell–MHDを進めます。物質と幾何が動的に影響し合うために必要な追加段階です。
@@ -12691,7 +12859,6 @@ Duezら（2005）は、時空にBSSN、物質に保存的衝撃波捕獲を使�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/relativistic-hydrodynamics/#20112026-the-particle-branch-from-gsph
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Inutsukaの原GSPHから、リーマン問題とAlfvén特性線を使うNewton粒子MHDのIwasaki–Inutsuka（2011）へ進みます。この方法自体は相対論的ではありません。
 Kitajima–Inutsuka–Seno（2026）は**特殊相対論的Godunov SPH（SRGSPH）**を定式化します。畳み込み相互作用、不等バリオン数、可変平滑化長を、衝撃波管・Kelvin–Helmholtz例で扱い、粒子と相対論の分岐を直接つなぎます。プレプリントは2025年10月、掲載号は2026年1月で、DOIの2025表記と異なります。GRHD実装とは呼べません。
@@ -12700,7 +12867,6 @@ Kitajima–Inutsuka–Seno（2026）は**特殊相対論的Godunov SPH（SRGSPH�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/relativistic-hydrodynamics/#2013-onward-radiation-and-microphysics-add-stiff-systems
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Sądowskiら（2013）は、半陰的相互作用ソースを持つKORALの共変M1放射モーメントを説明します。相対論流体とアトラスの陰解法・IMEXの計画をつなぎます。M1は角度モーメントの閉包で、放射分布全体を近似なしに解くものではありません。
 中性子星合体についてFoucart（2023）は、leakage、モーメント、Monte Carloニュートリノ輸送と相互作用モデルの限界を総説します。有限温度EOS表、組成、輸送、不確かさはリーマン流束の選択とは別の発展です。理想相対論流体から、因果的な粘性理論が自動的に得られるわけでもありません。
@@ -12709,7 +12875,6 @@ Sądowskiら（2013）は、半陰的相互作用ソースを持つKORALの共�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/relativistic-hydrodynamics/#a-parallel-19792019-branch-causal-viscous-fluid-theory
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Newton流体の粘性応力を、因果性・初期値問題を調べずに相対論Eulerへ入れることはできません。Israel–Stewart（1979）は追加緩和変数を持つ過渡散逸理論の中心的出典です。
 Bemfica–Disconzi–Noronha（2019）とKovtun（2019）は別の系譜で、適切な1階勾配の構成選択と流体フレームが、条件付きで因果的・安定な形式を可能にします。前者は追加拡張変数なしの非線形因果性、後者は安定な1階フレームを扱います。任意EOS・輸送に対する無条件の主張へ合体させてはいけません。物理因果性、PDEの適切性、離散刻みの安定性は別の検査です。理論・読書の背景で、粘性相対論ソルバーは未実装です。
@@ -12718,7 +12883,6 @@ Bemfica–Disconzi–Noronha（2019）とKovtun（2019）は別の系譜で、�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/relativistic-hydrodynamics/#20222025-high-order-with-shocks-surfaces-and-physical-constraints
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Deppeら（2022）は、高次DG更新を試し、不適切な領域を頑健な差分で再計算するDG–FD混合法です。2021年プレプリントと2022年出版を区別します。連星中性子星研究の2024年プレプリントは、動的時空・合体へ拡張します。後者はプレプリントとして引用し、別の学術誌記録は本調査では未確認です。
 Cao–Peng–Wu（2025）は、GRHDの物理制約保存・振動除去DGを研究し、方式の仮定下で正の熱力学状態と光速未満の速度を扱います。任意の制限関数、流束、EOS、時空離散化への保証ではありません。選んだGRHD形式の定理と、天体合体コードの実演は別の根拠です。
@@ -12727,7 +12891,6 @@ Cao–Peng–Wu（2025）は、GRHDの物理制約保存・振動除去DGを研�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/relativistic-hydrodynamics/#20252026-portable-gpu-computation-of-the-coupled-system
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 AthenaK、Fieldsら（2025）はGPU上の動的時空GRMHDと連星中性子星合体を実演し、CTと1次流束補正などを使います。プレプリントは2024年、学術誌はApJS 276、35（2025）です。AsterX、Kalinaniらの2025年掲載号も公開GPU向けGRMHDで、ValenciaとZ4cに基づきます。オンライン出版は2024年12月です。細分化基盤は原コードの一部で、このアトラスのAMRは引き続き保留です。
 GRACE、Musolinoらは、11月6日確認時点で2026年11月2日にPhysical Review Dで受理されています。2026年7月プレプリントはKokkos可搬性、CT、Z4c結合、中性子星合体を説明します。受理は最終巻・ページの確認ではありません。これらは可搬実装の例であり、異なるハードウェア・物理間の普遍的な速度・精度順位ではありません。
@@ -12736,7 +12899,6 @@ GRACE、Musolinoらは、11月6日確認時点で2026年11月2日にPhysical Rev
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/relativistic-hydrodynamics/#what-the-atlas-can-reproduce-in-stages
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 以下は実装案で、本調査の計算結果ではありません。
 SRHD：基本・保存変数の往復、特性速度、滑らかな波、衝撃波管、反射、横速度例。EOSの有効性、正密度・正圧、光速未満を確認します。
@@ -12746,11 +12908,18 @@ SRMHD：相対論Alfvén波、磁場衝撃波管、ローターを加え、磁�
 放射またはSRGSPH：状態、境界、保存、輸送閉包、参照テストを各分岐で明示します。Newton例は比較に使い、相対論ソルバーが既にある根拠にはしません。
 進歩はこれらの層の組合せから生まれます。新しい高次再構成や大きなGPU計算だけでは、基本変数回復、表面・大気処理、制約誤差、微視的物理の不確かさは解消しません。
 
+## v0.1.0 初版 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/release-notes-v0.1.0/
+Coverage: reading
+
+解説章公開コード・データ / Public code and data
+日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
+
 ## v0.1.0 初版 — v0.1.0 初版 [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/release-notes-v0.1.0/
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 初版The Art of Numerical Algorithmsは、歴史的な論文を、方程式、実行可能な教育用実装、テスト図、数値検証へ結び付けました。
 
@@ -12758,7 +12927,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/release-notes-v0.1.0/#included
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 保存則、安定性、拡散、境界、反復、DG、スペクトル、MHDを扱う英語の歴史アトラスと計算法ノート。
 Euler、浅水、等温、線形移流、拡散、Poisson、平面理想MHDのPythonライブラリとCLI。
@@ -12773,7 +12941,6 @@ Python3.9・3.12の自動数値検査とギャラリー生成。
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/release-notes-v0.1.0/#install-and-run
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Python3.9以降が必要です。リポジトリのルートで実行します。
 python3 -m venv .venv
@@ -12787,16 +12954,22 @@ python -m numart.cli gallery --output outputs/gallery
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/release-notes-v0.1.0/#scope-of-this-edition
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 独立した教育用モデルで、図は原論文図の再現を主張しません。選定した設定の検証であり、一般的な非線形安定性や正値性を証明するものではありません。有限体積・差分の誤差は点値比較と明示し、CT／GLMは発散演算子名を示します。
 NASA流れ、多次元Euler回転ハイブリッド、低Mach PDE前処理、Euler／MHD DG、多次元残差分配は今後の課題です。ロードマップと、原典の未確認事項を記した参考文献を参照してください。
+
+## 実装ロードマップ [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/
+Coverage: reading
+
+解説章公開コード・データ / Public code and data
+英語原文が更新されています。この日本語訳は旧版に対応します。
 
 ## 実装ロードマップ — 現在の最優先：衝撃波手法# [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/#current-priority-shock-methods
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 相対論・新分野より、衝撃波手法の拡充を優先します。最初の公開段階として制限付き放物線FV・特性変数・WENO-Z・AUSM基準例、数値反例を含むRoeのProperty U、管理した平面odd–even診断を追加しました。第2段階では、急峻化・平坦化を独立に切り替える直接Euler型波追跡PPM、定義を明示したAUSM+／AUSM+-up、方向分解HLLE/Roe実験を含む物体適合格子の円柱前半部を追加しました。強圧力差でのAUSM+停止、有限時刻の弓形衝撃波、未解決の検証を明示します。Lagrange/remap、原型Rotated-RHLLの最適化、幅広い強度・回転条件、外部コード比較は今後です。
 
@@ -12804,7 +12977,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/#first-edition-executable-foundations
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 v0.1.0は教育用Pythonライブラリ、歴史アトラス、英語解説、文献カタログ、比較図、自動数値検査をまとめています。リポジトリが初版配布物で、READMEのガイドが資料をつなぎます。
 NASA問題集には計算済みの15°楔の基準例と未実装候補が含まれます。別の物体適合格子の前面診断に方向分解ハイブリッドを追加しました。カタログへの収録だけでは、引き続き実装済みを意味しません。
@@ -12813,7 +12985,6 @@ NASA問題集には計算済みの15°楔の基準例と未実装候補が含ま
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/#next-verification-work
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 計算記録と保存配列を強く結び、格子・時間細分化と実行時間を併記します。
 有限体積セル平均の初期化・積分参照、特性WENO、正値制限、強い衝撃波テストを加えます。
@@ -12827,7 +12998,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/#suggested-order-for-nasa-cases
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 楔・膨張で2次元Euler流束と壁境界を検証し、キャビティ・Blasiusで粘性・圧力・境界を整え、円柱で非定常精度を調べます。RANSでは平板・バンプでモデル実装を確認してから、翼型、ステップ、ディフューザー、ハンプへ進みます。依存関係と難しさに沿う順序で、出版年順の歴史を補います。
 
@@ -12835,7 +13005,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/#shock-gallery-nasa-wedges-and-a-forward-facing-step
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 NASAの15°楔、Mach 2.0／2.5を、独立した物体適合1次HLL・SSPRK2有限体積法で計算し、2格子と斜め衝撃波の参照を追加しました。古典的Mach 3前向きステップは240 × 80の障害物セル格子でt=4まで計算し、81保存状態とMP4を追加して動画は合計5本になりました。ステップ角は通常の反射境界で、元のPPM比較のエントロピー・エンタルピー再設定は使いません。教育用の非粘性基準例であり、Wind-US出力や粘性実験の妥当性確認ではありません。設定と限界を参照してください。Mach 5衝撃波・境界層干渉、Mach 7粘性ランプ、既存の遷音速ディフューザー・翼型は実装候補です。
 
@@ -12843,7 +13012,6 @@ NASAの15°楔、Mach 2.0／2.5を、独立した物体適合1次HLL・SSPRK2有
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/#web-edition
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Web版は、初版を歴史アトラス、解説、計算図、文献検索に整理します。各展示が文献・方程式・実行・図・検証範囲をつなぎます。
 ホームのSod比較はPython計算済みMUSCL密度4曲線を切り替えます。図と初期ギャラリー検証記録も完全なソース版とともに公開します。今後も、検証した教育例、原論文図の再現、試作、文献のみ、計画を区別します。
@@ -12852,7 +13020,6 @@ Web版は、初版を歴史アトラス、解説、計算図、文献検索に�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/#first-expansion-interactive-numerical-notebooks
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 安定性実験室はブラウザーで周期FTCS・風上・古典LF・LWを計算し、両速度方向、Fourier増幅、点値誤差、データ保存を提供します。Python24参照ケースと数値カーネルを比較しています。
 収束ノートは既存DG・Eulerエントロピー波の測定値、実測傾き、スカラー未知数を調べられます。新しい実行時間順位や一般的非線形安定性は主張しません。実験ガイドに定義と来歴があります。
@@ -12861,7 +13028,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/#second-expansion-geometry-time-and-multidimensional-shocks
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 スカラーODE積分器7種と時間ノート、格子接続3例とエクスプローラー、1次元SPH再構成、1次元ALE幾何保存、円筒勾配・Newton応力・応力発散の解析検証を追加しました。座標・粘性の章は物理成分と座標基底を区別します。
 二重Mach反射は1次HLL・SSPRK2でMach10干渉を実際に計算します。高次再構成、完全格子収束、細い壁面ジェットは今後で、NASA楔の基準例は後に追加しましたが、カタログの粘性・乱流問題は未実装です。平面診断を超える鈍頭物体カーバンクル比較、完全SPH、非構造流束、完全ALE Eulerも今後です。Roe追悼は大学の公式記録に基づきます。
@@ -12870,7 +13036,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/#third-expansion-hamiltonian-maps-and-particle-gravity
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 調和・4次振動子の固定刻み正準写像とノート、周期3次元CIC／FFT PM、単極・全2次モーメントの孤立軟化八分木、孤立倍格子畳み込み、標本・連続スラブGreen変換を追加しました。図には専用ソース記録があります。P³M補正、結合TreePM、FMM移動、宇宙膨張、せん断周期再配置、重力結合SPH流体積分は今後の課題です。
 
@@ -12878,7 +13043,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/#fourth-expansion-nonsteady-movies-and-smooth-keep
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 計算刻みを変えない保存状態、フレーム検査・MP4付き4動画、原型2次直交KEEPと滑らかな渦の収束を追加しました。定常場は静止図です。KEEPは衝撃波安定化、後のPEP・再定義、高次曲線形、3次元TGV／LESを含みません。
 
@@ -12886,7 +13050,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/#fifth-expansion-limiters-rk-families-and-cip
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 MUSCL勾配の選択、TVB修正minmodと正値再構成、非線形段階検証付き9陽的RK係数表、12振動子手法、保存性反例付き原型3次Hermite CIPを追加しました。Euler時間更新全体の正値性は別の拡張です。
 
@@ -12894,7 +13057,6 @@ MUSCL勾配の選択、TVB修正minmodと正値再構成、非線形段階検証
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/#sixth-expansion-equations-sparse-systems-and-kinetic-transport
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Burgers・LWR交通流を含む7系統9ケースの保存分布を追加しました。スカラー厳密セル平均と、Euler・浅水・等温の半解析Riemann参照解の保存変数セル平均を区別します。参照解ライブラリには、真空・乾床の膨張波、粘性速度分布、Poisson製造解を含む18ケースを追加しました。
 連続P1 FEM、疎行列・非線形解法、硬いODE、周期MAC射影、D2Q9–BGK、1次双曲型拡散に専用検査・図・ソースハッシュがあります。Chapman–Enskog展開は測定したせん断粘性へつなぐ形式導出です。これらの教育用実装は新しいアトラスで公開済みです。各章に実装範囲と残る検証を示しています。
@@ -12903,7 +13065,6 @@ Burgers・LWR交通流を含む7系統9ケースの保存分布を追加しま�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/#authorized-next-work
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 追加済み — RoeのProperty U：原典の4条件、パラメータベクトルの導出、ジャンプ・整合性・固有基底の検査、膨張不連続の反例。解説を参照。
 InutsukaのGSPH：Gaussian畳み込み、比体積再構成、向き付き粒子対リーマン状態、整合保存エネルギー更新を、可変平滑化長の前に滑らか・接触・衝撃波管で検証します。Iwasaki–InutsukaのGSPMHDは後の独立段階です。出典と計画。
@@ -12925,7 +13086,6 @@ LBM：低Mach等温D2Q9–BGKを超えるMRT／TRT／キュムラント、熱的
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/#biological-and-geophysical-survey-additions
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 生物カタログは22系統を文献のみで整理し、方程式、出典規約、検証案を含みます。実装順はロジスティック／SIR・酵素反応からFisher前線、FitzHugh–Nagumo、Schnakenberg、Keller–Segelへ進め、出生・死亡SSAを独立した確率分岐とします。生物ソルバーや生物の妥当性確認は追加していません。
 Arakawa A／B／Cは配置図と検証済み半離散f平面記号を持ちます。D／E、鉛直配置、非線形渦位、Kelvin／Rossby、海岸は追加課題で、完全な地球流体コアではありません。
@@ -12934,7 +13094,6 @@ Arakawa A／B／Cは配置図と検証済み半離散f平面記号を持ちま�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/#planned-machine-learning-numerics
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 状態：改訂候補。以下の専用解説・実装・検証はまだ追加していません。 第1巻の共通基盤につながる安定な関数評価、自動微分、最適化を先に扱い、科学技術機械学習の応用は後続の候補とします。予定項目を実装済み手法数には加えず、公開時期も未定です。
 混合精度演算・低精度GPU計算の設計は、今回のスコープから外します。通常の浮動小数点の丸め誤差と、安定な関数評価は共通基礎として扱います。
@@ -12951,7 +13110,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/#planned-quantum-chemistry-and-dft
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 状態：予定。実装と専用の文献調査は未着手で、公開時期は未定です。 電子状態計算を独立した分岐として、次の開発リストに記録します。予定項目を現在の実装済み手法数や方程式数には加えません。
  Schrödinger固有値問題：調和振動子、水素型原子の動径問題などの1電子モデルから開始。有限差分・有限要素・スペクトル離散化を比較し、境界・領域打切り・解像度の誤差を分けて記録します。
@@ -12968,7 +13126,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/#verified-euler-and-mhd-comparisons
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 2次元基本変数MUSCLのminmod／MC、厳密セル平均の滑らかな解の細分化、NASA楔の2格子での1次・2次再構成比較、前向きステップの3再構成動画を追加しました。比較ページではHLL／SSPRK2を固定し、診断値を表示します。完全な3成分のHLLD、Brio–Wu、4格子の円偏波Alfvén波、2格子の弱い磁場ループでのHLLE／HLLD × CT-Contact／GLMを追加しました。MHDページにはソース・成果物ハッシュ、保存変数配列、正値性・再試行・切替診断と日英の適用範囲があります。合意したWebの3段階を完了し、書籍は後回しです。
 
@@ -12976,15 +13133,21 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/#same-system-poisson-solvers
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 比較ノートに、Jacobi・重み付きJacobi・赤黒GS／SOR・CG・V-cycle・FFT／DST・分離DST＋Thomasを追加しました。同じ残差停止条件、2つの広帯域問題、単一固有モード診断、3回の時間計測と1次元Thomas表を備えます。定義と限界を参照してください。
+
+## Philip L. Roeを偲んで [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roe-memorial/
+Coverage: reading
+
+解説章公開コード・データ / Public code and data
+日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 ## Philip L. Roeを偲んで — Philip L. Roeを偲んで [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roe-memorial/
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Philip Lawrence Roeは2026年4月26日、87歳で逝去しました。Michigan大学のKen Powellによる追悼は、航空宇宙、数値計算法、教育、数値流体の共同体への貢献を記しています。
 このアトラスは、方程式の波構造を保ちながら実用的な計算をどう実現するか、という中心的な問いを通してRoeを偲びます。
@@ -12993,7 +13156,6 @@ Philip Lawrence Roeは2026年4月26日、87歳で逝去しました。Michigan�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roe-memorial/#a-career-in-computational-fluid-dynamics
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 1962〜1984年にRoyal Aircraft Establishmentで勤務し、Cranfield教授を経て1990年にMichigan大学へ移り、2021年に退職しました。大学の公式退職記録はこの経歴と2015年AIAA Fluid Dynamics Awardを記します。追悼にはBram van Leer、Ken PowellとKeck CFD研究室を設立した役割もあります。
 
@@ -13001,7 +13163,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roe-memorial/#the-1981-idea-still-executable
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Approximate Riemann solvers, parameter vectors, and difference schemesで、非線形界面問題を注意深く構成した線形化系へ置き換える方法を発展させました。定義的条件のひとつは、
 \widetilde A(U_L,U_R)(U_R-U_L)=F(U_R)-F(U_L).
@@ -13012,17 +13173,23 @@ Approximate Riemann solvers, parameter vectors, and difference schemesで、非�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roe-memorial/#precision-as-a-form-of-respect
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 近似ソルバーを有用にする波解像度は、エントロピー、低密度、多次元衝撃波への精密な問いを促します。カーバンクルの章は別々の数値課題として後の研究へつなぎます。限界を学ぶことも貢献の理解の一部です。
 後の関心にはActive Fluxがあり、Michigan MICDEの紹介が大学の出発点になります。ここでは読書の方向で、実装済みではありません。
 原典を読み、方程式を確かめ、計算を検証し続けるための招きとして、この解説のRoeノートをその記憶へ捧げます。
 
+## Runge–Kutta法：段数、次数、安定性、SSP [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/runge-kutta/
+Coverage: reading
+
+解説章公開コード・データ / Public code and data
+英語原文が更新されています。この日本語訳は旧版に対応します。
+
 ## Runge–Kutta法：段数、次数、安定性、SSP — Runge–Kutta法：段数、次数、安定性、SSP [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/runge-kutta/
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 RK2・RK4は次数、SSPは安定性の継承を表し、異なる問いに答えます。RK系譜ノートでは、9つの陽解法の全段階係数、非線形予測値、線形安定領域、実測収束次数を比べます。
 
@@ -13030,7 +13197,6 @@ RK2・RK4は次数、SSPは安定性の継承を表し、異なる問いに答�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/runge-kutta/#one-step-several-right-hand-side-evaluations
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 y′=f(t,y)の陽的s段RK法は、
 Y_i=y_n+h\sum_{j<i}a_{ij}k_j,\qquad
@@ -13043,7 +13209,6 @@ y_{n+1}=y_n+h\sum_{i=1}^s b_i k_i,
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/runge-kutta/#rk2-is-a-family
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 2段・2次の族を、
 k_1=f(t_n,y_n),\quad
@@ -13059,7 +13224,6 @@ R(z)=1+z+\tfrac12 z^2,\qquad z=h\lambda.
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/runge-kutta/#rk3-classical-rk4-and-ssp-stage-counts
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 実装した3次群は、Kuttaの古典的3段、SSPRK(3,3)、SSPRK(4,3)です。前二者はR(z)=1+z+z²/2+z³/6を共有しますが、非線形SSP係数は0と1です。SSPRK(4,3)は4回目の右辺評価を使い、C=2、追加項z⁴/48を持ちます。4段だから4次になるわけではありません。
 古典的4段RK4の重みは(1/6,1/3,1/3,1/6)です。安定性多項式はz⁴/24を加え、4次精度です。一般の非線形SSP係数はゼロです。すべてのRK4計算が振動するのではなく、一般的な前進EulerからのSSP継承保証が使えないという意味です。NumipediaのRK4記録に係数表とスカラー安定性があります。
@@ -13070,7 +13234,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/runge-kutta/#what-ssp-preserves
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 特定の半離散空間演算子Lが、h≤h_FEで前進Eulerに対して凸安定性を満たすとします。係数CのSSP法は、
 h\le C h_{\rm FE}.
@@ -13081,7 +13244,6 @@ h\le C h_{\rm FE}.
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/runge-kutta/#linear-stability-is-a-separate-picture
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 y′=lambda yでは、1ステップの倍率は、
 R(z)=1+z\,b^T(I-zA)^{-1}{\bf1}.
@@ -13092,7 +13254,6 @@ R(z)=1+z\,b^T(I-zA)^{-1}{\bf1}.
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/runge-kutta/#other-branches-of-the-time-integration-family
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Dormand–Prince 5(4)などの埋込みRK対は、2つの次数で誤差と刻みを推定します。この括弧は埋込み次数で、SSPRK(s,p)の段数・次数とは違います。初版では埋込み誤差推定、適応制御、連続出力、FSAL最適化は実行しません。
 低記憶RKは段階計算を組み替えて配列を減らしますが、自動的にSSPにはなりません。陰的RKには中点、Gauss／Radau／SDIRKなどがあり、非線形求解と独自の安定性を持ちます。IMEX対は陽的・陰的演算子を分けます。既存のスカラー線形後退Euler・陰的中点の実演を除き、ここでは読書の背景です。下の汎用rk_stepは9つの陽的Butcher表だけに対応します。leapfrogは多段階漸化式、力学Verletとシンプレクティック写像はさらに別の分岐です。
@@ -13101,7 +13262,6 @@ Dormand–Prince 5(4)などの埋込みRK対は、2つの次数で誤差と刻�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/runge-kutta/#reproduction-and-verification
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 from numart.runge_kutta import rk_step, nonlinear_trajectory
 value, stages = rk_step(lambda t, y: -y*y, 0., 1., 0.5,
@@ -13111,11 +13271,18 @@ python scripts/build_runge_kutta.py
 python scripts/sync_web_content.py
 JSONには全係数表、等高線、27個の1ステップ段階例（h=0.25、0.5、1）、9つの細分化（N=10、20、40、80、T=1）、ソースハッシュを記録します。誤差は厳密な非線形解を使い、段階は実際の右辺評価です。テストでは4次までの全次数条件、非線形製造時間依存方程式、複素線形安定係数、指定Cでの全係数表SSP不等式、継承した刻み制約でのスカラーMUSCL保存／TVDを確認します。既存Euler／WENOがRK選択可能や完全正値性保存になるわけではありません。
 
+## 波追跡PPM、AUSM系と曲面前方の衝撃波 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/shock-expansion/
+Coverage: reading
+
+解説章公開コード・データ / Public code and data
+日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
+
 ## 波追跡PPM、AUSM系と曲面前方の衝撃波 — 波追跡PPM、AUSM系と曲面前方の衝撃波 [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/shock-expansion/
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 新しい計算比較を開く。直接Euler型の特性波追跡PPM更新、定義を明示したAUSM+・AUSM+-up流束、円柱の前半部の診断を追加しました。以前のmethod of linesによる再構成と平面衝撃波のodd–even実験は、従来のデータと適用範囲を維持します。
 
@@ -13123,7 +13290,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/shock-expansion/#direct-eulerian-ppm-and-independent-switches
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 numart.ppm_tracedは保存変数セル平均から密度・速度・圧力の基本変数を再構成します。MC制限した放物線補間、任意の密度接触面急峻化、衝撃波平坦化、成分ごとの放物線単調性制約を使います。セル平均保存量は共有面流束で更新します。平均保存変数から作る基本変数分布は2次精度の表現であり、基本変数の厳密な平均ではありません。
 セル内座標xi∈[0,1]では、各成分の分布は次式です。
@@ -13139,7 +13305,6 @@ I_L(\sigma)=q_L+\frac{\sigma}{2}\left[\Delta q+\left(1-\frac{2\sigma}{3}\right)q
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/shock-expansion/#contact-steepening-and-shock-flattening
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 急峻化は密度の端値だけを変えます。D2_i=(rho_(i+1)−2rho_i+rho_(i−1))/6とし、D2_(i−1) D2_(i+1)<0、相対密度差が0.01より大きいこと、相対圧力差が相対密度差の0.1 gamma倍より小さいことを要求します。そのとき、
 \widetilde\eta_i=-\frac{D^2_{i+1}-D^2_{i-1}}{\rho_{i+1}-\rho_{i-1}},\qquad
@@ -13153,7 +13318,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/shock-expansion/#ausm-and-ausm-up-with-stated-controls
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 従来の算術平均音速AUSMは別に維持します。新しい流束は4次Mach分割と5次圧力分割を使います。|M|<1で、
 \mathcal M_4^\pm(M)=\pm\left[\frac{(M\pm1)^2}{4}+\frac{(M^2-1)^2}{8}\right],\qquad
@@ -13179,7 +13343,6 @@ p_u=-K_u f_a\mathcal P_5^+(M_L)\mathcal P_5^-(M_R)
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/shock-expansion/#matched-one-dimensional-problems-and-a-recorded-failure
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 新しい1次元計算は波追跡PPMとCFL 0.4を使います。流束比較では接触面急峻化を無効、衝撃波平坦化を有効に固定し、HLLC、旧AUSM、AUSM+、AUSM+-upを切り替えます。独立した適応CFL計算であり、ステップ数や費用を揃えた比較ではありません。
 Sod N=200、移動接触面N=200、Shu–Osher N=240、強い圧力跳躍N=200を使います。最初の3つは以前の比較と同じ定義です。最後は基本変数が左(1,0,1000)、右(1,0,0.01)、gamma=1.4、区間[0,1]、x=0.5の跳び、両端外挿、t=0.01です。この時刻まで波は境界に到達しません。
@@ -13190,7 +13353,6 @@ Sodと強圧力差の密度誤差は、保存変数Riemann状態を波面で分�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/shock-expansion/#a-conservative-mesh-around-the-cylinder-nose
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 単位半径円柱の上流側半分だけを扱います。r∈[1,4]、theta∈[pi/2,3pi/2]、流れは正のx方向です。直線辺を持つ環状四角形が、円柱の多角形近似に沿います。格子は24×48と48×96の2水準です。半径と角度は等間隔ですが、物理的なセルは正方形ではありません。
 Cartesian保存変数を、共有する面長と面法線流束で更新します。多角形面積、半径方向弦面の法線、角方向面の法線は、丸め誤差程度で幾何学的な閉鎖条件を満たします。曲線座標の運動量ソース項は不要です。壁を無効にした一様流保存、壁法線運動量の反射、壁の質量・エネルギー流束ゼロ、全領域流束収支を検証します。
@@ -13204,7 +13366,6 @@ e^{-((r-1.5)/0.3)^2}\sin\bigl(12(\theta-\pi)\bigr)\right],\qquad
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/shock-expansion/#directional-hlle-and-roe-composition
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 面法線nに対して、速度差の方向にn1、その直交方向にn2を選びます。alpha_k=n dot n_kが非負になるよう符号を揃えます。この無次元設定で速度差が1e−10以下なら、n1を面接線、n2を面法線とします。
 \widehat{\boldsymbol F}(\boldsymbol n)=
@@ -13218,7 +13379,6 @@ Nishikawa・Kitamura（2008）を着想源とした、定義を明示したrotat
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/shock-expansion/#what-the-forebody-results-establish
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 5流束は音響エントロピー平滑化したRoe、Einfeldt型HLLE、AUSM+、AUSM+-up、方向分解HLLE/Roeです。各画像の5つの場は共通の色範囲です。slip壁圧力係数は実際の壁法線運動量流束を使い、よどみ点に最も近い2セルから先端圧力を報告します。
 垂直衝撃波の跳躍と、その後の等エントロピー減速から、非粘性中心流線のよどみ圧参照値p0,2=46.8152057161を得ます。これはスカラーの流線参照値であり、弓形衝撃波全体の厳密場ではありません。境界層と後流は含みません。先端圧力、反射対称性の欠損、残る規格化更新率、正値性、積分保存残差を保存します。
@@ -13229,16 +13389,22 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/shock-expansion/#reproduction-and-saved-data
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 MPLCONFIGDIR=.mplconfig python scripts/build_shock_expansion.pyを実行します。前面計算のキャッシュは、数値ソースのハッシュと全設定が一致した場合だけ再利用します。条件・診断・ソースハッシュと保存状態・格子頂点・面積をダウンロードできます。停止した1次元計算には実際の時刻と最後の許容状態を含めます。要求最終時刻へ到達したものとして比較してはいけません。すべてのPNGと圧縮配列のハッシュも記録します。
 独立した検証は、特性領域積分、スイッチの選択性、周期保存量、接触面の圧力・速度平衡、滑らかな収束、AUSM分岐の恒等式と垂直衝撃波、回転流束の整合性・共変性、格子閉鎖、壁・全領域の流束収支を扱います。これらの通過は、上に記した流れ固有の限界を取り除くものではありません。
+
+## 収録範囲と数え方 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/site-coverage/
+Coverage: reading
+
+解説章公開コード・データ / Public code and data
+英語原文が更新されています。この日本語訳は旧版に対応します。
 
 ## 収録範囲と数え方 — 収録範囲と数え方 [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/site-coverage/
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 公開Web版、集計日2026-11-07。数えるのはカタログ項目と記載した実験例です。すべての項目が検証済みの完全なソルバーであるという意味ではありません。
 方程式・モデル42項目・計算法と構成要素90項目・学術誌／会議論文140件・全参考資料177件。
@@ -13248,7 +13414,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/site-coverage/#equations-and-models
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 名前付きの方程式・モデルを数えます。スカラー成分や数学的に互いに独立な系統の数ではありません。枠組みや補助定式化を含み、通常は派生形を一つにまとめます。ただし個別に説明するSR／GRの流体系3種類は分けます。生物モデルは専用カタログから一度だけ取り込みます。
 ローカル実験のある項目は15、文献解説のみは27で、後者には生物調査22項目すべてを含みます。連成系は一項目とし、成分方程式では増やしません。Poisson／Laplaceや次元の違いもまとめます。枠組みと個別反応則が並ぶため、数学的に独立した系統数ではありません。
@@ -13258,7 +13423,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/site-coverage/#physics-amp-mathematical-models
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 線形移流（Linear advection） — ローカル実験あり。
 熱・拡散（Heat / diffusion） — ローカル実験あり。
@@ -13280,7 +13444,6 @@ Bratu非線形境界値問題（Bratu nonlinear boundary-value problem） — �
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/site-coverage/#relativistic-models
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 特殊相対論的流体力学（Special-relativistic hydrodynamics） — 文献解説のみ。 Literature review; no local relativistic solver.
 一般相対論的流体力学（General-relativistic hydrodynamics） — 文献解説のみ。 Literature review; no local relativistic solver.
@@ -13292,7 +13455,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/site-coverage/#biological-model-survey
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 ロジスティック個体群増殖（Logistic population growth） — 文献解説のみ。 The linked original is the later 1847 memoir; the 1838 note itself was not audited. The differential equation is not the discrete logistic map.
 Michaelis–Mentenと完全酵素反応系（Michaelis–Menten and full enzyme kinetics） — 文献解説のみ。 The 1913 rapid-equilibrium interpretation and the 1925 quasi-steady-state derivation must remain distinct.
@@ -13306,7 +13468,6 @@ Monod増殖とケモスタット（Monod growth and chemostat） — 文献解�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/site-coverage/#biological-model-survey
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Hodgkin–Huxley膜動態（Hodgkin–Huxley membrane dynamics） — 文献解説のみ。 The original squid-axon model is not a calibrated human cardiac model. No single rate parameter set is selected by this survey.
 Turing反応拡散の枠組み（Turing reaction–diffusion framework） — 文献解説のみ。 A spot image or unequal diffusion coefficients alone do not establish a Turing mechanism. Boundary conditions determine the available modes.
@@ -13319,7 +13480,6 @@ Gierer–Meinhardt活性化・抑制（Gierer–Meinhardt activator–inhibitor�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/site-coverage/#biological-model-survey
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 化学マスター方程式とGillespie SSA（Chemical master equation and Gillespie SSA） — 文献解説のみ。 The 1977 paper is a foundational SSA reference, not a priority claim for all master equations. SSA is a solver; the reaction network is the model. A seed documents a trajectory, not an ensemble validation.
 Mackey–Glass遅延生理フィードバック（Mackey–Glass delayed physiological feedback） — 文献解説のみ。 A scalar initial value alone is insufficient. The delayed ODE is distinct from a spatial reaction–diffusion model.
@@ -13332,7 +13492,6 @@ Gray–Scott空間自己触媒反応（Gray–Scott spatial autocatalysis） —
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/site-coverage/#biological-model-survey
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Aliev–Panfilov心筋興奮（Aliev–Panfilov cardiac excitation） — 文献解説のみ。 Monodomain/bidomain tissue models add conductivity tensors and, for bidomain, an extracellular elliptic constraint. They are not automatically included by this two-variable model.
 Repressilator mRNA・タンパク質回路（Repressilator mRNA–protein network） — 文献解説のみ。 The six-variable form is distinct from a reduced three-protein oscillator; oscillations are parameter-dependent.
@@ -13342,7 +13501,6 @@ Repressilator mRNA・タンパク質回路（Repressilator mRNA–protein networ
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/site-coverage/#numerical-method-inventory
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 名前付きの離散化法、積分法、線形・非線形解法、連成演算子を数えます。パラメータの違いでは増やしません。
 ローカル実験のある項目は85、文献解説のみは5です。再構成の制限関数、前処理、連成演算子は構成要素であり、完全なPDEソルバーではありません。格子配置、CFL条件、定理は計算法の数に含めません。
@@ -13351,7 +13509,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/site-coverage/#spatial-discretization
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 空間前進差分（Forward spatial difference） — ローカル実験あり。
 空間後退差分（Backward spatial difference） — ローカル実験あり。
@@ -13374,7 +13531,6 @@ Eulerの特性変数再構成（Euler characteristic reconstruction） — ロ�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/site-coverage/#riemann-fluxes-amp-corrections
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Rusanov／局所Lax–Friedrichs流束（Rusanov / local Lax–Friedrichs flux） — ローカル実験あり。
 HLL（HLL） — ローカル実験あり。
@@ -13390,7 +13546,6 @@ AUSM系列の流束分割（AUSM-family flux splitting） — ローカル実験
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/site-coverage/#limiters-amp-admissibility
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Minmod（Minmod） — ローカル実験あり。
 Superbee（Superbee） — ローカル実験あり。
@@ -13404,7 +13559,6 @@ TVB修正minmod（TVB modified minmod） — ローカル実験あり。
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/site-coverage/#time-integration
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 前進Euler法（Forward Euler） — ローカル実験あり。
 後退Euler法（Backward Euler） — ローカル実験あり。
@@ -13431,7 +13585,6 @@ IMEX Euler（IMEX Euler） — ローカル実験あり。
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/site-coverage/#linear-amp-nonlinear-solvers
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Thomas法／三重対角消去（Thomas tridiagonal elimination） — ローカル実験あり。
 Jacobi反復（Jacobi iteration） — ローカル実験あり。
@@ -13451,7 +13604,6 @@ Armijo減衰Newton法（Armijo-damped Newton） — ローカル実験あり。
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/site-coverage/#coupling-constraints-amp-particles
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 二重時間積分（Dual time stepping） — ローカル実験あり。
 スカラー残差分配法（Scalar residual distribution） — ローカル実験あり。 1D P1 upwind equivalent, not multidimensional Euler RD.
@@ -13471,7 +13623,6 @@ Godunov SPH／GSPH（Godunov SPH / GSPH） — 文献解説のみ。
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/site-coverage/#particle-fields-amp-gravity
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Cloud-in-cellの割当てと補間（Cloud-in-cell assignment and interpolation） — ローカル実験あり。
 FFT粒子格子力（FFT particle–mesh forces） — ローカル実験あり。
@@ -13487,7 +13638,6 @@ TreePM力分割（TreePM force splitting） — 文献解説のみ。
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/site-coverage/#additional-formulations
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 直交座標の原KEEP分割流束（Original Cartesian KEEP split flux） — ローカル実験あり。
 
@@ -13495,7 +13645,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/site-coverage/#element-bases-amp-approximation
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Legendreモード基底・正規直交化（Legendre modal basis / orthonormal scaling） — ローカル実験あり。 Reference-element tabulation, derivatives, projection and affine mass/stiffness matrices.
 Lagrange節点基底・GLL選点法（Lagrange nodal basis / GLL collocation） — ローカル実験あり。 Interval cardinal functions, modal transforms, exact versus quadrature mass, and P1/P2 triangle shapes.
@@ -13504,7 +13653,6 @@ Lagrange節点基底・GLL選点法（Lagrange nodal basis / GLL collocation） 
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/site-coverage/#papers-versus-all-sources
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 論文数は学術誌論文と会議論文です。総説、翻訳、採録済みであることを明記した論文も含みます。全参考資料は、それに書籍、章、技術資料、文書、個別に識別したプレプリント等を加えた、重複を除く出版物の数です。
 137件：学術誌論文（総説・翻訳・採録済み論文を含む）
@@ -13519,16 +13667,22 @@ Cockburn–Shu 1989の重複書誌を統合し、Burgers 1948を書籍の章に�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/site-coverage/#reproduction
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 名前付き登録簿はcatalog/coverage.jsonです。生物項目と出版物の種別は各専用カタログを参照します。python scripts/build_coverage.pyが出版物の同一性とローカル章リンクを検査し、数と一覧を生成します。Webビルドもこの検査を実行します。パラメータ、保存フレーム、本文での方程式の繰り返し、テスト関数の数では増やしません。翻訳ファイルも章の総数を増やしません。
 集計一覧と出典ハッシュをダウンロード。参考文献、方程式ギャラリー、生物モデル、実装ロードマップも参照できます。
+
+## 疎行列・非線形方程式系：真の残差を測る [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/sparse-nonlinear/
+Coverage: reading
+
+解説章公開コード・データ / Public code and data
+日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 ## 疎行列・非線形方程式系：真の残差を測る — 疎行列・非線形方程式系：真の残差を測る [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/sparse-nonlinear/
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 実装済み：COOからCSRへの組立て、再始動GMRES、BiCGSTAB、Jacobi、ピボット選択なしILU(0)、密行列またはKrylov内部解法を使うArmijo減衰Newton法。内部を確認できる小規模な実数演算の例です。
 
@@ -13536,7 +13690,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/sparse-nonlinear/#19861992-nonsymmetric-krylov-methods
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Saad–Schultz（1986）がGMRES、van der Vorst（1992）がBiCGSTABを導入します。本実装のGMRESはArnoldi再直交化と小さなHessenberg最小二乗問題を使い、指定した内部反復回数で再始動します。BiCGSTABは破綻を明示し、残差は単調に減るとは限りません。
 両実装は固定した右前処理を適用します。
@@ -13548,7 +13701,6 @@ A M^{-1} z=b,\qquad x=M^{-1}z,
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/sparse-nonlinear/#newton-and-conditioning
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Newton法はJ(x)δ=−F(x)を解き、残差に対するArmijo減少条件を満たすよう後退探索でステップ長を選びます。Newton–Krylovの例はJを組み立ててGMRESを使い、行列不要方式ではありません。Bratu方程式を2つの空間解像度で解析解と比較し、内部求解の失敗も検査します。
 残差が小さくても、解誤差が小さいとは限りません。
@@ -13557,11 +13709,18 @@ Newton法はJ(x)δ=−F(x)を解き、残差に対するArmijo減少条件を満
 条件数、固有値分布、非正規性は異なる性質を表します。条件数が小さいことだけで再始動GMRESの優劣は決められません。CGには引き続き対称正定値演算子と適切な対称正定値前処理が必要で、一般のILU(0)がその条件を満たすとはしていません。
 非対称の例は、ゼロDirichlet条件での1次風上移流と中心差分拡散です。1反復あたりの計算量が異なるため、図では実行時間の順位を付けません。データとソースハッシュ、FEMの組立て、陰的ODE段階も参照してください。
 
+## 差分、CFL条件、von Neumann解析、Laxの定理 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/stability/
+Coverage: reading
+
+解説章公開コード・データ / Public code and data
+英語原文が更新されています。この日本語訳は旧版に対応します。
+
 ## 差分、CFL条件、von Neumann解析、Laxの定理 — 差分、CFL条件、von Neumann解析、Laxの定理 [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/stability/
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 安定性実験室と実験ガイドで、以下の式をブラウザー内の計算と結び付けて確かめられます。
 
@@ -13569,7 +13728,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/stability/#choose-space-and-time-discretizations-separately
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 前進差分（forward difference）、後退差分（backward difference）、中心差分（centered difference）は、それぞれ次のように定義します。
 D_+u_j=\frac{u_{j+1}-u_j}{h},\qquad
@@ -13582,7 +13740,6 @@ D_0u_j=\frac{u_{j+1}-u_{j-1}}{2h}.
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/stability/#cfl-can-the-stencil-reach-the-information-it-needs
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 定係数・周期移流を隣接格子点までの陽的差分で解く場合、依存領域の議論から|a|Δt/h ≤ 1が必要です。この定数は差分、Runge–Kutta法、DGの次数、次元によって変わります。陽的拡散にはΔt=O(h²)の制約が現れます。CFL条件は一般に安定性の必要条件であり、十分条件ではありません。Courant–Friedrichs–Lewy（1928）。
 時間前進・空間中心差分（FTCS）の移流が反例です。Fourierモードu_j^n=G^n e^{ijθ}を代入すると、
@@ -13594,7 +13751,6 @@ G=1-i C\sin θ,\quad |G|^2=1+C^2\sin^2 θ,
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/stability/#laxfriedrichs-and-laxwendroff
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 古典的なLax–Friedrichs法は、
 u_j^{n+1}=\tfrac12(u_{j+1}^n+u_{j-1}^n)
@@ -13614,7 +13770,6 @@ G=1-iC\sin θ+C^2(\cos θ-1),\quad
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/stability/#the-laxrichtmyer-equivalence-theorem
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 適切なBanach空間上の適切に設定された線形初期値問題と、整合的な線形差分近似を考えます。固定した有限時間区間で離散発展演算子が一様有界であることを安定性とすると、安定性と収束性は同値です。Lax–Richtmyer（1956）の原論文。
 誤差をe^{n+1}=S_h e^n+Δt τ^nと書けば、||S_h^m||≤M_Tから||e^n||≤M_T||e^0||+M_T T max||τ^k||を得ます。整合性により打切り誤差の項がゼロへ向かい、安定性から収束性を導く基本的な議論になります。逆向きには一様有界性の議論が必要です。
@@ -13624,7 +13779,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/stability/#time-steps-in-the-first-edition
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 Euler系・バロトロピック系：Δt=C h/max(|u|+c)、既定値C=0.3。
 DG：Δt=C h/((2p+1)|a|)、既定値C=0.2。
@@ -13632,11 +13786,18 @@ DG：Δt=C h/((2p+1)|a|)、既定値C=0.2。
 これらは選定した例で確認した控えめな設定です。すべての初期条件に対する厳密な非線形安定限界ではありません。
 A安定性・L安定性とL1／L2／L∞誤差ノルムの定義と比較は、精度と安定性の共通ガイドを参照してください。
 
+## 硬い方程式の積分：段階を解き、時間誤差を制御する [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/stiff-integration/
+Coverage: reading
+
+解説章公開コード・データ / Public code and data
+日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
+
 ## 硬い方程式の積分：段階を解き、時間誤差を制御する — 硬い方程式の積分：段階を解き、時間誤差を制御する [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/stiff-integration/
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 実装済み：後退Euler法、その初期化を使う固定刻みBDF2、2段階SDIRK2、1次IMEX Euler、ステップ倍分割による適応SDIRK2。すべての非線形段階に減衰Newton法を使い、失敗を明示します。
 
@@ -13644,7 +13805,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/stiff-integration/#implicit-stages-and-stability
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 後退Euler法はy_new−y_old−h f(t_new,y_new)=0を解きます。BDF2は、
 \frac{3y_{n+1}-4y_n+y_{n-1}}{2h}=f(t_{n+1},y_{n+1}).
@@ -13658,7 +13818,6 @@ A=\begin{pmatrix}\gamma&0\\1-\gamma&\gamma\end{pmatrix},
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/stiff-integration/#adaptive-and-split-steps
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 適応実装はSDIRK2の1全ステップと2半ステップを比べます。局所誤差推定は(y_half−y_full)/3で、atol+rtol max(|y_old|,|y_half|)で尺度化します。Richardson外挿はせず、2半ステップの値を採用し、指数−1/3でhを調整します。棄却試行と受理ステップを数え、試行上限に達するとエラーにします。
 IMEX Eulerは一方を陽的、他方を陰的に評価します。この最小の1次分割は、Ascher–Ruuth–Spiteri（1997）の高次IMEX RK構成ではありません。陽的部分には独自の安定制約が残ります。可変刻みBDF、埋込みDIRK対、演算子分割は今後の拡張です。
@@ -13666,11 +13825,18 @@ IMEX Eulerは一方を陽的、他方を陰的に評価します。この最小�
 外力付きの硬い問題の粗い刻み列は、一様な2次収束の範囲にはありません。BDF2の開始処理と硬い系の次数低下が、節点全体の最大誤差へ影響します。形式的な時間次数は、非線形・非硬性の次数テストで別に確認します。
 A安定性・L安定性とL1／L2／L∞誤差ノルムは、精度と安定性の共通ガイドを参照してください。
 
+## シンプレクティック積分：正準写像とエネルギーを分ける [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/symplectic/
+Coverage: reading
+
+解説章公開コード・データ / Public code and data
+英語原文が更新されています。この日本語訳は旧版に対応します。
+
 ## シンプレクティック積分：正準写像とエネルギーを分ける — シンプレクティック積分：正準写像とエネルギーを分ける [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/symplectic/
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 シンプレクティック積分器は正準2形式を保ちながらHamilton系を進めます。多くの軌道・粒子積分の良い長時間挙動を支える写像の性質ですが、元のHamiltonianを一般に厳密保存するわけではありません。Hamilton写像ノートは2つの問いを計算例で分けます。
 
@@ -13678,7 +13844,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/symplectic/#what-the-map-preserves
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 状態z=(q,p)に対し、Hamilton方程式とシンプレクティック条件は、
 \dot z=J\nabla H(z),\qquad J=\begin{pmatrix}0&I\\-I&0\end{pmatrix},
@@ -13690,7 +13855,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/symplectic/#split-the-hamiltonian-compose-exact-subflows
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 単位質量の可分系H(q,p)=p²/2+V(q)では、2つの部分流はドリフトとキックです。
 D_h(q,p)=(q+hp,p),\qquad K_h(q,p)=(q,p-h\nabla V(q)).
@@ -13704,7 +13868,6 @@ p_{n+1}=p_{n+1/2}-\frac h2\nabla V(q_{n+1}).
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/symplectic/#fourth-order-by-composition
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 VerletステップをS2(h)とすると、4次合成の一例は、
 S_4(h)=S_2(a h)\,S_2(b h)\,S_2(a h),\qquad
@@ -13715,7 +13878,6 @@ a=\frac1{2-2^{1/3}},\quad b=-\frac{2^{1/3}}{2-2^{1/3}}.
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/symplectic/#energy-and-a-modified-hamiltonian
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 後退誤差解析は近傍の、一般には形式的な修正Hamiltonianを記述します。滑らかさ、有界軌道、小刻みなどの仮定で、小さな長時間エネルギー誤差を説明できます。すべての軌道・刻みで元のHが厳密不変とはしません。Hairer・Lubich・Wanner（2003）が幾何学的な視点と仮定を論じます。
 特別な振動子H=(p²+q²)/2では、kick–drift–kick Verletは、
@@ -13726,7 +13888,6 @@ I_h=\frac12p^2+\frac12\left(1-\frac{h^2}{4}\right)q^2
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/symplectic/#implicit-midpoint-and-rk4-as-comparisons
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 陰的中点則は端点方程式を正確に解くとシンプレクティックかつ時間対称です。この2次振動子ではHを丸め誤差まで保存しますが、非2次Hを厳密保存するとは限りません。古典的RK4は4次ですが、一般にはシンプレクティックでも時間対称でもありません。短時間精度の良さだけでは写像の幾何は保証されません。
 第2問題はH=p²/2+q²/2+q⁴/4という滑らかな非線形振動子です。中点則の特別な2次エネルギー保存と一般的主張の違いが見えるようになります。
@@ -13735,7 +13896,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/symplectic/#reproducible-notebook-and-checks
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 from numart.hamiltonian import trajectory, energy, canonical_step, J
 t, z = trajectory(h=0.2, steps=1000, method='yoshida4', system='quartic')
@@ -13749,15 +13909,21 @@ print(M.T @ J @ M - J)
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/symplectic/#connecting-to-particle-gravity
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 固定刻みと、整合した位置依存ポテンシャルの勾配である力が分割合成の議論を支えます。一般の近似ツリー力、変化する開口判定、場当たり的な格子補間、状態依存の刻み選択が、その証明を自動的に保つわけではありません。力近似と時間積分を合同で検査する必要があります。粒子重力とPoisson解法、重力境界核へ進んでください。
+
+## 教科書案内：次に何を調べるか [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/textbooks/
+Coverage: reading
+
+解説章公開コード・データ / Public code and data
+日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 ## 教科書案内：次に何を調べるか — 教科書案内：次に何を調べるか [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/textbooks/
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 このアトラスから参照するための書棚です。知りたい問いから選ぶ読書案内で、順位付けではありません。以下の年は引用する版の年であり、アルゴリズムの発明年ではありません。
 リンク先は出版社の書誌情報や著者管理のページです。版情報と公開されている紹介・目次を確認しており、各書のすべての導出を点検したという意味ではありません。関連章はアトラスとの接点を示し、教科書全体の実装を意味しません。
@@ -13769,7 +13935,6 @@ Source note: 日本語訳はドラフトです。数式・計算・参照資料�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/textbooks/#cfd-foundations
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Numerical Computation of Internal and External Flows: The Fundamentals of Computational Fluid Dynamics表紙を読み込み中表紙画像なし
 Open Libraryの書誌情報
@@ -13779,7 +13944,6 @@ ISBN 9780750665940
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/textbooks/#hirsch2007
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Hirsch, Charles. Numerical Computation of Internal and External Flows: The Fundamentals of Computational Fluid Dynamics. Butterworth-Heinemann, 2007・第2版.
 支配方程式、格子の性質、整合性・安定性、離散化から解法まで、CFD全体の枠組みを調べる本です。引用する2007年版は第2版の基礎巻です。
@@ -13793,7 +13957,6 @@ hirsch2007
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/textbooks/#hirsch2007
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Computational Techniques for Fluid Dynamics 1: Fundamental and General Techniques表紙を読み込み中表紙画像なし
 表紙出典：Open Library
@@ -13803,7 +13966,6 @@ ISBN 9783540530589
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/textbooks/#fletcher1991v1
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Fletcher, Clive A. J. Computational Techniques for Fluid Dynamics 1: Fundamental and General Techniques. Springer, 1991・第2版.
 I巻はPDEの分類、重み付き残差法、定常・拡散問題、線形・非線形移流を調べるために。II巻の流れ別の解法に進む前の共通の数値的道具を扱います。
@@ -13817,7 +13979,6 @@ fletcher1991v1
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/textbooks/#fletcher1991v1
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Computational Techniques for Fluid Dynamics 2: Specific Techniques for Different Flow Categories表紙を読み込み中表紙画像なし
 Open Libraryの書誌情報
@@ -13827,7 +13988,6 @@ ISBN 9783540536017
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/textbooks/#fletcher1991v2
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Fletcher, Clive A. J. Computational Techniques for Fluid Dynamics 2: Specific Techniques for Different Flow Categories. Springer, 1991・第2版.
 II巻はI巻の一般的手法を、流れの方程式の各分類とその数値解法に結びつけるために。各アルゴリズムと合わせて仮定や境界条件も確認します。
@@ -13841,7 +14001,6 @@ fletcher1991v2
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/textbooks/#fletcher1991v2
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Computational Methods for Fluid Dynamics表紙を読み込み中表紙画像なし
 表紙出典：Open Library
@@ -13851,7 +14010,6 @@ ISBN 9783319996912
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/textbooks/#ferziger2020
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Ferziger, Joel H.; Perić, Milovan; Street, Robert L. Computational Methods for Fluid Dynamics. Springer, 2020・第4版.
 離散演算子を実際のCFD計算手順に結びつける際に。特に非圧縮流れの圧力・速度連成や境界条件を調べる入口です。
@@ -13865,7 +14023,6 @@ ferziger2020
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/textbooks/#ferziger2020
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Numerical Heat Transfer and Fluid Flow表紙を読み込み中表紙画像なし
 表紙出典：Open Library
@@ -13875,7 +14032,6 @@ ISBN 9780891165224
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/textbooks/#patankar1980
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Patankar, Suhas V. Numerical Heat Transfer and Fluid Flow. CRC Press (current publisher record), 1980.
 コントロールボリュームの収支とSIMPLE型の圧力・速度連成を、物理的な考え方から理解したいときに。教科書の解説と手法の原論文は区別します。
@@ -13888,7 +14044,6 @@ patankar1980
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/textbooks/#hyperbolic
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Finite Volume Methods for Hyperbolic Problems表紙を読み込み中表紙画像なし
 表紙出典：Open Library
@@ -13898,7 +14053,6 @@ ISBN 9780521009249
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/textbooks/#leveque2002
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 LeVeque, Randall J. Finite Volume Methods for Hyperbolic Problems. Cambridge University Press, 2002.
 弱解、有限体積法の考え方、波の伝播、リミター、多次元保存則を調べるときに。Clawpack関連資料から理論と実装を結びつけられます。
@@ -13912,7 +14066,6 @@ leveque2002
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/textbooks/#leveque2002
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Riemann Solvers and Numerical Methods for Fluid Dynamics: A Practical Introduction表紙を読み込み中表紙画像なし
 表紙出典：Open Library
@@ -13922,7 +14075,6 @@ ISBN 9783540252023
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/textbooks/#toro2009
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Toro, Eleuterio F. Riemann Solvers and Numerical Methods for Fluid Dynamics: A Practical Introduction. Springer, 2009・第3版.
 Euler方程式の厳密・近似Riemannソルバー、接触波、高解像度の衝撃波捕獲法を導出・比較したいときに。
@@ -13935,7 +14087,6 @@ toro2009
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/textbooks/#toro2009
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Numerical Approximation of Hyperbolic Systems of Conservation Laws表紙を読み込み中表紙画像なし
 表紙出典：Open Library
@@ -13945,7 +14096,6 @@ ISBN 9780387945293
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/textbooks/#godlewski1996book
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Godlewski, Edwige; Raviart, Pierre-Arnaud. Numerical Approximation of Hyperbolic Systems of Conservation Laws. Springer, 1996・第1版.
 非線形双曲型保存則系とその数値近似を数学的に学び、Riemann問題や気体力学を詳しく調べるための本です。有限体積法の考え方にはLeVeque、ソルバーの構成にはToroを併読するとつながります。この項目は1996年初版を引用し、2021年の改訂第2版も案内します。
@@ -13959,7 +14109,6 @@ godlewski1996book
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/textbooks/#common-numerics
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Finite Difference Methods for Ordinary and Partial Differential Equations: Steady-State and Time-Dependent Problems表紙を読み込み中表紙画像なし
 Open Libraryの書誌情報
@@ -13969,7 +14118,6 @@ ISBN 9780898716290
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/textbooks/#leveque2007
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 LeVeque, Randall J. Finite Difference Methods for Ordinary and Partial Differential Equations: Steady-State and Time-Dependent Problems. SIAM, 2007.
 整合性・安定性・収束の関係、常微分方程式、境界値問題、偏微分方程式の差分法を調べるときに。
@@ -13983,7 +14131,6 @@ leveque2007
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/textbooks/#leveque2007
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Matrix Computations表紙を読み込み中表紙画像なし
 表紙出典：Open Library
@@ -13993,7 +14140,6 @@ ISBN 9781421407944
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/textbooks/#golub2013
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Golub, Gene H.; Van Loan, Charles F. Matrix Computations. Johns Hopkins University Press, 2013・第4版.
 手法名だけでソルバーを選ぶ前に、条件数、安定な行列分解、最小二乗、固有値問題を確認するための本です。
@@ -14007,7 +14153,6 @@ golub2013
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/textbooks/#golub2013
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Iterative Methods for Sparse Linear Systems表紙を読み込み中表紙画像なし
 表紙出典：Open Library
@@ -14017,7 +14162,6 @@ ISBN 9780898715347
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/textbooks/#saad2003book
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Saad, Yousef. Iterative Methods for Sparse Linear Systems. SIAM, 2003・第2版.
 Krylov部分空間、GMRES、BiCG系の手法、前処理を調べるときに。著者のページで第2版の本文と訂正情報が公開されています。
@@ -14031,7 +14175,6 @@ saad2003book
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/textbooks/#saad2003book
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Templates for the Solution of Linear Systems: Building Blocks for Iterative Methods表紙を読み込み中表紙画像なし
 表紙出典：Open Library
@@ -14041,7 +14184,6 @@ ISBN 9780898713282
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/textbooks/#templates1994
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Barrett, Richard; Berry, Michael; Chan, Tony F.; Demmel, James; Donato, June; Dongarra, Jack; Eijkhout, Victor; Pozo, Roldan; Romine, Charles; van der Vorst, Henk. Templates for the Solution of Linear Systems: Building Blocks for Iterative Methods. SIAM, 1994.
 行列に必要な仮定を確認しながら、反復線形解法のアルゴリズムと選び方を手短に引く公開リファレンスです。
@@ -14054,7 +14196,6 @@ templates1994
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/textbooks/#multigrid
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 A Multigrid Tutorial表紙を読み込み中表紙画像なし
 表紙出典：Open Library
@@ -14064,7 +14205,6 @@ ISBN 9780898714623
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/textbooks/#briggs2000book
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Briggs, William L.; Henson, Van Emden; McCormick, Steve F. A Multigrid Tutorial. SIAM, 2000・第2版.
 緩和法が振動的な誤差を減らし、粗格子が残った滑らかな誤差を扱う理由を知る入口です。モデル問題から残差補正、制限・延長、マルチグリッドサイクルの実装へ進めます。第2版では非線形問題やAMGも導入します。
@@ -14078,7 +14218,6 @@ briggs2000book
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/textbooks/#briggs2000book
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Multigrid表紙を読み込み中表紙画像なし
 表紙出典：Open Library
@@ -14088,7 +14227,6 @@ ISBN 9780127010700
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/textbooks/#trottenberg2001
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Trottenberg, Ulrich; Oosterlee, Cornelius W.; Schüller, Anton. Multigrid. Academic Press, 2001・第1版.
 入門の次に引く詳しい参考書です。マルチグリッドの基礎理論、局所Fourier解析、スムーザーと粗格子の選び方、並列実装、連立系、付録のAMGを調べられます。アトラスのPoisson比較では、サイクルが収束する理由と仕事量を考えるために参照します。AMG・異方性・並列性能には個別の実装と検証が必要です。
@@ -14101,7 +14239,6 @@ trottenberg2001
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/textbooks/#high-order
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Spectral Methods in MATLAB表紙を読み込み中表紙画像なし
 表紙出典：Open Library
@@ -14111,7 +14248,6 @@ ISBN 9780898714654
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/textbooks/#trefethen2000
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Trefethen, Lloyd N. Spectral Methods in MATLAB. SIAM, 2000.
 スペクトル微分、Fourier・Chebyshevの例、短い再現用プログラムを調べるときに。重心補間の扱いは限られるため補足資料も参照します。
@@ -14125,7 +14261,6 @@ trefethen2000
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/textbooks/#trefethen2000
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Nodal Discontinuous Galerkin Methods: Algorithms, Analysis, and Applications表紙を読み込み中表紙画像なし
 表紙出典：Open Library
@@ -14135,7 +14270,6 @@ ISBN 9780387720654
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/textbooks/#hesthaven2008book
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Hesthaven, Jan S.; Warburton, Tim. Nodal Discontinuous Galerkin Methods: Algorithms, Analysis, and Applications. Springer, 2008.
 節点多項式基底、求積、参照要素の演算子を、DGの要素間流束やPDE計算法につなげるための本です。
@@ -14149,7 +14283,6 @@ hesthaven2008book
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/textbooks/#time-geophysics-particles
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Geometric Numerical Integration: Structure-Preserving Algorithms for Ordinary Differential Equations表紙を読み込み中表紙画像なし
 表紙出典：Open Library
@@ -14159,7 +14292,6 @@ ISBN 9783540306634
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/textbooks/#hairer2006book
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Hairer, Ernst; Lubich, Christian; Wanner, Gerhard. Geometric Numerical Integration: Structure-Preserving Algorithms for Ordinary Differential Equations. Springer, 2006・第2版.
 シンプレクティック写像、対称合成法、分割法、後退誤差解析を調べるときに。シンプレクティック構造の保存と元のHamiltonianの厳密保存は異なります。
@@ -14173,7 +14305,6 @@ hairer2006book
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/textbooks/#hairer2006book
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Numerical Methods for Fluid Dynamics: With Applications to Geophysics表紙を読み込み中表紙画像なし
 表紙出典：Open Library
@@ -14183,7 +14314,6 @@ ISBN 9781441964113
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/textbooks/#durran2010
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Durran, Dale R. Numerical Methods for Fluid Dynamics: With Applications to Geophysics. Springer, 2010・第2版.
 地球流体の分散、移流、時間離散化を調べるときに。球面メッシュと変数配置の解説と合わせて参照してください。
@@ -14197,7 +14327,6 @@ durran2010
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/textbooks/#durran2010
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Computer Simulation Using Particles表紙を読み込み中表紙画像なし
 Open Libraryの書誌情報
@@ -14207,7 +14336,6 @@ ISBN 9780070291089
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/textbooks/#hockney1981book
 Coverage: reading
-Source note: 日本語訳はドラフトです。数式・計算・参照資料は英語原文と照合できます。
 
 Hockney, R. W.; Eastwood, J. W. Computer Simulation Using Particles. McGraw-Hill, 1981.
 粒子・メッシュの考え方、力の割当て、Fourier変換による場の計算を調べるときに。初版は1981年で、リンク先DOIは後年の再刊です。
@@ -14216,11 +14344,18 @@ Amazon Japan ↗
 出版社・書誌情報 ↗
 hockney1981book
 
+## 時間積分とleapfrog法 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/time-integration/
+Coverage: reading
+
+解説章公開コード・データ / Public code and data
+英語原文が更新されています。この日本語訳は旧版に対応します。
+
 ## 時間積分とleapfrog法 — 時間積分とleapfrog法 [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/time-integration/
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 空間再構成と時間積分は独立した選択です。空間離散化後、PDEはODE系dU/dt = L(U)になります。精度、安定性、単調性、散逸、計算量は両者に依存します。時間積分ノートではy′=i y、y(0)=1を使い、時間積分の選択を切り分けます。
 
@@ -14228,7 +14363,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/time-integration/#twelve-methods-on-one-oscillator
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 厳密解exp(i t)は単位円をたどります。前進Eulerと後退Eulerは1次精度で、この無減衰振動子に対して前者は増幅、後者は減衰します。陽的RK2にはHeun／SSPRK(2,2)、陽的中点、Ralstonがあります。Kutta RK3、SSPRK(3,3)、SSPRK(4,3)は3次、古典的RK4とSSPRK(5,4)は4次です。陰的中点則は2次で、この線形振動子の振幅を保存しますが、位相には誤差があります。RK系譜の章と系譜ノートで段数・次数・SSP、非線形テストを比較できます。
 y′=lambda yに対してz=lambda delta tと置くと、1ステップ増幅係数の例は、
@@ -14240,7 +14374,6 @@ R_{\rm midpoint}=\frac{1+z/2}{1-z/2}.
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/time-integration/#leapfrog-needs-two-roots
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 1階の方程式系を中心差分で進める2ステップ漸化式は、
 y^{n+1}=y^{n-1}+2z y^n,\qquad
@@ -14253,7 +14386,6 @@ Robert–Asselin系などの時間フィルターは、減衰と精度のトレ�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/time-integration/#particle-leapfrog-is-a-different-formulation
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 位置と速度をずらして更新するkick–drift法や、2階の力学系に対する速度Verletも、leapfrogと呼ばれることがあります。変数が異なる時刻位置にあり、シンプレクティックな解釈にはその構造を使います。上のスカラー漸化式は、完全なSPH粒子積分器の実演でも、一般の力学系の長時間エネルギー保存の証明でもありません。
 
@@ -14261,7 +14393,6 @@ Source note: 英語原文が更新されています。この日本語訳は旧�
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/time-integration/#reproduce-and-read-the-notebook
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 from numart.time_integration import linear_trajectory, leapfrog_roots
 t, y = linear_trajectory(rate=1j, dt=0.1, steps=200, method='leapfrog')
@@ -14273,7 +14404,6 @@ print(leapfrog_roots(0.1j))
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/time-integration/#canonical-mechanical-maps
 Coverage: reading
-Source note: 英語原文が更新されています。この日本語訳は旧版に対応します。
 
 シンプレクティック積分の章では、調和・4次Hamilton系に対して、力学的なkick–drift–kick Verlet、吉田の4次合成、シンプレクティックEuler、陰的中点則を実装します。写像ノートではRK4と比較し、正準構造と厳密なエネルギー保存を分けます。
 

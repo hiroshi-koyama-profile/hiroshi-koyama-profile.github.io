@@ -43,6 +43,7 @@ for parent, dirs, files in os.walk(ROOT):
             if u.scheme not in ['https', 'http']: continue
             if u.netloc == 'koyamarium.github.io': errors.append(relative + ': retired site link: ' + href)
             if relative.startswith('the-art-of-thermal-instability/') and u.netloc == 'github.com' and u.path.startswith('/koyamarium/the-art-of-thermal-instability'): errors.append(relative + ': private source dependency: ' + href)
+            if relative.startswith('numerical-methods-atlas/') and u.netloc == 'github.com' and re.match(r'/koyamarium/(numerical-methods-atlas|the-art-of-numerical-algorithms)(/|$)', u.path): errors.append(relative + ': private numerical source dependency: ' + href)
             if u.netloc != 'hrkoyama.github.io': continue
             link_count += 1
             if not local(u.geturl()).is_file(): errors.append(relative + ': missing public target: ' + href)

@@ -1,0 +1,46 @@
+{
+  "id": "dae",
+  "name": {
+    "ja": "微分代数方程式（DAE）",
+    "en": "Differential-algebraic equations / DAE"
+  },
+  "group": {
+    "id": "time",
+    "ja": "時間積分",
+    "en": "Time integration"
+  },
+  "summary": {
+    "ja": "微分方程式と代数拘束を同時に満たす時間積分を整理する。",
+    "en": "Map integration with differential equations and algebraic constraints."
+  },
+  "status": "planned",
+  "origin": "development-candidate",
+  "reading": {},
+  "code_modules": [],
+  "test_files": [],
+  "references": [],
+  "assumptions": null,
+  "units": null,
+  "boundary_conditions": null,
+  "next_deliverable": {
+    "ja": "拘束残差と整合初期条件を確認できる例。",
+    "en": "An example with consistent initialization and constraint residuals."
+  },
+  "limitations": {
+    "ja": "Under construction。専用の実装・検証結果はまだありません。",
+    "en": "Under construction. No dedicated implementation or verification result is provided yet."
+  },
+  "metadata_review": {
+    "level": "candidate outline; scientific derivation and literature review incomplete",
+    "on": "2026-11-21"
+  },
+  "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/dae/",
+  "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/dae/index.json",
+  "markdown_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/dae/index.md",
+  "code_urls": [],
+  "test_urls": [],
+  "run_commands": [],
+  "run_from": null,
+  "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
+  "code_edition": null
+}

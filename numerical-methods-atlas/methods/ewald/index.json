@@ -1,0 +1,52 @@
+{
+  "id": "ewald",
+  "name": {
+    "ja": "Ewald法",
+    "en": "Ewald summation"
+  },
+  "group": {
+    "id": "long-range",
+    "ja": "重力と長距離相互作用",
+    "en": "Particle fields & gravity"
+  },
+  "summary": {
+    "ja": "周期系の長距離相互作用を実空間と逆空間に分けて評価する。",
+    "en": "Split periodic long-range interactions into real- and reciprocal-space contributions."
+  },
+  "status": "planned",
+  "origin": "development-candidate",
+  "reading": {},
+  "code_modules": [],
+  "test_files": [],
+  "references": [
+    {
+      "label": "Ewald (1921), Die Berechnung optischer und elektrostatischer Gitterpotentiale",
+      "url": "https://doi.org/10.1002/andp.19213690304",
+      "scope": "Bibliographic or official-documentation entry point; source equations are not audited for this planned entry."
+    }
+  ],
+  "assumptions": null,
+  "units": null,
+  "boundary_conditions": null,
+  "next_deliverable": {
+    "ja": "中性の小系で、自己項・ゼロモード・境界規約を明示した参照計算。",
+    "en": "A neutral small-system reference with explicit self, zero-mode and boundary conventions."
+  },
+  "limitations": {
+    "ja": "Under construction。専用の実装・検証結果はまだありません。",
+    "en": "Under construction. No dedicated implementation or verification result is provided yet."
+  },
+  "metadata_review": {
+    "level": "candidate outline; scientific derivation and literature review incomplete",
+    "on": "2026-11-21"
+  },
+  "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/ewald/",
+  "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/ewald/index.json",
+  "markdown_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/ewald/index.md",
+  "code_urls": [],
+  "test_urls": [],
+  "run_commands": [],
+  "run_from": null,
+  "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
+  "code_edition": null
+}

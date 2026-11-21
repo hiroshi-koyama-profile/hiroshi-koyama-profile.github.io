@@ -1,0 +1,62 @@
+{
+  "id": "ale",
+  "name": {
+    "ja": "ALE一様状態・幾何保存モデル",
+    "en": "ALE uniform-state / geometric-conservation model"
+  },
+  "group": {
+    "id": "coupling",
+    "ja": "連成・拘束・粒子法",
+    "en": "Coupling, constraints & particles"
+  },
+  "summary": {
+    "ja": "「ALE一様状態・幾何保存モデル」の考え方と適用範囲を、解説章・一次文献・関連する教育用コードからたどります。",
+    "en": "Read about ALE uniform-state / geometric-conservation model, follow the original references and inspect related educational code and checks."
+  },
+  "status": "educational-example",
+  "origin": "existing-coverage-catalog",
+  "reading": {
+    "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/ale/",
+    "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/ale/"
+  },
+  "code_modules": [
+    "geometry"
+  ],
+  "test_files": [
+    "test_time_geometry"
+  ],
+  "code_mapping_scope": "Related chapter modules and test files; not a claim that each test covers every named method.",
+  "references": [
+    {
+      "url": "https://doi.org/10.1016/0021-9991(74)90051-5",
+      "label": "An arbitrary Lagrangian-Eulerian computing method for all flow speeds (1974)",
+      "scope": "Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation."
+    }
+  ],
+  "assumptions": null,
+  "units": null,
+  "boundary_conditions": null,
+  "limitations": {
+    "ja": "対象方程式・境界条件・検証の範囲は解説章と各コードを確認してください。教育用例は汎用ソルバーの完成を意味しません。",
+    "en": "See the chapter and implementation for equations, boundaries and checked scope. Educational examples are not complete general-purpose solvers."
+  },
+  "metadata_review": {
+    "level": "chapter-linked; detailed method-specific curation in progress",
+    "on": "2026-11-21"
+  },
+  "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/ale/",
+  "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/ale/index.json",
+  "markdown_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/ale/index.md",
+  "code_urls": [
+    "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/numart/geometry.py"
+  ],
+  "test_urls": [
+    "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/tests/test_time_geometry.py"
+  ],
+  "run_commands": [
+    "python -m pytest -q tests/test_time_geometry.py"
+  ],
+  "run_from": "Extracted code edition directory",
+  "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
+  "code_edition": "2026-11-21"
+}

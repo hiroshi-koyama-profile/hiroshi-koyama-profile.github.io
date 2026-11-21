@@ -1,0 +1,52 @@
+{
+  "id": "tddft",
+  "name": {
+    "ja": "時間依存DFT",
+    "en": "Time-dependent density functional theory / TDDFT"
+  },
+  "group": {
+    "id": "quantum",
+    "ja": "電子状態・量子化学",
+    "en": "Electronic structure & quantum chemistry"
+  },
+  "summary": {
+    "ja": "励起・応答と実時間発展の扱いを区別する。",
+    "en": "Distinguish excitation/response calculations from real-time evolution."
+  },
+  "status": "planned",
+  "origin": "development-candidate",
+  "reading": {},
+  "code_modules": [],
+  "test_files": [],
+  "references": [
+    {
+      "label": "PySCF user guide",
+      "url": "https://pyscf.org/user/index.html",
+      "scope": "Bibliographic or official-documentation entry point; source equations are not audited for this planned entry."
+    }
+  ],
+  "assumptions": null,
+  "units": null,
+  "boundary_conditions": null,
+  "next_deliverable": {
+    "ja": "線形応答の一次文献と小分子の基準例。",
+    "en": "Primary linear-response references and a small-molecule baseline."
+  },
+  "limitations": {
+    "ja": "Under construction。専用の実装・検証結果はまだありません。",
+    "en": "Under construction. No dedicated implementation or verification result is provided yet."
+  },
+  "metadata_review": {
+    "level": "candidate outline; scientific derivation and literature review incomplete",
+    "on": "2026-11-21"
+  },
+  "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/tddft/",
+  "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/tddft/index.json",
+  "markdown_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/tddft/index.md",
+  "code_urls": [],
+  "test_urls": [],
+  "run_commands": [],
+  "run_from": null,
+  "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
+  "code_edition": null
+}

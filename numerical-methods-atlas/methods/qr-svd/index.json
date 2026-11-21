@@ -1,0 +1,46 @@
+{
+  "id": "qr-svd",
+  "name": {
+    "ja": "QR・SVD・最小二乗",
+    "en": "QR, SVD and least squares"
+  },
+  "group": {
+    "id": "solvers",
+    "ja": "線形・非線形解法",
+    "en": "Linear & nonlinear solvers"
+  },
+  "summary": {
+    "ja": "直交分解、低ランク、条件数と最小二乗を結び付ける。",
+    "en": "Connect orthogonal factorizations, low rank, conditioning and least squares."
+  },
+  "status": "planned",
+  "origin": "development-candidate",
+  "reading": {},
+  "code_modules": [],
+  "test_files": [],
+  "references": [],
+  "assumptions": null,
+  "units": null,
+  "boundary_conditions": null,
+  "next_deliverable": {
+    "ja": "条件数を制御した小行列の比較。",
+    "en": "Small-matrix comparisons with controlled conditioning."
+  },
+  "limitations": {
+    "ja": "Under construction。専用の実装・検証結果はまだありません。",
+    "en": "Under construction. No dedicated implementation or verification result is provided yet."
+  },
+  "metadata_review": {
+    "level": "candidate outline; scientific derivation and literature review incomplete",
+    "on": "2026-11-21"
+  },
+  "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/qr-svd/",
+  "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/qr-svd/index.json",
+  "markdown_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/qr-svd/index.md",
+  "code_urls": [],
+  "test_urls": [],
+  "run_commands": [],
+  "run_from": null,
+  "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
+  "code_edition": null
+}

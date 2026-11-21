@@ -1,0 +1,46 @@
+{
+  "id": "chebyshev",
+  "name": {
+    "ja": "Chebyshev近似",
+    "en": "Chebyshev approximation"
+  },
+  "group": {
+    "id": "approximation",
+    "ja": "近似・変換・数値積分",
+    "en": "Approximation & quadrature"
+  },
+  "summary": {
+    "ja": "多項式近似・節点・スペクトル収束を整理する。",
+    "en": "Connect polynomial approximation, node choice and spectral convergence."
+  },
+  "status": "planned",
+  "origin": "development-candidate",
+  "reading": {},
+  "code_modules": [],
+  "test_files": [],
+  "references": [],
+  "assumptions": null,
+  "units": null,
+  "boundary_conditions": null,
+  "next_deliverable": {
+    "ja": "滑らかな関数と非滑らかな関数の誤差比較。",
+    "en": "Compare smooth and nonsmooth approximation errors."
+  },
+  "limitations": {
+    "ja": "Under construction。専用の実装・検証結果はまだありません。",
+    "en": "Under construction. No dedicated implementation or verification result is provided yet."
+  },
+  "metadata_review": {
+    "level": "candidate outline; scientific derivation and literature review incomplete",
+    "on": "2026-11-21"
+  },
+  "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/chebyshev/",
+  "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/chebyshev/index.json",
+  "markdown_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/chebyshev/index.md",
+  "code_urls": [],
+  "test_urls": [],
+  "run_commands": [],
+  "run_from": null,
+  "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
+  "code_edition": null
+}

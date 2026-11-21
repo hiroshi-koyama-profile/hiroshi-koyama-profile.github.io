@@ -1,0 +1,57 @@
+{
+  "id": "spme",
+  "name": {
+    "ja": "Smooth PME（SPME）",
+    "en": "Smooth particle mesh Ewald / SPME"
+  },
+  "group": {
+    "id": "long-range",
+    "ja": "重力と長距離相互作用",
+    "en": "Particle fields & gravity"
+  },
+  "summary": {
+    "ja": "滑らかなB-spline補間を用いるPMEを、元のPMEと区別して整理する。",
+    "en": "Distinguish smooth B-spline PME from the original PME formulation."
+  },
+  "status": "planned",
+  "origin": "development-candidate",
+  "reading": {},
+  "code_modules": [],
+  "test_files": [],
+  "references": [
+    {
+      "label": "Essmann et al. (1995), A smooth particle mesh Ewald method",
+      "url": "https://doi.org/10.1063/1.470117",
+      "scope": "Bibliographic or official-documentation entry point; source equations are not audited for this planned entry."
+    },
+    {
+      "label": "GROMACS: long-range electrostatics",
+      "url": "https://manual.gromacs.org/current/reference-manual/functions/long-range-electrostatics.html",
+      "scope": "Bibliographic or official-documentation entry point; source equations are not audited for this planned entry."
+    }
+  ],
+  "assumptions": null,
+  "units": null,
+  "boundary_conditions": null,
+  "next_deliverable": {
+    "ja": "補間次数・格子・力の評価規約を明記した比較。",
+    "en": "A comparison with explicit interpolation order, mesh and force convention."
+  },
+  "limitations": {
+    "ja": "Under construction。専用の実装・検証結果はまだありません。",
+    "en": "Under construction. No dedicated implementation or verification result is provided yet."
+  },
+  "metadata_review": {
+    "level": "candidate outline; scientific derivation and literature review incomplete",
+    "on": "2026-11-21"
+  },
+  "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/spme/",
+  "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/spme/index.json",
+  "markdown_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/spme/index.md",
+  "code_urls": [],
+  "test_urls": [],
+  "run_commands": [],
+  "run_from": null,
+  "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
+  "code_edition": null
+}

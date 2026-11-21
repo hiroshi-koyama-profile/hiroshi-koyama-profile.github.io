@@ -1,0 +1,67 @@
+{
+  "id": "sdirk2",
+  "name": {
+    "ja": "L安定なSDIRK2",
+    "en": "L-stable SDIRK2"
+  },
+  "group": {
+    "id": "time",
+    "ja": "時間積分",
+    "en": "Time integration"
+  },
+  "summary": {
+    "ja": "「L安定なSDIRK2」の考え方と適用範囲を、解説章・一次文献・関連する教育用コードからたどります。",
+    "en": "Read about L-stable SDIRK2, follow the original references and inspect related educational code and checks."
+  },
+  "status": "educational-example",
+  "origin": "existing-coverage-catalog",
+  "reading": {
+    "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/stiff-integration/",
+    "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/stiff-integration/"
+  },
+  "code_modules": [
+    "stiff"
+  ],
+  "test_files": [
+    "test_new_models"
+  ],
+  "code_mapping_scope": "Related chapter modules and test files; not a claim that each test covers every named method.",
+  "references": [
+    {
+      "url": "https://doi.org/10.1137/0714068",
+      "label": "Diagonally Implicit Runge-Kutta Methods for Stiff O.D.E.'s (1977)",
+      "scope": "Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation."
+    },
+    {
+      "url": "https://doi.org/10.1016/S0168-9274(97)00056-1",
+      "label": "Implicit-explicit Runge-Kutta methods for time-dependent partial differential equations (1997)",
+      "scope": "Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation."
+    }
+  ],
+  "assumptions": null,
+  "units": null,
+  "boundary_conditions": null,
+  "limitations": {
+    "ja": "対象方程式・境界条件・検証の範囲は解説章と各コードを確認してください。教育用例は汎用ソルバーの完成を意味しません。",
+    "en": "See the chapter and implementation for equations, boundaries and checked scope. Educational examples are not complete general-purpose solvers."
+  },
+  "metadata_review": {
+    "level": "chapter-linked; detailed method-specific curation in progress",
+    "on": "2026-11-21"
+  },
+  "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/sdirk2/",
+  "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/sdirk2/index.json",
+  "markdown_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/sdirk2/index.md",
+  "code_urls": [
+    "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/numart/stiff.py"
+  ],
+  "test_urls": [
+    "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/tests/test_new_models.py"
+  ],
+  "run_commands": [
+    "python -m pytest -q tests/test_new_models.py"
+  ],
+  "run_from": "Extracted code edition directory",
+  "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
+  "code_edition": "2026-11-21"
+}

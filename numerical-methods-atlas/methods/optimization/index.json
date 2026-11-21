@@ -1,0 +1,46 @@
+{
+  "id": "optimization",
+  "name": {
+    "ja": "勾配法・準Newton法",
+    "en": "Gradient and quasi-Newton optimization"
+  },
+  "group": {
+    "id": "stochastic",
+    "ja": "最適化・確率・逆問題",
+    "en": "Optimization & stochastic methods"
+  },
+  "summary": {
+    "ja": "目的関数・勾配・制約と停止条件を整理する。",
+    "en": "Connect objectives, gradients, constraints and stopping criteria."
+  },
+  "status": "planned",
+  "origin": "development-candidate",
+  "reading": {},
+  "code_modules": [],
+  "test_files": [],
+  "references": [],
+  "assumptions": null,
+  "units": null,
+  "boundary_conditions": null,
+  "next_deliverable": {
+    "ja": "解析解を持つ目的関数と失敗例。",
+    "en": "Known-solution objectives and explicit failure cases."
+  },
+  "limitations": {
+    "ja": "Under construction。専用の実装・検証結果はまだありません。",
+    "en": "Under construction. No dedicated implementation or verification result is provided yet."
+  },
+  "metadata_review": {
+    "level": "candidate outline; scientific derivation and literature review incomplete",
+    "on": "2026-11-21"
+  },
+  "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/optimization/",
+  "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/optimization/index.json",
+  "markdown_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/optimization/index.md",
+  "code_urls": [],
+  "test_urls": [],
+  "run_commands": [],
+  "run_from": null,
+  "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
+  "code_edition": null
+}

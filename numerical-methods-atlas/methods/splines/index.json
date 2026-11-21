@@ -1,0 +1,46 @@
+{
+  "id": "splines",
+  "name": {
+    "ja": "スプライン補間",
+    "en": "Spline interpolation"
+  },
+  "group": {
+    "id": "approximation",
+    "ja": "近似・変換・数値積分",
+    "en": "Approximation & quadrature"
+  },
+  "summary": {
+    "ja": "補間条件・境界条件と滑らかさを整理する。",
+    "en": "Relate interpolation, boundary conditions and smoothness."
+  },
+  "status": "planned",
+  "origin": "development-candidate",
+  "reading": {},
+  "code_modules": [],
+  "test_files": [],
+  "references": [],
+  "assumptions": null,
+  "units": null,
+  "boundary_conditions": null,
+  "next_deliverable": {
+    "ja": "既知関数の補間誤差と境界の比較。",
+    "en": "Known-function interpolation and boundary comparisons."
+  },
+  "limitations": {
+    "ja": "Under construction。専用の実装・検証結果はまだありません。",
+    "en": "Under construction. No dedicated implementation or verification result is provided yet."
+  },
+  "metadata_review": {
+    "level": "candidate outline; scientific derivation and literature review incomplete",
+    "on": "2026-11-21"
+  },
+  "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/splines/",
+  "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/splines/index.json",
+  "markdown_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/splines/index.md",
+  "code_urls": [],
+  "test_urls": [],
+  "run_commands": [],
+  "run_from": null,
+  "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
+  "code_edition": null
+}

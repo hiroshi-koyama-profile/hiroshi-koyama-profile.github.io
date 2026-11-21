@@ -4,6 +4,11 @@ import fs from 'node:fs';
 import {makeSearch,safePath,normalize,excerpt} from '../search/engine.mjs';
 const data=JSON.parse(fs.readFileSync(new URL('../search/index.json',import.meta.url),'utf8'));
 const search=makeSearch(data.documents);
+test('the named method map is the first result in Japanese and English',()=>{
+  for(const [query,lang] of [['手法の見取り図','ja'],['手法 見取り図','ja'],['map of numerical methods','en']]){
+    assert.equal(search(query,lang)[0]?.url,'/numerical-methods-atlas/methods/',query);
+  }
+});
 test('astronomy translations collapse to the chosen language and the actual chapter ranks first',()=>{
   assert.equal(search('Lane Emden','ja')[0].url,'/astronomy-step-by-step/ja/advanced/lane-emden/');
   assert.equal(search('Lane Emden','en')[0].url,'/astronomy-step-by-step/en/advanced/lane-emden/');

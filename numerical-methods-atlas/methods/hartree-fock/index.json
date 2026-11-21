@@ -1,0 +1,57 @@
+{
+  "id": "hartree-fock",
+  "name": {
+    "ja": "Hartree–Fock法",
+    "en": "Hartree–Fock"
+  },
+  "group": {
+    "id": "quantum",
+    "ja": "電子状態・量子化学",
+    "en": "Electronic structure & quantum chemistry"
+  },
+  "summary": {
+    "ja": "交換を含む平均場と、基底を用いた分子のSCF計算を扱う。",
+    "en": "Study exchange-containing mean-field models and molecular SCF calculations."
+  },
+  "status": "planned",
+  "origin": "development-candidate",
+  "reading": {},
+  "code_modules": [],
+  "test_files": [],
+  "references": [
+    {
+      "label": "Roothaan (1951), New Developments in Molecular Orbital Theory",
+      "url": "https://doi.org/10.1103/RevModPhys.23.69",
+      "scope": "Bibliographic or official-documentation entry point; source equations are not audited for this planned entry."
+    },
+    {
+      "label": "PySCF: self-consistent field methods",
+      "url": "https://pyscf.org/user/scf",
+      "scope": "Bibliographic or official-documentation entry point; source equations are not audited for this planned entry."
+    }
+  ],
+  "assumptions": null,
+  "units": null,
+  "boundary_conditions": null,
+  "next_deliverable": {
+    "ja": "小分子・最小基底の入力と独立した参照値の照合。",
+    "en": "Small-molecule minimal-basis inputs checked against an independent reference."
+  },
+  "limitations": {
+    "ja": "Under construction。専用の実装・検証結果はまだありません。",
+    "en": "Under construction. No dedicated implementation or verification result is provided yet."
+  },
+  "metadata_review": {
+    "level": "candidate outline; scientific derivation and literature review incomplete",
+    "on": "2026-11-21"
+  },
+  "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/hartree-fock/",
+  "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/hartree-fock/index.json",
+  "markdown_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/hartree-fock/index.md",
+  "code_urls": [],
+  "test_urls": [],
+  "run_commands": [],
+  "run_from": null,
+  "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
+  "code_edition": null
+}

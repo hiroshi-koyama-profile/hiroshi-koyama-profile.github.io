@@ -19,7 +19,7 @@ Python 3.10以上とNode.js 22以上を使う。以下はPython標準ライブ�
 
 - トップと共通案内：`index.html`、`using/index.html`、`using/citations.json`。
 - 共通のナビゲーション・言語・方針表示：`scripts/site-chrome.mjs`、`site.js`、`site.css`。
-- 熱的不安定性の公開作業記録：`the-art-of-thermal-instability/work-queue.json`。状態は実装・検証・公開を確認して変更する。`progress.html` と `code-and-data.html` は `scripts/build-public-resources.py` で生成する。
+- 熱的不安定性の公開作業記録の正本：`catalog/thermal-work-queue.json`。公開用の `the-art-of-thermal-instability/work-queue.json` も同じ正本から生成する。状態は実装・検証・公開を確認して変更する。`progress.html` と `code-and-data.html` は `scripts/build-public-resources.py` で生成する。
 - 計算科学政策：`hpci-policy/` の各JSONと既存ビルダー。READMEの分野別手順を参照する。
 - 検索と研究相談：生成済み索引を直接編集せず、公開本文を更新して再生成する。
 - 取り込み元と対象版：`research-imports.json`、`astronomy-import.json`。元の教材ソースは非公開で保持する。READMEの取り込み手順の後にも `refresh-site.py` を実行する。
@@ -39,3 +39,13 @@ Python 3.10以上とNode.js 22以上を使う。以下はPython標準ライブ�
 ## 検索登録
 
 Google Search Consoleの対象プロパティは `https://hrkoyama.github.io/`。`google0b2aef3d9ae4b856.html` は所有確認に必要なので保持する。サイトマップは `https://hrkoyama.github.io/sitemap.xml`。所有確認済み・サイトマップ送信済み・取得成功・ページのインデックス登録済みは別々に確認する。再送信だけで登録完了と記録しない。
+
+## 数値計算アトラスの手法情報とコード版
+
+手法情報の正本は `catalog/atlas-methods.json`。`scripts/build-atlas-resources.py` が手法一覧と個別のHTML・JSON・Markdown、取得案内を生成する。予定項目にコードや検証済み状態を付けない。関連コードの割当てが章単位か手法単位かを区別し、単位・境界等の未整理はnullと確認範囲で明示する。英語しかない解説は英語のURLへ案内する。
+
+公開コードは `code/numerical-methods-atlas/<edition>/` にあり、編集可能なPython、検査、必要データ、依存関係、ライセンス、ハッシュ目録、ZIP、独立実行の検証記録を含む。公開済みの版のファイルは上書きしない。変更時は新しい版を用意し、目録・ZIP・独立実行結果を揃えてから台帳の `code_edition` と `code_base` を更新する。旧版のURLと配布物を保持する。Git履歴や未公開原稿を配布物へ含めない。
+
+新しい版のフォルダを前版から用意してコード・入力を編集し、Gitに追加する前に `python3 scripts/package-code-edition.py --edition YYYY-MM-DD` で目録とZIPを作る。必要な依存関係を一時環境に入れ、そのPythonで `scripts/verify-code-edition.py --edition YYYY-MM-DD` を実行する。これはZIPを別の一時フォルダに展開して検査し、実際の合否・環境を `verification.json` に保存する。検証スクリプトは依存関係の自動インストールや外部へのデータ送信を行わない。すでにGitに登録されたZIPは包装スクリプトで上書きできない。
+
+研究用データを変更するときはコードMITと一括で扱わず、出典・利用条件・入力・検証範囲を確認する。`refresh-site.py` の後に全チェックを実行し、サイトマップと索引も同じ版に揃える。

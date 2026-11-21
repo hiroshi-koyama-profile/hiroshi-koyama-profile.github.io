@@ -1,0 +1,46 @@
+{
+  "id": "mcmc",
+  "name": {
+    "ja": "Markov連鎖Monte Carlo",
+    "en": "Markov-chain Monte Carlo / MCMC"
+  },
+  "group": {
+    "id": "stochastic",
+    "ja": "最適化・確率・逆問題",
+    "en": "Optimization & stochastic methods"
+  },
+  "summary": {
+    "ja": "不変分布・混合・相関と推定誤差を扱う。",
+    "en": "Relate invariant distributions, mixing, correlation and estimation error."
+  },
+  "status": "planned",
+  "origin": "development-candidate",
+  "reading": {},
+  "code_modules": [],
+  "test_files": [],
+  "references": [],
+  "assumptions": null,
+  "units": null,
+  "boundary_conditions": null,
+  "next_deliverable": {
+    "ja": "既知分布と収束診断の基準例。",
+    "en": "A known distribution with convergence diagnostics."
+  },
+  "limitations": {
+    "ja": "Under construction。専用の実装・検証結果はまだありません。",
+    "en": "Under construction. No dedicated implementation or verification result is provided yet."
+  },
+  "metadata_review": {
+    "level": "candidate outline; scientific derivation and literature review incomplete",
+    "on": "2026-11-21"
+  },
+  "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/mcmc/",
+  "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/mcmc/index.json",
+  "markdown_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/mcmc/index.md",
+  "code_urls": [],
+  "test_urls": [],
+  "run_commands": [],
+  "run_from": null,
+  "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
+  "code_edition": null
+}

@@ -1,0 +1,46 @@
+{
+  "id": "amg",
+  "name": {
+    "ja": "代数的マルチグリッド（AMG）",
+    "en": "Algebraic multigrid / AMG"
+  },
+  "group": {
+    "id": "solvers",
+    "ja": "線形・非線形解法",
+    "en": "Linear & nonlinear solvers"
+  },
+  "summary": {
+    "ja": "行列から構成する粗い問題と前処理を、幾何MGと区別する。",
+    "en": "Distinguish algebraic coarse problems and preconditioners from geometric multigrid."
+  },
+  "status": "planned",
+  "origin": "development-candidate",
+  "reading": {},
+  "code_modules": [],
+  "test_files": [],
+  "references": [],
+  "assumptions": null,
+  "units": null,
+  "boundary_conditions": null,
+  "next_deliverable": {
+    "ja": "同じ疎行列・残差基準での比較設計。",
+    "en": "A same-matrix comparison with matched residual criteria."
+  },
+  "limitations": {
+    "ja": "Under construction。専用の実装・検証結果はまだありません。",
+    "en": "Under construction. No dedicated implementation or verification result is provided yet."
+  },
+  "metadata_review": {
+    "level": "candidate outline; scientific derivation and literature review incomplete",
+    "on": "2026-11-21"
+  },
+  "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/amg/",
+  "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/amg/index.json",
+  "markdown_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/amg/index.md",
+  "code_urls": [],
+  "test_urls": [],
+  "run_commands": [],
+  "run_from": null,
+  "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
+  "code_edition": null
+}

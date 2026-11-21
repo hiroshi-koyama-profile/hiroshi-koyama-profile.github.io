@@ -1,0 +1,52 @@
+{
+  "id": "pme",
+  "name": {
+    "ja": "Particle Mesh Ewald（PME）",
+    "en": "Particle mesh Ewald / PME"
+  },
+  "group": {
+    "id": "long-range",
+    "ja": "重力と長距離相互作用",
+    "en": "Particle fields & gravity"
+  },
+  "summary": {
+    "ja": "Ewaldの逆空間項を粒子・格子の補間とFFTへ結び付ける。",
+    "en": "Connect the reciprocal Ewald sum to mesh interpolation and FFTs."
+  },
+  "status": "planned",
+  "origin": "development-candidate",
+  "reading": {},
+  "code_modules": [],
+  "test_files": [],
+  "references": [
+    {
+      "label": "Darden, York & Pedersen (1993), Particle mesh Ewald",
+      "url": "https://doi.org/10.1063/1.464397",
+      "scope": "Bibliographic or official-documentation entry point; source equations are not audited for this planned entry."
+    }
+  ],
+  "assumptions": null,
+  "units": null,
+  "boundary_conditions": null,
+  "next_deliverable": {
+    "ja": "同一条件のEwald参照との誤差比較と、再現できる外部コード入力。",
+    "en": "A same-condition Ewald comparison and reproducible reference-code inputs."
+  },
+  "limitations": {
+    "ja": "Under construction。専用の実装・検証結果はまだありません。",
+    "en": "Under construction. No dedicated implementation or verification result is provided yet."
+  },
+  "metadata_review": {
+    "level": "candidate outline; scientific derivation and literature review incomplete",
+    "on": "2026-11-21"
+  },
+  "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/pme/",
+  "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/pme/index.json",
+  "markdown_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/pme/index.md",
+  "code_urls": [],
+  "test_urls": [],
+  "run_commands": [],
+  "run_from": null,
+  "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
+  "code_edition": null
+}
