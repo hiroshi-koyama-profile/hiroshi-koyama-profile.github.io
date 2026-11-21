@@ -1,0 +1,13 @@
+{
+  "scope": "Representative equation forms for visual browsing; assumptions, units, boundary conditions and numerical verification belong to the linked chapters. This initial index is not the full 42-entry equation/model inventory.",
+  "equations": [
+    {"id":"advection","name":{"ja":"線形移流","en":"Linear advection"},"formula":["∂ₜu + a ∂ₓu = 0"],"chapter":"stability","note":{"ja":"一定速度aによる輸送。波形の移動、数値拡散、安定性へ。","en":"Transport at constant speed a: translation, numerical diffusion and stability."}},
+    {"id":"diffusion","name":{"ja":"熱・拡散方程式","en":"Heat / diffusion equation"},"formula":["∂ₜu = ν ∇²u"],"chapter":"elliptic","note":{"ja":"一定拡散係数νの代表形。モードの減衰、時間積分、境界条件へ。","en":"A representative constant-diffusivity form: mode decay, time integration and boundaries."}},
+    {"id":"poisson","name":{"ja":"Poisson・Laplace方程式","en":"Poisson / Laplace equations"},"formula":["−∇²u = f","f = 0  →  ∇²u = 0"],"chapter":"elliptic","note":{"ja":"楕円型境界値問題。符号規約を確認し、反復解法・疎行列・境界条件をたどる。","en":"Elliptic boundary-value problems: check sign conventions, iterative solvers, sparse matrices and boundaries."}},
+    {"id":"burgers","name":{"ja":"非粘性Burgers方程式","en":"Inviscid Burgers equation"},"formula":["∂ₜu + ∂ₓ(u²/2) = 0"],"chapter":"equation-gallery","note":{"ja":"非線形のスカラー保存則。衝撃波と膨張波を比較する。","en":"A nonlinear scalar conservation law: compare shocks and rarefactions."}},
+    {"id":"traffic","name":{"ja":"LWR交通流モデル","en":"LWR traffic model"},"formula":["∂ₜρ + ∂ₓ[ρ(1 − ρ)] = 0"],"chapter":"equation-gallery","note":{"ja":"無次元化した代表流束。渋滞の上流伝播と希薄化を調べる。","en":"A representative nondimensional flux: upstream jams and clearing fans."}},
+    {"id":"euler","name":{"ja":"圧縮性Euler方程式","en":"Compressible Euler equations"},"formula":["∂ₜU + ∂ₓF(U) = 0","U = (ρ, ρu, E)ᵀ","F = (ρu, ρu² + p, u(E + p))ᵀ"],"chapter":"benchmarks","note":{"ja":"1次元の保存形。状態方程式と初期・境界条件は各テストの定義を参照する。","en":"The one-dimensional conservative form. Consult each test for its equation of state, initial data and boundaries."}},
+    {"id":"shallow-water","name":{"ja":"浅水方程式","en":"Shallow-water equations"},"formula":["∂ₜh + ∂ₓ(hu) = 0","∂ₜ(hu) + ∂ₓ(hu² + gh²/2) = 0"],"chapter":"benchmarks","note":{"ja":"平坦な底面・1次元・摩擦なしの代表形。水深hと重力加速度g。ダム崩壊の参照解へ。","en":"A one-dimensional flat-bed, frictionless form with depth h and gravity g. Follow the dam-break reference solution."}},
+    {"id":"isothermal","name":{"ja":"等温流体方程式","en":"Isothermal flow equations"},"formula":["∂ₜρ + ∂ₓ(ρu) = 0","∂ₜ(ρu) + ∂ₓ(ρu² + cₛ²ρ) = 0"],"chapter":"benchmarks","note":{"ja":"一定の等温音速cₛを用いる1次元の代表形。密度ジャンプの参照解へ。","en":"A one-dimensional form with constant isothermal sound speed cₛ. Follow the density-jump reference solution."}}
+  ]
+}

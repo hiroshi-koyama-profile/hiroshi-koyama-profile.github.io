@@ -33,7 +33,7 @@ export function homeSearchPage(){
 }
 let indexPromise;
 function loadIndex(){
- if(!indexPromise)indexPromise=fetch(new URL('home-search-index.json?v=e777e333fd7d',import.meta.url)).then(r=>{if(!r.ok)throw Error('Search index unavailable');return r.json();}).catch(error=>{indexPromise=null;throw error;});
+ if(!indexPromise)indexPromise=fetch(new URL('home-search-index.json?v=9bf76536e039',import.meta.url)).then(r=>{if(!r.ok)throw Error('Search index unavailable');return r.json();}).catch(error=>{indexPromise=null;throw error;});
  return indexPromise;
 }
 export function wireHomeSearch(){
@@ -58,6 +58,8 @@ export function wireHomeSearch(){
    list.hidden=!shown.length;
   }catch{if(ticket===version&&form.isConnected)status.textContent=c.failed;}
  }
+ // Public word-search entry
+ document.querySelectorAll('[data-atlas-word-search]').forEach(link=>link.addEventListener('click',event=>{event.preventDefault();input.focus({preventScroll:true});form.scrollIntoView({block:'center',behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth'});}));
  const schedule=()=>{clearTimeout(timer);++version;if(!composing)timer=setTimeout(update,120);};
  input.addEventListener('input',schedule);
  input.addEventListener('compositionstart',()=>{composing=true;clearTimeout(timer);++version;});

@@ -8,7 +8,46 @@
     ],
     "map": "手法の見取り図",
     "code": "公開コード・入力・検証",
-    "using": "資料の使い方・引用"
+    "using": "資料の使い方・引用",
+    "browse_title": "3つの入口から探す",
+    "browse": [
+      {
+        "id": "words",
+        "title": "文字で検索",
+        "description": "手法名・方程式名・現象から。日本語と英語で探せます。",
+        "action": "キーワードを入力する →"
+      },
+      {
+        "id": "equations",
+        "title": "数式から探す",
+        "description": "式の形を眺め、解説・手法・テスト計算へ進めます。",
+        "action": "方程式の一覧を見る →"
+      },
+      {
+        "id": "pictures",
+        "title": "絵から探す",
+        "description": "衝撃波・渦・場の画像から、計算条件と解法をたどれます。",
+        "action": "テスト計算のギャラリーへ →"
+      }
+    ],
+    "metrics": {
+      "methods": {
+        "label": "収録手法・構成要素",
+        "note": "専用ソルバーの数ではありません"
+      },
+      "papers": {
+        "label": "学術論文",
+        "note": "共通文献台帳・重複を除く"
+      },
+      "equations": {
+        "label": "方程式・モデル",
+        "note": "実例{local_equations}・文献解説{reading_equations}"
+      },
+      "gallery_cases": {
+        "label": "波形テスト",
+        "note": "{gallery_equations}方程式系・計算済みの比較"
+      }
+    }
   },
   "en": {
     "title": "For people and AI to trace evidence and check calculations",
@@ -19,6 +58,45 @@
     ],
     "map": "Method map",
     "code": "Public code, inputs and checks",
-    "using": "Use and citation"
+    "using": "Use and citation",
+    "browse_title": "Three ways into the atlas",
+    "browse": [
+      {
+        "id": "words",
+        "title": "Search by words",
+        "description": "Search methods, equations and phenomena in English or Japanese.",
+        "action": "Enter a keyword →"
+      },
+      {
+        "id": "equations",
+        "title": "Browse by equation",
+        "description": "Recognize a formula and follow explanations, methods and test cases.",
+        "action": "See the equation index →"
+      },
+      {
+        "id": "pictures",
+        "title": "Browse by picture",
+        "description": "Start with shocks, vortices and fields, then inspect setups and solvers.",
+        "action": "Open the computed gallery →"
+      }
+    ],
+    "metrics": {
+      "methods": {
+        "label": "Methods & building blocks",
+        "note": "Not a count of dedicated solvers"
+      },
+      "papers": {
+        "label": "Research publications",
+        "note": "Deduplicated shared bibliography"
+      },
+      "equations": {
+        "label": "Equations & models",
+        "note": "{local_equations} example-linked; {reading_equations} reading-only"
+      },
+      "gallery_cases": {
+        "label": "Wave-profile cases",
+        "note": "{gallery_equations} equation families; computed profiles"
+      }
+    }
   }
 }
