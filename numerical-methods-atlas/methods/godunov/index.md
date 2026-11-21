@@ -142,5 +142,7 @@ References:
 - Reference: https://doi.org/10.1007/BF01414629 — Original HLLC contact-restoration source; no claim that all wave-speed estimates or WAF experiments in the paper are implemented.
 - Reference: https://doi.org/10.1016/0021-9991(78)90023-2 — Historical shock-tube comparison used as a benchmark source. The atlas reference is its own non-vacuum ideal-gas Riemann evaluator, with a bracketed numerical pressure solve.
 
+Common execution records: [{"id": "sod", "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json", "guide": {"ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#sod-ja", "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#sod-en"}}]
+
 Source: https://hrkoyama.github.io/numerical-methods-atlas/methods/godunov/
 Edition and terms: https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/

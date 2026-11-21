@@ -8,8 +8,9 @@ const data=read('catalog/atlas-execution-examples.json');
 const bootstrap=`import importlib.util, json, pathlib, copy, io, zipfile, tempfile, hashlib, stat\nfrom unittest import mock\ndef module(name,path):\n s=importlib.util.spec_from_file_location(name,path);m=importlib.util.module_from_spec(s);s.loader.exec_module(m);return m\nb=module('registry_builder','scripts/build-atlas-execution-examples.py')\nv=module('registry_verifier','scripts/verify-atlas-execution-examples.py')\nd=json.loads(pathlib.Path('catalog/atlas-execution-examples.json').read_bytes())\n`;
 function python(source){return execFileSync('python3',['-c',bootstrap+source],{cwd:root,encoding:'utf8'});}
 
-test('the three common recipes map to existing problems/methods and verified immutable artifacts',()=>{
-  assert.deepEqual(data.examples.map(x=>x.id),['barnes-hut','hydrogenic-atoms','helium-ground-state']);
+test('the fifteen common recipes map to existing problems/methods and verified immutable artifacts',()=>{
+  assert.equal(data.examples.length,15);
+  assert.deepEqual(data.examples.slice(0,3).map(x=>x.id),['barnes-hut','hydrogenic-atoms','helium-ground-state']);
   const problems=read('catalog/atlas-test-problems.json').problems;
   const methods=read('catalog/atlas-methods.json').methods;
   for(const x of data.examples){
@@ -20,7 +21,7 @@ test('the three common recipes map to existing problems/methods and verified imm
     assert.ok(x.terms.code_license.endsWith('/LICENSE'));
     assert.equal(x.terms.content_and_data,'https://hrkoyama.github.io/rights/');
   }
-  assert.match(python("r=b.build_registry(d,source_bytes=pathlib.Path('catalog/atlas-execution-examples.json').read_bytes())\nassert len(r['examples'])==3\nassert r['url'].endswith('/code-and-data/examples.json')\nprint('verified')\n"),/verified/);
+  assert.match(python("r=b.build_registry(d,source_bytes=pathlib.Path('catalog/atlas-execution-examples.json').read_bytes())\nassert len(r['examples'])==15\nassert r['url'].endswith('/code-and-data/examples.json')\nprint('verified')\n"),/verified/);
 });
 
 test('incompatible schema, false input hashes and inconsistent shared runners are rejected',()=>{
@@ -61,12 +62,18 @@ with mock.patch.object(v.urllib.request,'urlopen',return_value=Response(b'change
 `);
 });
 
-test('archive extraction rejects traversal and symbolic links, and accepts both actual public editions',()=>{
-  python(`with tempfile.TemporaryDirectory() as td:
- for x in [d['examples'][0],d['examples'][1]]:
-  r=x['release'];mb=(b.ROOT/b.public_path(r['manifest'])).read_bytes();m=json.loads(mb)
-  folder=v.safe_extract((b.ROOT/b.public_path(r['download'])).read_bytes(),m,r,pathlib.Path(td)/r['family'])
-  assert (folder/x['inputs']['path']).is_file()
+test('archive extraction rejects traversal and symbolic links, and accepts all three public editions',()=>{
+  python(`releases={}
+for x in d['examples']:
+ r=x['release'];identity=(r['family'],r['version'],r['download'],r['sha256'])
+ releases.setdefault(identity,[]).append(x)
+assert len(releases)==3
+assert ('numerical-methods-atlas','2026-11-22') in {identity[:2] for identity in releases}
+with tempfile.TemporaryDirectory() as td:
+ for index,cases in enumerate(releases.values()):
+  r=cases[0]['release'];mb=(b.ROOT/b.public_path(r['manifest'])).read_bytes();m=json.loads(mb)
+  folder=v.safe_extract((b.ROOT/b.public_path(r['download'])).read_bytes(),m,r,pathlib.Path(td)/('release-'+str(index)))
+  for x in cases:assert (folder/x['inputs']['path']).is_file(),x['id']
  payload=io.BytesIO()
  with zipfile.ZipFile(payload,'w') as z:z.writestr('../escaped.txt','bad')
  try:v.safe_extract(payload.getvalue(),{'files':{}},{'archive_directory':'edition','manifest_sha256':'0'*64},pathlib.Path(td))

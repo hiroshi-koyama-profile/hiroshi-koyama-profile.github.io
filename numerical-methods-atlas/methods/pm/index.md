@@ -111,5 +111,7 @@ References:
 
 - Reference: https://doi.org/10.1016/0021-9991(74)90044-8 — Primary PM charge-sharing/CIC and Fourier-force-shaping research in 2D; context for assignment and mesh-force errors, not a derivation of this 3D gravity implementation.
 
+Common execution records: [{"id": "periodic-particles", "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json", "guide": {"ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#periodic-particles-ja", "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#periodic-particles-en"}}]
+
 Source: https://hrkoyama.github.io/numerical-methods-atlas/methods/pm/
 Edition and terms: https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/

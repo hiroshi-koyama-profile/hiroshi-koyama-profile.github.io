@@ -121,7 +121,7 @@
     {
       "id": "representative-recipes",
       "target_year": 2026,
-      "state": "planned",
+      "state": "in-progress",
       "track": "current",
       "title": {
         "ja": "既存15問題を固定入力から再実行できる形へ",
@@ -131,7 +131,11 @@
         "ja": "既にある問題を選び、公開入力から結果ファイルを生成し、確認値・許容誤差・失敗を判定できる経路を揃える。既存の完成例を再利用し、新規15問題として総数へ加算しない。",
         "en": "Select existing problems and provide paths from public inputs to result files, check values, tolerances and explicit failures. Reuse completed examples; these are not 15 new problems to add to the inventory."
       },
-      "priority": "P0"
+      "priority": "P0",
+      "progress": {
+        "ja": "追加12問題の固定入力・共通runner・JSON/CSV・数値判定を整備。新配布版を別フォルダへ展開して432検査と12レシピを実行済み。公開ファイルからの15問題の再実行を確認中。問題総数は60のまま。",
+        "en": "Prepared fixed inputs, a common runner, JSON/CSV and acceptance criteria for 12 more problems. The new ZIP passed 432 checks and all 12 recipes in a separate extraction. Checking all 15 through public artifacts; atlas-wide problems remain 60."
+      }
     },
     {
       "id": "human-entry-points",

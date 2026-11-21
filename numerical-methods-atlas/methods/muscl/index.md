@@ -22,5 +22,7 @@ See the chapter and implementation for equations, boundaries and checked scope. 
 - Reference: https://doi.org/10.1016/0021-9991(91)90211-3 — Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation.
 - Reference: https://doi.org/10.1017/CBO9780511791253 — Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation.
 
+Common execution records: [{"id": "brio-wu", "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json", "guide": {"ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#brio-wu-ja", "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#brio-wu-en"}}]
+
 Source: https://hrkoyama.github.io/numerical-methods-atlas/methods/muscl/
 Edition and terms: https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/

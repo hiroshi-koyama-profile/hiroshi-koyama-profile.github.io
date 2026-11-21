@@ -19,5 +19,7 @@ See the chapter and implementation for equations, boundaries and checked scope. 
 - Reference: https://doi.org/10.1090/S0025-5718-1977-0431719-X — Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation.
 - Reference: https://doi.org/10.1137/1.9780898719505 — Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation.
 
+Common execution records: [{"id": "poisson-1d-dirichlet", "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json", "guide": {"ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#poisson-1d-dirichlet-ja", "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#poisson-1d-dirichlet-en"}}]
+
 Source: https://hrkoyama.github.io/numerical-methods-atlas/methods/thomas/
 Edition and terms: https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/

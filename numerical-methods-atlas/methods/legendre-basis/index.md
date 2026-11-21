@@ -110,5 +110,7 @@ References:
 
 - Reference: https://doi.org/10.1016/j.jcp.2014.12.012 — Legendre modal expansion, unweighted normalization and modal/nodal transforms; a modern formulation, not a historical-origin attribution.
 
+Common execution records: [{"id": "smooth-function-projection", "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json", "guide": {"ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#smooth-function-projection-ja", "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#smooth-function-projection-en"}}]
+
 Source: https://hrkoyama.github.io/numerical-methods-atlas/methods/legendre-basis/
 Edition and terms: https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/

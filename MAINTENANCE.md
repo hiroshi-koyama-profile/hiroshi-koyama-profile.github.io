@@ -64,9 +64,13 @@ Google Search Consoleの対象プロパティは `https://hrkoyama.github.io/`�
 
 原子計算の正本は `catalog/atlas-quantum-examples.json` と別系列の `code/quantum-atoms/<edition>/`。同梱 `run.py` と `reference_pyscf.py` は別実装であり、参照側に教育用コードの関数を流用しない。PySCFの交換のみ汎関数は `LDA_X,` と明示する。有限格子値・h²外挿の推定・有限基底の独立参照値を別々に表示する。新しい原子計算版は必要な依存関係を用意したPythonで `scripts/package-quantum-atoms.py --edition YYYY-MM-DD` を実行する。このコマンドはZIPを別フォルダへ展開し、検査と固定入力全計算・画像生成を実行して、ハッシュと実際の結果を記録する。公開済みZIPは上書きできない。`build-quantum-examples.py` は通常の更新時にその記録と全ファイルのハッシュを確認して日英HTML/JSONを生成し、計算は再実行しない。関連する6手法の `quantum_examples` を別系列コードへ結び、旧版の `code_modules` に混ぜない。
 
-公開済みの実行例を結ぶ正本は `catalog/atlas-execution-examples.json`。Barnes–Hut、水素型原子、Heの3例について、例ID・対応する手法/問題・版・入力・実行場所・依存関係・コマンド・出力・数値検査・失敗判定・引用・既存の利用条件を記録する。`build-atlas-execution-examples.py` が不変な配布物と入力/参照結果のハッシュ、保存結果が受入条件を満たすことを確認し、`numerical-methods-atlas/code-and-data/examples.json` を生成する。`build-atlas-execution-guide.py` はこの情報から日英の取得・実行案内を生成する。方法/問題のJSONと原子計算の章も同じ実行例へリンクする。例を追加しても独立問題数や実装済み手法数を自動では増やさない。
+公開済みの実行例を結ぶ正本は `catalog/atlas-execution-examples.json`。代表15問題（既存3例＋追加12例）について、例ID・対応する手法/問題・版・入力・実行場所・依存関係・コマンド・出力・数値検査・失敗判定・引用・既存の利用条件を記録する。`build-atlas-execution-examples.py` が不変な配布物と入力/参照結果のハッシュ、保存結果が受入条件を満たすことを確認し、`numerical-methods-atlas/code-and-data/examples.json` を生成する。`build-atlas-execution-guide.py` はこの情報から日英の取得・実行案内を生成する。方法/問題のJSONと原子計算の章も同じ実行例へリンクする。例を追加しても独立問題数や実装済み手法数を自動では増やさない。
 
-共通手順の実行確認には、依存関係を導入済みのPythonを指定し、`python scripts/verify-atlas-execution-examples.py --python /path/to/python --output report.json` を使う。通常は公開registry、ZIP、入力、参照をHTTPSで取得し、安全に別の一時フォルダへ展開する。プログラム終了と数値条件の合格を別に記録し、新しいJSON/CSVのハッシュも残す。水素型原子とHeは同じrunnerの1回の実行を共有する。初公開前のみ `--registry catalog/atlas-execution-examples.json` を指定できる。この場合も科学計算のファイルは全て公開URLから取得し、どの入力経路かをレポートに記す。依存関係を自動でインストールしない。全411検査/23検査や独立PySCF参照の再生成とは別の実行確認である。
+共通手順の実行確認には、依存関係を導入済みのPythonを指定し、`python scripts/verify-atlas-execution-examples.py --python /path/to/python --output report.json` を使う。通常は公開registry、ZIP、入力、参照をHTTPSで取得し、安全に別の一時フォルダへ展開する。プログラム終了と数値条件の合格を別に記録し、新しいJSON/CSVのハッシュも残す。水素型原子とHeは同じrunnerの1回の実行を共有する。初公開前のみ `--registry catalog/atlas-execution-examples.json` を指定できる。この場合も科学計算のファイルは全て公開URLから取得し、どの入力経路かをレポートに記す。依存関係を自動でインストールしない。配布版の全自動検査や独立PySCF参照の再生成とは別の実行確認である。
+
+追加12問題の固定入力は `code/numerical-methods-atlas/2026-11-22/recipes/*.json`、共通入口は同梱 `run_recipe.py`。同じフォルダの3モジュールが既存Numartを呼び、解析解・細格子の数値参照・保存則・独立に計算した残差などを評価する。Numart本体は2026-11-21版と同一のまま、旧配布版を上書きしない。各入力は刻み・境界・モデル規約・受入条件を含み、`result.json` に入力ハッシュ・実測値・各合否、`solution.csv` に解と参照を記録する。新規/空の出力先だけを許可し、終了コード0=数値条件合格、1=未達、2=入力/計算エラーとする。Shu–Osher/Brio–Wuの細格子比較を厳密解や別実装の独立参照と呼ばない。旧版411検査と新版432検査は重複を含む版別件数で、合算しない。
+
+`verify-code-edition.py` はZIPを独立展開して自動検査を実行し、`run_recipe.py` があれば同梱全入力も実行して結果・CSV・入力ハッシュを検査する。公開用registryの再実行記録は段階を区別し、初回のローカル台帳＋公開配布物は `2026-11-22.json`、公開registryからの追試は `2026-11-22-public.json`。後者が存在すると案内ページは同じregistryハッシュを検証してそちらを表示する。過去の記録は書き換えない。
 
 公開用の追加実行記録は `numerical-methods-atlas/code-and-data/verification/` に保存し、台帳の `verification_receipt` を対応するURLにする。registryの内容と記録内のSHA-256が一致することを生成時に確認する。通常のrefreshは保存済み記録を参照し、ネット取得や科学計算を繰り返さない。レシピを変えた場合は記録を取り直し、古い記録を新しい条件の成功と表示しない。コードのMIT、入力・数値データ・図・本文の個別条件、第三者資料の条件は別のまま保持する。
 

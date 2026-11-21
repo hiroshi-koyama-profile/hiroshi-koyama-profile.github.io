@@ -115,5 +115,7 @@ References:
 
 - Reference: https://doi.org/10.1090/S0025-5718-1977-0431719-X — Multilevel interaction for boundary-value solvers; the atlas implements only a fixed nested-grid geometric V-cycle.
 
+Common execution records: [{"id": "poisson-2d-sine", "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json", "guide": {"ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#poisson-2d-sine-ja", "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#poisson-2d-sine-en"}}]
+
 Source: https://hrkoyama.github.io/numerical-methods-atlas/methods/multigrid/
 Edition and terms: https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/

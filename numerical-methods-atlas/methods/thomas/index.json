@@ -77,5 +77,14 @@
   "run_from": "Extracted code edition directory",
   "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
   "code_edition": "2026-11-21",
-  "execution_examples": []
+  "execution_examples": [
+    {
+      "id": "poisson-1d-dirichlet",
+      "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json",
+      "guide": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#poisson-1d-dirichlet-ja",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#poisson-1d-dirichlet-en"
+      }
+    }
+  ]
 }

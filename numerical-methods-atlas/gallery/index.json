@@ -63,9 +63,20 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/stability/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/stability/"
       },
-      "execution_examples": [],
+      "execution_examples": [
+        {
+          "id": "advection-sine",
+          "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json",
+          "guide": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#advection-sine-ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#advection-sine-en"
+          }
+        }
+      ],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#advection-sine",
-      "run_commands": [],
+      "run_commands": [
+        "python run_recipe.py --input recipes/advection-sine.json --output output-advection-sine"
+      ],
       "image": "/numerical-methods-atlas/gallery/previews/advection-sine.png",
       "image_sha256": "dbb022150fee1472e54b24dfd3f01363bcfd3998f7e21da9dad6f30e4d224f0a",
       "width": 832,
@@ -464,9 +475,20 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/benchmarks/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/benchmarks/"
       },
-      "execution_examples": [],
+      "execution_examples": [
+        {
+          "id": "sod",
+          "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json",
+          "guide": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#sod-ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#sod-en"
+          }
+        }
+      ],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#sod",
-      "run_commands": [],
+      "run_commands": [
+        "python run_recipe.py --input recipes/sod.json --output output-sod"
+      ],
       "image": "/numerical-methods-atlas/gallery/previews/sod.png",
       "image_sha256": "a9d8f817001a737123543672067c9e575e8e835b159c3507c187ce9d85a8141c",
       "width": 832,
@@ -570,9 +592,20 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/reconstruction/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/reconstruction/"
       },
-      "execution_examples": [],
+      "execution_examples": [
+        {
+          "id": "shu-osher",
+          "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json",
+          "guide": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#shu-osher-ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#shu-osher-en"
+          }
+        }
+      ],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#shu-osher",
-      "run_commands": [],
+      "run_commands": [
+        "python run_recipe.py --input recipes/shu-osher.json --output output-shu-osher"
+      ],
       "image": "/numerical-methods-atlas/gallery/previews/shu-osher.png",
       "image_sha256": "0c7f01545cc9c22517f3ec3b332612d8b2e7d4943b145ae646ca377ac40e81f5",
       "width": 832,
@@ -1289,9 +1322,20 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/mhd/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/mhd/"
       },
-      "execution_examples": [],
+      "execution_examples": [
+        {
+          "id": "brio-wu",
+          "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json",
+          "guide": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#brio-wu-ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#brio-wu-en"
+          }
+        }
+      ],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#brio-wu",
-      "run_commands": [],
+      "run_commands": [
+        "python run_recipe.py --input recipes/brio-wu.json --output output-brio-wu"
+      ],
       "image": "/numerical-methods-atlas/assets/mhd-tests/brio-wu.png",
       "image_sha256": "9702508c0d5c9210f1a7df3351ca605c5cfb0e78bef5f2158bbece6018b83b82",
       "width": 1400,
@@ -1419,9 +1463,20 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/incompressible/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/incompressible/"
       },
-      "execution_examples": [],
+      "execution_examples": [
+        {
+          "id": "taylor-green",
+          "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json",
+          "guide": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#taylor-green-ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#taylor-green-en"
+          }
+        }
+      ],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#taylor-green",
-      "run_commands": [],
+      "run_commands": [
+        "python run_recipe.py --input recipes/taylor-green.json --output output-taylor-green"
+      ],
       "image": "/numerical-methods-atlas/assets/field-taylor-green.png",
       "image_sha256": "89d51b4bdc8650fd270de49d92f3109e0d2b0feb27f3e62ae509ea550fe33a19",
       "width": 1575,
@@ -1561,7 +1616,16 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/elliptic/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/elliptic/"
       },
-      "execution_examples": [],
+      "execution_examples": [
+        {
+          "id": "poisson-1d-dirichlet",
+          "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json",
+          "guide": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#poisson-1d-dirichlet-ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#poisson-1d-dirichlet-en"
+          }
+        }
+      ],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#poisson-1d-dirichlet",
       "run_commands": [
         "python -m pytest -q tests/test_linear.py -k test_poisson_second_order"
@@ -1850,9 +1914,20 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/fem/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/fem/"
       },
-      "execution_examples": [],
+      "execution_examples": [
+        {
+          "id": "poisson-2d-sine",
+          "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json",
+          "guide": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#poisson-2d-sine-ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#poisson-2d-sine-en"
+          }
+        }
+      ],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#poisson-2d-sine",
-      "run_commands": [],
+      "run_commands": [
+        "python run_recipe.py --input recipes/poisson-2d-sine.json --output output-poisson-2d-sine"
+      ],
       "image": "/numerical-methods-atlas/assets/field-fem-poisson.png",
       "image_sha256": "5cb31b1cb182fa6509de11f0cafcc2368b9136b46d625bc6183df2a648f9af29",
       "width": 1575,
@@ -2086,7 +2161,16 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/sparse-nonlinear/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/sparse-nonlinear/"
       },
-      "execution_examples": [],
+      "execution_examples": [
+        {
+          "id": "bratu",
+          "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json",
+          "guide": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#bratu-ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#bratu-en"
+          }
+        }
+      ],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#bratu",
       "run_commands": [
         "python -m pytest -q tests/test_sparse_fem.py -k test_bratu_newton_krylov_refines_to_continuous_reference"
@@ -2235,7 +2319,16 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/particle-gravity/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/particle-gravity/"
       },
-      "execution_examples": [],
+      "execution_examples": [
+        {
+          "id": "periodic-particles",
+          "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json",
+          "guide": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#periodic-particles-ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#periodic-particles-en"
+          }
+        }
+      ],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#periodic-particles",
       "run_commands": [
         "python -m pytest -q tests/test_particle_gravity.py -k test_pm_self_force_and_total_internal_force_with_matched_cic"
@@ -2418,9 +2511,20 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/time-integration/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/time-integration/"
       },
-      "execution_examples": [],
+      "execution_examples": [
+        {
+          "id": "harmonic-oscillator",
+          "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json",
+          "guide": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#harmonic-oscillator-ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#harmonic-oscillator-en"
+          }
+        }
+      ],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#harmonic-oscillator",
-      "run_commands": [],
+      "run_commands": [
+        "python run_recipe.py --input recipes/harmonic-oscillator.json --output output-harmonic-oscillator"
+      ],
       "image": "/numerical-methods-atlas/gallery/previews/harmonic-oscillator.png",
       "image_sha256": "7b2eedfce8ba315a2062cfa67b1c1645bd97ac12f9c07d2d190f65f81aa8089a",
       "width": 832,
@@ -2563,7 +2667,16 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/stiff-integration/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/stiff-integration/"
       },
-      "execution_examples": [],
+      "execution_examples": [
+        {
+          "id": "stiff-cosine",
+          "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json",
+          "guide": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#stiff-cosine-ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#stiff-cosine-en"
+          }
+        }
+      ],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#stiff-cosine",
       "run_commands": [
         "python -m pytest -q tests/test_new_models.py -k test_stiff_decay_and_local_error_control"
@@ -2658,9 +2771,20 @@
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/basis-functions/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/basis-functions/"
       },
-      "execution_examples": [],
+      "execution_examples": [
+        {
+          "id": "smooth-function-projection",
+          "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json",
+          "guide": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#smooth-function-projection-ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#smooth-function-projection-en"
+          }
+        }
+      ],
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#smooth-function-projection",
-      "run_commands": [],
+      "run_commands": [
+        "python run_recipe.py --input recipes/smooth-function-projection.json --output output-smooth-function-projection"
+      ],
       "image": "/numerical-methods-atlas/gallery/previews/smooth-function-projection.png",
       "image_sha256": "a707ea243ee02d799b972da136505ec673514e89db5f33f948ee405a261648d4",
       "width": 832,
@@ -3006,6 +3130,6 @@
     "numerical-methods-atlas/gallery/preview-manifest.json": "46fc64b6a2c21e4d9b2e53114b2cc7caa52edd1f4d9c7654eb67ccc2f96edb99",
     "numerical-methods-atlas/gallery/calculations.json": "d98cd75e1c58177bfc716e8b68d6bfba1358d5135ac8e2ee0989eb3df77942a6",
     "numerical-methods-atlas/gallery/verification.json": "46c39543afa9d943dfef896fadbc8f84d847f1a145d9b1427a2336de7a3a50f9",
-    "numerical-methods-atlas/test-cases/index.json": "4b273eebe4e9c40aeaad4e9573836b15700d09cc3bae0098263142c585871aca"
+    "numerical-methods-atlas/test-cases/index.json": "215213f8558671e777be79bbf9b31225bdd2deca8a730ee49277387cb530e781"
   }
 }

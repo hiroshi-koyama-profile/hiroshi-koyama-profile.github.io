@@ -111,5 +111,7 @@ References:
 
 - Reference: https://doi.org/10.1090/S0002-9904-1943-07818-4 — Piecewise-linear trial functions on triangular subdivisions in a variational formulation; not a source for the atlas's CSR or GMRES implementation.
 
+Common execution records: [{"id": "poisson-2d-sine", "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json", "guide": {"ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#poisson-2d-sine-ja", "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#poisson-2d-sine-en"}}]
+
 Source: https://hrkoyama.github.io/numerical-methods-atlas/methods/p1-fem/
 Edition and terms: https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/

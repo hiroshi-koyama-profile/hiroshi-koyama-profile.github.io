@@ -475,7 +475,16 @@
       "run_from": "Extracted code edition directory",
       "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
       "code_edition": "2026-11-21",
-      "execution_examples": []
+      "execution_examples": [
+        {
+          "id": "advection-sine",
+          "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json",
+          "guide": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#advection-sine-ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#advection-sine-en"
+          }
+        }
+      ]
     },
     {
       "id": "lax-friedrichs",
@@ -877,7 +886,16 @@
       "run_from": "Extracted code edition directory",
       "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
       "code_edition": "2026-11-21",
-      "execution_examples": []
+      "execution_examples": [
+        {
+          "id": "sod",
+          "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json",
+          "guide": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#sod-ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#sod-en"
+          }
+        }
+      ]
     },
     {
       "id": "muscl",
@@ -963,7 +981,16 @@
       "run_from": "Extracted code edition directory",
       "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
       "code_edition": "2026-11-21",
-      "execution_examples": []
+      "execution_examples": [
+        {
+          "id": "brio-wu",
+          "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json",
+          "guide": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#brio-wu-ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#brio-wu-en"
+          }
+        }
+      ]
     },
     {
       "id": "weno-js",
@@ -1477,7 +1504,16 @@
       "run_from": "Extracted code edition directory",
       "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
       "code_edition": "2026-11-21",
-      "execution_examples": []
+      "execution_examples": [
+        {
+          "id": "poisson-2d-sine",
+          "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json",
+          "guide": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#poisson-2d-sine-ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#poisson-2d-sine-en"
+          }
+        }
+      ]
     },
     {
       "id": "rusanov",
@@ -1878,7 +1914,16 @@
       "run_from": "Extracted code edition directory",
       "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
       "code_edition": "2026-11-21",
-      "execution_examples": []
+      "execution_examples": [
+        {
+          "id": "sod",
+          "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json",
+          "guide": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#sod-ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#sod-en"
+          }
+        }
+      ]
     },
     {
       "id": "roe",
@@ -4029,7 +4074,16 @@
       "run_from": "Extracted code edition directory",
       "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
       "code_edition": "2026-11-21",
-      "execution_examples": []
+      "execution_examples": [
+        {
+          "id": "stiff-cosine",
+          "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json",
+          "guide": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#stiff-cosine-ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#stiff-cosine-en"
+          }
+        }
+      ]
     },
     {
       "id": "imex-euler",
@@ -4429,7 +4483,16 @@
       "run_from": "Extracted code edition directory",
       "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
       "code_edition": "2026-11-21",
-      "execution_examples": []
+      "execution_examples": [
+        {
+          "id": "harmonic-oscillator",
+          "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json",
+          "guide": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#harmonic-oscillator-ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#harmonic-oscillator-en"
+          }
+        }
+      ]
     },
     {
       "id": "yoshida4",
@@ -4578,7 +4641,16 @@
       "run_from": "Extracted code edition directory",
       "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
       "code_edition": "2026-11-21",
-      "execution_examples": []
+      "execution_examples": [
+        {
+          "id": "poisson-1d-dirichlet",
+          "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json",
+          "guide": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#poisson-1d-dirichlet-ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#poisson-1d-dirichlet-en"
+          }
+        }
+      ]
     },
     {
       "id": "jacobi-iteration",
@@ -5017,7 +5089,16 @@
       "run_from": "Extracted code edition directory",
       "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
       "code_edition": "2026-11-21",
-      "execution_examples": []
+      "execution_examples": [
+        {
+          "id": "poisson-2d-sine",
+          "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json",
+          "guide": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#poisson-2d-sine-ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#poisson-2d-sine-en"
+          }
+        }
+      ]
     },
     {
       "id": "rbgs",
@@ -5289,7 +5370,16 @@
       "run_from": "Extracted code edition directory",
       "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
       "code_edition": "2026-11-21",
-      "execution_examples": []
+      "execution_examples": [
+        {
+          "id": "poisson-2d-sine",
+          "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json",
+          "guide": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#poisson-2d-sine-ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#poisson-2d-sine-en"
+          }
+        }
+      ]
     },
     {
       "id": "gmres",
@@ -5757,7 +5847,16 @@
       "run_from": "Extracted code edition directory",
       "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
       "code_edition": "2026-11-21",
-      "execution_examples": []
+      "execution_examples": [
+        {
+          "id": "bratu",
+          "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json",
+          "guide": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#bratu-ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#bratu-en"
+          }
+        }
+      ]
     },
     {
       "id": "newton-krylov",
@@ -6358,7 +6457,16 @@
       "run_from": "Extracted code edition directory",
       "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
       "code_edition": "2026-11-21",
-      "execution_examples": []
+      "execution_examples": [
+        {
+          "id": "taylor-green",
+          "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json",
+          "guide": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#taylor-green-ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#taylor-green-en"
+          }
+        }
+      ]
     },
     {
       "id": "d2q9-bgk",
@@ -6917,7 +7025,16 @@
       "run_from": "Extracted code edition directory",
       "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
       "code_edition": "2026-11-21",
-      "execution_examples": []
+      "execution_examples": [
+        {
+          "id": "periodic-particles",
+          "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json",
+          "guide": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#periodic-particles-ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#periodic-particles-en"
+          }
+        }
+      ]
     },
     {
       "id": "pm",
@@ -7095,7 +7212,16 @@
       "run_from": "Extracted code edition directory",
       "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
       "code_edition": "2026-11-21",
-      "execution_examples": []
+      "execution_examples": [
+        {
+          "id": "periodic-particles",
+          "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json",
+          "guide": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#periodic-particles-ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#periodic-particles-en"
+          }
+        }
+      ]
     },
     {
       "id": "barnes-hut",
@@ -7938,7 +8064,16 @@
       "run_from": "Extracted code edition directory",
       "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
       "code_edition": "2026-11-21",
-      "execution_examples": []
+      "execution_examples": [
+        {
+          "id": "smooth-function-projection",
+          "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json",
+          "guide": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#smooth-function-projection-ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#smooth-function-projection-en"
+          }
+        }
+      ]
     },
     {
       "id": "nodal-basis",
@@ -8115,7 +8250,16 @@
       "run_from": "Extracted code edition directory",
       "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
       "code_edition": "2026-11-21",
-      "execution_examples": []
+      "execution_examples": [
+        {
+          "id": "smooth-function-projection",
+          "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json",
+          "guide": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#smooth-function-projection-ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#smooth-function-projection-en"
+          }
+        }
+      ]
     },
     {
       "id": "hlld",
@@ -8217,7 +8361,16 @@
       "run_from": "Extracted code edition directory",
       "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
       "code_edition": "2026-11-21",
-      "execution_examples": []
+      "execution_examples": [
+        {
+          "id": "brio-wu",
+          "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json",
+          "guide": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#brio-wu-ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#brio-wu-en"
+          }
+        }
+      ]
     },
     {
       "id": "ppm",
@@ -8607,7 +8760,16 @@
       "run_from": "Extracted code edition directory",
       "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
       "code_edition": "2026-11-21",
-      "execution_examples": []
+      "execution_examples": [
+        {
+          "id": "shu-osher",
+          "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json",
+          "guide": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#shu-osher-ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#shu-osher-en"
+          }
+        }
+      ]
     },
     {
       "id": "ausm",

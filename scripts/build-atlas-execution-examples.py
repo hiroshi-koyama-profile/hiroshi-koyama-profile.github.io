@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 ORIGIN = 'https://hrkoyama.github.io'
 ROUTE = '/numerical-methods-atlas/code-and-data/examples.json'
 CATALOG = ROOT / 'catalog/atlas-execution-examples.json'
-CHECK_TYPES = {'equals', 'maximum', 'absolute_maximum', 'abs_difference', 'all_true'}
+CHECK_TYPES = {'equals', 'maximum', 'minimum', 'absolute_maximum', 'abs_difference', 'all_true'}
 
 
 def digest(data):
@@ -85,7 +85,7 @@ def validate_registry(data):
         for c in [*x['checks'], *x.get('expected_failures', [])]:
             if c['comparison'] not in CHECK_TYPES or not c['pointer'].startswith('/'):
                 raise ValueError('Unsupported check contract')
-            if c['comparison'] in {'maximum', 'absolute_maximum', 'abs_difference'}:
+            if c['comparison'] in {'maximum', 'minimum', 'absolute_maximum', 'abs_difference'}:
                 t = c.get('tolerance')
                 if isinstance(t, bool) or not isinstance(t, (int, float)) or not math.isfinite(t) or t < 0:
                     raise ValueError('A finite nonnegative tolerance is required')
@@ -139,6 +139,10 @@ def evaluate_check(document, spec):
         else:
             if any(isinstance(v, bool) or not isinstance(v, (int, float)) or not math.isfinite(v) for v in values):
                 raise ValueError('Numerical check needs finite numbers')
+            if mode == 'minimum':
+                result['minimum_observed'] = min(values)
+                result['passed'] = all(v >= spec['tolerance'] for v in values)
+                return result
             if mode == 'abs_difference':
                 errors = [abs(v - spec['expected']) for v in values]
             elif mode == 'absolute_maximum':

@@ -17,5 +17,7 @@ See the chapter and implementation for equations, boundaries and checked scope. 
 - Reference: https://doi.org/10.1016/0021-9991(87)90140-9 — Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation.
 - Reference: https://arxiv.org/abs/astro-ph/0505010 — Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation.
 
+Common execution records: [{"id": "periodic-particles", "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json", "guide": {"ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#periodic-particles-ja", "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#periodic-particles-en"}}]
+
 Source: https://hrkoyama.github.io/numerical-methods-atlas/methods/cic/
 Edition and terms: https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/

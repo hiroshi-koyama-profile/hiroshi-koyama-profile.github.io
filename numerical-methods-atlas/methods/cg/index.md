@@ -117,5 +117,7 @@ References:
 
 - Reference: https://doi.org/10.6028/jres.049.044 — Real SPD conjugate-gradient recurrence; not the heat time integrator used elsewhere in the chapter.
 
+Common execution records: [{"id": "poisson-2d-sine", "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json", "guide": {"ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#poisson-2d-sine-ja", "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#poisson-2d-sine-en"}}]
+
 Source: https://hrkoyama.github.io/numerical-methods-atlas/methods/cg/
 Edition and terms: https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/

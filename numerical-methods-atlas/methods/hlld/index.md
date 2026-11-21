@@ -24,5 +24,7 @@ See the chapter and implementation for equations, boundaries and checked scope. 
 - Reference: https://doi.org/10.1016/0021-9991(88)90120-9 — Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation.
 - Reference: https://arxiv.org/abs/0911.3410 — Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation.
 
+Common execution records: [{"id": "brio-wu", "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json", "guide": {"ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#brio-wu-ja", "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#brio-wu-en"}}]
+
 Source: https://hrkoyama.github.io/numerical-methods-atlas/methods/hlld/
 Edition and terms: https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/

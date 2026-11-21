@@ -1,0 +1,68 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {execFileSync} from 'node:child_process';
+const root=new URL('../',import.meta.url);
+const text=p=>readFileSync(new URL(p,root),'utf8');
+const json=p=>JSON.parse(text(p));
+const sha=p=>createHash('sha256').update(readFileSync(new URL(p,root))).digest('hex');
+const registry=json('catalog/atlas-execution-examples.json');
+const targets=['advection-sine','sod','shu-osher','poisson-1d-dirichlet','poisson-2d-sine','bratu','harmonic-oscillator','stiff-cosine','smooth-function-projection','isolated-particles','periodic-particles','taylor-green','brio-wu','hydrogenic-atoms','helium-ground-state'];
+const prefix='code/numerical-methods-atlas/2026-11-22/';
+const path=url=>new URL(url).pathname.slice(1);
+
+test('all fifteen agreed representative problems have one reproduction record without changing the atlas-wide sixty',()=>{
+  assert.equal(registry.examples.length,15);
+  assert.deepEqual(registry.examples.map(x=>x.problem_id).sort(),[...targets].sort());
+  assert.equal(json('catalog/atlas-test-problems.json').problems.length,60);
+  assert.equal(json('numerical-methods-atlas/coverage.json').counts.test_problems,60);
+  assert.equal(registry.examples.filter(x=>x.release.version==='2026-11-22').length,12);
+  for(const id of ['barnes-hut','hydrogenic-atoms','helium-ground-state'])assert.equal(registry.examples.find(x=>x.id===id).release.version,'2026-11-21');
+});
+
+test('new recipes expose the exact fixed input, measured acceptance criteria and populated numerical output',()=>{
+  for(const example of registry.examples.filter(x=>x.release.version==='2026-11-22')){
+    const input=json(path(example.inputs.url));
+    assert.equal(input.problem_id,example.problem_id);
+    assert.ok(input.acceptance.length>=3,example.id+' meaningful criteria');
+    const result=json(path(example.outputs.find(x=>x.id==='results').url));
+    assert.equal(result.input_sha256,sha(path(example.inputs.url)));
+    assert.equal(result.status,'passed');assert.equal(result.passed,true);
+    assert.deepEqual(result.parameters,input.parameters);
+    for(const check of input.acceptance){
+      const published=example.checks.find(c=>c.id===check.id);
+      assert.ok(published,example.id+'/'+check.id);
+      assert.equal(published.pointer,'/metrics/'+check.metric);
+      assert.equal(published.comparison,check.comparison);
+      assert.equal(published.tolerance,check.tolerance);
+      assert.equal(published.expected,check.expected);
+      assert.equal(result.checks[check.id],true);
+    }
+    assert.ok(example.failure_scope.ja&&example.failure_scope.en);
+    const csv=text(path(example.outputs.find(x=>x.format==='csv').url)).trim().split(/\r?\n/);
+    assert.equal(csv.length-1,result.table.rows);
+    const columns=csv.shift().split(',');assert.deepEqual(columns,result.table.columns);
+    for(const row of csv){const values=row.split(',');assert.equal(values.length,columns.length);assert.ok(values.every(v=>v.trim()&&Number.isFinite(Number(v))));}
+    assert.ok(example.commands.run.includes('run_recipe.py --input recipes/'+example.id+'.json'));
+  }
+});
+
+test('recipe adapters preserve the verified numerical solver source and distinguish references from exact solutions',()=>{
+  const original=json('code/numerical-methods-atlas/2026-11-21/source-manifest.json');
+  for(const file of Object.keys(original.files).filter(x=>x.startsWith('numart/')))assert.equal(sha(prefix+file),original.files[file],file);
+  for(const id of ['shu-osher','brio-wu']){
+    const example=registry.examples.find(x=>x.id===id);
+    assert.ok(example.references.some(x=>x.type==='numerical-refinement'),id+' numerical reference');
+    assert.match(example.scope.en+' '+example.failure_scope.en+' '+example.reference_notes.en,/not exact|not an exact|no exact|neither exact/i,id+' limited claim');
+  }
+  const verification=json(prefix+'verification.json');
+  assert.equal(verification.failures,0);assert.equal(verification.errors,0);
+  assert.ok(verification.passed>411);
+  assert.equal(verification.skipped,6);
+});
+
+test('convergence lower bounds reject weak, missing, boolean and non-finite observations',()=>{
+  const script=`import importlib.util\ns=importlib.util.spec_from_file_location('b','scripts/build-atlas-execution-examples.py');b=importlib.util.module_from_spec(s);s.loader.exec_module(b)\nc={'id':'order','pointer':'/order','comparison':'minimum','tolerance':1.8}\nassert b.evaluate_check({'order':1.99},c)['passed']\nfor v in [1.2,True,float('nan'),float('inf')]:assert not b.evaluate_check({'order':v},c)['passed']\nassert not b.evaluate_check({},c)['passed']\nprint('ok')`;
+  assert.match(execFileSync('python3',['-c',script],{cwd:root,encoding:'utf8'}),/ok/);
+});

@@ -110,5 +110,7 @@ References:
 
 - Reference: https://doi.org/10.1016/j.jcp.2014.12.012 — GLL nodal cardinal basis and the rank-one difference between exact and quadrature-lumped interval mass matrices; not a universal triangle mass formula.
 
+Common execution records: [{"id": "smooth-function-projection", "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json", "guide": {"ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#smooth-function-projection-ja", "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#smooth-function-projection-en"}}]
+
 Source: https://hrkoyama.github.io/numerical-methods-atlas/methods/nodal-basis/
 Edition and terms: https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/

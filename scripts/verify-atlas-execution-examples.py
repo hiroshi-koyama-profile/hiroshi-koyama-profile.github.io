@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fetch public code/input/reference artifacts and execute three curated examples.
+"""Fetch public code/input/reference artifacts and execute the curated examples.
 
 No dependencies are installed. Use an existing Python environment that satisfies
 both releases. --registry may be the local source catalog before first publication;
@@ -177,7 +177,7 @@ def main():
             raw = registry_module.encode(registry)
             source_mode = 'local-catalog-before-publication'
     environment, releases, examples = run_registry(registry, args.python, args.timeout)
-    report = {'schema_version':1, 'verified_on':datetime.datetime.now(datetime.timezone.utc).isoformat(), 'registry_url':REGISTRY_URL, 'registry_sha256':sha(raw), 'registry_source_mode':source_mode, 'verification_tool':{'verifier_url':registry_module.ORIGIN + '/scripts/verify-atlas-execution-examples.py', 'verifier_sha256':sha(Path(__file__).read_bytes()), 'registry_builder_url':registry_module.ORIGIN + '/scripts/build-atlas-execution-examples.py', 'registry_builder_sha256':sha((HERE / 'build-atlas-execution-examples.py').read_bytes())}, 'environment':environment, 'scope':'Only the three curated execution recipes were rerun. Atomic cases share one runner. This is not a new run of the immutable editions’ 411 or 23 packaged pytest checks, independent PySCF reference regeneration, all 60 problems, or a general solver certification.', 'releases':releases, 'examples':examples, 'unique_runner_executions':len(releases), 'passed':all(x['passed'] for x in examples)}
+    report = {'schema_version':1, 'verified_on':datetime.datetime.now(datetime.timezone.utc).isoformat(), 'registry_url':REGISTRY_URL, 'registry_sha256':sha(raw), 'registry_source_mode':source_mode, 'verification_tool':{'verifier_url':registry_module.ORIGIN + '/scripts/verify-atlas-execution-examples.py', 'verifier_sha256':sha(Path(__file__).read_bytes()), 'registry_builder_url':registry_module.ORIGIN + '/scripts/build-atlas-execution-examples.py', 'registry_builder_sha256':sha((HERE / 'build-atlas-execution-examples.py').read_bytes())}, 'environment':environment, 'scope':f'Only the {len(examples)} curated execution recipes were rerun from the public files. Atomic cases share one runner. This is separate from packaged pytest checks, independent PySCF reference regeneration, all 60 atlas problems, or a general solver certification.', 'releases':releases, 'examples':examples, 'unique_runner_executions':len(releases), 'passed':all(x['passed'] for x in examples)}
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_bytes(registry_module.encode(report))
     print(json.dumps({'examples':len(examples), 'unique_runner_executions':len(releases), 'passed':report['passed']}))

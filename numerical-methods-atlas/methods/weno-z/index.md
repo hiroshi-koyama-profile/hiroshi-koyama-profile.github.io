@@ -127,5 +127,7 @@ References:
 - Reference: https://doi.org/10.1016/0021-9991(88)90177-5 — Primary source for TVD Runge–Kutta time discretization and flux-based ENO construction; the local SSPRK(3,3) coefficients are independently visible in code.
 - Reference: https://doi.org/10.1016/0021-9991(78)90023-2 — Historical shock-tube comparison used as a benchmark source. The atlas reference is its own non-vacuum ideal-gas Riemann evaluator, with a bracketed numerical pressure solve.
 
+Common execution records: [{"id": "shu-osher", "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json", "guide": {"ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#shu-osher-ja", "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#shu-osher-en"}}]
+
 Source: https://hrkoyama.github.io/numerical-methods-atlas/methods/weno-z/
 Edition and terms: https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/

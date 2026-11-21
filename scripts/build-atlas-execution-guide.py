@@ -48,6 +48,8 @@ def check_condition(check):
     tolerance = text(check.get('tolerance'))
     if comparison == 'abs_difference':
         value = '|value − ' + expected + '| ≤ ' + tolerance
+    elif comparison == 'minimum':
+        value = 'value ≥ ' + tolerance
     elif comparison in ['maximum', 'absolute_maximum']:
         value = ('|value| ≤ ' if comparison == 'absolute_maximum' else 'value ≤ ') + text(check.get('tolerance', check.get('expected')))
     elif comparison == 'equals':
@@ -77,13 +79,14 @@ def release_information(examples, root):
     releases = {}
     for x in examples:
         release = x['release']
-        if release['family'] in releases:
-            assert releases[release['family']]['release'] == release
+        key = (release['family'], release['version'])
+        if key in releases:
+            assert releases[key]['release'] == release
             continue
         path = root / urlparse(release['verification']).path.lstrip('/')
         v = json.loads(path.read_text())
         assert v['errors'] == v['failures'] == 0
-        releases[release['family']] = {'release': release, 'verification': v}
+        releases[key] = {'release': release, 'verification': v}
     return releases
 
 
@@ -154,10 +157,12 @@ def reference_values(example, result, lang):
         candidates = [x for x in result['hydrogenic']['refinement'] if x['Z'] == 1 and x['n'] == 1 and x['l'] == 0]
         row = min(candidates, key=lambda x: x['dr'])
         rows = [('H 1s / E analytic (hartree)', row['exact_energy']), ('H 1s / E finite grid (hartree)', row['energy']), ('H 1s / grid step (bohr)', row['dr'])]
-    else:
+    elif example['id'] == 'helium-ground-state':
         rows = []
         for x in result['helium']['independent_comparison']:
             rows.extend([(x['model'] + ' / E finite grid (hartree)', x['finest_energy']), (x['model'] + ' / E independent reference (hartree)', x['reference_energy'])])
+    else:
+        rows = [(name, value) for name, value in result['metrics'].items() if type(value) in [int,float]][:8]
     body = '<details><summary>' + ('同梱された参照出力の代表値' if ja else 'Selected values from the packaged reference output') + '</summary>'
     body += paragraph('固定入力の参照出力から表示しています。有限格子の値と解析解・独立参照を区別し、再実行の判定には下の許容誤差表を使います。' if ja else 'Read from the fixed-input reference output. Distinguish finite-grid values from analytic or independently computed references; use the tolerance table below to validate a rerun.')
     body += '<dl>' + ''.join('<dt>' + esc(k) + '</dt><dd><code>' + esc(f'{v:.12g}') + '</code></dd>' for k, v in rows) + '</dl></details>'
@@ -169,13 +174,13 @@ def render_language(data, releases, receipt, results, lang):
     examples = data['examples']
     body = '<section data-site-language="' + lang + '" lang="' + lang + '"><p class="eyebrow">PUBLIC CODE · FIXED INPUTS · CHECKED OUTPUTS</p>'
     body += '<h1>' + ('コードを取得し、結果を確かめる' if ja else 'Get the code. Reproduce the result.') + '</h1>'
-    body += '<p class="intro">' + ('孤立粒子の重力、水素型原子、Heの3つの例から始められます。使う条件を読み、公開の入力とコードで結果を作り、参照値・許容誤差・失敗理由を確かめます。' if ja else 'Start with isolated particle gravity, hydrogenic atoms or helium. Check the assumptions, use the public input and code, then inspect reference values, tolerances and explicit failure reasons.') + '</p>'
+    body += '<p class="intro">' + (f'移流・衝撃波・Poisson・ODE・粒子・原子など、{len(examples)}の代表問題を固定入力から実行できます。条件を読み、JSON/CSVを生成し、解析解・数値参照・保存則などの基準で結果を確かめます。' if ja else f'Run {len(examples)} representative advection, shock, Poisson, ODE, particle and atomic problems from fixed inputs. Generate JSON/CSV and inspect analytic references, numerical references, conservation and other acceptance conditions.') + '</p>'
     body += '<nav class="resource-nav" aria-label="' + ('関連資料' if ja else 'Related resources') + '">' + ''.join(link(u, t) for u, t in [('/numerical-methods-atlas/?lang=' + lang, 'アトラス冒頭' if ja else 'Atlas home'), ('/numerical-methods-atlas/methods/?lang=' + lang, '手法の見取り図' if ja else 'Method map'), ('examples.json', '実行例の共通台帳 / JSON' if ja else 'Common execution registry / JSON'), ('#execution-steps-' + lang, '共通の実行手順' if ja else 'Common reproduction steps')]) + '</nav>'
     body += '<h2>' + ('まず、確かめたい例を選ぶ' if ja else 'Choose the result you want to check') + '</h2><div class="execution-choices">'
     for x in examples:
         body += '<article><h3>' + link('#' + x['id'] + '-' + lang, x['name'][lang]) + '</h3>' + paragraph(x['scope'][lang]) + '<p class="execution-family">' + esc(x['release']['family'] + ' · ' + x['release']['version']) + '</p></article>'
     body += '</div>'
-    body += '<p class="resource-summary">' + ('水素型原子とHeは同じ「quantum-atoms」ZIPと入力・runnerを共有します。1回の実行で両方の結果ができ、以下の2つの説明から別々に検証できます。Barnes–Hutは「numerical-methods-atlas」配布版を使います。' if ja else 'Hydrogenic atoms and helium share the quantum-atoms ZIP, input and runner. One run produces both sets of results, which are validated separately below. Barnes–Hut uses the numerical-methods-atlas edition.') + '</p>'
+    body += '<p class="resource-summary">' + ('水素型原子とHeは同じ「quantum-atoms」ZIPと入力・runnerを共有します。1回の実行で両方の結果ができ、以下の2つの説明から別々に検証できます。Barnes–Hutは2026-11-21版、追加12問題は2026-11-22版を使います。各例のZIPと入力を組み合わせてください。' if ja else 'Hydrogenic atoms and helium share the quantum-atoms ZIP, input and runner. One run produces both sets of results, which are validated separately below. Barnes–Hut uses the 2026-11-21 atlas edition; the 12 added recipes use 2026-11-22. Use the ZIP and input specified for each example.') + '</p>'
     body += '<section id="execution-steps-' + lang + '"><h2>' + ('取得から引用までの共通手順' if ja else 'A common path from download to citation') + '</h2><ol class="execution-steps">'
     steps = [
         ('条件を読む', 'Read the conditions', '例ごとの前提、単位、境界、モデルの限界を確認します。', 'Check the assumptions, units, boundaries and model limits for your case.'),
@@ -210,35 +215,41 @@ def render_language(data, releases, receipt, results, lang):
         for kind, url in x['dependencies'].items():
             if url:
                 body += '<li>' + link(url, kind + ' / ' + Path(urlparse(url).path).name) + '</li>'
-        body += '</ul></details><h3>' + ('できるファイルと参照出力' if ja else 'Generated files and reference outputs') + '</h3><ul class="execution-output-list">'
+        body += '</ul></details><details class="execution-validation"><summary>' + ('出力・検証条件・引用を確認する' if ja else 'Inspect outputs, acceptance and citation') + '</summary><h3>' + ('できるファイルと参照出力' if ja else 'Generated files and reference outputs') + '</h3><ul class="execution-output-list">'
         for out in x['outputs']:
             body += '<li><code>' + esc(out['generated_path']) + '</code> (' + esc(out['format'].upper()) + ') · ' + link(out['url'], '配布版の参照出力' if ja else 'Packaged reference output') + '</li>'
-        body += '</ul>' + reference_values(x, results[x['id']], lang) + '<h3>' + ('期待する値と許容誤差' if ja else 'Expected values and tolerances') + '</h3>'
+        body += '</ul>'
+        if x.get('reference_notes'):body += '<h3>'+('参照の種類と比較方法' if ja else 'Reference type and comparison')+'</h3>'+paragraph(x['reference_notes'][lang])
+        body += reference_values(x, results[x['id']], lang) + '<h3>' + ('期待する値と許容誤差' if ja else 'Expected values and tolerances') + '</h3>'
         body += paragraph('表はこの例で採用する数値検査の条件です。参照値との一致だけで、全ての条件や原論文の全結果を再現したという意味にはなりません。横長の表は左右にスクロールできます。' if ja else 'These are numerical acceptance conditions for this example. Agreement does not establish every condition or reproduce all results of the original papers. Wide tables scroll horizontally.')
         body += check_table(x['checks'], lang, x['name'][lang] + ('の数値検査' if ja else ' numerical checks'))
         if x.get('expected_failures'):
             body += '<h3>' + ('意図した失敗・未収束の判定' if ja else 'Expected failures and nonconvergence') + '</h3>'
             body += check_table(x['expected_failures'], lang, 'Failure / ' + x['name'][lang])
+        if x.get('failure_scope'):
+            body += '<h3>'+('失敗・未収束と確認の限界' if ja else 'Failure, nonconvergence and verification limits')+'</h3>'+paragraph(x['failure_scope'][lang])
         body += '<h3>' + ('引用・出典と利用条件' if ja else 'Citation, sources and terms') + '</h3>'
         c = x['citation']
         body += '<blockquote class="execution-citation">' + esc(', '.join([localized(c['creator'], lang), localized(c['title'], lang), 'version ' + c['version']])) + '. ' + link(c['url'], c['url']) + '</blockquote>'
         body += paragraph('計算に使った設定・変更・ハッシュ・参照日を追記してください。手法を研究に使うときは、以下の原論文も確認し引用します。' if ja else 'Add the settings, changes, hashes and access date used in your calculation. When using the method in research, review and cite the original method publications too.')
         body += '<ul>' + ''.join('<li>' + link(r['url'], localized(r['description'], lang)) + '</li>' for r in x['references']) + '</ul>'
         body += '<p>' + link(x['terms']['code_license'], '自作実装コード：MIT' if ja else 'Original implementation code: MIT') + ' · ' + link(x['terms']['content_and_data'], '本文・図・データの条件' if ja else 'Terms for text, figures and data') + '</p>' + paragraph(x['terms']['scope'][lang])
-        body += '<details><summary>' + ('版とSHA-256を確認する' if ja else 'Check the edition and SHA-256 hashes') + '</summary><dl><dt>Edition</dt><dd>' + esc(release['family'] + ' / ' + release['version']) + '</dd><dt>ZIP SHA-256</dt><dd><code>' + esc(release['sha256']) + '</code></dd><dt>Input SHA-256</dt><dd><code>' + esc(x['inputs']['sha256']) + '</code></dd></dl><p>' + link(release['manifest'], 'ファイル目録 / Manifest') + ' · ' + link(release['verification'], '配布版の検証記録' if ja else 'Edition verification record') + '</p></details></section>'
+        body += '<details><summary>' + ('版とSHA-256を確認する' if ja else 'Check the edition and SHA-256 hashes') + '</summary><dl><dt>Edition</dt><dd>' + esc(release['family'] + ' / ' + release['version']) + '</dd><dt>ZIP SHA-256</dt><dd><code>' + esc(release['sha256']) + '</code></dd><dt>Input SHA-256</dt><dd><code>' + esc(x['inputs']['sha256']) + '</code></dd></dl><p>' + link(release['manifest'], 'ファイル目録 / Manifest') + ' · ' + link(release['verification'], '配布版の検証記録' if ja else 'Edition verification record') + '</p></details></details></section>'
 
-    body += '<section><h2>' + ('2つの配布版と検査件数の意味' if ja else 'The two editions and what their check counts mean') + '</h2>'
-    for family, record in releases.items():
+    body += '<section><h2>' + ('配布版と検査件数の意味' if ja else 'Code editions and what their check counts mean') + '</h2>'
+    for (family, version), record in releases.items():
         release, v = record['release'], record['verification']
         label = '流体・重力・線形解法などの従来版' if family == 'numerical-methods-atlas' else '水素型原子・Heの原子計算版'
         if not ja:
             label = 'Original fluids, gravity and numerical-methods edition' if family == 'numerical-methods-atlas' else 'Hydrogenic / helium atomic edition'
+        if family == 'numerical-methods-atlas' and version == '2026-11-22':
+            label = '代表12問題の固定入力レシピ版' if ja else 'Fixed-input recipe edition for twelve representative problems'
         body += '<h3>' + esc(label) + '</h3><p>' + link(release['download'], family + ' · ' + release['version'] + ' / ZIP') + ' · ' + link(release['manifest'], 'Manifest / SHA-256') + ' · ' + link(release['verification'], 'Verification / JSON') + '</p>'
         body += paragraph((f'配布ZIPを別フォルダへ展開して、{v["passed"]}検査が通過。適用対象外によるスキップは{v["skipped"]}件、失敗・エラーは0件です。' if ja else f'The distributed ZIP was independently extracted: {v["passed"]} checks passed, {v["skipped"]} inapplicable checks skipped, and no failures or errors.'))
         if family == 'numerical-methods-atlas':
             base = release['manifest'].rsplit('/', 1)[0] + '/'
             body += '<p>' + link(base + 'LICENSE', 'MIT License') + ' · ' + link(base + 'LICENSING.md', '適用範囲 / Licensing scope') + '</p>'
-    body += paragraph('411件と23件は別の配布版の自動検査数です。3つの開始例やアトラス全体の独立問題数、完全なソルバー数とは別です。従来版にはEwald・PME・SPMEや量子化学ソルバーは含まれず、原子版も一般の分子・周期系DFTソルバーではありません。' if ja else 'The 411 and 23 values count automated checks in separate editions. They are not counts of these three starting examples, atlas-wide independent problems or complete solvers. The original edition has no Ewald/PME/SPME or quantum-chemistry solver; the atomic edition is not a general molecular or periodic DFT solver.') + '</section>'
+    body += paragraph('上記は各配布版の自動検査数です。15の代表問題やアトラス全体の60問題とは別に数え、版をまたぐ検査数は合算しません。原子版の23検査と従来版の411検査も、それぞれの保存記録です。Ewald・PME・SPMEは未実装で、原子例も一般の分子・周期系DFT計算ではありません。' if ja else 'These are automated test counts for each edition, distinct from the 15 representative problems and the atlas-wide 60 problems. Do not add repeated tests across editions. The atomic 23 and original 411 checks retain their separate records. Ewald/PME/SPME remain unimplemented; the atomic examples are not general molecular or periodic DFT calculations.') + '</section>'
     body += render_receipt(data['verification_receipt'], receipt, examples, lang)
     body += '<section><h2>' + ('公開資料だけで再現し、出典に戻る' if ja else 'Reproduce from public material and return to the source') + '</h2>'
     body += paragraph('自作の実装コードのMITと、本文・図・データ・第三者資料の条件は別です。この案内は新しい再配布・改変公開の権限を追加するものではありません。' if ja else 'MIT for original implementation code is separate from the terms for prose, figures, data and third-party material. This guide does not add redistribution or public-adaptation permissions.')
@@ -249,11 +260,17 @@ def render_language(data, releases, receipt, results, lang):
 def build(root=ROOT):
     data = json.loads((root / CATALOG).read_text())
     examples = data['examples']
-    assert len(examples) == len({x['id'] for x in examples}) == 3
+    assert len(examples) == len({x['id'] for x in examples}) and examples
     releases = release_information(examples, root)
-    assert set(releases) == {'numerical-methods-atlas', 'quantum-atoms'}
-    receipt_path = root / urlparse(data['verification_receipt']).path.lstrip('/')
+    assert {family for family, version in releases} == {'numerical-methods-atlas', 'quantum-atoms'}
+    receipt_url = data['verification_receipt']
+    receipt_path = root / urlparse(receipt_url).path.lstrip('/')
+    public_receipt = receipt_path.with_name(receipt_path.stem+'-public.json')
+    if public_receipt.is_file():
+        receipt_path = public_receipt
+        receipt_url = receipt_url.removesuffix('.json')+'-public.json'
     receipt = json.loads(receipt_path.read_text()) if receipt_path.is_file() else None
+    data = {**data, 'verification_receipt':receipt_url}
     if receipt is not None:
         validate_receipt(receipt, data, root)
     results = {}
@@ -263,7 +280,7 @@ def build(root=ROOT):
     sections = ''.join(render_language(data, releases, receipt, results, lang) for lang in ['ja', 'en'])
     document = '<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
     document += '<title data-page-title-ja="コード・入力・検証 | 数値計算法アトラス" data-page-title-en="Code, inputs and validation | Numerical Methods Atlas">コード・入力・検証 | 数値計算法アトラス</title>'
-    document += '<meta name="description" content="Barnes–Hut・水素型原子・Heの公開コード、入力、実行手順、参照値と許容誤差。Public code, fixed inputs, reproduction commands and numerical acceptance checks."><link rel="canonical" href="' + ORIGIN + ROUTE + '">'
+    document += '<meta name="description" content="代表15問題の公開コード、固定入力、実行手順、JSON/CSV出力、参照値と許容誤差。Public code, fixed inputs, reproduction commands and numerical acceptance checks for 15 representative problems."><link rel="canonical" href="' + ORIGIN + ROUTE + '">'
     for name in ['atlas-resources', 'atlas-execution']:
         digest = hashlib.sha256((root / 'styles' / (name + '.css')).read_bytes()).hexdigest()[:12]
         document += '<link rel="stylesheet" href="/styles/' + name + '.css?v=' + digest + '">'
@@ -274,4 +291,4 @@ def build(root=ROOT):
 if __name__ == '__main__':
     destination = ROOT / ROUTE.lstrip('/') / 'index.html'
     destination.write_text(build())
-    print('Built bilingual acquisition and execution guide for three scoped examples.')
+    print('Built bilingual acquisition and execution guide for the current scoped examples.')

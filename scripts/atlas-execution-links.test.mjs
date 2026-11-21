@@ -12,7 +12,7 @@ test('method and problem records lead to the same stable execution examples in b
   const methods=json('numerical-methods-atlas/methods/index.json').methods;
   const problems=json('numerical-methods-atlas/test-cases/index.json').problems;
   const page=read('numerical-methods-atlas/code-and-data/index.html');
-  assert.equal(examples.length,3);
+  assert.equal(examples.length,15);
   assert.equal(problems.length,60);
   for(const e of examples){
     const records=[problems.find(p=>p.id===e.problem_id),...e.method_ids.map(id=>methods.find(m=>m.id===id))];
@@ -53,7 +53,7 @@ test('a receipt for different registry bytes cannot be presented as current vali
 p=pathlib.Path('scripts/build-atlas-execution-guide.py')
 s=importlib.util.spec_from_file_location('execution_guide',p);m=importlib.util.module_from_spec(s);s.loader.exec_module(m)
 d=json.loads(pathlib.Path('catalog/atlas-execution-examples.json').read_text())
-r=json.loads(pathlib.Path('numerical-methods-atlas/code-and-data/verification/2026-11-21.json').read_text())
+r=json.loads((pathlib.Path('.')/d['verification_receipt'].split('hrkoyama.github.io/')[1]).read_text())
 m.validate_receipt(r,d,pathlib.Path('.'))
 bad=copy.deepcopy(r);bad['registry_sha256']='0'*64
 try:m.validate_receipt(bad,d,pathlib.Path('.'))

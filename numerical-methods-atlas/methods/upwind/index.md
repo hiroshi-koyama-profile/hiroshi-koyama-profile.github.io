@@ -111,5 +111,7 @@ References:
 
 - Reference: https://doi.org/10.1002/cpa.3160050303 — Historical upstream-differencing lineage. Only bibliographic metadata were checked; the scalar update and CFL statement here come from the atlas code.
 
+Common execution records: [{"id": "advection-sine", "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json", "guide": {"ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#advection-sine-ja", "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#advection-sine-en"}}]
+
 Source: https://hrkoyama.github.io/numerical-methods-atlas/methods/upwind/
 Edition and terms: https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/

@@ -15,5 +15,7 @@ See the chapter and implementation for equations, boundaries and checked scope. 
 
 - Reference: https://doi.org/10.1090/S0025-5718-1968-0242392-2 — Cited by the linked chapter; inspect its source-review notes before treating this as a method-specific derivation.
 
+Common execution records: [{"id": "taylor-green", "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json", "guide": {"ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#taylor-green-ja", "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#taylor-green-en"}}]
+
 Source: https://hrkoyama.github.io/numerical-methods-atlas/methods/projection/
 Edition and terms: https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/

@@ -118,5 +118,7 @@ References:
 - Reference: https://doi.org/10.1103/PhysRev.159.98 — Original position-Verlet recurrence in molecular dynamics. The atlas implements its kick–drift–kick phase-space form for a unit-mass oscillator, not the paper's Lennard-Jones simulation.
 - Reference: https://doi.org/10.1017/S0962492902000144 — Research exposition of the method's reversibility, symplecticity and long-time behaviour; no claim that all constrained/manifold extensions are implemented.
 
+Common execution records: [{"id": "harmonic-oscillator", "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json", "guide": {"ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#harmonic-oscillator-ja", "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#harmonic-oscillator-en"}}]
+
 Source: https://hrkoyama.github.io/numerical-methods-atlas/methods/verlet/
 Edition and terms: https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/

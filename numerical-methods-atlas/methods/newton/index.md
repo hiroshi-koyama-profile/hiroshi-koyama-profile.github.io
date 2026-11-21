@@ -118,5 +118,7 @@ References:
 - Reference: https://doi.org/10.2140/pjm.1966.16.1 — Source for sufficient-decrease and halving-backtracking ideas; the atlas adapts the test to ||F||, not to the paper's steepest-descent problem.
 - Reference: https://doi.org/10.1137/0719025 — Newton equations and approximate inner linear solves; context for the GMRES path, not proof of the atlas's particular forcing rule.
 
+Common execution records: [{"id": "bratu", "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json", "guide": {"ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#bratu-ja", "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#bratu-en"}}]
+
 Source: https://hrkoyama.github.io/numerical-methods-atlas/methods/newton/
 Edition and terms: https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/

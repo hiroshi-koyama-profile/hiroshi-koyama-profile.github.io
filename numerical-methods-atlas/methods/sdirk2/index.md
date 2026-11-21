@@ -120,5 +120,7 @@ References:
 - Reference: https://doi.org/10.1137/0714068 — Primary source for the two-stage second-order stiffly stable DIRK family; the selected gamma and stability function are established from the local tableau and official supplementary documentation.
 - Reference: https://mooseframework.inl.gov/source/timeintegrators/LStableDirk2.html — Official implementation documentation relating the two-stage second-order L-stable DIRK method to Alexander (1977); supplementary to the primary paper, not a replacement for it.
 
+Common execution records: [{"id": "stiff-cosine", "registry_url": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json", "guide": {"ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=ja#stiff-cosine-ja", "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/?lang=en#stiff-cosine-en"}}]
+
 Source: https://hrkoyama.github.io/numerical-methods-atlas/methods/sdirk2/
 Edition and terms: https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/
