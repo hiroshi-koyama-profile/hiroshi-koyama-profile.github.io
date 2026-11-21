@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.5",
+  "schema_version": "0.6",
   "updated_on": "2026-11-22",
   "scope": "Annual source-linked candidate title/DOI rosters; selected manuscript fields checked for papers from 2008 and 2023–2025; historical coverage remains incomplete",
   "sources": {
@@ -2721,9 +2721,9 @@
     },
     {
       "id": "sc97",
-      "title": "1997 legacy checkpoint completed",
+      "title": "1997 session heading and individual award results distinguished",
       "state": "Recorded",
-      "detail": "Four HTML/PostScript papers and all figure resources are preserved. Daily and session pages use conflicting finalist/winner labels, so wins and categories remain unresolved."
+      "detail": "Four preserved session papers remain indexed. The later judges’ report identifies two award-bearing papers; Attaway and Devine are described under Other entrants. The collective Winners session heading is not an individual award result."
     },
     {
       "id": "recent-fulltext",
@@ -2736,6 +2736,12 @@
       "state": "Recorded",
       "title": "SC26 award and source-version follow-up",
       "detail": "Six official-program finalists reviewed after SC26. One winner is directly verified from ACM; individual outcomes of the other five remain unestablished here. All six publisher-assigned DOIs returned HTTP 404 on this check. Conference-day final scores remain unverified."
+    },
+    {
+      "id": "historical-awards-bibliography",
+      "state": "Recorded",
+      "title": "GRAPE and historical Special categories reviewed",
+      "detail": "Recipient-hosted award certificates and contemporary result reports are linked by source. The 1996 Winner/Honorable Mention conflict remains explicit. Three missing paper bylines were recovered from preserved SC05 first pages; four publication bylines and seven title-known DOI matches remain unresolved. The 12 detailed manuscripts and 31 performance observations are unchanged."
     }
   ],
   "coverage": {
@@ -4632,7 +4638,7 @@
     {
       "year": 1997,
       "local_candidate_count": 4,
-      "status": "Preserved Gordon Bell session entries; finalist/winner labels unresolved.",
+      "status": "Four preserved session papers; individual award evidence reviewed on 2026-11-22. Two award-bearing papers; two listed as Other entrants in the judges’ report.",
       "candidate_count": 4,
       "verified_doi_count": 4,
       "sc_links": {
@@ -12453,6 +12459,26 @@
           "label": "SC06 preserved Gordon Bell page identifying six finalists",
           "kind": "preserved_official_finalist_announcement",
           "local_reference": "2006/original/sc06/techprogram/gordonbell.html"
+        },
+        {
+          "id": "grape06-newsletter",
+          "url": "https://jun-makino.sakura.ne.jp/grape/newsletter/061216.html",
+          "label": "GRAPE newsletter dated 16 December 2006: MDGRAPE-3 Honorable Mention",
+          "kind": "contemporary_project_award_announcement",
+          "checked_on": "2026-11-22",
+          "local_reference": "歴史一次資料/GRAPE_Special_20261122/grape_newsletter2006.html",
+          "source_sha256": "ca018b9771efc454acfcde3c5e35ea201ef82d58a598ef65d88d8d3b6f14dd3c",
+          "published_on": "2006-12-16"
+        },
+        {
+          "id": "sc16-historical-winners",
+          "url": "https://sc16.supercomputing.org/2016/08/25/acm-gordon-bell-prize-recognizes-top-accomplishments-running-science-apps-hpc/index.html",
+          "label": "SC16 official historical Gordon Bell winners, published 25 August 2016",
+          "kind": "official_conference_retrospective_award_list",
+          "checked_on": "2026-11-22",
+          "local_reference": "歴史一次資料/GRAPE_Special_20261122/SC16_official_historical_winners.html",
+          "source_sha256": "5ac2c7ed1b80710d8f10d0ec6f911c0a416c5d510db469eee875ba996f588ae4",
+          "published_on": "2016-08-25"
         }
       ],
       "roster_completeness": {
@@ -12577,7 +12603,21 @@
             "DOI discovered by Crossref title/bibliographic search, then checked in the exact work record; conference venue and year also matched. Ordered author names retain the registration spelling and initials.",
             "Preserved-program and publisher-title forms differ; both are retained. Registry title/subtitle fields are combined and inline formatting is normalized to plain text.",
             "The publisher-deposited title includes a Gordon Bell finalists I/II session prefix."
-          ]
+          ],
+          "historical_metadata_snapshot": {
+            "before_review_on": "2026-11-22",
+            "values": {
+              "award_review": null
+            }
+          },
+          "award_review": {
+            "checked_on": "2026-11-22",
+            "status": "not_named_in_official_historical_award_list",
+            "label": "Finalist; no award verified in this review",
+            "source_id": "sc16-historical-winners",
+            "location": "2006 section",
+            "note": "The price/performance submission category in the abstract does not establish an award. This reconfigurable-card entry is not merged with the MDGRAPE-3 peptide paper."
+          }
         },
         {
           "id": "sc2006-gb106",
@@ -12608,7 +12648,41 @@
             "DOI discovered by Crossref title/bibliographic search, then checked in the exact work record; conference venue and year also matched. Ordered author names retain the registration spelling and initials.",
             "Preserved-program and publisher-title forms differ; both are retained. Registry title/subtitle fields are combined and inline formatting is normalized to plain text.",
             "The publisher-deposited title includes a Gordon Bell finalists I/II session prefix."
-          ]
+          ],
+          "historical_metadata_snapshot": {
+            "before_review_on": "2026-11-22",
+            "values": {
+              "award_result": null
+            }
+          },
+          "award_result": {
+            "status": "verified",
+            "label": "Honorable Mention — Peak Performance",
+            "outcome": "Winner",
+            "category": "Peak Performance",
+            "source_id": "grape06-newsletter",
+            "additional_source_ids": [
+              "sc16-historical-winners"
+            ],
+            "evidence_note": "The contemporary GRAPE project report explicitly identifies the recognition as Honorable Mention for Peak Performance. The paper title says 55 TFLOPS while later announcements use 185; title variants are not extracted as final-score measurements.",
+            "claims": [
+              {
+                "source_id": "grape06-newsletter",
+                "outcome": "Honorable Mention",
+                "category": "Peak Performance",
+                "location": "MDGRAPE-3 WINS A GORDON BELL PRIZE section",
+                "note": ""
+              },
+              {
+                "source_id": "sc16-historical-winners",
+                "outcome": "Honorable Mention",
+                "category": "Category not repeated in the entry heading",
+                "location": "2006 section; the heading placement differs from the project’s explicit wording",
+                "note": ""
+              }
+            ],
+            "checked_on": "2026-11-22"
+          }
         },
         {
           "id": "sc2006-gb110",
@@ -12636,7 +12710,32 @@
             "DOI discovered by Crossref title/bibliographic search, then checked in the exact work record; conference venue and year also matched. Ordered author names retain the registration spelling and initials.",
             "Preserved-program and publisher-title forms differ; both are retained. Registry title/subtitle fields are combined and inline formatting is normalized to plain text.",
             "The publisher-deposited title includes a Gordon Bell finalists I/II session prefix."
-          ]
+          ],
+          "historical_metadata_snapshot": {
+            "before_review_on": "2026-11-22",
+            "values": {
+              "award_result": null
+            }
+          },
+          "award_result": {
+            "status": "verified",
+            "label": "Award recipient — Special Achievement",
+            "outcome": "Winner",
+            "category": "Special Achievement",
+            "source_id": "sc16-historical-winners",
+            "additional_source_ids": [],
+            "evidence_note": "Verified in the official SC historical award list. Category is separate from the machine name and from the publisher byline.",
+            "claims": [
+              {
+                "source_id": "sc16-historical-winners",
+                "outcome": "Award recipient",
+                "category": "Special Achievement",
+                "location": "2006 section",
+                "note": ""
+              }
+            ],
+            "checked_on": "2026-11-22"
+          }
         }
       ],
       "notes": [
@@ -12654,7 +12753,16 @@
         "website_url": null,
         "year": 2006
       },
-      "detailed_paper_count": 0
+      "detailed_paper_count": 0,
+      "historical_review": {
+        "checked_on": "2026-11-22",
+        "reviewed_record_ids": [
+          "sc2006-gb106",
+          "sc2006-gb110",
+          "sc2006-gb107"
+        ],
+        "note": "Dated award and bibliography review; roster membership and full performance audits remain separate."
+      }
     },
     {
       "year": 2005,
@@ -12750,6 +12858,52 @@
           "checked_on": "2026-11-12",
           "local_reference": "歴史一次資料/CSDL_sc2005-superc-publisher-toc.json",
           "source_sha256": "e11d1f9b1bb282375248f079c55b804bebc961d060892ab1d43f4a42c8b216ae"
+        },
+        {
+          "id": "sc05-pap307-byline",
+          "url": "https://www.cresco.enea.it/SC05/schedule/pdf/pap307.pdf",
+          "label": "Preserved SC05 manuscript pap307: title and ordered byline, PDF p. 1",
+          "kind": "preserved_official_conference_pdf_with_institutional_mirror",
+          "checked_on": "2026-11-22",
+          "local_reference": "2005/original/schedule/pdf/pap307.pdf",
+          "source_sha256": "1f225ea010b4ad1a1b6efffe3772c65a0292b3e8839402e3b9ea8767851ebe02",
+          "inspection_scope": "Title and ordered byline on PDF p. 1 only; local copy identified by SHA-256",
+          "mirror_checked_on": "2026-11-22",
+          "mirror_bytes_match_preserved_pdf": true
+        },
+        {
+          "id": "sc16-historical-winners",
+          "url": "https://sc16.supercomputing.org/2016/08/25/acm-gordon-bell-prize-recognizes-top-accomplishments-running-science-apps-hpc/index.html",
+          "label": "SC16 official historical Gordon Bell winners, published 25 August 2016",
+          "kind": "official_conference_retrospective_award_list",
+          "checked_on": "2026-11-22",
+          "local_reference": "歴史一次資料/GRAPE_Special_20261122/SC16_official_historical_winners.html",
+          "source_sha256": "5ac2c7ed1b80710d8f10d0ec6f911c0a416c5d510db469eee875ba996f588ae4",
+          "published_on": "2016-08-25"
+        },
+        {
+          "id": "sc05-pap122-byline",
+          "url": "https://www.cresco.enea.it/SC05/schedule/pdf/pap122.pdf",
+          "label": "Preserved SC05 manuscript pap122: title and ordered byline, PDF p. 1",
+          "kind": "preserved_official_conference_pdf_with_institutional_mirror",
+          "checked_on": "2026-11-22",
+          "local_reference": "2005/original/schedule/pdf/pap122.pdf",
+          "source_sha256": "e5e6038273d3a5b2095f16c2c34b573b0114d6bfc597c8a44b0890b19de26092",
+          "inspection_scope": "Title and ordered byline on PDF p. 1 only; local copy identified by SHA-256",
+          "mirror_checked_on": "2026-11-22",
+          "mirror_bytes_match_preserved_pdf": true
+        },
+        {
+          "id": "sc05-pap260-byline",
+          "url": "https://www.cresco.enea.it/SC05/schedule/pdf/pap260.pdf",
+          "label": "Preserved SC05 manuscript pap260: title and ordered byline, PDF p. 1",
+          "kind": "preserved_official_conference_pdf_with_institutional_mirror",
+          "checked_on": "2026-11-22",
+          "local_reference": "2005/original/schedule/pdf/pap260.pdf",
+          "source_sha256": "073eaf8d6a1762ffce7eee31bee7dd85617ba2721cb9a18c295d2cd0c9cf7e38",
+          "inspection_scope": "Title and ordered byline on PDF p. 1 only; local copy identified by SHA-256",
+          "mirror_checked_on": "2026-11-22",
+          "mirror_bytes_match_preserved_pdf": true
         }
       ],
       "roster_completeness": {
@@ -12847,14 +13001,43 @@
           "doi_status": "unresolved",
           "doi_source_id": null,
           "publisher_title": null,
-          "authors": [],
-          "authors_status": "not_checked",
+          "authors": [
+            "Timothy C. Germann",
+            "Kai Kadau",
+            "Peter S. Lomdahl"
+          ],
+          "authors_status": "ordered_byline_checked_preserved_manuscript_first_page",
           "publication_url": null,
           "notes": [
             "Candidate membership and selection title come from the preserved official conference index; the original source is retained offline and has not been re-fetched from a live website. Bibliography only; no new manuscript-performance or award-outcome audit.",
             "No conference DOI match was established in the registration lookup. Similar titles from another year, journal articles and technical-report DOIs were not substituted.",
             "A follow-up exact-title Crossref query and both public IEEE Computer Society SC2005 catalog sets (75 records and one alternate record) did not yield this entry. This does not establish that no DOI was assigned; the candidate DOI remains unresolved."
-          ]
+          ],
+          "historical_metadata_snapshot": {
+            "before_review_on": "2026-11-22",
+            "values": {
+              "authors": [],
+              "authors_status": "not_checked",
+              "authors_source_id": null,
+              "bibliography_review": null
+            }
+          },
+          "authors_source_id": "sc05-pap122-byline",
+          "bibliography_review": {
+            "checked_on": "2026-11-22",
+            "status": "byline_checked_doi_unresolved",
+            "note": "Title and ordered byline checked in the preserved conference PDF. Archived exact-title Crossref and publisher-catalog searches did not establish a matching identifier; no DOI is inferred from a nearby regular-paper record.",
+            "source_ids": [
+              "sc05-pap122-byline",
+              "sc05_csdl_toc",
+              "sc05_csdl_alt_toc"
+            ],
+            "performance_audit": "Not performed in this bibliography review",
+            "byline_scope": "Preserved conference PDF p. 1",
+            "doi_status": "unresolved",
+            "registry_lookup_date": "2026-11-12",
+            "next_evidence": "An exact article-level publisher registration or an authoritative proceedings citation containing an identifier."
+          }
         },
         {
           "id": "sc2005-pap260",
@@ -12864,14 +13047,47 @@
           "doi_status": "unresolved",
           "doi_source_id": null,
           "publisher_title": null,
-          "authors": [],
-          "authors_status": "not_checked",
+          "authors": [
+            "Jonathan Carter",
+            "Min Soe",
+            "Leonid Oliker",
+            "Yoshinori Tsuda",
+            "George Vahala",
+            "Linda Vahala",
+            "Angus Macnab"
+          ],
+          "authors_status": "ordered_byline_checked_preserved_manuscript_first_page",
           "publication_url": null,
           "notes": [
             "Candidate membership and selection title come from the preserved official conference index; the original source is retained offline and has not been re-fetched from a live website. Bibliography only; no new manuscript-performance or award-outcome audit.",
             "No conference DOI match was established in the registration lookup. Similar titles from another year, journal articles and technical-report DOIs were not substituted.",
             "A follow-up exact-title Crossref query and both public IEEE Computer Society SC2005 catalog sets (75 records and one alternate record) did not yield this entry. This does not establish that no DOI was assigned; the candidate DOI remains unresolved."
-          ]
+          ],
+          "historical_metadata_snapshot": {
+            "before_review_on": "2026-11-22",
+            "values": {
+              "authors": [],
+              "authors_status": "not_checked",
+              "authors_source_id": null,
+              "bibliography_review": null
+            }
+          },
+          "authors_source_id": "sc05-pap260-byline",
+          "bibliography_review": {
+            "checked_on": "2026-11-22",
+            "status": "byline_checked_doi_unresolved",
+            "note": "Title and ordered byline checked in the preserved conference PDF. Archived exact-title Crossref and publisher-catalog searches did not establish a matching identifier; no DOI is inferred from a nearby regular-paper record.",
+            "source_ids": [
+              "sc05-pap260-byline",
+              "sc05_csdl_toc",
+              "sc05_csdl_alt_toc"
+            ],
+            "performance_audit": "Not performed in this bibliography review",
+            "byline_scope": "Preserved conference PDF p. 1",
+            "doi_status": "unresolved",
+            "registry_lookup_date": "2026-11-12",
+            "next_evidence": "An exact article-level publisher registration or an authoritative proceedings citation containing an identifier."
+          }
         },
         {
           "id": "sc2005-pap307",
@@ -12881,14 +13097,68 @@
           "doi_status": "unresolved",
           "doi_source_id": null,
           "publisher_title": null,
-          "authors": [],
-          "authors_status": "not_checked",
+          "authors": [
+            "Frederick H. Streitz",
+            "James N. Glosli",
+            "Mehul V. Patel",
+            "Bor Chan",
+            "Robert K. Yates",
+            "Bronis R. de Supinski",
+            "James Sexton",
+            "John A. Gunnels"
+          ],
+          "authors_status": "ordered_byline_checked_preserved_manuscript_first_page",
           "publication_url": null,
           "notes": [
             "Candidate membership and selection title come from the preserved official conference index; the original source is retained offline and has not been re-fetched from a live website. Bibliography only; no new manuscript-performance or award-outcome audit.",
             "No conference DOI match was established in the registration lookup. Similar titles from another year, journal articles and technical-report DOIs were not substituted.",
             "A follow-up exact-title Crossref query and both public IEEE Computer Society SC2005 catalog sets (75 records and one alternate record) did not yield this entry. This does not establish that no DOI was assigned; the candidate DOI remains unresolved."
-          ]
+          ],
+          "historical_metadata_snapshot": {
+            "before_review_on": "2026-11-22",
+            "values": {
+              "award_result": null,
+              "authors": [],
+              "authors_status": "not_checked",
+              "authors_source_id": null,
+              "bibliography_review": null
+            }
+          },
+          "award_result": {
+            "status": "verified",
+            "label": "Winner — Peak Performance",
+            "outcome": "Winner",
+            "category": "Peak Performance",
+            "source_id": "sc16-historical-winners",
+            "additional_source_ids": [],
+            "evidence_note": "Award identity and category are supported by the official SC historical list. Performance-methodology and final-score review are separate.",
+            "claims": [
+              {
+                "source_id": "sc16-historical-winners",
+                "outcome": "Award recipient",
+                "category": "Peak Performance",
+                "location": "2005 section",
+                "note": ""
+              }
+            ],
+            "checked_on": "2026-11-22"
+          },
+          "authors_source_id": "sc05-pap307-byline",
+          "bibliography_review": {
+            "checked_on": "2026-11-22",
+            "status": "byline_checked_doi_unresolved",
+            "note": "Title and ordered byline checked in the preserved conference PDF. Archived exact-title Crossref and publisher-catalog searches did not establish a matching identifier; no DOI is inferred from a nearby regular-paper record.",
+            "source_ids": [
+              "sc05-pap307-byline",
+              "sc05_csdl_toc",
+              "sc05_csdl_alt_toc"
+            ],
+            "performance_audit": "Not performed in this bibliography review",
+            "byline_scope": "Preserved conference PDF p. 1",
+            "doi_status": "unresolved",
+            "registry_lookup_date": "2026-11-12",
+            "next_evidence": "An exact article-level publisher registration or an authoritative proceedings citation containing an identifier."
+          }
         }
       ],
       "notes": [
@@ -12903,7 +13173,16 @@
         "website_url": "https://sc05.supercomputing.org/",
         "year": 2005
       },
-      "detailed_paper_count": 0
+      "detailed_paper_count": 0,
+      "historical_review": {
+        "checked_on": "2026-11-22",
+        "reviewed_record_ids": [
+          "sc2005-pap307",
+          "sc2005-pap122",
+          "sc2005-pap260"
+        ],
+        "note": "Dated award and bibliography review; roster membership and full performance audits remain separate."
+      }
     },
     {
       "year": 2004,
@@ -12971,6 +13250,16 @@
           "url": "https://dl.acm.org/doi/proceedings/10.5555/1048933",
           "label": "Proceedings entry linked by official SC conference history",
           "kind": "official_proceedings_entrypoint"
+        },
+        {
+          "id": "sc16-historical-winners",
+          "url": "https://sc16.supercomputing.org/2016/08/25/acm-gordon-bell-prize-recognizes-top-accomplishments-running-science-apps-hpc/index.html",
+          "label": "SC16 official historical Gordon Bell winners, published 25 August 2016",
+          "kind": "official_conference_retrospective_award_list",
+          "checked_on": "2026-11-22",
+          "local_reference": "歴史一次資料/GRAPE_Special_20261122/SC16_official_historical_winners.html",
+          "source_sha256": "5ac2c7ed1b80710d8f10d0ec6f911c0a416c5d510db469eee875ba996f588ae4",
+          "published_on": "2016-08-25"
         }
       ],
       "roster_completeness": {
@@ -13005,7 +13294,32 @@
           "notes": [
             "Candidate membership and selection title come from the preserved official conference index; the original source is retained offline and has not been re-fetched from a live website. Bibliography only; no new manuscript-performance or award-outcome audit.",
             "DOI, registered title and SC proceedings venue matched in the successful Crossref response; the individual work endpoint is not claimed to have been fetched. Author names retain registry order, not a newly audited PDF byline."
-          ]
+          ],
+          "historical_metadata_snapshot": {
+            "before_review_on": "2026-11-22",
+            "values": {
+              "award_result": null
+            }
+          },
+          "award_result": {
+            "status": "verified",
+            "label": "Award recipient — Special",
+            "outcome": "Winner",
+            "category": "Special",
+            "source_id": "sc16-historical-winners",
+            "additional_source_ids": [],
+            "evidence_note": "Category is supported by the official SC historical list; the generic preserved SC2004 Awards information page is not treated as the result announcement.",
+            "claims": [
+              {
+                "source_id": "sc16-historical-winners",
+                "outcome": "Award recipient",
+                "category": "Special",
+                "location": "2004 section",
+                "note": ""
+              }
+            ],
+            "checked_on": "2026-11-22"
+          }
         },
         {
           "id": "sc2004-pap234",
@@ -13103,7 +13417,14 @@
         "website_url": "https://sc04.supercomputing.org/",
         "year": 2004
       },
-      "detailed_paper_count": 0
+      "detailed_paper_count": 0,
+      "historical_review": {
+        "checked_on": "2026-11-22",
+        "reviewed_record_ids": [
+          "sc2004-pap111"
+        ],
+        "note": "Dated award and bibliography review; roster membership and full performance audits remain separate."
+      }
     },
     {
       "year": 2003,
@@ -13172,6 +13493,27 @@
           "local_reference": "歴史一次資料/SC2003_awards_news_release_author_copy.html",
           "source_sha256": "e3dbafa3d5dfa58acb1b3266b7726e3df76a65679805c79c98df1766dd785216",
           "published_on": "2003-11-21"
+        },
+        {
+          "id": "makino03-paper-byline",
+          "url": "https://jun-makino.sakura.ne.jp/papers/sc2003final.pdf",
+          "label": "SC2003 GRAPE-6 manuscript, author-hosted; title and byline checked on PDF p. 1",
+          "kind": "author_hosted_conference_manuscript",
+          "checked_on": "2026-11-22",
+          "local_reference": "歴史一次資料/GRAPE_Special_20261122/makino_sc2003_paper.pdf",
+          "source_sha256": "c0b76e09aff8f013ea7cf4d2a86342ef14b37f9a1340ff68d13ff124f6403ee7",
+          "source_revision_date": null,
+          "inspection_scope": "Title and ordered byline on PDF p. 1 only"
+        },
+        {
+          "id": "sc16-historical-winners",
+          "url": "https://sc16.supercomputing.org/2016/08/25/acm-gordon-bell-prize-recognizes-top-accomplishments-running-science-apps-hpc/index.html",
+          "label": "SC16 official historical Gordon Bell winners, published 25 August 2016",
+          "kind": "official_conference_retrospective_award_list",
+          "checked_on": "2026-11-22",
+          "local_reference": "歴史一次資料/GRAPE_Special_20261122/SC16_official_historical_winners.html",
+          "source_sha256": "5ac2c7ed1b80710d8f10d0ec6f911c0a416c5d510db469eee875ba996f588ae4",
+          "published_on": "2016-08-25"
         }
       ],
       "roster_completeness": {
@@ -13280,7 +13622,7 @@
             "Eiichiro Kokubo",
             "Toshiyuki Fukushige"
           ],
-          "authors_status": "registry_verified_not_pdf_audited",
+          "authors_status": "ordered_byline_checked_author_hosted_manuscript_first_page",
           "publication_url": "https://dl.acm.org/doi/10.1145/1048935.1050153",
           "notes": [
             "Program-membership and bibliographic roster entry only; no manuscript PDF, performance measurement, or final-score audit was performed.",
@@ -13291,10 +13633,72 @@
           "award_result": {
             "status": "verified",
             "label": "Special Achievement (lifetime)",
+            "outcome": "Winner",
             "category": "Special Achievement (lifetime)",
             "source_id": "sc03-awards-author-copy",
-            "evidence_note": "Award title/category from the dated SC2003 news release. Award-recipient names and publisher bylines may differ; the existing publisher author array is retained."
-          }
+            "additional_source_ids": [
+              "sc16-historical-winners"
+            ],
+            "evidence_note": "The announcement names four people including Hiroshi Daisaka. The author-hosted proceedings manuscript and publisher record have three authors: Makino, Kokubo and Fukushige. The announcement roster is preserved separately from the paper byline.",
+            "claims": [
+              {
+                "source_id": "sc03-awards-author-copy",
+                "outcome": "Award recipient",
+                "category": "Special Achievement (lifetime)",
+                "location": "Special Achievement (lifetime) paragraph",
+                "note": "",
+                "recipients": [
+                  "Junichiro Makino",
+                  "Hiroshi Daisaka",
+                  "Eiichiro Kokubo",
+                  "Toshiyuki Fukushige"
+                ]
+              },
+              {
+                "source_id": "sc16-historical-winners",
+                "outcome": "Award recipient",
+                "category": "Special Achievement (lifetime)",
+                "location": "2003 section",
+                "note": ""
+              }
+            ],
+            "checked_on": "2026-11-22",
+            "recipients": [
+              "Junichiro Makino",
+              "Hiroshi Daisaka",
+              "Eiichiro Kokubo",
+              "Toshiyuki Fukushige"
+            ]
+          },
+          "historical_metadata_snapshot": {
+            "before_review_on": "2026-11-22",
+            "values": {
+              "award_result": {
+                "status": "verified",
+                "label": "Special Achievement (lifetime)",
+                "category": "Special Achievement (lifetime)",
+                "source_id": "sc03-awards-author-copy",
+                "evidence_note": "Award title/category from the dated SC2003 news release. Award-recipient names and publisher bylines may differ; the existing publisher author array is retained."
+              },
+              "bibliography_review": null,
+              "authors_status": "registry_verified_not_pdf_audited",
+              "authors_source_id": null
+            }
+          },
+          "bibliography_review": {
+            "checked_on": "2026-11-22",
+            "status": "ordered_byline_checked",
+            "note": "The author-hosted paper has the same ordered three-name byline as the publisher metadata. The four-name award announcement is a separate evidence list.",
+            "source_ids": [
+              "makino03-paper-byline",
+              "sc03-awards-author-copy"
+            ],
+            "performance_audit": "Not performed in this bibliography review",
+            "byline_scope": "Author-hosted manuscript PDF p. 1",
+            "publication_author_count": 3,
+            "award_announcement_name_count": 4
+          },
+          "authors_source_id": "makino03-paper-byline"
         },
         {
           "id": "SC03_main05",
@@ -13361,7 +13765,14 @@
         "website_url": "https://sc03.supercomputing.org/",
         "year": 2003
       },
-      "detailed_paper_count": 0
+      "detailed_paper_count": 0,
+      "historical_review": {
+        "checked_on": "2026-11-22",
+        "reviewed_record_ids": [
+          "SC03_main04"
+        ],
+        "note": "Dated award and bibliography review; roster membership and full performance audits remain separate."
+      }
     },
     {
       "year": 2002,
@@ -13457,6 +13868,16 @@
           "url": "https://dl.acm.org/doi/proceedings/10.5555/762761",
           "label": "Proceedings entry linked by official SC conference history",
           "kind": "official_proceedings_entrypoint"
+        },
+        {
+          "id": "sc02-awards-close",
+          "url": "https://www.sc02.supercomputing.org/news_nrp_conclude.html",
+          "label": "SC2002 official closing release naming the five Gordon Bell award papers",
+          "kind": "official_conference_award_announcement",
+          "checked_on": "2026-11-22",
+          "local_reference": "歴史一次資料/GRAPE_Special_20261122/sc02_awards.html",
+          "source_sha256": "3577a7ae260a97dada958bf8d4f57780ec37ad00daaa54f4859a6280bbc42c51",
+          "published_on": "2002-11-21"
         }
       ],
       "roster_completeness": {
@@ -13494,7 +13915,21 @@
             "Candidate membership and selection title come from the preserved official conference index; the original source is retained offline and has not been re-fetched from a live website. Bibliography only; no new manuscript-performance or award-outcome audit.",
             "DOI, registered title and SC proceedings venue matched in the successful Crossref response; the individual work endpoint is not claimed to have been fetched. Author names retain registry order, not a newly audited PDF byline.",
             "Publisher title spelling/capitalization differs from the preserved selection title; both forms are retained."
-          ]
+          ],
+          "historical_metadata_snapshot": {
+            "before_review_on": "2026-11-22",
+            "values": {
+              "award_review": null
+            }
+          },
+          "award_review": {
+            "checked_on": "2026-11-22",
+            "status": "not_named_in_official_award_release",
+            "label": "Not among the five papers named in the closing award release",
+            "source_id": "sc02-awards-close",
+            "location": "Gordon Bell Awards, all five listed papers",
+            "note": "The preserved finalist membership remains; a GRAPE machine or a performance figure does not establish an award."
+          }
         },
         {
           "id": "sc2002-pap216",
@@ -13520,7 +13955,33 @@
           "notes": [
             "Candidate membership and selection title come from the preserved official conference index; the original source is retained offline and has not been re-fetched from a live website. Bibliography only; no new manuscript-performance or award-outcome audit.",
             "DOI, registered title and SC proceedings venue matched in the successful Crossref response; the individual work endpoint is not claimed to have been fetched. Author names retain registry order, not a newly audited PDF byline."
-          ]
+          ],
+          "historical_metadata_snapshot": {
+            "before_review_on": "2026-11-22",
+            "values": {
+              "award_result": null
+            }
+          },
+          "award_result": {
+            "status": "verified",
+            "label": "Award recipient — Special accomplishment",
+            "outcome": "Winner",
+            "category": "Special accomplishment",
+            "source_id": "sc02-awards-close",
+            "additional_source_ids": [],
+            "evidence_note": "The official closing release names this paper and category. Award announcement names do not replace the publisher byline.",
+            "claims": [
+              {
+                "source_id": "sc02-awards-close",
+                "outcome": "Award recipient",
+                "category": "Special accomplishment",
+                "location": "Three additional papers: Salinas bullet",
+                "note": ""
+              }
+            ],
+            "checked_on": "2026-11-22",
+            "announcement_date": "2002-11-21"
+          }
         },
         {
           "id": "sc2002-pap277",
@@ -13541,7 +14002,33 @@
           "notes": [
             "Candidate membership and selection title come from the preserved official conference index; the original source is retained offline and has not been re-fetched from a live website. Bibliography only; no new manuscript-performance or award-outcome audit.",
             "DOI, registered title and SC proceedings venue matched in the successful Crossref response; the individual work endpoint is not claimed to have been fetched. Author names retain registry order, not a newly audited PDF byline."
-          ]
+          ],
+          "historical_metadata_snapshot": {
+            "before_review_on": "2026-11-22",
+            "values": {
+              "award_result": null
+            }
+          },
+          "award_result": {
+            "status": "verified",
+            "label": "Award recipient — Special accomplishment",
+            "outcome": "Winner",
+            "category": "Special accomplishment",
+            "source_id": "sc02-awards-close",
+            "additional_source_ids": [],
+            "evidence_note": "The official closing release names this paper and category. Award announcement names do not replace the publisher byline.",
+            "claims": [
+              {
+                "source_id": "sc02-awards-close",
+                "outcome": "Award recipient",
+                "category": "Special accomplishment",
+                "location": "Three additional papers: NAMD bullet",
+                "note": ""
+              }
+            ],
+            "checked_on": "2026-11-22",
+            "announcement_date": "2002-11-21"
+          }
         },
         {
           "id": "sc2002-pap273",
@@ -13564,7 +14051,33 @@
             "Candidate membership and selection title come from the preserved official conference index; the original source is retained offline and has not been re-fetched from a live website. Bibliography only; no new manuscript-performance or award-outcome audit.",
             "DOI, registered title and SC proceedings venue matched in the successful Crossref response; the individual work endpoint is not claimed to have been fetched. Author names retain registry order, not a newly audited PDF byline.",
             "Publisher title spelling/capitalization differs from the preserved selection title; both forms are retained."
-          ]
+          ],
+          "historical_metadata_snapshot": {
+            "before_review_on": "2026-11-22",
+            "values": {
+              "award_result": null
+            }
+          },
+          "award_result": {
+            "status": "verified",
+            "label": "Award recipient — Special accomplishment",
+            "outcome": "Winner",
+            "category": "Special accomplishment",
+            "source_id": "sc02-awards-close",
+            "additional_source_ids": [],
+            "evidence_note": "The official closing release names this paper and category. Award announcement names do not replace the publisher byline.",
+            "claims": [
+              {
+                "source_id": "sc02-awards-close",
+                "outcome": "Award recipient",
+                "category": "Special accomplishment",
+                "location": "Three additional papers: turbulence bullet",
+                "note": ""
+              }
+            ],
+            "checked_on": "2026-11-22",
+            "announcement_date": "2002-11-21"
+          }
         },
         {
           "id": "sc2002-pap147",
@@ -13586,7 +14099,33 @@
             "Candidate membership and selection title come from the preserved official conference index; the original source is retained offline and has not been re-fetched from a live website. Bibliography only; no new manuscript-performance or award-outcome audit.",
             "DOI, registered title and SC proceedings venue matched in the successful Crossref response; the individual work endpoint is not claimed to have been fetched. Author names retain registry order, not a newly audited PDF byline.",
             "Publisher title spelling/capitalization differs from the preserved selection title; both forms are retained."
-          ]
+          ],
+          "historical_metadata_snapshot": {
+            "before_review_on": "2026-11-22",
+            "values": {
+              "award_result": null
+            }
+          },
+          "award_result": {
+            "status": "verified",
+            "label": "Award for Language — special category",
+            "outcome": "Winner",
+            "category": "Language (special category)",
+            "source_id": "sc02-awards-close",
+            "additional_source_ids": [],
+            "evidence_note": "The official closing release names this paper and category. Award announcement names do not replace the publisher byline.",
+            "claims": [
+              {
+                "source_id": "sc02-awards-close",
+                "outcome": "Award recipient",
+                "category": "Language (special category)",
+                "location": "Award for Language bullet",
+                "note": ""
+              }
+            ],
+            "checked_on": "2026-11-22",
+            "announcement_date": "2002-11-21"
+          }
         },
         {
           "id": "sc2002-pap331",
@@ -13616,7 +14155,33 @@
           "notes": [
             "Candidate membership and selection title come from the preserved official conference index; the original source is retained offline and has not been re-fetched from a live website. Bibliography only; no new manuscript-performance or award-outcome audit.",
             "DOI, registered title and SC proceedings venue matched in the successful Crossref response; the individual work endpoint is not claimed to have been fetched. Author names retain registry order, not a newly audited PDF byline."
-          ]
+          ],
+          "historical_metadata_snapshot": {
+            "before_review_on": "2026-11-22",
+            "values": {
+              "award_result": null
+            }
+          },
+          "award_result": {
+            "status": "verified",
+            "label": "Winner — Peak Performance",
+            "outcome": "Winner",
+            "category": "Peak Performance",
+            "source_id": "sc02-awards-close",
+            "additional_source_ids": [],
+            "evidence_note": "The official closing release names this paper and category. Award announcement names do not replace the publisher byline.",
+            "claims": [
+              {
+                "source_id": "sc02-awards-close",
+                "outcome": "Award recipient",
+                "category": "Peak Performance",
+                "location": "Peak Performance bullet",
+                "note": ""
+              }
+            ],
+            "checked_on": "2026-11-22",
+            "announcement_date": "2002-11-21"
+          }
         }
       ],
       "notes": [
@@ -13631,7 +14196,19 @@
         "website_url": "https://sc02.supercomputing.org/",
         "year": 2002
       },
-      "detailed_paper_count": 0
+      "detailed_paper_count": 0,
+      "historical_review": {
+        "checked_on": "2026-11-22",
+        "reviewed_record_ids": [
+          "sc2002-pap331",
+          "sc2002-pap147",
+          "sc2002-pap273",
+          "sc2002-pap216",
+          "sc2002-pap277",
+          "sc2002-pap146"
+        ],
+        "note": "Dated award and bibliography review; roster membership and full performance audits remain separate."
+      }
     },
     {
       "year": 2001,
@@ -13687,6 +14264,17 @@
           "kind": "recipient_hosted_original_award_certificate",
           "local_reference": "歴史一次資料/Makino_Gordon_Bell_2001_certificate.gif",
           "source_sha256": "052881ab92be0b1086d5cedc9eca1842b4a95c6b693c585c7c618513e6b4605b"
+        },
+        {
+          "id": "makino01-paper-byline",
+          "url": "https://jun-makino.sakura.ne.jp/papers/gbp2001.pdf",
+          "label": "SC2001 GRAPE-6 manuscript, author-hosted; title and byline checked on PDF p. 1",
+          "kind": "author_hosted_conference_manuscript",
+          "checked_on": "2026-11-22",
+          "local_reference": "歴史一次資料/GRAPE_Special_20261122/makino_sc2001_paper.pdf",
+          "source_sha256": "53ba64a3c81ef0bb4f10ba5254eee757bad46db4674ccdc98149c51112a3c904",
+          "source_revision_date": null,
+          "inspection_scope": "Title and ordered byline on PDF p. 1 only"
         }
       ],
       "roster_completeness": {
@@ -13781,8 +14369,8 @@
             "Junichiro Makino",
             "Toshiyuki Fukushige"
           ],
-          "authors_status": "award_recipients_from_contemporary_author_release_not_publication_byline",
-          "publication_url": null,
+          "authors_status": "ordered_byline_checked_author_hosted_manuscript_first_page",
+          "publication_url": "https://jun-makino.sakura.ne.jp/papers/gbp2001.pdf",
           "notes": [
             "Exact competition title and Peak Performance winner status are transcribed from the recipient-hosted SC2001 certificate. The author release independently identifies Makino and Fukushige as recipients; these names are not claimed to be an audited publication byline.",
             "No exact DOI was verified. Crossref exact-title searches return the distinct 2000 1.349 Tflops paper, whose DOI is not reused for this 2001 11.55 Tflops entry.",
@@ -13798,6 +14386,34 @@
             ],
             "award_date": "2001-11-15",
             "date_source_id": "makino01-author-release"
+          },
+          "historical_metadata_snapshot": {
+            "before_review_on": "2026-11-22",
+            "values": {
+              "authors": [
+                "Junichiro Makino",
+                "Toshiyuki Fukushige"
+              ],
+              "authors_status": "award_recipients_from_contemporary_author_release_not_publication_byline",
+              "authors_source_id": null,
+              "publication_url": null,
+              "bibliography_review": null
+            }
+          },
+          "authors_source_id": "makino01-paper-byline",
+          "bibliography_review": {
+            "checked_on": "2026-11-22",
+            "status": "byline_checked_doi_unresolved",
+            "note": "The ordered two-name byline is verified on the author-hosted manuscript. The distinct 2000 paper’s DOI is not reused. No exact publisher-assigned DOI for this 2001 paper has been established.",
+            "source_ids": [
+              "makino01-paper-byline",
+              "makino01-award-certificate",
+              "makino01-author-release"
+            ],
+            "performance_audit": "Not performed in this bibliography review",
+            "byline_scope": "Author-hosted manuscript PDF p. 1",
+            "doi_status": "unresolved",
+            "next_evidence": "Exact article-level publisher registration for the 2001 submission; the author PDF is a usable primary reading link."
           }
         }
       ],
@@ -13815,7 +14431,14 @@
         "website_url": null,
         "year": 2001
       },
-      "detailed_paper_count": 0
+      "detailed_paper_count": 0,
+      "historical_review": {
+        "checked_on": "2026-11-22",
+        "reviewed_record_ids": [
+          "SC01-grape6"
+        ],
+        "note": "Dated award and bibliography review; roster membership and full performance audits remain separate."
+      }
     },
     {
       "year": 2000,
@@ -13866,6 +14489,26 @@
           "local_reference": "歴史一次資料/Makino_2001_Gordon_Bell_press_release.html",
           "source_sha256": "d0a1b621a68ff3987aeba5a8b1ac7d4c75cb8e23e883cdb10569a4641ca9f766",
           "published_on": "2001-12-17"
+        },
+        {
+          "id": "makino2000-certificate",
+          "url": "https://jun-makino.sakura.ne.jp/images/gbp2000.gif",
+          "label": "2000 Gordon Bell award certificate, recipient-hosted image",
+          "kind": "contemporaneous_award_certificate_recipient_copy",
+          "checked_on": "2026-11-22",
+          "local_reference": "歴史一次資料/GRAPE_Special_20261122/makino00_certificate.gif",
+          "source_sha256": "199b3bfa83f0264ec03b2883bc08577ae755b2cb5dc63e5f40bc7c66f5b7a195",
+          "competition_year": 2000
+        },
+        {
+          "id": "sc16-historical-winners",
+          "url": "https://sc16.supercomputing.org/2016/08/25/acm-gordon-bell-prize-recognizes-top-accomplishments-running-science-apps-hpc/index.html",
+          "label": "SC16 official historical Gordon Bell winners, published 25 August 2016",
+          "kind": "official_conference_retrospective_award_list",
+          "checked_on": "2026-11-22",
+          "local_reference": "歴史一次資料/GRAPE_Special_20261122/SC16_official_historical_winners.html",
+          "source_sha256": "5ac2c7ed1b80710d8f10d0ec6f911c0a416c5d510db469eee875ba996f588ae4",
+          "published_on": "2016-08-25"
         }
       ],
       "roster_completeness": {
@@ -13946,10 +14589,43 @@
           ],
           "award_result": {
             "status": "verified",
-            "label": "Winner — Performance",
-            "category": "Performance",
-            "source_id": "makino01-author-release",
-            "evidence_note": "Retrospective category table in the team’s 2001 press release; no conference-day score inferred."
+            "label": "Winner — Peak Performance",
+            "outcome": "Winner",
+            "category": "Peak Performance",
+            "source_id": "makino2000-certificate",
+            "additional_source_ids": [
+              "sc16-historical-winners"
+            ],
+            "evidence_note": "The certificate gives the precise category. The historical SC list records a tie with the MDM entry; this personal certificate is not used as a complete team byline.",
+            "claims": [
+              {
+                "source_id": "makino2000-certificate",
+                "outcome": "Winner",
+                "category": "Peak Performance Category",
+                "location": "Certificate, central wording; personal certificate for Junichiro Makino",
+                "note": ""
+              },
+              {
+                "source_id": "sc16-historical-winners",
+                "outcome": "First place, tied",
+                "category": "Peak Performance",
+                "location": "2000 section",
+                "note": ""
+              }
+            ],
+            "checked_on": "2026-11-22"
+          },
+          "historical_metadata_snapshot": {
+            "before_review_on": "2026-11-22",
+            "values": {
+              "award_result": {
+                "status": "verified",
+                "label": "Winner — Performance",
+                "category": "Performance",
+                "source_id": "makino01-author-release",
+                "evidence_note": "Retrospective category table in the team’s 2001 press release; no conference-day score inferred."
+              }
+            }
           }
         },
         {
@@ -13994,7 +14670,32 @@
           "publication_url": null,
           "notes": [
             "The publisher TOC explicitly lists this paper in GORDON BELL II. DOI and ordered names come directly from publisher metadata; no paper-byline, performance or award-result audit is claimed."
-          ]
+          ],
+          "historical_metadata_snapshot": {
+            "before_review_on": "2026-11-22",
+            "values": {
+              "award_result": null
+            }
+          },
+          "award_result": {
+            "status": "verified",
+            "label": "Winner — Peak Performance (tie)",
+            "outcome": "Winner",
+            "category": "Peak Performance",
+            "source_id": "sc16-historical-winners",
+            "additional_source_ids": [],
+            "evidence_note": "The official SC retrospective records the two first-place performance entries separately. The award paper’s DOI and publisher byline are retained.",
+            "claims": [
+              {
+                "source_id": "sc16-historical-winners",
+                "outcome": "First place, tied",
+                "category": "Peak Performance",
+                "location": "2000 section",
+                "note": ""
+              }
+            ],
+            "checked_on": "2026-11-22"
+          }
         },
         {
           "id": "SC00-reactive-amr",
@@ -14025,7 +14726,32 @@
           "notes": [
             "The publisher TOC explicitly lists this paper in GORDON BELL II. DOI and ordered names come directly from publisher metadata; no paper-byline, performance or award-result audit is claimed.",
             "Publisher metadata spells two names B. C. Curts and P. MacNece; these deposited forms are preserved pending original-byline verification."
-          ]
+          ],
+          "historical_metadata_snapshot": {
+            "before_review_on": "2026-11-22",
+            "values": {
+              "award_result": null
+            }
+          },
+          "award_result": {
+            "status": "verified",
+            "label": "Award recipient — Special",
+            "outcome": "Winner",
+            "category": "Special",
+            "source_id": "sc16-historical-winners",
+            "additional_source_ids": [],
+            "evidence_note": "Category verified in the dated official SC historical list; a contemporary closing release has not been recovered in this review.",
+            "claims": [
+              {
+                "source_id": "sc16-historical-winners",
+                "outcome": "Award recipient",
+                "category": "Special",
+                "location": "2000 section",
+                "note": ""
+              }
+            ],
+            "checked_on": "2026-11-22"
+          }
         }
       ],
       "notes": [
@@ -14042,7 +14768,16 @@
         "website_url": null,
         "year": 2000
       },
-      "detailed_paper_count": 0
+      "detailed_paper_count": 0,
+      "historical_review": {
+        "checked_on": "2026-11-22",
+        "reviewed_record_ids": [
+          "SC00-grape6",
+          "SC00-mdm",
+          "SC00-reactive-amr"
+        ],
+        "note": "Dated award and bibliography review; roster membership and full performance audits remain separate."
+      }
     },
     {
       "year": 1999,
@@ -14081,6 +14816,37 @@
           "local_reference": "歴史一次資料/Makino_2001_Gordon_Bell_press_release.html",
           "source_sha256": "d0a1b621a68ff3987aeba5a8b1ac7d4c75cb8e23e883cdb10569a4641ca9f766",
           "published_on": "2001-12-17"
+        },
+        {
+          "id": "makino1999-certificate",
+          "url": "https://jun-makino.sakura.ne.jp/images/1999gbmakino.gif",
+          "label": "1999 Gordon Bell award certificate, recipient-hosted image",
+          "kind": "contemporaneous_award_certificate_recipient_copy",
+          "checked_on": "2026-11-22",
+          "local_reference": "歴史一次資料/GRAPE_Special_20261122/makino99_certificate.gif",
+          "source_sha256": "45f5f29864ed3ff169b6fee24531a20d2606a8ef920c91d9b51e3c3f37a4ee48",
+          "competition_year": 1999
+        },
+        {
+          "id": "sc16-historical-winners",
+          "url": "https://sc16.supercomputing.org/2016/08/25/acm-gordon-bell-prize-recognizes-top-accomplishments-running-science-apps-hpc/index.html",
+          "label": "SC16 official historical Gordon Bell winners, published 25 August 2016",
+          "kind": "official_conference_retrospective_award_list",
+          "checked_on": "2026-11-22",
+          "local_reference": "歴史一次資料/GRAPE_Special_20261122/SC16_official_historical_winners.html",
+          "source_sha256": "5ac2c7ed1b80710d8f10d0ec6f911c0a416c5d510db469eee875ba996f588ae4",
+          "published_on": "2016-08-25"
+        },
+        {
+          "id": "argonne99-special",
+          "url": "https://fun3d.larc.nasa.gov/papers/anl_GB99.pdf",
+          "label": "Argonne News, 20 December 1999, preserved by NASA FUN3D project",
+          "kind": "contemporary_institutional_award_announcement",
+          "checked_on": "2026-11-22",
+          "local_reference": "歴史一次資料/GRAPE_Special_20261122/argonne_special99.pdf",
+          "source_sha256": "7cd2feea7bafe896d859d556fc4deada7e3fba42a1d243836f31de83801e8478",
+          "published_on": "1999-12-20",
+          "capture_date_note": "PDF print footer is 25 June 2004; article date is 20 December 1999."
         }
       ],
       "roster_completeness": {
@@ -14114,7 +14880,49 @@
             "The title slide explicitly says Gordon Bell Prize Finalist Presentation and SC’99. Ordered displayed names are Kyle Anderson, William Gropp, Dinesh Kaushik, David Keyes and Barry Smith; registry author initials below are preserved separately.",
             "DOI verified from the successful publisher-deposited Crossref query item, with matching title, authors, venue and year; no individual-work retrieval or PDF-byline audit is claimed.",
             "The IEEE publisher TOC independently lists this paper in its Fernbach Award and Gordon Bell Finalists section, with alternate IEEE DOI 10.1109/SC.1999.10037. The already verified ACM DOI is retained; this is one finalist, not two."
-          ]
+          ],
+          "historical_metadata_snapshot": {
+            "before_review_on": "2026-11-22",
+            "values": {
+              "award_result": null
+            }
+          },
+          "award_result": {
+            "status": "verified",
+            "label": "Winner — Special",
+            "outcome": "Winner",
+            "category": "Special",
+            "source_id": "argonne99-special",
+            "additional_source_ids": [
+              "sc16-historical-winners"
+            ],
+            "evidence_note": "The Argonne announcement explicitly places both teams in the Special category. The existing publisher byline is retained.",
+            "claims": [
+              {
+                "source_id": "argonne99-special",
+                "outcome": "Award recipient",
+                "category": "Special",
+                "location": "PDF p. 1, Supercomputer applications awarded prizes",
+                "note": "",
+                "recipients": [
+                  "William Gropp",
+                  "Barry Smith",
+                  "Dinesh Kaushik",
+                  "W. Kyle Anderson",
+                  "David Keyes"
+                ]
+              },
+              {
+                "source_id": "sc16-historical-winners",
+                "outcome": "First Prize, Shared",
+                "category": "Special",
+                "location": "1999 section",
+                "note": ""
+              }
+            ],
+            "checked_on": "2026-11-22",
+            "announcement_date": null
+          }
         },
         {
           "id": "SC99-grape5",
@@ -14138,9 +14946,51 @@
           "award_result": {
             "status": "verified",
             "label": "Winner — Price/performance",
+            "outcome": "Winner",
             "category": "Price/performance",
-            "source_id": "makino01-author-release",
-            "evidence_note": "Retrospective category table in the team’s 2001 press release; no conference-day score inferred."
+            "source_id": "makino1999-certificate",
+            "additional_source_ids": [
+              "makino01-author-release",
+              "sc16-historical-winners"
+            ],
+            "evidence_note": "The certificate uses $7.3/Mflops in the project title; the publication title uses $7.0/Mflops. Both source titles are retained; neither title is treated as a new performance measurement.",
+            "claims": [
+              {
+                "source_id": "makino1999-certificate",
+                "outcome": "Prize recipient",
+                "category": "Performance for Dollar Category",
+                "location": "Certificate, award heading and project title",
+                "note": "",
+                "project_title_as_printed": "$7.3/Mflops Astrophysical N-Body Simulation with Treecode on GRAPE-5"
+              },
+              {
+                "source_id": "makino01-author-release",
+                "outcome": "Winner",
+                "category": "Price/performance",
+                "location": "1999 retrospective row",
+                "note": ""
+              },
+              {
+                "source_id": "sc16-historical-winners",
+                "outcome": "First Prize",
+                "category": "Price/Performance",
+                "location": "1999 section",
+                "note": ""
+              }
+            ],
+            "checked_on": "2026-11-22"
+          },
+          "historical_metadata_snapshot": {
+            "before_review_on": "2026-11-22",
+            "values": {
+              "award_result": {
+                "status": "verified",
+                "label": "Winner — Price/performance",
+                "category": "Price/performance",
+                "source_id": "makino01-author-release",
+                "evidence_note": "Retrospective category table in the team’s 2001 press release; no conference-day score inferred."
+              }
+            }
           }
         },
         {
@@ -14160,7 +15010,46 @@
           "publication_url": null,
           "notes": [
             "The publisher TOC explicitly places this paper in the Fernbach Award and Gordon Bell Finalists section. DOI and author order are directly returned by that publisher metadata source; no PDF-byline or performance audit is claimed."
-          ]
+          ],
+          "historical_metadata_snapshot": {
+            "before_review_on": "2026-11-22",
+            "values": {
+              "award_result": null
+            }
+          },
+          "award_result": {
+            "status": "verified",
+            "label": "Winner — Special",
+            "outcome": "Winner",
+            "category": "Special",
+            "source_id": "argonne99-special",
+            "additional_source_ids": [
+              "sc16-historical-winners"
+            ],
+            "evidence_note": "The Argonne announcement explicitly places both teams in the Special category. The existing publisher byline is retained.",
+            "claims": [
+              {
+                "source_id": "argonne99-special",
+                "outcome": "Award recipient",
+                "category": "Special",
+                "location": "PDF pp. 1–2, Fluid flow",
+                "note": "",
+                "recipients": [
+                  "Paul Fischer",
+                  "Henry Tufo"
+                ]
+              },
+              {
+                "source_id": "sc16-historical-winners",
+                "outcome": "First Prize, Shared",
+                "category": "Special",
+                "location": "1999 section",
+                "note": ""
+              }
+            ],
+            "checked_on": "2026-11-22",
+            "announcement_date": null
+          }
         },
         {
           "id": "SC99-compressible-turbulence",
@@ -14207,7 +15096,16 @@
         "website_url": null,
         "year": 1999
       },
-      "detailed_paper_count": 0
+      "detailed_paper_count": 0,
+      "historical_review": {
+        "checked_on": "2026-11-22",
+        "reviewed_record_ids": [
+          "SC99-grape5",
+          "SC99-fun3d",
+          "SC99-spectral-element"
+        ],
+        "note": "Dated award and bibliography review; roster membership and full performance audits remain separate."
+      }
     },
     {
       "year": 1998,
@@ -14241,6 +15139,16 @@
           "source_sha256": "88932be0d7d175f4009a360465a1d89ffbca42f48a09b5a09a151ee9b8074879",
           "competition_year": 1998,
           "publication_date": "1998-10-23"
+        },
+        {
+          "id": "sc16-historical-winners",
+          "url": "https://sc16.supercomputing.org/2016/08/25/acm-gordon-bell-prize-recognizes-top-accomplishments-running-science-apps-hpc/index.html",
+          "label": "SC16 official historical Gordon Bell winners, published 25 August 2016",
+          "kind": "official_conference_retrospective_award_list",
+          "checked_on": "2026-11-22",
+          "local_reference": "歴史一次資料/GRAPE_Special_20261122/SC16_official_historical_winners.html",
+          "source_sha256": "5ac2c7ed1b80710d8f10d0ec6f911c0a416c5d510db469eee875ba996f588ae4",
+          "published_on": "2016-08-25"
         }
       ],
       "roster_completeness": {
@@ -14270,7 +15178,39 @@
             "Title comes from the author-associated publication record paper98. LBNL’s contemporary finalist announcement and the NERSC report link the metallic-magnetism project to the competition.",
             "The attempted 1998-filtered Crossref title queries did not return a convincing SC98 registration. DOI remains null, rather than selecting a similarly worded magnetism conference paper."
           ],
-          "title_kind": "source_title"
+          "title_kind": "source_title",
+          "historical_metadata_snapshot": {
+            "before_review_on": "2026-11-22",
+            "values": {
+              "bibliography_review": null
+            }
+          },
+          "bibliography_review": {
+            "checked_on": "2026-11-22",
+            "status": "paper_byline_and_doi_unresolved",
+            "note": "The contemporary institutional announcement verifies the project and finalist status. A complete ordered publication byline and exact DOI remain unverified. Names in the later official award list are award-history names, not a recovered paper byline.",
+            "source_ids": [
+              "lbl98",
+              "paper98",
+              "sc16-historical-winners"
+            ],
+            "performance_audit": "Not performed in this bibliography review",
+            "doi_status": "unresolved",
+            "registry_lookup_date": "2026-11-12",
+            "named_participants": [
+              "Balazs Ujfalussy",
+              "Xindong Wang",
+              "Xiaoguang Zhang",
+              "Donald M. C. Nicholson",
+              "William A. Shelton",
+              "G. Malcolm Stocks",
+              "Andrew Canning",
+              "Yang Wang",
+              "Balazs L. Gyorffy"
+            ],
+            "names_kind": "Names in official retrospective award list; not a publication byline",
+            "next_evidence": "The SC98 submission/proceedings first page and exact publisher registration. The author-associated metadata page returned HTTP429 in this check."
+          }
         },
         {
           "id": "SC98-qcdsp",
@@ -14286,7 +15226,24 @@
           "publication_url": null,
           "notes": [
             "Editorial description: the BNL bulletin PDF pp. 1–2 identifies the QCD machine and explicitly calls it a price/performance finalist at upcoming SC98. Formal entrant-paper title, DOI and full ordered byline remain unresolved."
-          ]
+          ],
+          "historical_metadata_snapshot": {
+            "before_review_on": "2026-11-22",
+            "values": {
+              "bibliography_review": null
+            }
+          },
+          "bibliography_review": {
+            "checked_on": "2026-11-22",
+            "status": "formal_title_and_byline_unresolved",
+            "note": "The Brookhaven announcement identifies the computer project as a finalist, but does not supply an ordered paper byline or a uniquely matched formal candidate title.",
+            "source_ids": [
+              "bnl98-qcdsp"
+            ],
+            "performance_audit": "Not performed in this bibliography review",
+            "doi_status": "unresolved",
+            "next_evidence": "Original SC98 finalist paper or program giving the formal title and full byline. Do not assign a later QCDSP journal paper by similarity."
+          }
         }
       ],
       "notes": [
@@ -14303,7 +15260,15 @@
         "website_url": null,
         "year": 1998
       },
-      "detailed_paper_count": 0
+      "detailed_paper_count": 0,
+      "historical_review": {
+        "checked_on": "2026-11-22",
+        "reviewed_record_ids": [
+          "SC98-magnetism",
+          "SC98-qcdsp"
+        ],
+        "note": "Dated award and bibliography review; roster membership and full performance audits remain separate."
+      }
     },
     {
       "year": 1997,
@@ -14383,10 +15348,31 @@
           "checked_on": "2026-11-12",
           "local_reference": "歴史一次資料/CSDL_SC1997_warren_metadata.json",
           "source_sha256": "828726b7887c76f6acfc8e64a4b8c73055a90865cbbde8bfaa7cc54fdd3c522f"
+        },
+        {
+          "id": "judges97",
+          "url": "https://www.davidhbailey.com/dhbpapers/gbprize-97.pdf",
+          "label": "1997 judges’ report by Karp, Lusk and Bailey; Computer January 1998, pp. 86–92",
+          "kind": "contemporary_judges_report_author_copy",
+          "checked_on": "2026-11-22",
+          "local_reference": "歴史一次資料/GRAPE_Special_20261122/judges97.pdf",
+          "source_sha256": "bcdc6cb5d50732ba6eb4e4addeeb2d6c74b77f3f0f116eecf103d9d557503fb8",
+          "competition_year": 1997,
+          "publication_date": "1998-01"
+        },
+        {
+          "id": "sc16-historical-winners",
+          "url": "https://sc16.supercomputing.org/2016/08/25/acm-gordon-bell-prize-recognizes-top-accomplishments-running-science-apps-hpc/index.html",
+          "label": "SC16 official historical Gordon Bell winners, published 25 August 2016",
+          "kind": "official_conference_retrospective_award_list",
+          "checked_on": "2026-11-22",
+          "local_reference": "歴史一次資料/GRAPE_Special_20261122/SC16_official_historical_winners.html",
+          "source_sha256": "5ac2c7ed1b80710d8f10d0ec6f911c0a416c5d510db469eee875ba996f588ae4",
+          "published_on": "2016-08-25"
         }
       ],
       "roster_completeness": {
-        "status": "preserved_session_roster_award_labels_unresolved",
+        "status": "preserved_session_roster_award_results_reviewed",
         "expected_count": 4,
         "basis_source_ids": [
           "sc97-preserved-ATTAWAY",
@@ -14394,7 +15380,7 @@
           "sc97-preserved-PHANTHIE",
           "sc97-preserved-WARREN"
         ],
-        "note": "Four preserved Gordon Bell session entries; conflicting finalist/winner labels remain unresolved. This is not an independently reconciled award-outcome list.",
+        "note": "Four preserved session papers remain indexed. The later judges’ report identifies two award-bearing papers; Attaway and Devine are described under Other entrants. The collective Winners session heading is not an individual award result.",
         "membership_label": "preserved session entries"
       },
       "records": [
@@ -14421,7 +15407,21 @@
             "Candidate membership and selection title come from the preserved official conference index; the original source is retained offline and has not been re-fetched from a live website. Bibliography only; no new manuscript-performance or award-outcome audit.",
             "Authors follow the previously checked preserved HTML byline. The session index labels winners while the daily program labels finalists; award outcomes remain unresolved.",
             "DOI verified from the IEEE Computer Society article API, which returns this exact title, SC Conference (1997), and the same complete ordered byline as the preserved HTML. Crossref title search did not recover this legacy record. Award-label ambiguity is unchanged."
-          ]
+          ],
+          "historical_metadata_snapshot": {
+            "before_review_on": "2026-11-22",
+            "values": {
+              "award_review": null
+            }
+          },
+          "award_review": {
+            "checked_on": "2026-11-22",
+            "status": "other_entrant_in_judges_report",
+            "label": "Not a named winner in the judges’ report",
+            "source_id": "judges97",
+            "location": "PDF p. 6, printed p. 91, OTHER ENTRANTS continuation",
+            "note": "The preserved official session includes this paper under a collective Winners heading. The later judges’ report places it under Other entrants. Session membership is retained; no individual award is inferred from the session heading."
+          }
         },
         {
           "id": "sc1997-DEVINE",
@@ -14445,7 +15445,21 @@
             "Candidate membership and selection title come from the preserved official conference index; the original source is retained offline and has not been re-fetched from a live website. Bibliography only; no new manuscript-performance or award-outcome audit.",
             "Authors follow the previously checked preserved HTML byline. The session index labels winners while the daily program labels finalists; award outcomes remain unresolved.",
             "DOI verified from the IEEE Computer Society article API, which returns this exact title, SC Conference (1997), and the same complete ordered byline as the preserved HTML. Crossref title search did not recover this legacy record. Award-label ambiguity is unchanged."
-          ]
+          ],
+          "historical_metadata_snapshot": {
+            "before_review_on": "2026-11-22",
+            "values": {
+              "award_review": null
+            }
+          },
+          "award_review": {
+            "checked_on": "2026-11-22",
+            "status": "other_entrant_in_judges_report",
+            "label": "Not a named winner in the judges’ report",
+            "source_id": "judges97",
+            "location": "PDF pp. 6–7, printed pp. 91–92, OTHER ENTRANTS continuation",
+            "note": "The preserved official session includes this paper under a collective Winners heading. The later judges’ report places it under Other entrants. Session membership is retained; no individual award is inferred from the session heading."
+          }
         },
         {
           "id": "sc1997-PHANTHIE",
@@ -14466,7 +15480,37 @@
             "Candidate membership and selection title come from the preserved official conference index; the original source is retained offline and has not been re-fetched from a live website. Bibliography only; no new manuscript-performance or award-outcome audit.",
             "Authors follow the previously checked preserved HTML byline. The session index labels winners while the daily program labels finalists; award outcomes remain unresolved.",
             "DOI verified from the IEEE Computer Society article API, which returns this exact title, SC Conference (1997), and the same complete ordered byline as the preserved HTML. Crossref title search did not recover this legacy record. Award-label ambiguity is unchanged."
-          ]
+          ],
+          "historical_metadata_snapshot": {
+            "before_review_on": "2026-11-22",
+            "values": {
+              "award_result": null
+            }
+          },
+          "award_result": {
+            "status": "verified",
+            "label": "Winner — Price/performance",
+            "outcome": "Winner",
+            "category": "Price/performance",
+            "source_id": "judges97",
+            "additional_source_ids": [],
+            "evidence_note": "The judges identify this team as the price/performance winner.",
+            "claims": [
+              {
+                "source_id": "judges97",
+                "outcome": "Winner",
+                "category": "Price/performance",
+                "location": "PDF pp. 1–2 and p. 7; printed pp. 86–87 and 92",
+                "note": "",
+                "recipients": [
+                  "Nhan Phan-Thien",
+                  "Ka Yan Lee",
+                  "David Tullock"
+                ]
+              }
+            ],
+            "checked_on": "2026-11-22"
+          }
         },
         {
           "id": "sc1997-WARREN",
@@ -14490,11 +15534,48 @@
             "Candidate membership and selection title come from the preserved official conference index; the original source is retained offline and has not been re-fetched from a live website. Bibliography only; no new manuscript-performance or award-outcome audit.",
             "Authors follow the previously checked preserved HTML byline. The session index labels winners while the daily program labels finalists; award outcomes remain unresolved.",
             "DOI verified from the IEEE Computer Society article API, which returns this exact title, SC Conference (1997), and the same complete ordered byline as the preserved HTML. Crossref title search did not recover this legacy record. Award-label ambiguity is unchanged."
-          ]
+          ],
+          "historical_metadata_snapshot": {
+            "before_review_on": "2026-11-22",
+            "values": {
+              "award_result": null
+            }
+          },
+          "award_result": {
+            "status": "verified",
+            "label": "Winner — Combined entry",
+            "outcome": "Winner",
+            "category": "Combined performance and price/performance entry",
+            "source_id": "judges97",
+            "additional_source_ids": [
+              "sc16-historical-winners"
+            ],
+            "evidence_note": "One prize recognizes two submissions, represented together by this existing two-part proceedings paper. The two parts are not counted as additional papers or additional prizes.",
+            "claims": [
+              {
+                "source_id": "judges97",
+                "outcome": "Winner, one prize for two submissions",
+                "category": "Combined entry",
+                "location": "PDF p. 1 WINNERS, p. 4 COMBINED ENTRY and p. 7 winner contact",
+                "note": ""
+              },
+              {
+                "source_id": "sc16-historical-winners",
+                "outcome": "First Prize, part 1 and part 2",
+                "category": "Peak Performance; Price/Performance",
+                "location": "1997 section",
+                "note": ""
+              }
+            ],
+            "checked_on": "2026-11-22",
+            "combined_submission_count": 2,
+            "prize_count": 1
+          }
         }
       ],
       "notes": [
-        "Four preserved Gordon Bell session entries; conflicting finalist/winner labels remain unresolved. This is not an independently reconciled award-outcome list."
+        "Four preserved session papers remain indexed. The later judges’ report identifies two award-bearing papers; Attaway and Devine are described under Other entrants. The collective Winners session heading is not an individual award result.",
+        "The Warren proceedings paper represents two submissions combined into one prize. Neither the roster count nor the prize count is increased for its two parts."
       ],
       "verified_doi_count": 4,
       "source_method": "Preserved conference index",
@@ -14505,7 +15586,17 @@
         "website_url": null,
         "year": 1997
       },
-      "detailed_paper_count": 0
+      "detailed_paper_count": 0,
+      "historical_review": {
+        "checked_on": "2026-11-22",
+        "reviewed_record_ids": [
+          "sc1997-PHANTHIE",
+          "sc1997-WARREN",
+          "sc1997-ATTAWAY",
+          "sc1997-DEVINE"
+        ],
+        "note": "Dated award and bibliography review; roster membership and full performance audits remain separate."
+      }
     },
     {
       "year": 1996,
@@ -14552,6 +15643,26 @@
           "local_reference": "歴史一次資料/Makino_2001_Gordon_Bell_press_release.html",
           "source_sha256": "d0a1b621a68ff3987aeba5a8b1ac7d4c75cb8e23e883cdb10569a4641ca9f766",
           "published_on": "2001-12-17"
+        },
+        {
+          "id": "makino1996-certificate",
+          "url": "https://jun-makino.sakura.ne.jp/images/GB96.gif",
+          "label": "1996 Gordon Bell award certificate, recipient-hosted image",
+          "kind": "contemporaneous_award_certificate_recipient_copy",
+          "checked_on": "2026-11-22",
+          "local_reference": "歴史一次資料/GRAPE_Special_20261122/makino96_certificate.gif",
+          "source_sha256": "eb6824f5bd5de2442054d18408144ac3359efbe64cd55592e876eab6b9a3fa60",
+          "competition_year": 1996
+        },
+        {
+          "id": "sc16-historical-winners",
+          "url": "https://sc16.supercomputing.org/2016/08/25/acm-gordon-bell-prize-recognizes-top-accomplishments-running-science-apps-hpc/index.html",
+          "label": "SC16 official historical Gordon Bell winners, published 25 August 2016",
+          "kind": "official_conference_retrospective_award_list",
+          "checked_on": "2026-11-22",
+          "local_reference": "歴史一次資料/GRAPE_Special_20261122/SC16_official_historical_winners.html",
+          "source_sha256": "5ac2c7ed1b80710d8f10d0ec6f911c0a416c5d510db469eee875ba996f588ae4",
+          "published_on": "2016-08-25"
         }
       ],
       "roster_completeness": {
@@ -14585,13 +15696,67 @@
           "title_kind": "publisher_title",
           "award_result": {
             "status": "source_conflict",
-            "label": "Honorable mention — judges’ report; category descriptions differ",
-            "category": "Performance recognition (source conflict)",
+            "label": "Performance — Winner / Honorable Mention conflict",
+            "outcome": "Disputed: Winner / Honorable Mention",
+            "category": "Performance",
             "source_id": "judges96",
             "additional_source_ids": [
+              "makino1996-certificate",
+              "sc16-historical-winners",
               "makino01-author-release"
             ],
-            "evidence_note": "The contemporaneous judges’ report describes an honorable mention; the team’s retrospective 2001 table lists this under Performance. Both are retained."
+            "evidence_note": "The recipient-hosted certificate explicitly says Winner; the contemporaneous judges’ report explicitly says honorable mention. The award level remains disputed. The category is performance; dedicated hardware does not by itself establish a Special-category award.",
+            "claims": [
+              {
+                "source_id": "judges96",
+                "outcome": "Honorable mention",
+                "category": "performance",
+                "location": "PDF p. 1, printed p. 80, RESULTS, GRAPE-4 paragraph",
+                "note": ""
+              },
+              {
+                "source_id": "makino1996-certificate",
+                "outcome": "Winner",
+                "category": "Performance",
+                "location": "Certificate, central award wording",
+                "note": "",
+                "recipients": [
+                  "Toshiyuki Fukushige",
+                  "Junichiro Makino"
+                ]
+              },
+              {
+                "source_id": "sc16-historical-winners",
+                "outcome": "Honorable Mention",
+                "category": "Peak Performance",
+                "location": "1996 section",
+                "note": ""
+              },
+              {
+                "source_id": "makino01-author-release",
+                "outcome": "Listed as a winner",
+                "category": "Performance",
+                "location": "Retrospective 1996 row",
+                "note": ""
+              }
+            ],
+            "checked_on": "2026-11-22",
+            "announcement_date": "1996-11-21"
+          },
+          "historical_metadata_snapshot": {
+            "before_review_on": "2026-11-22",
+            "values": {
+              "award_result": {
+                "status": "source_conflict",
+                "label": "Honorable mention — judges’ report; category descriptions differ",
+                "category": "Performance recognition (source conflict)",
+                "source_id": "judges96",
+                "additional_source_ids": [
+                  "makino01-author-release"
+                ],
+                "evidence_note": "The contemporaneous judges’ report describes an honorable mention; the team’s retrospective 2001 table lists this under Performance. Both are retained."
+              }
+            }
           }
         },
         {
@@ -14613,7 +15778,52 @@
           "notes": [
             "The judges’ report PDF p. 1 identifies the Hoisie–Goedecker–Hutter electronic-structure entry. Its title is recovered separately from publisher metadata.",
             "DOI verified from the successful publisher-deposited Crossref query item, with matching title, authors, venue and year; no individual-work retrieval or PDF-byline audit is claimed."
-          ]
+          ],
+          "historical_metadata_snapshot": {
+            "before_review_on": "2026-11-22",
+            "values": {
+              "award_result": null
+            }
+          },
+          "award_result": {
+            "status": "verified",
+            "label": "Winner — Price/performance",
+            "outcome": "Winner",
+            "category": "Price/performance",
+            "source_id": "judges96",
+            "additional_source_ids": [
+              "sc16-historical-winners"
+            ],
+            "evidence_note": "Named in the contemporaneous result report. Recipient names are separate from the publication byline.",
+            "claims": [
+              {
+                "source_id": "judges96",
+                "outcome": "Prize recipient",
+                "category": "Price/performance",
+                "location": "PDF p. 1, printed p. 80, RESULTS",
+                "note": "",
+                "recipients": [
+                  "Adolfy Hoisie",
+                  "Stefan Goedecker",
+                  "Jurg Hutter"
+                ]
+              },
+              {
+                "source_id": "sc16-historical-winners",
+                "outcome": "First Place",
+                "category": "Price/performance",
+                "location": "1996 section",
+                "note": ""
+              }
+            ],
+            "checked_on": "2026-11-22",
+            "announcement_date": "1996-11-21",
+            "recipients": [
+              "Adolfy Hoisie",
+              "Stefan Goedecker",
+              "Jurg Hutter"
+            ]
+          }
         },
         {
           "id": "SC96-nwt-cascade",
@@ -14629,7 +15839,76 @@
           "publication_url": null,
           "notes": [
             "Editorial description of the Iwamiya–Yoshida–Matsuo–Fukuda–Nakamura competition entry identified on report PDF p. 1. Formal paper title and complete ordered byline remain unverified. A registry title query was rate-limited; no DOI is inferred."
-          ]
+          ],
+          "historical_metadata_snapshot": {
+            "before_review_on": "2026-11-22",
+            "values": {
+              "award_result": null,
+              "bibliography_review": null
+            }
+          },
+          "award_result": {
+            "status": "verified",
+            "label": "Winner — Performance",
+            "outcome": "Winner",
+            "category": "Performance",
+            "source_id": "judges96",
+            "additional_source_ids": [
+              "sc16-historical-winners"
+            ],
+            "evidence_note": "Named in the contemporaneous result report. Recipient names are separate from the publication byline.",
+            "claims": [
+              {
+                "source_id": "judges96",
+                "outcome": "Prize recipient",
+                "category": "Performance",
+                "location": "PDF p. 1, printed p. 80, RESULTS",
+                "note": "",
+                "recipients": [
+                  "Toshiyuki Iwamiya",
+                  "Masahiro Yoshida",
+                  "Yuichi Matsuo",
+                  "Masahiro Fukuda",
+                  "Takashi Nakamura"
+                ]
+              },
+              {
+                "source_id": "sc16-historical-winners",
+                "outcome": "First Place",
+                "category": "Performance",
+                "location": "1996 section",
+                "note": ""
+              }
+            ],
+            "checked_on": "2026-11-22",
+            "announcement_date": "1996-11-21",
+            "recipients": [
+              "Toshiyuki Iwamiya",
+              "Masahiro Yoshida",
+              "Yuichi Matsuo",
+              "Masahiro Fukuda",
+              "Takashi Nakamura"
+            ]
+          },
+          "bibliography_review": {
+            "checked_on": "2026-11-22",
+            "status": "formal_title_and_byline_unresolved",
+            "note": "The judges name the five prize recipients; this is not an audited publication byline. The displayed title remains an editorial description.",
+            "source_ids": [
+              "judges96"
+            ],
+            "performance_audit": "Not performed in this bibliography review",
+            "named_participants": [
+              "Toshiyuki Iwamiya",
+              "Masahiro Yoshida",
+              "Yuichi Matsuo",
+              "Masahiro Fukuda",
+              "Takashi Nakamura"
+            ],
+            "names_kind": "Prize recipients in contemporary judges’ report; not a publication byline",
+            "doi_status": "unresolved",
+            "next_evidence": "SC96 candidate-paper first page or exact official program title, followed by an article-level identifier match."
+          }
         }
       ],
       "notes": [
@@ -14648,7 +15927,16 @@
         "website_url": null,
         "year": 1996
       },
-      "detailed_paper_count": 0
+      "detailed_paper_count": 0,
+      "historical_review": {
+        "checked_on": "2026-11-22",
+        "reviewed_record_ids": [
+          "SC96-grape4-galaxy",
+          "SC96-electronic-structure",
+          "SC96-nwt-cascade"
+        ],
+        "note": "Dated award and bibliography review; roster membership and full performance audits remain separate."
+      }
     },
     {
       "year": 1995,
@@ -14699,6 +15987,26 @@
           "local_reference": "歴史一次資料/Makino_2001_Gordon_Bell_press_release.html",
           "source_sha256": "d0a1b621a68ff3987aeba5a8b1ac7d4c75cb8e23e883cdb10569a4641ca9f766",
           "published_on": "2001-12-17"
+        },
+        {
+          "id": "makino1995-certificate",
+          "url": "https://jun-makino.sakura.ne.jp/images/GordonBell.gif",
+          "label": "1995 Gordon Bell award certificate, recipient-hosted image",
+          "kind": "contemporaneous_award_certificate_recipient_copy",
+          "checked_on": "2026-11-22",
+          "local_reference": "歴史一次資料/GRAPE_Special_20261122/makino95_certificate.gif",
+          "source_sha256": "6dc18065aad185228bfbec68cad04983a9641e34687d4c6a3477eeadd6973ed2",
+          "competition_year": 1995
+        },
+        {
+          "id": "sc16-historical-winners",
+          "url": "https://sc16.supercomputing.org/2016/08/25/acm-gordon-bell-prize-recognizes-top-accomplishments-running-science-apps-hpc/index.html",
+          "label": "SC16 official historical Gordon Bell winners, published 25 August 2016",
+          "kind": "official_conference_retrospective_award_list",
+          "checked_on": "2026-11-22",
+          "local_reference": "歴史一次資料/GRAPE_Special_20261122/SC16_official_historical_winners.html",
+          "source_sha256": "5ac2c7ed1b80710d8f10d0ec6f911c0a416c5d510db469eee875ba996f588ae4",
+          "published_on": "2016-08-25"
         }
       ],
       "roster_completeness": {
@@ -14781,10 +16089,47 @@
           ],
           "award_result": {
             "status": "verified",
-            "label": "Special award — Special-purpose machines",
-            "category": "Special-purpose machines",
-            "source_id": "makino01-author-release",
-            "evidence_note": "Retrospective category table in the team’s 2001 press release; no conference-day score inferred."
+            "label": "Winner — Special-Purpose Machine",
+            "outcome": "Winner",
+            "category": "Special-Purpose Machine",
+            "source_id": "makino1995-certificate",
+            "additional_source_ids": [
+              "sc16-historical-winners"
+            ],
+            "evidence_note": "The certificate supplies the historical singular category wording. This is a category in the original Gordon Bell Prize lineage.",
+            "claims": [
+              {
+                "source_id": "makino1995-certificate",
+                "outcome": "Winner",
+                "category": "Special-Purpose Machine",
+                "location": "Certificate, central award wording",
+                "note": "",
+                "recipients": [
+                  "Junichiro Makino",
+                  "Makoto Taiji"
+                ]
+              },
+              {
+                "source_id": "sc16-historical-winners",
+                "outcome": "First Place",
+                "category": "Special-Purpose Machines",
+                "location": "1995 section",
+                "note": ""
+              }
+            ],
+            "checked_on": "2026-11-22"
+          },
+          "historical_metadata_snapshot": {
+            "before_review_on": "2026-11-22",
+            "values": {
+              "award_result": {
+                "status": "verified",
+                "label": "Special award — Special-purpose machines",
+                "category": "Special-purpose machines",
+                "source_id": "makino01-author-release",
+                "evidence_note": "Retrospective category table in the team’s 2001 press release; no conference-day score inferred."
+              }
+            }
           }
         }
       ],
@@ -14802,7 +16147,14 @@
         "website_url": null,
         "year": 1995
       },
-      "detailed_paper_count": 0
+      "detailed_paper_count": 0,
+      "historical_review": {
+        "checked_on": "2026-11-22",
+        "reviewed_record_ids": [
+          "SC95-grape4"
+        ],
+        "note": "Dated award and bibliography review; roster membership and full performance audits remain separate."
+      }
     },
     {
       "year": 1994,
@@ -14936,7 +16288,24 @@
           "publication_url": null,
           "notes": [
             "Editorial description of the NWT team’s finalist entry, headed by H. Miyoshi in the report. A formal candidate-paper title and ordered paper byline remain unverified."
-          ]
+          ],
+          "historical_metadata_snapshot": {
+            "before_review_on": "2026-11-22",
+            "values": {
+              "bibliography_review": null
+            }
+          },
+          "bibliography_review": {
+            "checked_on": "2026-11-22",
+            "status": "formal_title_and_byline_unresolved",
+            "note": "The contemporary judges’ report describes the NWT award group, but the formal candidate-paper title and ordered publication byline have not been recovered.",
+            "source_ids": [
+              "judges94"
+            ],
+            "performance_audit": "Not performed in this bibliography review",
+            "doi_status": "unresolved",
+            "next_evidence": "SC94 submission/proceedings first page and full ordered author list. Prize-recipient lists are not substituted for a paper byline."
+          }
         }
       ],
       "notes": [
@@ -14953,7 +16322,14 @@
         "website_url": "https://sc94.supercomputing.org/",
         "year": 1994
       },
-      "detailed_paper_count": 0
+      "detailed_paper_count": 0,
+      "historical_review": {
+        "checked_on": "2026-11-22",
+        "reviewed_record_ids": [
+          "SC94-nwt-turbulence"
+        ],
+        "note": "Dated award and bibliography review; roster membership and full performance audits remain separate."
+      }
     },
     {
       "year": 1993,
@@ -15216,7 +16592,25 @@
           "membership_label": "competition entries",
           "year_label": "1990 competition; reported in SC1991 proceedings",
           "event_label": "Gordon Bell Prize Lectures about the 1990 competition",
-          "conference_year": 1991
+          "conference_year": 1991,
+          "historical_metadata_snapshot": {
+            "before_review_on": "2026-11-22",
+            "values": {
+              "bibliography_review": null
+            }
+          },
+          "bibliography_review": {
+            "checked_on": "2026-11-22",
+            "status": "original_submission_doi_unresolved",
+            "note": "The 1992 Journal of Supercomputing paper Parallel superconductor code on the iPSC/860 is related, but its identity with the original 1990 competition submission has not been established.",
+            "source_ids": [
+              "committee_1990_report_sc1991"
+            ],
+            "performance_audit": "Not performed in this bibliography review",
+            "doi_status": "unresolved",
+            "registry_lookup_date": "2026-11-12",
+            "next_evidence": "An original-submission bibliographic citation or author/institutional statement explicitly linking the competition entry to a registered publication."
+          }
         },
         {
           "id": "gb1990-elliptic-grid",
@@ -15301,7 +16695,25 @@
           "membership_label": "competition entries",
           "year_label": "1990 competition; reported in SC1991 proceedings",
           "event_label": "Gordon Bell Prize Lectures about the 1990 competition",
-          "conference_year": 1991
+          "conference_year": 1991,
+          "historical_metadata_snapshot": {
+            "before_review_on": "2026-11-22",
+            "values": {
+              "bibliography_review": null
+            }
+          },
+          "bibliography_review": {
+            "checked_on": "2026-11-22",
+            "status": "original_submission_doi_unresolved",
+            "note": "Related Prolog-book and IEEE Software publications have different titles and publication contexts. Neither has been established as the exact original competition submission.",
+            "source_ids": [
+              "committee_1990_report_sc1991"
+            ],
+            "performance_audit": "Not performed in this bibliography review",
+            "doi_status": "unresolved",
+            "registry_lookup_date": "2026-11-12",
+            "next_evidence": "An original-submission bibliographic citation or author/institutional statement explicitly linking the competition entry to a registered publication."
+          }
         },
         {
           "id": "gb1990-seismic-migration-csm",
@@ -15530,7 +16942,15 @@
         "website_url": null,
         "year": 1991
       },
-      "detailed_paper_count": 0
+      "detailed_paper_count": 0,
+      "historical_review": {
+        "checked_on": "2026-11-22",
+        "reviewed_record_ids": [
+          "gb1990-superconductor",
+          "gb1990-pascal"
+        ],
+        "note": "Dated award and bibliography review; roster membership and full performance audits remain separate."
+      }
     },
     {
       "year": 1988,
@@ -16972,5 +18392,21 @@
     2023,
     2024,
     2025
-  ]
+  ],
+  "historical_metadata_review": {
+    "checked_on": "2026-11-22",
+    "reviewed_records": 34,
+    "missing_bylines_filled": 3,
+    "remaining_missing_publication_bylines": 4,
+    "title_known_unresolved_doi_ids": [
+      "sc2005-pap122",
+      "sc2005-pap260",
+      "sc2005-pap307",
+      "SC01-grape6",
+      "SC98-magnetism",
+      "gb1990-superconductor",
+      "gb1990-pascal"
+    ],
+    "note": "Award recipients, publication authors and performance versions remain separate evidence fields."
+  }
 }
