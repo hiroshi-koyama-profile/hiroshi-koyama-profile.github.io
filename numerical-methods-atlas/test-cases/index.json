@@ -45,6 +45,11 @@
       "id": "approximation",
       "ja": "関数近似・非線形代数方程式",
       "en": "Function approximation and nonlinear algebra"
+    },
+    {
+      "id": "quantum",
+      "ja": "孤立原子・電子状態",
+      "en": "Isolated atoms and electronic structure"
     }
   ],
   "problems": [
@@ -1658,6 +1663,80 @@
       },
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#nonlinear-rational-decay",
       "run_commands": []
+    },
+    {
+      "id": "hydrogenic-atoms",
+      "group": "quantum",
+      "name": {
+        "ja": "水素型原子の動径固有値問題",
+        "en": "Hydrogenic radial eigenproblems"
+      },
+      "chapter": "quantum-atoms",
+      "reading_section": "hydrogenic",
+      "availability": "saved-output",
+      "code_base": "/code/quantum-atoms/2026-11-21/",
+      "verification": "/code/quantum-atoms/2026-11-21/verification.json",
+      "commands": [
+        "python -m pytest -q",
+        "python run.py --input inputs.json --output output --figures"
+      ],
+      "evidence": [
+        {
+          "path": "code/quantum-atoms/2026-11-21/results/results.json",
+          "json_pointer": "/hydrogenic/refinement"
+        },
+        {
+          "path": "code/quantum-atoms/2026-11-21/test_atomic_radial.py",
+          "python_symbol": "test_hydrogenic_refinement_and_normalization"
+        }
+      ],
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-atoms/#hydrogenic",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-atoms/#hydrogenic"
+      },
+      "code_verification": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/verification.json",
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#hydrogenic-atoms",
+      "run_commands": [
+        "python -m pytest -q",
+        "python run.py --input inputs.json --output output --figures"
+      ]
+    },
+    {
+      "id": "helium-ground-state",
+      "group": "quantum",
+      "name": {
+        "ja": "He基底状態：閉殻HF・交換のみLDA",
+        "en": "Helium ground state: closed-shell HF and exchange-only LDA"
+      },
+      "chapter": "quantum-atoms",
+      "reading_section": "helium",
+      "availability": "saved-output",
+      "code_base": "/code/quantum-atoms/2026-11-21/",
+      "verification": "/code/quantum-atoms/2026-11-21/verification.json",
+      "commands": [
+        "python -m pytest -q",
+        "python run.py --input inputs.json --output output --figures"
+      ],
+      "evidence": [
+        {
+          "path": "code/quantum-atoms/2026-11-21/results/results.json",
+          "json_pointer": "/helium/refinement"
+        },
+        {
+          "path": "code/quantum-atoms/2026-11-21/test_atomic_radial.py",
+          "python_symbol": "test_helium_scf_and_independent_reference"
+        }
+      ],
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-atoms/#helium",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-atoms/#helium"
+      },
+      "code_verification": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/verification.json",
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#helium-ground-state",
+      "run_commands": [
+        "python -m pytest -q",
+        "python run.py --input inputs.json --output output --figures"
+      ]
     }
   ],
   "excluded_examples": {
@@ -1666,20 +1745,20 @@
       "参照解ライブラリ18項目：参照評価を重複加算しない",
       "球面格子・接続図：流体計算ではない",
       "基底行列・Fourier記号・分散関係・正値性・幾何保存則等の局所検査：独立した問題数にはしない",
-      "AMR・並列化・混合精度、予定中のサーモスタット・DFT等"
+      "AMR・並列化・混合精度、予定中のサーモスタット、未実装の量子化学・DFTの拡張"
     ],
     "en": [
       "22 biological entries: literature surveys",
       "18 reference-library entries: do not add reference evaluations again",
       "Spherical and connectivity diagrams: no flow solve",
       "Local basis-matrix, Fourier-symbol, dispersion, positivity and geometric-conservation checks: not separate problems",
-      "AMR, parallelization, mixed precision, and planned thermostats/DFT"
+      "AMR, parallelization, mixed precision, planned thermostats and unimplemented quantum/DFT extensions"
     ]
   },
   "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/",
   "counts": {
-    "test_problems": 58,
-    "saved_test_problems": 58,
+    "test_problems": 60,
+    "saved_test_problems": 60,
     "code_test_problems": 0,
     "groups": {
       "transport": 8,
@@ -1689,11 +1768,12 @@
       "elliptic": 13,
       "gravity": 5,
       "time": 6,
-      "approximation": 3
+      "approximation": 3,
+      "quantum": 2
     }
   },
   "source_sha256": {
-    "catalog/atlas-test-problems.json": "9c78a3220361eabf6fcbbedd07e974f97c313cf67db6a90ade776213562d04b4",
+    "catalog/atlas-test-problems.json": "5af986b0924549d3de7e758be9d9919672ec5e958d3dc77b59a9a10431feef5f",
     "numerical-methods-atlas/equation-gallery.json": "e99af38238a50232f92875817c4556ab6c730289db13014efdd41913096c902e",
     "numerical-methods-atlas/cip.json": "3aa33fbffad6b9ad76310e9b713629a1a35b4e30e419db0c531180cf769e6b6f",
     "numerical-methods-atlas/limiters.json": "3242180ba171420220fd349cac93dff552466070f886f3d00a70927939255312",
@@ -1706,7 +1786,7 @@
     "numerical-methods-atlas/assets/lax-entropy.png": "468467f127f5d7e5c151e5714a9545360c7dc3eef1548ae9155396d5f19aa8fa",
     "code/numerical-methods-atlas/2026-11-21/tests/test_numerics.py": "4ad61ac54dfa59d7d61959c5699f290e2386c23bf5b4b930a5d98576feaa54d1",
     "code/numerical-methods-atlas/2026-11-21/tests/test_reference_solutions.py": "3012e675a09cc33b2d4abe3a304622f5fc3d6be02271c695b7921291d901444e",
-    "numerical-methods-atlas/gallery/calculations.json": "877ba403f68c67a337cf45f7158a5404758d03e61657f701a545fbf14f8a65a4",
+    "numerical-methods-atlas/gallery/calculations.json": "d98cd75e1c58177bfc716e8b68d6bfba1358d5135ac8e2ee0989eb3df77942a6",
     "numerical-methods-atlas/assets/double-mach-run.json": "4596fdd6b2b6fcc0da80181bcc48b13a80e605e618bde265fbf5f6abb9c1be0a",
     "numerical-methods-atlas/assets/movies/shock-catalog.json": "5ae9a49aa23b2f5a735247acbbe9a16371404ceec0be2fb951664658af61c5bf",
     "numerical-methods-atlas/assets/shock-gallery.json": "ce84e5fa7f6414e2f1cd4eeacdbd7dba60cfd048dfc3b4bdd72ec463bb592e64",
@@ -1730,7 +1810,9 @@
     "numerical-methods-atlas/hamiltonian.json": "530c74ca27962b28579d90de47bc3d42df5d4ef1ad90d9e7606a64772c638203",
     "code/numerical-methods-atlas/2026-11-21/tests/test_runge_kutta.py": "920a5eb560afe7f560cae8d22f879f125851f4ee0451b24720d0eca0082c31ce",
     "numerical-methods-atlas/basis.json": "13bac5be15b5a43e7a103120e225fb15388650ae4de66aa731b4e324a8525651",
-    "numerical-methods-atlas/runge-kutta.json": "e2f5f1484a8d3edf1bb5511d4f237de20615ddad4103d1277f34f7357ae9d501"
+    "numerical-methods-atlas/runge-kutta.json": "e2f5f1484a8d3edf1bb5511d4f237de20615ddad4103d1277f34f7357ae9d501",
+    "code/quantum-atoms/2026-11-21/results/results.json": "953896b55df923dcbf13ced8fdb60b699918597cded8e986807b241f1192e739",
+    "code/quantum-atoms/2026-11-21/test_atomic_radial.py": "2c2d56fd93664109ab11aae68b2836dc952bc0beb363901c78e314c6698b48fa"
   },
   "code_edition": "2026-11-21",
   "code_verification": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/verification.json"

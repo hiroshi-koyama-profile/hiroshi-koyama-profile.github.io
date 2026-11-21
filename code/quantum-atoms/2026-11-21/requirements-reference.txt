@@ -1,0 +1,4 @@
+-r requirements.txt
+pyscf==2.11.0
+h5py==3.16.0
+setuptools==84.2.1

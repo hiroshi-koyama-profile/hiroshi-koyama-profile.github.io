@@ -13,7 +13,7 @@
     "ja": "1電子の問題から離散化と固有値・固有関数の誤差を調べる。",
     "en": "Start with one-electron discretization, eigenvalues and eigenfunctions."
   },
-  "status": "reading-only",
+  "status": "educational-example",
   "origin": "curated-quantum-reading",
   "reading": {
     "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#schrodinger",
@@ -38,21 +38,22 @@
     }
   ],
   "assumptions": [
-    "Introductory formulation and comparison, not a verified executable solver.",
-    "Representative electronic-structure formulas use nonrelativistic Born–Oppenheimer theory unless the section explicitly states otherwise."
+    "Nonrelativistic isolated atom; infinite-mass point nucleus.",
+    "Reduced radial orbitals on a second-order uniform finite-difference grid.",
+    "He is restricted to a closed-shell spherical 1s² state; both HF and LDA_X omit correlation."
   ],
   "units": "Atomic units in the displayed electronic equations (hbar = m_e = e = 4 pi epsilon_0 = 1); dimensionless conventions are stated where needed.",
-  "boundary_conditions": "Isolated or periodic conditions must be selected for each physical system; no numerical boundary-value example is published here yet.",
+  "boundary_conditions": "u(0)=u(r_max)=0; hydrogenic r_max=60 bohr, He r_max=16 bohr, with separate domain studies.",
   "next_deliverable": {
     "ja": "調和振動子・水素型原子で領域と格子の誤差を分離。",
     "en": "Separate domain and resolution errors for oscillator and hydrogenic models."
   },
   "limitations": {
-    "ja": "日英の導入・代表式・一次文献を公開。専用の実装・数値検証はUnder construction。核運動、相対論、スピン軌道相互作用、外場はこの代表式に含めません。固有値の残差が小さくても、領域・基底の誤差は残ります。",
-    "en": "Introductory bilingual reading, representative equations and primary references are available. No dedicated implementation or numerical verification result is provided yet. Nuclear dynamics, relativity, spin–orbit coupling and external fields are outside this representative Hamiltonian. A small eigenpair residual does not establish domain or basis convergence."
+    "ja": "孤立水素型原子の1s・2s・2p・3dを一様動径格子で検証。多電子Schrödinger方程式全体の直接解法ではありません。",
+    "en": "Uniform radial-grid tests of isolated hydrogenic 1s, 2s, 2p and 3d states; not a direct general many-electron Schrödinger solver."
   },
   "metadata_review": {
-    "level": "curated introductory formulation with primary publication and official-documentation entry points; full derivation audit and numerical examples pending",
+    "level": "scoped radial educational implementation; analytic and independently computed PySCF reference checks; see separate quantum-atoms code edition",
     "on": "2026-11-21"
   },
   "aliases": [
@@ -61,22 +62,59 @@
     "electronic Hamiltonian"
   ],
   "assumptions_ja": [
-    "定式化と比較の導入解説であり、実行・検証済みソルバーではありません。",
-    "代表式は、各節に別記する場合を除き非相対論・Born–Oppenheimerの電子状態問題を想定します。"
+    "非相対論・孤立原子・無限質量の点核。",
+    "一様動径格子と2次中心差分による縮約動径軌道。",
+    "Heは閉殻・球対称1s²に限定し、HFとLDA_Xともに相関を含まない。"
   ],
   "units_ja": "表示する電子状態の式は原子単位系（ℏ = m_e = e = 4πε₀ = 1）。無次元量や占有の規約は各節に明記。",
-  "boundary_conditions_ja": "孤立・周期を対象系ごとに選ぶ必要があります。この導入には実行済みの境界値計算例はまだありません。",
+  "boundary_conditions_ja": "u(0)=u(r_max)=0。水素型はr_max=60 bohr、Heは16 bohrを基本に領域依存を別途検査。",
   "caution": {
     "ja": "核運動、相対論、スピン軌道相互作用、外場はこの代表式に含めません。固有値の残差が小さくても、領域・基底の誤差は残ります。",
     "en": "Nuclear dynamics, relativity, spin–orbit coupling and external fields are outside this representative Hamiltonian. A small eigenpair residual does not establish domain or basis convergence."
   },
+  "quantum_examples": [
+    "hydrogenic-atoms"
+  ],
+  "example_scope": {
+    "ja": "孤立水素型原子の1s・2s・2p・3dを一様動径格子で検証。多電子Schrödinger方程式全体の直接解法ではありません。",
+    "en": "Uniform radial-grid tests of isolated hydrogenic 1s, 2s, 2p and 3d states; not a direct general many-electron Schrödinger solver."
+  },
   "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/schrodinger/",
   "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/schrodinger/index.json",
   "markdown_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/schrodinger/index.md",
-  "code_urls": [],
-  "test_urls": [],
-  "run_commands": [],
-  "run_from": null,
-  "code_base": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/",
-  "code_edition": null
+  "code_urls": [
+    "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/atomic_radial.py",
+    "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/run.py"
+  ],
+  "test_urls": [
+    "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/test_atomic_radial.py"
+  ],
+  "run_commands": [
+    "python -m pytest -q",
+    "python run.py --input inputs.json --output output --figures"
+  ],
+  "run_from": "Extracted quantum-atoms edition directory",
+  "code_base": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/",
+  "code_edition": "2026-11-21",
+  "code_verification": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/verification.json",
+  "code_download": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/quantum-atoms-2026-11-21.zip",
+  "inputs": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/inputs.json",
+  "results": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/results/results.json",
+  "independent_reference": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/reference-pyscf.json",
+  "code_examples": [
+    {
+      "id": "hydrogenic-atoms",
+      "section": "hydrogenic",
+      "name": {
+        "ja": "水素型原子の動径固有値問題",
+        "en": "Hydrogenic radial eigenproblems"
+      },
+      "result_pointer": "/hydrogenic/refinement",
+      "figure": "hydrogenic.png",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-atoms/#hydrogenic",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-atoms/#hydrogenic"
+      }
+    }
+  ]
 }

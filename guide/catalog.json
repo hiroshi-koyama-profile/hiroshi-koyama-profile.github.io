@@ -11,8 +11,8 @@
       "en": "Equations, discretization, implementation and benchmarks: shocks, fluids, Poisson, time integration, particle methods and finite elements."
     },
     "scope": {
-      "ja": "教育用実装・限定的な検証・文献調査・開発予定が混在。各章の範囲を確認。量子化学・HF・DFTは日英の導入解説を公開、専用実装と数値検証は未提供。",
-      "en": "Includes scoped educational implementations, verification, reading and plans. Quantum chemistry, HF and DFT have bilingual introductory readings but no dedicated implementation or numerical verification yet."
+      "ja": "教育用実装・限定的な検証・文献調査・開発予定が混在。量子化学には水素型原子と球対称Heの閉殻HF・交換のみLDAの検証例がある。分子・周期系の専用例は未公開。",
+      "en": "Contains scoped educational implementations, validation, reading and plans. Quantum examples cover hydrogenic atoms and spherical-helium closed-shell HF / exchange-only LDA; molecular and periodic examples are not supplied yet."
     },
     "keywords": "数値計算 アルゴリズム 計算 解法 numerical algorithm simulation 量子化学 DFT Hartree-Fock Kohn-Sham electronic structure"
   },

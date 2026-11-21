@@ -54,9 +54,10 @@ for x in public['problems']:
     x['reading']={}
     for lang in ['ja','en']:
         available=lang if (ATLAS/lang/'read'/x['chapter']/'index.html').is_file() else 'en'
-        x['reading'][lang]=ORIGIN+f'/numerical-methods-atlas/{available}/read/'+x['chapter']+'/'
+        x['reading'][lang]=ORIGIN+f'/numerical-methods-atlas/{available}/read/'+x['chapter']+'/'+('#'+x['reading_section'] if x.get('reading_section') else '')
+    if x.get('code_base'):x['code_verification']=ORIGIN+x['code_base']+'verification.json'
     x['url']=ORIGIN+ROUTE+'#'+x['id']
-    x['run_commands']=['python -m pytest -q tests/'+Path(e['path']).name+' -k '+e['python_symbol'] for e in x['evidence'] if 'python_symbol' in e]
+    x['run_commands']=x.get('commands') or ['python -m pytest -q tests/'+Path(e['path']).name+' -k '+e['python_symbol'] for e in x['evidence'] if 'python_symbol' in e]
 dest=ROOT/ROUTE.lstrip('/');dest.mkdir(parents=True,exist_ok=True)
 (dest/'index.json').write_text(json.dumps(public,ensure_ascii=False,indent=2)+'\n')
 esc=html.escape
@@ -74,7 +75,7 @@ for lang in ['ja','en']:
     body+='<p class="resource-summary">'+(status_ja if ja else status_en)+'</p>'
     body+='<nav class="resource-nav">'+link('/numerical-methods-atlas/','アトラスの冒頭' if ja else 'Atlas home')+link('/numerical-methods-atlas/gallery/?lang='+lang,'画像ギャラリー' if ja else 'Computed gallery')+link('/numerical-methods-atlas/code-and-data/','コード・実行手順' if ja else 'Code and run instructions')+link('index.json','問題台帳 / JSON' if ja else 'Problem inventory / JSON')+'</nav>'
     body+='<h2>'+('数え方' if ja else 'Counting rules')+'</h2><p>'+esc(data['policy'][lang])+'</p>'
-    body+='<p>'+('既存の波形テスト9ケースはこの総数に含みます。自動検査411件の件数、画像数、実行回数とは別です。各問題の適用範囲と失敗例はリンク先に残しており、すべての手法がすべての問題を解けるという意味ではありません。保存データの再集計に加え、9問題は公開コードを固定条件で実行して結果と画像を追加しました。全問題の再実行ではありません。' if ja else 'The nine wave-profile cases are included in this total. Problems are distinct from the 411 automated checks, images and solver runs. Linked sources retain method-specific scope and failure cases; not every method solves every problem. The existing material is recounted, and nine problems have new fixed-input public-code runs with saved results and images. This is not a full numerical rerun.')+'</p>'
+    body+='<p>'+('既存の波形テスト9ケースはこの総数に含みます。従来配布版の自動検査411件と原子計算版の23件の件数、画像数、実行回数とは別です。各問題の適用範囲と失敗例はリンク先に残しており、すべての手法がすべての問題を解けるという意味ではありません。保存データの再集計に加え、9問題は公開コードを固定条件で実行して結果と画像を追加しました。さらに水素型原子・Heの2問題群を実行し、独立参照と照合しました。全問題の再実行ではありません。' if ja else 'The nine wave-profile cases are included in this total. Problems are distinct from the original edition’s 411 automated checks and the atomic edition’s 23 checks, images and solver runs. Linked sources retain method-specific scope and failure cases; not every method solves every problem. The existing material is recounted, and nine problems have new fixed-input public-code runs with saved results and images. Two additional atomic problem families were executed and checked against independent references. This is not a full numerical rerun.')+'</p>'
     body+='<nav class="resource-nav">'+''.join(link('#'+g['id']+'-'+lang,g[lang]+' ('+str(counts[g['id']])+')') for g in data['groups'])+'</nav>'
     for g in data['groups']:
         body+='<section><h2 id="'+g['id']+'-'+lang+'">'+esc(g[lang])+' — '+str(counts[g['id']])+'</h2><ul class="method-list">'

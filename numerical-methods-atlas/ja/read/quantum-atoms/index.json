@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "edition": "2026-11-21",
+  "code_base": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/",
+  "archive": "quantum-atoms-2026-11-21.zip",
+  "reading_chapter": "quantum-atoms",
+  "status": "verified-educational-examples",
+  "cases": [
+    {
+      "id": "hydrogenic-atoms",
+      "section": "hydrogenic",
+      "name": {
+        "ja": "水素型原子の動径固有値問題",
+        "en": "Hydrogenic radial eigenproblems"
+      },
+      "result_pointer": "/hydrogenic/refinement",
+      "figure": "hydrogenic.png",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-atoms/#hydrogenic",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-atoms/#hydrogenic"
+      }
+    },
+    {
+      "id": "helium-ground-state",
+      "section": "helium",
+      "name": {
+        "ja": "He基底状態：閉殻HF・交換のみLDA",
+        "en": "Helium ground state: closed-shell HF and exchange-only LDA"
+      },
+      "result_pointer": "/helium/refinement",
+      "figure": "helium.png",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-atoms/#helium",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-atoms/#helium"
+      }
+    }
+  ],
+  "scope": {
+    "ja": "孤立・非相対論・無限核質量の水素型原子と、球対称1s² HeのHF・交換のみLDA。一般の分子・周期・多電子ソルバーではありません。",
+    "en": "Isolated nonrelativistic infinite-nuclear-mass hydrogenic atoms and spherical 1s² helium HF / exchange-only LDA. Not a general molecular, periodic or many-electron solver."
+  },
+  "run_command": "python run.py --input inputs.json --output output --figures",
+  "test_command": "python -m pytest -q",
+  "independent_reference_command": "python reference_pyscf.py --input inputs.json --output new-reference.json",
+  "download": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/quantum-atoms-2026-11-21.zip",
+  "results": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/results/results.json",
+  "independent_reference": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/reference-pyscf.json",
+  "source_manifest": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/source-manifest.json",
+  "verification": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/verification.json",
+  "archive_sha256": "f81c61b854e68b9750d960a17a133ee9a00ae7bd0c3ee268263caee626cf44c9",
+  "tests_passed": 23,
+  "checks": {
+    "hydrogenic_exact_energy_errors_reduce": true,
+    "hydrogenic_normalization": true,
+    "hydrogenic_eigen_residual": true,
+    "helium_scf_converged": true,
+    "helium_electron_count": true,
+    "helium_energy_identity": true,
+    "independent_extrapolated_energies": true,
+    "independent_density_profiles": true,
+    "expected_failures_reported": true,
+    "independent_basis_refinement": true
+  }
+}

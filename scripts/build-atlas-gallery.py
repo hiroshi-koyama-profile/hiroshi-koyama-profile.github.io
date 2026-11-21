@@ -79,7 +79,7 @@ for lang in ['ja', 'en']:
     for g in inventory['groups']:
         body += '<button type="button" data-gallery-group="' + g['id'] + '" aria-pressed="false">' + esc(g[lang]) + ' (' + str(counts[g['id']]) + ')</button>'
     body += '</div><p class="gallery-count" data-gallery-count role="status" aria-live="polite">' + (f'{len(ids)} / {len(ids)} 問題を表示' if ja else f'Showing {len(ids)} of {len(ids)} problems') + '</p></div>'
-    body += '<p class="gallery-note">' + ('58は手法・格子・刻み違いを統合した問題数です。解の画像に加え、誤差・残差・収束の図も含みます。複数問題の共有図は説明に明記しています。9問題は公開コードを固定条件で新たに実行しました。' if ja else 'The 58 problems merge method, grid and time-step variants. Visuals include solutions, errors, residuals and convergence. Captions identify shared figures. Nine problems have new fixed-input runs of the public code.') + '</p><ul class="gallery-grid">'
+    body += '<p class="gallery-note">' + (f'{len(ids)}は手法・格子・刻み違いを統合した問題数です。解の画像に加え、誤差・残差・収束の図も含みます。複数問題の共有図は説明に明記しています。9問題の追加計算に加え、原子計算2問題群も別配布版で実行・検証しています。' if ja else f'The {len(ids)} problems merge method, grid and time-step variants. Visuals include solutions, errors, residuals and convergence. Captions identify shared figures. Nine preview problems have new fixed-input runs; two atomic problem families also have a separately verified code edition.') + '</p><ul class="gallery-grid">'
     for x in items:
         search = ' '.join([x['id'], *x['name'].values(), *groups[x['group']].values(), *x['caption'].values(), x['chapter']])
         reading = x['reading'][lang]
@@ -95,6 +95,7 @@ for lang in ['ja', 'en']:
 doc = '<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title data-page-title-ja="絵から探す：58のテスト計算 | 数値計算法アトラス" data-page-title-en="Browse 58 test problems by picture | Numerical Methods Atlas">絵から探す：58のテスト計算 | 数値計算法アトラス</title><meta name="description" content="数値計算法アトラス全58問題の画像一覧。波形、衝撃波、渦、重力、Poisson問題、時間積分、関数近似から解説へ。A visual index of all 58 numerical test problems."><link rel="canonical" href="' + ORIGIN + ROUTE + '">'
 for style in ['atlas-resources', 'atlas-gallery']:
     doc += '<link rel="stylesheet" href="/styles/' + style + '.css?v=' + sha(ROOT / 'styles' / (style + '.css'))[:12] + '">'
+doc=doc.replace('58',str(len(ids)))
 doc += '<script type="module" src="/atlas-gallery.mjs?v=' + sha(ROOT / 'atlas-gallery.mjs')[:12] + '"></script></head><body class="profile-page"><main id="main" class="profile-main atlas-resource-main atlas-gallery-main">' + ''.join(sections) + '</main></body></html>\n'
 (DEST / 'index.html').write_text(doc)
 (DEST / 'index.json').write_text(json.dumps({'schema_version': 1, 'url': ORIGIN + ROUTE, 'reviewed_on': mapping['reviewed_on'], 'scope': mapping['scope'], 'counts': {'test_problems': len(ids), 'groups': dict(counts), 'visual_sources': dict(Counter(x['source_kind'] for x in items))}, 'items': items, 'source_sha256': receipts}, ensure_ascii=False, indent=2) + '\n')
@@ -121,5 +122,5 @@ if ORIGIN + ROUTE not in {x.text for x in xml.getroot().findall('.//{*}loc')}:
 ET.register_namespace('', ns[1:-1]); xml.write(path, encoding='utf-8', xml_declaration=True)
 guide = ROOT / 'llms.txt'
 lines = [x for x in guide.read_text().splitlines() if not x.startswith('- [Atlas-wide visual test index]')]
-guide.write_text('\n'.join(lines).rstrip() + '\n- [Atlas-wide visual test index](' + ORIGIN + ROUTE + '): all 58 independent problems, one mapped visual each, bilingual readings, source receipts and JSON. Shared figures and newly computed results are labeled.\n')
+guide.write_text('\n'.join(lines).rstrip() + '\n- [Atlas-wide visual test index](' + ORIGIN + ROUTE + '): all ' + str(len(ids)) + ' independent problems, one mapped visual each, bilingual readings, source receipts and JSON. Shared figures and newly computed results are labeled.\n')
 print('Built complete visual index:', len(ids), 'problems.')

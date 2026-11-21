@@ -7,6 +7,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 for command in [
     [sys.executable, 'scripts/build-public-resources.py'],
+    [sys.executable, 'scripts/build-quantum-examples.py'],
     [sys.executable, 'scripts/build-atlas-quantum.py'],
     [sys.executable, 'scripts/build-atlas-resources.py'],
     [sys.executable, 'scripts/build-thermostat-reading.py'],

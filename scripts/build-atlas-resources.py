@@ -37,6 +37,13 @@ archive_mb=f'{(release/archive).stat().st_size/1_000_000:.1f}'
 assert verification['failures']==verification['errors']==0
 for name,digest in manifest['files'].items():
     assert hashlib.sha256((release/name).read_bytes()).hexdigest()==digest,name
+ATOMS=json.loads((ROOT/'catalog/atlas-quantum-examples.json').read_text())
+ACODE=ATOMS['code_base']
+ABASE=ROOT/ACODE.lstrip('/')
+AVER=json.loads((ABASE/'verification.json').read_text())
+AHASH=hashlib.sha256((ABASE/ATOMS['archive']).read_bytes()).hexdigest()
+assert AHASH==AVER['archive_sha256'] and AVER['failures']==AVER['errors']==0
+ACASES={x['id']:x for x in ATOMS['cases']}
 esc=html.escape
 STATUS={'educational-example':{'ja':'教育用例・関連コードあり','en':'Educational example / related code'},'reading-only':{'ja':'解説あり・専用実装なし','en':'Reading only / no dedicated implementation'},'planned':{'ja':'Under construction / 収録予定','en':'Under construction / planned'}}
 def status(x,lang):
@@ -58,13 +65,16 @@ def nav(lang):
     return '<nav class="resource-nav" aria-label="Atlas resources">'+''.join(link(u,l) for u,l in zip(['/numerical-methods-atlas/methods/','/numerical-methods-atlas/code-and-data/',f'/numerical-methods-atlas/{lang}/read/'],labels))+'</nav>'
 def public_record(x):
     url=ORIGIN+'/numerical-methods-atlas/methods/'+x['id']+'/'
-    return {**x,'url':url,'json_url':url+'index.json','markdown_url':url+'index.md',
+    record={**x,'url':url,'json_url':url+'index.json','markdown_url':url+'index.md',
             'reading':{lang:ORIGIN+path for lang,path in x['reading'].items()},
             'code_urls':[ORIGIN+CODE+'numart/'+name+'.py' for name in x['code_modules']],
             'test_urls':[ORIGIN+CODE+'tests/'+name+'.py' for name in x['test_files']],
             'run_commands':['python -m pytest -q '+' '.join('tests/'+name+'.py' for name in x['test_files'])] if x['test_files'] else [],
             'run_from':'Extracted code edition directory' if x['code_modules'] else None,
             'code_base':ORIGIN+CODE,'code_edition':EDITION if x['code_modules'] else None}
+    if x.get('quantum_examples'):
+        record.update(code_urls=[ORIGIN+ACODE+f for f in ['atomic_radial.py','run.py']],test_urls=[ORIGIN+ACODE+'test_atomic_radial.py'],run_commands=[ATOMS['test_command'],ATOMS['run_command']],run_from='Extracted quantum-atoms edition directory',code_base=ORIGIN+ACODE,code_edition=ATOMS['edition'],code_verification=ORIGIN+ACODE+'verification.json',code_download=ORIGIN+ACODE+ATOMS['archive'],inputs=ORIGIN+ACODE+'inputs.json',results=ORIGIN+ACODE+'results/results.json',independent_reference=ORIGIN+ACODE+'reference-pyscf.json',code_examples=[{**ACASES[i],'reading':{l:ORIGIN+f'/numerical-methods-atlas/{l}/read/quantum-atoms/#{ACASES[i]["section"]}' for l in ['ja','en']}} for i in x['quantum_examples']])
+    return record
 
 sections=[]
 for lang in ['ja','en']:
@@ -110,6 +120,11 @@ for x in METHODS:
             body+=''.join('<li>'+link(CODE+'numart/'+name+'.py','numart/'+name+'.py')+'</li>' for name in x['code_modules'])
             body+=''.join('<li>'+link(CODE+'tests/'+name+'.py','tests/'+name+'.py')+'</li>' for name in x['test_files'])+'</ul><p>'+link('/numerical-methods-atlas/code-and-data/','一式の取得と実行手順' if ja else 'Download the complete edition and run it')+'</p>'
             if x['test_files']:body+='<pre><code>python -m pytest -q '+' '.join('tests/'+name+'.py' for name in x['test_files'])+'</code></pre>'
+        if x.get('quantum_examples'):
+            body+='<h2>'+('実行できる原子計算例' if ja else 'Runnable atomic examples')+'</h2><p>'+esc(x['example_scope'][lang])+'</p><ul>'
+            for ident in x['quantum_examples']:
+                c=ACASES[ident];body+='<li>'+link(f'/numerical-methods-atlas/{lang}/read/quantum-atoms/#{c["section"]}',c['name'][lang])+'</li>'
+            body+='</ul><p>'+link(ACODE+ATOMS['archive'],'コード・入力・結果 ZIP' if ja else 'Code, inputs and results ZIP')+' · '+link(ACODE+'verification.json','独立展開の検証記録' if ja else 'Independent-extraction verification')+'</p><p>'+link(ACODE+'atomic_radial.py','Python solver')+' · '+link(ACODE+'test_atomic_radial.py','Tests')+' · '+link(ACODE+'inputs.json','Inputs JSON')+' · '+link(ACODE+'results/results.json','Results JSON')+' · '+link(ACODE+'reference-pyscf.json','Independent reference JSON')+'</p><pre><code>'+esc(ATOMS['test_command']+'\n'+ATOMS['run_command'])+'</code></pre>'
         if x.get('example'):
             example=x['example']
             body+='<h2>'+('固定入力から計算する' if ja else 'Run an explicit input')+'</h2><p>'+('192粒子の座標・質量を保存した入力を使い、ツリーと直接和の力を計算します。出力は誤差と検査を記録するJSON、粒子ごとの力を記録するCSVです。' if ja else 'Use explicit positions and masses for 192 particles. Compute tree and direct-sum forces, then export error/check records as JSON and particle forces as CSV.')+'</p><p>'+link(example['input'],'入力 / Input JSON')+' · '+link(example['runner'],'実行コード / Runner')+' · '+link(example['reference'],'参照出力 / Reference JSON')+' · '+link(example['forces'],'力のデータ / Force CSV')+'</p><pre><code>'+esc(example['command'])+'</code></pre>'
@@ -132,6 +147,7 @@ for x in METHODS:
     md+='\n'.join('- Reading ('+lang+'): '+ORIGIN+u for lang,u in x['reading'].items())+'\n\n'
     md+='\n'.join('- Code: '+ORIGIN+CODE+'numart/'+name+'.py' for name in x['code_modules'])+'\n\n'
     md+='\n'.join('- Reference: '+r['url']+' — '+r['scope'] for r in x['references'])+'\n\n'
+    if x.get('quantum_examples'):md+='Scoped example: '+x['example_scope']['en']+'\n\n'+json.dumps(record['code_examples'],ensure_ascii=False,indent=2)+'\n\nDownload: '+record['code_download']+'\nVerification: '+record['code_verification']+'\nSource: '+record['code_urls'][0]+'\nResults: '+record['results']+'\nCommands (from extracted atomic edition):\n\n'+ '\n'.join(record['run_commands'])+'\n\n'
     if x.get('next_deliverable'):md+='Next: '+x['next_deliverable']['en']+'\n\n'
     if x.get('example'):md+='Runnable example:\n\n'+json.dumps(x['example'],ensure_ascii=False,indent=2)+'\n\n'
     md+='Source: '+ORIGIN+url+'\nEdition and terms: '+ORIGIN+'/numerical-methods-atlas/code-and-data/\n'
@@ -141,6 +157,7 @@ sections=[]
 for lang in ['ja','en']:
     ja=lang=='ja'
     body='<section data-site-language="'+lang+'" lang="'+lang+'"><p class="eyebrow">CODE EDITION '+EDITION+'</p><h1>'+('コード・入力・検証を取得する' if ja else 'Get code, inputs and verification')+'</h1><p class="intro">'+(f'{module_count}個のPythonモジュール、{test_count}個の検査ファイル、検査に必要な保存データをまとめた教育用配布版です。認証なしで取得できます。' if ja else f'An educational edition with {module_count} Python modules, {test_count} test files and the stored data required by the tests. No authentication is needed.')+'</p>'+nav(lang)
+    body+='<aside class="resource-summary"><h2>'+('新しい原子計算の配布版' if ja else 'Separate atomic calculation edition')+'</h2><p>'+esc(ATOMS['scope'][lang])+'</p><p>'+link(f'/numerical-methods-atlas/{lang}/read/quantum-atoms/','水素型原子・Heの結果と実行手順' if ja else 'Hydrogenic/He results and reproduction')+' · '+link(ACODE+ATOMS['archive'],'Quantum atoms ZIP')+' · '+link(ACODE+'verification.json',str(AVER['passed'])+' checks passed / verification')+'</p></aside>'
     body+='<p>'+link(CODE+archive,f'コード一式を取得 / ZIP（約{archive_mb} MB）' if ja else f'Download code edition / ZIP (about {archive_mb} MB)')+' · '+link(CODE+'source-manifest.json','ファイル目録・SHA-256 / Manifest')+' · '+link(CODE+'verification.json','実行した検証の記録 / Verification')+'</p>'
     body+='<h2>'+('実行する' if ja else 'Run the examples')+'</h2><p>'+('ZIPを展開し、そのフォルダでPythonの仮想環境を作成・有効化してから実行してください。Python 3.12で配布版を検証しました。' if ja else 'Extract the ZIP, create and activate a Python virtual environment, then run these commands from the extracted folder. The edition was checked with Python 3.12.')+'</p><pre><code>python -m pip install -r requirements.txt\npython -m pytest -q\npython -m numart.cli --help</code></pre>'
     body+='<p>'+('小さな重力の検査から始める場合：' if ja else 'Start with a small gravity check:')+'</p><pre><code>python -m pytest -q tests/test_particle_gravity.py</code></pre>'
@@ -190,7 +207,8 @@ block=f'''\n## Method records and executable code
 - [Code, inputs and verification]({ORIGIN}/numerical-methods-atlas/code-and-data/): Public ZIP, file hashes, dependencies and standalone verification. Original implementation code is MIT within its scope; datasets and content retain separate terms.
 - [Code edition manifest]({ORIGIN}{CODE}source-manifest.json): Direct file URLs are the public_base_url plus each listed path. The archive contains no Git history or private manuscripts.
 - [Code edition verification]({ORIGIN}{CODE}verification.json): {verification['passed']} passed, {verification['skipped']} intentionally inapplicable cases skipped in an independent extraction. No Ewald/PME/SPME or DFT implementation is included in this edition.
-- [Quantum chemistry and DFT]({ORIGIN}/numerical-methods-atlas/en/read/quantum-chemistry/): {sum(x['group']['id']=='quantum' for x in METHODS)} bilingual introductory topics, primary references, representative formulas and explicit planned checks; no dedicated numerical solver yet. Canonical text and references: /catalog/atlas-quantum.json. Atlas-based specialist AI is deferred to 2027 or later in /catalog/atlas-work-queue.json.
+- [Runnable atomic examples]({ORIGIN}/numerical-methods-atlas/en/read/quantum-atoms/): two hydrogenic/He problem families, {AVER["passed"]} independently extracted package checks passed; code, fixed inputs, CSV profiles, SCF histories and PySCF reference results. [Atomic source manifest]({ORIGIN}{ACODE}source-manifest.json) and [verification]({ORIGIN}{ACODE}verification.json). Only spherical 1s² HF and Dirac exchange-only LDA for He; not general molecular or periodic DFT.
+- [Quantum chemistry and DFT]({ORIGIN}/numerical-methods-atlas/en/read/quantum-chemistry/): {sum(x['group']['id']=='quantum' for x in METHODS)} bilingual introductory topics, primary references, representative formulas and scoped hydrogenic/helium calculations and explicitly pending molecular/periodic checks. Canonical text and references: /catalog/atlas-quantum.json. Atlas-based specialist AI is deferred to 2027 or later in /catalog/atlas-work-queue.json.
 '''
 text=guide.read_text()
 text=re.sub(r'\n## Method records and executable code\n.*?(?=\n## |\Z)',lambda _:block,text,flags=re.S) if '\n## Method records and executable code\n' in text else text+block

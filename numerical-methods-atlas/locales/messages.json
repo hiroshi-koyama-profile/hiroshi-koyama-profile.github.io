@@ -5125,8 +5125,8 @@
     "en": "Bilingual introductions to 18 entries cover Schrödinger, HF and DFT, bases, SCF, band symmetry, correlation and excitations."
   },
   "planned.quantum.status": {
-    "ja": "導入解説と一次文献を公開。専用の実行コードと数値検証はUnder constructionです。",
-    "en": "Introductory reading and primary references are available. Dedicated runnable code and numerical checks are under construction."
+    "ja": "導入解説・一次文献と水素型原子・Heの実行検証例を公開。小分子・周期系はUnder constructionです。",
+    "en": "Reading, primary references and runnable hydrogenic/He checks are available. Molecular and periodic examples are under construction."
   },
   "planned.quantum.link": {
     "ja": "量子化学・DFTの解説を読む",
@@ -7217,8 +7217,8 @@
     "ja": "日英用語集 ↗"
   },
   "home-map.future": {
-    "ja": "量子化学・DFTの導入解説を公開しました。専用の計算例と検証は今後の作業として区別しています。",
-    "en": "Quantum chemistry and DFT now have introductory readings. Dedicated runnable examples and validation remain planned."
+    "ja": "量子化学・DFTの導入解説と、水素型原子・Heの実行検証例を公開しました。小分子・周期系は次段階です。",
+    "en": "Quantum chemistry and DFT have introductory readings and runnable hydrogenic/He checks. Molecular and periodic examples remain next."
   },
   "home-map.roadmap": {
     "en": "Read the development roadmap ↗",

@@ -966,12 +966,15 @@
         "\\hat H_{\\rm el}\\Psi=E_{\\rm el}\\Psi,\\qquad E_{\\rm tot}=E_{\\rm el}+\\sum_{A<B}\\frac{Z_AZ_B}{R_{AB}}"
       ],
       "note": {
-        "ja": "固定核・非相対論の電子多体固有値問題。核間反発は電子Hamiltonianの外に加える。",
-        "en": "A fixed-nuclei nonrelativistic electronic many-body eigenproblem; nuclear repulsion is added separately."
+        "ja": "固定核・非相対論の電子多体固有値問題。核間反発は電子Hamiltonianの外に加える。実行例は1電子の孤立水素型原子に限定。一般の多電子直接解法は未実装。",
+        "en": "Fixed-nuclei nonrelativistic electronic many-body eigenproblem; add nuclear repulsion separately. Runnable examples cover only isolated one-electron hydrogenic atoms, not direct general many-electron solutions."
       },
-      "status": "reading",
+      "status": "local-example",
       "chapter": "quantum-chemistry",
-      "section": "schrodinger"
+      "section": "schrodinger",
+      "related_chapters": [
+        "quantum-atoms"
+      ]
     },
     {
       "id": "hartree-fock-model",
@@ -985,12 +988,15 @@
         "\\mathbf F\\mathbf C=\\mathbf S\\mathbf C\\boldsymbol\\varepsilon,\\qquad \\mathbf C^\\dagger\\mathbf S\\mathbf C=\\mathbf I"
       ],
       "note": {
-        "ja": "閉殻RHFの占有空間軌道の式。一般に非局所な交換を含む。専用実装は未公開。",
-        "en": "Representative closed-shell RHF spatial-orbital equations with generally nonlocal exchange. No dedicated implementation is published."
+        "ja": "閉殻RHFの占有空間軌道の式。一般に非局所な交換を含む。実行例は球対称1s² Heの局所還元に限定し、一般の分子・多電子のFock行列構築は未実装。",
+        "en": "Closed-shell RHF spatial-orbital equations, generally with nonlocal exchange. Runnable code is restricted to the spherical 1s² helium local reduction; general molecular/many-electron Fock-matrix construction is not implemented."
       },
-      "status": "reading",
+      "status": "local-example",
       "chapter": "quantum-chemistry",
-      "section": "hartree-fock"
+      "section": "hartree-fock",
+      "related_chapters": [
+        "quantum-atoms"
+      ]
     },
     {
       "id": "kohn-sham-model",
@@ -1005,12 +1011,15 @@
         "n(\\mathbf r)=\\sum_i f_i|\\phi_i(\\mathbf r)|^2,\\quad \\int n\\,d\\mathbf r=N,\\quad v_{\\rm xc}=\\frac{\\delta E_{\\rm xc}}{\\delta n}"
       ],
       "note": {
-        "ja": "密度汎関数の局所KS代表形。hybrid等の一般化KSを区別し、交換相関近似を明記する。",
-        "en": "Representative local KS equations for density functionals. Distinguish generalized KS treatments and specify the exchange-correlation approximation."
+        "ja": "密度汎関数の局所KS代表形。実行例は球対称He・スピン非偏極Dirac交換のみLDA。相関・GGA・hybrid・一般化KS・周期系は未実装。",
+        "en": "Representative local KS equations. Runnable code covers spherical-helium spin-unpolarized Dirac exchange-only LDA. Correlation, GGA, hybrids, generalized KS and periodic systems are not implemented."
       },
-      "status": "reading",
+      "status": "local-example",
       "chapter": "quantum-chemistry",
-      "section": "kohn-sham-dft"
+      "section": "kohn-sham-dft",
+      "related_chapters": [
+        "quantum-atoms"
+      ]
     },
     {
       "id": "time-dependent-kohn-sham",

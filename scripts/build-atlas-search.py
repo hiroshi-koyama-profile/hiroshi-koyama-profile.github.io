@@ -23,8 +23,10 @@ add('public-code-guide',{'ja':'コード・入力・検証を取得する','en':
 add('thermostats',{'ja':'サーモスタット：温度制御と分布の比較','en':'Thermostats: temperature control and distributions'},['サーモスタット','温度制御','thermostat','NVT'],{lang:f'/numerical-methods-atlas/{lang}/read/thermostats/' for lang in ['ja','en']})
 add('equation-index',{'ja':'数式から探す','en':'Browse by equation'},['数式検索','方程式の一覧','equation index','formula'],{lang:'/numerical-methods-atlas/equations/?lang='+lang for lang in ['ja','en']})
 add('test-inventory',{'ja':'テスト計算の全体一覧','en':'Atlas-wide test-problem inventory'},['テスト計算','検証問題','benchmark','test problems'],{lang:'/numerical-methods-atlas/test-cases/?lang='+lang for lang in ['ja','en']})
-add('visual-test-index',{'ja':'絵から探す：全58のテスト計算','en':'Browse all 58 test problems by picture'},['絵から探す','画像','ギャラリー','テスト計算','visual index','gallery'],{lang:'/numerical-methods-atlas/gallery/?lang='+lang for lang in ['ja','en']})
+total=len(json.loads((ROOT/'catalog/atlas-test-problems.json').read_text())['problems'])
+add('visual-test-index',{'ja':f'絵から探す：全{total}のテスト計算','en':f'Browse all {total} test problems by picture'},['絵から探す','画像','ギャラリー','テスト計算','visual index','gallery'],{lang:'/numerical-methods-atlas/gallery/?lang='+lang for lang in ['ja','en']})
 add('quantum-chemistry-overview',{'ja':'量子化学・DFT：何を近似し、何を解くか','en':'Quantum chemistry and DFT: approximations and equations'},['量子化学','密度汎関数','電子状態','HF','DFT','Kohn–Sham','Hartree–Fock','quantum chemistry','対称群','小群','既約表現','band symmetry'],{lang:f'/numerical-methods-atlas/{lang}/read/quantum-chemistry/' for lang in ['ja','en']})
+add('quantum-atoms-examples',{'ja':'水素型原子とHe：実行・検証例','en':'Hydrogenic atoms and helium: runnable validation examples'},['水素型原子','ヘリウム','He','hydrogenic','helium','LDA_X','SCF','原子 計算 コード 検証'],{lang:f'/numerical-methods-atlas/{lang}/read/quantum-atoms/' for lang in ['ja','en']})
 index['scope']='chapter titles, section headings, model and method labels, glossary aliases, and public method records'
 path.write_text(json.dumps(index,ensure_ascii=False,separators=(',',':'))+'\n')
 module=ATLAS/'home-search.js';text=module.read_text()

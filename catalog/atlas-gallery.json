@@ -541,6 +541,24 @@
         "ja": "保存済み有理減衰ODEの時間刻み収束（代表3手法）。",
         "en": "Stored time-refinement errors for rational decay, showing three methods."
       }
+    },
+    {
+      "id": "hydrogenic-atoms",
+      "kind": "image",
+      "source": "assets/quantum-atoms/hydrogenic.png",
+      "caption": {
+        "ja": "公開した原子計算コードの固定入力から計算。条件・CSV・収束検査・独立参照を解説先に保存。",
+        "en": "Computed from the public atomic-code fixed inputs, with conditions, CSV profiles, convergence checks and independent references linked in the reading."
+      }
+    },
+    {
+      "id": "helium-ground-state",
+      "kind": "image",
+      "source": "assets/quantum-atoms/helium.png",
+      "caption": {
+        "ja": "公開した原子計算コードの固定入力から計算。条件・CSV・収束検査・独立参照を解説先に保存。",
+        "en": "Computed from the public atomic-code fixed inputs, with conditions, CSV profiles, convergence checks and independent references linked in the reading."
+      }
     }
   ]
 }

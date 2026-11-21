@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "reviewed_on": "2026-11-21",
-  "status": "introductory-reading",
+  "status": "reading-with-scoped-runnable-examples",
   "title": {
     "ja": "量子化学・DFT：何を近似し、何を解くか",
     "en": "Quantum chemistry and DFT: approximations and equations"
@@ -914,7 +914,7 @@
   "verification_plan": [
     {
       "id": "hydrogen",
-      "state": "planned",
+      "state": "verified-educational-example",
       "title": {
         "ja": "1電子：水素型原子",
         "en": "One electron: hydrogenic atoms"
@@ -922,11 +922,15 @@
       "check": {
         "ja": "E_n = −Z²/(2n²)、規格化、固有値残差を確認し、領域と格子の誤差を分離。",
         "en": "Check E_n = −Z²/(2n²), normalization and eigenpair residuals; separate domain and grid errors."
+      },
+      "url": {
+        "ja": "/numerical-methods-atlas/ja/read/quantum-atoms/#hydrogenic",
+        "en": "/numerical-methods-atlas/en/read/quantum-atoms/#hydrogenic"
       }
     },
     {
       "id": "helium-dft",
-      "state": "planned",
+      "state": "verified-educational-example",
       "title": {
         "ja": "最初のDFT：球対称He原子",
         "en": "First DFT example: spherical helium"
@@ -934,6 +938,10 @@
       "check": {
         "ja": "原子単位系・閉殻・交換のみLDAを明示。Hartree場、電子数、密度とエネルギーのSCF履歴、格子収束、独立実装との比較を保存。相関を含むLDAとは区別。",
         "en": "Specify atomic units, a closed shell and exchange-only LDA. Save Hartree fields, electron count, density/energy SCF histories, grid convergence and an independent comparison; distinguish LDA with correlation."
+      },
+      "url": {
+        "ja": "/numerical-methods-atlas/ja/read/quantum-atoms/#helium",
+        "en": "/numerical-methods-atlas/en/read/quantum-atoms/#helium"
       }
     },
     {
@@ -980,8 +988,8 @@
     ]
   },
   "source_policy": {
-    "ja": "標準的な代表式を独自に要約した導入です。一次文献の書誌を照合し、理論の位置付けは原論文の公開情報と公式資料で確認しています。原論文の全式の監査や数値再現は未実施です。",
-    "en": "An original introductory synthesis of standard representative equations. Bibliographic metadata and conceptual entry points are checked against primary publication information and official documentation. Full-paper equation audits and numerical reproduction have not been performed."
+    "ja": "標準的な代表式を独自に要約した導入です。一次文献の書誌を照合し、理論の位置付けは原論文の公開情報と公式資料で確認しています。原論文の全式の監査や数値再現は未実施です。 水素型原子・Heの限定実装については、別配布版に実行記録・解析解と独立参照の照合を公開しています。",
+    "en": "An original introductory synthesis of standard representative equations. Bibliographic metadata and conceptual entry points are checked against primary publication information and official documentation. Full-paper equation audits and numerical reproduction have not been performed. A separate scoped hydrogenic/He code edition supplies actual execution records and analytic/independent-reference comparisons."
   },
   "documentation": [
     {

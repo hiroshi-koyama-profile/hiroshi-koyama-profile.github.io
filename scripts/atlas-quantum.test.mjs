@@ -10,12 +10,12 @@ const data=json('catalog/atlas-quantum.json');
 const methods=json('catalog/atlas-methods.json').methods.filter(x=>x.group.id==='quantum');
 const coverage=json('numerical-methods-atlas/coverage.json');
 
-test('each curated quantum topic has bilingual equations, valid source links and explicit limits without solver claims',()=>{
+test('each curated quantum topic has bilingual equations, valid source links and explicit limits with implementation scope distinguished',()=>{
   assert.deepEqual(data.sections.map(x=>x.id).sort(),methods.map(x=>x.id).sort());
   assert.equal(methods.length,18);
   const references=new Map(data.references.map(x=>[x.id,x]));
   for(const x of methods){
-    assert.equal(x.status,'reading-only');
+    assert.equal(x.status,x.quantum_examples?.length?'educational-example':'reading-only');
     assert.deepEqual(x.code_modules,[]);assert.deepEqual(x.test_files,[]);
     const s=data.sections.find(y=>y.id===x.id);
     assert.ok(s.references.length&&s.references.every(id=>references.has(id)));
@@ -38,7 +38,8 @@ test('quantum additions reconcile model, method and publication counts across th
   const quantum=coverage.items.filter(x=>x.origin==='curated-quantum-reading');
   assert.equal(quantum.filter(x=>x.kind==='method').length,methods.length);
   assert.equal(quantum.filter(x=>x.kind==='equation').length,4);
-  assert.ok(quantum.every(x=>x.status==='reading'));
+  assert.equal(quantum.filter(x=>x.status==='local-example'&&x.kind==='method').length,6);
+  assert.equal(quantum.filter(x=>x.status==='local-example'&&x.kind==='equation').length,3);
   assert.equal(coverage.counts.methods,coverage.items.filter(x=>x.kind==='method').length);
   assert.equal(coverage.counts.equations,coverage.items.filter(x=>x.kind==='equation').length);
   assert.equal(coverage.counts.papers,coverage.publications.filter(x=>['article','inproceedings'].includes(x.type)).length);
@@ -67,7 +68,7 @@ test('DFT is discoverable by Japanese, English and aliases, and all new equation
     const page=read(`numerical-methods-atlas/${lang}/read/site-coverage/index.html`);
     assert.ok(page.includes('quantum-extension'));
     assert.ok(page.includes(String(coverage.counts.methods))&&page.includes(String(coverage.counts.papers)));
-    if(lang==='ja')assert.ok(page.includes(`ローカル実験のある項目は85、文献解説のみは${coverage.counts.reading_methods}です`));
+    if(lang==='ja')assert.ok(page.includes(`ローカル実験のある項目は${coverage.counts.local_methods}、文献解説のみは${coverage.counts.reading_methods}です`));
     else assert.ok(page.includes(`${coverage.counts.journal_articles} journal-article records`));
   }
   const models=json('numerical-methods-atlas/equations/index.json').equations.filter(x=>x.group==='quantum');
@@ -78,10 +79,12 @@ test('DFT is discoverable by Japanese, English and aliases, and all new equation
   for(const lang of ['ja','en'])assert.ok(app.includes(createHash('sha256').update(readFileSync(new URL(`numerical-methods-atlas/content.${lang}.json`,root))).digest('hex').slice(0,12)));
 });
 
-test('planned quantum calculations do not inflate test-problem counts and specialist AI is deferred until 2027',()=>{
-  assert.ok(data.verification_plan.every(x=>x.state==='planned'));
+test('only executed quantum examples enter test-problem counts and specialist AI is deferred until 2027',()=>{
+  assert.equal(data.verification_plan.filter(x=>x.state==='verified-educational-example').length,2);
+  assert.equal(data.verification_plan.filter(x=>x.state==='planned').length,2);
   const tests=json('numerical-methods-atlas/test-cases/index.json');
-  assert.equal(tests.problems.length,58);
+  assert.equal(tests.problems.length,60);
+  assert.equal(tests.problems.filter(x=>x.chapter==='quantum-atoms').length,2);
   assert.ok(!tests.problems.some(x=>x.chapter==='quantum-chemistry'));
   const work=json('catalog/atlas-work-queue.json').items;
   const ai=work.find(x=>x.id==='atlas-specialist-ai');

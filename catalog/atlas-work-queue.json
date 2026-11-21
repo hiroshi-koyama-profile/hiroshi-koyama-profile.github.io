@@ -11,21 +11,21 @@
         "en": "Quantum chemistry and DFT: map and formulations"
       },
       "scope": {
-        "ja": "18項目の日英解説、代表式、一次文献。専用実装・数値検証は含まない。",
-        "en": "Bilingual introductions to 18 entries, representative equations and primary references; no dedicated implementations or numerical verification."
+        "ja": "18項目の日英解説、代表式、一次文献。水素型原子・Heの限定した実行例は別章に公開し、その他の専用実装は今後の作業として区別する。",
+        "en": "Bilingual introductions to 18 entries, representative equations and primary references. A separate chapter supplies scoped hydrogenic/He runs; other dedicated implementations remain future work."
       }
     },
     {
       "id": "quantum-examples",
       "target_year": 2026,
-      "state": "planned",
+      "state": "hydrogenic-helium-verified",
       "title": {
         "ja": "量子化学・DFTの代表的な実行・検証例",
         "en": "Representative runnable quantum-chemistry and DFT checks"
       },
       "scope": {
-        "ja": "水素型原子、球対称Heの交換のみLDA、小分子H₂を順に検証。実行結果の確認後にのみ実装済みへ変更する。 周期系では空間群・小群・SOC・時間反転の条件と既約表現の割当ても照合する。",
-        "en": "Validate hydrogenic atoms, exchange-only LDA for spherical helium, then H₂; mark implemented only after actual result verification. Periodic examples must also check space/little groups, SOC/time-reversal settings and irrep assignments."
+        "ja": "水素型原子と球対称Heの閉殻HF・交換のみLDAを実行・検証。小分子H₂と周期系は次段階。周期系では小群・SOC・時間反転と既約表現の条件も照合する。",
+        "en": "Hydrogenic atoms and spherical-helium closed-shell HF / exchange-only LDA are executed and verified. H₂ and periodic examples remain next, including little-group/SOC/time-reversal and irrep checks."
       }
     },
     {

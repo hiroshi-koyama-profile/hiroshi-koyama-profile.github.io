@@ -45,6 +45,11 @@
       "id": "approximation",
       "ja": "関数近似・非線形代数方程式",
       "en": "Function approximation and nonlinear algebra"
+    },
+    {
+      "id": "quantum",
+      "ja": "孤立原子・電子状態",
+      "en": "Isolated atoms and electronic structure"
     }
   ],
   "problems": [
@@ -1261,6 +1266,60 @@
         }
       ],
       "availability": "saved-output"
+    },
+    {
+      "id": "hydrogenic-atoms",
+      "group": "quantum",
+      "name": {
+        "ja": "水素型原子の動径固有値問題",
+        "en": "Hydrogenic radial eigenproblems"
+      },
+      "chapter": "quantum-atoms",
+      "reading_section": "hydrogenic",
+      "availability": "saved-output",
+      "code_base": "/code/quantum-atoms/2026-11-21/",
+      "verification": "/code/quantum-atoms/2026-11-21/verification.json",
+      "commands": [
+        "python -m pytest -q",
+        "python run.py --input inputs.json --output output --figures"
+      ],
+      "evidence": [
+        {
+          "path": "code/quantum-atoms/2026-11-21/results/results.json",
+          "json_pointer": "/hydrogenic/refinement"
+        },
+        {
+          "path": "code/quantum-atoms/2026-11-21/test_atomic_radial.py",
+          "python_symbol": "test_hydrogenic_refinement_and_normalization"
+        }
+      ]
+    },
+    {
+      "id": "helium-ground-state",
+      "group": "quantum",
+      "name": {
+        "ja": "He基底状態：閉殻HF・交換のみLDA",
+        "en": "Helium ground state: closed-shell HF and exchange-only LDA"
+      },
+      "chapter": "quantum-atoms",
+      "reading_section": "helium",
+      "availability": "saved-output",
+      "code_base": "/code/quantum-atoms/2026-11-21/",
+      "verification": "/code/quantum-atoms/2026-11-21/verification.json",
+      "commands": [
+        "python -m pytest -q",
+        "python run.py --input inputs.json --output output --figures"
+      ],
+      "evidence": [
+        {
+          "path": "code/quantum-atoms/2026-11-21/results/results.json",
+          "json_pointer": "/helium/refinement"
+        },
+        {
+          "path": "code/quantum-atoms/2026-11-21/test_atomic_radial.py",
+          "python_symbol": "test_helium_scf_and_independent_reference"
+        }
+      ]
     }
   ],
   "excluded_examples": {
@@ -1269,14 +1328,14 @@
       "参照解ライブラリ18項目：参照評価を重複加算しない",
       "球面格子・接続図：流体計算ではない",
       "基底行列・Fourier記号・分散関係・正値性・幾何保存則等の局所検査：独立した問題数にはしない",
-      "AMR・並列化・混合精度、予定中のサーモスタット・DFT等"
+      "AMR・並列化・混合精度、予定中のサーモスタット、未実装の量子化学・DFTの拡張"
     ],
     "en": [
       "22 biological entries: literature surveys",
       "18 reference-library entries: do not add reference evaluations again",
       "Spherical and connectivity diagrams: no flow solve",
       "Local basis-matrix, Fourier-symbol, dispersion, positivity and geometric-conservation checks: not separate problems",
-      "AMR, parallelization, mixed precision, and planned thermostats/DFT"
+      "AMR, parallelization, mixed precision, planned thermostats and unimplemented quantum/DFT extensions"
     ]
   }
 }

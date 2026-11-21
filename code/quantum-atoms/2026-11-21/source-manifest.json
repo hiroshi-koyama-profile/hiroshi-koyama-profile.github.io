@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "edition": "2026-11-21",
+  "family": "quantum-atoms",
+  "public_base_url": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/",
+  "files": {
+    "LICENSE": "07cca125623617c85a41e9a21a2b114d693c61737bc353e3ca98587431e26ee6",
+    "README.md": "ee55f6c4b49c6cda3f036ed1cd47befaa4241e4a1a51559153d47c6d91bbae9e",
+    "atomic_radial.py": "f85eaf72d6ec51d3313a2f87804ddad953ce339b775c6e18d047cccde693cded",
+    "inputs.json": "8680ad9e5b04b5689b52849c71d849ddb98f9ecc9bea851a0f09d2ee2fcc6237",
+    "reference-pyscf.json": "0fcf5800a54f5429e258e304d58c43214d20f22703625e76d703639ea79c36d9",
+    "reference_pyscf.py": "5024f3c444224d6029d02730387c19d2eec1179891c24ff21c01691cbcfb5a7d",
+    "requirements-dev.txt": "16cdc8725538d78182857d3fda4b7f58b566f8912ed570be819fc2b3efcfed9a",
+    "requirements-reference.txt": "035c8c4dce75ebfdc9cc0c8f15f0f1d6cda4fc97119522af811bbe1200843a9a",
+    "requirements.txt": "253dcbe217be011475e8701dcf38f781074d9fe3536d11a9f85cb8b932bc7882",
+    "results/convergence.png": "a6b5dd44e9179f743d08aa0778efdac4a43cfc9a58854ec8c2d61755926fc8a8",
+    "results/helium.png": "8ff2541771b6db954c2d5dd8fc1c57edb7f720b90405ad6084d20394cda211e6",
+    "results/hydrogenic.png": "2f1ea60a391f26c8fd086999e56155ed1bf3bc5c5b80c6d9f2c44ee2c5dca1cf",
+    "results/profiles/helium-hf.csv": "d06863e6b740b53cce7cd85ff05f915f68a2e8e42838e59538c5d63d3382d176",
+    "results/profiles/helium-lda_x.csv": "4d48d7640e370ef764d6bbf6548e49c17a476d1a41397e7991f2903077f4f4eb",
+    "results/profiles/hydrogenic-z1-n1-l0.csv": "b00c67ed623bbd98d3ea29feed6ac89446f54d17cfd6a2ef97d9be46eb2d4cff",
+    "results/profiles/hydrogenic-z1-n2-l0.csv": "ca41c51afb53299779ac47de455ce12238e57e59bb77a885776960a6b3f7429f",
+    "results/profiles/hydrogenic-z1-n2-l1.csv": "506ce166c04e8b752b39a4d213a5ba27225c611e632056c37b98e214ff13b4ef",
+    "results/profiles/hydrogenic-z1-n3-l2.csv": "834d641826f32f21dde2b7cee1985845c29489a5cee1c80d8f925fbabe8a9d77",
+    "results/profiles/hydrogenic-z2-n1-l0.csv": "7237ffefc37504bab5050a6c35f84b9b1284b2e1ecde9001e684319148a1e82c",
+    "results/profiles/hydrogenic-z2-n2-l0.csv": "325acf636fee554d4dca765d8d824f46df5291c016261efccd28f328b19734ce",
+    "results/profiles/hydrogenic-z2-n2-l1.csv": "c15d122c7dd9363296a77e61a987db71e823910705825ae7748ac325d1c4f066",
+    "results/profiles/hydrogenic-z2-n3-l2.csv": "0b3c44b4035123ba7c385a8137b98bffba50e45e62f8b646e393c027a80d0ab6",
+    "results/results.json": "953896b55df923dcbf13ced8fdb60b699918597cded8e986807b241f1192e739",
+    "results/scf.png": "8406197e46393cd05df8b24d833651fbfa7a90ec1d48d61af64af73a800af18c",
+    "run.py": "f75842c02bca6836eed48b0e745421db43c7aa1095f0ede3fc26e009ebad331a",
+    "test_atomic_radial.py": "2c2d56fd93664109ab11aae68b2836dc952bc0beb363901c78e314c6698b48fa"
+  },
+  "terms": {
+    "original_python": "MIT / LICENSE",
+    "text_figures_data": "https://hrkoyama.github.io/rights/"
+  },
+  "scope": "Hydrogenic radial states and isolated 1s^2 helium HF / exchange-only LDA; includes fixed inputs and independently run finite-basis PySCF references."
+}

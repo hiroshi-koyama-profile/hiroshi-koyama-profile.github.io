@@ -20,16 +20,16 @@
     "chapters": 2,
     "reports": 3,
     "other_sources": 10,
-    "local_equations": 15,
-    "reading_equations": 31,
-    "local_methods": 85,
-    "reading_methods": 23,
+    "local_equations": 18,
+    "reading_equations": 28,
+    "local_methods": 91,
+    "reading_methods": 17,
     "biological_entries": 22,
     "gallery_cases": 9,
     "gallery_equations": 7,
-    "reading_chapters": 49,
-    "test_problems": 58,
-    "saved_test_problems": 58,
+    "reading_chapters": 50,
+    "test_problems": 60,
+    "saved_test_problems": 60,
     "code_test_problems": 0
   },
   "items": [
@@ -1226,9 +1226,9 @@
       "id": "schrodinger",
       "label": "Schrodinger eigenproblems",
       "chapter": "quantum-chemistry",
-      "status": "reading",
+      "status": "local-example",
       "group": "Electronic structure & quantum chemistry",
-      "scope": "Introductory formulation only; no dedicated solver or numerical validation.",
+      "scope": "Uniform radial-grid tests of isolated hydrogenic 1s, 2s, 2p and 3d states; not a direct general many-electron Schrödinger solver.",
       "origin": "curated-quantum-reading"
     },
     {
@@ -1246,9 +1246,9 @@
       "id": "hartree-fock",
       "label": "Hartree–Fock",
       "chapter": "quantum-chemistry",
-      "status": "reading",
+      "status": "local-example",
       "group": "Electronic structure & quantum chemistry",
-      "scope": "Introductory formulation only; no dedicated solver or numerical validation.",
+      "scope": "Only spherical helium with one doubly occupied 1s spatial orbital; the local HF exchange reduction is specific to this two-electron problem.",
       "origin": "curated-quantum-reading"
     },
     {
@@ -1256,9 +1256,9 @@
       "id": "kohn-sham-dft",
       "label": "Kohn–Sham density functional theory / DFT",
       "chapter": "quantum-chemistry",
-      "status": "reading",
+      "status": "local-example",
       "group": "Electronic structure & quantum chemistry",
-      "scope": "Introductory formulation only; no dedicated solver or numerical validation.",
+      "scope": "Spin-unpolarized exchange-only Dirac LDA for spherical helium; correlation, GGA, hybrids, molecules, periodic systems and excitations are not implemented.",
       "origin": "curated-quantum-reading"
     },
     {
@@ -1266,9 +1266,9 @@
       "id": "scf",
       "label": "Self-consistent field iteration / SCF",
       "chapter": "quantum-chemistry",
-      "status": "reading",
+      "status": "local-example",
       "group": "Electronic structure & quantum chemistry",
-      "scope": "Introductory formulation only; no dedicated solver or numerical validation.",
+      "scope": "Helium linear density mixing with density/energy/orbital-residual checks, alternative starts/mixing and explicit failure; no DIIS.",
       "origin": "curated-quantum-reading"
     },
     {
@@ -1286,9 +1286,9 @@
       "id": "hartree-poisson",
       "label": "Coulomb and Hartree potentials",
       "chapter": "quantum-chemistry",
-      "status": "reading",
+      "status": "local-example",
       "group": "Electronic structure & quantum chemistry",
-      "scope": "Introductory formulation only; no dedicated solver or numerical validation.",
+      "scope": "Cumulative Coulomb quadrature for isolated spherical densities, checked against analytic exponential densities; not a general 3D or periodic Poisson implementation.",
       "origin": "curated-quantum-reading"
     },
     {
@@ -1296,9 +1296,9 @@
       "id": "xc-functionals",
       "label": "LDA, GGA and hybrid functionals",
       "chapter": "quantum-chemistry",
-      "status": "reading",
+      "status": "local-example",
       "group": "Electronic structure & quantum chemistry",
-      "scope": "Introductory formulation only; no dedicated solver or numerical validation.",
+      "scope": "Only spin-unpolarized Dirac exchange energy and its functional derivative are verified; LDA correlation, GGA, meta-GGA and hybrids remain reading-only.",
       "origin": "curated-quantum-reading"
     },
     {
@@ -1406,9 +1406,9 @@
       "id": "stationary-schrodinger",
       "label": "Stationary electronic Schrödinger equation",
       "chapter": "quantum-chemistry",
-      "status": "reading",
+      "status": "local-example",
       "group": "Electronic structure & quantum chemistry",
-      "scope": "A fixed-nuclei nonrelativistic electronic many-body eigenproblem; nuclear repulsion is added separately.",
+      "scope": "Fixed-nuclei nonrelativistic electronic many-body eigenproblem; add nuclear repulsion separately. Runnable examples cover only isolated one-electron hydrogenic atoms, not direct general many-electron solutions.",
       "origin": "curated-quantum-reading"
     },
     {
@@ -1416,9 +1416,9 @@
       "id": "hartree-fock-model",
       "label": "Closed-shell Hartree–Fock equations",
       "chapter": "quantum-chemistry",
-      "status": "reading",
+      "status": "local-example",
       "group": "Electronic structure & quantum chemistry",
-      "scope": "Representative closed-shell RHF spatial-orbital equations with generally nonlocal exchange. No dedicated implementation is published.",
+      "scope": "Closed-shell RHF spatial-orbital equations, generally with nonlocal exchange. Runnable code is restricted to the spherical 1s² helium local reduction; general molecular/many-electron Fock-matrix construction is not implemented.",
       "origin": "curated-quantum-reading"
     },
     {
@@ -1426,9 +1426,9 @@
       "id": "kohn-sham-model",
       "label": "Local Kohn–Sham DFT",
       "chapter": "quantum-chemistry",
-      "status": "reading",
+      "status": "local-example",
       "group": "Electronic structure & quantum chemistry",
-      "scope": "Representative local KS equations for density functionals. Distinguish generalized KS treatments and specify the exchange-correlation approximation.",
+      "scope": "Representative local KS equations. Runnable code covers spherical-helium spin-unpolarized Dirac exchange-only LDA. Correlation, GGA, hybrids, generalized KS and periodic systems are not implemented.",
       "origin": "curated-quantum-reading"
     },
     {
@@ -2510,8 +2510,8 @@
     "reviewed_on": "2026-11-21"
   },
   "public_extension_sha256": {
-    "catalog/atlas-quantum.json": "e260e72f79c49d7a0b7a56158c54f57a4fd85ba72d33c894beda50fb82255d4e",
-    "catalog/atlas-methods.json": "18e8b078ff06dc59b9e887bb4e81a0e68e924f35bed773ccfc9aea658f9b58a1",
-    "catalog/atlas-equations.json": "101a4295afc533766ee79825399fb04545b2e1be2a1d0bea24615da1f44ad522"
+    "catalog/atlas-quantum.json": "7fa67bfbe031fe39dc59847a77021ef3c9ce0cb750e0455dfac850975c6af672",
+    "catalog/atlas-methods.json": "a3401da010ebe86d2f6643fdc388d368851e93a262b60ac6bedc0844c10d2d5c",
+    "catalog/atlas-equations.json": "abd7c1cc2732b5062cc58e7bb7d08c8ef6df1c88d974fd31d4b6181012ba6433"
   }
 }

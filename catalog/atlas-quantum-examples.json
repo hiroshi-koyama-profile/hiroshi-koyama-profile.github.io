@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "edition": "2026-11-21",
+  "code_base": "/code/quantum-atoms/2026-11-21/",
+  "archive": "quantum-atoms-2026-11-21.zip",
+  "reading_chapter": "quantum-atoms",
+  "status": "verified-educational-examples",
+  "cases": [
+    {
+      "id": "hydrogenic-atoms",
+      "section": "hydrogenic",
+      "name": {
+        "ja": "水素型原子の動径固有値問題",
+        "en": "Hydrogenic radial eigenproblems"
+      },
+      "result_pointer": "/hydrogenic/refinement",
+      "figure": "hydrogenic.png"
+    },
+    {
+      "id": "helium-ground-state",
+      "section": "helium",
+      "name": {
+        "ja": "He基底状態：閉殻HF・交換のみLDA",
+        "en": "Helium ground state: closed-shell HF and exchange-only LDA"
+      },
+      "result_pointer": "/helium/refinement",
+      "figure": "helium.png"
+    }
+  ],
+  "scope": {
+    "ja": "孤立・非相対論・無限核質量の水素型原子と、球対称1s² HeのHF・交換のみLDA。一般の分子・周期・多電子ソルバーではありません。",
+    "en": "Isolated nonrelativistic infinite-nuclear-mass hydrogenic atoms and spherical 1s² helium HF / exchange-only LDA. Not a general molecular, periodic or many-electron solver."
+  },
+  "run_command": "python run.py --input inputs.json --output output --figures",
+  "test_command": "python -m pytest -q",
+  "independent_reference_command": "python reference_pyscf.py --input inputs.json --output new-reference.json"
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "verified_on": "2026-11-21",
+  "edition": "2026-11-21",
+  "archive_sha256": "f81c61b854e68b9750d960a17a133ee9a00ae7bd0c3ee268263caee626cf44c9",
+  "source_manifest_sha256": "c6d22b507028150eb09699fc0103d958e04764d1af9f98692f18ae111357d546",
+  "execution": "Archive extracted into an independent temporary directory; packaged tests and full fixed-input runner including figures executed there without network or private files.",
+  "python": "3.12.14",
+  "environment": {
+    "numpy": "2.0.2",
+    "scipy": "1.14.1",
+    "matplotlib": "3.9.4",
+    "pytest": "8.3.5"
+  },
+  "tests": 23,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "passed": 23,
+  "checks": {
+    "hydrogenic_exact_energy_errors_reduce": true,
+    "hydrogenic_normalization": true,
+    "hydrogenic_eigen_residual": true,
+    "helium_scf_converged": true,
+    "helium_electron_count": true,
+    "helium_energy_identity": true,
+    "independent_extrapolated_energies": true,
+    "independent_density_profiles": true,
+    "expected_failures_reported": true,
+    "independent_basis_refinement": true
+  },
+  "maximum_reproduced_energy_difference": 0.0,
+  "independent_reference": {
+    "file": "reference-pyscf.json",
+    "sha256": "0fcf5800a54f5429e258e304d58c43214d20f22703625e76d703639ea79c36d9",
+    "environment": {
+      "python": "3.12.14",
+      "pyscf": "2.11.0",
+      "numpy": "2.0.2",
+      "scipy": "1.14.1",
+      "libxc": "7.0.0"
+    },
+    "regeneration": "python reference_pyscf.py --input inputs.json --output new-reference.json"
+  },
+  "scope": "Limited educational checks and finite-basis/quadrature reference comparisons; not certification of general-purpose HF/DFT or exact correlated helium."
+}

@@ -4,7 +4,7 @@
   "reviewed_on": "2026-11-21",
   "scope": "One explicitly mapped visual per atlas test problem. Existing shared figures are identified. Derived plots use stored numerical values; computed previews record fixed inputs and numerical checks.",
   "counts": {
-    "test_problems": 58,
+    "test_problems": 60,
     "groups": {
       "transport": 8,
       "fluid": 16,
@@ -13,11 +13,12 @@
       "elliptic": 13,
       "gravity": 5,
       "time": 6,
-      "approximation": 3
+      "approximation": 3,
+      "quantum": 2
     },
     "visual_sources": {
       "stored-data-plot": 27,
-      "existing-figure": 22,
+      "existing-figure": 24,
       "computed-preview": 9
     }
   },
@@ -2751,11 +2752,123 @@
         }
       },
       "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#nonlinear-rational-decay-ja"
+    },
+    {
+      "id": "hydrogenic-atoms",
+      "group": "quantum",
+      "name": {
+        "ja": "水素型原子の動径固有値問題",
+        "en": "Hydrogenic radial eigenproblems"
+      },
+      "chapter": "quantum-atoms",
+      "reading_section": "hydrogenic",
+      "availability": "saved-output",
+      "code_base": "/code/quantum-atoms/2026-11-21/",
+      "verification": "/code/quantum-atoms/2026-11-21/verification.json",
+      "commands": [
+        "python -m pytest -q",
+        "python run.py --input inputs.json --output output --figures"
+      ],
+      "evidence": [
+        {
+          "path": "code/quantum-atoms/2026-11-21/results/results.json",
+          "json_pointer": "/hydrogenic/refinement"
+        },
+        {
+          "path": "code/quantum-atoms/2026-11-21/test_atomic_radial.py",
+          "python_symbol": "test_hydrogenic_refinement_and_normalization"
+        }
+      ],
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-atoms/#hydrogenic",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-atoms/#hydrogenic"
+      },
+      "code_verification": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/verification.json",
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#hydrogenic-atoms",
+      "run_commands": [
+        "python -m pytest -q",
+        "python run.py --input inputs.json --output output --figures"
+      ],
+      "image": "/numerical-methods-atlas/assets/quantum-atoms/hydrogenic.png",
+      "image_sha256": "2f1ea60a391f26c8fd086999e56155ed1bf3bc5c5b80c6d9f2c44ee2c5dca1cf",
+      "width": 960,
+      "height": 570,
+      "source_kind": "existing-figure",
+      "caption": {
+        "ja": "公開した原子計算コードの固定入力から計算。条件・CSV・収束検査・独立参照を解説先に保存。",
+        "en": "Computed from the public atomic-code fixed inputs, with conditions, CSV profiles, convergence checks and independent references linked in the reading."
+      },
+      "visual_input": {
+        "id": "hydrogenic-atoms",
+        "kind": "image",
+        "source": "assets/quantum-atoms/hydrogenic.png",
+        "caption": {
+          "ja": "公開した原子計算コードの固定入力から計算。条件・CSV・収束検査・独立参照を解説先に保存。",
+          "en": "Computed from the public atomic-code fixed inputs, with conditions, CSV profiles, convergence checks and independent references linked in the reading."
+        }
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#hydrogenic-atoms-ja"
+    },
+    {
+      "id": "helium-ground-state",
+      "group": "quantum",
+      "name": {
+        "ja": "He基底状態：閉殻HF・交換のみLDA",
+        "en": "Helium ground state: closed-shell HF and exchange-only LDA"
+      },
+      "chapter": "quantum-atoms",
+      "reading_section": "helium",
+      "availability": "saved-output",
+      "code_base": "/code/quantum-atoms/2026-11-21/",
+      "verification": "/code/quantum-atoms/2026-11-21/verification.json",
+      "commands": [
+        "python -m pytest -q",
+        "python run.py --input inputs.json --output output --figures"
+      ],
+      "evidence": [
+        {
+          "path": "code/quantum-atoms/2026-11-21/results/results.json",
+          "json_pointer": "/helium/refinement"
+        },
+        {
+          "path": "code/quantum-atoms/2026-11-21/test_atomic_radial.py",
+          "python_symbol": "test_helium_scf_and_independent_reference"
+        }
+      ],
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-atoms/#helium",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-atoms/#helium"
+      },
+      "code_verification": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/verification.json",
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#helium-ground-state",
+      "run_commands": [
+        "python -m pytest -q",
+        "python run.py --input inputs.json --output output --figures"
+      ],
+      "image": "/numerical-methods-atlas/assets/quantum-atoms/helium.png",
+      "image_sha256": "8ff2541771b6db954c2d5dd8fc1c57edb7f720b90405ad6084d20394cda211e6",
+      "width": 960,
+      "height": 570,
+      "source_kind": "existing-figure",
+      "caption": {
+        "ja": "公開した原子計算コードの固定入力から計算。条件・CSV・収束検査・独立参照を解説先に保存。",
+        "en": "Computed from the public atomic-code fixed inputs, with conditions, CSV profiles, convergence checks and independent references linked in the reading."
+      },
+      "visual_input": {
+        "id": "helium-ground-state",
+        "kind": "image",
+        "source": "assets/quantum-atoms/helium.png",
+        "caption": {
+          "ja": "公開した原子計算コードの固定入力から計算。条件・CSV・収束検査・独立参照を解説先に保存。",
+          "en": "Computed from the public atomic-code fixed inputs, with conditions, CSV profiles, convergence checks and independent references linked in the reading."
+        }
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#helium-ground-state-ja"
     }
   ],
   "source_sha256": {
-    "catalog/atlas-gallery.json": "3f78a3fa36ba22095f6815f2c57acab85554aa4c0ebaf6329a5495036528aca1",
-    "scripts/render-atlas-gallery.py": "1866f93c1cbee63212da8bcc5a9716de01e15ab95fcaa49b93de3d1f67e965e0",
+    "catalog/atlas-gallery.json": "c61e5c7d4848fabba0596942134011c64bcfda42fc823416798b92b307064dce",
+    "scripts/render-atlas-gallery.py": "0e61bd59c459b2b7945e12ae2f89eafaf55fda28cde0e5c4530fa46dc7865ba7",
     "code/numerical-methods-atlas/2026-11-21/numart/benchmarks.py": "dc8f83aafea473b5f0e1e7bf82630484dd60aa446859c1f602571adc3c59f019",
     "code/numerical-methods-atlas/2026-11-21/numart/solvers.py": "7811862ea3384cef825a1d382c24c6e19a175fb688a024fa4117959eed4bf05d",
     "code/numerical-methods-atlas/2026-11-21/numart/linear.py": "d58db4efc09a3358b28cff07ba3a2e732244eaaf2f82a5fcf1ce0de001ba87a9",
@@ -2794,14 +2907,16 @@
     "numerical-methods-atlas/hamiltonian.json": "530c74ca27962b28579d90de47bc3d42df5d4ef1ad90d9e7606a64772c638203",
     "numerical-methods-atlas/basis.json": "13bac5be15b5a43e7a103120e225fb15388650ae4de66aa731b4e324a8525651",
     "numerical-methods-atlas/runge-kutta.json": "e2f5f1484a8d3edf1bb5511d4f237de20615ddad4103d1277f34f7357ae9d501",
+    "numerical-methods-atlas/assets/quantum-atoms/hydrogenic.png": "2f1ea60a391f26c8fd086999e56155ed1bf3bc5c5b80c6d9f2c44ee2c5dca1cf",
+    "numerical-methods-atlas/assets/quantum-atoms/helium.png": "8ff2541771b6db954c2d5dd8fc1c57edb7f720b90405ad6084d20394cda211e6",
     "code/numerical-methods-atlas/2026-11-21/tests/test_numerics.py": "4ad61ac54dfa59d7d61959c5699f290e2386c23bf5b4b930a5d98576feaa54d1",
     "code/numerical-methods-atlas/2026-11-21/tests/test_linear.py": "5e7323f2734fb7328c35706ccd90fc25076bd46d01d32cd9c78c8cd25dd0421f",
     "code/numerical-methods-atlas/2026-11-21/tests/test_sparse_fem.py": "4076e514e0b9b5fd94dead4af33fe7e7548fba6a7b48b3e21a406034f7170afb",
     "code/numerical-methods-atlas/2026-11-21/tests/test_runge_kutta.py": "920a5eb560afe7f560cae8d22f879f125851f4ee0451b24720d0eca0082c31ce",
     "code/numerical-methods-atlas/2026-11-21/tests/test_new_models.py": "2937daf8fa8ad86882ac06e47835a6309ca1df3d0283c7dfb7b9606dc3906b1f",
-    "numerical-methods-atlas/gallery/preview-manifest.json": "80199623664985b2d875e780da1cfe4661dacd0c14ac2336d5acffbe6beed597",
-    "numerical-methods-atlas/gallery/calculations.json": "877ba403f68c67a337cf45f7158a5404758d03e61657f701a545fbf14f8a65a4",
+    "numerical-methods-atlas/gallery/preview-manifest.json": "46fc64b6a2c21e4d9b2e53114b2cc7caa52edd1f4d9c7654eb67ccc2f96edb99",
+    "numerical-methods-atlas/gallery/calculations.json": "d98cd75e1c58177bfc716e8b68d6bfba1358d5135ac8e2ee0989eb3df77942a6",
     "numerical-methods-atlas/gallery/verification.json": "46c39543afa9d943dfef896fadbc8f84d847f1a145d9b1427a2336de7a3a50f9",
-    "numerical-methods-atlas/test-cases/index.json": "6b45ecd938019017036ffd3c1116696f2474dc42bd51acaeaaf6c5ad3bf949ee"
+    "numerical-methods-atlas/test-cases/index.json": "0e36c9a8aede54de151c8f3cbfda220771a280d2c820c57d94b6511b50bd965a"
   }
 }

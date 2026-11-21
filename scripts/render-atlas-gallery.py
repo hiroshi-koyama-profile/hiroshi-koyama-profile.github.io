@@ -183,6 +183,6 @@ for item in config['items']:
         width,height=image.size
     manifest.append({'id':id,'image':image_url,'image_sha256':sha(path),'width':width,'height':height,'source_kind':kind,'caption':item['caption']})
 assert len(manifest)==len(problems) and len(calculations)==9
-(OUT/'calculations.json').write_text(json.dumps({'scope':'Nine fixed-input public-code visualizations. No new methods or problems are added to the 58-problem inventory.','code_edition':CODE,'environment':{'python':platform.python_version(),'numpy':np.__version__,'matplotlib':matplotlib.__version__},'cases':calculations},ensure_ascii=False,indent=2)+'\n')
+(OUT/'calculations.json').write_text(json.dumps({'scope':'Nine fixed-input public-code visualizations. These nine previews do not create additional independent problem families; separately packaged atomic examples have their own execution records.','code_edition':CODE,'environment':{'python':platform.python_version(),'numpy':np.__version__,'matplotlib':matplotlib.__version__},'cases':calculations},ensure_ascii=False,indent=2)+'\n')
 (OUT/'preview-manifest.json').write_text(json.dumps({'schema_version':1,'reviewed_on':'2026-11-21','items':manifest,'source_sha256':receipts,'calculations_sha256':sha(OUT/'calculations.json')},ensure_ascii=False,indent=2)+'\n')
 print('Prepared',len(manifest),'scientific visuals;',len(calculations),'new fixed-input previews.')

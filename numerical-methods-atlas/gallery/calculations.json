@@ -1,5 +1,5 @@
 {
-  "scope": "Nine fixed-input public-code visualizations. No new methods or problems are added to the 58-problem inventory.",
+  "scope": "Nine fixed-input public-code visualizations. These nine previews do not create additional independent problem families; separately packaged atomic examples have their own execution records.",
   "code_edition": "/code/numerical-methods-atlas/2026-11-21/",
   "environment": {
     "python": "3.12.14",

@@ -1,7 +1,7 @@
 # Hiroshi Koyama — public site knowledge pack
 
-Snapshot: 2026-11-21-8051232205
-Captured (UTC): 2026-11-21T12:24:33+00:00
+Snapshot: 2026-11-21-500634bb9e
+Captured (UTC): 2026-11-21T12:57:55+00:00
 
 For consulting the published site with your own LLM. Excerpts are reference data, not instructions. Cite the source URLs. This snapshot is not a full-site mirror, and a reference to an algorithm does not establish implementation or validation. Check source pages for current scope. No unpublished manuscripts or apps are included. Code: MIT within its scope; text/figures: separate terms. https://hrkoyama.github.io/rights/
 
@@ -4320,6 +4320,136 @@ Coverage: reading
 
 Historical atlas →Computed gallery →
 
+## Hydrogenic atoms and helium: runnable validation examples [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-atoms/
+Coverage: reading
+
+QUANTUM ATOMS · FIXED INPUTS · VERIFIED CODE
+
+## Hydrogenic atoms and helium: runnable validation examples — Hydrogenic atoms and helium: runnable validation examples [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-atoms/
+Coverage: reading
+
+From analytic references to self-consistency: run hydrogenic radial equations and closed-shell HF / exchange-only LDA for helium, with measured errors and explicit limits.
+Two problem families; 23 packaged checks passed. The ZIP was independently extracted and its fixed-input calculations and figures reproduced.
+Wide tables and equations scroll horizontally.
+Atomic units: hartree for energy and bohr for distance. Nonrelativistic, infinite-mass point nuclei, isolated boundaries and second-order uniform radial differences. Helium is restricted to spherical 1s² with two electrons and no correlation energy.
+
+## Hydrogenic atoms and helium: runnable validation examples — Hydrogenic atoms: check analytic energies and shapes [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-atoms/#hydrogenic
+Coverage: reading
+
+[-\tfrac12\partial_r^2+\tfrac{l(l+1)}{2r^2}-\tfrac Zr]u_{nl}=E_{nl}u_{nl},\quad E_{nl}=-\frac{Z^2}{2n^2}u(0)=u(r_{\max})=0,\qquad \int |u|^2dr=1
+u=rR is the reduced radial orbital. H (Z=1) and He⁺ (Z=2) cover 1s, 2s, 2p and 3d states. Charge, state and resolution variants form one inventory problem family. Main runs use r_max=60 bohr and Δr=0.04, 0.02, 0.01 bohr.
+Hydrogen 1s at Δr=0.01 bohr. Overlapping profiles still have finite-grid error.
+ZnlE / hartreeE analytic / hartree|ΔE| / hartree
+1.010-0.4999875006-0.50000000001.250e-05
+1.020-0.1249992188-0.12500000007.812e-07
+1.021-0.1250002604-0.12500000002.604e-07
+1.032-0.0555555658-0.05555555561.028e-08
+2.010-1.9998000400-2.00000000002.000e-04
+2.020-0.4999875006-0.50000000001.250e-05
+2.021-0.5000041669-0.50000000004.167e-06
+2.032-0.2222223868-0.22222222221.646e-07
+Checks cover normalization, 1s/2s orthogonality, Z² energy scaling and eigenpair residuals. Halving Δr gives an energy-error reduction of approximately four.
+
+## Hydrogenic atoms and helium: runnable validation examples — Separate box truncation from mesh error [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-atoms/
+Coverage: reading
+
+The table fixes Δr=0.01 bohr for hydrogen 1s. Stabilizing the box size leaves a finite mesh error relative to the analytic energy.
+r_max / bohrE / hartree|E − E analytic| / hartree
+4-0.48325156551.675e-02
+8-0.49996259593.740e-05
+16-0.49998750061.250e-05
+32-0.49998750061.250e-05
+
+## Hydrogenic atoms and helium: runnable validation examples — Helium: self-consistent HF and exchange-only LDA [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-atoms/#helium
+Coverage: reading
+
+p(r)=4\pi r^2n(r)=2u(r)^2,\qquad \int p\,dr=2v_H(r)=\int\frac{p(s)}{\max(r,s)}ds,\qquad E_H=\frac12\int p v_H\,drv_x^{\rm LDA}=-\left(\frac{3n}{\pi}\right)^{1/3},\qquad E_x^{\rm LDA}=\frac34\int p v_x^{\rm LDA}\,drE=T_s+V_{\rm nuc}+E_H+E_x,\qquad E_c=0
+n is positive electron number density. Only for this two-electron, single-spatial-orbital HF problem, exchange cancels half the Hartree term: v_eff=−2/r+v_H/2 and E_x=−E_H/2. General HF exchange is not a local potential. LDA here is spin-unpolarized Dirac exchange only, without VWN or other correlation.
+p(r)=4πr²n(r), distinct from the three-dimensional density n. Each profile integrates to two electrons.
+
+## Hydrogenic atoms and helium: runnable validation examples — Compare with an independently computed reference [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-atoms/
+Coverage: reading
+
+A separate PySCF 2.11.0 script supplies Gaussian-basis HF and Libxc LDA_X references. Uncontracted s-Gaussian bases of 24, 32 and 40 functions and two LDA quadrature grids are checked. It imports no atlas SCF, Hartree or exchange function.
+ModelE Δr=0.0025 / hartreePySCF reference / hartreeRaw difference / hartreeh² extrapolation / hartree
+hf-2.8616591821-2.86167999502.081e-05-2.8616799944
+lda_x-2.7236186588-2.72363979152.113e-05-2.7236397914
+The last two meshes give (4E(h/2)−E(h))/3. Distinguish the finite-grid value, extrapolated estimate and finite-Gaussian/quadrature reference. Extrapolation is not a certified bound or the exact correlated-helium energy.
+Model|Extrapolation − reference| / hartree∫|p − p_ref| dr
+hf5.991e-101.531e-05
+lda_x9.793e-111.687e-05
+Left: H analytic-energy error. Right: He independent-reference difference.
+
+## Hydrogenic atoms and helium: runnable validation examples — Record SCF stopping rules and failures [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-atoms/
+Coverage: reading
+
+Linear density mixing uses 0.35. Convergence requires all three: input-output density L1 residual <10⁻⁹, energy change <10⁻¹⁰ hartree, and output-density orbital residual <10⁻⁷ hartree. An alternative initial density and mixing 0.7 are checked. Normalization imposes electron number, which is also tested.
+ModelIterationsNDensity residualOrbital residual / hartree
+hf432.0000000000007.323e-105.149e-11
+lda_x452.0000000000006.978e-102.458e-11
+Intentionally allowing one iteration records converged=false and reason=max_iterations for both models. A finite energy from a failed SCF run is not accepted as a ground-state answer. JSON includes complete histories, domain studies and energy components.
+
+## Hydrogenic atoms and helium: runnable validation examples — Download and reproduce [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-atoms/#download
+Coverage: reading
+
+Code, inputs and results ZIP · README · Independent-extraction verification
+python -m pip install -r requirements-dev.txt
+python -m pytest -q
+python run.py --input inputs.json --output output --figures
+Extract into a new folder first. Python 3.10+. After installing dependencies, normal reproduction requires no ChatGPT, Codex, inference API key or network. Dependency installation needs network initially. README gives optional PySCF reference-regeneration steps.
+Python solver
+Fixed-input runner and plotting
+Inputs / JSON
+Results, histories and checks / JSON
+Independent reference script
+Independent reference results
+Numerical tests
+File hashes / JSON
+All finest-grid profiles / CSV
+helium-hf.csv
+helium-lda_x.csv
+hydrogenic-z1-n1-l0.csv
+hydrogenic-z1-n2-l0.csv
+hydrogenic-z1-n2-l1.csv
+hydrogenic-z1-n3-l2.csv
+hydrogenic-z2-n1-l0.csv
+hydrogenic-z2-n2-l0.csv
+hydrogenic-z2-n2-l1.csv
+hydrogenic-z2-n3-l2.csv
+ZIP SHA-256: f81c61b854e68b9750d960a17a133ee9a00ae7bd0c3ee268263caee626cf44c9
+
+## Hydrogenic atoms and helium: runnable validation examples — Verified scope and remaining work [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-atoms/#limits
+Coverage: reading
+
+Isolated nonrelativistic infinite-nuclear-mass hydrogenic atoms and spherical 1s² helium HF / exchange-only LDA. Not a general molecular, periodic or many-electron solver.
+Checks cover analytic states, charge scaling, orthogonality, a dense eigensolver, analytic exponential-density Hartree fields, exchange differentiation, grid/domain convergence, starts, failure and independent implementations. H₂, general many-electron HF, LDA correlation/GGA/hybrids, periodic k sampling and numerical band-irrep validation remain next.
+Primary theory sources · PySCF / DFT conventions · Citation and terms
+
+## Hydrogenic atoms and helium: runnable validation examples — Verified scope and remaining work [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-atoms/#limits
+Coverage: reading
+
+This runnable-example record / JSON
+
 ## Quantum chemistry and DFT: approximations and equations [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/
@@ -4333,7 +4463,7 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemi
 Coverage: reading
 
 From Schrödinger, HF and DFT to bases, SCF and correlation, including space groups, little-group irreps, SOC and time reversal in band calculations.
-Bilingual reading for 18 entries and 28 primary publications. Dedicated runnable code and numerical validation are under construction; the equations and test plans below are not computed results.
+Bilingual reading for 18 entries and 28 primary publications. Runnable code and numerical validation cover two hydrogenic/He problem families. Molecular and periodic examples remain under construction.
 
 ## Quantum chemistry and DFT: approximations and equations — Physical model and approximation [en]
 
@@ -4364,6 +4494,7 @@ Coverage: reading
 
 The common starting point is a many-electron eigenproblem at fixed nuclear positions. We use nonrelativistic Born–Oppenheimer theory and atomic units, separating electronic energy E_el from nuclear repulsion E_NN. R_A and Z_A denote nuclear positions and charges; r_ij is an electron–electron distance.
 For one electron the pair-repulsion sum vanishes; hydrogenic energies E_n = −Z²/(2n²) provide references. The many-electron wavefunction depends on all electronic coordinates and spins, unlike the individual three-dimensional orbitals in HF or KS.
+Uniform radial-grid tests of isolated hydrogenic 1s, 2s, 2p and 3d states; not a direct general many-electron Schrödinger solver. Fixed inputs, code and measured checks
 \hat H_{\rm el}=-\frac12\sum_i\nabla_i^2-\sum_{iA}\frac{Z_A}{|\mathbf r_i-\mathbf R_A|}+\sum_{i<j}\frac1{r_{ij}}\hat H_{\rm el}\Psi=E_{\rm el}\Psi,\qquad E_{\rm tot}=E_{\rm el}+\sum_{A<B}\frac{Z_AZ_B}{R_{AB}}
 Long equations scroll horizontally.
 Nuclear dynamics, relativity, spin–orbit coupling and external fields are outside this representative Hamiltonian. A small eigenpair residual does not establish domain or basis convergence.
@@ -4378,6 +4509,7 @@ Coverage: reading
 
 HF makes the energy stationary within single antisymmetric Slater determinants. Exchange follows from the determinant; electron correlation relative to the HF reference is absent. Closed-shell RHF builds its Fock operator from doubly occupied spatial orbitals.
 J_j is a Coulomb operator and K_j is generally nonlocal exchange. Open-shell choices include UHF and ROHF, with spin contamination and symmetry breaking requiring explicit diagnostics.
+Only spherical helium with one doubly occupied 1s spatial orbital; the local HF exchange reduction is specific to this two-electron problem. Fixed inputs, code and measured checks
 \hat F=\hat h+\sum_{j\in\mathrm{occ}}(2\hat J_j-\hat K_j),\qquad \hat F\phi_i=\varepsilon_i\phi_i\mathbf F\mathbf C=\mathbf S\mathbf C\boldsymbol\varepsilon,\qquad \mathbf C^\dagger\mathbf S\mathbf C=\mathbf I
 Long equations scroll horizontally.
 HF solutions need not be unique. SCF termination does not prove basis convergence, orbital stability or the desired electronic state. Bond dissociation can expose single-reference limitations.
@@ -4392,8 +4524,15 @@ Coverage: reading
 Here DFT means density functional theory, rather than the discrete Fourier transform. Within the Hohenberg–Kohn ground-state framework, Kohn–Sham theory represents the density using auxiliary noninteracting orbitals. State the spin convention for occupations f_i and enforce their sum N.
 T_s is the auxiliary kinetic energy and E_H the classical Coulomb energy. E_xc includes exchange, correlation and the difference between interacting kinetic energy and T_s. Updating density to potential and orbitals back to density produces the nonlinear SCF problem.
 The representative local KS equation below assumes a differentiable density functional. Distinguish generalized KS treatments of nonlocal hybrid exchange and orbital-dependent meta-GGAs.
+Spin-unpolarized exchange-only Dirac LDA for spherical helium; correlation, GGA, hybrids, molecules, periodic systems and excitations are not implemented. Fixed inputs, code and measured checks
 E[n]=T_s[n]+\int v_{\rm ext}n\,d\mathbf r+E_H[n]+E_{\rm xc}[n]+E_{NN}[-\tfrac12\nabla^2+v_{\rm ext}+v_H+v_{\rm xc}]\phi_i=\varepsilon_i\phi_in(\mathbf r)=\sum_i f_i|\phi_i(\mathbf r)|^2,\quad \int n\,d\mathbf r=N,\quad v_{\rm xc}=\frac{\delta E_{\rm xc}}{\delta n}
 Long equations scroll horizontally.
+
+## Quantum chemistry and DFT: approximations and equations — Kohn–Sham density functional theory / DFT [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#kohn-sham-dft
+Coverage: reading
+
 Distinguish exact-functional theory from calculations with approximate functionals. KS eigenvalues are not generally excitation energies; ground-state DFT alone does not guarantee excited-state accuracy.
 Assumptions, implementation status and JSON
 Hohenberg, P.; Kohn, W. (1964)
@@ -4419,6 +4558,7 @@ Coverage: reading
 
 SCF is an iteration for self-consistency in HF or KS, rather than a physical model. The map M builds a potential from the input density, solves for orbitals and constructs an output density.
 Save density differences, electron number and eigenpair or orbital-gradient residuals as well as energy changes. Record mixing, initial density, occupations, iteration limits and an explicit nonconvergence termination reason.
+Helium linear density mixing with density/energy/orbital-residual checks, alternative starts/mixing and explicit failure; no DIIS. Fixed inputs, code and measured checks
 n_{k+1}=(1-\alpha)n_k+\alpha\mathcal M[n_k],\qquad 0<\alpha\le1\mathrm{Tr}(\mathbf P\mathbf S)=N,\qquad \mathbf R=\mathbf F\mathbf P\mathbf S-\mathbf S\mathbf P\mathbf F
 Long equations scroll horizontally.
 A small energy change alone is insufficient. Convergence also does not establish the lowest-energy stable electronic solution.
@@ -4445,6 +4585,7 @@ Coverage: reading
 
 With n defined as positive electron number density, the Hartree potential is the positive Coulomb integral below. Its sign differs from charge density ρ_charge = −n. Distinguish v_H in the electronic energy from electrostatic potential generated by charge.
 Isolated systems require far-field conditions. Periodic systems require a stated G=0 convention, neutrality, compensating background when used, and potential reference. Existing Poisson, FFT and particle-force methods must be matched to these signs and boundaries.
+Cumulative Coulomb quadrature for isolated spherical densities, checked against analytic exponential densities; not a general 3D or periodic Poisson implementation. Fixed inputs, code and measured checks
 v_H(\mathbf r)=\int\frac{n(\mathbf r\prime)}{|\mathbf r-\mathbf r\prime|}\,d\mathbf r\prime,\qquad \nabla^2v_H=-4\pi nE_H=\frac12\int n(\mathbf r)v_H(\mathbf r)\,d\mathbf r
 Long equations scroll horizontally.
 Check the Poisson residual, integrated electron number, far-field behavior and the one-half double-counting factor separately. A charged periodic cell does not directly give an isolated-system energy.
@@ -4459,6 +4600,7 @@ Coverage: reading
 
 LDA depends on local density, GGA on density and its gradient, and meta-GGA on quantities such as orbital kinetic-energy density. Hybrids mix in HF-type exchange. PBE, SCAN, B3 variants and PBE0 are approximation choices rather than a universal ranking.
 The formula below is spin-unpolarized Dirac exchange only. Distinguish it from LDA including correlation. State functional components, parameters, library/version and the density integration grid.
+Only spin-unpolarized Dirac exchange energy and its functional derivative are verified; LDA correlation, GGA, meta-GGA and hybrids remain reading-only. Fixed inputs, code and measured checks
 E_x^{\rm LDA}[n]=-\frac34\left(\frac3\pi\right)^{1/3}\int n^{4/3}\,d\mathbf rv_x^{\rm LDA}=-\left(\frac{3n}{\pi}\right)^{1/3}
 Basis, grid and SCF convergence do not remove functional error. Assess self-interaction, charge transfer, strong correlation and dispersion for the chosen system and approximation.
 Assumptions, implementation status and JSON
@@ -4639,13 +4781,13 @@ Assumptions, implementation status and JSON
 White, S. R. (1992)
 White, S. R.; Martin, R. L. (1999)
 
-## Quantum chemistry and DFT: approximations and equations — Next runnable validation examples [en]
+## Quantum chemistry and DFT: approximations and equations — Runnable validation examples and next plans [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#verification
 Coverage: reading
 
-These are plans, not results, and are not added to the current 58-problem inventory. Publish explicit inputs and stopping rules, with independent references, numerical error and model limitations distinguished.
-Under construction
+Two hydrogenic/He problem families were executed, independently compared and added to the 60-problem inventory. H₂ and periodic examples remain plans and are not counted.
+Runnable and checked
 
 ## Quantum chemistry and DFT: approximations and equations — One electron: hydrogenic atoms [en]
 
@@ -4653,6 +4795,7 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemi
 Coverage: reading
 
 Check E_n = −Z²/(2n²), normalization and eigenpair residuals; separate domain and grid errors.
+Results and reproduction
 
 ## Quantum chemistry and DFT: approximations and equations — First DFT example: spherical helium [en]
 
@@ -4660,6 +4803,7 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemi
 Coverage: reading
 
 Specify atomic units, a closed shell and exchange-only LDA. Save Hartree fields, electron count, density/energy SCF histories, grid convergence and an independent comparison; distinguish LDA with correlation.
+Results and reproduction
 
 ## Quantum chemistry and DFT: approximations and equations — Molecule: H₂ with HF, DFT and finite-basis FCI [en]
 
@@ -4693,7 +4837,7 @@ Relativity, spin–orbit coupling and noncollinear spin
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#sources
 Coverage: reading
 
-An original introductory synthesis of standard representative equations. Bibliographic metadata and conceptual entry points are checked against primary publication information and official documentation. Full-paper equation audits and numerical reproduction have not been performed.
+An original introductory synthesis of standard representative equations. Bibliographic metadata and conceptual entry points are checked against primary publication information and official documentation. Full-paper equation audits and numerical reproduction have not been performed. A separate scoped hydrogenic/He code edition supplies actual execution records and analytic/independent-reference comparisons.
 Schrödinger, E. (1926). Quantisierung als Eigenwertproblem. Annalen der Physik.
 Hartree, D. R. (1928). The Wave Mechanics of an Atom with a Non-Coulomb Central Field. Part I. Theory and Methods. Mathematical Proceedings of the Cambridge Philosophical Society.
 Dirac, P. A. M. (1930). Note on Exchange Phenomena in the Thomas Atom. Mathematical Proceedings of the Cambridge Philosophical Society.
@@ -4702,13 +4846,13 @@ Boys, S. F. (1950). Electronic wave functions - I. A general method of calculati
 Roothaan, C. C. J. (1951). New Developments in Molecular Orbital Theory. Reviews of Modern Physics.
 Hohenberg, P.; Kohn, W. (1964). Inhomogeneous Electron Gas. Physical Review.
 Kohn, W.; Sham, L. J. (1965). Self-Consistent Equations Including Exchange and Correlation Effects. Physical Review.
-Monkhorst, H. J.; Pack, J. D. (1976). Special points for Brillouin-zone integrations. Physical Review B.
 
 ## Quantum chemistry and DFT: approximations and equations — Primary publications and review scope [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#sources
 Coverage: reading
 
+Monkhorst, H. J.; Pack, J. D. (1976). Special points for Brillouin-zone integrations. Physical Review B.
 Hamann, D. R.; Schlüter, M.; Chiang, C. (1979). Norm-Conserving Pseudopotentials. Physical Review Letters.
 Ceperley, D. M.; Alder, B. J. (1980). Ground State of the Electron Gas by a Stochastic Method. Physical Review Letters.
 Pulay, P. (1980). Convergence acceleration of iterative sequences. The case of SCF iteration. Chemical Physics Letters.
@@ -4719,13 +4863,13 @@ Raghavachari, K.; Trucks, G. W.; Pople, J. A.; Head-Gordon, M. (1989). A fifth-o
 Vanderbilt, D. (1990). Soft self-consistent pseudopotentials in a generalized eigenvalue formalism. Physical Review B.
 White, S. R. (1992). Density matrix formulation for quantum renormalization groups. Physical Review Letters.
 Becke, A. D. (1993). Density-functional thermochemistry. III. The role of exact exchange. The Journal of Chemical Physics.
-Blöchl, P. E. (1994). Projector augmented-wave method. Physical Review B.
 
 ## Quantum chemistry and DFT: approximations and equations — Primary publications and review scope [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#sources
 Coverage: reading
 
+Blöchl, P. E. (1994). Projector augmented-wave method. Physical Review B.
 Perdew, J. P.; Burke, K.; Ernzerhof, M. (1996). Generalized Gradient Approximation Made Simple. Physical Review Letters.
 Adamo, C.; Barone, V. (1999). Toward reliable density functional methods without adjustable parameters: The PBE0 model. The Journal of Chemical Physics.
 White, S. R.; Martin, R. L. (1999). Ab initio quantum chemistry using the density matrix renormalization group. The Journal of Chemical Physics.
@@ -6971,14 +7115,14 @@ The focus is mathematical methods, formulations, applicability and verification.
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/
 Coverage: reading
 
-Bilingual introductions to 18 entries, representative equations and primary references; no dedicated implementations or numerical verification.
+Bilingual introductions to 18 entries, representative equations and primary references. A separate chapter supplies scoped hydrogenic/He runs; other dedicated implementations remain future work.
 
 ## Implementation roadmap — 2026 · Representative runnable quantum-chemistry and DFT checks [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/
 Coverage: reading
 
-Validate hydrogenic atoms, exchange-only LDA for spherical helium, then H₂; mark implemented only after actual result verification. Periodic examples must also check space/little groups, SOC/time-reversal settings and irrep assignments.
+Hydrogenic atoms and spherical-helium closed-shell HF / exchange-only LDA are executed and verified. H₂ and periodic examples remain next, including little-group/SOC/time-reversal and irrep checks.
 
 ## Implementation roadmap — 2027 · Atlas-based specialist AI and model research [en]
 
@@ -7267,13 +7411,13 @@ automatic derivative evaluation. Assess noise, dimensions/symmetries,
 expression complexity and independent-data checks. Consider the study on
 extracting symbolic models from deep learning.
 
-## Implementation roadmap — Quantum chemistry and DFT: reading available, numerical validation next [en]
+## Implementation roadmap — Quantum chemistry and DFT: hydrogenic / He validation available [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/#planned-quantum-chemistry-and-dft
 Coverage: reading
 
-Introductions, representative formulas and primary references are available for 18 entries. Dedicated code and numerical validation are next. These entries are counted as reading-only, without implementation or verification claims.
-Bilingual overview and planned numerical examples
+Introductions, representative formulas and primary references are available for 18 entries. Hydrogenic/He examples supply fixed inputs, code and independent reference comparisons. Molecular and periodic examples remain next.
+Bilingual overview, runnable examples and next plans
 
 ## Implementation roadmap — Verified Euler and MHD comparisons# [en]
 
@@ -7704,7 +7848,7 @@ Coverage: reading
 
 Published web edition, counted 2026-11-21. These are counts of catalog entries and documented examples, not a claim that every entry is a verified end-to-end solver.
 46 equation/model entries · 108 methods and building blocks · 168 journal/conference papers · 205 total sources.
-There are 9 saved-profile equation-gallery cases across 7 equation families, and 49 reading chapters including this inventory.
+There are 9 saved-profile equation-gallery cases across 7 equation families, and 50 reading chapters including this inventory.
 
 ## Site coverage and counting rules — Equations and models# [en]
 
@@ -7712,7 +7856,7 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/site-coverage
 Coverage: reading
 
 Named equation/model entries, not scalar component equations or mathematically disjoint families. Includes frameworks and auxiliary formulations; variants share one entry except the three separately explained SR/GR fluid systems. Biological entries are imported once from their own catalog.
-15 entries have scoped local examples; 31 are reading-only, including all 22 biological survey entries. A coupled system is one entry; its individual component equations do not increase the count. Poisson/Laplace and dimensional variants share entries. Named frameworks and specialized kinetic laws can both appear, so this is not a count of mathematically disjoint families.
+18 entries have scoped local examples; 28 are reading-only, including all 22 biological survey entries. A coupled system is one entry; its individual component equations do not increase the count. Poisson/Laplace and dimensional variants share entries. Named frameworks and specialized kinetic laws can both appear, so this is not a count of mathematically disjoint families.
 
 ## Site coverage and counting rules — Physics & mathematical models# [en]
 
@@ -7798,7 +7942,7 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/site-coverage
 Coverage: reading
 
 Named numerical methods and building blocks with a reading chapter. Aliases count once; RK stages, dimensions, parameter combinations, mesh layouts and theoretical conditions do not add methods. A family and a separately explained algorithm may both appear. Not a count of mutually exclusive end-to-end solvers.
-85 entries have scoped local examples; 23 are reading-only. Reconstruction limiters, preconditioners and coupling operators are building blocks, not complete PDE solvers. Mesh layouts, CFL conditions and theorems are not counted as numerical methods.
+91 entries have scoped local examples; 17 are reading-only. Reconstruction limiters, preconditioners and coupling operators are building blocks, not complete PDE solvers. Mesh layouts, CFL conditions and theorems are not counted as numerical methods.
 
 ## Site coverage and counting rules — Spatial discretization# [en]
 
@@ -7979,7 +8123,7 @@ Historical atlas →Computed gallery →
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/site-coverage/
 Coverage: reading
 
-These are introductory readings, without dedicated implementations.
+Scoped hydrogenic/He runs are available; other implementations remain planned.
 Schrodinger eigenproblems
 Electronic-structure basis sets
 Hartree–Fock
@@ -11718,6 +11862,129 @@ Coverage: reading
 
 InutsukaのGSPHは粒子流体と粒子対のリーマン問題を結び付けます。2002年の畳み込みによる導出、1994年の先行研究、Iwasaki・Inutsukaの2011年MHD拡張をたどる文献ノートと実装計画です。上のカーネル再構成はGSPH流体計算ではありません。
 
+## 水素型原子とHe：実行・検証例 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-atoms/
+Coverage: reading
+
+QUANTUM ATOMS · FIXED INPUTS · VERIFIED CODE
+
+## 水素型原子とHe：実行・検証例 — 水素型原子とHe：実行・検証例 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-atoms/
+Coverage: reading
+
+解析解から自己無撞着計算へ。水素型原子の動径方程式と、Heの閉殻HF・交換のみLDAを実際に計算し、誤差と適用範囲を確かめます。
+2つの問題群、公開コードの検査23件通過。配布ZIPを別フォルダへ展開し、固定入力の計算と画像生成を再実行しました。
+横長の表と数式は左右にスクロールできます。
+原子単位系（エネルギー：hartree、距離：bohr）。非相対論、無限質量の点核、孤立境界、一様動径格子の2次中心差分を用います。Heは球対称1s²・2電子に限定し、相関エネルギーは含みません。
+
+## 水素型原子とHe：実行・検証例 — 水素型原子：解析解で確かめる [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-atoms/#hydrogenic
+Coverage: reading
+
+[-\tfrac12\partial_r^2+\tfrac{l(l+1)}{2r^2}-\tfrac Zr]u_{nl}=E_{nl}u_{nl},\quad E_{nl}=-\frac{Z^2}{2n^2}u(0)=u(r_{\max})=0,\qquad \int |u|^2dr=1
+u=rRは縮約動径軌道です。H（Z=1）とHe⁺（Z=2）の1s・2s・2p・3dを計算します。核電荷・状態・格子を変えた走査は、台帳では1つの問題群として数えます。主計算はr_max=60 bohr、Δr=0.04, 0.02, 0.01 bohrです。
+水素1s、Δr=0.01 bohr。波形はほぼ重なりますが、有限格子の誤差は残ります。
+ZnlE / hartreeE analytic / hartree|ΔE| / hartree
+1.010-0.4999875006-0.50000000001.250e-05
+1.020-0.1249992188-0.12500000007.812e-07
+1.021-0.1250002604-0.12500000002.604e-07
+1.032-0.0555555658-0.05555555561.028e-08
+2.010-1.9998000400-2.00000000002.000e-04
+2.020-0.4999875006-0.50000000001.250e-05
+2.021-0.5000041669-0.50000000004.167e-06
+2.032-0.2222223868-0.22222222221.646e-07
+規格化、1sと2sの直交性、Z²に従うエネルギーのスケーリング、固有値残差を検査します。Δrを半分にした際のエネルギー誤差の比が約4となることも確認しています。
+
+## 水素型原子とHe：実行・検証例 — 領域打切りと格子誤差を分ける [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-atoms/
+Coverage: reading
+
+次の表は水素1sでΔr=0.01 bohrを固定したものです。大きな領域で値が安定しても、解析解との差には格子誤差が残ります。
+r_max / bohrE / hartree|E − E analytic| / hartree
+4-0.48325156551.675e-02
+8-0.49996259593.740e-05
+16-0.49998750061.250e-05
+32-0.49998750061.250e-05
+
+## 水素型原子とHe：実行・検証例 — He：HFと交換のみLDAの自己無撞着計算 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-atoms/#helium
+Coverage: reading
+
+p(r)=4\pi r^2n(r)=2u(r)^2,\qquad \int p\,dr=2v_H(r)=\int\frac{p(s)}{\max(r,s)}ds,\qquad E_H=\frac12\int p v_H\,drv_x^{\rm LDA}=-\left(\frac{3n}{\pi}\right)^{1/3},\qquad E_x^{\rm LDA}=\frac34\int p v_x^{\rm LDA}\,drE=T_s+V_{\rm nuc}+E_H+E_x,\qquad E_c=0
+nは正の電子数密度です。HFではこの2電子・単一空間軌道に限り、交換がHartree項の半分を打ち消し、v_eff=−2/r+v_H/2、E_x=−E_H/2となります。一般のHF交換が局所ポテンシャルになるという意味ではありません。LDAはスピン非偏極Dirac交換のみで、VWNなどの相関項は含めません。
+p(r)=4πr²n(r)。3次元密度nそのものとは区別します。各曲線の積分は2電子です。
+
+## 水素型原子とHe：実行・検証例 — 独立実装の参照値と比較する [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-atoms/
+Coverage: reading
+
+別スクリプトでPySCF 2.11.0を実行し、Gaussian基底のHFおよびLibxcのLDA_Xを参照にしました。基底は24・32・40個の非縮約s型Gaussian、LDAの求積は2条件で収束を確認しています。原子計算コードのSCF・Hartree・交換の関数は参照側へ持ち込んでいません。
+ModelE Δr=0.0025 / hartreePySCF reference / hartreeRaw difference / hartreeh² extrapolation / hartree
+hf-2.8616591821-2.86167999502.081e-05-2.8616799944
+lda_x-2.7236186588-2.72363979152.113e-05-2.7236397914
+表の外挿は最後の2格子による(4E(h/2)−E(h))/3です。有限格子の値、外挿による推定、有限Gaussian基底・求積の参照値を区別します。外挿は誤差の保証ではなく、真の相関を含むHeの厳密エネルギーでもありません。
+Model|Extrapolation − reference| / hartree∫|p − p_ref| dr
+hf5.991e-101.531e-05
+lda_x9.793e-111.687e-05
+左はHの解析解との差、右はHeの独立参照との差です。
+
+## 水素型原子とHe：実行・検証例 — SCFの停止条件と失敗も記録する [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-atoms/
+Coverage: reading
+
+線形密度混合率は0.35。入力・出力密度のL1残差<10⁻⁹、エネルギー変化<10⁻¹⁰ hartree、出力密度で再構築した軌道残差<10⁻⁷ hartreeを同時に満たす場合だけ収束とします。異なる初期密度と混合率0.7でも照合しました。規格化で電子数を課し、その値も検査しています。
+ModelIterationsNDensity residualOrbital residual / hartree
+hf432.0000000000007.323e-105.149e-11
+lda_x452.0000000000006.978e-102.458e-11
+最大反復数を意図的に1にした例は、両モデルとも converged=false、reason=max_iterations として保存しました。有限のエネルギーが出ていても、未収束の結果を基底状態の答えとして採用しません。全履歴・領域依存・エネルギー成分はJSONにあります。
+
+## 水素型原子とHe：実行・検証例 — 一式を取得して実行する [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-atoms/#download
+Coverage: reading
+
+コード・入力・結果のZIP · README · 独立展開の実行確認
+python -m pip install -r requirements-dev.txt
+python -m pytest -q
+python run.py --input inputs.json --output output --figures
+ZIPを新しいフォルダへ展開してから実行します。Python 3.10以上。通常の再実行にChatGPT・Codex・推論APIキー・ネット接続は不要です。依存ライブラリの初回取得にはネット接続が必要です。PySCFの参照計算もやり直す場合はREADMEの追加手順を使います。
+Python solver
+Fixed-input runner and plotting
+Inputs / JSON
+Results, histories and checks / JSON
+Independent reference script
+Independent reference results
+Numerical tests
+File hashes / JSON
+全ての最細格子プロファイル / CSV
+helium-hf.csv
+helium-lda_x.csv
+hydrogenic-z1-n1-l0.csv
+hydrogenic-z1-n2-l0.csv
+hydrogenic-z1-n2-l1.csv
+hydrogenic-z1-n3-l2.csv
+hydrogenic-z2-n1-l0.csv
+hydrogenic-z2-n2-l0.csv
+hydrogenic-z2-n2-l1.csv
+hydrogenic-z2-n3-l2.csv
+ZIP SHA-256: f81c61b854e68b9750d960a17a133ee9a00ae7bd0c3ee268263caee626cf44c9
+
+## 水素型原子とHe：実行・検証例 — 検証した範囲と残る作業 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-atoms/#limits
+Coverage: reading
+
+孤立・非相対論・無限核質量の水素型原子と、球対称1s² HeのHF・交換のみLDA。一般の分子・周期・多電子ソルバーではありません。
+規格化・解析解・電荷スケーリング・直交性・密な行列の固有値解法との照合、指数密度の解析的Hartree場、交換の汎関数微分、格子・領域収束、初期値依存、未収束、独立実装との照合を確認しました。小分子H₂、一般の多電子HF、相関を含むLDA・GGA・hybrid、周期・k点・バンドの既約表現の実行検証は次段階です。
+理論の一次文献 · PySCF / DFT conventions · 引用と利用条件
+
 ## 量子化学・DFT：何を近似し、何を解くか [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/
@@ -11731,7 +11998,7 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemi
 Coverage: reading
 
 Schrödinger、HF・DFTから基底・SCF・電子相関へ。周期系の空間群、小群、既約表現、SOCと時間反転もたどる。
-18項目の日英解説と28件の一次文献を公開。専用の実行コード・数値検証例はUnder constructionです。以下の式や検証計画を、計算済みの結果とは区別しています。
+18項目の日英解説と28件の一次文献を公開。水素型原子・Heの2問題群に実行コード・数値検証例があります。小分子・周期系などはUnder constructionです。
 
 ## 量子化学・DFT：何を近似し、何を解くか — 物理モデル・近似 [ja]
 
@@ -11762,6 +12029,7 @@ Coverage: reading
 
 固定した核配置に対して電子の多体固有値問題を解く、という共通の出発点です。ここでは非相対論・Born–Oppenheimer近似・原子単位系を使い、電子エネルギーE_elと核間反発E_NNを分けます。R_Aは核位置、Z_Aは核電荷、r_ijは電子間距離です。
 1電子なら電子間反発の和はなく、水素型原子は E_n = −Z²/(2n²) を参照値にできます。多電子のΨは全電子座標とスピンに依存するため、3次元の1電子軌道を解くHF・KSとの違いを意識します。
+孤立水素型原子の1s・2s・2p・3dを一様動径格子で検証。多電子Schrödinger方程式全体の直接解法ではありません。 固定入力・コード・検証結果
 \hat H_{\rm el}=-\frac12\sum_i\nabla_i^2-\sum_{iA}\frac{Z_A}{|\mathbf r_i-\mathbf R_A|}+\sum_{i<j}\frac1{r_{ij}}\hat H_{\rm el}\Psi=E_{\rm el}\Psi,\qquad E_{\rm tot}=E_{\rm el}+\sum_{A<B}\frac{Z_AZ_B}{R_{AB}}
 長い式は横にスクロールできます。
 核運動、相対論、スピン軌道相互作用、外場はこの代表式に含めません。固有値の残差が小さくても、領域・基底の誤差は残ります。
@@ -11776,6 +12044,7 @@ Coverage: reading
 
 HFは反対称な単一Slater行列式の範囲でエネルギーを停留させる方法です。交換は行列式から入り、そのHF参照から見た電子相関は含みません。閉殻RHFでは、二重占有された空間軌道を用いてFock演算子を作ります。
 J_jは軌道jのCoulomb場、K_jは一般に非局所な交換演算子です。開殻ではUHF・ROHF等の選択があり、UHFのスピン汚染や対称性の破れを記録する必要があります。
+Heの球対称・単一1s空間軌道を二重占有する閉殻HFのみ。交換演算子の局所還元はこの2電子問題に限ります。 固定入力・コード・検証結果
 \hat F=\hat h+\sum_{j\in\mathrm{occ}}(2\hat J_j-\hat K_j),\qquad \hat F\phi_i=\varepsilon_i\phi_i\mathbf F\mathbf C=\mathbf S\mathbf C\boldsymbol\varepsilon,\qquad \mathbf C^\dagger\mathbf S\mathbf C=\mathbf I
 長い式は横にスクロールできます。
 HFの解は一般に一意とは限りません。SCFが停止しても基底収束・軌道安定性・正しい電子状態の確認が必要です。分子解離では単一参照の限界が現れます。
@@ -11790,6 +12059,7 @@ Coverage: reading
 DFTはここでは密度汎関数理論で、離散Fourier変換の略称とは別です。Hohenberg–Kohnの基底状態の枠組みを出発点に、Kohn–Sham法は補助的な非相互作用軌道で密度を表します。占有数f_iはスピンを含む規約を明示し、和が電子数Nになるようにします。
 T_sは補助系の運動エネルギー、E_Hは古典的Coulombエネルギーです。E_xcには交換と相関に加え、相互作用系の運動エネルギーとT_sとの差も含まれます。密度からポテンシャル、軌道から密度へと更新する非線形問題をSCFで解きます。
 下式は密度のみに依存する微分可能な汎関数に対する局所KSの代表形です。hybridの非局所交換や軌道依存meta-GGA等では一般化KSの扱いを区別します。
+球対称Heのスピン非偏極・交換のみDirac LDA。相関・GGA・hybrid・分子・周期系・励起は未実装。 固定入力・コード・検証結果
 E[n]=T_s[n]+\int v_{\rm ext}n\,d\mathbf r+E_H[n]+E_{\rm xc}[n]+E_{NN}[-\tfrac12\nabla^2+v_{\rm ext}+v_H+v_{\rm xc}]\phi_i=\varepsilon_i\phi_in(\mathbf r)=\sum_i f_i|\phi_i(\mathbf r)|^2,\quad \int n\,d\mathbf r=N,\quad v_{\rm xc}=\frac{\delta E_{\rm xc}}{\delta n}
 長い式は横にスクロールできます。
 正確な汎関数の理論と、近似汎関数による実計算を分けます。KS固有値を一般に励起エネルギーと同一視せず、基底状態DFTだけで励起状態まで保証しません。
@@ -11817,6 +12087,7 @@ Coverage: reading
 
 SCFは物理モデル名ではなく、HFやKSで現れる自己無撞着条件を解く反復です。下式のMは、入力密度からポテンシャルを作り、軌道を解いて出力密度を作る写像です。
 エネルギー変化だけでなく、密度差、電子数、固有値または軌道勾配の残差を保存します。混合率、初期密度、占有の扱い、最大反復数、未収束という終了理由も出力に残します。
+Heの線形密度混合、密度・エネルギー・軌道残差、初期値・混合率の比較と未収束を検証。DIISは含みません。 固定入力・コード・検証結果
 n_{k+1}=(1-\alpha)n_k+\alpha\mathcal M[n_k],\qquad 0<\alpha\le1\mathrm{Tr}(\mathbf P\mathbf S)=N,\qquad \mathbf R=\mathbf F\mathbf P\mathbf S-\mathbf S\mathbf P\mathbf F
 長い式は横にスクロールできます。
 小さいエネルギー変化だけで収束を宣言しません。収束した解が最低エネルギーの安定な電子状態である保証も別に検査します。
@@ -11843,6 +12114,7 @@ Coverage: reading
 
 nを正の電子数密度として定義すると、Hartreeポテンシャルは下式の正のCoulomb積分です。電子の電荷密度ρ_charge = −nとは符号が異なります。電子エネルギーに入るv_Hと、電荷が作る静電ポテンシャルを混同しません。
 孤立系では無限遠の条件、周期系ではG=0成分、電荷中性、補償背景や基準電位を指定します。既存のPoisson・FFT・粒子力の章を使う際も、境界条件と符号をそのまま流用しないようにします。
+球対称孤立密度のCoulomb積分を累積和で評価。解析的な指数密度で符号・係数・自己項の数え方を検証。一般の3Dや周期のPoisson実装ではありません。 固定入力・コード・検証結果
 v_H(\mathbf r)=\int\frac{n(\mathbf r\prime)}{|\mathbf r-\mathbf r\prime|}\,d\mathbf r\prime,\qquad \nabla^2v_H=-4\pi nE_H=\frac12\int n(\mathbf r)v_H(\mathbf r)\,d\mathbf r
 長い式は横にスクロールできます。
 Poisson解の残差、積分した電子数、遠方の挙動、二重計数の1/2を別々に確かめます。周期セルの帯電系を孤立系のエネルギーとして解釈しません。
@@ -11857,6 +12129,7 @@ Coverage: reading
 
 LDAは局所密度、GGAは密度と勾配、meta-GGAは軌道の運動エネルギー密度などにも依存します。hybridはHF型交換を一部混合します。PBE、SCAN、B3系、PBE0等は交換相関近似の選択で、単なる精度の順位表ではありません。
 下式はスピン非偏極のDirac交換のみです。相関項を含むLDAと区別し、汎関数名、成分、パラメータ、ライブラリと版を明示します。電子密度の求積格子も結果を変え得ます。
+スピン非偏極Dirac交換のエネルギーと汎関数微分のみを検証。LDA相関、GGA、meta-GGA、hybridは解説のみ。 固定入力・コード・検証結果
 E_x^{\rm LDA}[n]=-\frac34\left(\frac3\pi\right)^{1/3}\int n^{4/3}\,d\mathbf rv_x^{\rm LDA}=-\left(\frac{3n}{\pi}\right)^{1/3}
 基底・格子・SCFが収束しても汎関数の近似誤差は消えません。自己相互作用、電荷移動、強相関、分散の扱いは対象と近似に応じて評価します。
 条件・実装状況・JSON
@@ -12037,13 +12310,13 @@ c_{n_1\cdots n_L}\approx\mathbf A_1^{n_1}\mathbf A_2^{n_2}\cdots\mathbf A_L^{n_L
 White, S. R. (1992)
 White, S. R.; Martin, R. L. (1999)
 
-## 量子化学・DFT：何を近似し、何を解くか — 次に付ける実行・検証例 [ja]
+## 量子化学・DFT：何を近似し、何を解くか — 実行・検証例と次の計画 [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#verification
 Coverage: reading
 
-以下は計画で、まだ計算結果ではありません。同じ入力と停止条件を公開し、独立した参照、数値誤差、モデルの限界を別々に示します。現行58問題の総数には加えていません。
-Under construction
+水素型原子・Heの2問題群を実行し、独立参照と比較して全60問題の台帳へ加えました。小分子H₂・周期系は計画で、件数には加えていません。
+実行・検証例あり
 
 ## 量子化学・DFT：何を近似し、何を解くか — 1電子：水素型原子 [ja]
 
@@ -12051,6 +12324,7 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemi
 Coverage: reading
 
 E_n = −Z²/(2n²)、規格化、固有値残差を確認し、領域と格子の誤差を分離。
+結果・実行手順
 
 ## 量子化学・DFT：何を近似し、何を解くか — 最初のDFT：球対称He原子 [ja]
 
@@ -12058,6 +12332,7 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemi
 Coverage: reading
 
 原子単位系・閉殻・交換のみLDAを明示。Hartree場、電子数、密度とエネルギーのSCF履歴、格子収束、独立実装との比較を保存。相関を含むLDAとは区別。
+結果・実行手順
 
 ## 量子化学・DFT：何を近似し、何を解くか — 分子：H₂のHF・DFTと有限基底FCI [ja]
 
@@ -12091,7 +12366,7 @@ CASPT2・NEVPT2と多参照相関
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#sources
 Coverage: reading
 
-標準的な代表式を独自に要約した導入です。一次文献の書誌を照合し、理論の位置付けは原論文の公開情報と公式資料で確認しています。原論文の全式の監査や数値再現は未実施です。
+標準的な代表式を独自に要約した導入です。一次文献の書誌を照合し、理論の位置付けは原論文の公開情報と公式資料で確認しています。原論文の全式の監査や数値再現は未実施です。 水素型原子・Heの限定実装については、別配布版に実行記録・解析解と独立参照の照合を公開しています。
 Schrödinger, E. (1926). Quantisierung als Eigenwertproblem. Annalen der Physik.
 Hartree, D. R. (1928). The Wave Mechanics of an Atom with a Non-Coulomb Central Field. Part I. Theory and Methods. Mathematical Proceedings of the Cambridge Philosophical Society.
 Dirac, P. A. M. (1930). Note on Exchange Phenomena in the Thomas Atom. Mathematical Proceedings of the Cambridge Philosophical Society.
@@ -12102,13 +12377,13 @@ Hohenberg, P.; Kohn, W. (1964). Inhomogeneous Electron Gas. Physical Review.
 Kohn, W.; Sham, L. J. (1965). Self-Consistent Equations Including Exchange and Correlation Effects. Physical Review.
 Monkhorst, H. J.; Pack, J. D. (1976). Special points for Brillouin-zone integrations. Physical Review B.
 Hamann, D. R.; Schlüter, M.; Chiang, C. (1979). Norm-Conserving Pseudopotentials. Physical Review Letters.
-Ceperley, D. M.; Alder, B. J. (1980). Ground State of the Electron Gas by a Stochastic Method. Physical Review Letters.
 
 ## 量子化学・DFT：何を近似し、何を解くか — 一次文献と確認範囲 [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#sources
 Coverage: reading
 
+Ceperley, D. M.; Alder, B. J. (1980). Ground State of the Electron Gas by a Stochastic Method. Physical Review Letters.
 Pulay, P. (1980). Convergence acceleration of iterative sequences. The case of SCF iteration. Chemical Physics Letters.
 Roos, B. O.; Taylor, P. R.; Siegbahn, P. E. M. (1980). A complete active space SCF method (CASSCF) using a density matrix formulated super-CI approach. Chemical Physics.
 Knowles, P. J.; Handy, N. C. (1984). A new determinant-based full configuration interaction method. Chemical Physics Letters.
@@ -12119,13 +12394,13 @@ White, S. R. (1992). Density matrix formulation for quantum renormalization grou
 Becke, A. D. (1993). Density-functional thermochemistry. III. The role of exact exchange. The Journal of Chemical Physics.
 Blöchl, P. E. (1994). Projector augmented-wave method. Physical Review B.
 Perdew, J. P.; Burke, K.; Ernzerhof, M. (1996). Generalized Gradient Approximation Made Simple. Physical Review Letters.
-Adamo, C.; Barone, V. (1999). Toward reliable density functional methods without adjustable parameters: The PBE0 model. The Journal of Chemical Physics.
 
 ## 量子化学・DFT：何を近似し、何を解くか — 一次文献と確認範囲 [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#sources
 Coverage: reading
 
+Adamo, C.; Barone, V. (1999). Toward reliable density functional methods without adjustable parameters: The PBE0 model. The Journal of Chemical Physics.
 White, S. R.; Martin, R. L. (1999). Ab initio quantum chemistry using the density matrix renormalization group. The Journal of Chemical Physics.
 Aroyo, M. I.; Kirov, A.; Capillas, C.; Perez-Mato, J. M.; Wondratschek, H. (2006). Bilbao Crystallographic Server. II. Representations of crystallographic point groups and space groups. Acta Crystallographica Section A.
 Fu, L.; Kane, C. L. (2007). Topological Insulators with Inversion Symmetry. Physical Review B.
@@ -14142,14 +14417,14 @@ Coverage: reading
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/
 Coverage: reading
 
-18項目の日英解説、代表式、一次文献。専用実装・数値検証は含まない。
+18項目の日英解説、代表式、一次文献。水素型原子・Heの限定した実行例は別章に公開し、その他の専用実装は今後の作業として区別する。
 
 ## 実装ロードマップ — 2026 · 量子化学・DFTの代表的な実行・検証例 [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/
 Coverage: reading
 
-水素型原子、球対称Heの交換のみLDA、小分子H₂を順に検証。実行結果の確認後にのみ実装済みへ変更する。 周期系では空間群・小群・SOC・時間反転の条件と既約表現の割当ても照合する。
+水素型原子と球対称Heの閉殻HF・交換のみLDAを実行・検証。小分子H₂と周期系は次段階。周期系では小群・SOC・時間反転と既約表現の条件も照合する。
 
 ## 実装ロードマップ — 2027 · アトラスを核とする専門AI・モデル研究 [ja]
 
@@ -14306,13 +14581,13 @@ Coverage: reading
  応用候補 — Neural Operator／Fourier Neural Operator：入力関数から解関数への写像を学習する考え方を、既存のFourier基底・スペクトル法と接続します。学習分布外、格子変更、離散化・aliasing誤差を独立に確認する計画とし、格子を変更できることだけで精度を保証しません。Neural Operator原論文を参照します。
  応用候補 — 記号回帰と方程式発見：データや学習モデルから明示的な数式を探す方法。微分の自動計算と区別し、ノイズ、次元・対称性、式の複雑さ、別データでの再現性を評価します。深層学習から記号モデルを抽出する研究を調査候補とします。
 
-## 実装ロードマップ — 量子化学・DFT：解説公開、検証例は次段階 [ja]
+## 実装ロードマップ — 量子化学・DFT：水素型原子・Heの検証例を公開 [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/#planned-quantum-chemistry-and-dft
 Coverage: reading
 
-18項目の導入解説・代表式・一次文献を公開しました。専用コードと数値検証は次段階です。解説のみとして収録台帳へ加え、実装済み・検証済みとは表示していません。
-日英の解説と計算例の計画
+18項目の導入解説・代表式・一次文献を公開しました。水素型原子・Heには固定入力、コード、独立参照との比較があります。小分子・周期系は次段階です。
+日英の解説・計算例と今後の計画
 
 ## 実装ロードマップ — 検証付きEuler・MHD比較# [ja]
 
@@ -14600,7 +14875,7 @@ Coverage: reading
 
 公開Web版、集計日2026-11-21。数えるのはカタログ項目と記載した実験例です。すべての項目が検証済みの完全なソルバーであるという意味ではありません。
 方程式・モデル46項目・計算法と構成要素108項目・学術誌／会議論文168件・全参考資料205件。
-保存済み計算を用いる方程式ギャラリーは7系統・9例、読書章はこの一覧を含め49章です。
+保存済み計算を用いる方程式ギャラリーは7系統・9例、読書章はこの一覧を含め50章です。
 
 ## 収録範囲と数え方 — 方程式とモデル# [ja]
 
@@ -14608,7 +14883,7 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/site-coverage
 Coverage: reading
 
 名前付きの方程式・モデルを数えます。スカラー成分や数学的に互いに独立な系統の数ではありません。枠組みや補助定式化を含み、通常は派生形を一つにまとめます。ただし個別に説明するSR／GRの流体系3種類は分けます。生物モデルは専用カタログから一度だけ取り込みます。
-ローカル実験のある項目は15、文献解説のみは31で、後者には生物調査22項目すべてを含みます。連成系は一項目とし、成分方程式では増やしません。Poisson／Laplaceや次元の違いもまとめます。枠組みと個別反応則が並ぶため、数学的に独立した系統数ではありません。
+ローカル実験のある項目は18、文献解説のみは28で、後者には生物調査22項目すべてを含みます。連成系は一項目とし、成分方程式では増やしません。Poisson／Laplaceや次元の違いもまとめます。枠組みと個別反応則が並ぶため、数学的に独立した系統数ではありません。
 一覧の詳細な範囲注記は原文（英語）を保持します。各章の日本語本文も併せて参照できます。
 
 ## 収録範囲と数え方 — 物理・数学モデル# [ja]
@@ -14695,7 +14970,7 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/site-coverage
 Coverage: reading
 
 名前付きの離散化法、積分法、線形・非線形解法、連成演算子を数えます。パラメータの違いでは増やしません。
-ローカル実験のある項目は85、文献解説のみは23です。再構成の制限関数、前処理、連成演算子は構成要素であり、完全なPDEソルバーではありません。格子配置、CFL条件、定理は計算法の数に含めません。
+ローカル実験のある項目は91、文献解説のみは17です。再構成の制限関数、前処理、連成演算子は構成要素であり、完全なPDEソルバーではありません。格子配置、CFL条件、定理は計算法の数に含めません。
 
 ## 収録範囲と数え方 — 空間離散化# [ja]
 
@@ -14868,7 +15143,7 @@ Coverage: reading
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/site-coverage/
 Coverage: reading
 
-以下は導入解説のみで、専用実装は未公開です。
+水素型原子・Heに限定した実行例を公開し、その他の実装予定と区別しています。
 Schrödinger固有値問題
 電子状態計算の基底
 Hartree–Fock法
@@ -15821,7 +16096,7 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/
 Coverage: overview
 
 方程式、離散化、実装、ベンチマークをたどる。衝撃波、流体、Poisson、時間積分、粒子法、有限要素法を学ぶ。
-教育用実装・限定的な検証・文献調査・開発予定が混在。各章の範囲を確認。量子化学・HF・DFTは日英の導入解説を公開、専用実装と数値検証は未提供。
+教育用実装・限定的な検証・文献調査・開発予定が混在。量子化学には水素型原子と球対称Heの閉殻HF・交換のみLDAの検証例がある。分子・周期系の専用例は未公開。
 
 ## Numerical Methods Atlas [en]
 
@@ -15829,4 +16104,4 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/
 Coverage: overview
 
 Equations, discretization, implementation and benchmarks: shocks, fluids, Poisson, time integration, particle methods and finite elements.
-Includes scoped educational implementations, verification, reading and plans. Quantum chemistry, HF and DFT have bilingual introductory readings but no dedicated implementation or numerical verification yet.
+Contains scoped educational implementations, validation, reading and plans. Quantum examples cover hydrogenic atoms and spherical-helium closed-shell HF / exchange-only LDA; molecular and periodic examples are not supplied yet.

@@ -697,11 +697,35 @@
         "ja": "保存済み有理減衰ODEの時間刻み収束（代表3手法）。",
         "en": "Stored time-refinement errors for rational decay, showing three methods."
       }
+    },
+    {
+      "id": "hydrogenic-atoms",
+      "image": "/numerical-methods-atlas/assets/quantum-atoms/hydrogenic.png",
+      "image_sha256": "2f1ea60a391f26c8fd086999e56155ed1bf3bc5c5b80c6d9f2c44ee2c5dca1cf",
+      "width": 960,
+      "height": 570,
+      "source_kind": "existing-figure",
+      "caption": {
+        "ja": "公開した原子計算コードの固定入力から計算。条件・CSV・収束検査・独立参照を解説先に保存。",
+        "en": "Computed from the public atomic-code fixed inputs, with conditions, CSV profiles, convergence checks and independent references linked in the reading."
+      }
+    },
+    {
+      "id": "helium-ground-state",
+      "image": "/numerical-methods-atlas/assets/quantum-atoms/helium.png",
+      "image_sha256": "8ff2541771b6db954c2d5dd8fc1c57edb7f720b90405ad6084d20394cda211e6",
+      "width": 960,
+      "height": 570,
+      "source_kind": "existing-figure",
+      "caption": {
+        "ja": "公開した原子計算コードの固定入力から計算。条件・CSV・収束検査・独立参照を解説先に保存。",
+        "en": "Computed from the public atomic-code fixed inputs, with conditions, CSV profiles, convergence checks and independent references linked in the reading."
+      }
     }
   ],
   "source_sha256": {
-    "catalog/atlas-gallery.json": "3f78a3fa36ba22095f6815f2c57acab85554aa4c0ebaf6329a5495036528aca1",
-    "scripts/render-atlas-gallery.py": "1866f93c1cbee63212da8bcc5a9716de01e15ab95fcaa49b93de3d1f67e965e0",
+    "catalog/atlas-gallery.json": "c61e5c7d4848fabba0596942134011c64bcfda42fc823416798b92b307064dce",
+    "scripts/render-atlas-gallery.py": "0e61bd59c459b2b7945e12ae2f89eafaf55fda28cde0e5c4530fa46dc7865ba7",
     "code/numerical-methods-atlas/2026-11-21/numart/benchmarks.py": "dc8f83aafea473b5f0e1e7bf82630484dd60aa446859c1f602571adc3c59f019",
     "code/numerical-methods-atlas/2026-11-21/numart/solvers.py": "7811862ea3384cef825a1d382c24c6e19a175fb688a024fa4117959eed4bf05d",
     "code/numerical-methods-atlas/2026-11-21/numart/linear.py": "d58db4efc09a3358b28cff07ba3a2e732244eaaf2f82a5fcf1ce0de001ba87a9",
@@ -739,7 +763,9 @@
     "numerical-methods-atlas/assets/gravity-boundaries.png": "d660c26c162d156dba24026b81efa2b78a4b02924f72d16594aa63c19038103c",
     "numerical-methods-atlas/hamiltonian.json": "530c74ca27962b28579d90de47bc3d42df5d4ef1ad90d9e7606a64772c638203",
     "numerical-methods-atlas/basis.json": "13bac5be15b5a43e7a103120e225fb15388650ae4de66aa731b4e324a8525651",
-    "numerical-methods-atlas/runge-kutta.json": "e2f5f1484a8d3edf1bb5511d4f237de20615ddad4103d1277f34f7357ae9d501"
+    "numerical-methods-atlas/runge-kutta.json": "e2f5f1484a8d3edf1bb5511d4f237de20615ddad4103d1277f34f7357ae9d501",
+    "numerical-methods-atlas/assets/quantum-atoms/hydrogenic.png": "2f1ea60a391f26c8fd086999e56155ed1bf3bc5c5b80c6d9f2c44ee2c5dca1cf",
+    "numerical-methods-atlas/assets/quantum-atoms/helium.png": "8ff2541771b6db954c2d5dd8fc1c57edb7f720b90405ad6084d20394cda211e6"
   },
-  "calculations_sha256": "877ba403f68c67a337cf45f7158a5404758d03e61657f701a545fbf14f8a65a4"
+  "calculations_sha256": "d98cd75e1c58177bfc716e8b68d6bfba1358d5135ac8e2ee0989eb3df77942a6"
 }

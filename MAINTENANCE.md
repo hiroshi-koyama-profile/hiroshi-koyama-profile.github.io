@@ -50,7 +50,9 @@ Google Search Consoleの対象プロパティは `https://hrkoyama.github.io/`�
 
 人向けの入口は文字・数式・絵の3つ。入口の文言も `catalog/atlas-purpose.json`、数式一覧の代表形と解説先は `catalog/atlas-equations.json` を編集する。数式一覧は `build-atlas-equations.py` で生成する。冒頭の数値は取り込み済み `coverage.json` の定義に従う。学術論文数を一次論文数と呼ばず、波形テスト数を全サイトのテスト問題総数や自動検査件数と混同しない。掲載する数式の行数と方程式・モデルの種類数も区別する。
 
-量子化学・DFTの正本は `catalog/atlas-quantum.json`。`build-atlas-quantum.py` が日英の導入、式、一次文献へのリンクを生成し、共通文献台帳・BibTeX・収録数・読書章・ロードマップを更新する。量子化学の各手法は `reading-only`、追加4モデルも `reading` であり、実行コードや数値検証を提供していると変更しない。予定する水素型原子・He交換のみLDA・H₂・周期系の例を58問題の台帳や画像一覧へ加算しない。量子化学の文献はDOIで重複を除き、既存の公開コード版と元の検証記録は変更しない。基底・SCFの数値誤差と物理近似の誤差、交換のみLDAと相関を含むLDA、局所KSと一般化KS、有限基底FCIと連続空間の厳密解を区別する。
+量子化学・DFTの正本は `catalog/atlas-quantum.json`。`build-atlas-quantum.py` が日英の導入、式、一次文献、収録数・ロードマップを更新する。水素型原子・Heの2問題群は固定入力で実行し、原子計算版の23検査と独立したPySCF/Libxc参照で確認済み。6手法・3モデルの状態を、この限定した範囲で実行例ありにする。他の量子手法・時間依存KS・予定するH₂・周期系は未実装のまま、計画を実行例に加算しない。テスト台帳と画像一覧は全60問題。文献はDOIで重複を除き、既存の公開コード版と元の検証記録は変更しない。基底・格子・SCFの数値誤差と物理近似の誤差、交換のみLDAと相関を含むLDA、局所KSと一般化KS、有限基底FCIと連続空間の厳密解を区別する。
+
+原子計算の正本は `catalog/atlas-quantum-examples.json` と別系列の `code/quantum-atoms/<edition>/`。同梱 `run.py` と `reference_pyscf.py` は別実装であり、参照側に教育用コードの関数を流用しない。PySCFの交換のみ汎関数は `LDA_X,` と明示する。有限格子値・h²外挿の推定・有限基底の独立参照値を別々に表示する。新しい原子計算版は必要な依存関係を用意したPythonで `scripts/package-quantum-atoms.py --edition YYYY-MM-DD` を実行する。このコマンドはZIPを別フォルダへ展開し、検査と固定入力全計算・画像生成を実行して、ハッシュと実際の結果を記録する。公開済みZIPは上書きできない。`build-quantum-examples.py` は通常の更新時にその記録と全ファイルのハッシュを確認して日英HTML/JSONを生成し、計算は再実行しない。関連する6手法の `quantum_examples` を別系列コードへ結び、旧版の `code_modules` に混ぜない。
 
 現在の作業順序と専門AIを2027年以降に繰り延べる決定は `catalog/atlas-work-queue.json` が正本。専門AIや独立した基盤モデルが実装済みであると表示しない。数値検証例は実際に固定入力で計算し、独立参照・残差・収束・終了理由・コードと環境の版を記録してから台帳の状態を変更する。
 

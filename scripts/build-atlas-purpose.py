@@ -18,7 +18,7 @@ def browse(lang):
     cards=[]
     for x in c['browse']:
         attr=' data-atlas-word-search' if x['id']=='words' else ''
-        cards.append('<a class="atlas-way" href="'+routes[x['id']]+'"'+attr+'><div class="atlas-way-preview '+('formula' if x['id']=='equations' else '')+'">'+previews[x['id']]+'</div><h3>'+html.escape(x['title'])+'</h3><p>'+html.escape(x['description'])+'</p><span class="atlas-way-arrow">'+html.escape(x['action'])+'</span></a>')
+        cards.append('<a class="atlas-way" href="'+routes[x['id']]+'"'+attr+'><div class="atlas-way-preview '+('formula' if x['id']=='equations' else '')+'">'+previews[x['id']]+'</div><h3>'+html.escape(x['title'])+'</h3><p>'+html.escape(x['description'].format(**coverage['counts']))+'</p><span class="atlas-way-arrow">'+html.escape(x['action'])+'</span></a>')
     return '<section class="page-width atlas-ways" aria-labelledby="atlas-ways-'+lang+'"><h2 id="atlas-ways-'+lang+'">'+html.escape(c['browse_title'])+'</h2><div class="atlas-way-grid">'+''.join(cards)+'</div></section>'
 def metrics(lang):
     counts=coverage['counts'];c=copy[lang]['metrics']
