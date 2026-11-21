@@ -1,6 +1,6 @@
 {
-  "schema_version": "0.4",
-  "updated_on": "2026-11-12",
+  "schema_version": "0.5",
+  "updated_on": "2026-11-22",
   "scope": "Annual source-linked candidate title/DOI rosters; selected manuscript fields checked for papers from 2008 and 2023–2025; historical coverage remains incomplete",
   "sources": {
     "selection": {
@@ -2730,6 +2730,12 @@
       "title": "Detailed manuscript coverage expanded beyond SC08",
       "state": "Checked",
       "detail": "Selected papers from each of 2023, 2024 and 2025 now include ordered bylines, editorial summaries, machine configurations and source-located performance records. Other web-roster entries retain their bibliography-only status."
+    },
+    {
+      "id": "sc26-postconference",
+      "state": "Recorded",
+      "title": "SC26 award and source-version follow-up",
+      "detail": "Six official-program finalists reviewed after SC26. One winner is directly verified from ACM; individual outcomes of the other five remain unestablished here. All six publisher-assigned DOIs returned HTTP 404 on this check. Conference-day final scores remain unverified."
     }
   ],
   "coverage": {
@@ -5035,7 +5041,7 @@
     {
       "year": 2026,
       "local_candidate_count": null,
-      "status": "Annual source indexed; 6 DOI matches verified. Manuscript review is tracked separately.",
+      "status": "Postconference review 2026-11-22: 6 program finalists; 1 ACM winner verified; 6 publisher-assigned DOI resolvers returned404. No final conference score established.",
       "candidate_count": 6,
       "verified_doi_count": 6,
       "sc_links": {
@@ -5059,7 +5065,7 @@
     {
       "year": 2026,
       "award_series": "ACM Gordon Bell Prize",
-      "checked_on": "2026-11-12",
+      "checked_on": "2026-11-22",
       "sources": [
         {
           "id": "sc26_s1",
@@ -5217,10 +5223,447 @@
           "checked_on": "2026-11-12",
           "local_reference": "歴史一次資料/CSDL_SC2026_main06_metadata.json",
           "source_sha256": "80b66e7255c7898ffb40828541f50213862af348baa9a5bd8eda30350c269145"
+        },
+        {
+          "id": "sc26_acm_awards_release",
+          "url": "https://awards.acm.org/binaries/content/assets/press-releases/2026/november/gordon-bell-prize-2026.pdf",
+          "label": "ACM Awards-hosted news release: 10-Member Team Drawn from Chinese Institutions Wins 2026 Gordon Bell Prize",
+          "kind": "direct_award_body_press_release_pdf",
+          "checked_on": "2026-11-22",
+          "published_on": "2026-11-19",
+          "source_revision_date": null,
+          "local_reference": "2026/web_postconference/acm_awards_press_release.pdf",
+          "source_sha256": "30dca7af100e0347da536112cb3fc8e8948cdbf3716530605ad45e5e3158c2d1"
+        },
+        {
+          "id": "sc26_acm_www_release",
+          "url": "https://www.acm.org/binaries/content/assets/press-releases/2026/november/gordon-bell-prize-2026.pdf",
+          "label": "ACM main-host news release, same announcement with textual differences",
+          "kind": "direct_award_body_press_release_pdf_variant",
+          "checked_on": "2026-11-22",
+          "published_on": "2026-11-19",
+          "source_revision_date": null,
+          "local_reference": "2026/web_postconference/acm_press_release.pdf",
+          "source_sha256": "e0443ed96f1d59fa643d9a3764224a1271085fb35059817aead0fe5ba408c108"
+        },
+        {
+          "id": "sc26_official_awards_page",
+          "url": "https://sc26.supercomputing.org/program/awards/",
+          "label": "SC26 official awards overview; nomination descriptions, not award results",
+          "kind": "official_conference_awards_overview",
+          "checked_on": "2026-11-22",
+          "published_on": null,
+          "source_revision_date": null,
+          "local_reference": "2026/web_postconference/sc26_awards.html",
+          "source_sha256": "55af07f7476e22caf335fd46456d36f0a0eec216d64a2a258d8461a2a90d204a"
+        },
+        {
+          "id": "sc26_official_gb103",
+          "url": "https://sc26.supercomputing.org/proceedings/papers/paper_pages/gb103.html",
+          "label": "SC26 official proceedings page for the FeMo-Cofactor project",
+          "kind": "official_conference_proceedings_page",
+          "checked_on": "2026-11-22",
+          "published_on": null,
+          "source_revision_date": null,
+          "local_reference": "2026/web_postconference/sc26_gb103_proceedings.html",
+          "source_sha256": "220660576b42d252420935d56131338033d1930d772b336b0011a074fb4510a0"
+        },
+        {
+          "id": "sc26_hpcwire_acm_republication",
+          "url": "https://www.hpcwire.com/off-the-wire/chinese-team-wins-2026-acm-gordon-bell-prize-for-exascale-quantum-chemistry/",
+          "label": "HPCwire Off the Wire, Source: ACM, November 19, 2026",
+          "kind": "award_body_attributed_press_release_republication",
+          "checked_on": "2026-11-22",
+          "published_on": "2026-11-19",
+          "local_reference": null,
+          "source_sha256": null
+        },
+        {
+          "id": "sc26_post_session_197",
+          "url": "https://sc26.conference-program.com/session/?sess=sess197",
+          "kind": "official_conference_session",
+          "checked_on": "2026-11-22",
+          "local_reference": "2026/web_postconference/2026-11-22_session_197.html",
+          "source_sha256": "9a8a73fd76f2d143298e60c0718af70643c3ba98edec38a60c2d2e010259e67b",
+          "label": "SC26 official finalist session · 2026-11-22"
+        },
+        {
+          "id": "sc26_post_session_218",
+          "url": "https://sc26.conference-program.com/session/?sess=sess218",
+          "kind": "official_conference_session",
+          "checked_on": "2026-11-22",
+          "local_reference": "2026/web_postconference/2026-11-22_session_218.html",
+          "source_sha256": "4d8e7c6d671fd1419f09b854466fc51a8d30bc06b27b1a52aadeec401394a512",
+          "label": "SC26 official finalist session · 2026-11-22"
+        },
+        {
+          "id": "sc26_post_main01_doi",
+          "url": "https://doi.org/10.1109/SC51908.2026.00007",
+          "kind": "doi_resolution",
+          "checked_on": "2026-11-22",
+          "local_reference": "2026/web_postconference/2026-11-22_main01_doi.html",
+          "source_sha256": "2d53d4efde13360e104657edf8d85fdff5f967b597225a14cd63e4af012ac5b1",
+          "label": "DOI resolver check · 2026-11-22"
+        },
+        {
+          "id": "sc26_post_main01_publisher",
+          "url": "https://www.computer.org/csdl/api/v1/graphql?query=query+%28%24articleId%3A+String%21%29+%7B+proceeding%3A+proceedingByArticleId%28articleId%3A+%24articleId%29+%7B+id+title+acronym+year+%7D+article%3A+articleById%28articleId%3A+%24articleId%29+%7B+id+doi+title+normalizedTitle+fno+authors+%7B+fullName+givenName+surname+%7D+idPrefix+pubDate+pubType+pages+year+%7D+%7D&variables=%7B%22articleId%22%3A+%222lkuzbdetfG%22%7D",
+          "kind": "publisher_article_metadata",
+          "checked_on": "2026-11-22",
+          "local_reference": "2026/web_postconference/2026-11-22_main01_publisher.json",
+          "source_sha256": "faf9f1cf1894abe084d59b53944c228ac1905577426b3140211743fd92c66415",
+          "label": "IEEE Computer Society article metadata · 2026-11-22"
+        },
+        {
+          "id": "sc26_post_main01_program",
+          "url": "https://sc26.conference-program.com/presentation/?id=gb101&sess=sess197",
+          "kind": "official_conference_presentation",
+          "checked_on": "2026-11-22",
+          "local_reference": "2026/web_postconference/2026-11-22_main01_program.html",
+          "source_sha256": "fd87605c81249085ab7a69fb57c129c2d809b340aa4d8448f7b31b841baa0285",
+          "label": "SC26 official presentation record · 2026-11-22"
+        },
+        {
+          "id": "sc26_post_main02_doi",
+          "url": "https://doi.org/10.1109/SC51908.2026.00008",
+          "kind": "doi_resolution",
+          "checked_on": "2026-11-22",
+          "local_reference": "2026/web_postconference/2026-11-22_main02_doi.html",
+          "source_sha256": "6b3de1a8604c33af95c35570faedc0701066a129786a3ca51d937f81f3bdf048",
+          "label": "DOI resolver check · 2026-11-22"
+        },
+        {
+          "id": "sc26_post_main02_publisher",
+          "url": "https://www.computer.org/csdl/api/v1/graphql?query=query+%28%24articleId%3A+String%21%29+%7B+proceeding%3A+proceedingByArticleId%28articleId%3A+%24articleId%29+%7B+id+title+acronym+year+%7D+article%3A+articleById%28articleId%3A+%24articleId%29+%7B+id+doi+title+normalizedTitle+fno+authors+%7B+fullName+givenName+surname+%7D+idPrefix+pubDate+pubType+pages+year+%7D+%7D&variables=%7B%22articleId%22%3A+%222lkuzcdoCJO%22%7D",
+          "kind": "publisher_article_metadata",
+          "checked_on": "2026-11-22",
+          "local_reference": "2026/web_postconference/2026-11-22_main02_publisher.json",
+          "source_sha256": "8c720790c28e11f127b04c63f6f570087ed31e2e8f4f2d7ae41048217f1b2077",
+          "label": "IEEE Computer Society article metadata · 2026-11-22"
+        },
+        {
+          "id": "sc26_post_main02_program",
+          "url": "https://sc26.conference-program.com/presentation/?id=gb105&sess=sess197",
+          "kind": "official_conference_presentation",
+          "checked_on": "2026-11-22",
+          "local_reference": "2026/web_postconference/2026-11-22_main02_program.html",
+          "source_sha256": "7ba54f93e671e245dfc9fbf5095a431e7f0cf35c46db93901a0635508fc15803",
+          "label": "SC26 official presentation record · 2026-11-22"
+        },
+        {
+          "id": "sc26_post_main03_doi",
+          "url": "https://doi.org/10.1109/SC51908.2026.00009",
+          "kind": "doi_resolution",
+          "checked_on": "2026-11-22",
+          "local_reference": "2026/web_postconference/2026-11-22_main03_doi.html",
+          "source_sha256": "f763cba86b8ce1747a7a7e7414c656cddd67ec6c3a2914e12435fd31e41c5815",
+          "label": "DOI resolver check · 2026-11-22"
+        },
+        {
+          "id": "sc26_post_main03_publisher",
+          "url": "https://www.computer.org/csdl/api/v1/graphql?query=query+%28%24articleId%3A+String%21%29+%7B+proceeding%3A+proceedingByArticleId%28articleId%3A+%24articleId%29+%7B+id+title+acronym+year+%7D+article%3A+articleById%28articleId%3A+%24articleId%29+%7B+id+doi+title+normalizedTitle+fno+authors+%7B+fullName+givenName+surname+%7D+idPrefix+pubDate+pubType+pages+year+%7D+%7D&variables=%7B%22articleId%22%3A+%222lkuzdolxao%22%7D",
+          "kind": "publisher_article_metadata",
+          "checked_on": "2026-11-22",
+          "local_reference": "2026/web_postconference/2026-11-22_main03_publisher.json",
+          "source_sha256": "78abf2149fc6c8faf5fa7560d8f5a82bd5fc5a62ca6b30dff068b3ffb71ebdb7",
+          "label": "IEEE Computer Society article metadata · 2026-11-22"
+        },
+        {
+          "id": "sc26_post_main03_program",
+          "url": "https://sc26.conference-program.com/presentation/?id=gb104&sess=sess197",
+          "kind": "official_conference_presentation",
+          "checked_on": "2026-11-22",
+          "local_reference": "2026/web_postconference/2026-11-22_main03_program.html",
+          "source_sha256": "226a3d30fde9693d12fb707d5af19edacf21befbb321ff33f26b0ca113cb9c19",
+          "label": "SC26 official presentation record · 2026-11-22"
+        },
+        {
+          "id": "sc26_post_main04_doi",
+          "url": "https://doi.org/10.1109/SC51908.2026.00010",
+          "kind": "doi_resolution",
+          "checked_on": "2026-11-22",
+          "local_reference": "2026/web_postconference/2026-11-22_main04_doi.html",
+          "source_sha256": "7eaffbb724d73a47939c95d444304645e616d0ece547bd74d3701e7a5ba3bcea",
+          "label": "DOI resolver check · 2026-11-22"
+        },
+        {
+          "id": "sc26_post_main04_publisher",
+          "url": "https://www.computer.org/csdl/api/v1/graphql?query=query+%28%24articleId%3A+String%21%29+%7B+proceeding%3A+proceedingByArticleId%28articleId%3A+%24articleId%29+%7B+id+title+acronym+year+%7D+article%3A+articleById%28articleId%3A+%24articleId%29+%7B+id+doi+title+normalizedTitle+fno+authors+%7B+fullName+givenName+surname+%7D+idPrefix+pubDate+pubType+pages+year+%7D+%7D&variables=%7B%22articleId%22%3A+%222lkuzegQw8M%22%7D",
+          "kind": "publisher_article_metadata",
+          "checked_on": "2026-11-22",
+          "local_reference": "2026/web_postconference/2026-11-22_main04_publisher.json",
+          "source_sha256": "9715df40fea4a0b368ce18c0bca68ad9b2a0300e130eb0a0cb8049ac3f4eb6ba",
+          "label": "IEEE Computer Society article metadata · 2026-11-22"
+        },
+        {
+          "id": "sc26_post_main04_program",
+          "url": "https://sc26.conference-program.com/presentation/?id=gb103&sess=sess197",
+          "kind": "official_conference_presentation",
+          "checked_on": "2026-11-22",
+          "local_reference": "2026/web_postconference/2026-11-22_main04_program.html",
+          "source_sha256": "a9f43e59fb6446ce5a469a938f14408856169973c8f022a19354b8ecb84b3ba5",
+          "label": "SC26 official presentation record · 2026-11-22"
+        },
+        {
+          "id": "sc26_post_main05_doi",
+          "url": "https://doi.org/10.1109/SC51908.2026.00011",
+          "kind": "doi_resolution",
+          "checked_on": "2026-11-22",
+          "local_reference": "2026/web_postconference/2026-11-22_main05_doi.html",
+          "source_sha256": "1283b74a1ab6f2fdb49c9d1cd50284db4eadc3a0aad88b08f2d70337b4beb307",
+          "label": "DOI resolver check · 2026-11-22"
+        },
+        {
+          "id": "sc26_post_main05_publisher",
+          "url": "https://www.computer.org/csdl/api/v1/graphql?query=query+%28%24articleId%3A+String%21%29+%7B+proceeding%3A+proceedingByArticleId%28articleId%3A+%24articleId%29+%7B+id+title+acronym+year+%7D+article%3A+articleById%28articleId%3A+%24articleId%29+%7B+id+doi+title+normalizedTitle+fno+authors+%7B+fullName+givenName+surname+%7D+idPrefix+pubDate+pubType+pages+year+%7D+%7D&variables=%7B%22articleId%22%3A+%222lkuzfdjSW4%22%7D",
+          "kind": "publisher_article_metadata",
+          "checked_on": "2026-11-22",
+          "local_reference": "2026/web_postconference/2026-11-22_main05_publisher.json",
+          "source_sha256": "5ac21e4e010685ab148b6a0e70876d87849af49e991531f6076a1f52e89bc4d1",
+          "label": "IEEE Computer Society article metadata · 2026-11-22"
+        },
+        {
+          "id": "sc26_post_main05_program",
+          "url": "https://sc26.conference-program.com/presentation/?id=gb106&sess=sess218",
+          "kind": "official_conference_presentation",
+          "checked_on": "2026-11-22",
+          "local_reference": "2026/web_postconference/2026-11-22_main05_program.html",
+          "source_sha256": "db4c6b777165182f51a97cb718c417481939a13bd57cc460afceac130c9f5ae4",
+          "label": "SC26 official presentation record · 2026-11-22"
+        },
+        {
+          "id": "sc26_post_main06_doi",
+          "url": "https://doi.org/10.1109/SC51908.2026.00012",
+          "kind": "doi_resolution",
+          "checked_on": "2026-11-22",
+          "local_reference": "2026/web_postconference/2026-11-22_main06_doi.html",
+          "source_sha256": "6e48a8636ec2329e6e8dffbcfbbfbf3e1d845a1eb1970689f91b9ee6f548df95",
+          "label": "DOI resolver check · 2026-11-22"
+        },
+        {
+          "id": "sc26_post_main06_publisher",
+          "url": "https://www.computer.org/csdl/api/v1/graphql?query=query+%28%24articleId%3A+String%21%29+%7B+proceeding%3A+proceedingByArticleId%28articleId%3A+%24articleId%29+%7B+id+title+acronym+year+%7D+article%3A+articleById%28articleId%3A+%24articleId%29+%7B+id+doi+title+normalizedTitle+fno+authors+%7B+fullName+givenName+surname+%7D+idPrefix+pubDate+pubType+pages+year+%7D+%7D&variables=%7B%22articleId%22%3A+%222lkuzfVBje8%22%7D",
+          "kind": "publisher_article_metadata",
+          "checked_on": "2026-11-22",
+          "local_reference": "2026/web_postconference/2026-11-22_main06_publisher.json",
+          "source_sha256": "80b66e7255c7898ffb40828541f50213862af348baa9a5bd8eda30350c269145",
+          "label": "IEEE Computer Society article metadata · 2026-11-22"
+        },
+        {
+          "id": "sc26_post_main06_program",
+          "url": "https://sc26.conference-program.com/presentation/?id=gb102&sess=sess218",
+          "kind": "official_conference_presentation",
+          "checked_on": "2026-11-22",
+          "local_reference": "2026/web_postconference/2026-11-22_main06_program.html",
+          "source_sha256": "adb949a933b51626bc04af925d9162ebd027d3dccf417e70fa64a0eb40a806bb",
+          "label": "SC26 official presentation record · 2026-11-22"
+        },
+        {
+          "id": "sc26_preserved_20261112_main01_publisher",
+          "url": "https://www.computer.org/csdl/api/v1/graphql?query=query+%28%24articleId%3A+String%21%29+%7B+proceeding%3A+proceedingByArticleId%28articleId%3A+%24articleId%29+%7B+id+title+acronym+year+%7D+article%3A+articleById%28articleId%3A+%24articleId%29+%7B+id+doi+title+normalizedTitle+fno+authors+%7B+fullName+givenName+surname+%7D+idPrefix+pubDate+pubType+pages+year+%7D+%7D&variables=%7B%22articleId%22%3A+%222lkuzbdetfG%22%7D",
+          "label": "Preserved exact IEEE Computer Society article metadata, checked 2026-11-12",
+          "kind": "archived_publisher_article_metadata",
+          "checked_on": "2026-11-12",
+          "source_revision_date": null,
+          "local_reference": "歴史一次資料/CSDL_SC2026_main01_metadata.json",
+          "source_sha256": "faf9f1cf1894abe084d59b53944c228ac1905577426b3140211743fd92c66415"
+        },
+        {
+          "id": "sc26_preserved_20261112_main02_publisher",
+          "url": "https://www.computer.org/csdl/api/v1/graphql?query=query+%28%24articleId%3A+String%21%29+%7B+proceeding%3A+proceedingByArticleId%28articleId%3A+%24articleId%29+%7B+id+title+acronym+year+%7D+article%3A+articleById%28articleId%3A+%24articleId%29+%7B+id+doi+title+normalizedTitle+fno+authors+%7B+fullName+givenName+surname+%7D+idPrefix+pubDate+pubType+pages+year+%7D+%7D&variables=%7B%22articleId%22%3A+%222lkuzcdoCJO%22%7D",
+          "label": "Preserved exact IEEE Computer Society article metadata, checked 2026-11-12",
+          "kind": "archived_publisher_article_metadata",
+          "checked_on": "2026-11-12",
+          "source_revision_date": null,
+          "local_reference": "歴史一次資料/CSDL_SC2026_main02_metadata.json",
+          "source_sha256": "8c720790c28e11f127b04c63f6f570087ed31e2e8f4f2d7ae41048217f1b2077"
+        },
+        {
+          "id": "sc26_preserved_20261112_main03_publisher",
+          "url": "https://www.computer.org/csdl/api/v1/graphql?query=query+%28%24articleId%3A+String%21%29+%7B+proceeding%3A+proceedingByArticleId%28articleId%3A+%24articleId%29+%7B+id+title+acronym+year+%7D+article%3A+articleById%28articleId%3A+%24articleId%29+%7B+id+doi+title+normalizedTitle+fno+authors+%7B+fullName+givenName+surname+%7D+idPrefix+pubDate+pubType+pages+year+%7D+%7D&variables=%7B%22articleId%22%3A+%222lkuzdolxao%22%7D",
+          "label": "Preserved exact IEEE Computer Society article metadata, checked 2026-11-12",
+          "kind": "archived_publisher_article_metadata",
+          "checked_on": "2026-11-12",
+          "source_revision_date": null,
+          "local_reference": "歴史一次資料/CSDL_SC2026_main03_metadata.json",
+          "source_sha256": "78abf2149fc6c8faf5fa7560d8f5a82bd5fc5a62ca6b30dff068b3ffb71ebdb7"
+        },
+        {
+          "id": "sc26_preserved_20261112_main04_publisher",
+          "url": "https://www.computer.org/csdl/api/v1/graphql?query=query+%28%24articleId%3A+String%21%29+%7B+proceeding%3A+proceedingByArticleId%28articleId%3A+%24articleId%29+%7B+id+title+acronym+year+%7D+article%3A+articleById%28articleId%3A+%24articleId%29+%7B+id+doi+title+normalizedTitle+fno+authors+%7B+fullName+givenName+surname+%7D+idPrefix+pubDate+pubType+pages+year+%7D+%7D&variables=%7B%22articleId%22%3A+%222lkuzegQw8M%22%7D",
+          "label": "Preserved exact IEEE Computer Society article metadata, checked 2026-11-12",
+          "kind": "archived_publisher_article_metadata",
+          "checked_on": "2026-11-12",
+          "source_revision_date": null,
+          "local_reference": "歴史一次資料/CSDL_SC2026_main04_metadata.json",
+          "source_sha256": "9715df40fea4a0b368ce18c0bca68ad9b2a0300e130eb0a0cb8049ac3f4eb6ba"
+        },
+        {
+          "id": "sc26_preserved_20261112_main05_publisher",
+          "url": "https://www.computer.org/csdl/api/v1/graphql?query=query+%28%24articleId%3A+String%21%29+%7B+proceeding%3A+proceedingByArticleId%28articleId%3A+%24articleId%29+%7B+id+title+acronym+year+%7D+article%3A+articleById%28articleId%3A+%24articleId%29+%7B+id+doi+title+normalizedTitle+fno+authors+%7B+fullName+givenName+surname+%7D+idPrefix+pubDate+pubType+pages+year+%7D+%7D&variables=%7B%22articleId%22%3A+%222lkuzfdjSW4%22%7D",
+          "label": "Preserved exact IEEE Computer Society article metadata, checked 2026-11-12",
+          "kind": "archived_publisher_article_metadata",
+          "checked_on": "2026-11-12",
+          "source_revision_date": null,
+          "local_reference": "歴史一次資料/CSDL_SC2026_main05_metadata.json",
+          "source_sha256": "8cbd6fc389f4fc7f57d9d4492fc77f4ce5204e0aaa2cf6bafdcd3ed57ef87999"
+        },
+        {
+          "id": "sc26_preserved_20261112_main06_publisher",
+          "url": "https://www.computer.org/csdl/api/v1/graphql?query=query+%28%24articleId%3A+String%21%29+%7B+proceeding%3A+proceedingByArticleId%28articleId%3A+%24articleId%29+%7B+id+title+acronym+year+%7D+article%3A+articleById%28articleId%3A+%24articleId%29+%7B+id+doi+title+normalizedTitle+fno+authors+%7B+fullName+givenName+surname+%7D+idPrefix+pubDate+pubType+pages+year+%7D+%7D&variables=%7B%22articleId%22%3A+%222lkuzfVBje8%22%7D",
+          "label": "Preserved exact IEEE Computer Society article metadata, checked 2026-11-12",
+          "kind": "archived_publisher_article_metadata",
+          "checked_on": "2026-11-12",
+          "source_revision_date": null,
+          "local_reference": "歴史一次資料/CSDL_SC2026_main06_metadata.json",
+          "source_sha256": "80b66e7255c7898ffb40828541f50213862af348baa9a5bd8eda30350c269145"
+        },
+        {
+          "id": "sc26-post-session197",
+          "url": "https://sc26.conference-program.com/session/?sess=sess197",
+          "label": "SC26 main Gordon Bell finalist morning session",
+          "kind": "official_conference_program_session",
+          "checked_on": "2026-11-22",
+          "published_on": null,
+          "source_revision_date": null,
+          "local_reference": "2026/web_postconference/session197.html",
+          "source_sha256": "6fbd6650f6e7c8251cf7dcb40bd134914c57f736ecd6e2ca0b5e0cf6ec2e65b9"
+        },
+        {
+          "id": "sc26-post-session218",
+          "url": "https://sc26.conference-program.com/session/?sess=sess218",
+          "label": "SC26 main Gordon Bell finalist afternoon session",
+          "kind": "official_conference_program_session",
+          "checked_on": "2026-11-22",
+          "published_on": null,
+          "source_revision_date": null,
+          "local_reference": "2026/web_postconference/session218.html",
+          "source_sha256": "00a99048acd416b9fae740c04743117d05407500222bb9b2f23e9acd072f999f"
+        },
+        {
+          "id": "sc26-post-main01-program",
+          "url": "https://sc26.conference-program.com/presentation/?id=gb101&sess=sess197",
+          "label": "SC26 official presentation abstract: Architecture-Agnostic Exascale Star-by-Star Simulation of Our Galaxy",
+          "kind": "official_conference_program_presentation",
+          "checked_on": "2026-11-22",
+          "published_on": null,
+          "source_revision_date": null,
+          "local_reference": "2026/web_postconference/main01_presentation.html",
+          "source_sha256": "c9939137dc339f8413bc9d103baf304c7eaf56f5cd3248ba63629e862156cff3"
+        },
+        {
+          "id": "sc26-post-main02-program",
+          "url": "https://sc26.conference-program.com/presentation/?id=gb105&sess=sess197",
+          "label": "SC26 official presentation abstract: Exascale Multiphysics Simulations for Liquid Metal Fusion Blankets",
+          "kind": "official_conference_program_presentation",
+          "checked_on": "2026-11-22",
+          "published_on": null,
+          "source_revision_date": null,
+          "local_reference": "2026/web_postconference/main02_presentation.html",
+          "source_sha256": "8383a80dd39babdfd45654afbd597dfa21b9ccb1deb1d292849a93b18194cd0f"
+        },
+        {
+          "id": "sc26-post-main03-program",
+          "url": "https://sc26.conference-program.com/presentation/?id=gb104&sess=sess197",
+          "label": "SC26 official presentation abstract: Crossing the 12,000-Atom Barrier with Heterogeneous Quantum-Classical Supercomputing: Quantum Chemistry of Protein-Ligand Complexes",
+          "kind": "official_conference_program_presentation",
+          "checked_on": "2026-11-22",
+          "published_on": null,
+          "source_revision_date": null,
+          "local_reference": "2026/web_postconference/main03_presentation.html",
+          "source_sha256": "17099c6135bec2c189ec2382af395b0f84c68c888e11d3fe06145473e9645f74"
+        },
+        {
+          "id": "sc26-post-main04-program",
+          "url": "https://sc26.conference-program.com/presentation/?id=gb103&sess=sess197",
+          "label": "SC26 official presentation abstract: Closing the FeMo-Cofactor \"Quantum-Advantage'' Gap with Exascale Supercomputers",
+          "kind": "official_conference_program_presentation",
+          "checked_on": "2026-11-22",
+          "published_on": null,
+          "source_revision_date": null,
+          "local_reference": "2026/web_postconference/main04_presentation.html",
+          "source_sha256": "83f58ebbee120a511c6373e2435641ad7a28f49bce47283f5b43080cc5f57f99"
+        },
+        {
+          "id": "sc26-post-main05-program",
+          "url": "https://sc26.conference-program.com/presentation/?id=gb106&sess=sess218",
+          "label": "SC26 official presentation abstract: Exascale Distillation Workflows for Protein Structure Prediction on El Capitan",
+          "kind": "official_conference_program_presentation",
+          "checked_on": "2026-11-22",
+          "published_on": null,
+          "source_revision_date": null,
+          "local_reference": "2026/web_postconference/main05_presentation.html",
+          "source_sha256": "71b87d4b846d59fb4d1e587c2974192a3e4577e742b6ce493baabf5a5e3278a8"
+        },
+        {
+          "id": "sc26-post-main06-program",
+          "url": "https://sc26.conference-program.com/presentation/?id=gb102&sess=sess218",
+          "label": "SC26 official presentation abstract: Extreme-Scale Linear-Scaling Kohn-Sham DFT at 100 Million Atoms: Bridging Quantum Simulations and Experiments",
+          "kind": "official_conference_program_presentation",
+          "checked_on": "2026-11-22",
+          "published_on": null,
+          "source_revision_date": null,
+          "local_reference": "2026/web_postconference/main06_presentation.html",
+          "source_sha256": "adb949a933b51626bc04af925d9162ebd027d3dccf417e70fa64a0eb40a806bb"
+        },
+        {
+          "id": "sc26-post-main01-institution",
+          "url": "https://www.hokudai.ac.jp/news/pdf/261118_pr.pdf",
+          "label": "Joint university/RIKEN PHEASANT press release dated November 18, 2026; relevant PDF pp. 1–3",
+          "kind": "conference_period_institutional_press_release",
+          "checked_on": "2026-11-22",
+          "published_on": "2026-11-18",
+          "source_revision_date": null,
+          "local_reference": "2026/web_postconference/main01_Hokkaido_press_release_2026-11-18.pdf",
+          "source_sha256": "4a70ffcfec129af13322341eae9231dcd25b14819f6d8b9c0714318dbfe00331"
+        },
+        {
+          "id": "sc26-post-main02-olcf",
+          "url": "https://www.olcf.ornl.gov/2026/11/11/exascale-fusion-simulation-team-named-finalist-for-2026-gordon-bell-prize/",
+          "label": "OLCF/Argonne account of the fusion-blanket finalist, November 11, 2026",
+          "kind": "preconference_institutional_announcement",
+          "checked_on": "2026-11-22",
+          "published_on": "2026-11-11",
+          "source_revision_date": null,
+          "local_reference": "2026/web_postconference/main02_OLCF_news_2026-11-11.html",
+          "source_sha256": "bbf294b904a441b701d32b4f335b5267c9c5171e65da5049171ec12043155bbf"
+        },
+        {
+          "id": "sc26-post-acm-award",
+          "url": "https://awards.acm.org/binaries/content/assets/press-releases/2026/november/gordon-bell-prize-2026.pdf",
+          "label": "ACM awards-domain November 19 release, PDF pp. 1–2: performance explicitly attributed to the paper abstract",
+          "kind": "official_award_announcement",
+          "checked_on": "2026-11-22",
+          "published_on": "2026-11-19",
+          "source_revision_date": null,
+          "local_reference": "2026/web_postconference/acm_awards_press_release.pdf",
+          "source_sha256": "30dca7af100e0347da536112cb3fc8e8948cdbf3716530605ad45e5e3158c2d1"
+        },
+        {
+          "id": "sc26-post-main05-llnl-news",
+          "url": "https://www.llnl.gov/article/55276/llnl-team-accelerates-protein-structure-prediction-el-capitan-elmerfold-collaboration",
+          "label": "LLNL institutional ElMerFold announcement, November 17, 2026",
+          "kind": "conference_period_institutional_announcement",
+          "checked_on": "2026-11-22",
+          "published_on": "2026-11-17",
+          "source_revision_date": null,
+          "local_reference": "2026/web_postconference/main05_LLNL_news_2026-11-17.html",
+          "source_sha256": "660e3e650365fff5193559f6294ca988cc7132dcba84aafe12ace68275c7f57d"
+        },
+        {
+          "id": "sc26-post-main05-author-manuscript",
+          "url": "https://computing.llnl.gov/sites/default/files/2026-11/ElMerFold-Finalist-SC26.pdf",
+          "label": "LLNL-hosted ElMerFold finalist manuscript; PDF p. 1 abstract, justification and performance-attributes table",
+          "kind": "author_hosted_finalist_manuscript",
+          "checked_on": "2026-11-22",
+          "published_on": null,
+          "source_revision_date": null,
+          "local_reference": "2026/web_postconference/main05_ElMerFold_Finalist_SC26_author_manuscript.pdf",
+          "source_sha256": "a61718b9bc29ece6f3dfd4bf20829cba048af07786799bc33afaf11631773a7f"
         }
       ],
       "roster_completeness": {
-        "status": "complete_current_official_program_snapshot",
+        "status": "complete_against_official_program_postconference_review",
         "expected_count": 6,
         "basis_source_ids": [
           "sc26_s1",
@@ -5235,7 +5678,7 @@
           "sc26-day-2026-11-20",
           "sc26-day-2026-11-21"
         ],
-        "note": "All eight official program day snippets establish two main-prize sessions and six distinct scheduled candidates as of 2026-11-12. Publisher metadata assigns all six DOIs; doi.org returned HTTP404 that day. This snapshot establishes scheduled membership and publisher-assigned bibliography, with resolver activation and award outcomes unestablished."
+        "note": "The six-member program roster was rechecked on 2026-11-22. The 2026-11-12 preconference snapshot is retained separately. Program membership, award results, publisher assignment and DOI resolution are distinct checks."
       },
       "records": [
         {
@@ -5244,7 +5687,7 @@
           "title_source_id": "sc26_s1",
           "doi": "10.1109/SC51908.2026.00007",
           "doi_status": "verified",
-          "doi_source_id": "sc26_csdl_main01",
+          "doi_source_id": "sc26_post_main01_publisher",
           "publisher_title": "Architecture-Agnostic Exascale Star-by-Star Simulation of Our Galaxy",
           "authors": [
             "Keiya Hirashima",
@@ -5265,12 +5708,14 @@
             "Mathis Bode",
             "Michiko S. Fujii"
           ],
-          "authors_status": "publisher_metadata_order_checked",
+          "authors_status": "publisher_metadata_order_checked; manuscript_byline_not_audited",
           "publication_url": "https://www.computer.org/csdl/proceedings-article/sc/2026/478900a001/2lkuzbdetfG",
           "notes": [
-            "Program-membership and bibliographic roster entry only; no manuscript PDF, performance measurement, or final-score audit was performed.",
-            "This is a currently scheduled main-prize candidate, not a winner. The conference has not yet occurred as of 2026-11-12.",
-            "DOI and complete ordered byline verified in exact IEEE Computer Society article metadata. The publisher records publication date 2026-11-12; doi.org returned HTTP 404 on that date. The identifier is publisher-assigned, with resolver activation not yet established. No award or final-score claim follows from this publication metadata."
+            "Arrays are source- and retrieval-version-specific; no merged or preferred composite byline is created.",
+            "No manuscript PDF, recording, award announcement byline or performance result was used in this bibliography audit.",
+            "The publisher lists Kana Moriwaki at position 12. Neither the current official session nor presentation byline lists this name; their 16-name arrays are preserved separately from the 17-name publisher array.",
+            "Other displayed-name differences are Takayuki R. Saitoh / Takayuki Saitoh, Matthew T. Bettencour / Matthew Bettencourt, and Michiko S. Fujii / Michiko Fujii. The publisher spelling Bettencour is preserved as supplied. No identity or spelling correction is imposed.",
+            "The directly checked award announcement is not used to label this candidate unsuccessful, rejected, or a non-winner."
           ],
           "doi_verification": {
             "method": "exact_primary_publisher_article_metadata",
@@ -5283,7 +5728,228 @@
             "identifier_status": "publisher_assigned",
             "resolver_status": "not_found",
             "resolver_http_status": 404,
-            "resolver_checked_on": "2026-11-12"
+            "resolver_checked_on": "2026-11-22",
+            "metadata_checked_on": "2026-11-22"
+          },
+          "bibliographic_versions": [
+            {
+              "version_label": "Publisher metadata preserved on 2026-11-12",
+              "checked_on": "2026-11-12",
+              "source_revision_date": null,
+              "source_id": "sc26_preserved_20261112_main01_publisher",
+              "article_id": "2lkuzbdetfG",
+              "title": "Architecture-Agnostic Exascale Star-by-Star Simulation of Our Galaxy",
+              "authors": [
+                "Keiya Hirashima",
+                "Naoto Harada",
+                "Takayuki R. Saitoh",
+                "Kentaro Nomura",
+                "Masaki Iwasawa",
+                "Dennis Bollweg",
+                "Kohji Yoshikawa",
+                "Yohei Miki",
+                "Tetsuro Asano",
+                "Yutaka Hirai",
+                "Takashi Okamoto",
+                "Kana Moriwaki",
+                "Junichiro Makino",
+                "Matthew T. Bettencour",
+                "Laura Morgenstern",
+                "Mathis Bode",
+                "Michiko S. Fujii"
+              ],
+              "author_count": 17,
+              "venue": "SC26: International Conference for High Performance Computing, Networking, Storage and Analysis",
+              "year": 2026,
+              "publisher_reported_publication_date": "2026-11-12",
+              "source_kind": "publisher_metadata"
+            },
+            {
+              "version_label": "Publisher metadata retrieved on 2026-11-22",
+              "checked_on": "2026-11-22",
+              "source_revision_date": null,
+              "source_id": "sc26_post_main01_publisher",
+              "http_status": 200,
+              "article_id": "2lkuzbdetfG",
+              "title": "Architecture-Agnostic Exascale Star-by-Star Simulation of Our Galaxy",
+              "authors": [
+                "Keiya Hirashima",
+                "Naoto Harada",
+                "Takayuki R. Saitoh",
+                "Kentaro Nomura",
+                "Masaki Iwasawa",
+                "Dennis Bollweg",
+                "Kohji Yoshikawa",
+                "Yohei Miki",
+                "Tetsuro Asano",
+                "Yutaka Hirai",
+                "Takashi Okamoto",
+                "Kana Moriwaki",
+                "Junichiro Makino",
+                "Matthew T. Bettencour",
+                "Laura Morgenstern",
+                "Mathis Bode",
+                "Michiko S. Fujii"
+              ],
+              "author_count": 17,
+              "venue": "SC26: International Conference for High Performance Computing, Networking, Storage and Analysis",
+              "year": 2026,
+              "publisher_reported_publication_date": "2026-11-12",
+              "source_kind": "publisher_metadata"
+            },
+            {
+              "version_label": "Postconference official presentation page retrieved on 2026-11-22",
+              "checked_on": "2026-11-22",
+              "source_revision_date": null,
+              "source_id": "sc26_post_main01_program",
+              "authors": [
+                "Keiya Hirashima",
+                "Naoto Harada",
+                "Takayuki Saitoh",
+                "Kentaro Nomura",
+                "Masaki Iwasawa",
+                "Dennis Bollweg",
+                "Kohji Yoshikawa",
+                "Yohei Miki",
+                "Tetsuro Asano",
+                "Yutaka Hirai",
+                "Takashi Okamoto",
+                "Junichiro Makino",
+                "Matthew Bettencourt",
+                "Laura Morgenstern",
+                "Mathis Bode",
+                "Michiko Fujii"
+              ],
+              "author_count": 16,
+              "extraction": "Visible author-name anchors with data-link-type=presentation.person, in DOM order; HTML whitespace only collapsed.",
+              "source_kind": "official_program"
+            }
+          ],
+          "bibliographic_comparisons": {
+            "publisher_20261112_vs_20261122": {
+              "ordered_arrays_equal": true,
+              "changes": []
+            },
+            "current_publisher_vs_current_presentation": {
+              "ordered_arrays_equal": false,
+              "changes": [
+                {
+                  "operation": "replace",
+                  "before_positions": [
+                    3
+                  ],
+                  "before_names": [
+                    "Takayuki R. Saitoh"
+                  ],
+                  "after_positions": [
+                    3
+                  ],
+                  "after_names": [
+                    "Takayuki Saitoh"
+                  ]
+                },
+                {
+                  "operation": "delete",
+                  "before_positions": [
+                    12
+                  ],
+                  "before_names": [
+                    "Kana Moriwaki"
+                  ],
+                  "after_positions": [],
+                  "after_names": []
+                },
+                {
+                  "operation": "replace",
+                  "before_positions": [
+                    14
+                  ],
+                  "before_names": [
+                    "Matthew T. Bettencour"
+                  ],
+                  "after_positions": [
+                    13
+                  ],
+                  "after_names": [
+                    "Matthew Bettencourt"
+                  ]
+                },
+                {
+                  "operation": "replace",
+                  "before_positions": [
+                    17
+                  ],
+                  "before_names": [
+                    "Michiko S. Fujii"
+                  ],
+                  "after_positions": [
+                    16
+                  ],
+                  "after_names": [
+                    "Michiko Fujii"
+                  ]
+                }
+              ]
+            },
+            "current_session_vs_presentation": {
+              "ordered_arrays_equal": true
+            }
+          },
+          "doi_resolution_history": [
+            {
+              "resolver_status": "not_found",
+              "resolver_http_status": 404,
+              "resolver_checked_on": "2026-11-12"
+            },
+            {
+              "checked_on": "2026-11-22",
+              "method": "GET",
+              "initial_request_count": 1,
+              "http_status": 404,
+              "redirect_trace": [],
+              "final_url": "https://doi.org/10.1109/SC51908.2026.00007",
+              "location_header": null,
+              "source_id": "sc26_post_main01_doi",
+              "status": "not_found",
+              "interpretation": "The exact identifier remains assigned in publisher metadata, while this regular doi.org GET returned the recorded status. This does not establish Crossref registration or its absence."
+            }
+          ],
+          "postconference_status": {
+            "checked_on": "2026-11-22",
+            "award_outcome": "not_established_in_this_check",
+            "conference_day_update": "not_verified",
+            "final_score_status": "Not established"
+          },
+          "performance_review": {
+            "conference_presentation": {
+              "scheduled_date": "2026-11-17",
+              "scheduled_start": "10:30",
+              "scheduled_end": "10:52",
+              "timezone": "America/Chicago",
+              "source_id": "sc26-post-main01-program",
+              "actual_delivery_verified": false
+            },
+            "update_status": "not_confirmed",
+            "update_status_label": "Conference-day performance update not confirmed",
+            "conference_day_update_status": "Not confirmed from public evidence",
+            "final_score_status": "Not established",
+            "source_ids_checked": [
+              "sc26-post-main01-program",
+              "sc26-post-session197",
+              "sc26-post-main01-institution"
+            ],
+            "public_material_status": {
+              "official_program_abstract": "Checked",
+              "conference_recording": "Not reviewed; official page displays sign-in/Technical Program Reg Pass notice and lists Recorded",
+              "author_conference_slides": "Not located in bounded public search"
+            },
+            "notes": [
+              "The public program abstract is not a transcript of the delivered talk and has no visible revision date. Its values are not promoted to conference-day or final annual scores.",
+              "No complete manuscript or performance-methodology audit was performed in this pass.",
+              "The conference-period institutional release repeats 144 billion particles/s, already present in the program abstract. It does not label a new post-submission run or a revised judges’ score. It therefore adds no confirmed score-update record."
+            ],
+            "checked_on": "2026-11-22",
+            "performance_updates": []
           }
         },
         {
@@ -5292,7 +5958,7 @@
           "title_source_id": "sc26_s1",
           "doi": "10.1109/SC51908.2026.00008",
           "doi_status": "verified",
-          "doi_source_id": "sc26_csdl_main02",
+          "doi_source_id": "sc26_post_main02_publisher",
           "publisher_title": "Exascale Multiphysics Simulations for Liquid Metal Fusion Blankets",
           "authors": [
             "Yu-Hsiang Lan",
@@ -5312,12 +5978,13 @@
             "Ananias Tomboulides",
             "Ramesh Balakrishnan"
           ],
-          "authors_status": "publisher_metadata_order_checked",
+          "authors_status": "publisher_metadata_order_checked; manuscript_byline_not_audited",
           "publication_url": "https://www.computer.org/csdl/proceedings-article/sc/2026/478900a014/2lkuzcdoCJO",
           "notes": [
-            "Program-membership and bibliographic roster entry only; no manuscript PDF, performance measurement, or final-score audit was performed.",
-            "This is a currently scheduled main-prize candidate, not a winner. The conference has not yet occurred as of 2026-11-12.",
-            "DOI and complete ordered byline verified in exact IEEE Computer Society article metadata. The publisher records publication date 2026-11-12; doi.org returned HTTP 404 on that date. The identifier is publisher-assigned, with resolver activation not yet established. No award or final-score claim follows from this publication metadata."
+            "Arrays are source- and retrieval-version-specific; no merged or preferred composite byline is created.",
+            "No manuscript PDF, recording, award announcement byline or performance result was used in this bibliography audit.",
+            "Both sources list 16 names in corresponding order, but displayed strings differ: publisher Paul Fischer versus program Paul FIscher at position 3, and publisher Kris Rowe versus program Kristopher Rowe at position 14. No alias substitution is imposed.",
+            "The directly checked award announcement is not used to label this candidate unsuccessful, rejected, or a non-winner."
           ],
           "doi_verification": {
             "method": "exact_primary_publisher_article_metadata",
@@ -5330,7 +5997,200 @@
             "identifier_status": "publisher_assigned",
             "resolver_status": "not_found",
             "resolver_http_status": 404,
-            "resolver_checked_on": "2026-11-12"
+            "resolver_checked_on": "2026-11-22",
+            "metadata_checked_on": "2026-11-22"
+          },
+          "bibliographic_versions": [
+            {
+              "version_label": "Publisher metadata preserved on 2026-11-12",
+              "checked_on": "2026-11-12",
+              "source_revision_date": null,
+              "source_id": "sc26_preserved_20261112_main02_publisher",
+              "article_id": "2lkuzcdoCJO",
+              "title": "Exascale Multiphysics Simulations for Liquid Metal Fusion Blankets",
+              "authors": [
+                "Yu-Hsiang Lan",
+                "Misun Min",
+                "Paul Fischer",
+                "Elia Merzari",
+                "Tri Nguyen",
+                "Haomin Yuan",
+                "Patrick Shriwise",
+                "Stefan Kerkemeier",
+                "Andrew Davis",
+                "Aleksander Dubas",
+                "Rupert Eardley-Brunt",
+                "Maximiliano Dalinger",
+                "Luiz Aldeia Machado",
+                "Kris Rowe",
+                "Ananias Tomboulides",
+                "Ramesh Balakrishnan"
+              ],
+              "author_count": 16,
+              "venue": "SC26: International Conference for High Performance Computing, Networking, Storage and Analysis",
+              "year": 2026,
+              "publisher_reported_publication_date": "2026-11-12",
+              "source_kind": "publisher_metadata"
+            },
+            {
+              "version_label": "Publisher metadata retrieved on 2026-11-22",
+              "checked_on": "2026-11-22",
+              "source_revision_date": null,
+              "source_id": "sc26_post_main02_publisher",
+              "http_status": 200,
+              "article_id": "2lkuzcdoCJO",
+              "title": "Exascale Multiphysics Simulations for Liquid Metal Fusion Blankets",
+              "authors": [
+                "Yu-Hsiang Lan",
+                "Misun Min",
+                "Paul Fischer",
+                "Elia Merzari",
+                "Tri Nguyen",
+                "Haomin Yuan",
+                "Patrick Shriwise",
+                "Stefan Kerkemeier",
+                "Andrew Davis",
+                "Aleksander Dubas",
+                "Rupert Eardley-Brunt",
+                "Maximiliano Dalinger",
+                "Luiz Aldeia Machado",
+                "Kris Rowe",
+                "Ananias Tomboulides",
+                "Ramesh Balakrishnan"
+              ],
+              "author_count": 16,
+              "venue": "SC26: International Conference for High Performance Computing, Networking, Storage and Analysis",
+              "year": 2026,
+              "publisher_reported_publication_date": "2026-11-12",
+              "source_kind": "publisher_metadata"
+            },
+            {
+              "version_label": "Postconference official presentation page retrieved on 2026-11-22",
+              "checked_on": "2026-11-22",
+              "source_revision_date": null,
+              "source_id": "sc26_post_main02_program",
+              "authors": [
+                "Yu-Hsiang Lan",
+                "Misun Min",
+                "Paul FIscher",
+                "Elia Merzari",
+                "Tri Nguyen",
+                "Haomin Yuan",
+                "Patrick Shriwise",
+                "Stefan Kerkemeier",
+                "Andrew Davis",
+                "Aleksander Dubas",
+                "Rupert Eardley-Brunt",
+                "Maximiliano Dalinger",
+                "Luiz Aldeia Machado",
+                "Kristopher Rowe",
+                "Ananias Tomboulides",
+                "Ramesh Balakrishnan"
+              ],
+              "author_count": 16,
+              "extraction": "Visible author-name anchors with data-link-type=presentation.person, in DOM order; HTML whitespace only collapsed.",
+              "source_kind": "official_program"
+            }
+          ],
+          "bibliographic_comparisons": {
+            "publisher_20261112_vs_20261122": {
+              "ordered_arrays_equal": true,
+              "changes": []
+            },
+            "current_publisher_vs_current_presentation": {
+              "ordered_arrays_equal": false,
+              "changes": [
+                {
+                  "operation": "replace",
+                  "before_positions": [
+                    3
+                  ],
+                  "before_names": [
+                    "Paul Fischer"
+                  ],
+                  "after_positions": [
+                    3
+                  ],
+                  "after_names": [
+                    "Paul FIscher"
+                  ]
+                },
+                {
+                  "operation": "replace",
+                  "before_positions": [
+                    14
+                  ],
+                  "before_names": [
+                    "Kris Rowe"
+                  ],
+                  "after_positions": [
+                    14
+                  ],
+                  "after_names": [
+                    "Kristopher Rowe"
+                  ]
+                }
+              ]
+            },
+            "current_session_vs_presentation": {
+              "ordered_arrays_equal": true
+            }
+          },
+          "doi_resolution_history": [
+            {
+              "resolver_status": "not_found",
+              "resolver_http_status": 404,
+              "resolver_checked_on": "2026-11-12"
+            },
+            {
+              "checked_on": "2026-11-22",
+              "method": "GET",
+              "initial_request_count": 1,
+              "http_status": 404,
+              "redirect_trace": [],
+              "final_url": "https://doi.org/10.1109/SC51908.2026.00008",
+              "location_header": null,
+              "source_id": "sc26_post_main02_doi",
+              "status": "not_found",
+              "interpretation": "The exact identifier remains assigned in publisher metadata, while this regular doi.org GET returned the recorded status. This does not establish Crossref registration or its absence."
+            }
+          ],
+          "postconference_status": {
+            "checked_on": "2026-11-22",
+            "award_outcome": "not_established_in_this_check",
+            "conference_day_update": "not_verified",
+            "final_score_status": "Not established"
+          },
+          "performance_review": {
+            "conference_presentation": {
+              "scheduled_date": "2026-11-17",
+              "scheduled_start": "10:52",
+              "scheduled_end": "11:15",
+              "timezone": "America/Chicago",
+              "source_id": "sc26-post-main02-program",
+              "actual_delivery_verified": false
+            },
+            "update_status": "not_confirmed",
+            "update_status_label": "Conference-day performance update not confirmed",
+            "conference_day_update_status": "Not confirmed from public evidence",
+            "final_score_status": "Not established",
+            "source_ids_checked": [
+              "sc26-post-main02-program",
+              "sc26-post-session197",
+              "sc26-post-main02-olcf"
+            ],
+            "public_material_status": {
+              "official_program_abstract": "Checked",
+              "conference_recording": "Not reviewed; official page displays sign-in/Technical Program Reg Pass notice and lists Recorded",
+              "author_conference_slides": "Not located in bounded public search"
+            },
+            "notes": [
+              "The public program abstract is not a transcript of the delivered talk and has no visible revision date. Its values are not promoted to conference-day or final annual scores.",
+              "No complete manuscript or performance-methodology audit was performed in this pass.",
+              "The OLCF/Argonne account predates the November 17 presentation; its simulation-scale discussion is not evidence of a conference-day performance revision."
+            ],
+            "checked_on": "2026-11-22",
+            "performance_updates": []
           }
         },
         {
@@ -5339,7 +6199,7 @@
           "title_source_id": "sc26_s1",
           "doi": "10.1109/SC51908.2026.00009",
           "doi_status": "verified",
-          "doi_source_id": "sc26_csdl_main03",
+          "doi_source_id": "sc26_post_main03_publisher",
           "publisher_title": "Crossing the 12,000-Atom Barrier with Heterogeneous Quantum-Classical Supercomputing: Quantum Chemistry of Protein-Ligand Complexes",
           "authors": [
             "Kenneth M. Merz",
@@ -5367,12 +6227,13 @@
             "Seetharami Seelam",
             "Mario Motta"
           ],
-          "authors_status": "publisher_metadata_order_checked",
+          "authors_status": "publisher_metadata_order_checked; manuscript_byline_not_audited",
           "publication_url": "https://www.computer.org/csdl/proceedings-article/sc/2026/478900a026/2lkuzdolxao",
           "notes": [
-            "Program-membership and bibliographic roster entry only; no manuscript PDF, performance measurement, or final-score audit was performed.",
-            "This is a currently scheduled main-prize candidate, not a winner. The conference has not yet occurred as of 2026-11-12.",
-            "DOI and complete ordered byline verified in exact IEEE Computer Society article metadata. The publisher records publication date 2026-11-12; doi.org returned HTTP 404 on that date. The identifier is publisher-assigned, with resolver activation not yet established. No award or final-score claim follows from this publication metadata."
+            "Arrays are source- and retrieval-version-specific; no merged or preferred composite byline is created.",
+            "No manuscript PDF, recording, award announcement byline or performance result was used in this bibliography audit.",
+            "The current publisher and official session/presentation arrays match exactly in displayed names and order.",
+            "The directly checked award announcement is not used to label this candidate unsuccessful, rejected, or a non-winner."
           ],
           "doi_verification": {
             "method": "exact_primary_publisher_article_metadata",
@@ -5385,7 +6246,192 @@
             "identifier_status": "publisher_assigned",
             "resolver_status": "not_found",
             "resolver_http_status": 404,
-            "resolver_checked_on": "2026-11-12"
+            "resolver_checked_on": "2026-11-22",
+            "metadata_checked_on": "2026-11-22"
+          },
+          "bibliographic_versions": [
+            {
+              "version_label": "Publisher metadata preserved on 2026-11-12",
+              "checked_on": "2026-11-12",
+              "source_revision_date": null,
+              "source_id": "sc26_preserved_20261112_main03_publisher",
+              "article_id": "2lkuzdolxao",
+              "title": "Crossing the 12,000-Atom Barrier with Heterogeneous Quantum-Classical Supercomputing: Quantum Chemistry of Protein-Ligand Complexes",
+              "authors": [
+                "Kenneth M. Merz",
+                "Akhil Shajan",
+                "Danil Kaliakin",
+                "Fangchun Liang",
+                "Yuichi Otsuka",
+                "Tomonori Shirakawa",
+                "Lukas Broers",
+                "Han Xu",
+                "Miwako Tsuji",
+                "Mitsuhisa Sato",
+                "Seiji Yunoki",
+                "Ryo Wakizaka",
+                "Yukio Kawashima",
+                "Jun Doi",
+                "Hitomi Takahashi",
+                "Toshinari Itoko",
+                "Hiroshi Horii",
+                "Thaddeus Pellegrini",
+                "Javier Robledo Moreno",
+                "Kevin J. Sung",
+                "Ella Fejer",
+                "Robert Walkup",
+                "Seetharami Seelam",
+                "Mario Motta"
+              ],
+              "author_count": 24,
+              "venue": "SC26: International Conference for High Performance Computing, Networking, Storage and Analysis",
+              "year": 2026,
+              "publisher_reported_publication_date": "2026-11-12",
+              "source_kind": "publisher_metadata"
+            },
+            {
+              "version_label": "Publisher metadata retrieved on 2026-11-22",
+              "checked_on": "2026-11-22",
+              "source_revision_date": null,
+              "source_id": "sc26_post_main03_publisher",
+              "http_status": 200,
+              "article_id": "2lkuzdolxao",
+              "title": "Crossing the 12,000-Atom Barrier with Heterogeneous Quantum-Classical Supercomputing: Quantum Chemistry of Protein-Ligand Complexes",
+              "authors": [
+                "Kenneth M. Merz",
+                "Akhil Shajan",
+                "Danil Kaliakin",
+                "Fangchun Liang",
+                "Yuichi Otsuka",
+                "Tomonori Shirakawa",
+                "Lukas Broers",
+                "Han Xu",
+                "Miwako Tsuji",
+                "Mitsuhisa Sato",
+                "Seiji Yunoki",
+                "Ryo Wakizaka",
+                "Yukio Kawashima",
+                "Jun Doi",
+                "Hitomi Takahashi",
+                "Toshinari Itoko",
+                "Hiroshi Horii",
+                "Thaddeus Pellegrini",
+                "Javier Robledo Moreno",
+                "Kevin J. Sung",
+                "Ella Fejer",
+                "Robert Walkup",
+                "Seetharami Seelam",
+                "Mario Motta"
+              ],
+              "author_count": 24,
+              "venue": "SC26: International Conference for High Performance Computing, Networking, Storage and Analysis",
+              "year": 2026,
+              "publisher_reported_publication_date": "2026-11-12",
+              "source_kind": "publisher_metadata"
+            },
+            {
+              "version_label": "Postconference official presentation page retrieved on 2026-11-22",
+              "checked_on": "2026-11-22",
+              "source_revision_date": null,
+              "source_id": "sc26_post_main03_program",
+              "authors": [
+                "Kenneth M. Merz",
+                "Akhil Shajan",
+                "Danil Kaliakin",
+                "Fangchun Liang",
+                "Yuichi Otsuka",
+                "Tomonori Shirakawa",
+                "Lukas Broers",
+                "Han Xu",
+                "Miwako Tsuji",
+                "Mitsuhisa Sato",
+                "Seiji Yunoki",
+                "Ryo Wakizaka",
+                "Yukio Kawashima",
+                "Jun Doi",
+                "Hitomi Takahashi",
+                "Toshinari Itoko",
+                "Hiroshi Horii",
+                "Thaddeus Pellegrini",
+                "Javier Robledo Moreno",
+                "Kevin J. Sung",
+                "Ella Fejer",
+                "Robert Walkup",
+                "Seetharami Seelam",
+                "Mario Motta"
+              ],
+              "author_count": 24,
+              "extraction": "Visible author-name anchors with data-link-type=presentation.person, in DOM order; HTML whitespace only collapsed.",
+              "source_kind": "official_program"
+            }
+          ],
+          "bibliographic_comparisons": {
+            "publisher_20261112_vs_20261122": {
+              "ordered_arrays_equal": true,
+              "changes": []
+            },
+            "current_publisher_vs_current_presentation": {
+              "ordered_arrays_equal": true,
+              "changes": []
+            },
+            "current_session_vs_presentation": {
+              "ordered_arrays_equal": true
+            }
+          },
+          "doi_resolution_history": [
+            {
+              "resolver_status": "not_found",
+              "resolver_http_status": 404,
+              "resolver_checked_on": "2026-11-12"
+            },
+            {
+              "checked_on": "2026-11-22",
+              "method": "GET",
+              "initial_request_count": 1,
+              "http_status": 404,
+              "redirect_trace": [],
+              "final_url": "https://doi.org/10.1109/SC51908.2026.00009",
+              "location_header": null,
+              "source_id": "sc26_post_main03_doi",
+              "status": "not_found",
+              "interpretation": "The exact identifier remains assigned in publisher metadata, while this regular doi.org GET returned the recorded status. This does not establish Crossref registration or its absence."
+            }
+          ],
+          "postconference_status": {
+            "checked_on": "2026-11-22",
+            "award_outcome": "not_established_in_this_check",
+            "conference_day_update": "not_verified",
+            "final_score_status": "Not established"
+          },
+          "performance_review": {
+            "conference_presentation": {
+              "scheduled_date": "2026-11-17",
+              "scheduled_start": "11:15",
+              "scheduled_end": "11:37",
+              "timezone": "America/Chicago",
+              "source_id": "sc26-post-main03-program",
+              "actual_delivery_verified": false
+            },
+            "update_status": "not_confirmed",
+            "update_status_label": "Conference-day performance update not confirmed",
+            "conference_day_update_status": "Not confirmed from public evidence",
+            "final_score_status": "Not established",
+            "source_ids_checked": [
+              "sc26-post-main03-program",
+              "sc26-post-session197"
+            ],
+            "public_material_status": {
+              "official_program_abstract": "Checked",
+              "conference_recording": "Not reviewed; official page displays sign-in/Technical Program Reg Pass notice and lists Recorded",
+              "author_conference_slides": "Not located in bounded public search"
+            },
+            "notes": [
+              "The public program abstract is not a transcript of the delivered talk and has no visible revision date. Its values are not promoted to conference-day or final annual scores.",
+              "No complete manuscript or performance-methodology audit was performed in this pass.",
+              "The current abstract includes quantum-circuit work and classical parallel efficiency, but does not identify these as measurements updated after submission. No additional public author slide deck establishing that sequence was located."
+            ],
+            "checked_on": "2026-11-22",
+            "performance_updates": []
           }
         },
         {
@@ -5394,7 +6440,7 @@
           "title_source_id": "sc26_s1",
           "doi": "10.1109/SC51908.2026.00010",
           "doi_status": "verified",
-          "doi_source_id": "sc26_csdl_main04",
+          "doi_source_id": "sc26_post_main04_publisher",
           "publisher_title": "Closing the FeMo-Cofactor \"Quantum-Advantage\" Gap with Exascale Supercomputers",
           "authors": [
             "Honghui Shang",
@@ -5408,13 +6454,15 @@
             "Yutong Lu",
             "Jinlong Yang"
           ],
-          "authors_status": "publisher_metadata_order_checked",
+          "authors_status": "publisher_metadata_order_checked; manuscript_byline_not_audited",
           "publication_url": "https://www.computer.org/csdl/proceedings-article/sc/2026/478900a039/2lkuzegQw8M",
           "notes": [
-            "Program-membership and bibliographic roster entry only; no manuscript PDF, performance measurement, or final-score audit was performed.",
-            "This is a currently scheduled main-prize candidate, not a winner. The conference has not yet occurred as of 2026-11-12.",
-            "DOI and complete ordered byline verified in exact IEEE Computer Society article metadata. The publisher records publication date 2026-11-12; doi.org returned HTTP 404 on that date. The identifier is publisher-assigned, with resolver activation not yet established. No award or final-score claim follows from this publication metadata.",
-            "Publisher title uses closing double quotation marks around \"Quantum-Advantage\"; the conference program uses two closing apostrophes. This punctuation variant is preserved in publisher_title."
+            "Arrays are source- and retrieval-version-specific; no merged or preferred composite byline is created.",
+            "No manuscript PDF, recording, award announcement byline or performance result was used in this bibliography audit.",
+            "The current publisher and official session/presentation arrays match exactly in displayed names and order.",
+            "The official program uses two closing apostrophes after Quantum-Advantage; the release uses typographic single quotation marks. This is a punctuation variant of the same project, supported by all ten matching names.",
+            "No specific peak-performance or other subcategory is assigned: general award-description boilerplate does not establish the 2026 award category.",
+            "No manuscript rate or press-release quotation is promoted to a final conference score."
           ],
           "doi_verification": {
             "method": "exact_primary_publisher_article_metadata",
@@ -5427,7 +6475,186 @@
             "identifier_status": "publisher_assigned",
             "resolver_status": "not_found",
             "resolver_http_status": 404,
-            "resolver_checked_on": "2026-11-12"
+            "resolver_checked_on": "2026-11-22",
+            "metadata_checked_on": "2026-11-22"
+          },
+          "bibliographic_versions": [
+            {
+              "version_label": "Publisher metadata preserved on 2026-11-12",
+              "checked_on": "2026-11-12",
+              "source_revision_date": null,
+              "source_id": "sc26_preserved_20261112_main04_publisher",
+              "article_id": "2lkuzegQw8M",
+              "title": "Closing the FeMo-Cofactor \"Quantum-Advantage\" Gap with Exascale Supercomputers",
+              "authors": [
+                "Honghui Shang",
+                "Zhiyu Xiao",
+                "Zhuozhao Xia",
+                "Hao Wu",
+                "Huan Ma",
+                "Yongqing Chen",
+                "Bin Li",
+                "Zhenyu Li",
+                "Yutong Lu",
+                "Jinlong Yang"
+              ],
+              "author_count": 10,
+              "venue": "SC26: International Conference for High Performance Computing, Networking, Storage and Analysis",
+              "year": 2026,
+              "publisher_reported_publication_date": "2026-11-12",
+              "source_kind": "publisher_metadata"
+            },
+            {
+              "version_label": "Publisher metadata retrieved on 2026-11-22",
+              "checked_on": "2026-11-22",
+              "source_revision_date": null,
+              "source_id": "sc26_post_main04_publisher",
+              "http_status": 200,
+              "article_id": "2lkuzegQw8M",
+              "title": "Closing the FeMo-Cofactor \"Quantum-Advantage\" Gap with Exascale Supercomputers",
+              "authors": [
+                "Honghui Shang",
+                "Zhiyu Xiao",
+                "Zhuozhao Xia",
+                "Hao Wu",
+                "Huan Ma",
+                "Yongqing Chen",
+                "Bin Li",
+                "Zhenyu Li",
+                "Yutong Lu",
+                "Jinlong Yang"
+              ],
+              "author_count": 10,
+              "venue": "SC26: International Conference for High Performance Computing, Networking, Storage and Analysis",
+              "year": 2026,
+              "publisher_reported_publication_date": "2026-11-12",
+              "source_kind": "publisher_metadata"
+            },
+            {
+              "version_label": "Postconference official presentation page retrieved on 2026-11-22",
+              "checked_on": "2026-11-22",
+              "source_revision_date": null,
+              "source_id": "sc26_post_main04_program",
+              "authors": [
+                "Honghui Shang",
+                "Zhiyu Xiao",
+                "Zhuozhao Xia",
+                "Hao Wu",
+                "Huan Ma",
+                "Yongqing Chen",
+                "Bin Li",
+                "Zhenyu Li",
+                "Yutong Lu",
+                "Jinlong Yang"
+              ],
+              "author_count": 10,
+              "extraction": "Visible author-name anchors with data-link-type=presentation.person, in DOM order; HTML whitespace only collapsed.",
+              "source_kind": "official_program"
+            }
+          ],
+          "bibliographic_comparisons": {
+            "publisher_20261112_vs_20261122": {
+              "ordered_arrays_equal": true,
+              "changes": []
+            },
+            "current_publisher_vs_current_presentation": {
+              "ordered_arrays_equal": true,
+              "changes": []
+            },
+            "current_session_vs_presentation": {
+              "ordered_arrays_equal": true
+            }
+          },
+          "doi_resolution_history": [
+            {
+              "resolver_status": "not_found",
+              "resolver_http_status": 404,
+              "resolver_checked_on": "2026-11-12"
+            },
+            {
+              "checked_on": "2026-11-22",
+              "method": "GET",
+              "initial_request_count": 1,
+              "http_status": 404,
+              "redirect_trace": [],
+              "final_url": "https://doi.org/10.1109/SC51908.2026.00010",
+              "location_header": null,
+              "source_id": "sc26_post_main04_doi",
+              "status": "not_found",
+              "interpretation": "The exact identifier remains assigned in publisher metadata, while this regular doi.org GET returned the recorded status. This does not establish Crossref registration or its absence."
+            }
+          ],
+          "award_result": {
+            "label": "Winner — ACM Gordon Bell Prize",
+            "award_series": "ACM Gordon Bell Prize",
+            "category": null,
+            "source_id": "sc26_acm_awards_release",
+            "announcement_date": "2026-11-19",
+            "presentation_date": "2026-11-19",
+            "date_basis": "ACM release p. 1 dated Chicago, IL, November 19, 2026; p. 2 states the prize was presented that day at SC26 in Chicago.",
+            "project_title_as_announced": "Closing the FeMo-Cofactor ‘Quantum-Advantage’ Gap with Exascale Supercomputers",
+            "recipients": [
+              "Honghui Shang",
+              "Zhiyu Xiao",
+              "Zhuozhao Xia",
+              "Hao Wu",
+              "Huan Ma",
+              "Yongqing Chen",
+              "Bin Li",
+              "Zhenyu Li",
+              "Yutong Lu",
+              "Jinlong Yang"
+            ],
+            "recipients_status": "ordered_as_enumerated_in_acm_awards_release_page_2; matches existing publisher byline and directly read official SC proceedings page",
+            "evidence_locations": [
+              {
+                "source_id": "sc26_acm_awards_release",
+                "location": "PDF p. 1 headline and opening paragraph; PDF p. 2 recipient paragraph and presentation-date paragraph"
+              },
+              {
+                "source_id": "sc26_official_gb103",
+                "location": "Title and Authors fields; this page establishes project/byline linkage, not award status"
+              }
+            ],
+            "status": "verified",
+            "evidence_note": "Award verified in the dated ACM Awards news release. Award recipients, publisher authors and performance claims remain separate evidence."
+          },
+          "postconference_status": {
+            "checked_on": "2026-11-22",
+            "award_outcome": "verified",
+            "conference_day_update": "not_verified",
+            "final_score_status": "Not established"
+          },
+          "performance_review": {
+            "conference_presentation": {
+              "scheduled_date": "2026-11-17",
+              "scheduled_start": "11:37",
+              "scheduled_end": "12:00",
+              "timezone": "America/Chicago",
+              "source_id": "sc26-post-main04-program",
+              "actual_delivery_verified": false
+            },
+            "update_status": "not_confirmed",
+            "update_status_label": "Conference-day performance update not confirmed",
+            "conference_day_update_status": "Not confirmed from public evidence",
+            "final_score_status": "Not established",
+            "source_ids_checked": [
+              "sc26-post-main04-program",
+              "sc26-post-session197",
+              "sc26-post-acm-award"
+            ],
+            "public_material_status": {
+              "official_program_abstract": "Checked",
+              "conference_recording": "Not reviewed; official page displays sign-in/Technical Program Reg Pass notice and lists Recorded",
+              "author_conference_slides": "Not located in bounded public search"
+            },
+            "notes": [
+              "The public program abstract is not a transcript of the delivered talk and has no visible revision date. Its values are not promoted to conference-day or final annual scores.",
+              "No complete manuscript or performance-methodology audit was performed in this pass.",
+              "The ACM award release explicitly introduces 1.456 EFLOP/s double precision and 5.626 EFLOP/s mixed precision as a quotation from the paper abstract. These are the same rates in the public program description, not evidence of an updated conference-day result. The 58.9% figure is a fraction of machine peak, not an additional measured rate; no hardware-peak FLOP/s value is derived. Award confirmation is handled separately from this score-status review."
+            ],
+            "checked_on": "2026-11-22",
+            "performance_updates": []
           }
         },
         {
@@ -5436,11 +6663,12 @@
           "title_source_id": "sc26_s2",
           "doi": "10.1109/SC51908.2026.00011",
           "doi_status": "verified",
-          "doi_source_id": "sc26_csdl_main05",
+          "doi_source_id": "sc26_post_main05_publisher",
           "publisher_title": "Exascale Distillation Workflows for Protein Structure Prediction on El Capitan",
           "authors": [
             "Nikoli Dryden",
             "Tal Ben-Nun",
+            "Pier Fiedorowicz",
             "Tom Benson",
             "Vinay S. Swamy",
             "Colin Kalicki",
@@ -5451,12 +6679,14 @@
             "Mohammed AlQuraishi",
             "Brian C. Van Essen"
           ],
-          "authors_status": "publisher_metadata_order_checked",
+          "authors_status": "publisher_metadata_order_checked; manuscript_byline_not_audited",
           "publication_url": "https://www.computer.org/csdl/proceedings-article/sc/2026/478900a051/2lkuzfdjSW4",
           "notes": [
-            "Program-membership and bibliographic roster entry only; no manuscript PDF, performance measurement, or final-score audit was performed.",
-            "This is a currently scheduled main-prize candidate, not a winner. The conference has not yet occurred as of 2026-11-12.",
-            "DOI and complete ordered byline verified in exact IEEE Computer Society article metadata. The publisher records publication date 2026-11-12; doi.org returned HTTP 404 on that date. The identifier is publisher-assigned, with resolver activation not yet established. No award or final-score claim follows from this publication metadata."
+            "Arrays are source- and retrieval-version-specific; no merged or preferred composite byline is created.",
+            "No manuscript PDF, recording, award announcement byline or performance result was used in this bibliography audit.",
+            "The preserved 2026-11-12 publisher metadata lists 11 authors. The publisher response retrieved 2026-11-22 lists 12, adding Pier Fiedorowicz at position 3 after Tal Ben-Nun; all subsequent authors retain their relative order. The current 12-name publisher array exactly matches both current official program arrays.",
+            "The publisher still reports pubDate 2026-11-12. This is not evidence that the author-list revision occurred on that date; its precise revision date is not supplied.",
+            "The directly checked award announcement is not used to label this candidate unsuccessful, rejected, or a non-winner."
           ],
           "doi_verification": {
             "method": "exact_primary_publisher_article_metadata",
@@ -5464,13 +6694,269 @@
             "publisher_venue": "SC26: International Conference for High Performance Computing, Networking, Storage and Analysis",
             "publisher_year": 2026,
             "publisher_publication_date": "2026-11-12",
-            "ordered_author_count": 11,
+            "ordered_author_count": 12,
             "title_match": "exact",
             "identifier_status": "publisher_assigned",
             "resolver_status": "not_found",
             "resolver_http_status": 404,
-            "resolver_checked_on": "2026-11-12"
-          }
+            "resolver_checked_on": "2026-11-22",
+            "metadata_checked_on": "2026-11-22"
+          },
+          "bibliographic_versions": [
+            {
+              "version_label": "Publisher metadata preserved on 2026-11-12",
+              "checked_on": "2026-11-12",
+              "source_revision_date": null,
+              "source_id": "sc26_preserved_20261112_main05_publisher",
+              "article_id": "2lkuzfdjSW4",
+              "title": "Exascale Distillation Workflows for Protein Structure Prediction on El Capitan",
+              "authors": [
+                "Nikoli Dryden",
+                "Tal Ben-Nun",
+                "Tom Benson",
+                "Vinay S. Swamy",
+                "Colin Kalicki",
+                "Vinayak Gokhale",
+                "J. Austin Ellis",
+                "Nicholas Malaya",
+                "Bronis R. de Supinski",
+                "Mohammed AlQuraishi",
+                "Brian C. Van Essen"
+              ],
+              "author_count": 11,
+              "venue": "SC26: International Conference for High Performance Computing, Networking, Storage and Analysis",
+              "year": 2026,
+              "publisher_reported_publication_date": "2026-11-12",
+              "source_kind": "publisher_metadata"
+            },
+            {
+              "version_label": "Publisher metadata retrieved on 2026-11-22",
+              "checked_on": "2026-11-22",
+              "source_revision_date": null,
+              "source_id": "sc26_post_main05_publisher",
+              "http_status": 200,
+              "article_id": "2lkuzfdjSW4",
+              "title": "Exascale Distillation Workflows for Protein Structure Prediction on El Capitan",
+              "authors": [
+                "Nikoli Dryden",
+                "Tal Ben-Nun",
+                "Pier Fiedorowicz",
+                "Tom Benson",
+                "Vinay S. Swamy",
+                "Colin Kalicki",
+                "Vinayak Gokhale",
+                "J. Austin Ellis",
+                "Nicholas Malaya",
+                "Bronis R. de Supinski",
+                "Mohammed AlQuraishi",
+                "Brian C. Van Essen"
+              ],
+              "author_count": 12,
+              "venue": "SC26: International Conference for High Performance Computing, Networking, Storage and Analysis",
+              "year": 2026,
+              "publisher_reported_publication_date": "2026-11-12",
+              "source_kind": "publisher_metadata"
+            },
+            {
+              "version_label": "Postconference official presentation page retrieved on 2026-11-22",
+              "checked_on": "2026-11-22",
+              "source_revision_date": null,
+              "source_id": "sc26_post_main05_program",
+              "authors": [
+                "Nikoli Dryden",
+                "Tal Ben-Nun",
+                "Pier Fiedorowicz",
+                "Tom Benson",
+                "Vinay S. Swamy",
+                "Colin Kalicki",
+                "Vinayak Gokhale",
+                "J. Austin Ellis",
+                "Nicholas Malaya",
+                "Bronis R. de Supinski",
+                "Mohammed AlQuraishi",
+                "Brian C. Van Essen"
+              ],
+              "author_count": 12,
+              "extraction": "Visible author-name anchors with data-link-type=presentation.person, in DOM order; HTML whitespace only collapsed.",
+              "source_kind": "official_program"
+            }
+          ],
+          "bibliographic_comparisons": {
+            "publisher_20261112_vs_20261122": {
+              "ordered_arrays_equal": false,
+              "changes": [
+                {
+                  "operation": "insert",
+                  "before_positions": [],
+                  "before_names": [],
+                  "after_positions": [
+                    3
+                  ],
+                  "after_names": [
+                    "Pier Fiedorowicz"
+                  ]
+                }
+              ]
+            },
+            "current_publisher_vs_current_presentation": {
+              "ordered_arrays_equal": true,
+              "changes": []
+            },
+            "current_session_vs_presentation": {
+              "ordered_arrays_equal": true
+            }
+          },
+          "doi_resolution_history": [
+            {
+              "resolver_status": "not_found",
+              "resolver_http_status": 404,
+              "resolver_checked_on": "2026-11-12"
+            },
+            {
+              "checked_on": "2026-11-22",
+              "method": "GET",
+              "initial_request_count": 1,
+              "http_status": 404,
+              "redirect_trace": [],
+              "final_url": "https://doi.org/10.1109/SC51908.2026.00011",
+              "location_header": null,
+              "source_id": "sc26_post_main05_doi",
+              "status": "not_found",
+              "interpretation": "The exact identifier remains assigned in publisher metadata, while this regular doi.org GET returned the recorded status. This does not establish Crossref registration or its absence."
+            }
+          ],
+          "postconference_status": {
+            "checked_on": "2026-11-22",
+            "award_outcome": "not_established_in_this_check",
+            "conference_day_update": "not_verified",
+            "final_score_status": "Not established"
+          },
+          "performance_review": {
+            "conference_presentation": {
+              "scheduled_date": "2026-11-17",
+              "scheduled_start": "13:30",
+              "scheduled_end": "13:52",
+              "timezone": "America/Chicago",
+              "source_id": "sc26-post-main05-program",
+              "actual_delivery_verified": false
+            },
+            "update_status": "different_conference_period_institutional_values_confirmed",
+            "update_status_label": "Different conference-period institutional values confirmed; conference-day score not established",
+            "conference_day_update_status": "Not confirmed from public evidence",
+            "final_score_status": "Not established",
+            "source_ids_checked": [
+              "sc26-post-main05-program",
+              "sc26-post-session218",
+              "sc26-post-main05-llnl-news",
+              "sc26-post-main05-author-manuscript"
+            ],
+            "public_material_status": {
+              "official_program_abstract": "Checked",
+              "conference_recording": "Not reviewed; official page displays sign-in/Technical Program Reg Pass notice and lists Recorded",
+              "author_conference_slides": "Not located in bounded public search"
+            },
+            "notes": [
+              "The public program abstract is not a transcript of the delivered talk and has no visible revision date. Its values are not promoted to conference-day or final annual scores.",
+              "No complete manuscript or performance-methodology audit was performed in this pass.",
+              "Different numerical claims are confirmed in a dated primary institutional announcement. The source does not say when the run occurred, whether it followed submission, or whether these were the values shown at the finalist talk or delivered to judges.",
+              "Precision, measured timing interval and I/O/startup inclusion remain unknown for the announcement. Do not carry FP32, FLOP/s figures or method details across from the manuscript.",
+              "The official program abstract still presents the manuscript-level quantities. The discrepancy is retained as versioned evidence, not silently reconciled into a final score."
+            ],
+            "checked_on": "2026-11-22",
+            "performance_updates": [
+              {
+                "id": "SC26-main05-llnl-announcement-2026-11-17",
+                "source_id": "sc26-post-main05-llnl-news",
+                "evidence_stage": "conference_period_institutional_announcement",
+                "published_on": "2026-11-17",
+                "source_revision_date": null,
+                "measurement_date": null,
+                "presentation_date": null,
+                "conference_day_update_status": "Not confirmed from public evidence",
+                "final_score_status": "Not established",
+                "title": "LLNL conference-period institutional announcement",
+                "measurements": [
+                  {
+                    "metric": "Protein-structure prediction workflow throughput",
+                    "value": 10700,
+                    "comparison_operator": ">",
+                    "unit": "predicted structures/s",
+                    "machine": "El Capitan",
+                    "scale": "45,200 AMD Instinct MI300A APUs",
+                    "precision": null,
+                    "measurement_kind": "institution_reported_application_throughput",
+                    "scope": "Protein-structure prediction workflow; I/O and startup coverage not specified in the announcement",
+                    "measurement_date": null,
+                    "presentation_date": null,
+                    "final_score_status": "Not established",
+                    "source_id": "sc26-post-main05-llnl-news",
+                    "location": "Article opening performance paragraphs immediately after finalist announcement"
+                  },
+                  {
+                    "metric": "Workflow speedup over extrapolated baseline",
+                    "value": 71.7,
+                    "comparison_operator": "=",
+                    "unit": "x",
+                    "machine": "El Capitan",
+                    "scale": "45,200 AMD Instinct MI300A APUs",
+                    "precision": null,
+                    "measurement_kind": "reported_speedup_against_extrapolated_baseline",
+                    "scope": "Workflow comparison against an extrapolated baseline",
+                    "measurement_date": null,
+                    "presentation_date": null,
+                    "final_score_status": "Not established",
+                    "source_id": "sc26-post-main05-llnl-news",
+                    "location": "Article opening performance paragraphs immediately after finalist announcement"
+                  },
+                  {
+                    "metric": "Estimated time for approximately 41 million protein structures",
+                    "value": 2.5,
+                    "comparison_operator": "approximately",
+                    "unit": "h",
+                    "machine": "El Capitan",
+                    "scale": "45,200 AMD Instinct MI300A APUs",
+                    "precision": null,
+                    "measurement_kind": "estimated_runtime",
+                    "scope": "Estimated full-dataset generation time for approximately 41 million structures",
+                    "measurement_date": null,
+                    "presentation_date": null,
+                    "final_score_status": "Not established",
+                    "source_id": "sc26-post-main05-llnl-news",
+                    "location": "Article opening performance paragraphs immediately after finalist announcement"
+                  }
+                ],
+                "limitations": "The institution does not specify precision, run date, timing interval or I/O/startup coverage. These claims are not identified as a conference-day update or the final judged score."
+              }
+            ],
+            "baseline_comparison": {
+              "source_id": "sc26-post-main05-author-manuscript",
+              "location": "PDF p. 1, abstract, I. Justification and II. Performance Attributes",
+              "evidence_stage": "author_hosted_finalist_manuscript",
+              "source_revision_date": null,
+              "measurement_date": null,
+              "throughput": {
+                "value": 6718,
+                "unit": "predicted structures/s",
+                "scope": "Sustained whole-workflow throughput including I/O and startup",
+                "precision": "Single precision; FP32 model inference"
+              },
+              "scale": {
+                "nodes": 11200,
+                "apus": 44800,
+                "accelerator": "AMD Instinct MI300A",
+                "machine": "El Capitan"
+              },
+              "speedup": {
+                "value": 45.4,
+                "unit": "x",
+                "baseline": "State-of-the-art baseline as described in the manuscript; detailed comparison method not audited here"
+              },
+              "audit_limit": "First-page comparison only, not a full manuscript-methodology audit."
+            }
+          },
+          "search_aliases": [
+            "ElMerFold"
+          ]
         },
         {
           "id": "SC26_main06",
@@ -5478,7 +6964,7 @@
           "title_source_id": "sc26_s2",
           "doi": "10.1109/SC51908.2026.00012",
           "doi_status": "verified",
-          "doi_source_id": "sc26_csdl_main06",
+          "doi_source_id": "sc26_post_main06_publisher",
           "publisher_title": "Extreme-Scale Linear-Scaling Kohn-Sham DFT at 100 Million Atoms: Bridging Quantum Simulations and Experiments",
           "authors": [
             "Qimen Xu",
@@ -5496,12 +6982,13 @@
             "Haohuan Fu",
             "Yutong Lu"
           ],
-          "authors_status": "publisher_metadata_order_checked",
+          "authors_status": "publisher_metadata_order_checked; manuscript_byline_not_audited",
           "publication_url": "https://www.computer.org/csdl/proceedings-article/sc/2026/478900a063/2lkuzfVBje8",
           "notes": [
-            "Program-membership and bibliographic roster entry only; no manuscript PDF, performance measurement, or final-score audit was performed.",
-            "This is a currently scheduled main-prize candidate, not a winner. The conference has not yet occurred as of 2026-11-12.",
-            "DOI and complete ordered byline verified in exact IEEE Computer Society article metadata. The publisher records publication date 2026-11-12; doi.org returned HTTP 404 on that date. The identifier is publisher-assigned, with resolver activation not yet established. No award or final-score claim follows from this publication metadata."
+            "Arrays are source- and retrieval-version-specific; no merged or preferred composite byline is created.",
+            "No manuscript PDF, recording, award announcement byline or performance result was used in this bibliography audit.",
+            "The current publisher and official session/presentation arrays match exactly in displayed names and order.",
+            "The directly checked award announcement is not used to label this candidate unsuccessful, rejected, or a non-winner."
           ],
           "doi_verification": {
             "method": "exact_primary_publisher_article_metadata",
@@ -5514,17 +7001,170 @@
             "identifier_status": "publisher_assigned",
             "resolver_status": "not_found",
             "resolver_http_status": 404,
-            "resolver_checked_on": "2026-11-12"
+            "resolver_checked_on": "2026-11-22",
+            "metadata_checked_on": "2026-11-22"
+          },
+          "bibliographic_versions": [
+            {
+              "version_label": "Publisher metadata preserved on 2026-11-12",
+              "checked_on": "2026-11-12",
+              "source_revision_date": null,
+              "source_id": "sc26_preserved_20261112_main06_publisher",
+              "article_id": "2lkuzfVBje8",
+              "title": "Extreme-Scale Linear-Scaling Kohn-Sham DFT at 100 Million Atoms: Bridging Quantum Simulations and Experiments",
+              "authors": [
+                "Qimen Xu",
+                "Yu Zhang",
+                "Dixing Ni",
+                "Lei Gao",
+                "Guangnan Feng",
+                "Qinrui Zheng",
+                "Jianting Liu",
+                "Haitian Lu",
+                "Zhaopeng Jia",
+                "Wei Xue",
+                "Shriram Chandran",
+                "Torsten Hoefler",
+                "Haohuan Fu",
+                "Yutong Lu"
+              ],
+              "author_count": 14,
+              "venue": "SC26: International Conference for High Performance Computing, Networking, Storage and Analysis",
+              "year": 2026,
+              "publisher_reported_publication_date": "2026-11-12",
+              "source_kind": "publisher_metadata"
+            },
+            {
+              "version_label": "Publisher metadata retrieved on 2026-11-22",
+              "checked_on": "2026-11-22",
+              "source_revision_date": null,
+              "source_id": "sc26_post_main06_publisher",
+              "http_status": 200,
+              "article_id": "2lkuzfVBje8",
+              "title": "Extreme-Scale Linear-Scaling Kohn-Sham DFT at 100 Million Atoms: Bridging Quantum Simulations and Experiments",
+              "authors": [
+                "Qimen Xu",
+                "Yu Zhang",
+                "Dixing Ni",
+                "Lei Gao",
+                "Guangnan Feng",
+                "Qinrui Zheng",
+                "Jianting Liu",
+                "Haitian Lu",
+                "Zhaopeng Jia",
+                "Wei Xue",
+                "Shriram Chandran",
+                "Torsten Hoefler",
+                "Haohuan Fu",
+                "Yutong Lu"
+              ],
+              "author_count": 14,
+              "venue": "SC26: International Conference for High Performance Computing, Networking, Storage and Analysis",
+              "year": 2026,
+              "publisher_reported_publication_date": "2026-11-12",
+              "source_kind": "publisher_metadata"
+            },
+            {
+              "version_label": "Postconference official presentation page retrieved on 2026-11-22",
+              "checked_on": "2026-11-22",
+              "source_revision_date": null,
+              "source_id": "sc26_post_main06_program",
+              "authors": [
+                "Qimen Xu",
+                "Yu Zhang",
+                "Dixing Ni",
+                "Lei Gao",
+                "Guangnan Feng",
+                "Qinrui Zheng",
+                "Jianting Liu",
+                "Haitian Lu",
+                "Zhaopeng Jia",
+                "Wei Xue",
+                "Shriram Chandran",
+                "Torsten Hoefler",
+                "Haohuan Fu",
+                "Yutong Lu"
+              ],
+              "author_count": 14,
+              "extraction": "Visible author-name anchors with data-link-type=presentation.person, in DOM order; HTML whitespace only collapsed.",
+              "source_kind": "official_program"
+            }
+          ],
+          "bibliographic_comparisons": {
+            "publisher_20261112_vs_20261122": {
+              "ordered_arrays_equal": true,
+              "changes": []
+            },
+            "current_publisher_vs_current_presentation": {
+              "ordered_arrays_equal": true,
+              "changes": []
+            },
+            "current_session_vs_presentation": {
+              "ordered_arrays_equal": true
+            }
+          },
+          "doi_resolution_history": [
+            {
+              "resolver_status": "not_found",
+              "resolver_http_status": 404,
+              "resolver_checked_on": "2026-11-12"
+            },
+            {
+              "checked_on": "2026-11-22",
+              "method": "GET",
+              "initial_request_count": 1,
+              "http_status": 404,
+              "redirect_trace": [],
+              "final_url": "https://doi.org/10.1109/SC51908.2026.00012",
+              "location_header": null,
+              "source_id": "sc26_post_main06_doi",
+              "status": "not_found",
+              "interpretation": "The exact identifier remains assigned in publisher metadata, while this regular doi.org GET returned the recorded status. This does not establish Crossref registration or its absence."
+            }
+          ],
+          "postconference_status": {
+            "checked_on": "2026-11-22",
+            "award_outcome": "not_established_in_this_check",
+            "conference_day_update": "not_verified",
+            "final_score_status": "Not established"
+          },
+          "performance_review": {
+            "conference_presentation": {
+              "scheduled_date": "2026-11-17",
+              "scheduled_start": "13:52",
+              "scheduled_end": "14:14",
+              "timezone": "America/Chicago",
+              "source_id": "sc26-post-main06-program",
+              "actual_delivery_verified": false
+            },
+            "update_status": "not_confirmed",
+            "update_status_label": "Conference-day performance update not confirmed",
+            "conference_day_update_status": "Not confirmed from public evidence",
+            "final_score_status": "Not established",
+            "source_ids_checked": [
+              "sc26-post-main06-program",
+              "sc26-post-session218"
+            ],
+            "public_material_status": {
+              "official_program_abstract": "Checked",
+              "conference_recording": "Not reviewed; official page displays sign-in/Technical Program Reg Pass notice and lists Recorded",
+              "author_conference_slides": "Not located in bounded public search"
+            },
+            "notes": [
+              "The public program abstract is not a transcript of the delivered talk and has no visible revision date. Its values are not promoted to conference-day or final annual scores.",
+              "No complete manuscript or performance-methodology audit was performed in this pass.",
+              "The public abstract distinguishes a 100-million-atom FP64 performance study from a larger silicon-system demonstration. These scopes must not be merged. No explicit conference-day revision or final score was located in the bounded search."
+            ],
+            "checked_on": "2026-11-22",
+            "performance_updates": []
           }
         }
       ],
       "notes": [
-        "As of 2026-11-12 these are announced/scheduled main Gordon Bell candidates; SC26 has not yet been held. No 2026 winner, award outcome or final score is asserted.",
-        "Climate Modeling finalist sessions are excluded. The broad Paper event type is not sufficient for main-prize membership.",
-        "Cached full-program fragments juxtaposed X-MoE-4D and Arachne with the afternoon award block; their individual official pages assign both to the regular Scaling Complex AI Training Workloads session, so they are excluded.",
-        "This is a title-level annual index, with no PDF or performance/final-score audit.",
-        "The currently scheduled main-prize roster was reconciled against all eight official day snippets on 2026-11-12. Climate/other prize series and regular paper sessions were kept separate. Program changes after this snapshot remain possible.",
-        "Six exact SC26 article records assign DOI identifiers and publication date 2026-11-12. These are verified as publisher-assigned bibliographic DOIs; doi.org returned HTTP404 for all six when checked that day, so the resolvers may not yet be active. The conference remains upcoming and this is not an award-outcome or performance-score claim."
+        "Six official-program finalists reviewed after SC26. One winner is directly verified from ACM; individual outcomes of the other five remain unestablished here. All six publisher-assigned DOIs returned HTTP 404 on this check. Conference-day final scores remain unverified.",
+        "Publisher and program ordered bylines are retained by retrieval date; no composite byline is inferred.",
+        "The climate-modelling and other prize series remain outside this main-prize roster.",
+        "Institutional conference-week performance reports are not automatically final conference scores."
       ],
       "verified_doi_count": 6,
       "source_method": "Primary online sources",
@@ -5535,7 +7175,498 @@
         "proceedings_url": null,
         "history_pdf_url": null
       },
-      "detailed_paper_count": 0
+      "detailed_paper_count": 0,
+      "preconference_snapshot": {
+        "year": 2026,
+        "award_series": "ACM Gordon Bell Prize",
+        "checked_on": "2026-11-12",
+        "sources": [
+          {
+            "id": "sc26_s1",
+            "url": "https://sc26.conference-program.com/session/?sess=sess197",
+            "label": "SC26 main Gordon Bell finalist presentations, Tuesday morning",
+            "kind": "official_conference_program_session"
+          },
+          {
+            "id": "sc26_s2",
+            "url": "https://sc26.conference-program.com/session/?sess=sess218",
+            "label": "SC26 main Gordon Bell finalist presentations, Tuesday afternoon",
+            "kind": "official_conference_program_session"
+          },
+          {
+            "id": "sc26_program",
+            "url": "https://sc26.conference-program.com/",
+            "label": "SC26 currently available official program",
+            "kind": "official_conference_program"
+          },
+          {
+            "id": "sc26_exclude_xmoe",
+            "url": "https://sc26.conference-program.com/presentation/?id=pap564&sess=sess211",
+            "label": "X-MoE-4D belongs to regular Scaling Complex AI Training Workloads session",
+            "kind": "official_conference_program_presentation"
+          },
+          {
+            "id": "sc26_exclude_arachne",
+            "url": "https://sc26.conference-program.com/presentation/?id=pap599&sess=sess211",
+            "label": "Arachne belongs to regular Scaling Complex AI Training Workloads session",
+            "kind": "official_conference_program_presentation"
+          },
+          {
+            "id": "sc26-day-2026-11-14",
+            "url": "https://sc26.conference-program.com/wp-content/linklings_snippets/wp_program_view_all_2026-11-14.txt?v=1794442135",
+            "label": "SC26 official public program snapshot, 2026-11-14",
+            "kind": "official_conference_program_day",
+            "local_reference": "2026/web_program/2026-11-14.html",
+            "source_sha256": "8d10012b932c6c4e8876430d30213f431b04919e3d8527c4a5fde620011a20b5"
+          },
+          {
+            "id": "sc26-day-2026-11-15",
+            "url": "https://sc26.conference-program.com/wp-content/linklings_snippets/wp_program_view_all_2026-11-15.txt?v=1794442135",
+            "label": "SC26 official public program snapshot, 2026-11-15",
+            "kind": "official_conference_program_day",
+            "local_reference": "2026/web_program/2026-11-15.html",
+            "source_sha256": "7e835c7fdf7e1f1fb2ffb03078d97ec5ceb7f5dbf6dee9e2b14965035ce78832"
+          },
+          {
+            "id": "sc26-day-2026-11-16",
+            "url": "https://sc26.conference-program.com/wp-content/linklings_snippets/wp_program_view_all_2026-11-16.txt?v=1794442135",
+            "label": "SC26 official public program snapshot, 2026-11-16",
+            "kind": "official_conference_program_day",
+            "local_reference": "2026/web_program/2026-11-16.html",
+            "source_sha256": "b2aed4d98ef7dd6046576c57749f79be9bcc9c2ad36db6317d0cba8401b3aae3"
+          },
+          {
+            "id": "sc26-day-2026-11-17",
+            "url": "https://sc26.conference-program.com/wp-content/linklings_snippets/wp_program_view_all_2026-11-17.txt?v=1794442135",
+            "label": "SC26 official public program snapshot, 2026-11-17",
+            "kind": "official_conference_program_day",
+            "local_reference": "2026/web_program/2026-11-17.html",
+            "source_sha256": "c4fe2b0395af1b1b3f4765aae5d03a04c4b27cba2a65f748549fbe959c8b6e8a"
+          },
+          {
+            "id": "sc26-day-2026-11-18",
+            "url": "https://sc26.conference-program.com/wp-content/linklings_snippets/wp_program_view_all_2026-11-18.txt?v=1794442135",
+            "label": "SC26 official public program snapshot, 2026-11-18",
+            "kind": "official_conference_program_day",
+            "local_reference": "2026/web_program/2026-11-18.html",
+            "source_sha256": "5ff11f9825708fae62c2a55edd4d867378de3677974520e0506253078168c6a8"
+          },
+          {
+            "id": "sc26-day-2026-11-19",
+            "url": "https://sc26.conference-program.com/wp-content/linklings_snippets/wp_program_view_all_2026-11-19.txt?v=1794442135",
+            "label": "SC26 official public program snapshot, 2026-11-19",
+            "kind": "official_conference_program_day",
+            "local_reference": "2026/web_program/2026-11-19.html",
+            "source_sha256": "01729e1c630b5f73bb76be15355bb2eedbe956d10f034798b62fbc549f9d6d26"
+          },
+          {
+            "id": "sc26-day-2026-11-20",
+            "url": "https://sc26.conference-program.com/wp-content/linklings_snippets/wp_program_view_all_2026-11-20.txt?v=1794442135",
+            "label": "SC26 official public program snapshot, 2026-11-20",
+            "kind": "official_conference_program_day",
+            "local_reference": "2026/web_program/2026-11-20.html",
+            "source_sha256": "0a8ed4e5df4af471be4a31912616c70998c885ac53522b59c7115a388d09b55a"
+          },
+          {
+            "id": "sc26-day-2026-11-21",
+            "url": "https://sc26.conference-program.com/wp-content/linklings_snippets/wp_program_view_all_2026-11-21.txt?v=1794442135",
+            "label": "SC26 official public program snapshot, 2026-11-21",
+            "kind": "official_conference_program_day",
+            "local_reference": "2026/web_program/2026-11-21.html",
+            "source_sha256": "a09fa35a5e44ce85767e640c0817e9a346a6499801789aeebeb8f44e25c19e6a"
+          },
+          {
+            "id": "sc26_csdl_publisher_toc",
+            "url": "https://www.computer.org/csdl/api/v1/graphql?query=query+%28%24proceedingId%3A+String%21%2C+%24limitResults%3A+Int%2C+%24skipResults%3A+Int%29+%7B+proceeding%3A+proceeding%28proceedingId%3A+%24proceedingId%29+%7B+id+acronym+title+year+%7D+articlesByProceeding%3A+articlesByProceedingWithPagination%28proceedingId%3A+%24proceedingId+limit%3A+%24limitResults+skip%3A+%24skipResults%29+%7B+totalResults+articleResults+%7B+id+doi+title+year+authors+%7B+fullName+%7D+idPrefix+fno+pubDate+pubType+pages+sectionTitle+%7D+%7D+%7D&variables=%7B%22proceedingId%22%3A+%222lkuyoe0xtm%22%2C+%22limitResults%22%3A+250%2C+%22skipResults%22%3A+0%7D",
+            "label": "IEEE Computer Society SC26 proceedings catalog (162 records), retrieved 2026-11-12",
+            "kind": "publisher_proceedings_metadata_api",
+            "checked_on": "2026-11-12",
+            "local_reference": "歴史一次資料/CSDL_SC2026_proceedings_metadata.json",
+            "source_sha256": "dbddc19e333d2520e856ffba229df5de660e50ec723a83cc08106f7e5d7b3c68"
+          },
+          {
+            "id": "sc26_csdl_main01",
+            "url": "https://www.computer.org/csdl/api/v1/graphql?query=query+%28%24articleId%3A+String%21%29+%7B+proceeding%3A+proceedingByArticleId%28articleId%3A+%24articleId%29+%7B+id+title+acronym+year+%7D+article%3A+articleById%28articleId%3A+%24articleId%29+%7B+id+doi+title+normalizedTitle+fno+authors+%7B+fullName+givenName+surname+%7D+idPrefix+pubDate+pubType+pages+year+%7D+%7D&variables=%7B%22articleId%22%3A+%222lkuzbdetfG%22%7D",
+            "label": "IEEE Computer Society exact article metadata: Architecture-Agnostic Exascale Star-by-Star Simulation of Our Galaxy",
+            "kind": "publisher_bibliographic_metadata_api",
+            "checked_on": "2026-11-12",
+            "local_reference": "歴史一次資料/CSDL_SC2026_main01_metadata.json",
+            "source_sha256": "faf9f1cf1894abe084d59b53944c228ac1905577426b3140211743fd92c66415"
+          },
+          {
+            "id": "sc26_csdl_main02",
+            "url": "https://www.computer.org/csdl/api/v1/graphql?query=query+%28%24articleId%3A+String%21%29+%7B+proceeding%3A+proceedingByArticleId%28articleId%3A+%24articleId%29+%7B+id+title+acronym+year+%7D+article%3A+articleById%28articleId%3A+%24articleId%29+%7B+id+doi+title+normalizedTitle+fno+authors+%7B+fullName+givenName+surname+%7D+idPrefix+pubDate+pubType+pages+year+%7D+%7D&variables=%7B%22articleId%22%3A+%222lkuzcdoCJO%22%7D",
+            "label": "IEEE Computer Society exact article metadata: Exascale Multiphysics Simulations for Liquid Metal Fusion Blankets",
+            "kind": "publisher_bibliographic_metadata_api",
+            "checked_on": "2026-11-12",
+            "local_reference": "歴史一次資料/CSDL_SC2026_main02_metadata.json",
+            "source_sha256": "8c720790c28e11f127b04c63f6f570087ed31e2e8f4f2d7ae41048217f1b2077"
+          },
+          {
+            "id": "sc26_csdl_main03",
+            "url": "https://www.computer.org/csdl/api/v1/graphql?query=query+%28%24articleId%3A+String%21%29+%7B+proceeding%3A+proceedingByArticleId%28articleId%3A+%24articleId%29+%7B+id+title+acronym+year+%7D+article%3A+articleById%28articleId%3A+%24articleId%29+%7B+id+doi+title+normalizedTitle+fno+authors+%7B+fullName+givenName+surname+%7D+idPrefix+pubDate+pubType+pages+year+%7D+%7D&variables=%7B%22articleId%22%3A+%222lkuzdolxao%22%7D",
+            "label": "IEEE Computer Society exact article metadata: Crossing the 12,000-Atom Barrier with Heterogeneous Quantum-Classical Supercomputing: Quantum Chemistry of Protein-Ligand Complexes",
+            "kind": "publisher_bibliographic_metadata_api",
+            "checked_on": "2026-11-12",
+            "local_reference": "歴史一次資料/CSDL_SC2026_main03_metadata.json",
+            "source_sha256": "78abf2149fc6c8faf5fa7560d8f5a82bd5fc5a62ca6b30dff068b3ffb71ebdb7"
+          },
+          {
+            "id": "sc26_csdl_main04",
+            "url": "https://www.computer.org/csdl/api/v1/graphql?query=query+%28%24articleId%3A+String%21%29+%7B+proceeding%3A+proceedingByArticleId%28articleId%3A+%24articleId%29+%7B+id+title+acronym+year+%7D+article%3A+articleById%28articleId%3A+%24articleId%29+%7B+id+doi+title+normalizedTitle+fno+authors+%7B+fullName+givenName+surname+%7D+idPrefix+pubDate+pubType+pages+year+%7D+%7D&variables=%7B%22articleId%22%3A+%222lkuzegQw8M%22%7D",
+            "label": "IEEE Computer Society exact article metadata: Closing the FeMo-Cofactor \"Quantum-Advantage\" Gap with Exascale Supercomputers",
+            "kind": "publisher_bibliographic_metadata_api",
+            "checked_on": "2026-11-12",
+            "local_reference": "歴史一次資料/CSDL_SC2026_main04_metadata.json",
+            "source_sha256": "9715df40fea4a0b368ce18c0bca68ad9b2a0300e130eb0a0cb8049ac3f4eb6ba"
+          },
+          {
+            "id": "sc26_csdl_main05",
+            "url": "https://www.computer.org/csdl/api/v1/graphql?query=query+%28%24articleId%3A+String%21%29+%7B+proceeding%3A+proceedingByArticleId%28articleId%3A+%24articleId%29+%7B+id+title+acronym+year+%7D+article%3A+articleById%28articleId%3A+%24articleId%29+%7B+id+doi+title+normalizedTitle+fno+authors+%7B+fullName+givenName+surname+%7D+idPrefix+pubDate+pubType+pages+year+%7D+%7D&variables=%7B%22articleId%22%3A+%222lkuzfdjSW4%22%7D",
+            "label": "IEEE Computer Society exact article metadata: Exascale Distillation Workflows for Protein Structure Prediction on El Capitan",
+            "kind": "publisher_bibliographic_metadata_api",
+            "checked_on": "2026-11-12",
+            "local_reference": "歴史一次資料/CSDL_SC2026_main05_metadata.json",
+            "source_sha256": "8cbd6fc389f4fc7f57d9d4492fc77f4ce5204e0aaa2cf6bafdcd3ed57ef87999"
+          },
+          {
+            "id": "sc26_csdl_main06",
+            "url": "https://www.computer.org/csdl/api/v1/graphql?query=query+%28%24articleId%3A+String%21%29+%7B+proceeding%3A+proceedingByArticleId%28articleId%3A+%24articleId%29+%7B+id+title+acronym+year+%7D+article%3A+articleById%28articleId%3A+%24articleId%29+%7B+id+doi+title+normalizedTitle+fno+authors+%7B+fullName+givenName+surname+%7D+idPrefix+pubDate+pubType+pages+year+%7D+%7D&variables=%7B%22articleId%22%3A+%222lkuzfVBje8%22%7D",
+            "label": "IEEE Computer Society exact article metadata: Extreme-Scale Linear-Scaling Kohn-Sham DFT at 100 Million Atoms: Bridging Quantum Simulations and Experiments",
+            "kind": "publisher_bibliographic_metadata_api",
+            "checked_on": "2026-11-12",
+            "local_reference": "歴史一次資料/CSDL_SC2026_main06_metadata.json",
+            "source_sha256": "80b66e7255c7898ffb40828541f50213862af348baa9a5bd8eda30350c269145"
+          }
+        ],
+        "roster_completeness": {
+          "status": "complete_current_official_program_snapshot",
+          "expected_count": 6,
+          "basis_source_ids": [
+            "sc26_s1",
+            "sc26_s2",
+            "sc26_program",
+            "sc26-day-2026-11-14",
+            "sc26-day-2026-11-15",
+            "sc26-day-2026-11-16",
+            "sc26-day-2026-11-17",
+            "sc26-day-2026-11-18",
+            "sc26-day-2026-11-19",
+            "sc26-day-2026-11-20",
+            "sc26-day-2026-11-21"
+          ],
+          "note": "All eight official program day snippets establish two main-prize sessions and six distinct scheduled candidates as of 2026-11-12. Publisher metadata assigns all six DOIs; doi.org returned HTTP404 that day. This snapshot establishes scheduled membership and publisher-assigned bibliography, with resolver activation and award outcomes unestablished."
+        },
+        "records": [
+          {
+            "id": "SC26_main01",
+            "title": "Architecture-Agnostic Exascale Star-by-Star Simulation of Our Galaxy",
+            "title_source_id": "sc26_s1",
+            "doi": "10.1109/SC51908.2026.00007",
+            "doi_status": "verified",
+            "doi_source_id": "sc26_csdl_main01",
+            "publisher_title": "Architecture-Agnostic Exascale Star-by-Star Simulation of Our Galaxy",
+            "authors": [
+              "Keiya Hirashima",
+              "Naoto Harada",
+              "Takayuki R. Saitoh",
+              "Kentaro Nomura",
+              "Masaki Iwasawa",
+              "Dennis Bollweg",
+              "Kohji Yoshikawa",
+              "Yohei Miki",
+              "Tetsuro Asano",
+              "Yutaka Hirai",
+              "Takashi Okamoto",
+              "Kana Moriwaki",
+              "Junichiro Makino",
+              "Matthew T. Bettencour",
+              "Laura Morgenstern",
+              "Mathis Bode",
+              "Michiko S. Fujii"
+            ],
+            "authors_status": "publisher_metadata_order_checked",
+            "publication_url": "https://www.computer.org/csdl/proceedings-article/sc/2026/478900a001/2lkuzbdetfG",
+            "notes": [
+              "Program-membership and bibliographic roster entry only; no manuscript PDF, performance measurement, or final-score audit was performed.",
+              "This is a currently scheduled main-prize candidate, not a winner. The conference has not yet occurred as of 2026-11-12.",
+              "DOI and complete ordered byline verified in exact IEEE Computer Society article metadata. The publisher records publication date 2026-11-12; doi.org returned HTTP 404 on that date. The identifier is publisher-assigned, with resolver activation not yet established. No award or final-score claim follows from this publication metadata."
+            ],
+            "doi_verification": {
+              "method": "exact_primary_publisher_article_metadata",
+              "publisher_article_id": "2lkuzbdetfG",
+              "publisher_venue": "SC26: International Conference for High Performance Computing, Networking, Storage and Analysis",
+              "publisher_year": 2026,
+              "publisher_publication_date": "2026-11-12",
+              "ordered_author_count": 17,
+              "title_match": "exact",
+              "identifier_status": "publisher_assigned",
+              "resolver_status": "not_found",
+              "resolver_http_status": 404,
+              "resolver_checked_on": "2026-11-12"
+            }
+          },
+          {
+            "id": "SC26_main02",
+            "title": "Exascale Multiphysics Simulations for Liquid Metal Fusion Blankets",
+            "title_source_id": "sc26_s1",
+            "doi": "10.1109/SC51908.2026.00008",
+            "doi_status": "verified",
+            "doi_source_id": "sc26_csdl_main02",
+            "publisher_title": "Exascale Multiphysics Simulations for Liquid Metal Fusion Blankets",
+            "authors": [
+              "Yu-Hsiang Lan",
+              "Misun Min",
+              "Paul Fischer",
+              "Elia Merzari",
+              "Tri Nguyen",
+              "Haomin Yuan",
+              "Patrick Shriwise",
+              "Stefan Kerkemeier",
+              "Andrew Davis",
+              "Aleksander Dubas",
+              "Rupert Eardley-Brunt",
+              "Maximiliano Dalinger",
+              "Luiz Aldeia Machado",
+              "Kris Rowe",
+              "Ananias Tomboulides",
+              "Ramesh Balakrishnan"
+            ],
+            "authors_status": "publisher_metadata_order_checked",
+            "publication_url": "https://www.computer.org/csdl/proceedings-article/sc/2026/478900a014/2lkuzcdoCJO",
+            "notes": [
+              "Program-membership and bibliographic roster entry only; no manuscript PDF, performance measurement, or final-score audit was performed.",
+              "This is a currently scheduled main-prize candidate, not a winner. The conference has not yet occurred as of 2026-11-12.",
+              "DOI and complete ordered byline verified in exact IEEE Computer Society article metadata. The publisher records publication date 2026-11-12; doi.org returned HTTP 404 on that date. The identifier is publisher-assigned, with resolver activation not yet established. No award or final-score claim follows from this publication metadata."
+            ],
+            "doi_verification": {
+              "method": "exact_primary_publisher_article_metadata",
+              "publisher_article_id": "2lkuzcdoCJO",
+              "publisher_venue": "SC26: International Conference for High Performance Computing, Networking, Storage and Analysis",
+              "publisher_year": 2026,
+              "publisher_publication_date": "2026-11-12",
+              "ordered_author_count": 16,
+              "title_match": "exact",
+              "identifier_status": "publisher_assigned",
+              "resolver_status": "not_found",
+              "resolver_http_status": 404,
+              "resolver_checked_on": "2026-11-12"
+            }
+          },
+          {
+            "id": "SC26_main03",
+            "title": "Crossing the 12,000-Atom Barrier with Heterogeneous Quantum-Classical Supercomputing: Quantum Chemistry of Protein-Ligand Complexes",
+            "title_source_id": "sc26_s1",
+            "doi": "10.1109/SC51908.2026.00009",
+            "doi_status": "verified",
+            "doi_source_id": "sc26_csdl_main03",
+            "publisher_title": "Crossing the 12,000-Atom Barrier with Heterogeneous Quantum-Classical Supercomputing: Quantum Chemistry of Protein-Ligand Complexes",
+            "authors": [
+              "Kenneth M. Merz",
+              "Akhil Shajan",
+              "Danil Kaliakin",
+              "Fangchun Liang",
+              "Yuichi Otsuka",
+              "Tomonori Shirakawa",
+              "Lukas Broers",
+              "Han Xu",
+              "Miwako Tsuji",
+              "Mitsuhisa Sato",
+              "Seiji Yunoki",
+              "Ryo Wakizaka",
+              "Yukio Kawashima",
+              "Jun Doi",
+              "Hitomi Takahashi",
+              "Toshinari Itoko",
+              "Hiroshi Horii",
+              "Thaddeus Pellegrini",
+              "Javier Robledo Moreno",
+              "Kevin J. Sung",
+              "Ella Fejer",
+              "Robert Walkup",
+              "Seetharami Seelam",
+              "Mario Motta"
+            ],
+            "authors_status": "publisher_metadata_order_checked",
+            "publication_url": "https://www.computer.org/csdl/proceedings-article/sc/2026/478900a026/2lkuzdolxao",
+            "notes": [
+              "Program-membership and bibliographic roster entry only; no manuscript PDF, performance measurement, or final-score audit was performed.",
+              "This is a currently scheduled main-prize candidate, not a winner. The conference has not yet occurred as of 2026-11-12.",
+              "DOI and complete ordered byline verified in exact IEEE Computer Society article metadata. The publisher records publication date 2026-11-12; doi.org returned HTTP 404 on that date. The identifier is publisher-assigned, with resolver activation not yet established. No award or final-score claim follows from this publication metadata."
+            ],
+            "doi_verification": {
+              "method": "exact_primary_publisher_article_metadata",
+              "publisher_article_id": "2lkuzdolxao",
+              "publisher_venue": "SC26: International Conference for High Performance Computing, Networking, Storage and Analysis",
+              "publisher_year": 2026,
+              "publisher_publication_date": "2026-11-12",
+              "ordered_author_count": 24,
+              "title_match": "exact",
+              "identifier_status": "publisher_assigned",
+              "resolver_status": "not_found",
+              "resolver_http_status": 404,
+              "resolver_checked_on": "2026-11-12"
+            }
+          },
+          {
+            "id": "SC26_main04",
+            "title": "Closing the FeMo-Cofactor \"Quantum-Advantage'' Gap with Exascale Supercomputers",
+            "title_source_id": "sc26_s1",
+            "doi": "10.1109/SC51908.2026.00010",
+            "doi_status": "verified",
+            "doi_source_id": "sc26_csdl_main04",
+            "publisher_title": "Closing the FeMo-Cofactor \"Quantum-Advantage\" Gap with Exascale Supercomputers",
+            "authors": [
+              "Honghui Shang",
+              "Zhiyu Xiao",
+              "Zhuozhao Xia",
+              "Hao Wu",
+              "Huan Ma",
+              "Yongqing Chen",
+              "Bin Li",
+              "Zhenyu Li",
+              "Yutong Lu",
+              "Jinlong Yang"
+            ],
+            "authors_status": "publisher_metadata_order_checked",
+            "publication_url": "https://www.computer.org/csdl/proceedings-article/sc/2026/478900a039/2lkuzegQw8M",
+            "notes": [
+              "Program-membership and bibliographic roster entry only; no manuscript PDF, performance measurement, or final-score audit was performed.",
+              "This is a currently scheduled main-prize candidate, not a winner. The conference has not yet occurred as of 2026-11-12.",
+              "DOI and complete ordered byline verified in exact IEEE Computer Society article metadata. The publisher records publication date 2026-11-12; doi.org returned HTTP 404 on that date. The identifier is publisher-assigned, with resolver activation not yet established. No award or final-score claim follows from this publication metadata.",
+              "Publisher title uses closing double quotation marks around \"Quantum-Advantage\"; the conference program uses two closing apostrophes. This punctuation variant is preserved in publisher_title."
+            ],
+            "doi_verification": {
+              "method": "exact_primary_publisher_article_metadata",
+              "publisher_article_id": "2lkuzegQw8M",
+              "publisher_venue": "SC26: International Conference for High Performance Computing, Networking, Storage and Analysis",
+              "publisher_year": 2026,
+              "publisher_publication_date": "2026-11-12",
+              "ordered_author_count": 10,
+              "title_match": "quotation_punctuation_variant",
+              "identifier_status": "publisher_assigned",
+              "resolver_status": "not_found",
+              "resolver_http_status": 404,
+              "resolver_checked_on": "2026-11-12"
+            }
+          },
+          {
+            "id": "SC26_main05",
+            "title": "Exascale Distillation Workflows for Protein Structure Prediction on El Capitan",
+            "title_source_id": "sc26_s2",
+            "doi": "10.1109/SC51908.2026.00011",
+            "doi_status": "verified",
+            "doi_source_id": "sc26_csdl_main05",
+            "publisher_title": "Exascale Distillation Workflows for Protein Structure Prediction on El Capitan",
+            "authors": [
+              "Nikoli Dryden",
+              "Tal Ben-Nun",
+              "Tom Benson",
+              "Vinay S. Swamy",
+              "Colin Kalicki",
+              "Vinayak Gokhale",
+              "J. Austin Ellis",
+              "Nicholas Malaya",
+              "Bronis R. de Supinski",
+              "Mohammed AlQuraishi",
+              "Brian C. Van Essen"
+            ],
+            "authors_status": "publisher_metadata_order_checked",
+            "publication_url": "https://www.computer.org/csdl/proceedings-article/sc/2026/478900a051/2lkuzfdjSW4",
+            "notes": [
+              "Program-membership and bibliographic roster entry only; no manuscript PDF, performance measurement, or final-score audit was performed.",
+              "This is a currently scheduled main-prize candidate, not a winner. The conference has not yet occurred as of 2026-11-12.",
+              "DOI and complete ordered byline verified in exact IEEE Computer Society article metadata. The publisher records publication date 2026-11-12; doi.org returned HTTP 404 on that date. The identifier is publisher-assigned, with resolver activation not yet established. No award or final-score claim follows from this publication metadata."
+            ],
+            "doi_verification": {
+              "method": "exact_primary_publisher_article_metadata",
+              "publisher_article_id": "2lkuzfdjSW4",
+              "publisher_venue": "SC26: International Conference for High Performance Computing, Networking, Storage and Analysis",
+              "publisher_year": 2026,
+              "publisher_publication_date": "2026-11-12",
+              "ordered_author_count": 11,
+              "title_match": "exact",
+              "identifier_status": "publisher_assigned",
+              "resolver_status": "not_found",
+              "resolver_http_status": 404,
+              "resolver_checked_on": "2026-11-12"
+            }
+          },
+          {
+            "id": "SC26_main06",
+            "title": "Extreme-Scale Linear-Scaling Kohn-Sham DFT at 100 Million Atoms: Bridging Quantum Simulations and Experiments",
+            "title_source_id": "sc26_s2",
+            "doi": "10.1109/SC51908.2026.00012",
+            "doi_status": "verified",
+            "doi_source_id": "sc26_csdl_main06",
+            "publisher_title": "Extreme-Scale Linear-Scaling Kohn-Sham DFT at 100 Million Atoms: Bridging Quantum Simulations and Experiments",
+            "authors": [
+              "Qimen Xu",
+              "Yu Zhang",
+              "Dixing Ni",
+              "Lei Gao",
+              "Guangnan Feng",
+              "Qinrui Zheng",
+              "Jianting Liu",
+              "Haitian Lu",
+              "Zhaopeng Jia",
+              "Wei Xue",
+              "Shriram Chandran",
+              "Torsten Hoefler",
+              "Haohuan Fu",
+              "Yutong Lu"
+            ],
+            "authors_status": "publisher_metadata_order_checked",
+            "publication_url": "https://www.computer.org/csdl/proceedings-article/sc/2026/478900a063/2lkuzfVBje8",
+            "notes": [
+              "Program-membership and bibliographic roster entry only; no manuscript PDF, performance measurement, or final-score audit was performed.",
+              "This is a currently scheduled main-prize candidate, not a winner. The conference has not yet occurred as of 2026-11-12.",
+              "DOI and complete ordered byline verified in exact IEEE Computer Society article metadata. The publisher records publication date 2026-11-12; doi.org returned HTTP 404 on that date. The identifier is publisher-assigned, with resolver activation not yet established. No award or final-score claim follows from this publication metadata."
+            ],
+            "doi_verification": {
+              "method": "exact_primary_publisher_article_metadata",
+              "publisher_article_id": "2lkuzfVBje8",
+              "publisher_venue": "SC26: International Conference for High Performance Computing, Networking, Storage and Analysis",
+              "publisher_year": 2026,
+              "publisher_publication_date": "2026-11-12",
+              "ordered_author_count": 14,
+              "title_match": "exact",
+              "identifier_status": "publisher_assigned",
+              "resolver_status": "not_found",
+              "resolver_http_status": 404,
+              "resolver_checked_on": "2026-11-12"
+            }
+          }
+        ],
+        "notes": [
+          "As of 2026-11-12 these are announced/scheduled main Gordon Bell candidates; SC26 has not yet been held. No 2026 winner, award outcome or final score is asserted.",
+          "Climate Modeling finalist sessions are excluded. The broad Paper event type is not sufficient for main-prize membership.",
+          "Cached full-program fragments juxtaposed X-MoE-4D and Arachne with the afternoon award block; their individual official pages assign both to the regular Scaling Complex AI Training Workloads session, so they are excluded.",
+          "This is a title-level annual index, with no PDF or performance/final-score audit.",
+          "The currently scheduled main-prize roster was reconciled against all eight official day snippets on 2026-11-12. Climate/other prize series and regular paper sessions were kept separate. Program changes after this snapshot remain possible.",
+          "Six exact SC26 article records assign DOI identifiers and publication date 2026-11-12. These are verified as publisher-assigned bibliographic DOIs; doi.org returned HTTP404 for all six when checked that day, so the resolvers may not yet be active. The conference remains upcoming and this is not an award-outcome or performance-score claim."
+        ],
+        "verified_doi_count": 6,
+        "source_method": "Primary online sources",
+        "sc_links": {
+          "year": 2026,
+          "label": "SC26",
+          "website_url": "https://sc26.supercomputing.org/",
+          "proceedings_url": null,
+          "history_pdf_url": null
+        },
+        "detailed_paper_count": 0
+      },
+      "postconference_review": {
+        "checked_on": "2026-11-22",
+        "conference_start": "2026-11-15",
+        "conference_end": "2026-11-20",
+        "winner_record_ids": [
+          "SC26_main04"
+        ],
+        "award_source_id": "sc26_acm_awards_release",
+        "note": "Six official-program finalists reviewed after SC26. One winner is directly verified from ACM; individual outcomes of the other five remain unestablished here. All six publisher-assigned DOIs returned HTTP 404 on this check. Conference-day final scores remain unverified."
+      }
     },
     {
       "year": 2025,
@@ -14803,7 +16934,7 @@
         "history_pdf_url": null
       }
     ],
-    "current_year_source_note": "SC26 website linked from official history navigation; scheduled main-prize membership checked against the public day-by-day program on 2026-11-12. Publisher-assigned DOI metadata is tracked in the annual roster."
+    "current_year_source_note": "SC26 program membership and publisher bibliography rechecked after the conference on 2026-11-22; the 2026-11-12 preconference snapshot is preserved."
   },
   "year_contexts": [
     {

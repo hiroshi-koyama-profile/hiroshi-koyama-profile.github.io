@@ -21,3 +21,7 @@
 @media(max-width:1000px){.stats{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:22px}.stats>div:nth-child(2){border-right:0}.stats>div:nth-child(3){padding-left:0}}
 @media(max-width:600px){.hero{padding-top:32px;padding-bottom:22px}.archive-start{grid-template-columns:1fr;gap:14px;margin-bottom:24px}.archive-start>a{padding:16px 18px}.archive-start strong{font-size:25px;margin:6px 0 9px}nav a{font-size:.875rem}.brand{font-size:.875rem}.stats>div{flex-direction:column;gap:6px}.stats span{max-width:100%;font-size:.875rem}.stats>div:nth-child(2n){padding:0}.stats strong{font-size:34px}.archive-count-scope{font-size:.875rem}.roster-year>summary span,.year-cell span{font-size:.875rem}.memorial{margin-top:24px}.list-meta>span:last-child{display:block;font-size:.75rem}.list-meta{flex-direction:column;gap:4px}}
 .tag{font-size:.875rem}
+
+.record-review{font-size:.875rem;line-height:1.7;color:var(--muted)}.roster-year>.conference-review{margin:16px 18px}.preconference-history{margin-bottom:18px}.preconference-history li{font-size:.875rem;overflow-wrap:anywhere}.byline-version{padding:10px 0;border-top:1px solid var(--line)}.byline-version h5{font-size:.875rem;line-height:1.6;margin:0}.byline-history p{font-size:.875rem!important}
+
+.performance-updates{padding:14px 16px;background:#edf0e8;border-left:3px solid var(--green)}.performance-updates p,.performance-updates li{font-size:.875rem!important;line-height:1.75}.performance-updates li{margin:8px 0}
