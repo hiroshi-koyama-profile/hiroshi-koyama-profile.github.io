@@ -108,6 +108,7 @@ assert new in text,'Review upstream coverage highlights'
 module.write_text(text)
 app=ATLAS/'app.js';text=app.read_text()
 text=re.sub(r"from './coverage[.]js(?:[?]v=[a-f0-9]+)?'","from './coverage.js?v="+digest(module)[:12]+"'",text)
+text=re.sub(r"'coverage[.]json(?:[?]v=[a-f0-9]+)?'","'coverage.json?v="+digest(ATLAS/'coverage.json')[:12]+"'",text)
 app.write_text(text)
 path=ATLAS/'sitemap.xml';xml=ET.parse(path);root=xml.getroot();ns='{http://www.sitemaps.org/schemas/sitemap/0.9}'
 if ORIGIN+ROUTE not in {x.text for x in root.findall('.//{*}loc')}:ET.SubElement(ET.SubElement(root,ns+'url'),ns+'loc').text=ORIGIN+ROUTE
