@@ -4,18 +4,19 @@ from pathlib import Path
 import hashlib
 import json
 import re
+from atlas_execution_discovery import load_discovery, entry_path
 
 ROOT=Path(__file__).resolve().parents[1]
 ATLAS=ROOT/'numerical-methods-atlas'
 catalog=json.loads((ROOT/'catalog/atlas-methods.json').read_text())
 path=ATLAS/'home-search-index.json';index=json.loads(path.read_text())
-index['entries']=[x for x in index['entries'] if x.get('origin')!='public-method-registry']
+index['entries']=[x for x in index['entries'] if x.get('origin') not in {'public-method-registry','public-execution-discovery'}]
 for entry in index['entries']:
     if entry['id']=='roadmap':
         for lang in ['ja','en']:
             entry['headings'][lang]=json.loads((ATLAS/('content.'+lang+'.json')).read_text())['roadmap']['headings']
-def add(ident,title,keywords,routes):
-    index['entries'].append({'id':ident,'title':title,'headings':{'ja':[],'en':[]},'keywords':keywords,'routes':routes,'origin':'public-method-registry'})
+def add(ident,title,keywords,routes,kind='resource'):
+    index['entries'].append({'id':ident,'title':title,'headings':{'ja':[],'en':[]},'keywords':keywords,'routes':routes,'origin':'public-method-registry','kind':kind})
 for x in catalog['methods']:
     review=x.get('method_review',{})
     extra=[]
@@ -25,7 +26,7 @@ for x in catalog['methods']:
             extra+=list(review[name].values())
         for name in ['use_when','avoid_when']:
             for values in review[name].values():extra+=values
-    add('registry-'+x['id'],x['name'],list(x['name'].values())+x.get('aliases',[])+list(x['group'].values())+extra,{lang:'/numerical-methods-atlas/methods/'+x['id']+'/?lang='+lang for lang in ['ja','en']})
+    add('registry-'+x['id'],x['name'],list(x['name'].values())+x.get('aliases',[])+list(x['group'].values())+extra,{lang:'/numerical-methods-atlas/methods/'+x['id']+'/?lang='+lang for lang in ['ja','en']},'method')
 add('public-method-map',{'ja':'手法の見取り図','en':'A map of numerical methods'},['手法 見取り図','method map','主要24手法','適用条件','条件と制約','一次文献','primary references','priority methods'],{lang:'/numerical-methods-atlas/methods/?lang='+lang for lang in ['ja','en']})
 add('public-code-guide',{'ja':'コード・入力・検証を取得する','en':'Get code, inputs and verification'},['公開コード','データ','download','code edition'],{lang:'/numerical-methods-atlas/code-and-data/?lang='+lang for lang in ['ja','en']})
 add('shared-execution-guide',{'ja':'代表15問題を固定入力から実行・検証する','en':'Run and validate 15 fixed-input representative problems'},['共通手順','実行方法','検証','固定入力','コード データ','再現','Barnes Hut','水素型原子','ヘリウム','reproduce','validation','execution guide','代表15問題','線形移流','Sod','Shu Osher','Poisson','Bratu','調和振動子','硬いODE','周期PM','Taylor Green','Brio Wu'],{lang:'/numerical-methods-atlas/code-and-data/?lang='+lang for lang in ['ja','en']})
@@ -36,7 +37,20 @@ total=len(json.loads((ROOT/'catalog/atlas-test-problems.json').read_text())['pro
 add('visual-test-index',{'ja':f'絵から探す：全{total}のテスト計算','en':f'Browse all {total} test problems by picture'},['絵から探す','画像','ギャラリー','テスト計算','visual index','gallery'],{lang:'/numerical-methods-atlas/gallery/?lang='+lang for lang in ['ja','en']})
 add('quantum-chemistry-overview',{'ja':'量子化学・DFT：何を近似し、何を解くか','en':'Quantum chemistry and DFT: approximations and equations'},['量子化学','密度汎関数','電子状態','HF','DFT','Kohn–Sham','Hartree–Fock','quantum chemistry','対称群','小群','既約表現','band symmetry'],{lang:f'/numerical-methods-atlas/{lang}/read/quantum-chemistry/' for lang in ['ja','en']})
 add('quantum-atoms-examples',{'ja':'水素型原子とHe：実行・検証例','en':'Hydrogenic atoms and helium: runnable validation examples'},['水素型原子','ヘリウム','He','hydrogenic','helium','LDA_X','SCF','原子 計算 コード 検証'],{lang:f'/numerical-methods-atlas/{lang}/read/quantum-atoms/' for lang in ['ja','en']})
-index['scope']='chapter titles, section headings, model and method labels, glossary aliases, and public method records including reviewed applicability conditions'
+execution_intents=['実行','コード','入力','検証','再現','ダウンロード','run','code','execute','execution','runnable','reproduce','validation','input','download','example']
+for item in load_discovery(ROOT)['examples']:
+    execution=item['execution']
+    identity=[item['id'],item['id'].replace('-',' '),item['problem_id'],*execution['name'].values(),*item['keywords']]
+    index['entries'].append({
+        'id':'execution-'+item['id'],'title':execution['name'],
+        'headings':{'ja':[],'en':[]},
+        'keywords':list(dict.fromkeys([*identity,*item['outcome'].values(),*execution_intents])),
+        'focus_keywords':list(dict.fromkeys(identity)),
+        'snippet':item['outcome'],
+        'routes':{lang:entry_path(item['id'])+'?lang='+lang for lang in ['ja','en']},
+        'kind':'execution-example','origin':'public-execution-discovery',
+    })
+index['scope']='chapter titles, section headings, model and method labels, glossary aliases, reviewed applicability conditions, and 15 individually scoped runnable execution examples'
 path.write_text(json.dumps(index,ensure_ascii=False,separators=(',',':'))+'\n')
 module=ATLAS/'home-search.js';text=module.read_text()
 marker=' // Public word-search entry\n'

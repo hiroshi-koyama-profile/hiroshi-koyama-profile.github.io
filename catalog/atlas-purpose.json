@@ -14,20 +14,20 @@
       {
         "id": "words",
         "title": "文字で検索",
-        "description": "手法名・方程式名・現象から。日本語と英語で探せます。",
-        "action": "キーワードを入力する →"
+        "description": "手法名・現象名を検索。固定入力の実行例も日英で探せます。",
+        "action": "キーワードで実行例を探す →"
       },
       {
         "id": "equations",
         "title": "数式から探す",
-        "description": "式の形を眺め、解説・手法・テスト計算へ進めます。",
-        "action": "方程式の一覧を見る →"
+        "description": "全{equations}方程式・モデルの式と、{execution_examples}問題の実行例から選べます。",
+        "action": "数式と実行例を見る →"
       },
       {
         "id": "pictures",
         "title": "絵から探す",
-        "description": "全{test_problems}のテスト計算を一覧。波形・衝撃波・渦・場・誤差の画像から解説へ。",
-        "action": "テスト計算のギャラリーへ →"
+        "description": "全{test_problems}問題の保存図を一覧。実行・検証例のある{execution_examples}問題に絞れます。",
+        "action": "図から実行例を選ぶ →"
       }
     ],
     "metrics": {
@@ -64,20 +64,20 @@
       {
         "id": "words",
         "title": "Search by words",
-        "description": "Search methods, equations and phenomena in English or Japanese.",
-        "action": "Enter a keyword →"
+        "description": "Search methods and phenomena, including fixed-input examples, in English or Japanese.",
+        "action": "Find runnable examples by keyword →"
       },
       {
         "id": "equations",
         "title": "Browse by equation",
-        "description": "Recognize a formula and follow explanations, methods and test cases.",
-        "action": "See the equation index →"
+        "description": "Browse all {equations} equations/models and formula shortcuts to {execution_examples} runnable examples.",
+        "action": "See formulas and runnable examples →"
       },
       {
         "id": "pictures",
         "title": "Browse by picture",
-        "description": "See all {test_problems} test problems. Follow images of profiles, shocks, vortices, fields and errors to their readings.",
-        "action": "Open the computed gallery →"
+        "description": "See saved illustrations for all {test_problems} problems and filter to {execution_examples} runnable examples.",
+        "action": "Choose examples by picture →"
       }
     ],
     "metrics": {

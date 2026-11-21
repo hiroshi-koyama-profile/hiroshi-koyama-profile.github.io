@@ -12,7 +12,7 @@ const inventory = json('numerical-methods-atlas/test-cases/index.json');
 const gallery = json('numerical-methods-atlas/gallery/index.json');
 const html = read('numerical-methods-atlas/gallery/index.html');
 
-test('the visual index covers the exact atlas-wide inventory with one card per language and working image-to-reading links', () => {
+test('the visual index covers the exact atlas-wide inventory with one card per language and working image-to-entry or reading links', () => {
   assert.deepEqual(gallery.items.map(x => x.id), inventory.problems.map(x => x.id));
   assert.equal(gallery.counts.test_problems, inventory.counts.test_problems);
   assert.equal(new Set(gallery.items.map(x => x.id)).size, gallery.items.length);
@@ -23,7 +23,9 @@ test('the visual index covers the exact atlas-wide inventory with one card per l
     assert.ok(x.caption.ja && x.caption.en);
     for (const lang of ['ja', 'en']) {
       const tile = html.split(`id="${x.id}-${lang}"`)[1].split('</li>')[0];
-      assert.ok(tile.includes(`class="gallery-image-link" href="${x.reading[lang]}"`), x.id);
+      const target = x.runnable ? x.execution_entry.url[lang] : x.reading[lang];
+      assert.ok(tile.includes(`class="gallery-image-link" href="${target}"`), x.id);
+      assert.ok(tile.includes(`href="${x.reading[lang]}"`), `${x.id}: reading remains available`);
       assert.ok(tile.includes(`src="${x.image}"`));
       assert.ok(tile.includes('loading="lazy"'));
       const path = new URL(x.reading[lang]).pathname.slice(1) + 'index.html';

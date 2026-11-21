@@ -1,0 +1,24 @@
+.execution-equation-shortcuts{margin:28px 0 44px;padding:24px 0;border-block:1px solid var(--line,#d2d3c8)}
+.execution-equation-shortcuts>h2,.equation-model-inventory>h2{font-size:clamp(23px,3vw,31px);line-height:1.5;margin:0 0 14px}
+.execution-equation-shortcuts>p{max-width:88ch;font-size:16px;line-height:1.9;margin:0 0 24px}
+.execution-formula-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.execution-formula-card{min-width:0;padding:20px;border:1px solid var(--line,#d2d3c8);background:var(--paper,#f7f6ef);display:flex;flex-direction:column;gap:12px}
+.execution-formula-card-wide{grid-column:1/-1}
+.execution-formula-card>h3{font-size:21px;line-height:1.6;margin:0}
+.execution-formula-card>p.execution-formula-role{font-size:13px;line-height:1.6;color:var(--muted,#59665e);margin:0}
+.execution-formula-preview{overflow-x:auto;min-width:0;font-size:17px;padding-block:6px}
+.execution-formula-preview .katex-display{margin:.5em 0;text-align:left}
+.execution-formula-preview .katex-display>.katex{text-align:left}
+.execution-formula-card>p.execution-formula-outcome{font-size:16px;line-height:1.85;margin:0}
+.execution-formula-card details{font-size:14px;line-height:1.8}
+.execution-formula-card summary{cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.execution-formula-card details p{font-size:14px;line-height:1.85;margin:12px 0 0}
+.execution-formula-card>a{margin-top:auto;padding-top:6px;font-size:15px;line-height:1.7;text-decoration:underline;text-underline-offset:4px}
+.execution-formula-card a:focus-visible,.execution-formula-card summary:focus-visible{outline:3px solid var(--orange,#a14725);outline-offset:4px}
+.model-execution-links{margin-top:18px;padding:14px 16px;border-left:3px solid var(--orange,#a14725);background:var(--paper,#f7f6ef)}
+.equation-entry .model-execution-links>p{font-size:14px;font-weight:600;line-height:1.7;margin:0 0 8px}
+.model-execution-links ul{margin:0;padding-left:20px;display:grid;gap:8px;font-size:14px;line-height:1.8}
+.equation-model-inventory{margin-top:40px}
+@media(max-width:700px){.execution-formula-grid{grid-template-columns:1fr}.execution-formula-card{padding:16px;gap:10px}.execution-formula-card>h3{font-size:20px}.execution-formula-preview{font-size:16px}.execution-equation-shortcuts{padding-top:20px;margin-top:22px}.model-execution-links{padding:12px}}
+
+.execution-equation-shortcuts>p.execution-formula-scroll-note{font-size:14px;line-height:1.8;color:var(--muted,#59665e);margin-top:-10px}

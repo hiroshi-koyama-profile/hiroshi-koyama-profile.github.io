@@ -5,6 +5,7 @@
   "scope": "One explicitly mapped visual per atlas test problem. Existing shared figures are identified. Derived plots use stored numerical values; computed previews record fixed inputs and numerical checks.",
   "counts": {
     "test_problems": 60,
+    "runnable_problems": 15,
     "groups": {
       "transport": 8,
       "fluid": 16,
@@ -96,7 +97,19 @@
         },
         "profile": "sine"
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#advection-sine-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#advection-sine-ja",
+      "runnable": true,
+      "execution_entry": {
+        "id": "advection-sine",
+        "url": {
+          "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/advection-sine/?lang=ja",
+          "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/advection-sine/?lang=en"
+        },
+        "outcome": {
+          "ja": "周期正弦波の輸送を解析的な平行移動と比べ、格子細分化・平均値保存・最大値原理を確認する。",
+          "en": "Compare periodic sine transport with analytic translation; check refinement, mean conservation and the maximum principle."
+        }
+      }
     },
     {
       "id": "advection-square",
@@ -149,7 +162,9 @@
         },
         "profile": "square"
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#advection-square-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#advection-square-ja",
+      "runnable": false,
+      "execution_entry": null
     },
     {
       "id": "burgers-shock",
@@ -195,7 +210,9 @@
         },
         "case": "burgers-shock"
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#burgers-shock-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#burgers-shock-ja",
+      "runnable": false,
+      "execution_entry": null
     },
     {
       "id": "burgers-fan",
@@ -241,7 +258,9 @@
         },
         "case": "burgers-rarefaction"
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#burgers-fan-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#burgers-fan-ja",
+      "runnable": false,
+      "execution_entry": null
     },
     {
       "id": "traffic-jam",
@@ -287,7 +306,9 @@
         },
         "case": "traffic-upstream-jam"
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#traffic-jam-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#traffic-jam-ja",
+      "runnable": false,
+      "execution_entry": null
     },
     {
       "id": "traffic-fan",
@@ -333,7 +354,9 @@
         },
         "case": "traffic-clearing-fan"
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#traffic-fan-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#traffic-fan-ja",
+      "runnable": false,
+      "execution_entry": null
     },
     {
       "id": "heat-periodic",
@@ -385,7 +408,9 @@
         },
         "case": "heat"
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#heat-periodic-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#heat-periodic-ja",
+      "runnable": false,
+      "execution_entry": null
     },
     {
       "id": "heat-dirichlet",
@@ -433,7 +458,9 @@
           "en": "Shared figure, left: Dirichlet heat decay. Right: separate Poisson boundary problems."
         }
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#heat-dirichlet-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#heat-dirichlet-ja",
+      "runnable": false,
+      "execution_entry": null
     },
     {
       "id": "sod",
@@ -508,7 +535,19 @@
         },
         "case": "sod"
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#sod-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#sod-ja",
+      "runnable": true,
+      "execution_entry": {
+        "id": "sod",
+        "url": {
+          "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/sod/?lang=ja",
+          "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/sod/?lang=en"
+        },
+        "outcome": {
+          "ja": "Sod衝撃波管を自己相似Riemann解と比べ、密度誤差の減少・正値性・境界流束を含む収支を確認する。",
+          "en": "Compare the Sod shock tube with a self-similar Riemann solution; check decreasing density error, positivity and boundary-flux balances."
+        }
+      }
     },
     {
       "id": "lax",
@@ -561,7 +600,9 @@
           "en": "Shared figure, left: Lax shock tube. Right: a separate entropy-wave refinement study."
         }
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#lax-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#lax-ja",
+      "runnable": false,
+      "execution_entry": null
     },
     {
       "id": "shu-osher",
@@ -625,7 +666,19 @@
         },
         "problem": "shu-osher"
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#shu-osher-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#shu-osher-ja",
+      "runnable": true,
+      "execution_entry": {
+        "id": "shu-osher",
+        "url": {
+          "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/shu-osher/?lang=ja",
+          "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/shu-osher/?lang=en"
+        },
+        "outcome": {
+          "ja": "衝撃波と密度波の相互作用を計算し、100/200点解と800点の同一手法による数値参照との差を確認する。",
+          "en": "Compute shock–density-wave interaction and compare 100/200-point solutions with an 800-point same-method numerical reference."
+        }
+      }
     },
     {
       "id": "entropy-1d",
@@ -671,7 +724,9 @@
           "en": "Stored density-error refinement for a 1D entropy wave."
         }
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#entropy-1d-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#entropy-1d-ja",
+      "runnable": false,
+      "execution_entry": null
     },
     {
       "id": "moving-contact",
@@ -724,7 +779,9 @@
         },
         "problem": "moving-contact"
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#moving-contact-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#moving-contact-ja",
+      "runnable": false,
+      "execution_entry": null
     },
     {
       "id": "strong-shock",
@@ -778,7 +835,9 @@
         },
         "problem": "strong-shock"
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#strong-shock-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#strong-shock-ja",
+      "runnable": false,
+      "execution_entry": null
     },
     {
       "id": "double-rarefaction",
@@ -826,7 +885,9 @@
           "en": "Calculated from the public code edition with fixed inputs; inputs, values and checks are linked."
         }
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#double-rarefaction-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#double-rarefaction-ja",
+      "runnable": false,
+      "execution_entry": null
     },
     {
       "id": "dam-break",
@@ -878,7 +939,9 @@
         },
         "case": "dam-break"
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#dam-break-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#dam-break-ja",
+      "runnable": false,
+      "execution_entry": null
     },
     {
       "id": "isothermal-jump",
@@ -930,7 +993,9 @@
         },
         "case": "isothermal"
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#isothermal-jump-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#isothermal-jump-ja",
+      "runnable": false,
+      "execution_entry": null
     },
     {
       "id": "double-mach",
@@ -976,7 +1041,9 @@
           "en": "Stored final frame of 2D Double Mach reflection."
         }
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#double-mach-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#double-mach-ja",
+      "runnable": false,
+      "execution_entry": null
     },
     {
       "id": "nasa-wedge",
@@ -1025,7 +1092,9 @@
           "en": "Stored Mach-2 example from the merged wedge Mach variants."
         }
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#nasa-wedge-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#nasa-wedge-ja",
+      "runnable": false,
+      "execution_entry": null
     },
     {
       "id": "forward-step",
@@ -1074,7 +1143,9 @@
           "en": "Stored computed field for the Mach-3 forward-facing step."
         }
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#forward-step-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#forward-step-ja",
+      "runnable": false,
+      "execution_entry": null
     },
     {
       "id": "entropy-2d",
@@ -1122,7 +1193,9 @@
           "en": "Stored refinement study for the 2D entropy wave."
         }
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#entropy-2d-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#entropy-2d-ja",
+      "runnable": false,
+      "execution_entry": null
     },
     {
       "id": "cylinder-forebody",
@@ -1164,7 +1237,9 @@
           "en": "Stored finite-time forebody density comparison; not steady-state certification."
         }
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#cylinder-forebody-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#cylinder-forebody-ja",
+      "runnable": false,
+      "execution_entry": null
     },
     {
       "id": "odd-even",
@@ -1206,7 +1281,9 @@
           "en": "Stored odd–even diagnostic for a stationary planar shock."
         }
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#odd-even-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#odd-even-ja",
+      "runnable": false,
+      "execution_entry": null
     },
     {
       "id": "isentropic-vortex",
@@ -1248,7 +1325,9 @@
           "en": "Stored final frame of the KEEP moving vortex."
         }
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#isentropic-vortex-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#isentropic-vortex-ja",
+      "runnable": false,
+      "execution_entry": null
     },
     {
       "id": "orszag-tang",
@@ -1301,7 +1380,9 @@
           "en": "Stored CT frame representing the merged CT/GLM problem."
         }
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#orszag-tang-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#orszag-tang-ja",
+      "runnable": false,
+      "execution_entry": null
     },
     {
       "id": "brio-wu",
@@ -1354,7 +1435,19 @@
           "en": "Stored Brio–Wu shock-tube comparison."
         }
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#brio-wu-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#brio-wu-ja",
+      "runnable": true,
+      "execution_entry": {
+        "id": "brio-wu",
+        "url": {
+          "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/brio-wu/?lang=ja",
+          "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/brio-wu/?lang=en"
+        },
+        "outcome": {
+          "ja": "HLLDの64/128セル解を512セル数値参照と比べ、密度・圧力・一定縦磁場・流束収支と切替回数を確認する。",
+          "en": "Compare 64/128-cell HLLD solutions with a 512-cell numerical reference; inspect density, pressure, constant longitudinal field, balances and fallbacks."
+        }
+      }
     },
     {
       "id": "circular-alfven",
@@ -1396,7 +1489,9 @@
           "en": "Stored circularly polarized Alfvén-wave comparison."
         }
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#circular-alfven-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#circular-alfven-ja",
+      "runnable": false,
+      "execution_entry": null
     },
     {
       "id": "magnetic-loop",
@@ -1438,7 +1533,9 @@
           "en": "Stored computed fields for magnetic-loop advection."
         }
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#magnetic-loop-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#magnetic-loop-ja",
+      "runnable": false,
+      "execution_entry": null
     },
     {
       "id": "taylor-green",
@@ -1495,7 +1592,19 @@
           "en": "Stored Taylor–Green velocity and pressure fields."
         }
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#taylor-green-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#taylor-green-ja",
+      "runnable": true,
+      "execution_entry": {
+        "id": "taylor-green",
+        "url": {
+          "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/taylor-green/?lang=ja",
+          "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/taylor-green/?lang=en"
+        },
+        "outcome": {
+          "ja": "周期渦の速度と粘性エネルギー減衰を解析解と比べ、離散発散・圧力ゲージ・格子と時間刻みへの依存を確認する。",
+          "en": "Compare periodic-vortex velocity and viscous energy decay with analytic references; inspect discrete divergence, pressure gauge and space/time sensitivity."
+        }
+      }
     },
     {
       "id": "lbm-shear",
@@ -1543,7 +1652,9 @@
           "en": "Stored shear amplitudes and viscous-decay reference."
         }
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#lbm-shear-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#lbm-shear-ja",
+      "runnable": false,
+      "execution_entry": null
     },
     {
       "id": "channel-poiseuille",
@@ -1591,7 +1702,9 @@
           "en": "Stored half-way-wall Poiseuille velocity profile and reference."
         }
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#channel-poiseuille-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#channel-poiseuille-ja",
+      "runnable": false,
+      "execution_entry": null
     },
     {
       "id": "poisson-1d-dirichlet",
@@ -1648,7 +1761,19 @@
           "en": "Stored error versus resolution for the 1D Dirichlet manufactured solution."
         }
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#poisson-1d-dirichlet-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#poisson-1d-dirichlet-ja",
+      "runnable": true,
+      "execution_entry": {
+        "id": "poisson-1d-dirichlet",
+        "url": {
+          "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/poisson-1d-dirichlet/?lang=ja",
+          "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/poisson-1d-dirichlet/?lang=en"
+        },
+        "outcome": {
+          "ja": "Thomas法の数値解をsin(πx)と比べ、連続解誤差・独立な離散残差・2次格子収束を分けて確認する。",
+          "en": "Compare the Thomas solution with sin(πx), separating continuous error, a recomputed discrete residual and second-order grid refinement."
+        }
+      }
     },
     {
       "id": "poisson-1d-neumann",
@@ -1696,7 +1821,9 @@
           "en": "Calculated from the public code edition with fixed inputs; inputs, values and checks are linked."
         }
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#poisson-1d-neumann-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#poisson-1d-neumann-ja",
+      "runnable": false,
+      "execution_entry": null
     },
     {
       "id": "poisson-1d-mixed",
@@ -1744,7 +1871,9 @@
           "en": "Calculated from the public code edition with fixed inputs; inputs, values and checks are linked."
         }
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#poisson-1d-mixed-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#poisson-1d-mixed-ja",
+      "runnable": false,
+      "execution_entry": null
     },
     {
       "id": "poisson-1d-robin",
@@ -1792,7 +1921,9 @@
           "en": "Calculated from the public code edition with fixed inputs; inputs, values and checks are linked."
         }
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#poisson-1d-robin-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#poisson-1d-robin-ja",
+      "runnable": false,
+      "execution_entry": null
     },
     {
       "id": "poisson-2d-broad",
@@ -1837,7 +1968,9 @@
           "en": "Stored broad smooth forcing and discrete Poisson solution."
         }
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#poisson-2d-broad-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#poisson-2d-broad-ja",
+      "runnable": false,
+      "execution_entry": null
     },
     {
       "id": "poisson-2d-localized",
@@ -1882,7 +2015,9 @@
           "en": "Stored localized forcing and discrete Poisson solution."
         }
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#poisson-2d-localized-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#poisson-2d-localized-ja",
+      "runnable": false,
+      "execution_entry": null
     },
     {
       "id": "poisson-2d-sine",
@@ -1946,7 +2081,19 @@
           "en": "Stored triangular-FEM solution and error for the same sine manufactured problem."
         }
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#poisson-2d-sine-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#poisson-2d-sine-ja",
+      "runnable": true,
+      "execution_entry": {
+        "id": "poisson-2d-sine",
+        "url": {
+          "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/poisson-2d-sine/?lang=ja",
+          "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/poisson-2d-sine/?lang=en"
+        },
+        "outcome": {
+          "ja": "CG・多重格子の同じ差分解とP1有限要素を調べ、FD最大誤差とFEMのL2・H1半ノルム収束を見比べる。",
+          "en": "Inspect CG/multigrid on the same discrete system and P1 FEM, comparing FD maximum error with separate FEM L2/H1-seminorm refinement."
+        }
+      }
     },
     {
       "id": "poisson-2d-uniform",
@@ -1994,7 +2141,9 @@
           "en": "Stored multigrid residual history for uniform-source Poisson."
         }
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#poisson-2d-uniform-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#poisson-2d-uniform-ja",
+      "runnable": false,
+      "execution_entry": null
     },
     {
       "id": "poisson-2d-random",
@@ -2042,7 +2191,9 @@
           "en": "Calculated from the public code edition with fixed inputs; inputs, values and checks are linked."
         }
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#poisson-2d-random-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#poisson-2d-random-ja",
+      "runnable": false,
+      "execution_entry": null
     },
     {
       "id": "poisson-3d-periodic",
@@ -2088,7 +2239,9 @@
           "en": "Three stored slices of a 3D periodic Poisson solution, not 3D fluid evolution."
         }
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#poisson-3d-periodic-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#poisson-3d-periodic-ja",
+      "runnable": false,
+      "execution_entry": null
     },
     {
       "id": "poisson-1d-periodic",
@@ -2136,7 +2289,9 @@
           "en": "Stored error refinement of the pseudo-time steady solution."
         }
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#poisson-1d-periodic-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#poisson-1d-periodic-ja",
+      "runnable": false,
+      "execution_entry": null
     },
     {
       "id": "bratu",
@@ -2193,7 +2348,19 @@
           "en": "Calculated from the public code edition with fixed inputs; inputs, values and checks are linked."
         }
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#bratu-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#bratu-ja",
+      "runnable": true,
+      "execution_entry": {
+        "id": "bratu",
+        "url": {
+          "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/bratu/?lang=ja",
+          "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/bratu/?lang=en"
+        },
+        "outcome": {
+          "ja": "小さい枝をNewton–GMRESで求め、解析解・独立な非線形残差・2次格子収束を確認する。",
+          "en": "Compute the lower branch with Newton–GMRES and check its analytic solution, recomputed nonlinear residual and second-order refinement."
+        }
+      }
     },
     {
       "id": "sparse-advection-diffusion",
@@ -2241,7 +2408,9 @@
           "en": "Stored true-residual histories of the nonsymmetric discrete system."
         }
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#sparse-advection-diffusion-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#sparse-advection-diffusion-ja",
+      "runnable": false,
+      "execution_entry": null
     },
     {
       "id": "isolated-particles",
@@ -2294,7 +2463,19 @@
           "en": "Stored relative tree/direct-sum force errors versus opening angle and expansion order."
         }
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#isolated-particles-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#isolated-particles-ja",
+      "runnable": true,
+      "execution_entry": {
+        "id": "barnes-hut",
+        "url": {
+          "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/barnes-hut/?lang=ja",
+          "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/barnes-hut/?lang=en"
+        },
+        "outcome": {
+          "ja": "192粒子の木近似と直接和を比べ、力の誤差・全開極限・相互作用回数を確認する。",
+          "en": "Compare tree and direct forces for 192 particles; inspect force error, the fully opened limit and interaction counts."
+        }
+      }
     },
     {
       "id": "periodic-particles",
@@ -2351,7 +2532,19 @@
           "en": "Periodic-PM part of a shared figure; isolated-tree comparisons are a separate problem."
         }
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#periodic-particles-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#periodic-particles-ja",
+      "runnable": true,
+      "execution_entry": {
+        "id": "periodic-particles",
+        "url": {
+          "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/periodic-particles/?lang=ja",
+          "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/periodic-particles/?lang=en"
+        },
+        "outcome": {
+          "ja": "固定19粒子のCIC質量・自己力・内力和・周期折返しを調べ、別の正弦密度で格子ポテンシャルと加速度を解析検証する。",
+          "en": "Inspect CIC mass, self-force, net internal force and wrapping for 19 fixed particles; separately check mesh potential/acceleration for a sinusoidal density."
+        }
+      }
     },
     {
       "id": "isolated-convolution",
@@ -2399,7 +2592,9 @@
           "en": "Shared boundary-kernel figure; this card links specifically to isolated-convolution."
         }
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#isolated-convolution-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#isolated-convolution-ja",
+      "runnable": false,
+      "execution_entry": null
     },
     {
       "id": "uniform-slab",
@@ -2441,7 +2636,9 @@
           "en": "Shared boundary-kernel figure; this card links specifically to uniform-slab."
         }
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#uniform-slab-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#uniform-slab-ja",
+      "runnable": false,
+      "execution_entry": null
     },
     {
       "id": "sinusoidal-sheet",
@@ -2483,7 +2680,9 @@
           "en": "Shared boundary-kernel figure; this card links specifically to sinusoidal-sheet."
         }
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#sinusoidal-sheet-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#sinusoidal-sheet-ja",
+      "runnable": false,
+      "execution_entry": null
     },
     {
       "id": "harmonic-oscillator",
@@ -2544,7 +2743,19 @@
         },
         "system": "harmonic"
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#harmonic-oscillator-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#harmonic-oscillator-ja",
+      "runnable": true,
+      "execution_entry": {
+        "id": "harmonic-oscillator",
+        "url": {
+          "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/harmonic-oscillator/?lang=ja",
+          "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/harmonic-oscillator/?lang=en"
+        },
+        "outcome": {
+          "ja": "Verlet軌道を解析的な振動と比べ、状態誤差・元のエネルギーの偏差・時間反転を確認する。",
+          "en": "Compare Verlet trajectories with analytic oscillation; inspect state error, original-energy deviation and time reversal."
+        }
+      }
     },
     {
       "id": "quartic-oscillator",
@@ -2590,7 +2801,9 @@
         },
         "system": "quartic"
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#quartic-oscillator-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#quartic-oscillator-ja",
+      "runnable": false,
+      "execution_entry": null
     },
     {
       "id": "nonlinear-exp-ode",
@@ -2638,7 +2851,9 @@
           "en": "Calculated from the public code edition with fixed inputs; inputs, values and checks are linked."
         }
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#nonlinear-exp-ode-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#nonlinear-exp-ode-ja",
+      "runnable": false,
+      "execution_entry": null
     },
     {
       "id": "stiff-cosine",
@@ -2699,7 +2914,19 @@
           "en": "Stored fixed-step errors for the stiff cosine-tracking ODE."
         }
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#stiff-cosine-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#stiff-cosine-ja",
+      "runnable": true,
+      "execution_entry": {
+        "id": "stiff-cosine",
+        "url": {
+          "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/stiff-cosine/?lang=ja",
+          "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/stiff-cosine/?lang=en"
+        },
+        "outcome": {
+          "ja": "硬い余弦追従問題の解析解と刻み細分化を比べ、別の強減衰問題でL安定な応答を確認する。",
+          "en": "Compare stiff cosine tracking with its analytic solution under step refinement, plus a separate strongly damped problem."
+        }
+      }
     },
     {
       "id": "nonlinear-rational-ode",
@@ -2747,7 +2974,9 @@
           "en": "Calculated from the public code edition with fixed inputs; inputs, values and checks are linked."
         }
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#nonlinear-rational-ode-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#nonlinear-rational-ode-ja",
+      "runnable": false,
+      "execution_entry": null
     },
     {
       "id": "smooth-function-projection",
@@ -2804,7 +3033,19 @@
         },
         "profile": "smooth"
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#smooth-function-projection-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#smooth-function-projection-ja",
+      "runnable": true,
+      "execution_entry": {
+        "id": "smooth-function-projection",
+        "url": {
+          "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/smooth-function-projection/?lang=ja",
+          "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/smooth-function-projection/?lang=en"
+        },
+        "outcome": {
+          "ja": "exp(x)のLegendre射影とGLL補間を比較し、次数による誤差減少・係数・直交性を別の高次求積で確認する。",
+          "en": "Compare Legendre projection and GLL interpolation of exp(x); use higher-order reference quadrature for p-refinement, coefficients and orthogonality."
+        }
+      }
     },
     {
       "id": "jump-function-projection",
@@ -2850,7 +3091,9 @@
         },
         "profile": "jump"
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#jump-function-projection-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#jump-function-projection-ja",
+      "runnable": false,
+      "execution_entry": null
     },
     {
       "id": "cubic-root",
@@ -2898,7 +3141,9 @@
           "en": "Calculated from the public code edition with fixed inputs; inputs, values and checks are linked."
         }
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#cubic-root-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#cubic-root-ja",
+      "runnable": false,
+      "execution_entry": null
     },
     {
       "id": "nonlinear-rational-decay",
@@ -2944,7 +3189,9 @@
           "en": "Stored time-refinement errors for rational decay, showing three methods."
         }
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#nonlinear-rational-decay-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#nonlinear-rational-decay-ja",
+      "runnable": false,
+      "execution_entry": null
     },
     {
       "id": "hydrogenic-atoms",
@@ -3010,7 +3257,19 @@
           "en": "Computed from the public atomic-code fixed inputs, with conditions, CSV profiles, convergence checks and independent references linked in the reading."
         }
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#hydrogenic-atoms-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#hydrogenic-atoms-ja",
+      "runnable": true,
+      "execution_entry": {
+        "id": "hydrogenic-atoms",
+        "url": {
+          "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/hydrogenic-atoms/?lang=ja",
+          "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/hydrogenic-atoms/?lang=en"
+        },
+        "outcome": {
+          "ja": "Z=1,2の指定された束縛状態について、エネルギー・動径波動関数・格子収束を解析参照と比べる。",
+          "en": "Compare energy, radial wavefunctions and grid refinement with analytic references for the specified Z=1,2 bound states."
+        }
+      }
     },
     {
       "id": "helium-ground-state",
@@ -3076,7 +3335,19 @@
           "en": "Computed from the public atomic-code fixed inputs, with conditions, CSV profiles, convergence checks and independent references linked in the reading."
         }
       },
-      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#helium-ground-state-ja"
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#helium-ground-state-ja",
+      "runnable": true,
+      "execution_entry": {
+        "id": "helium-ground-state",
+        "url": {
+          "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/helium-ground-state/?lang=ja",
+          "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/helium-ground-state/?lang=en"
+        },
+        "outcome": {
+          "ja": "球対称1s²のHeをRHFと交換のみLDAで解き、SCF収束・エネルギー・電子数を独立な有限基底参照と照合する。",
+          "en": "Solve spherical 1s² helium with RHF and exchange-only LDA; compare SCF convergence, energies and electron count with independent finite-basis references."
+        }
+      }
     }
   ],
   "source_sha256": {
@@ -3130,6 +3401,8 @@
     "numerical-methods-atlas/gallery/preview-manifest.json": "46fc64b6a2c21e4d9b2e53114b2cc7caa52edd1f4d9c7654eb67ccc2f96edb99",
     "numerical-methods-atlas/gallery/calculations.json": "d98cd75e1c58177bfc716e8b68d6bfba1358d5135ac8e2ee0989eb3df77942a6",
     "numerical-methods-atlas/gallery/verification.json": "46c39543afa9d943dfef896fadbc8f84d847f1a145d9b1427a2336de7a3a50f9",
-    "numerical-methods-atlas/test-cases/index.json": "215213f8558671e777be79bbf9b31225bdd2deca8a730ee49277387cb530e781"
+    "numerical-methods-atlas/test-cases/index.json": "215213f8558671e777be79bbf9b31225bdd2deca8a730ee49277387cb530e781",
+    "catalog/atlas-execution-discovery.json": "40a61a42f67357557c2cf95e058eb7ce1b5f663689cf209f73665fe7f9dfc134",
+    "scripts/atlas_execution_discovery.py": "3431dae95fb0adc68e1deca07b406b70bd99480f9ad6023a31765cb07ccf84be"
   }
 }

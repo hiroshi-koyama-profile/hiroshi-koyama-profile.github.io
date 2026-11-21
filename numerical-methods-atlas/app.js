@@ -1,4 +1,4 @@
-import {homeOverviewPage,wireHomeOverview} from './home-overview.js?v=0f6103b06d51';
+import {homeOverviewPage,wireHomeOverview} from './home-overview.js?v=a286962d5e61';
 import {readingURL,rewriteReadingLinks} from './reading-urls.js';
 import {expansionPage,wireExpansion} from './shock-expansion.js';
 import {referencePage as exactPage,wireReferences} from './reference-solutions.js';
@@ -117,7 +117,7 @@ const eras = [
  ['1994–2026','Particles meet a Riemann problem','Inutsuka · Iwasaki · Kitajima · Seno','Trace GSPH through its detailed 2002 formulation, particle MHD, and special-relativistic SRGSPH. Literature and a staged implementation plan.','gsph','inutsuka2002']
 ].sort((a,b)=>parseInt(a[0],10)-parseInt(b[0],10));
 let documents, references, sod, experiments, foundations, coverage, translationStatus, localeCatalog, glossary;
-const atlasDocumentVersions = {"ja": "7efdec302759", "en": "79101a89430a"};
+const atlasDocumentVersions = {"ja": "4ad192b8ecb5", "en": "da38b594d979"};
 const documentCache = new Map();
 const originalShell = new Map([...document.querySelectorAll('.site-header,.site-footer,#figure-dialog,.skip-link')].map(element => [element, element.innerHTML]));
 let navigationVersion = 0, switching = false;

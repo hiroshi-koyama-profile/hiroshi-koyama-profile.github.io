@@ -91,11 +91,13 @@ def main():
   for domain,prefix,ja,en in DOMAINS:
    xml=ET.fromstring(fetch(ORIGIN+prefix+'sitemap.xml'))
    urls=sorted(set(x.text for x in xml.findall('{*}url/{*}loc')))
-   if len(urls)>250:raise ValueError('Review sitemap growth before indexing')
+   indexed_count=0
    for url in urls:
     p=urllib.parse.urlparse(url)
     if p.netloc!='hrkoyama.github.io' or not p.path.startswith(prefix):raise ValueError('Unexpected sitemap URL')
     if domain=='numerical' and not re.search(r'/(en|ja)/read/[^/]+/$',p.path):continue
+    indexed_count+=1
+    if indexed_count>250:raise ValueError('Review indexed reading-source growth before indexing')
     tasks.append((domain,url))
   def read(task):
    domain,url=task; html=fetch(url); parser=Prose();parser.feed(re.sub(r'(<\/?h)\s+([1-6])',r'\1\2',html));parser.flush();parser.title=parser.title or parser.documentTitle.strip()

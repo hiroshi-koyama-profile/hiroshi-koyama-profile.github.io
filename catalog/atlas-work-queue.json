@@ -163,7 +163,7 @@
     {
       "id": "human-entry-points",
       "target_year": 2026,
-      "state": "planned",
+      "state": "in-progress",
       "track": "current",
       "title": {
         "ja": "問題・数式・画像から使い方へ進む入口",
@@ -173,7 +173,34 @@
         "ja": "Poisson・Barnes–Hut・H/Heを代表例として、得られる判断、条件、入力・コードへの進み方を日英で示す。分野地図と紹介文を現状に合わせ、解説・実行例・予定を区別する。",
         "en": "Use Poisson, Barnes–Hut and hydrogenic/He examples to show useful decisions, conditions and paths to inputs and code in both languages. Update the field map and introductory copy, keeping reading, runnable examples and plans distinct."
       },
-      "priority": "P0"
+      "priority": "P0",
+      "progress": {
+        "ja": "15問題の専用HTML/JSON/Markdownを用意し、文字検索・数式・保存図から直接開ける入口を公開。日英の実行意図付き30検索で対応例が先頭。ギャラリーは全60件表示と実行例15件への絞り込みを両立し、ホームにもPoisson・Barnes–Hut・H/Heの入口を追加。残る整備は手法一覧の絞り込み、共有用の説明・紹介素材等。",
+        "en": "Published dedicated HTML/JSON/Markdown for fifteen cases, reachable directly from word searches, formulas and saved illustrations. Thirty bilingual execution-intent searches resolve the intended case first. The gallery keeps all sixty by default and filters to fifteen runnable cases; the homepage adds Poisson, Barnes–Hut and H/He starting paths. Remaining work includes method-list filters and sharing copy/materials."
+      },
+      "links": [
+        {
+          "url": "/numerical-methods-atlas/code-and-data/examples/?lang=ja",
+          "label": {
+            "ja": "15問題の専用入口",
+            "en": "Dedicated entries for fifteen examples"
+          }
+        },
+        {
+          "url": "/numerical-methods-atlas/equations/?lang=ja",
+          "label": {
+            "ja": "式から実行例へ",
+            "en": "From formulas to execution"
+          }
+        },
+        {
+          "url": "/numerical-methods-atlas/gallery/?lang=ja",
+          "label": {
+            "ja": "保存図から15例を探す",
+            "en": "Find fifteen examples by picture"
+          }
+        }
+      ]
     },
     {
       "id": "public-reproduction-checks",

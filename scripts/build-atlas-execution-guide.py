@@ -169,6 +169,52 @@ def reference_values(example, result, lang):
     return body
 
 
+def render_example(x, result, lang, heading_level=2):
+    """One verified record, shared by the complete guide and stable example pages."""
+    assert lang in ['ja','en'] and heading_level in [1,2]
+    ja = lang == 'ja'
+    body = ''
+    release = x['release']
+    body += '<section class="execution-example" id="' + x['id'] + '-' + lang + '" data-execution-example="' + x['id'] + '"><h'+str(heading_level)+'>' + esc(x['name'][lang]) + '</h'+str(heading_level)+'>'
+    body += paragraph(x['scope'][lang]) + '<p>' + link(x['reading'][lang], '式・図・誤差の解説' if ja else 'Equations, figures and error analysis') + ' · ' + link(release['download'], '対応するコードZIP' if ja else 'Code ZIP for this example') + '</p>'
+    body += '<dl>'
+    for key, jlabel, elabel in [('assumptions', '前提', 'Assumptions'), ('units', '単位', 'Units'), ('boundaries', '境界・モデルの範囲', 'Boundaries and model scope')]:
+        value = x[key][lang]
+        body += '<dt>' + (jlabel if ja else elabel) + '</dt><dd>' + (bullet(value) if isinstance(value, list) else esc(value)) + '</dd>'
+    body += '</dl>'
+    body += '<h3>' + ('入力と実行' if ja else 'Inputs and execution') + '</h3><p>' + link(x['inputs']['url'], '固定入力 / ' + x['inputs']['path'] if ja else 'Fixed input / ' + x['inputs']['path']) + '</p>'
+    body += '<p>' + ('実行する場所：' if ja else 'Run from: ') + '<code>' + esc(release['archive_directory']) + '</code>' + ('（ZIPを展開した中の配布版フォルダ）' if ja else ' (the edition directory inside the extracted ZIP)') + '</p>'
+    body += '<pre tabindex="0"><code>' + esc(x['commands']['install'] + '\n' + x['commands']['run']) + '</code></pre>'
+    if x.get('shared_runner_cases') and len(x['shared_runner_cases']) > 1:
+        body += paragraph('このコマンドは水素型原子とHeをまとめて計算します。水素型は核電荷・量子数を指定した1電子問題、Heは2電子・球対称1s²のSCF問題です。HeのHFと交換のみLDAは、電子相関を含む厳密なHeとは異なります。' if ja else 'This command computes both hydrogenic atoms and helium. Hydrogenic states are one-electron problems specified by charge and quantum numbers; helium is a two-electron spherical 1s² SCF problem. HF and exchange-only LDA are not exact correlated helium.')
+    body += '<details><summary>' + ('テストと依存関係のファイル' if ja else 'Tests and dependency files') + '</summary><pre tabindex="0"><code>' + esc(x['commands']['tests']) + '</code></pre><ul>'
+    for kind, url in x['dependencies'].items():
+        if url:
+            body += '<li>' + link(url, kind + ' / ' + Path(urlparse(url).path).name) + '</li>'
+    body += '</ul></details><details class="execution-validation"><summary>' + ('出力・検証条件・引用を確認する' if ja else 'Inspect outputs, acceptance and citation') + '</summary><h3>' + ('できるファイルと参照出力' if ja else 'Generated files and reference outputs') + '</h3><ul class="execution-output-list">'
+    for out in x['outputs']:
+        body += '<li><code>' + esc(out['generated_path']) + '</code> (' + esc(out['format'].upper()) + ') · ' + link(out['url'], '配布版の参照出力' if ja else 'Packaged reference output') + '</li>'
+    body += '</ul>'
+    if x.get('reference_notes'):body += '<h3>'+('参照の種類と比較方法' if ja else 'Reference type and comparison')+'</h3>'+paragraph(x['reference_notes'][lang])
+    body += reference_values(x, result, lang) + '<h3>' + ('期待する値と許容誤差' if ja else 'Expected values and tolerances') + '</h3>'
+    body += paragraph('表はこの例で採用する数値検査の条件です。参照値との一致だけで、全ての条件や原論文の全結果を再現したという意味にはなりません。横長の表は左右にスクロールできます。' if ja else 'These are numerical acceptance conditions for this example. Agreement does not establish every condition or reproduce all results of the original papers. Wide tables scroll horizontally.')
+    body += check_table(x['checks'], lang, x['name'][lang] + ('の数値検査' if ja else ' numerical checks'))
+    if x.get('expected_failures'):
+        body += '<h3>' + ('意図した失敗・未収束の判定' if ja else 'Expected failures and nonconvergence') + '</h3>'
+        body += check_table(x['expected_failures'], lang, 'Failure / ' + x['name'][lang])
+    if x.get('failure_scope'):
+        body += '<h3>'+('失敗・未収束と確認の限界' if ja else 'Failure, nonconvergence and verification limits')+'</h3>'+paragraph(x['failure_scope'][lang])
+    body += '<h3>' + ('引用・出典と利用条件' if ja else 'Citation, sources and terms') + '</h3>'
+    c = x['citation']
+    body += '<blockquote class="execution-citation">' + esc(', '.join([localized(c['creator'], lang), localized(c['title'], lang), 'version ' + c['version']])) + '. ' + link(c['url'], c['url']) + '</blockquote>'
+    body += paragraph('計算に使った設定・変更・ハッシュ・参照日を追記してください。手法を研究に使うときは、以下の原論文も確認し引用します。' if ja else 'Add the settings, changes, hashes and access date used in your calculation. When using the method in research, review and cite the original method publications too.')
+    body += '<ul>' + ''.join('<li>' + link(r['url'], localized(r['description'], lang)) + '</li>' for r in x['references']) + '</ul>'
+    body += '<p>' + link(x['terms']['code_license'], '自作実装コード：MIT' if ja else 'Original implementation code: MIT') + ' · ' + link(x['terms']['content_and_data'], '本文・図・データの条件' if ja else 'Terms for text, figures and data') + '</p>' + paragraph(x['terms']['scope'][lang])
+    body += '<details><summary>' + ('版とSHA-256を確認する' if ja else 'Check the edition and SHA-256 hashes') + '</summary><dl><dt>Edition</dt><dd>' + esc(release['family'] + ' / ' + release['version']) + '</dd><dt>ZIP SHA-256</dt><dd><code>' + esc(release['sha256']) + '</code></dd><dt>Input SHA-256</dt><dd><code>' + esc(x['inputs']['sha256']) + '</code></dd></dl><p>' + link(release['manifest'], 'ファイル目録 / Manifest') + ' · ' + link(release['verification'], '配布版の検証記録' if ja else 'Edition verification record') + '</p></details></details></section>'
+    subheading = 'h'+str(heading_level+1)
+    return body.replace('<h3>','<'+subheading+'>').replace('</h3>','</'+subheading+'>')
+
+
 def render_language(data, releases, receipt, results, lang):
     ja = lang == 'ja'
     examples = data['examples']
@@ -198,43 +244,7 @@ def render_language(data, releases, receipt, results, lang):
     body += paragraph('有効化は自分のOSの1行を選びます。その後、下記の例にある依存関係と実行コマンドを使います。最初の依存ライブラリ取得にはネット接続が必要ですが、導入後の通常実行にChatGPT・Codex・推論APIキーは不要です。' if ja else 'Choose the activation line for your OS, then use the dependency and execution commands below. Initial dependency installation needs network access; normal runs after setup require no ChatGPT, Codex or inference API key.') + '</details></section>'
 
     for x in examples:
-        release = x['release']
-        body += '<section class="execution-example" id="' + x['id'] + '-' + lang + '" data-execution-example="' + x['id'] + '"><h2>' + esc(x['name'][lang]) + '</h2>'
-        body += paragraph(x['scope'][lang]) + '<p>' + link(x['reading'][lang], '式・図・誤差の解説' if ja else 'Equations, figures and error analysis') + ' · ' + link(release['download'], '対応するコードZIP' if ja else 'Code ZIP for this example') + '</p>'
-        body += '<dl>'
-        for key, jlabel, elabel in [('assumptions', '前提', 'Assumptions'), ('units', '単位', 'Units'), ('boundaries', '境界・モデルの範囲', 'Boundaries and model scope')]:
-            value = x[key][lang]
-            body += '<dt>' + (jlabel if ja else elabel) + '</dt><dd>' + (bullet(value) if isinstance(value, list) else esc(value)) + '</dd>'
-        body += '</dl>'
-        body += '<h3>' + ('入力と実行' if ja else 'Inputs and execution') + '</h3><p>' + link(x['inputs']['url'], '固定入力 / ' + x['inputs']['path'] if ja else 'Fixed input / ' + x['inputs']['path']) + '</p>'
-        body += '<p>' + ('実行する場所：' if ja else 'Run from: ') + '<code>' + esc(release['archive_directory']) + '</code>' + ('（ZIPを展開した中の配布版フォルダ）' if ja else ' (the edition directory inside the extracted ZIP)') + '</p>'
-        body += '<pre tabindex="0"><code>' + esc(x['commands']['install'] + '\n' + x['commands']['run']) + '</code></pre>'
-        if x.get('shared_runner_cases') and len(x['shared_runner_cases']) > 1:
-            body += paragraph('このコマンドは水素型原子とHeをまとめて計算します。水素型は核電荷・量子数を指定した1電子問題、Heは2電子・球対称1s²のSCF問題です。HeのHFと交換のみLDAは、電子相関を含む厳密なHeとは異なります。' if ja else 'This command computes both hydrogenic atoms and helium. Hydrogenic states are one-electron problems specified by charge and quantum numbers; helium is a two-electron spherical 1s² SCF problem. HF and exchange-only LDA are not exact correlated helium.')
-        body += '<details><summary>' + ('テストと依存関係のファイル' if ja else 'Tests and dependency files') + '</summary><pre tabindex="0"><code>' + esc(x['commands']['tests']) + '</code></pre><ul>'
-        for kind, url in x['dependencies'].items():
-            if url:
-                body += '<li>' + link(url, kind + ' / ' + Path(urlparse(url).path).name) + '</li>'
-        body += '</ul></details><details class="execution-validation"><summary>' + ('出力・検証条件・引用を確認する' if ja else 'Inspect outputs, acceptance and citation') + '</summary><h3>' + ('できるファイルと参照出力' if ja else 'Generated files and reference outputs') + '</h3><ul class="execution-output-list">'
-        for out in x['outputs']:
-            body += '<li><code>' + esc(out['generated_path']) + '</code> (' + esc(out['format'].upper()) + ') · ' + link(out['url'], '配布版の参照出力' if ja else 'Packaged reference output') + '</li>'
-        body += '</ul>'
-        if x.get('reference_notes'):body += '<h3>'+('参照の種類と比較方法' if ja else 'Reference type and comparison')+'</h3>'+paragraph(x['reference_notes'][lang])
-        body += reference_values(x, results[x['id']], lang) + '<h3>' + ('期待する値と許容誤差' if ja else 'Expected values and tolerances') + '</h3>'
-        body += paragraph('表はこの例で採用する数値検査の条件です。参照値との一致だけで、全ての条件や原論文の全結果を再現したという意味にはなりません。横長の表は左右にスクロールできます。' if ja else 'These are numerical acceptance conditions for this example. Agreement does not establish every condition or reproduce all results of the original papers. Wide tables scroll horizontally.')
-        body += check_table(x['checks'], lang, x['name'][lang] + ('の数値検査' if ja else ' numerical checks'))
-        if x.get('expected_failures'):
-            body += '<h3>' + ('意図した失敗・未収束の判定' if ja else 'Expected failures and nonconvergence') + '</h3>'
-            body += check_table(x['expected_failures'], lang, 'Failure / ' + x['name'][lang])
-        if x.get('failure_scope'):
-            body += '<h3>'+('失敗・未収束と確認の限界' if ja else 'Failure, nonconvergence and verification limits')+'</h3>'+paragraph(x['failure_scope'][lang])
-        body += '<h3>' + ('引用・出典と利用条件' if ja else 'Citation, sources and terms') + '</h3>'
-        c = x['citation']
-        body += '<blockquote class="execution-citation">' + esc(', '.join([localized(c['creator'], lang), localized(c['title'], lang), 'version ' + c['version']])) + '. ' + link(c['url'], c['url']) + '</blockquote>'
-        body += paragraph('計算に使った設定・変更・ハッシュ・参照日を追記してください。手法を研究に使うときは、以下の原論文も確認し引用します。' if ja else 'Add the settings, changes, hashes and access date used in your calculation. When using the method in research, review and cite the original method publications too.')
-        body += '<ul>' + ''.join('<li>' + link(r['url'], localized(r['description'], lang)) + '</li>' for r in x['references']) + '</ul>'
-        body += '<p>' + link(x['terms']['code_license'], '自作実装コード：MIT' if ja else 'Original implementation code: MIT') + ' · ' + link(x['terms']['content_and_data'], '本文・図・データの条件' if ja else 'Terms for text, figures and data') + '</p>' + paragraph(x['terms']['scope'][lang])
-        body += '<details><summary>' + ('版とSHA-256を確認する' if ja else 'Check the edition and SHA-256 hashes') + '</summary><dl><dt>Edition</dt><dd>' + esc(release['family'] + ' / ' + release['version']) + '</dd><dt>ZIP SHA-256</dt><dd><code>' + esc(release['sha256']) + '</code></dd><dt>Input SHA-256</dt><dd><code>' + esc(x['inputs']['sha256']) + '</code></dd></dl><p>' + link(release['manifest'], 'ファイル目録 / Manifest') + ' · ' + link(release['verification'], '配布版の検証記録' if ja else 'Edition verification record') + '</p></details></details></section>'
+        body += render_example(x, results[x['id']], lang)
 
     body += '<section><h2>' + ('配布版と検査件数の意味' if ja else 'Code editions and what their check counts mean') + '</h2>'
     for (family, version), record in releases.items():

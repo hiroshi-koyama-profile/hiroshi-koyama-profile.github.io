@@ -49,7 +49,20 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/stability/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/stability/"
-      }
+      },
+      "execution_examples": [
+        {
+          "id": "advection-sine",
+          "name": {
+            "ja": "周期正弦波の線形移流：風上法と解析解",
+            "en": "Periodic sine advection: upwind and analytic transport"
+          },
+          "entry": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/advection-sine/?lang=ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/advection-sine/?lang=en"
+          }
+        }
+      ]
     },
     {
       "id": "heat",
@@ -74,7 +87,8 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/elliptic/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/elliptic/"
-      }
+      },
+      "execution_examples": []
     },
     {
       "id": "poisson-laplace",
@@ -100,7 +114,42 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/elliptic/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/elliptic/"
-      }
+      },
+      "execution_examples": [
+        {
+          "id": "poisson-1d-dirichlet",
+          "name": {
+            "ja": "1次元Poisson：Dirichlet正弦解と2次収束",
+            "en": "1D Poisson: Dirichlet sine solution and second-order refinement"
+          },
+          "entry": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/poisson-1d-dirichlet/?lang=ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/poisson-1d-dirichlet/?lang=en"
+          }
+        },
+        {
+          "id": "poisson-2d-sine",
+          "name": {
+            "ja": "2次元Poisson：CG・多重格子とP1 FEM",
+            "en": "2D Poisson: CG, multigrid and P1 FEM"
+          },
+          "entry": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/poisson-2d-sine/?lang=ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/poisson-2d-sine/?lang=en"
+          }
+        },
+        {
+          "id": "periodic-particles",
+          "name": {
+            "ja": "周期PM粒子群：質量・内力・格子場",
+            "en": "Periodic PM particles: mass, internal force and mesh field"
+          },
+          "entry": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/periodic-particles/?lang=ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/periodic-particles/?lang=en"
+          }
+        }
+      ]
     },
     {
       "id": "burgers",
@@ -122,7 +171,8 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/equation-gallery/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/equation-gallery/"
-      }
+      },
+      "execution_examples": []
     },
     {
       "id": "traffic",
@@ -144,7 +194,8 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/equation-gallery/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/equation-gallery/"
-      }
+      },
+      "execution_examples": []
     },
     {
       "id": "euler",
@@ -168,7 +219,31 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/benchmarks/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/benchmarks/"
-      }
+      },
+      "execution_examples": [
+        {
+          "id": "sod",
+          "name": {
+            "ja": "Sod衝撃波管：Godunov型更新と自己相似解",
+            "en": "Sod shock tube: Godunov-type update and self-similar reference"
+          },
+          "entry": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/sod/?lang=ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/sod/?lang=en"
+          }
+        },
+        {
+          "id": "shu-osher",
+          "name": {
+            "ja": "Shu–Osher：特性WENO-Zと高解像度参照",
+            "en": "Shu–Osher: characteristic WENO-Z and a numerical reference"
+          },
+          "entry": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/shu-osher/?lang=ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/shu-osher/?lang=en"
+          }
+        }
+      ]
     },
     {
       "id": "shallow-water",
@@ -196,7 +271,8 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/geophysical-grids/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/geophysical-grids/"
-      }
+      },
+      "execution_examples": []
     },
     {
       "id": "isothermal",
@@ -219,7 +295,8 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/benchmarks/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/benchmarks/"
-      }
+      },
+      "execution_examples": []
     },
     {
       "id": "mhd",
@@ -244,7 +321,20 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/mhd/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/mhd/"
-      }
+      },
+      "execution_examples": [
+        {
+          "id": "brio-wu",
+          "name": {
+            "ja": "Brio–Wu：HLLDと保存的に粗視化した数値参照",
+            "en": "Brio–Wu: HLLD and a conservatively restricted numerical reference"
+          },
+          "entry": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/brio-wu/?lang=ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/brio-wu/?lang=en"
+          }
+        }
+      ]
     },
     {
       "id": "navier-stokes",
@@ -267,7 +357,20 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/incompressible/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/incompressible/"
-      }
+      },
+      "execution_examples": [
+        {
+          "id": "taylor-green",
+          "name": {
+            "ja": "周期Taylor–Green渦：速度・散逸・発散",
+            "en": "Periodic Taylor–Green vortex: velocity, decay and divergence"
+          },
+          "entry": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/taylor-green/?lang=ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/taylor-green/?lang=en"
+          }
+        }
+      ]
     },
     {
       "id": "bgk",
@@ -289,7 +392,8 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/lattice-boltzmann/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/lattice-boltzmann/"
-      }
+      },
+      "execution_examples": []
     },
     {
       "id": "hamiltonian",
@@ -312,7 +416,20 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/symplectic/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/symplectic/"
-      }
+      },
+      "execution_examples": [
+        {
+          "id": "harmonic-oscillator",
+          "name": {
+            "ja": "調和振動子：Verletの位相誤差とエネルギー",
+            "en": "Harmonic oscillator: Verlet phase error and energy"
+          },
+          "entry": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/harmonic-oscillator/?lang=ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/harmonic-oscillator/?lang=en"
+          }
+        }
+      ]
     },
     {
       "id": "particle-gravity",
@@ -335,7 +452,31 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/particle-gravity/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/particle-gravity/"
-      }
+      },
+      "execution_examples": [
+        {
+          "id": "barnes-hut",
+          "name": {
+            "ja": "Barnes–Hut：192粒子と直接和の比較",
+            "en": "Barnes–Hut: 192 particles against direct summation"
+          },
+          "entry": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/barnes-hut/?lang=ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/barnes-hut/?lang=en"
+          }
+        },
+        {
+          "id": "periodic-particles",
+          "name": {
+            "ja": "周期PM粒子群：質量・内力・格子場",
+            "en": "Periodic PM particles: mass, internal force and mesh field"
+          },
+          "entry": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/periodic-particles/?lang=ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/periodic-particles/?lang=en"
+          }
+        }
+      ]
     },
     {
       "id": "bratu",
@@ -358,7 +499,20 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/sparse-nonlinear/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/sparse-nonlinear/"
-      }
+      },
+      "execution_examples": [
+        {
+          "id": "bratu",
+          "name": {
+            "ja": "1次元Bratu：小さい枝のNewton–GMRES",
+            "en": "1D Bratu: Newton–GMRES on the lower branch"
+          },
+          "entry": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/bratu/?lang=ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/bratu/?lang=en"
+          }
+        }
+      ]
     },
     {
       "id": "hyperbolic-diffusion",
@@ -381,7 +535,8 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/hyperbolic-diffusion/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/hyperbolic-diffusion/"
-      }
+      },
+      "execution_examples": []
     },
     {
       "id": "srhd",
@@ -405,7 +560,8 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/relativistic-hydrodynamics/#what-changes-from-the-existing-euler-examples",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/relativistic-hydrodynamics/#what-changes-from-the-existing-euler-examples"
-      }
+      },
+      "execution_examples": []
     },
     {
       "id": "grhd",
@@ -429,7 +585,8 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/relativistic-hydrodynamics/#19721998-from-curved-background-flows-to-conservative-hrsc",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/relativistic-hydrodynamics/#19721998-from-curved-background-flows-to-conservative-hrsc"
-      }
+      },
+      "execution_examples": []
     },
     {
       "id": "grmhd",
@@ -454,7 +611,8 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/relativistic-hydrodynamics/#19992006-magnetic-constraints-and-dynamical-spacetime",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/relativistic-hydrodynamics/#19992006-magnetic-constraints-and-dynamical-spacetime"
-      }
+      },
+      "execution_examples": []
     },
     {
       "id": "m1-radiation",
@@ -478,7 +636,8 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/relativistic-hydrodynamics/#2013-onward-radiation-and-microphysics-add-stiff-systems",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/relativistic-hydrodynamics/#2013-onward-radiation-and-microphysics-add-stiff-systems"
-      }
+      },
+      "execution_examples": []
     },
     {
       "id": "causal-viscous",
@@ -502,7 +661,8 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/relativistic-hydrodynamics/#a-parallel-19792019-branch-causal-viscous-fluid-theory",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/relativistic-hydrodynamics/#a-parallel-19792019-branch-causal-viscous-fluid-theory"
-      }
+      },
+      "execution_examples": []
     },
     {
       "id": "bio-logistic",
@@ -529,7 +689,8 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#01-1838-logistic-population-growth",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/biological-models/#01-1838-logistic-population-growth"
-      }
+      },
+      "execution_examples": []
     },
     {
       "id": "bio-enzyme",
@@ -557,7 +718,8 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#02-1913-michaelismenten-and-full-enzyme-kinetics",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/biological-models/#02-1913-michaelismenten-and-full-enzyme-kinetics"
-      }
+      },
+      "execution_examples": []
     },
     {
       "id": "bio-lotka-volterra",
@@ -585,7 +747,8 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#03-1920-lotkavolterra-predatorprey",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/biological-models/#03-1920-lotkavolterra-predatorprey"
-      }
+      },
+      "execution_examples": []
     },
     {
       "id": "bio-age-structure",
@@ -613,7 +776,8 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#04-1926-mckendrick-age-structured-population",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/biological-models/#04-1926-mckendrick-age-structured-population"
-      }
+      },
+      "execution_examples": []
     },
     {
       "id": "bio-sir",
@@ -643,7 +807,8 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#05-1927-sir-and-seir-compartment-models",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/biological-models/#05-1927-sir-and-seir-compartment-models"
-      }
+      },
+      "execution_examples": []
     },
     {
       "id": "bio-fisher-kpp",
@@ -671,7 +836,8 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#06-1937-fisherkpp-invasion-front",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/biological-models/#06-1937-fisherkpp-invasion-front"
-      }
+      },
+      "execution_examples": []
     },
     {
       "id": "bio-monod",
@@ -700,7 +866,8 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#07-1949-monod-growth-and-chemostat",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/biological-models/#07-1949-monod-growth-and-chemostat"
-      }
+      },
+      "execution_examples": []
     },
     {
       "id": "bio-hodgkin-huxley",
@@ -728,7 +895,8 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#08-1952-hodgkinhuxley-membrane-dynamics",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/biological-models/#08-1952-hodgkinhuxley-membrane-dynamics"
-      }
+      },
+      "execution_examples": []
     },
     {
       "id": "bio-turing",
@@ -756,7 +924,8 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#09-1952-turing-reactiondiffusion-framework",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/biological-models/#09-1952-turing-reactiondiffusion-framework"
-      }
+      },
+      "execution_examples": []
     },
     {
       "id": "bio-fitzhugh-nagumo",
@@ -784,7 +953,8 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#10-1961-fitzhughnagumo-excitation-and-recovery",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/biological-models/#10-1961-fitzhughnagumo-excitation-and-recovery"
-      }
+      },
+      "execution_examples": []
     },
     {
       "id": "bio-keller-segel",
@@ -812,7 +982,8 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#11-1970-kellersegel-chemotaxis",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/biological-models/#11-1970-kellersegel-chemotaxis"
-      }
+      },
+      "execution_examples": []
     },
     {
       "id": "bio-gierer-meinhardt",
@@ -840,7 +1011,8 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#12-1972-gierermeinhardt-activatorinhibitor",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/biological-models/#12-1972-gierermeinhardt-activatorinhibitor"
-      }
+      },
+      "execution_examples": []
     },
     {
       "id": "bio-immersed-boundary",
@@ -869,7 +1041,8 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#13-1972-fluidelastic-structure-and-immersed-boundaries",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/biological-models/#13-1972-fluidelastic-structure-and-immersed-boundaries"
-      }
+      },
+      "execution_examples": []
     },
     {
       "id": "bio-chemical-master",
@@ -896,7 +1069,8 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#14-1977-chemical-master-equation-and-gillespie-ssa",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/biological-models/#14-1977-chemical-master-equation-and-gillespie-ssa"
-      }
+      },
+      "execution_examples": []
     },
     {
       "id": "bio-mackey-glass",
@@ -923,7 +1097,8 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#15-1977-mackeyglass-delayed-physiological-feedback",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/biological-models/#15-1977-mackeyglass-delayed-physiological-feedback"
-      }
+      },
+      "execution_examples": []
     },
     {
       "id": "bio-replicator",
@@ -952,7 +1127,8 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#16-1978-replicator-evolutionary-game-dynamics",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/biological-models/#16-1978-replicator-evolutionary-game-dynamics"
-      }
+      },
+      "execution_examples": []
     },
     {
       "id": "bio-schnakenberg",
@@ -980,7 +1156,8 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#17-1979-schnakenberg-reactiondiffusion",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/biological-models/#17-1979-schnakenberg-reactiondiffusion"
-      }
+      },
+      "execution_examples": []
     },
     {
       "id": "bio-skt",
@@ -1008,7 +1185,8 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#18-1979-shigesadakawasakiteramoto-cross-diffusion",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/biological-models/#18-1979-shigesadakawasakiteramoto-cross-diffusion"
-      }
+      },
+      "execution_examples": []
     },
     {
       "id": "bio-gray-scott",
@@ -1036,7 +1214,8 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#19-1983-grayscott-spatial-autocatalysis",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/biological-models/#19-1983-grayscott-spatial-autocatalysis"
-      }
+      },
+      "execution_examples": []
     },
     {
       "id": "bio-cardiac",
@@ -1064,7 +1243,8 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#20-1996-alievpanfilov-cardiac-excitation",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/biological-models/#20-1996-alievpanfilov-cardiac-excitation"
-      }
+      },
+      "execution_examples": []
     },
     {
       "id": "bio-repressilator",
@@ -1093,7 +1273,8 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#21-2000-repressilator-mrnaprotein-network",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/biological-models/#21-2000-repressilator-mrnaprotein-network"
-      }
+      },
+      "execution_examples": []
     },
     {
       "id": "bio-toggle",
@@ -1121,7 +1302,8 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/biological-models/#22-2000-genetic-toggle-switch",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/biological-models/#22-2000-genetic-toggle-switch"
-      }
+      },
+      "execution_examples": []
     },
     {
       "id": "stationary-schrodinger",
@@ -1146,7 +1328,20 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#schrodinger",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#schrodinger"
-      }
+      },
+      "execution_examples": [
+        {
+          "id": "hydrogenic-atoms",
+          "name": {
+            "ja": "水素型原子：解析解と格子収束",
+            "en": "Hydrogenic atoms: analytic references and grid refinement"
+          },
+          "entry": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/hydrogenic-atoms/?lang=ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/hydrogenic-atoms/?lang=en"
+          }
+        }
+      ]
     },
     {
       "id": "hartree-fock-model",
@@ -1172,7 +1367,20 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#hartree-fock",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#hartree-fock"
-      }
+      },
+      "execution_examples": [
+        {
+          "id": "helium-ground-state",
+          "name": {
+            "ja": "He：閉殻HF・交換のみLDA",
+            "en": "Helium: closed-shell HF and exchange-only LDA"
+          },
+          "entry": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/helium-ground-state/?lang=ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/helium-ground-state/?lang=en"
+          }
+        }
+      ]
     },
     {
       "id": "kohn-sham-model",
@@ -1199,7 +1407,20 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#kohn-sham-dft",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#kohn-sham-dft"
-      }
+      },
+      "execution_examples": [
+        {
+          "id": "helium-ground-state",
+          "name": {
+            "ja": "He：閉殻HF・交換のみLDA",
+            "en": "Helium: closed-shell HF and exchange-only LDA"
+          },
+          "entry": {
+            "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/helium-ground-state/?lang=ja",
+            "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/helium-ground-state/?lang=en"
+          }
+        }
+      ]
     },
     {
       "id": "time-dependent-kohn-sham",
@@ -1221,7 +1442,8 @@
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#tddft",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#tddft"
-      }
+      },
+      "execution_examples": []
     }
   ],
   "url": "https://hrkoyama.github.io/numerical-methods-atlas/equations/",
@@ -1239,5 +1461,843 @@
   "formula_renderer": {
     "name": "KaTeX",
     "version": "0.19.1"
-  }
+  },
+  "execution_example_count": 15,
+  "execution_formula_scope": {
+    "ja": "公開済み15問題を文字・数式・保存図から探すための案内。実行条件・配布物・数値判定は既存実行台帳を参照し、画像や式の掲載を新しい数値検証として数えない。",
+    "en": "Discovery metadata for the fifteen published execution examples: words, formulas and saved illustrations. The execution registry retains the authoritative inputs, releases and acceptance conditions; discovery assets add no new numerical verification."
+  },
+  "execution_discovery_source": {
+    "url": "https://hrkoyama.github.io/catalog/atlas-execution-discovery.json",
+    "sha256": "40a61a42f67357557c2cf95e058eb7ce1b5f663689cf209f73665fe7f9dfc134"
+  },
+  "execution_examples": [
+    {
+      "id": "advection-sine",
+      "problem_id": "advection-sine",
+      "equation_ids": [
+        "linear-advection"
+      ],
+      "keywords": [
+        "advection-sine",
+        "線形移流",
+        "linear advection",
+        "周期正弦波",
+        "periodic sine",
+        "風上法",
+        "upwind",
+        "一次風上",
+        "first-order upwind",
+        "forward Euler",
+        "前進Euler",
+        "CFL",
+        "平均値保存",
+        "mean conservation"
+      ],
+      "outcome": {
+        "ja": "周期正弦波の輸送を解析的な平行移動と比べ、格子細分化・平均値保存・最大値原理を確認する。",
+        "en": "Compare periodic sine transport with analytic translation; check refinement, mean conservation and the maximum principle."
+      },
+      "formula": {
+        "role": "problem",
+        "latex": [
+          "u_t+a\\,u_x=0,\\qquad a=1,\\qquad x\\in[0,1)\\ \\text{periodic}",
+          "u(x,0)=1+0.2\\sin(2\\pi x),\\qquad u_{\\rm ref}(x,t)=1+0.2\\sin[2\\pi(x-t)]"
+        ],
+        "note": {
+          "ja": "一次風上差分＋前進Euler、入力CFL=0.5。連続PDEの平行移動を参照し、離散増幅因子を厳密解として再利用しない。",
+          "en": "First-order upwind plus forward Euler, input CFL=0.5. The reference is continuous-PDE translation, not the discrete amplification factor."
+        }
+      },
+      "featured": false,
+      "name": {
+        "ja": "周期正弦波の線形移流：風上法と解析解",
+        "en": "Periodic sine advection: upwind and analytic transport"
+      },
+      "method_ids": [
+        "upwind"
+      ],
+      "entry": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/advection-sine/?lang=ja",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/advection-sine/?lang=en"
+      },
+      "input": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-22/recipes/advection-sine.json",
+      "reference_type": "analytic"
+    },
+    {
+      "id": "sod",
+      "problem_id": "sod",
+      "equation_ids": [
+        "euler"
+      ],
+      "keywords": [
+        "sod",
+        "Sod",
+        "ソッド",
+        "衝撃波管",
+        "shock tube",
+        "Euler equations",
+        "圧縮性Euler",
+        "Godunov型",
+        "Godunov-type",
+        "HLLC",
+        "Riemann problem",
+        "リーマン問題",
+        "自己相似解",
+        "self-similar solution"
+      ],
+      "outcome": {
+        "ja": "Sod衝撃波管を自己相似Riemann解と比べ、密度誤差の減少・正値性・境界流束を含む収支を確認する。",
+        "en": "Compare the Sod shock tube with a self-similar Riemann solution; check decreasing density error, positivity and boundary-flux balances."
+      },
+      "formula": {
+        "role": "problem",
+        "latex": [
+          "U_t+F(U)_x=0,\\quad U=(\\rho,\\rho v,E)^{\\mathsf T},\\quad p=(\\gamma-1)\\left(E-\\frac{\\rho v^2}{2}\\right)",
+          "(\\rho,v,p)_L=(1,0,1),\\quad(\\rho,v,p)_R=(0.125,0,0.1),\\quad\\gamma=1.4"
+        ],
+        "note": {
+          "ja": "x=0.5の不連続、[0,1]の流出境界、t=0.2。Godunov型有限体積更新の数値流束は近似HLLC。参照は別の自己相似Riemann式で、星領域圧力には数値求根を使う。",
+          "en": "Jump at x=0.5, outflow boundaries on [0,1], t=0.2. Godunov-type finite volumes use approximate HLLC fluxes. The separate self-similar Riemann reference uses numerical root finding for star pressure."
+        }
+      },
+      "featured": false,
+      "name": {
+        "ja": "Sod衝撃波管：Godunov型更新と自己相似解",
+        "en": "Sod shock tube: Godunov-type update and self-similar reference"
+      },
+      "method_ids": [
+        "godunov",
+        "hllc"
+      ],
+      "entry": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/sod/?lang=ja",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/sod/?lang=en"
+      },
+      "input": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-22/recipes/sod.json",
+      "reference_type": "analytic"
+    },
+    {
+      "id": "shu-osher",
+      "problem_id": "shu-osher",
+      "equation_ids": [
+        "euler"
+      ],
+      "keywords": [
+        "shu-osher",
+        "Shu–Osher",
+        "Shu Osher",
+        "シュウ・オッシャー",
+        "衝撃波と密度波",
+        "shock density-wave interaction",
+        "WENO-Z",
+        "WENO5-Z",
+        "特性WENO",
+        "characteristic WENO",
+        "Euler equations",
+        "高解像度数値参照",
+        "numerical refinement"
+      ],
+      "outcome": {
+        "ja": "衝撃波と密度波の相互作用を計算し、100/200点解と800点の同一手法による数値参照との差を確認する。",
+        "en": "Compute shock–density-wave interaction and compare 100/200-point solutions with an 800-point same-method numerical reference."
+      },
+      "formula": {
+        "role": "problem",
+        "latex": [
+          "U_t+F(U)_x=0,\\qquad \\gamma=1.4,\\qquad -5\\leq x\\leq5",
+          "\\rho_R(x,0)=1+0.2\\sin(5x),\\quad v_R=0,\\quad p_R=1,\\qquad t_{\\rm final}=1.8"
+        ],
+        "note": {
+          "ja": "初期不連続x=−4、左状態は固定入力を参照。特性有限差分WENO5-Zの点値を比較する。800点参照は同一方式の数値解であり、厳密解・独立ソルバーではない。",
+          "en": "Initial jump at x=−4; see the fixed input for the left state. Compares characteristic finite-difference WENO5-Z point values. The 800-point reference is neither exact nor an independent solver."
+        }
+      },
+      "featured": false,
+      "name": {
+        "ja": "Shu–Osher：特性WENO-Zと高解像度参照",
+        "en": "Shu–Osher: characteristic WENO-Z and a numerical reference"
+      },
+      "method_ids": [
+        "weno-z"
+      ],
+      "entry": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/shu-osher/?lang=ja",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/shu-osher/?lang=en"
+      },
+      "input": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-22/recipes/shu-osher.json",
+      "reference_type": "numerical-refinement"
+    },
+    {
+      "id": "poisson-1d-dirichlet",
+      "problem_id": "poisson-1d-dirichlet",
+      "equation_ids": [
+        "poisson-laplace"
+      ],
+      "keywords": [
+        "poisson-1d-dirichlet",
+        "1D Poisson",
+        "1次元Poisson",
+        "ポアソン",
+        "Dirichlet",
+        "ディリクレ",
+        "Thomas",
+        "トーマス法",
+        "三重対角",
+        "tridiagonal",
+        "manufactured solution",
+        "製造解",
+        "二次収束",
+        "second-order refinement"
+      ],
+      "outcome": {
+        "ja": "Thomas法の数値解をsin(πx)と比べ、連続解誤差・独立な離散残差・2次格子収束を分けて確認する。",
+        "en": "Compare the Thomas solution with sin(πx), separating continuous error, a recomputed discrete residual and second-order grid refinement."
+      },
+      "formula": {
+        "role": "problem",
+        "latex": [
+          "-u''(x)=\\pi^2\\sin(\\pi x),\\qquad u(0)=u(1)=0",
+          "u_{\\rm ref}(x)=\\sin(\\pi x)"
+        ],
+        "note": {
+          "ja": "一様格子の3点差分を15/31/63内部点で解く。残差が小さいことと連続解に近いことは別々に判定する。",
+          "en": "Three-point differences on 15/31/63 uniform interior nodes; a small residual and proximity to the continuous solution are separate checks."
+        }
+      },
+      "featured": false,
+      "name": {
+        "ja": "1次元Poisson：Dirichlet正弦解と2次収束",
+        "en": "1D Poisson: Dirichlet sine solution and second-order refinement"
+      },
+      "method_ids": [
+        "thomas"
+      ],
+      "entry": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/poisson-1d-dirichlet/?lang=ja",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/poisson-1d-dirichlet/?lang=en"
+      },
+      "input": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-22/recipes/poisson-1d-dirichlet.json",
+      "reference_type": "analytic-solution"
+    },
+    {
+      "id": "poisson-2d-sine",
+      "problem_id": "poisson-2d-sine",
+      "equation_ids": [
+        "poisson-laplace"
+      ],
+      "keywords": [
+        "poisson-2d-sine",
+        "2D Poisson",
+        "2次元Poisson",
+        "正弦製造解",
+        "sine manufactured solution",
+        "CG",
+        "共役勾配",
+        "conjugate gradients",
+        "geometric multigrid",
+        "幾何多重格子",
+        "V-cycle",
+        "P1 FEM",
+        "有限要素",
+        "Galerkin",
+        "L2 error",
+        "H1 seminorm",
+        "H1半ノルム"
+      ],
+      "outcome": {
+        "ja": "CG・多重格子の同じ差分解とP1有限要素を調べ、FD最大誤差とFEMのL2・H1半ノルム収束を見比べる。",
+        "en": "Inspect CG/multigrid on the same discrete system and P1 FEM, comparing FD maximum error with separate FEM L2/H1-seminorm refinement."
+      },
+      "formula": {
+        "role": "problem",
+        "latex": [
+          "-\\nabla^2u=2\\pi^2\\sin(\\pi x)\\sin(\\pi y),\\qquad u|_{\\partial[0,1]^2}=0",
+          "u_{\\rm ref}(x,y)=\\sin(\\pi x)\\sin(\\pi y)"
+        ],
+        "note": {
+          "ja": "CG/MGは15/31/63内部点、P1 FEMは4/8/16分割。FEMの値誤差L2と勾配誤差H1半ノルムは要素内で評価する。単一固有モードのCG反復数は一般的速度比較に用いない。",
+          "en": "CG/MG use 15/31/63 interior nodes; P1 FEM uses 4/8/16 subdivisions. FEM value L2 and gradient H1-seminorm errors are evaluated inside elements. Single-mode CG iteration counts are not a general speed benchmark."
+        }
+      },
+      "featured": true,
+      "name": {
+        "ja": "2次元Poisson：CG・多重格子とP1 FEM",
+        "en": "2D Poisson: CG, multigrid and P1 FEM"
+      },
+      "method_ids": [
+        "cg",
+        "multigrid",
+        "p1-fem"
+      ],
+      "entry": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/poisson-2d-sine/?lang=ja",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/poisson-2d-sine/?lang=en"
+      },
+      "input": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-22/recipes/poisson-2d-sine.json",
+      "reference_type": "analytic-solution"
+    },
+    {
+      "id": "bratu",
+      "problem_id": "bratu",
+      "equation_ids": [
+        "bratu"
+      ],
+      "keywords": [
+        "bratu",
+        "Bratu",
+        "ブラトゥ",
+        "非線形境界値問題",
+        "nonlinear boundary-value problem",
+        "減衰Newton",
+        "damped Newton",
+        "Newton–GMRES",
+        "Armijo",
+        "小さい枝",
+        "lower branch",
+        "Bratu analytic solution"
+      ],
+      "outcome": {
+        "ja": "小さい枝をNewton–GMRESで求め、解析解・独立な非線形残差・2次格子収束を確認する。",
+        "en": "Compute the lower branch with Newton–GMRES and check its analytic solution, recomputed nonlinear residual and second-order refinement."
+      },
+      "formula": {
+        "role": "problem",
+        "latex": [
+          "-u''=\\lambda e^u,\\qquad u(0)=u(1)=0",
+          "u_{\\rm ref}(x)=2\\log\\frac{\\cosh(\\beta/2)}{\\cosh[\\beta(x-1/2)]},\\qquad \\lambda=\\frac{2\\beta^2}{\\cosh^2(\\beta/2)},\\quad\\beta=1"
+        ],
+        "note": {
+          "ja": "31/63/127内部点、零初期値で小さい枝を選ぶ。βtanh(β/2)<2の枝を対象とし、大きい枝や分岐点の追跡を行わない。",
+          "en": "31/63/127 interior nodes and a zero initial guess select the lower branch with βtanh(β/2)<2; no upper-branch or bifurcation tracking."
+        }
+      },
+      "featured": false,
+      "name": {
+        "ja": "1次元Bratu：小さい枝のNewton–GMRES",
+        "en": "1D Bratu: Newton–GMRES on the lower branch"
+      },
+      "method_ids": [
+        "newton"
+      ],
+      "entry": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/bratu/?lang=ja",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/bratu/?lang=en"
+      },
+      "input": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-22/recipes/bratu.json",
+      "reference_type": "analytic-solution"
+    },
+    {
+      "id": "harmonic-oscillator",
+      "problem_id": "harmonic-oscillator",
+      "equation_ids": [
+        "hamiltonian"
+      ],
+      "keywords": [
+        "harmonic-oscillator",
+        "harmonic oscillator",
+        "調和振動子",
+        "velocity Verlet",
+        "速度Verlet",
+        "Störmer–Verlet",
+        "Stormer Verlet",
+        "シンプレクティック",
+        "symplectic",
+        "位相誤差",
+        "phase error",
+        "エネルギー偏差",
+        "energy deviation",
+        "時間反転",
+        "reversal"
+      ],
+      "outcome": {
+        "ja": "Verlet軌道を解析的な振動と比べ、状態誤差・元のエネルギーの偏差・時間反転を確認する。",
+        "en": "Compare Verlet trajectories with analytic oscillation; inspect state error, original-energy deviation and time reversal."
+      },
+      "formula": {
+        "role": "problem",
+        "latex": [
+          "\\dot q=p,\\qquad\\dot p=-q,\\qquad H(q,p)=\\frac{q^2+p^2}{2}",
+          "q(0)=1,\\quad p(0)=0.2,\\qquad q_{\\rm ref}(t)=\\cos t+0.2\\sin t"
+        ],
+        "note": {
+          "ja": "単位質量・単位角振動数、t=20。速度Verletで200/400/800刻み。時間反転の一致やシンプレクティック性は元のエネルギーの厳密保存を意味しない。",
+          "en": "Unit mass/frequency, t=20, velocity Verlet with 200/400/800 steps. Reversibility or symplecticity does not imply exact conservation of the original energy."
+        }
+      },
+      "featured": false,
+      "name": {
+        "ja": "調和振動子：Verletの位相誤差とエネルギー",
+        "en": "Harmonic oscillator: Verlet phase error and energy"
+      },
+      "method_ids": [
+        "verlet"
+      ],
+      "entry": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/harmonic-oscillator/?lang=ja",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/harmonic-oscillator/?lang=en"
+      },
+      "input": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-22/recipes/harmonic-oscillator.json",
+      "reference_type": "analytic-solution"
+    },
+    {
+      "id": "stiff-cosine",
+      "problem_id": "stiff-cosine",
+      "equation_ids": [],
+      "keywords": [
+        "stiff-cosine",
+        "stiff ODE",
+        "硬いODE",
+        "stiff cosine",
+        "余弦追従",
+        "cosine tracking",
+        "SDIRK2",
+        "L-stable",
+        "L安定",
+        "implicit Runge–Kutta",
+        "陰的Runge–Kutta",
+        "stiff decay",
+        "強減衰"
+      ],
+      "outcome": {
+        "ja": "硬い余弦追従問題の解析解と刻み細分化を比べ、別の強減衰問題でL安定な応答を確認する。",
+        "en": "Compare stiff cosine tracking with its analytic solution under step refinement, plus a separate strongly damped problem."
+      },
+      "formula": {
+        "role": "problem",
+        "latex": [
+          "y'=-1000(y-\\cos t)-\\sin t,\\qquad y(0)=1,\\qquad y_{\\rm ref}(t)=\\cos t",
+          "z'=-10^8z,\\qquad z(0)=1\\quad\\text{(separate one-step decay check)}"
+        ],
+        "note": {
+          "ja": "既存2段SDIRK2を使う時間初期値問題。主問題はt=1、1000/2000/4000刻み。46モデル台帳とは別の実行例の式で、熱PDEや汎用硬い系の新規モデルとして数えない。",
+          "en": "Temporal initial-value problems using the existing two-stage SDIRK2. Main case: t=1 and 1000/2000/4000 steps. These example formulas are separate from the 46-model inventory, not new heat-PDE or general stiff-system entries."
+        }
+      },
+      "featured": false,
+      "name": {
+        "ja": "硬い余弦追従ODE：SDIRK2",
+        "en": "Stiff cosine-tracking ODE: SDIRK2"
+      },
+      "method_ids": [
+        "sdirk2"
+      ],
+      "entry": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/stiff-cosine/?lang=ja",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/stiff-cosine/?lang=en"
+      },
+      "input": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-22/recipes/stiff-cosine.json",
+      "reference_type": "analytic-solution"
+    },
+    {
+      "id": "smooth-function-projection",
+      "problem_id": "smooth-function-projection",
+      "equation_ids": [],
+      "keywords": [
+        "smooth-function-projection",
+        "exp(x)",
+        "smooth function",
+        "滑らかな関数",
+        "L2 projection",
+        "L2射影",
+        "Legendre",
+        "ルジャンドル",
+        "modal basis",
+        "モード基底",
+        "GLL",
+        "Gauss–Lobatto–Legendre",
+        "Lagrange interpolation",
+        "ラグランジュ補間",
+        "nodal basis",
+        "節点基底",
+        "quadrature",
+        "求積",
+        "直交性",
+        "orthogonality"
+      ],
+      "outcome": {
+        "ja": "exp(x)のLegendre射影とGLL補間を比較し、次数による誤差減少・係数・直交性を別の高次求積で確認する。",
+        "en": "Compare Legendre projection and GLL interpolation of exp(x); use higher-order reference quadrature for p-refinement, coefficients and orthogonality."
+      },
+      "formula": {
+        "role": "approximation",
+        "latex": [
+          "\\Pi_p f(x)=\\sum_{k=0}^{p}c_kP_k(x),\\qquad c_k=\\frac{2k+1}{2}\\int_{-1}^{1}e^\\xi P_k(\\xi)\\,d\\xi",
+          "I_pf(x)=\\sum_{j=0}^{p}e^{x_j}\\ell_j(x),\\qquad\\ell_j(x_i)=\\delta_{ij},\\qquad p=2,4,6,8"
+        ],
+        "note": {
+          "ja": "重み1の区間射影とGLL節点補間で、PDEではない。32点求積による射影を、別のLegendre再帰式と64/96点求積で調べる。実行例の式は46モデルの件数に足さない。",
+          "en": "Unit-weight interval projection and GLL interpolation, not a PDE. The 32-point projection is checked by a separate Legendre recurrence and 64/96-point rules; example formulas do not add to the 46 model entries."
+        }
+      },
+      "featured": false,
+      "name": {
+        "ja": "滑らかな関数：Legendre射影とGLL補間",
+        "en": "Smooth function: Legendre projection and GLL interpolation"
+      },
+      "method_ids": [
+        "legendre-basis",
+        "nodal-basis"
+      ],
+      "entry": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/smooth-function-projection/?lang=ja",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/smooth-function-projection/?lang=en"
+      },
+      "input": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-22/recipes/smooth-function-projection.json",
+      "reference_type": "analytic-function-and-quadrature"
+    },
+    {
+      "id": "barnes-hut",
+      "problem_id": "isolated-particles",
+      "equation_ids": [
+        "particle-gravity"
+      ],
+      "keywords": [
+        "barnes-hut",
+        "isolated-particles",
+        "Barnes–Hut",
+        "Barnes Hut",
+        "バーンズ・ハット",
+        "ピート・ハット",
+        "ピートハット",
+        "Piet Hut",
+        "重力ツリー",
+        "tree code",
+        "八分木",
+        "octree",
+        "孤立重力",
+        "isolated gravity",
+        "Plummer softening",
+        "プラマー軟化",
+        "直接和",
+        "direct summation",
+        "二次モーメント",
+        "second moment",
+        "開角",
+        "opening angle"
+      ],
+      "outcome": {
+        "ja": "192粒子の木近似と直接和を比べ、力の誤差・全開極限・相互作用回数を確認する。",
+        "en": "Compare tree and direct forces for 192 particles; inspect force error, the fully opened limit and interaction counts."
+      },
+      "formula": {
+        "role": "approximation",
+        "latex": [
+          "\\boldsymbol a_i=-\\sum_{j\\ne i}m_j\\frac{\\boldsymbol r_{ij}}{(r_{ij}^{2}+\\epsilon^{2})^{3/2}},\\qquad G=1,\\quad \\epsilon=0.03",
+          "\\boldsymbol a_{\\rm cell}\\simeq-\\frac{M\\boldsymbol r}{s^3}+\\frac{3\\mathbf S\\boldsymbol r}{s^5}-\\frac{15(\\boldsymbol r^{\\mathsf T}\\mathbf S\\boldsymbol r)\\boldsymbol r}{2s^7}+\\frac{3\\operatorname{tr}(\\mathbf S)\\boldsymbol r}{2s^5}",
+          "s^2=r^2+\\epsilon^2,\\qquad \\mathbf S=\\sum_jm_j\\boldsymbol\\delta_j\\boldsymbol\\delta_j^{\\mathsf T}"
+        ],
+        "note": {
+          "ja": "孤立Plummer核。rᵢⱼ=xᵢ−xⱼ、セルのrは対象点と質量中心の差、δは質量中心からの偏差。order=2では同じ軟化核の完全二次項を使い、trace項を残す。周期重力や軌道計算ではない。",
+          "en": "Isolated Plummer kernel: rᵢⱼ=xᵢ−xⱼ, cell r is target minus center of mass, and δ is the central offset. order=2 retains the softened kernel's full second-moment term, including its trace. No periodic gravity or trajectories."
+        }
+      },
+      "featured": true,
+      "name": {
+        "ja": "Barnes–Hut：192粒子と直接和の比較",
+        "en": "Barnes–Hut: 192 particles against direct summation"
+      },
+      "method_ids": [
+        "barnes-hut"
+      ],
+      "entry": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/barnes-hut/?lang=ja",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/barnes-hut/?lang=en"
+      },
+      "input": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-21/examples/barnes-hut/input.json",
+      "reference_type": null
+    },
+    {
+      "id": "periodic-particles",
+      "problem_id": "periodic-particles",
+      "equation_ids": [
+        "particle-gravity",
+        "poisson-laplace"
+      ],
+      "keywords": [
+        "periodic-particles",
+        "periodic PM",
+        "周期PM",
+        "周期粒子",
+        "periodic particles",
+        "particle mesh",
+        "粒子格子",
+        "CIC",
+        "cloud in cell",
+        "Cloud-in-cell",
+        "質量割当て",
+        "mass assignment",
+        "matched interpolation",
+        "平均密度除去",
+        "mean density removal",
+        "zero mode",
+        "零モード",
+        "Fourier Green function",
+        "自己力",
+        "self force"
+      ],
+      "outcome": {
+        "ja": "固定19粒子のCIC質量・自己力・内力和・周期折返しを調べ、別の正弦密度で格子ポテンシャルと加速度を解析検証する。",
+        "en": "Inspect CIC mass, self-force, net internal force and wrapping for 19 fixed particles; separately check mesh potential/acceleration for a sinusoidal density."
+      },
+      "formula": {
+        "role": "problem",
+        "latex": [
+          "\\nabla^2\\phi=4\\pi(\\rho-\\overline\\rho),\\qquad\\widehat\\phi_{\\boldsymbol0}=0,\\qquad\\boldsymbol a=-\\nabla\\phi",
+          "\\widehat\\phi_{\\boldsymbol k}=-\\frac{4\\pi}{k^2}\\widehat\\rho_{\\boldsymbol k}\\quad(\\boldsymbol k\\ne0),\\qquad G=1"
+        ],
+        "note": {
+          "ja": "3次元周期箱L=1、24³格子、同じCIC配置・補間と連続k²のFourier記号。孤立直接和・Ewald・PME・SPMEではない。正弦密度の解析格子解は粒子近接力全体の精度保証ではない。",
+          "en": "3D periodic L=1 box and 24³ grid, matched CIC and continuum-k² Fourier symbol. Not isolated summation, Ewald, PME or SPME. The analytic sinusoidal mesh check does not certify all close-pair particle forces."
+        }
+      },
+      "featured": false,
+      "name": {
+        "ja": "周期PM粒子群：質量・内力・格子場",
+        "en": "Periodic PM particles: mass, internal force and mesh field"
+      },
+      "method_ids": [
+        "cic",
+        "pm"
+      ],
+      "entry": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/periodic-particles/?lang=ja",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/periodic-particles/?lang=en"
+      },
+      "input": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-22/recipes/periodic-particles.json",
+      "reference_type": "analytic-mesh-solution"
+    },
+    {
+      "id": "taylor-green",
+      "problem_id": "taylor-green",
+      "equation_ids": [
+        "navier-stokes"
+      ],
+      "keywords": [
+        "taylor-green",
+        "Taylor–Green",
+        "Taylor Green",
+        "テイラー・グリーン",
+        "渦",
+        "vortex",
+        "incompressible Navier–Stokes",
+        "非圧縮Navier–Stokes",
+        "MAC",
+        "pressure projection",
+        "圧力射影",
+        "viscous decay",
+        "粘性散逸",
+        "divergence",
+        "発散"
+      ],
+      "outcome": {
+        "ja": "周期渦の速度と粘性エネルギー減衰を解析解と比べ、離散発散・圧力ゲージ・格子と時間刻みへの依存を確認する。",
+        "en": "Compare periodic-vortex velocity and viscous energy decay with analytic references; inspect discrete divergence, pressure gauge and space/time sensitivity."
+      },
+      "formula": {
+        "role": "problem",
+        "latex": [
+          "\\boldsymbol u_t+(\\boldsymbol u\\cdot\\nabla)\\boldsymbol u=-\\nabla p+\\nu\\nabla^2\\boldsymbol u,\\qquad\\nabla\\cdot\\boldsymbol u=0",
+          "\\boldsymbol u_{\\rm ref}(x,y,t)=\\begin{pmatrix}\\sin x\\cos y\\\\-\\cos x\\sin y\\end{pmatrix}e^{-2\\nu t},\\qquad\\nu=0.1"
+        ],
+        "note": {
+          "ja": "[0,2π)²周期、t=0.5、16/32/64格子のMAC圧力射影。保存すべき定数エネルギーではなく粘性減衰を調べる。空間と安定刻みの同時細分化と、同一格子の刻み感度を区別する。",
+          "en": "Periodic [0,2π)², t=0.5, MAC pressure projection on 16/32/64 grids. Check viscous decay rather than constant energy. Combined space/stable-step refinement is separated from fixed-grid time-step sensitivity."
+        }
+      },
+      "featured": false,
+      "name": {
+        "ja": "周期Taylor–Green渦：速度・散逸・発散",
+        "en": "Periodic Taylor–Green vortex: velocity, decay and divergence"
+      },
+      "method_ids": [
+        "projection"
+      ],
+      "entry": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/taylor-green/?lang=ja",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/taylor-green/?lang=en"
+      },
+      "input": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-22/recipes/taylor-green.json",
+      "reference_type": "analytic-solution"
+    },
+    {
+      "id": "brio-wu",
+      "problem_id": "brio-wu",
+      "equation_ids": [
+        "mhd"
+      ],
+      "keywords": [
+        "brio-wu",
+        "Brio–Wu",
+        "Brio Wu",
+        "ブリオ・ウー",
+        "ideal MHD",
+        "理想MHD",
+        "MHD shock tube",
+        "MHD衝撃波管",
+        "HLLD",
+        "HLLE fallback",
+        "MC limiter",
+        "MCリミター",
+        "MUSCL",
+        "SSPRK2",
+        "longitudinal field",
+        "縦磁場",
+        "conservative restriction",
+        "保存的粗視化"
+      ],
+      "outcome": {
+        "ja": "HLLDの64/128セル解を512セル数値参照と比べ、密度・圧力・一定縦磁場・流束収支と切替回数を確認する。",
+        "en": "Compare 64/128-cell HLLD solutions with a 512-cell numerical reference; inspect density, pressure, constant longitudinal field, balances and fallbacks."
+      },
+      "formula": {
+        "role": "problem",
+        "latex": [
+          "U_t+\\partial_xF_{\\rm MHD}(U)=0,\\qquad\\gamma=2,\\quad B_x=0.75,\\quad\\mu_0=1",
+          "(\\rho,p,B_y)_L=(1,1,1),\\qquad(\\rho,p,B_y)_R=(0.125,0.1,-1),\\qquad\\boldsymbol v_{L,R}=\\boldsymbol0"
+        ],
+        "note": {
+          "ja": "[0,1]、初期不連続x=0.5、t=0.1。HLLD・MC再構成・SSPRK2で、512セルの保存量をブロック平均して比較する。同一ソルバーの数値参照であり厳密MHD解ではない。",
+          "en": "[0,1], initial jump x=0.5, t=0.1. HLLD/MC/SSPRK2 is compared after conservative block averaging of the 512-cell result; this same-solver numerical reference is not an exact MHD solution."
+        }
+      },
+      "featured": false,
+      "name": {
+        "ja": "Brio–Wu：HLLDと保存的に粗視化した数値参照",
+        "en": "Brio–Wu: HLLD and a conservatively restricted numerical reference"
+      },
+      "method_ids": [
+        "hlld",
+        "muscl"
+      ],
+      "entry": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/brio-wu/?lang=ja",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/brio-wu/?lang=en"
+      },
+      "input": "https://hrkoyama.github.io/code/numerical-methods-atlas/2026-11-22/recipes/brio-wu.json",
+      "reference_type": "numerical-refinement"
+    },
+    {
+      "id": "hydrogenic-atoms",
+      "problem_id": "hydrogenic-atoms",
+      "equation_ids": [
+        "stationary-schrodinger"
+      ],
+      "keywords": [
+        "hydrogenic-atoms",
+        "水素型原子",
+        "hydrogenic atom",
+        "水素原子",
+        "hydrogen atom",
+        "Schrödinger",
+        "Schrodinger",
+        "シュレーディンガー",
+        "radial eigenproblem",
+        "動径固有値問題",
+        "原子単位",
+        "atomic units",
+        "固有エネルギー",
+        "energy levels",
+        "水素型解析解"
+      ],
+      "outcome": {
+        "ja": "Z=1,2の指定された束縛状態について、エネルギー・動径波動関数・格子収束を解析参照と比べる。",
+        "en": "Compare energy, radial wavefunctions and grid refinement with analytic references for the specified Z=1,2 bound states."
+      },
+      "formula": {
+        "role": "problem",
+        "latex": [
+          "\\left[-\\frac12\\frac{d^2}{dr^2}+\\frac{\\ell(\\ell+1)}{2r^2}-\\frac Zr\\right]u_{n\\ell}=E_{n\\ell}u_{n\\ell}",
+          "E_n^{\\rm ref}=-\\frac{Z^2}{2n^2},\\qquad Z\\in\\{1,2\\}"
+        ],
+        "note": {
+          "ja": "原子単位の1電子・定常動径問題。計算は有限半径箱の零Dirichlet境界を使い、無限領域の水素型解析解と比較する。一般多電子・分子・周期系の解法を意味しない。",
+          "en": "One-electron stationary radial problem in atomic units. A finite radial box with zero Dirichlet boundaries is compared with infinite-domain hydrogenic analytic references; not a general many-electron, molecular or periodic solver."
+        }
+      },
+      "featured": false,
+      "name": {
+        "ja": "水素型原子：解析解と格子収束",
+        "en": "Hydrogenic atoms: analytic references and grid refinement"
+      },
+      "method_ids": [
+        "schrodinger"
+      ],
+      "entry": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/hydrogenic-atoms/?lang=ja",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/hydrogenic-atoms/?lang=en"
+      },
+      "input": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/inputs.json",
+      "reference_type": null
+    },
+    {
+      "id": "helium-ground-state",
+      "problem_id": "helium-ground-state",
+      "equation_ids": [
+        "hartree-fock-model",
+        "kohn-sham-model"
+      ],
+      "keywords": [
+        "helium-ground-state",
+        "He",
+        "helium",
+        "ヘリウム",
+        "閉殻",
+        "closed shell",
+        "1s2",
+        "1s²",
+        "RHF",
+        "restricted Hartree–Fock",
+        "制限Hartree–Fock",
+        "球対称",
+        "spherical",
+        "HF",
+        "Hartree–Fock",
+        "交換のみLDA",
+        "exchange-only LDA",
+        "LDA_X",
+        "Kohn–Sham",
+        "コーン・シャム",
+        "SCF",
+        "自己無撞着場",
+        "density mixing",
+        "密度混合",
+        "Hartree potential"
+      ],
+      "outcome": {
+        "ja": "球対称1s²のHeをRHFと交換のみLDAで解き、SCF収束・エネルギー・電子数を独立な有限基底参照と照合する。",
+        "en": "Solve spherical 1s² helium with RHF and exchange-only LDA; compare SCF convergence, energies and electron count with independent finite-basis references."
+      },
+      "formula": {
+        "role": "approximation",
+        "latex": [
+          "\\left[\\hat h_r+\\frac12v_H[n]\\right]u=\\varepsilon u\\quad(\\mathrm{He}\\;1s^2\\ \\mathrm{RHF})",
+          "\\left[\\hat h_r+v_H[n]+v_x^{\\rm LDA}(n)\\right]u=\\varepsilon u,\\qquad v_x^{\\rm LDA}=-\\left(\\frac{3n}{\\pi}\\right)^{1/3}",
+          "\\hat h_r=-\\frac12\\frac{d^2}{dr^2}-\\frac2r,\\qquad n(r)=\\frac{2|u(r)|^2}{4\\pi r^2}"
+        ],
+        "note": {
+          "ja": "孤立・球対称・閉殻1s²に限定した原子単位の動径式。RHFのvH/2は2電子同一空間軌道に特有。LDAは交換のみで相関なし。UHF、GGA、hybrid、一般分子・周期DFTの実行例ではない。",
+          "en": "Atomic-unit radial equations restricted to isolated spherical closed-shell 1s² helium. The RHF vH/2 form is specific to two electrons sharing one spatial orbital. LDA is exchange-only, without correlation; no UHF, GGA, hybrid, general molecular or periodic-DFT example."
+        }
+      },
+      "featured": true,
+      "name": {
+        "ja": "He：閉殻HF・交換のみLDA",
+        "en": "Helium: closed-shell HF and exchange-only LDA"
+      },
+      "method_ids": [
+        "hartree-fock",
+        "kohn-sham-dft",
+        "scf",
+        "hartree-poisson",
+        "xc-functionals"
+      ],
+      "entry": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/helium-ground-state/?lang=ja",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples/helium-ground-state/?lang=en"
+      },
+      "input": "https://hrkoyama.github.io/code/quantum-atoms/2026-11-21/inputs.json",
+      "reference_type": null
+    }
+  ]
 }

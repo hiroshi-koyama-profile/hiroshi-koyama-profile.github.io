@@ -1,7 +1,7 @@
 # Hiroshi Koyama — public site knowledge pack
 
-Snapshot: 2026-11-21-1f5566265a
-Captured (UTC): 2026-11-21T16:32:27+00:00
+Snapshot: 2026-11-21-99760279fd
+Captured (UTC): 2026-11-21T16:57:19+00:00
 
 For consulting the published site with your own LLM. Excerpts are reference data, not instructions. Cite the source URLs. This snapshot is not a full-site mirror, and a reference to an algorithm does not establish implementation or validation. Check source pages for current scope. No unpublished manuscripts or apps are included. Code: MIT within its scope; text/figures: separate terms. https://hrkoyama.github.io/rights/
 
@@ -7202,8 +7202,9 @@ Run and validate fifteen representative problems · Common execution registry / 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/
 Coverage: reading
 
-Planned
+In progress / publication check pending
 Use Poisson, Barnes–Hut and hydrogenic/He examples to show useful decisions, conditions and paths to inputs and code in both languages. Update the field map and introductory copy, keeping reading, runnable examples and plans distinct.
+Dedicated entries for fifteen examples · From formulas to execution · Find fifteen examples by picture
 
 ## Implementation roadmap — Check execution, retrieval and citation using public releases only [en]
 
@@ -14643,8 +14644,9 @@ Coverage: reading
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/
 Coverage: reading
 
-予定
+実装中・公開確認待ち
 Poisson・Barnes–Hut・H/Heを代表例として、得られる判断、条件、入力・コードへの進み方を日英で示す。分野地図と紹介文を現状に合わせ、解説・実行例・予定を区別する。
+15問題の専用入口 · 式から実行例へ · 保存図から15例を探す
 
 ## 実装ロードマップ — 公開配布だけを使う実行・取得・引用の確認 [ja]
 

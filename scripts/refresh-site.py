@@ -13,6 +13,7 @@ for command in [
     [sys.executable, 'scripts/build-atlas-quantum.py'],
     [sys.executable, 'scripts/build-atlas-resources.py'],
     [sys.executable, 'scripts/build-atlas-execution-guide.py'],
+    [sys.executable, 'scripts/build-atlas-execution-entries.py'],
     [sys.executable, 'scripts/build-thermostat-reading.py'],
     [sys.executable, 'scripts/build-atlas-test-problems.py'],
     [sys.executable, 'scripts/build-atlas-equations.py'],

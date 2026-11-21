@@ -1,5 +1,5 @@
-import {atlasPurpose,atlasMetrics} from './atlas-purpose.js?v=e85af62c31c2';
-import {homeSearchPage,wireHomeSearch} from './home-search.js?v=59ecd8a82f3f';
+import {atlasPurpose,atlasMetrics,atlasExamples} from './atlas-purpose.js?v=ded85596c579';
+import {homeSearchPage,wireHomeSearch} from './home-search.js?v=7b9b5ccba55e';
 import {t} from './i18n.js';
 import {homeAreas,homeCopy,homePaths} from './home-overview-data.js';
 const esc=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -20,6 +20,8 @@ export function homeOverviewPage(coverage,selected){
  <section class="intro page-width"><div><p class="eyebrow">${text('eyebrow')}</p><h1>${text('title')}<br><em>${text('title-em')}</em></h1><p class="intro-description">${text('description')}</p></div><div class="intro-summary"><div><p class="summary-title">${text('coverage')}</p>${atlasMetrics()}<p class="flow">${['equation','discretize','solve','verify'].map(key=>`<span>${text(key)}</span>`).join('<span class="flow-arrow" aria-hidden="true">→</span>')}</p></div>${link('/coverage',homeCopy.counting,'quiet-link')}</div></section>
  ${atlasPurpose()}
  ${homeSearchPage()}
+ ${atlasExamples()}
+
  <section class="page-width overview" id="atlas-map" aria-labelledby="home-map-title"><div class="section-heading"><div><p class="eyebrow">THE MAP / 01–06</p><h2 id="home-map-title">${text('map-title')}</h2></div><p>${text('map-description')}</p></div><div class="map-layout"><div class="map-index"><div class="domain-grid" aria-label="${text('map-label')}">${homeAreas.map((entry,i)=>`<button class="domain-button" data-home-area="${entry.id}" aria-pressed="${entry.id===area.id}" aria-controls="home-domain-detail"><span class="domain-number">0${i+1}</span><strong>${esc(t(entry.name))}</strong><span class="domain-hint">${esc(t(entry.hint))}</span><span class="domain-arrow" aria-hidden="true">↗</span></button>`).join('')}</div><p>${text('scope')}</p></div><section class="domain-panel" id="home-domain-detail" aria-labelledby="home-detail-title">${homeAreaDetail(area.id)}</section></div><p class="home-selection-status" role="status" aria-live="polite"></p></section>
  <section class="page-width guided" aria-labelledby="home-start-title"><h2 id="home-start-title">${text('start-title')}</h2><p class="guided-intro">${text('start-description')}</p><div class="guided-list">${homePaths.map(path=>`<article class="guided-route"><p class="eyebrow">${esc(t(path.tag))}</p><h3>${esc(t(path.title))}</h3><p>${esc(t(path.description))}</p><ol>${path.links.map(([route,key])=>`<li>${link(route,key)}</li>`).join('')}</ol></article>`).join('')}</div></section>
  <section class="page-width evidence"><div class="evidence-inner"><div><p class="eyebrow">KEEP THE EVIDENCE CLOSE</p><h2>${text('evidence-title')}</h2><p>${text('evidence-description',{chapters:c.reading_chapters,sources:c.references,biology:c.biological_entries})}</p></div><div class="evidence-links">${link('/coverage',homeCopy.inventory)}${link('/gallery',homeCopy.gallery)}${link('/glossary',homeCopy.glossary)}</div></div></section>
