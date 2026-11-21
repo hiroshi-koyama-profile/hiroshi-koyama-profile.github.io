@@ -56,6 +56,8 @@ Google Search Consoleの対象プロパティは `https://hrkoyama.github.io/`�
 
 公開コードは `code/numerical-methods-atlas/<edition>/` にあり、編集可能なPython、検査、必要データ、依存関係、ライセンス、ハッシュ目録、ZIP、独立実行の検証記録を含む。公開済みの版のファイルは上書きしない。変更時は新しい版を用意し、目録・ZIP・独立実行結果を揃えてから台帳の `code_edition` と `code_base` を更新する。旧版のURLと配布物を保持する。Git履歴や未公開原稿を配布物へ含めない。
 
+「絵から探す」は `catalog/atlas-gallery.json` を正本として、全テスト問題のIDと1対1で照合する。既存の共有図は対応するパネル・問題を説明に残す。`scripts/render-atlas-gallery.py` は保存済み数値データの図示と9問題の固定条件計算を行い、`numerical-methods-atlas/gallery/` に画像・入力値・数値検査・出典ハッシュを保存する。実行には公開コード版の依存関係（今回はNumPy 2.0.2、Matplotlib 3.9.4）が必要。追加検証の `verification.json` は実際に実行したpytestの選択項目・件数・参照ファイルのハッシュを記録する。新しい結果を元の公開コード版へ書き戻さない。通常の `refresh-site.py` は科学計算を再実行せず、保存画像と根拠のハッシュを検査して `build-atlas-gallery.py` から日英HTMLと機械可読一覧を生成する。旧 `#/gallery` は全件一覧へ案内し、従来の図版・比較ツールは `#/figures` に保持する。
+
 新しい版のフォルダを前版から用意してコード・入力を編集し、Gitに追加する前に `python3 scripts/package-code-edition.py --edition YYYY-MM-DD` で目録とZIPを作る。必要な依存関係を一時環境に入れ、そのPythonで `scripts/verify-code-edition.py --edition YYYY-MM-DD` を実行する。これはZIPを別の一時フォルダに展開して検査し、実際の合否・環境を `verification.json` に保存する。検証スクリプトは依存関係の自動インストールや外部へのデータ送信を行わない。すでにGitに登録されたZIPは包装スクリプトで上書きできない。
 
 研究用データを変更するときはコードMITと一括で扱わず、出典・利用条件・入力・検証範囲を確認する。`refresh-site.py` の後に全チェックを実行し、サイトマップと索引も同じ版に揃える。

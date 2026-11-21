@@ -13,7 +13,7 @@ policy=json.loads((ROOT/'catalog/atlas-methods.json').read_text())['editorial_po
 coverage=json.loads((ATLAS/'coverage.json').read_text())
 def browse(lang):
     c=copy[lang]
-    routes={'words':'/search/?lang='+lang,'equations':'/numerical-methods-atlas/equations/?lang='+lang,'pictures':'/numerical-methods-atlas/?lang='+lang+'#/gallery'}
+    routes={'words':'/search/?lang='+lang,'equations':'/numerical-methods-atlas/equations/?lang='+lang,'pictures':'/numerical-methods-atlas/gallery/?lang='+lang}
     previews={'words':'<span aria-hidden="true">Aa / あ</span>','equations':'<span aria-hidden="true">∇²u = f</span>','pictures':'<img src="/numerical-methods-atlas/assets/field-fem-poisson.png" alt="" width="900" height="360" loading="lazy">'}
     cards=[]
     for x in c['browse']:

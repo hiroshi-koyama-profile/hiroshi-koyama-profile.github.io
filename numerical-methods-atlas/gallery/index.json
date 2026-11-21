@@ -1,0 +1,2807 @@
+{
+  "schema_version": 1,
+  "url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/",
+  "reviewed_on": "2026-11-21",
+  "scope": "One explicitly mapped visual per atlas test problem. Existing shared figures are identified. Derived plots use stored numerical values; computed previews record fixed inputs and numerical checks.",
+  "counts": {
+    "test_problems": 58,
+    "groups": {
+      "transport": 8,
+      "fluid": 16,
+      "mhd": 4,
+      "viscous": 3,
+      "elliptic": 13,
+      "gravity": 5,
+      "time": 6,
+      "approximation": 3
+    },
+    "visual_sources": {
+      "stored-data-plot": 27,
+      "existing-figure": 22,
+      "computed-preview": 9
+    }
+  },
+  "items": [
+    {
+      "id": "advection-sine",
+      "group": "transport",
+      "name": {
+        "ja": "周期正弦波の線形移流",
+        "en": "Periodic sine-wave advection"
+      },
+      "chapter": "stability",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/equation-gallery.json",
+          "json_pointer": "/cases",
+          "where": {
+            "id": "advection"
+          }
+        },
+        {
+          "path": "numerical-methods-atlas/cip.json",
+          "json_pointer": "/cases",
+          "where": {
+            "profile": "sine"
+          }
+        },
+        {
+          "path": "numerical-methods-atlas/limiters.json",
+          "json_pointer": "/cases",
+          "where": {
+            "profile": "sine"
+          }
+        },
+        {
+          "path": "numerical-methods-atlas/experiments.json",
+          "json_pointer": "/dg"
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/stability/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/stability/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#advection-sine",
+      "run_commands": [],
+      "image": "/numerical-methods-atlas/gallery/previews/advection-sine.png",
+      "image_sha256": "dbb022150fee1472e54b24dfd3f01363bcfd3998f7e21da9dad6f30e4d224f0a",
+      "width": 832,
+      "height": 494,
+      "source_kind": "stored-data-plot",
+      "caption": {
+        "ja": "保存済みのCIP・線形補間・厳密な移流波形。",
+        "en": "Stored CIP, linear-interpolation and exact advection profiles."
+      },
+      "visual_input": {
+        "id": "advection-sine",
+        "kind": "cip-profile",
+        "source": "cip.json",
+        "caption": {
+          "ja": "保存済みのCIP・線形補間・厳密な移流波形。",
+          "en": "Stored CIP, linear-interpolation and exact advection profiles."
+        },
+        "profile": "sine"
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#advection-sine-ja"
+    },
+    {
+      "id": "advection-square",
+      "group": "transport",
+      "name": {
+        "ja": "周期矩形波の線形移流",
+        "en": "Periodic square-wave advection"
+      },
+      "chapter": "limiters",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/limiters.json",
+          "json_pointer": "/cases",
+          "where": {
+            "profile": "square"
+          }
+        },
+        {
+          "path": "numerical-methods-atlas/cip.json",
+          "json_pointer": "/cases",
+          "where": {
+            "profile": "square"
+          }
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/limiters/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/limiters/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#advection-square",
+      "run_commands": [],
+      "image": "/numerical-methods-atlas/gallery/previews/advection-square.png",
+      "image_sha256": "62bacd52d45e0d6565506a14eda09f70add1c364fdd111584e867184c5907544",
+      "width": 832,
+      "height": 494,
+      "source_kind": "stored-data-plot",
+      "caption": {
+        "ja": "保存済みのCIP・線形補間・厳密な移流波形。",
+        "en": "Stored CIP, linear-interpolation and exact advection profiles."
+      },
+      "visual_input": {
+        "id": "advection-square",
+        "kind": "cip-profile",
+        "source": "cip.json",
+        "caption": {
+          "ja": "保存済みのCIP・線形補間・厳密な移流波形。",
+          "en": "Stored CIP, linear-interpolation and exact advection profiles."
+        },
+        "profile": "square"
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#advection-square-ja"
+    },
+    {
+      "id": "burgers-shock",
+      "group": "transport",
+      "name": {
+        "ja": "Burgers衝撃波",
+        "en": "Burgers shock"
+      },
+      "chapter": "equation-gallery",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/equation-gallery.json",
+          "json_pointer": "/cases",
+          "where": {
+            "id": "burgers-shock"
+          }
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/equation-gallery/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/equation-gallery/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#burgers-shock",
+      "run_commands": [],
+      "image": "/numerical-methods-atlas/gallery/previews/burgers-shock.png",
+      "image_sha256": "adb34de4f29f8ac65b237df2e070ffa8b1f5baa6ff4905a770e2ab17c1d5124a",
+      "width": 832,
+      "height": 494,
+      "source_kind": "stored-data-plot",
+      "caption": {
+        "ja": "保存した最終時刻の数値波形と参照解。",
+        "en": "Stored final-time numerical profile and reference."
+      },
+      "visual_input": {
+        "id": "burgers-shock",
+        "kind": "wave-profile",
+        "source": "equation-gallery.json",
+        "caption": {
+          "ja": "保存した最終時刻の数値波形と参照解。",
+          "en": "Stored final-time numerical profile and reference."
+        },
+        "case": "burgers-shock"
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#burgers-shock-ja"
+    },
+    {
+      "id": "burgers-fan",
+      "group": "transport",
+      "name": {
+        "ja": "Burgers膨張波",
+        "en": "Burgers rarefaction"
+      },
+      "chapter": "equation-gallery",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/equation-gallery.json",
+          "json_pointer": "/cases",
+          "where": {
+            "id": "burgers-rarefaction"
+          }
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/equation-gallery/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/equation-gallery/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#burgers-fan",
+      "run_commands": [],
+      "image": "/numerical-methods-atlas/gallery/previews/burgers-fan.png",
+      "image_sha256": "87d7b66ade78d1e42b150a902e8a337ba1bbe586630dc9a5f43877e682f639cd",
+      "width": 832,
+      "height": 494,
+      "source_kind": "stored-data-plot",
+      "caption": {
+        "ja": "保存した最終時刻の数値波形と参照解。",
+        "en": "Stored final-time numerical profile and reference."
+      },
+      "visual_input": {
+        "id": "burgers-fan",
+        "kind": "wave-profile",
+        "source": "equation-gallery.json",
+        "caption": {
+          "ja": "保存した最終時刻の数値波形と参照解。",
+          "en": "Stored final-time numerical profile and reference."
+        },
+        "case": "burgers-rarefaction"
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#burgers-fan-ja"
+    },
+    {
+      "id": "traffic-jam",
+      "group": "transport",
+      "name": {
+        "ja": "交通流の渋滞衝撃波",
+        "en": "Traffic jam shock"
+      },
+      "chapter": "equation-gallery",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/equation-gallery.json",
+          "json_pointer": "/cases",
+          "where": {
+            "id": "traffic-upstream-jam"
+          }
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/equation-gallery/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/equation-gallery/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#traffic-jam",
+      "run_commands": [],
+      "image": "/numerical-methods-atlas/gallery/previews/traffic-jam.png",
+      "image_sha256": "020ddbb55cd33f84bb5bc7e03b8d86b4d4c4833e46fa3869077e1034f9ccb8a0",
+      "width": 832,
+      "height": 494,
+      "source_kind": "stored-data-plot",
+      "caption": {
+        "ja": "保存した最終時刻の数値波形と参照解。",
+        "en": "Stored final-time numerical profile and reference."
+      },
+      "visual_input": {
+        "id": "traffic-jam",
+        "kind": "wave-profile",
+        "source": "equation-gallery.json",
+        "caption": {
+          "ja": "保存した最終時刻の数値波形と参照解。",
+          "en": "Stored final-time numerical profile and reference."
+        },
+        "case": "traffic-upstream-jam"
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#traffic-jam-ja"
+    },
+    {
+      "id": "traffic-fan",
+      "group": "transport",
+      "name": {
+        "ja": "交通流の希薄化波",
+        "en": "Traffic clearing fan"
+      },
+      "chapter": "equation-gallery",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/equation-gallery.json",
+          "json_pointer": "/cases",
+          "where": {
+            "id": "traffic-clearing-fan"
+          }
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/equation-gallery/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/equation-gallery/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#traffic-fan",
+      "run_commands": [],
+      "image": "/numerical-methods-atlas/gallery/previews/traffic-fan.png",
+      "image_sha256": "a5e659bbf6a64f2c5620ee4b4ad17c9bac54d11327795001882d51f4e6ca9a49",
+      "width": 832,
+      "height": 494,
+      "source_kind": "stored-data-plot",
+      "caption": {
+        "ja": "保存した最終時刻の数値波形と参照解。",
+        "en": "Stored final-time numerical profile and reference."
+      },
+      "visual_input": {
+        "id": "traffic-fan",
+        "kind": "wave-profile",
+        "source": "equation-gallery.json",
+        "caption": {
+          "ja": "保存した最終時刻の数値波形と参照解。",
+          "en": "Stored final-time numerical profile and reference."
+        },
+        "case": "traffic-clearing-fan"
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#traffic-fan-ja"
+    },
+    {
+      "id": "heat-periodic",
+      "group": "transport",
+      "name": {
+        "ja": "周期Fourierモードの熱拡散",
+        "en": "Periodic Fourier-mode heat decay"
+      },
+      "chapter": "elliptic",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/equation-gallery.json",
+          "json_pointer": "/cases",
+          "where": {
+            "id": "heat"
+          }
+        },
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_linear.py",
+          "python_symbol": "test_spectral_heat_exact_mode_decay"
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/elliptic/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/elliptic/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#heat-periodic",
+      "run_commands": [
+        "python -m pytest -q tests/test_linear.py -k test_spectral_heat_exact_mode_decay"
+      ],
+      "image": "/numerical-methods-atlas/gallery/previews/heat-periodic.png",
+      "image_sha256": "0b8eb0c0163f02b3ae8d990ecc64545d142ac6f448f0e16571cff4e48ccd2913",
+      "width": 832,
+      "height": 494,
+      "source_kind": "stored-data-plot",
+      "caption": {
+        "ja": "保存した最終時刻の数値波形と参照解。",
+        "en": "Stored final-time numerical profile and reference."
+      },
+      "visual_input": {
+        "id": "heat-periodic",
+        "kind": "wave-profile",
+        "source": "equation-gallery.json",
+        "caption": {
+          "ja": "保存した最終時刻の数値波形と参照解。",
+          "en": "Stored final-time numerical profile and reference."
+        },
+        "case": "heat"
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#heat-periodic-ja"
+    },
+    {
+      "id": "heat-dirichlet",
+      "group": "transport",
+      "name": {
+        "ja": "Dirichlet境界の熱拡散",
+        "en": "Heat decay with Dirichlet boundaries"
+      },
+      "chapter": "elliptic",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/validation.json",
+          "json_pointer": "/metrics/diffusion_ftcs"
+        },
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_linear.py",
+          "python_symbol": "test_diffusion_matches_exact_and_refines"
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/elliptic/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/elliptic/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#heat-dirichlet",
+      "run_commands": [
+        "python -m pytest -q tests/test_linear.py -k test_diffusion_matches_exact_and_refines"
+      ],
+      "image": "/numerical-methods-atlas/assets/diffusion-boundaries.png",
+      "image_sha256": "d2fa0bbcb07693a80ea9f0c4b2289c0199d11e5101d36fae730718cb64a92c68",
+      "width": 1386,
+      "height": 518,
+      "source_kind": "existing-figure",
+      "caption": {
+        "ja": "共有図の左パネル：Dirichlet境界の熱拡散。右パネルは別のPoisson境界問題。",
+        "en": "Shared figure, left: Dirichlet heat decay. Right: separate Poisson boundary problems."
+      },
+      "visual_input": {
+        "id": "heat-dirichlet",
+        "kind": "image",
+        "source": "assets/diffusion-boundaries.png",
+        "caption": {
+          "ja": "共有図の左パネル：Dirichlet境界の熱拡散。右パネルは別のPoisson境界問題。",
+          "en": "Shared figure, left: Dirichlet heat decay. Right: separate Poisson boundary problems."
+        }
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#heat-dirichlet-ja"
+    },
+    {
+      "id": "sod",
+      "group": "fluid",
+      "name": {
+        "ja": "Sod衝撃波管",
+        "en": "Sod shock tube"
+      },
+      "chapter": "benchmarks",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/equation-gallery.json",
+          "json_pointer": "/cases",
+          "where": {
+            "id": "sod"
+          }
+        },
+        {
+          "path": "numerical-methods-atlas/sod.json",
+          "json_pointer": "/curves"
+        },
+        {
+          "path": "numerical-methods-atlas/assets/reconstruction/reconstruction.json",
+          "json_pointer": "/problems",
+          "where": {
+            "id": "sod"
+          }
+        },
+        {
+          "path": "numerical-methods-atlas/assets/shock-expansion/shock-expansion.json",
+          "json_pointer": "/problems",
+          "where": {
+            "id": "sod"
+          }
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/benchmarks/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/benchmarks/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#sod",
+      "run_commands": [],
+      "image": "/numerical-methods-atlas/gallery/previews/sod.png",
+      "image_sha256": "a9d8f817001a737123543672067c9e575e8e835b159c3507c187ce9d85a8141c",
+      "width": 832,
+      "height": 494,
+      "source_kind": "stored-data-plot",
+      "caption": {
+        "ja": "保存した最終時刻の数値波形と参照解。",
+        "en": "Stored final-time numerical profile and reference."
+      },
+      "visual_input": {
+        "id": "sod",
+        "kind": "wave-profile",
+        "source": "equation-gallery.json",
+        "caption": {
+          "ja": "保存した最終時刻の数値波形と参照解。",
+          "en": "Stored final-time numerical profile and reference."
+        },
+        "case": "sod"
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#sod-ja"
+    },
+    {
+      "id": "lax",
+      "group": "fluid",
+      "name": {
+        "ja": "Lax衝撃波管",
+        "en": "Lax shock tube"
+      },
+      "chapter": "benchmarks",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/lax-entropy.png",
+          "artifact": "image"
+        },
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_numerics.py",
+          "python_symbol": "test_benchmark_default_horizon_smoke"
+        },
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_reference_solutions.py",
+          "python_symbol": "test_euler_matches_existing_independent_reference"
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/benchmarks/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/benchmarks/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#lax",
+      "run_commands": [
+        "python -m pytest -q tests/test_numerics.py -k test_benchmark_default_horizon_smoke",
+        "python -m pytest -q tests/test_reference_solutions.py -k test_euler_matches_existing_independent_reference"
+      ],
+      "image": "/numerical-methods-atlas/assets/lax-entropy.png",
+      "image_sha256": "468467f127f5d7e5c151e5714a9545360c7dc3eef1548ae9155396d5f19aa8fa",
+      "width": 1385,
+      "height": 517,
+      "source_kind": "existing-figure",
+      "caption": {
+        "ja": "共有図の左パネル：Lax衝撃波管。右は別のエントロピー波収束計算。",
+        "en": "Shared figure, left: Lax shock tube. Right: a separate entropy-wave refinement study."
+      },
+      "visual_input": {
+        "id": "lax",
+        "kind": "image",
+        "source": "assets/lax-entropy.png",
+        "caption": {
+          "ja": "共有図の左パネル：Lax衝撃波管。右は別のエントロピー波収束計算。",
+          "en": "Shared figure, left: Lax shock tube. Right: a separate entropy-wave refinement study."
+        }
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#lax-ja"
+    },
+    {
+      "id": "shu-osher",
+      "group": "fluid",
+      "name": {
+        "ja": "Shu–Osher衝撃波・エントロピー波干渉",
+        "en": "Shu–Osher shock/entropy interaction"
+      },
+      "chapter": "reconstruction",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/reconstruction/reconstruction.json",
+          "json_pointer": "/problems",
+          "where": {
+            "id": "shu-osher"
+          }
+        },
+        {
+          "path": "numerical-methods-atlas/assets/shock-expansion/shock-expansion.json",
+          "json_pointer": "/problems",
+          "where": {
+            "id": "shu-osher"
+          }
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/reconstruction/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/reconstruction/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#shu-osher",
+      "run_commands": [],
+      "image": "/numerical-methods-atlas/gallery/previews/shu-osher.png",
+      "image_sha256": "0c7f01545cc9c22517f3ec3b332612d8b2e7d4943b145ae646ca377ac40e81f5",
+      "width": 832,
+      "height": 494,
+      "source_kind": "stored-data-plot",
+      "caption": {
+        "ja": "保存したEuler密度波形（1つの手法を代表表示）。",
+        "en": "Stored Euler density profile, showing one representative method."
+      },
+      "visual_input": {
+        "id": "shu-osher",
+        "kind": "reconstruction-profile",
+        "source": "assets/reconstruction/reconstruction.json",
+        "caption": {
+          "ja": "保存したEuler密度波形（1つの手法を代表表示）。",
+          "en": "Stored Euler density profile, showing one representative method."
+        },
+        "problem": "shu-osher"
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#shu-osher-ja"
+    },
+    {
+      "id": "entropy-1d",
+      "group": "fluid",
+      "name": {
+        "ja": "1次元Eulerエントロピー波",
+        "en": "One-dimensional Euler entropy wave"
+      },
+      "chapter": "experiments",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/experiments.json",
+          "json_pointer": "/entropy"
+        },
+        {
+          "path": "numerical-methods-atlas/assets/validation.json",
+          "json_pointer": "/metrics/entropy_weno5_density_L1"
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/experiments/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/experiments/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#entropy-1d",
+      "run_commands": [],
+      "image": "/numerical-methods-atlas/gallery/previews/entropy-1d.png",
+      "image_sha256": "3692f625a80465194b490f915bde2ab5f33f28d9ef868da9df9a59fcc2bdb06f",
+      "width": 832,
+      "height": 494,
+      "source_kind": "stored-data-plot",
+      "caption": {
+        "ja": "保存済みの1次元エントロピー波の密度誤差・格子収束。",
+        "en": "Stored density-error refinement for a 1D entropy wave."
+      },
+      "visual_input": {
+        "id": "entropy-1d",
+        "kind": "entropy-refinement",
+        "source": "experiments.json",
+        "caption": {
+          "ja": "保存済みの1次元エントロピー波の密度誤差・格子収束。",
+          "en": "Stored density-error refinement for a 1D entropy wave."
+        }
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#entropy-1d-ja"
+    },
+    {
+      "id": "moving-contact",
+      "group": "fluid",
+      "name": {
+        "ja": "移動接触不連続",
+        "en": "Moving contact discontinuity"
+      },
+      "chapter": "reconstruction",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/reconstruction/reconstruction.json",
+          "json_pointer": "/problems",
+          "where": {
+            "id": "moving-contact"
+          }
+        },
+        {
+          "path": "numerical-methods-atlas/assets/shock-expansion/shock-expansion.json",
+          "json_pointer": "/problems",
+          "where": {
+            "id": "moving-contact"
+          }
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/reconstruction/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/reconstruction/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#moving-contact",
+      "run_commands": [],
+      "image": "/numerical-methods-atlas/gallery/previews/moving-contact.png",
+      "image_sha256": "c31fb044c4f7a47d620191620424aabc95f41116e29ae35eff65d1a344cdac71",
+      "width": 832,
+      "height": 494,
+      "source_kind": "stored-data-plot",
+      "caption": {
+        "ja": "保存したEuler密度波形（1つの手法を代表表示）。",
+        "en": "Stored Euler density profile, showing one representative method."
+      },
+      "visual_input": {
+        "id": "moving-contact",
+        "kind": "reconstruction-profile",
+        "source": "assets/reconstruction/reconstruction.json",
+        "caption": {
+          "ja": "保存したEuler密度波形（1つの手法を代表表示）。",
+          "en": "Stored Euler density profile, showing one representative method."
+        },
+        "problem": "moving-contact"
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#moving-contact-ja"
+    },
+    {
+      "id": "strong-shock",
+      "group": "fluid",
+      "name": {
+        "ja": "1次元の強い圧力ジャンプ",
+        "en": "One-dimensional strong pressure jump"
+      },
+      "chapter": "shock-expansion",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/shock-expansion/shock-expansion.json",
+          "json_pointer": "/problems",
+          "where": {
+            "id": "strong-shock"
+          }
+        },
+        {
+          "path": "numerical-methods-atlas/assets/shock-expansion/shock-expansion.json",
+          "json_pointer": "/ppm_cases",
+          "where": {
+            "problem": "strong-shock",
+            "status": "completed"
+          }
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/shock-expansion/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/shock-expansion/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#strong-shock",
+      "run_commands": [],
+      "image": "/numerical-methods-atlas/gallery/previews/strong-shock.png",
+      "image_sha256": "50ec1a3a9f99ff8a6c3d0a45f77b89f15237ac3ed8eb3b083bcd8df1686becd8",
+      "width": 832,
+      "height": 494,
+      "source_kind": "stored-data-plot",
+      "caption": {
+        "ja": "完了したPPM計算の保存密度。停止した他の変種とは区別しています。",
+        "en": "Stored density from a completed PPM run, distinct from variants that stopped."
+      },
+      "visual_input": {
+        "id": "strong-shock",
+        "kind": "ppm-profile",
+        "source": "assets/shock-expansion/shock-expansion.json",
+        "caption": {
+          "ja": "完了したPPM計算の保存密度。停止した他の変種とは区別しています。",
+          "en": "Stored density from a completed PPM run, distinct from variants that stopped."
+        },
+        "problem": "strong-shock"
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#strong-shock-ja"
+    },
+    {
+      "id": "double-rarefaction",
+      "group": "fluid",
+      "name": {
+        "ja": "Euler二重膨張波",
+        "en": "Euler double rarefaction"
+      },
+      "chapter": "benchmarks",
+      "evidence": [
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_numerics.py",
+          "python_symbol": "test_benchmark_default_horizon_smoke"
+        },
+        {
+          "path": "numerical-methods-atlas/gallery/calculations.json",
+          "json_pointer": "/cases/double-rarefaction"
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/benchmarks/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/benchmarks/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#double-rarefaction",
+      "run_commands": [
+        "python -m pytest -q tests/test_numerics.py -k test_benchmark_default_horizon_smoke"
+      ],
+      "image": "/numerical-methods-atlas/gallery/previews/double-rarefaction.png",
+      "image_sha256": "2a843bf673dc414287780b54bea9f5a5bd48644c98c43630caa00a32b891ee6f",
+      "width": 832,
+      "height": 494,
+      "source_kind": "computed-preview",
+      "caption": {
+        "ja": "公開コード版を固定条件で実行して作成した計算結果。条件・値・検査結果を添付。",
+        "en": "Calculated from the public code edition with fixed inputs; inputs, values and checks are linked."
+      },
+      "visual_input": {
+        "id": "double-rarefaction",
+        "kind": "computed-preview",
+        "source": null,
+        "caption": {
+          "ja": "公開コード版を固定条件で実行して作成した計算結果。条件・値・検査結果を添付。",
+          "en": "Calculated from the public code edition with fixed inputs; inputs, values and checks are linked."
+        }
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#double-rarefaction-ja"
+    },
+    {
+      "id": "dam-break",
+      "group": "fluid",
+      "name": {
+        "ja": "湿潤床ダム崩壊",
+        "en": "Wet-bed dam break"
+      },
+      "chapter": "benchmarks",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/equation-gallery.json",
+          "json_pointer": "/cases",
+          "where": {
+            "id": "dam-break"
+          }
+        },
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_numerics.py",
+          "python_symbol": "test_benchmark_default_horizon_smoke"
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/benchmarks/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/benchmarks/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#dam-break",
+      "run_commands": [
+        "python -m pytest -q tests/test_numerics.py -k test_benchmark_default_horizon_smoke"
+      ],
+      "image": "/numerical-methods-atlas/gallery/previews/dam-break.png",
+      "image_sha256": "d421be0da4b3519a340c28da2242fc8048fe41a64b6782a7a8820c37ccd54f1d",
+      "width": 832,
+      "height": 494,
+      "source_kind": "stored-data-plot",
+      "caption": {
+        "ja": "保存した最終時刻の数値波形と参照解。",
+        "en": "Stored final-time numerical profile and reference."
+      },
+      "visual_input": {
+        "id": "dam-break",
+        "kind": "wave-profile",
+        "source": "equation-gallery.json",
+        "caption": {
+          "ja": "保存した最終時刻の数値波形と参照解。",
+          "en": "Stored final-time numerical profile and reference."
+        },
+        "case": "dam-break"
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#dam-break-ja"
+    },
+    {
+      "id": "isothermal-jump",
+      "group": "fluid",
+      "name": {
+        "ja": "等温流体の密度ジャンプ",
+        "en": "Isothermal density jump"
+      },
+      "chapter": "benchmarks",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/equation-gallery.json",
+          "json_pointer": "/cases",
+          "where": {
+            "id": "isothermal"
+          }
+        },
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_numerics.py",
+          "python_symbol": "test_benchmark_default_horizon_smoke"
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/benchmarks/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/benchmarks/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#isothermal-jump",
+      "run_commands": [
+        "python -m pytest -q tests/test_numerics.py -k test_benchmark_default_horizon_smoke"
+      ],
+      "image": "/numerical-methods-atlas/gallery/previews/isothermal-jump.png",
+      "image_sha256": "e4b832033480e04e62d75ca73accd6e38d131a391bc9d1214be14c4b98101175",
+      "width": 832,
+      "height": 494,
+      "source_kind": "stored-data-plot",
+      "caption": {
+        "ja": "保存した最終時刻の数値波形と参照解。",
+        "en": "Stored final-time numerical profile and reference."
+      },
+      "visual_input": {
+        "id": "isothermal-jump",
+        "kind": "wave-profile",
+        "source": "equation-gallery.json",
+        "caption": {
+          "ja": "保存した最終時刻の数値波形と参照解。",
+          "en": "Stored final-time numerical profile and reference."
+        },
+        "case": "isothermal"
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#isothermal-jump-ja"
+    },
+    {
+      "id": "double-mach",
+      "group": "fluid",
+      "name": {
+        "ja": "二重Mach反射",
+        "en": "Double Mach reflection"
+      },
+      "chapter": "double-mach",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/double-mach-run.json",
+          "json_pointer": "/problem"
+        },
+        {
+          "path": "numerical-methods-atlas/assets/movies/shock-catalog.json",
+          "json_pointer": "/movies"
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/double-mach/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/double-mach/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#double-mach",
+      "run_commands": [],
+      "image": "/numerical-methods-atlas/assets/movies/double-mach/frame-080.webp",
+      "image_sha256": "c25e7e545607ec4e2f8d56186d6d963956c28d7e9e28b2a45b504f60c42e8eec",
+      "width": 960,
+      "height": 640,
+      "source_kind": "existing-figure",
+      "caption": {
+        "ja": "保存済み2次元Double Mach反射の最終フレーム。",
+        "en": "Stored final frame of 2D Double Mach reflection."
+      },
+      "visual_input": {
+        "id": "double-mach",
+        "kind": "image",
+        "source": "assets/movies/double-mach/frame-080.webp",
+        "caption": {
+          "ja": "保存済み2次元Double Mach反射の最終フレーム。",
+          "en": "Stored final frame of 2D Double Mach reflection."
+        }
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#double-mach-ja"
+    },
+    {
+      "id": "nasa-wedge",
+      "group": "fluid",
+      "name": {
+        "ja": "15度楔の斜め衝撃波（Mach数の違いを統合）",
+        "en": "15-degree wedge shock (Mach variants merged)"
+      },
+      "chapter": "nasa-2d",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/shock-gallery.json",
+          "json_pointer": "/wedges"
+        },
+        {
+          "path": "numerical-methods-atlas/assets/comparisons/euler-comparison.json",
+          "json_pointer": "/cases",
+          "where": {
+            "kind": "wedge"
+          }
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/nasa-2d/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/nasa-2d/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#nasa-wedge",
+      "run_commands": [],
+      "image": "/numerical-methods-atlas/assets/comparisons/wedge-m2-mc.png",
+      "image_sha256": "05289a877f8a6798fb091f7bfef9baeaf0e6e0825c9bb3c51081929de0d032da",
+      "width": 1430,
+      "height": 624,
+      "source_kind": "existing-figure",
+      "caption": {
+        "ja": "同一問題に統合したMach数違いのうち、Mach 2の保存図を代表表示。",
+        "en": "Stored Mach-2 example from the merged wedge Mach variants."
+      },
+      "visual_input": {
+        "id": "nasa-wedge",
+        "kind": "image",
+        "source": "assets/comparisons/wedge-m2-mc.png",
+        "caption": {
+          "ja": "同一問題に統合したMach数違いのうち、Mach 2の保存図を代表表示。",
+          "en": "Stored Mach-2 example from the merged wedge Mach variants."
+        }
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#nasa-wedge-ja"
+    },
+    {
+      "id": "forward-step",
+      "group": "fluid",
+      "name": {
+        "ja": "Mach 3前向きステップ",
+        "en": "Mach-3 forward-facing step"
+      },
+      "chapter": "nasa-2d",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/shock-gallery.json",
+          "json_pointer": "/forward_step"
+        },
+        {
+          "path": "numerical-methods-atlas/assets/comparisons/euler-comparison.json",
+          "json_pointer": "/cases",
+          "where": {
+            "id": "forward-step"
+          }
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/nasa-2d/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/nasa-2d/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#forward-step",
+      "run_commands": [],
+      "image": "/numerical-methods-atlas/assets/comparisons/step-m3-mc.png",
+      "image_sha256": "3002eb94449b6fe7835da19cc825840ddf6c25818c19a0b5840606ef72a6889b",
+      "width": 1300,
+      "height": 910,
+      "source_kind": "existing-figure",
+      "caption": {
+        "ja": "保存済みMach 3前向きステップの計算場。",
+        "en": "Stored computed field for the Mach-3 forward-facing step."
+      },
+      "visual_input": {
+        "id": "forward-step",
+        "kind": "image",
+        "source": "assets/comparisons/step-m3-mc.png",
+        "caption": {
+          "ja": "保存済みMach 3前向きステップの計算場。",
+          "en": "Stored computed field for the Mach-3 forward-facing step."
+        }
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#forward-step-ja"
+    },
+    {
+      "id": "entropy-2d",
+      "group": "fluid",
+      "name": {
+        "ja": "2次元の滑らかなEulerエントロピー波",
+        "en": "Smooth two-dimensional Euler entropy wave"
+      },
+      "chapter": "reconstruction",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/comparisons/euler-comparison.json",
+          "json_pointer": "/smooth"
+        },
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_muscl2d.py",
+          "python_symbol": "test_smooth_2d_cell_average_refinement_and_periodic_conservation"
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/reconstruction/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/reconstruction/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#entropy-2d",
+      "run_commands": [
+        "python -m pytest -q tests/test_muscl2d.py -k test_smooth_2d_cell_average_refinement_and_periodic_conservation"
+      ],
+      "image": "/numerical-methods-atlas/assets/comparisons/smooth-refinement.png",
+      "image_sha256": "b897c263ed234fcbffa37bcfbe86c52a2b3d3cfc3f690f8216707b38539f1543",
+      "width": 1050,
+      "height": 630,
+      "source_kind": "existing-figure",
+      "caption": {
+        "ja": "保存済み2次元エントロピー波の格子収束。",
+        "en": "Stored refinement study for the 2D entropy wave."
+      },
+      "visual_input": {
+        "id": "entropy-2d",
+        "kind": "image",
+        "source": "assets/comparisons/smooth-refinement.png",
+        "caption": {
+          "ja": "保存済み2次元エントロピー波の格子収束。",
+          "en": "Stored refinement study for the 2D entropy wave."
+        }
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#entropy-2d-ja"
+    },
+    {
+      "id": "cylinder-forebody",
+      "group": "fluid",
+      "name": {
+        "ja": "円柱前面の弓形衝撃波",
+        "en": "Cylinder-forebody bow shock"
+      },
+      "chapter": "shock-expansion",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/shock-expansion/shock-expansion.json",
+          "json_pointer": "/body_runs"
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/shock-expansion/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/shock-expansion/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#cylinder-forebody",
+      "run_commands": [],
+      "image": "/numerical-methods-atlas/assets/shock-expansion/forebody-48-0-density.png",
+      "image_sha256": "a5889e8683e3bbb451234074da81773e32210d7d349523d2611fac2c90414595",
+      "width": 1755,
+      "height": 1215,
+      "source_kind": "existing-figure",
+      "caption": {
+        "ja": "保存済み円柱前面の密度比較。有限時刻の結果で、定常収束の認定ではありません。",
+        "en": "Stored finite-time forebody density comparison; not steady-state certification."
+      },
+      "visual_input": {
+        "id": "cylinder-forebody",
+        "kind": "image",
+        "source": "assets/shock-expansion/forebody-48-0-density.png",
+        "caption": {
+          "ja": "保存済み円柱前面の密度比較。有限時刻の結果で、定常収束の認定ではありません。",
+          "en": "Stored finite-time forebody density comparison; not steady-state certification."
+        }
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#cylinder-forebody-ja"
+    },
+    {
+      "id": "odd-even",
+      "group": "fluid",
+      "name": {
+        "ja": "定常平面衝撃波のodd–even診断",
+        "en": "Stationary-shock odd–even diagnostic"
+      },
+      "chapter": "carbuncle",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/shock-methods/robustness.json",
+          "json_pointer": "/runs"
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/carbuncle/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/carbuncle/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#odd-even",
+      "run_commands": [],
+      "image": "/numerical-methods-atlas/assets/shock-methods/planar-128-0.png",
+      "image_sha256": "bd795bce6943a209b564e085844c53b372d77e33c597d213a39fa9f9f3c3cfcf",
+      "width": 1820,
+      "height": 1040,
+      "source_kind": "existing-figure",
+      "caption": {
+        "ja": "保存済み定常平面衝撃波のodd–even診断。",
+        "en": "Stored odd–even diagnostic for a stationary planar shock."
+      },
+      "visual_input": {
+        "id": "odd-even",
+        "kind": "image",
+        "source": "assets/shock-methods/planar-128-0.png",
+        "caption": {
+          "ja": "保存済み定常平面衝撃波のodd–even診断。",
+          "en": "Stored odd–even diagnostic for a stationary planar shock."
+        }
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#odd-even-ja"
+    },
+    {
+      "id": "isentropic-vortex",
+      "group": "fluid",
+      "name": {
+        "ja": "周期移動等エントロピー渦",
+        "en": "Periodic moving isentropic vortex"
+      },
+      "chapter": "keep",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/keep-vortex.json",
+          "json_pointer": "/studies"
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/keep/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/keep/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#isentropic-vortex",
+      "run_commands": [],
+      "image": "/numerical-methods-atlas/assets/movies/keep-vortex/frame-080.webp",
+      "image_sha256": "0571dd99590171b88cab7b70ee4a152eec5870a6129fa8dca0769e1c001eaf5e",
+      "width": 960,
+      "height": 640,
+      "source_kind": "existing-figure",
+      "caption": {
+        "ja": "保存したKEEP移動渦の最終フレーム。",
+        "en": "Stored final frame of the KEEP moving vortex."
+      },
+      "visual_input": {
+        "id": "isentropic-vortex",
+        "kind": "image",
+        "source": "assets/movies/keep-vortex/frame-080.webp",
+        "caption": {
+          "ja": "保存したKEEP移動渦の最終フレーム。",
+          "en": "Stored final frame of the KEEP moving vortex."
+        }
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#isentropic-vortex-ja"
+    },
+    {
+      "id": "orszag-tang",
+      "group": "mhd",
+      "name": {
+        "ja": "Orszag–Tang渦（CT・GLM・発散誤差摂動を統合）",
+        "en": "Orszag–Tang vortex (CT/GLM/error variants merged)"
+      },
+      "chapter": "mhd",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/validation.json",
+          "json_pointer": "/metrics/orszag_tang_ct"
+        },
+        {
+          "path": "numerical-methods-atlas/assets/validation.json",
+          "json_pointer": "/metrics/orszag_tang_glm"
+        },
+        {
+          "path": "numerical-methods-atlas/assets/movies/catalog.json",
+          "json_pointer": "/movies",
+          "where": {
+            "chapter": "mhd"
+          }
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/mhd/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/mhd/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#orszag-tang",
+      "run_commands": [],
+      "image": "/numerical-methods-atlas/assets/movies/orszag-tang-ct/frame-080.webp",
+      "image_sha256": "38c260ae5d3a5031e733b365eb00c6ea04c9182a059a317bd1735e0c3dc0e6af",
+      "width": 960,
+      "height": 640,
+      "source_kind": "existing-figure",
+      "caption": {
+        "ja": "CT・GLMを統合した1問題のうち、CTの保存フレームを代表表示。",
+        "en": "Stored CT frame representing the merged CT/GLM problem."
+      },
+      "visual_input": {
+        "id": "orszag-tang",
+        "kind": "image",
+        "source": "assets/movies/orszag-tang-ct/frame-080.webp",
+        "caption": {
+          "ja": "CT・GLMを統合した1問題のうち、CTの保存フレームを代表表示。",
+          "en": "Stored CT frame representing the merged CT/GLM problem."
+        }
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#orszag-tang-ja"
+    },
+    {
+      "id": "brio-wu",
+      "group": "mhd",
+      "name": {
+        "ja": "Brio–Wu衝撃波管",
+        "en": "Brio–Wu shock tube"
+      },
+      "chapter": "mhd",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/mhd-tests/mhd-tests.json",
+          "json_pointer": "/brio_wu"
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/mhd/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/mhd/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#brio-wu",
+      "run_commands": [],
+      "image": "/numerical-methods-atlas/assets/mhd-tests/brio-wu.png",
+      "image_sha256": "9702508c0d5c9210f1a7df3351ca605c5cfb0e78bef5f2158bbece6018b83b82",
+      "width": 1400,
+      "height": 980,
+      "source_kind": "existing-figure",
+      "caption": {
+        "ja": "保存済みBrio–Wu衝撃波管の比較図。",
+        "en": "Stored Brio–Wu shock-tube comparison."
+      },
+      "visual_input": {
+        "id": "brio-wu",
+        "kind": "image",
+        "source": "assets/mhd-tests/brio-wu.png",
+        "caption": {
+          "ja": "保存済みBrio–Wu衝撃波管の比較図。",
+          "en": "Stored Brio–Wu shock-tube comparison."
+        }
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#brio-wu-ja"
+    },
+    {
+      "id": "circular-alfven",
+      "group": "mhd",
+      "name": {
+        "ja": "円偏波Alfvén波",
+        "en": "Circularly polarized Alfvén wave"
+      },
+      "chapter": "mhd",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/mhd-tests/mhd-tests.json",
+          "json_pointer": "/alfven"
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/mhd/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/mhd/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#circular-alfven",
+      "run_commands": [],
+      "image": "/numerical-methods-atlas/assets/mhd-tests/alfven.png",
+      "image_sha256": "59a8cd9131e3b5ea278b3bda97b9995f7324315c11c9a6606eb411cca3917e9e",
+      "width": 1400,
+      "height": 630,
+      "source_kind": "existing-figure",
+      "caption": {
+        "ja": "保存済み円偏波Alfvén波の誤差・収束比較。",
+        "en": "Stored circularly polarized Alfvén-wave comparison."
+      },
+      "visual_input": {
+        "id": "circular-alfven",
+        "kind": "image",
+        "source": "assets/mhd-tests/alfven.png",
+        "caption": {
+          "ja": "保存済み円偏波Alfvén波の誤差・収束比較。",
+          "en": "Stored circularly polarized Alfvén-wave comparison."
+        }
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#circular-alfven-ja"
+    },
+    {
+      "id": "magnetic-loop",
+      "group": "mhd",
+      "name": {
+        "ja": "磁場ループの移流",
+        "en": "Magnetic field-loop advection"
+      },
+      "chapter": "mhd",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/mhd-tests/mhd-tests.json",
+          "json_pointer": "/field_loop"
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/mhd/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/mhd/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#magnetic-loop",
+      "run_commands": [],
+      "image": "/numerical-methods-atlas/assets/mhd-tests/field-loop.png",
+      "image_sha256": "ae99ce992228c257747d74ebbcbea8c1ecf61acf64185bb7fc1718e2857c9655",
+      "width": 1540,
+      "height": 896,
+      "source_kind": "existing-figure",
+      "caption": {
+        "ja": "保存済み磁場ループ移流の計算場。",
+        "en": "Stored computed fields for magnetic-loop advection."
+      },
+      "visual_input": {
+        "id": "magnetic-loop",
+        "kind": "image",
+        "source": "assets/mhd-tests/field-loop.png",
+        "caption": {
+          "ja": "保存済み磁場ループ移流の計算場。",
+          "en": "Stored computed fields for magnetic-loop advection."
+        }
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#magnetic-loop-ja"
+    },
+    {
+      "id": "taylor-green",
+      "group": "viscous",
+      "name": {
+        "ja": "周期Taylor–Green渦",
+        "en": "Periodic Taylor–Green vortex"
+      },
+      "chapter": "incompressible",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/solver-foundations.json",
+          "json_pointer": "/mac"
+        },
+        {
+          "path": "numerical-methods-atlas/assets/multidimensional-fields.json",
+          "json_pointer": "/mac"
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/incompressible/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/incompressible/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#taylor-green",
+      "run_commands": [],
+      "image": "/numerical-methods-atlas/assets/field-taylor-green.png",
+      "image_sha256": "89d51b4bdc8650fd270de49d92f3109e0d2b0feb27f3e62ae509ea550fe33a19",
+      "width": 1575,
+      "height": 690,
+      "source_kind": "existing-figure",
+      "caption": {
+        "ja": "保存済みTaylor–Green渦の速度と圧力。",
+        "en": "Stored Taylor–Green velocity and pressure fields."
+      },
+      "visual_input": {
+        "id": "taylor-green",
+        "kind": "image",
+        "source": "assets/field-taylor-green.png",
+        "caption": {
+          "ja": "保存済みTaylor–Green渦の速度と圧力。",
+          "en": "Stored Taylor–Green velocity and pressure fields."
+        }
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#taylor-green-ja"
+    },
+    {
+      "id": "lbm-shear",
+      "group": "viscous",
+      "name": {
+        "ja": "周期せん断波の粘性減衰",
+        "en": "Viscous decay of a periodic shear wave"
+      },
+      "chapter": "lattice-boltzmann",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/solver-foundations.json",
+          "json_pointer": "/lbm/shear_amplitude"
+        },
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_new_models.py",
+          "python_symbol": "test_lbm_shear_viscosity_refines"
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/lattice-boltzmann/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/lattice-boltzmann/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#lbm-shear",
+      "run_commands": [
+        "python -m pytest -q tests/test_new_models.py -k test_lbm_shear_viscosity_refines"
+      ],
+      "image": "/numerical-methods-atlas/gallery/previews/lbm-shear.png",
+      "image_sha256": "5421c2ce7f4a7882b35d0c16742c8aa4f1efb0062096bbb597e8be4f24aa8712",
+      "width": 832,
+      "height": 494,
+      "source_kind": "stored-data-plot",
+      "caption": {
+        "ja": "保存済みせん断波振幅と粘性減衰の参照値。",
+        "en": "Stored shear amplitudes and viscous-decay reference."
+      },
+      "visual_input": {
+        "id": "lbm-shear",
+        "kind": "lbm-shear",
+        "source": "assets/solver-foundations.json",
+        "caption": {
+          "ja": "保存済みせん断波振幅と粘性減衰の参照値。",
+          "en": "Stored shear amplitudes and viscous-decay reference."
+        }
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#lbm-shear-ja"
+    },
+    {
+      "id": "channel-poiseuille",
+      "group": "viscous",
+      "name": {
+        "ja": "平行平板Poiseuille流",
+        "en": "Plane Poiseuille channel flow"
+      },
+      "chapter": "lattice-boltzmann",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/solver-foundations.json",
+          "json_pointer": "/lbm/channel_relative_l2"
+        },
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_new_models.py",
+          "python_symbol": "test_lbm_channel_halfway_wall_refinement"
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/lattice-boltzmann/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/lattice-boltzmann/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#channel-poiseuille",
+      "run_commands": [
+        "python -m pytest -q tests/test_new_models.py -k test_lbm_channel_halfway_wall_refinement"
+      ],
+      "image": "/numerical-methods-atlas/gallery/previews/channel-poiseuille.png",
+      "image_sha256": "b660e19b000519cd226ae544c25a716a2a943df34a7e3865c6fe5918ab7a6a8b",
+      "width": 832,
+      "height": 494,
+      "source_kind": "stored-data-plot",
+      "caption": {
+        "ja": "保存済み半格子壁Poiseuille速度分布と参照値。",
+        "en": "Stored half-way-wall Poiseuille velocity profile and reference."
+      },
+      "visual_input": {
+        "id": "channel-poiseuille",
+        "kind": "lbm-channel",
+        "source": "assets/solver-foundations.json",
+        "caption": {
+          "ja": "保存済み半格子壁Poiseuille速度分布と参照値。",
+          "en": "Stored half-way-wall Poiseuille velocity profile and reference."
+        }
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#channel-poiseuille-ja"
+    },
+    {
+      "id": "poisson-1d-dirichlet",
+      "group": "elliptic",
+      "name": {
+        "ja": "1次元Poisson・Dirichlet製造解",
+        "en": "1D Poisson / smooth Dirichlet manufactured solutions"
+      },
+      "chapter": "elliptic",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/poisson-comparison/comparison.json",
+          "json_pointer": "/one_dimensional"
+        },
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_linear.py",
+          "python_symbol": "test_poisson_second_order"
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/elliptic/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/elliptic/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#poisson-1d-dirichlet",
+      "run_commands": [
+        "python -m pytest -q tests/test_linear.py -k test_poisson_second_order"
+      ],
+      "image": "/numerical-methods-atlas/gallery/previews/poisson-1d-dirichlet.png",
+      "image_sha256": "981d432e8b2d984d5716570f9ecb747e06d92e9a1d2e68577e3f051846930d89",
+      "width": 832,
+      "height": 494,
+      "source_kind": "stored-data-plot",
+      "caption": {
+        "ja": "保存済み1次元Dirichlet製造解の誤差と格子数。",
+        "en": "Stored error versus resolution for the 1D Dirichlet manufactured solution."
+      },
+      "visual_input": {
+        "id": "poisson-1d-dirichlet",
+        "kind": "poisson-1d-refinement",
+        "source": "assets/poisson-comparison/comparison.json",
+        "caption": {
+          "ja": "保存済み1次元Dirichlet製造解の誤差と格子数。",
+          "en": "Stored error versus resolution for the 1D Dirichlet manufactured solution."
+        }
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#poisson-1d-dirichlet-ja"
+    },
+    {
+      "id": "poisson-1d-neumann",
+      "group": "elliptic",
+      "name": {
+        "ja": "1次元Poisson・純Neumann境界",
+        "en": "1D Poisson / pure Neumann boundaries"
+      },
+      "chapter": "elliptic",
+      "evidence": [
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_linear.py",
+          "python_symbol": "test_neumann_compatibility_and_mean_gauge"
+        },
+        {
+          "path": "numerical-methods-atlas/gallery/calculations.json",
+          "json_pointer": "/cases/poisson-1d-neumann"
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/elliptic/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/elliptic/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#poisson-1d-neumann",
+      "run_commands": [
+        "python -m pytest -q tests/test_linear.py -k test_neumann_compatibility_and_mean_gauge"
+      ],
+      "image": "/numerical-methods-atlas/gallery/previews/poisson-1d-neumann.png",
+      "image_sha256": "73db24580a4315f62266a70377c4b8027651f05e8b4514eb676426000d2a17c3",
+      "width": 832,
+      "height": 494,
+      "source_kind": "computed-preview",
+      "caption": {
+        "ja": "公開コード版を固定条件で実行して作成した計算結果。条件・値・検査結果を添付。",
+        "en": "Calculated from the public code edition with fixed inputs; inputs, values and checks are linked."
+      },
+      "visual_input": {
+        "id": "poisson-1d-neumann",
+        "kind": "computed-preview",
+        "source": null,
+        "caption": {
+          "ja": "公開コード版を固定条件で実行して作成した計算結果。条件・値・検査結果を添付。",
+          "en": "Calculated from the public code edition with fixed inputs; inputs, values and checks are linked."
+        }
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#poisson-1d-neumann-ja"
+    },
+    {
+      "id": "poisson-1d-mixed",
+      "group": "elliptic",
+      "name": {
+        "ja": "1次元Poisson・Dirichlet/Neumann混合境界",
+        "en": "1D Poisson / mixed Dirichlet-Neumann boundaries"
+      },
+      "chapter": "elliptic",
+      "evidence": [
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_linear.py",
+          "python_symbol": "test_mixed_dirichlet_neumann"
+        },
+        {
+          "path": "numerical-methods-atlas/gallery/calculations.json",
+          "json_pointer": "/cases/poisson-1d-mixed"
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/elliptic/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/elliptic/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#poisson-1d-mixed",
+      "run_commands": [
+        "python -m pytest -q tests/test_linear.py -k test_mixed_dirichlet_neumann"
+      ],
+      "image": "/numerical-methods-atlas/gallery/previews/poisson-1d-mixed.png",
+      "image_sha256": "58bc225ec345001636ded456cf203fb4c260e032c03e80f5cd7f7b741e2231ba",
+      "width": 832,
+      "height": 494,
+      "source_kind": "computed-preview",
+      "caption": {
+        "ja": "公開コード版を固定条件で実行して作成した計算結果。条件・値・検査結果を添付。",
+        "en": "Calculated from the public code edition with fixed inputs; inputs, values and checks are linked."
+      },
+      "visual_input": {
+        "id": "poisson-1d-mixed",
+        "kind": "computed-preview",
+        "source": null,
+        "caption": {
+          "ja": "公開コード版を固定条件で実行して作成した計算結果。条件・値・検査結果を添付。",
+          "en": "Calculated from the public code edition with fixed inputs; inputs, values and checks are linked."
+        }
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#poisson-1d-mixed-ja"
+    },
+    {
+      "id": "poisson-1d-robin",
+      "group": "elliptic",
+      "name": {
+        "ja": "1次元Poisson・Robin境界の製造解",
+        "en": "1D Poisson / Robin manufactured solutions"
+      },
+      "chapter": "elliptic",
+      "evidence": [
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_linear.py",
+          "python_symbol": "test_robin_second_order_with_manufactured_exponential"
+        },
+        {
+          "path": "numerical-methods-atlas/gallery/calculations.json",
+          "json_pointer": "/cases/poisson-1d-robin"
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/elliptic/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/elliptic/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#poisson-1d-robin",
+      "run_commands": [
+        "python -m pytest -q tests/test_linear.py -k test_robin_second_order_with_manufactured_exponential"
+      ],
+      "image": "/numerical-methods-atlas/gallery/previews/poisson-1d-robin.png",
+      "image_sha256": "68bb9ca30674c292b32e863f3e3d3a9d463b271f4732c600dda23e3256652d8b",
+      "width": 832,
+      "height": 494,
+      "source_kind": "computed-preview",
+      "caption": {
+        "ja": "公開コード版を固定条件で実行して作成した計算結果。条件・値・検査結果を添付。",
+        "en": "Calculated from the public code edition with fixed inputs; inputs, values and checks are linked."
+      },
+      "visual_input": {
+        "id": "poisson-1d-robin",
+        "kind": "computed-preview",
+        "source": null,
+        "caption": {
+          "ja": "公開コード版を固定条件で実行して作成した計算結果。条件・値・検査結果を添付。",
+          "en": "Calculated from the public code edition with fixed inputs; inputs, values and checks are linked."
+        }
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#poisson-1d-robin-ja"
+    },
+    {
+      "id": "poisson-2d-broad",
+      "group": "elliptic",
+      "name": {
+        "ja": "2次元Poisson・広帯域の滑らかな製造解",
+        "en": "2D Poisson / broad smooth manufactured forcing"
+      },
+      "chapter": "elliptic",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/poisson-comparison/comparison.json",
+          "json_pointer": "/cases",
+          "where": {
+            "id": "manufactured"
+          }
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/elliptic/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/elliptic/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#poisson-2d-broad",
+      "run_commands": [],
+      "image": "/numerical-methods-atlas/assets/poisson-comparison/manufactured-63-fields.png",
+      "image_sha256": "911131f2907f0eeeab7e1eddab91ac42ed3fd027dda1d129d28e930f83c75cbd",
+      "width": 1375,
+      "height": 562,
+      "source_kind": "existing-figure",
+      "caption": {
+        "ja": "保存済みの広帯域ソースと離散Poisson解。",
+        "en": "Stored broad smooth forcing and discrete Poisson solution."
+      },
+      "visual_input": {
+        "id": "poisson-2d-broad",
+        "kind": "image",
+        "source": "assets/poisson-comparison/manufactured-63-fields.png",
+        "caption": {
+          "ja": "保存済みの広帯域ソースと離散Poisson解。",
+          "en": "Stored broad smooth forcing and discrete Poisson solution."
+        }
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#poisson-2d-broad-ja"
+    },
+    {
+      "id": "poisson-2d-localized",
+      "group": "elliptic",
+      "name": {
+        "ja": "2次元Poisson・局在ソース",
+        "en": "2D Poisson / localized source"
+      },
+      "chapter": "elliptic",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/poisson-comparison/comparison.json",
+          "json_pointer": "/cases",
+          "where": {
+            "id": "localized"
+          }
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/elliptic/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/elliptic/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#poisson-2d-localized",
+      "run_commands": [],
+      "image": "/numerical-methods-atlas/assets/poisson-comparison/localized-63-fields.png",
+      "image_sha256": "27aae7390f2a8ba4560de1b57fa56f2aa24c256423f37e8cd6ac39d3bc443716",
+      "width": 1375,
+      "height": 562,
+      "source_kind": "existing-figure",
+      "caption": {
+        "ja": "保存済み局在ソースと離散Poisson解。",
+        "en": "Stored localized forcing and discrete Poisson solution."
+      },
+      "visual_input": {
+        "id": "poisson-2d-localized",
+        "kind": "image",
+        "source": "assets/poisson-comparison/localized-63-fields.png",
+        "caption": {
+          "ja": "保存済み局在ソースと離散Poisson解。",
+          "en": "Stored localized forcing and discrete Poisson solution."
+        }
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#poisson-2d-localized-ja"
+    },
+    {
+      "id": "poisson-2d-sine",
+      "group": "elliptic",
+      "name": {
+        "ja": "2次元Poisson・正弦単一モード（FEMを含む）",
+        "en": "2D Poisson / single sine mode, including FEM"
+      },
+      "chapter": "fem",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/poisson-comparison/comparison.json",
+          "json_pointer": "/cases",
+          "where": {
+            "id": "single-mode"
+          }
+        },
+        {
+          "path": "numerical-methods-atlas/assets/multidimensional-fields.json",
+          "json_pointer": "/fem"
+        },
+        {
+          "path": "numerical-methods-atlas/assets/solver-foundations.json",
+          "json_pointer": "/fem"
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/fem/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/fem/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#poisson-2d-sine",
+      "run_commands": [],
+      "image": "/numerical-methods-atlas/assets/field-fem-poisson.png",
+      "image_sha256": "5cb31b1cb182fa6509de11f0cafcc2368b9136b46d625bc6183df2a648f9af29",
+      "width": 1575,
+      "height": 690,
+      "source_kind": "existing-figure",
+      "caption": {
+        "ja": "同じ正弦製造解を解く、三角形有限要素の保存解と誤差。",
+        "en": "Stored triangular-FEM solution and error for the same sine manufactured problem."
+      },
+      "visual_input": {
+        "id": "poisson-2d-sine",
+        "kind": "image",
+        "source": "assets/field-fem-poisson.png",
+        "caption": {
+          "ja": "同じ正弦製造解を解く、三角形有限要素の保存解と誤差。",
+          "en": "Stored triangular-FEM solution and error for the same sine manufactured problem."
+        }
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#poisson-2d-sine-ja"
+    },
+    {
+      "id": "poisson-2d-uniform",
+      "group": "elliptic",
+      "name": {
+        "ja": "2次元Poisson・一様ソース",
+        "en": "2D Poisson / uniform source"
+      },
+      "chapter": "elliptic",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/validation.json",
+          "json_pointer": "/metrics/multigrid"
+        },
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_multigrid.py",
+          "python_symbol": "test_multigrid_against_cg_and_residual"
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/elliptic/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/elliptic/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#poisson-2d-uniform",
+      "run_commands": [
+        "python -m pytest -q tests/test_multigrid.py -k test_multigrid_against_cg_and_residual"
+      ],
+      "image": "/numerical-methods-atlas/gallery/previews/poisson-2d-uniform.png",
+      "image_sha256": "9c36a637f9733082dd00ab3f997f21b8b9b788953ecbc12bb0492755e5e5449d",
+      "width": 832,
+      "height": 494,
+      "source_kind": "stored-data-plot",
+      "caption": {
+        "ja": "保存済み一様ソースPoisson問題のマルチグリッド残差。",
+        "en": "Stored multigrid residual history for uniform-source Poisson."
+      },
+      "visual_input": {
+        "id": "poisson-2d-uniform",
+        "kind": "multigrid-residual",
+        "source": "assets/validation.json",
+        "caption": {
+          "ja": "保存済み一様ソースPoisson問題のマルチグリッド残差。",
+          "en": "Stored multigrid residual history for uniform-source Poisson."
+        }
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#poisson-2d-uniform-ja"
+    },
+    {
+      "id": "poisson-2d-random",
+      "group": "elliptic",
+      "name": {
+        "ja": "2次元Poisson・乱数ソースの離散残差",
+        "en": "2D Poisson / random-source discrete residual"
+      },
+      "chapter": "elliptic",
+      "evidence": [
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_linear.py",
+          "python_symbol": "test_poisson_cg_for_general_forcing_satisfies_discrete_residual"
+        },
+        {
+          "path": "numerical-methods-atlas/gallery/calculations.json",
+          "json_pointer": "/cases/poisson-2d-random"
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/elliptic/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/elliptic/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#poisson-2d-random",
+      "run_commands": [
+        "python -m pytest -q tests/test_linear.py -k test_poisson_cg_for_general_forcing_satisfies_discrete_residual"
+      ],
+      "image": "/numerical-methods-atlas/gallery/previews/poisson-2d-random.png",
+      "image_sha256": "93c4ffc2bdbd3e1d32646c45e60b02db407f9b45eec889ec74205144babb15c5",
+      "width": 832,
+      "height": 494,
+      "source_kind": "computed-preview",
+      "caption": {
+        "ja": "公開コード版を固定条件で実行して作成した計算結果。条件・値・検査結果を添付。",
+        "en": "Calculated from the public code edition with fixed inputs; inputs, values and checks are linked."
+      },
+      "visual_input": {
+        "id": "poisson-2d-random",
+        "kind": "computed-preview",
+        "source": null,
+        "caption": {
+          "ja": "公開コード版を固定条件で実行して作成した計算結果。条件・値・検査結果を添付。",
+          "en": "Calculated from the public code edition with fixed inputs; inputs, values and checks are linked."
+        }
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#poisson-2d-random-ja"
+    },
+    {
+      "id": "poisson-3d-periodic",
+      "group": "elliptic",
+      "name": {
+        "ja": "3次元周期Poisson・Fourier製造解",
+        "en": "3D periodic Poisson / Fourier manufactured solution"
+      },
+      "chapter": "particle-gravity",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/multidimensional-fields.json",
+          "json_pointer": "/poisson3d"
+        },
+        {
+          "path": "numerical-methods-atlas/assets/particle-gravity.json",
+          "json_pointer": "/periodic_pm/manufactured_potential_max_error"
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/particle-gravity/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/particle-gravity/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#poisson-3d-periodic",
+      "run_commands": [],
+      "image": "/numerical-methods-atlas/assets/field-poisson-3d.png",
+      "image_sha256": "8988cdb2747b9da6cc88bc7374275a4238557d7fa24d56ad0756f9435b322bb7",
+      "width": 1800,
+      "height": 690,
+      "source_kind": "existing-figure",
+      "caption": {
+        "ja": "保存済み3次元周期Poisson解の3断面。3次元流体計算ではありません。",
+        "en": "Three stored slices of a 3D periodic Poisson solution, not 3D fluid evolution."
+      },
+      "visual_input": {
+        "id": "poisson-3d-periodic",
+        "kind": "image",
+        "source": "assets/field-poisson-3d.png",
+        "caption": {
+          "ja": "保存済み3次元周期Poisson解の3断面。3次元流体計算ではありません。",
+          "en": "Three stored slices of a 3D periodic Poisson solution, not 3D fluid evolution."
+        }
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#poisson-3d-periodic-ja"
+    },
+    {
+      "id": "poisson-1d-periodic",
+      "group": "elliptic",
+      "name": {
+        "ja": "1次元周期Poisson・擬似時間による定常解",
+        "en": "1D periodic Poisson / pseudo-time steady solution"
+      },
+      "chapter": "hyperbolic-diffusion",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/solver-foundations.json",
+          "json_pointer": "/hyperbolic_diffusion"
+        },
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_new_models.py",
+          "python_symbol": "test_hyperbolic_diffusion_steady_refinement_and_failure"
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/hyperbolic-diffusion/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/hyperbolic-diffusion/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#poisson-1d-periodic",
+      "run_commands": [
+        "python -m pytest -q tests/test_new_models.py -k test_hyperbolic_diffusion_steady_refinement_and_failure"
+      ],
+      "image": "/numerical-methods-atlas/gallery/previews/poisson-1d-periodic.png",
+      "image_sha256": "712e2d9b12bc96d1885729c94aaeef02fc2d66998a56c7e0a771132e2cbbcc57",
+      "width": 832,
+      "height": 494,
+      "source_kind": "stored-data-plot",
+      "caption": {
+        "ja": "保存済み擬似時間定常解の誤差・格子収束。",
+        "en": "Stored error refinement of the pseudo-time steady solution."
+      },
+      "visual_input": {
+        "id": "poisson-1d-periodic",
+        "kind": "hyperbolic-refinement",
+        "source": "assets/solver-foundations.json",
+        "caption": {
+          "ja": "保存済み擬似時間定常解の誤差・格子収束。",
+          "en": "Stored error refinement of the pseudo-time steady solution."
+        }
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#poisson-1d-periodic-ja"
+    },
+    {
+      "id": "bratu",
+      "group": "elliptic",
+      "name": {
+        "ja": "1次元Bratu非線形境界値問題",
+        "en": "One-dimensional Bratu boundary-value problem"
+      },
+      "chapter": "sparse-nonlinear",
+      "evidence": [
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_sparse_fem.py",
+          "python_symbol": "test_bratu_newton_krylov_refines_to_continuous_reference"
+        },
+        {
+          "path": "numerical-methods-atlas/gallery/calculations.json",
+          "json_pointer": "/cases/bratu"
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/sparse-nonlinear/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/sparse-nonlinear/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#bratu",
+      "run_commands": [
+        "python -m pytest -q tests/test_sparse_fem.py -k test_bratu_newton_krylov_refines_to_continuous_reference"
+      ],
+      "image": "/numerical-methods-atlas/gallery/previews/bratu.png",
+      "image_sha256": "e34f1dd633d24164a9f9b10d8c691aa4d8abbe13699ceefbf9ce4262d2a544e1",
+      "width": 832,
+      "height": 494,
+      "source_kind": "computed-preview",
+      "caption": {
+        "ja": "公開コード版を固定条件で実行して作成した計算結果。条件・値・検査結果を添付。",
+        "en": "Calculated from the public code edition with fixed inputs; inputs, values and checks are linked."
+      },
+      "visual_input": {
+        "id": "bratu",
+        "kind": "computed-preview",
+        "source": null,
+        "caption": {
+          "ja": "公開コード版を固定条件で実行して作成した計算結果。条件・値・検査結果を添付。",
+          "en": "Calculated from the public code edition with fixed inputs; inputs, values and checks are linked."
+        }
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#bratu-ja"
+    },
+    {
+      "id": "sparse-advection-diffusion",
+      "group": "elliptic",
+      "name": {
+        "ja": "非対称移流拡散離散系の製造解",
+        "en": "Nonsymmetric advection-diffusion discrete manufactured system"
+      },
+      "chapter": "sparse-nonlinear",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/solver-foundations.json",
+          "json_pointer": "/krylov"
+        },
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_sparse_fem.py",
+          "python_symbol": "test_nonsymmetric_solve_true_residual_and_error"
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/sparse-nonlinear/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/sparse-nonlinear/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#sparse-advection-diffusion",
+      "run_commands": [
+        "python -m pytest -q tests/test_sparse_fem.py -k test_nonsymmetric_solve_true_residual_and_error"
+      ],
+      "image": "/numerical-methods-atlas/gallery/previews/sparse-advection-diffusion.png",
+      "image_sha256": "95f02b8ba8b0d8613aea91a4a14ef285e101686add12a5bf9643912e82b729b9",
+      "width": 832,
+      "height": 494,
+      "source_kind": "stored-data-plot",
+      "caption": {
+        "ja": "保存済み非対称離散系の真の残差履歴。",
+        "en": "Stored true-residual histories of the nonsymmetric discrete system."
+      },
+      "visual_input": {
+        "id": "sparse-advection-diffusion",
+        "kind": "krylov-residual",
+        "source": "assets/solver-foundations.json",
+        "caption": {
+          "ja": "保存済み非対称離散系の真の残差履歴。",
+          "en": "Stored true-residual histories of the nonsymmetric discrete system."
+        }
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#sparse-advection-diffusion-ja"
+    },
+    {
+      "id": "isolated-particles",
+      "group": "gravity",
+      "name": {
+        "ja": "孤立粒子群の軟化重力（ツリー・直接和）",
+        "en": "Isolated softened particle gravity: tree versus direct sum"
+      },
+      "chapter": "particle-gravity",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/particle-gravity.json",
+          "json_pointer": "/isolated_tree"
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/particle-gravity/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/particle-gravity/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#isolated-particles",
+      "run_commands": [],
+      "image": "/numerical-methods-atlas/gallery/previews/isolated-particles.png",
+      "image_sha256": "2ed17564aa4a2ceb5570b27b3374d39fc1fec762a9419c939f0f1d329d232722",
+      "width": 832,
+      "height": 494,
+      "source_kind": "stored-data-plot",
+      "caption": {
+        "ja": "保存済みツリー力と直接和の相対誤差。開き角・展開次数を比較。",
+        "en": "Stored relative tree/direct-sum force errors versus opening angle and expansion order."
+      },
+      "visual_input": {
+        "id": "isolated-particles",
+        "kind": "tree-force",
+        "source": "assets/particle-gravity.json",
+        "caption": {
+          "ja": "保存済みツリー力と直接和の相対誤差。開き角・展開次数を比較。",
+          "en": "Stored relative tree/direct-sum force errors versus opening angle and expansion order."
+        }
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#isolated-particles-ja"
+    },
+    {
+      "id": "periodic-particles",
+      "group": "gravity",
+      "name": {
+        "ja": "周期PM粒子群の質量・内力",
+        "en": "Periodic PM particle mass and internal force"
+      },
+      "chapter": "particle-gravity",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/particle-gravity.json",
+          "json_pointer": "/periodic_pm"
+        },
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_particle_gravity.py",
+          "python_symbol": "test_pm_self_force_and_total_internal_force_with_matched_cic"
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/particle-gravity/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/particle-gravity/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#periodic-particles",
+      "run_commands": [
+        "python -m pytest -q tests/test_particle_gravity.py -k test_pm_self_force_and_total_internal_force_with_matched_cic"
+      ],
+      "image": "/numerical-methods-atlas/assets/particle-gravity.png",
+      "image_sha256": "1f3660258f393a6cc54438864c79ce8c48a099b7fd2175047e2387bf4f5612f3",
+      "width": 1669,
+      "height": 969,
+      "source_kind": "existing-figure",
+      "caption": {
+        "ja": "共有図の周期PM部分。孤立ツリーの比較は別問題です。",
+        "en": "Periodic-PM part of a shared figure; isolated-tree comparisons are a separate problem."
+      },
+      "visual_input": {
+        "id": "periodic-particles",
+        "kind": "image",
+        "source": "assets/particle-gravity.png",
+        "caption": {
+          "ja": "共有図の周期PM部分。孤立ツリーの比較は別問題です。",
+          "en": "Periodic-PM part of a shared figure; isolated-tree comparisons are a separate problem."
+        }
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#periodic-particles-ja"
+    },
+    {
+      "id": "isolated-convolution",
+      "group": "gravity",
+      "name": {
+        "ja": "孤立FFTと非周期直接畳み込み",
+        "en": "Isolated FFT versus direct nonperiodic convolution"
+      },
+      "chapter": "gravity-boundaries",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/gravity-boundaries.json",
+          "json_pointer": "/isolated_boundary_point_max_error"
+        },
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_gravity_boundaries.py",
+          "python_symbol": "test_isolated_doubling_equals_direct_nonperiodic_discrete_convolution"
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/gravity-boundaries/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/gravity-boundaries/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#isolated-convolution",
+      "run_commands": [
+        "python -m pytest -q tests/test_gravity_boundaries.py -k test_isolated_doubling_equals_direct_nonperiodic_discrete_convolution"
+      ],
+      "image": "/numerical-methods-atlas/assets/gravity-boundaries.png",
+      "image_sha256": "d660c26c162d156dba24026b81efa2b78a4b02924f72d16594aa63c19038103c",
+      "width": 1670,
+      "height": 969,
+      "source_kind": "existing-figure",
+      "caption": {
+        "ja": "境界核の共有図。このカードは「孤立畳み込み」の問題を案内します。",
+        "en": "Shared boundary-kernel figure; this card links specifically to isolated-convolution."
+      },
+      "visual_input": {
+        "id": "isolated-convolution",
+        "kind": "image",
+        "source": "assets/gravity-boundaries.png",
+        "caption": {
+          "ja": "境界核の共有図。このカードは「孤立畳み込み」の問題を案内します。",
+          "en": "Shared boundary-kernel figure; this card links specifically to isolated-convolution."
+        }
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#isolated-convolution-ja"
+    },
+    {
+      "id": "uniform-slab",
+      "group": "gravity",
+      "name": {
+        "ja": "一様平面スラブの重力",
+        "en": "Uniform plane-slab gravity"
+      },
+      "chapter": "gravity-boundaries",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/gravity-boundaries.json",
+          "json_pointer": "/uniform_slab_gauge_aligned_max_error"
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/gravity-boundaries/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/gravity-boundaries/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#uniform-slab",
+      "run_commands": [],
+      "image": "/numerical-methods-atlas/assets/gravity-boundaries.png",
+      "image_sha256": "d660c26c162d156dba24026b81efa2b78a4b02924f72d16594aa63c19038103c",
+      "width": 1670,
+      "height": 969,
+      "source_kind": "existing-figure",
+      "caption": {
+        "ja": "境界核の共有図。このカードは「一様平面スラブ」の問題を案内します。",
+        "en": "Shared boundary-kernel figure; this card links specifically to uniform-slab."
+      },
+      "visual_input": {
+        "id": "uniform-slab",
+        "kind": "image",
+        "source": "assets/gravity-boundaries.png",
+        "caption": {
+          "ja": "境界核の共有図。このカードは「一様平面スラブ」の問題を案内します。",
+          "en": "Shared boundary-kernel figure; this card links specifically to uniform-slab."
+        }
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#uniform-slab-ja"
+    },
+    {
+      "id": "sinusoidal-sheet",
+      "group": "gravity",
+      "name": {
+        "ja": "正弦波状薄層の重力",
+        "en": "Sinusoidal sheet gravity"
+      },
+      "chapter": "gravity-boundaries",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/gravity-boundaries.json",
+          "json_pointer": "/sinusoidal_sheet_max_error"
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/gravity-boundaries/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/gravity-boundaries/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#sinusoidal-sheet",
+      "run_commands": [],
+      "image": "/numerical-methods-atlas/assets/gravity-boundaries.png",
+      "image_sha256": "d660c26c162d156dba24026b81efa2b78a4b02924f72d16594aa63c19038103c",
+      "width": 1670,
+      "height": 969,
+      "source_kind": "existing-figure",
+      "caption": {
+        "ja": "境界核の共有図。このカードは「正弦薄層」の問題を案内します。",
+        "en": "Shared boundary-kernel figure; this card links specifically to sinusoidal-sheet."
+      },
+      "visual_input": {
+        "id": "sinusoidal-sheet",
+        "kind": "image",
+        "source": "assets/gravity-boundaries.png",
+        "caption": {
+          "ja": "境界核の共有図。このカードは「正弦薄層」の問題を案内します。",
+          "en": "Shared boundary-kernel figure; this card links specifically to sinusoidal-sheet."
+        }
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#sinusoidal-sheet-ja"
+    },
+    {
+      "id": "harmonic-oscillator",
+      "group": "time",
+      "name": {
+        "ja": "調和振動子（複素ODE表示も統合）",
+        "en": "Harmonic oscillator, including complex-ODE form"
+      },
+      "chapter": "time-integration",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/foundations.json",
+          "json_pointer": "/time"
+        },
+        {
+          "path": "numerical-methods-atlas/hamiltonian.json",
+          "json_pointer": "/cases",
+          "where": {
+            "system": "harmonic"
+          }
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/time-integration/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/time-integration/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#harmonic-oscillator",
+      "run_commands": [],
+      "image": "/numerical-methods-atlas/gallery/previews/harmonic-oscillator.png",
+      "image_sha256": "7b2eedfce8ba315a2062cfa67b1c1645bd97ac12f9c07d2d190f65f81aa8089a",
+      "width": 832,
+      "height": 494,
+      "source_kind": "stored-data-plot",
+      "caption": {
+        "ja": "保存済みのt≤10の正準位相軌道。手法違いは同一問題の比較。",
+        "en": "Stored canonical phase orbits for t≤10; methods remain variants of one problem."
+      },
+      "visual_input": {
+        "id": "harmonic-oscillator",
+        "kind": "hamiltonian-orbit",
+        "source": "hamiltonian.json",
+        "caption": {
+          "ja": "保存済みのt≤10の正準位相軌道。手法違いは同一問題の比較。",
+          "en": "Stored canonical phase orbits for t≤10; methods remain variants of one problem."
+        },
+        "system": "harmonic"
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#harmonic-oscillator-ja"
+    },
+    {
+      "id": "quartic-oscillator",
+      "group": "time",
+      "name": {
+        "ja": "4次ポテンシャルの非線形振動子",
+        "en": "Nonlinear quartic-potential oscillator"
+      },
+      "chapter": "symplectic",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/hamiltonian.json",
+          "json_pointer": "/cases",
+          "where": {
+            "system": "quartic"
+          }
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/symplectic/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/symplectic/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#quartic-oscillator",
+      "run_commands": [],
+      "image": "/numerical-methods-atlas/gallery/previews/quartic-oscillator.png",
+      "image_sha256": "1655466d9e547f243929a188e3b84ae30c9f9c7b9f9496e9bf0df2cac19ffbd1",
+      "width": 832,
+      "height": 494,
+      "source_kind": "stored-data-plot",
+      "caption": {
+        "ja": "保存済みのt≤10の正準位相軌道。手法違いは同一問題の比較。",
+        "en": "Stored canonical phase orbits for t≤10; methods remain variants of one problem."
+      },
+      "visual_input": {
+        "id": "quartic-oscillator",
+        "kind": "hamiltonian-orbit",
+        "source": "hamiltonian.json",
+        "caption": {
+          "ja": "保存済みのt≤10の正準位相軌道。手法違いは同一問題の比較。",
+          "en": "Stored canonical phase orbits for t≤10; methods remain variants of one problem."
+        },
+        "system": "quartic"
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#quartic-oscillator-ja"
+    },
+    {
+      "id": "nonlinear-exp-ode",
+      "group": "time",
+      "name": {
+        "ja": "指数関数を厳密解に持つ非線形・非自律ODE",
+        "en": "Nonlinear nonautonomous ODE with exponential exact solution"
+      },
+      "chapter": "runge-kutta",
+      "evidence": [
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_runge_kutta.py",
+          "python_symbol": "test_rk_order_conditions_and_manufactured_nonlinear_time_dependence"
+        },
+        {
+          "path": "numerical-methods-atlas/gallery/calculations.json",
+          "json_pointer": "/cases/nonlinear-exp-ode"
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/runge-kutta/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/runge-kutta/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#nonlinear-exp-ode",
+      "run_commands": [
+        "python -m pytest -q tests/test_runge_kutta.py -k test_rk_order_conditions_and_manufactured_nonlinear_time_dependence"
+      ],
+      "image": "/numerical-methods-atlas/gallery/previews/nonlinear-exp-ode.png",
+      "image_sha256": "f89732699d3bcecfd4698344401428d1d77b045628ed224e0a13da7eea09ebc8",
+      "width": 832,
+      "height": 494,
+      "source_kind": "computed-preview",
+      "caption": {
+        "ja": "公開コード版を固定条件で実行して作成した計算結果。条件・値・検査結果を添付。",
+        "en": "Calculated from the public code edition with fixed inputs; inputs, values and checks are linked."
+      },
+      "visual_input": {
+        "id": "nonlinear-exp-ode",
+        "kind": "computed-preview",
+        "source": null,
+        "caption": {
+          "ja": "公開コード版を固定条件で実行して作成した計算結果。条件・値・検査結果を添付。",
+          "en": "Calculated from the public code edition with fixed inputs; inputs, values and checks are linked."
+        }
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#nonlinear-exp-ode-ja"
+    },
+    {
+      "id": "stiff-cosine",
+      "group": "time",
+      "name": {
+        "ja": "硬い余弦追従ODE",
+        "en": "Stiff cosine-tracking ODE"
+      },
+      "chapter": "stiff-integration",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/assets/solver-foundations.json",
+          "json_pointer": "/stiff"
+        },
+        {
+          "path": "numerical-methods-atlas/assets/solver-foundations.json",
+          "json_pointer": "/adaptive"
+        },
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_new_models.py",
+          "python_symbol": "test_stiff_decay_and_local_error_control"
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/stiff-integration/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/stiff-integration/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#stiff-cosine",
+      "run_commands": [
+        "python -m pytest -q tests/test_new_models.py -k test_stiff_decay_and_local_error_control"
+      ],
+      "image": "/numerical-methods-atlas/gallery/previews/stiff-cosine.png",
+      "image_sha256": "2627f7779b6ac5bf9dd4ef5726f7b95dd0c91805fd5ead1ca5b0132cdd7ad230",
+      "width": 832,
+      "height": 494,
+      "source_kind": "stored-data-plot",
+      "caption": {
+        "ja": "保存済みの硬い余弦追従ODEの固定刻み誤差。",
+        "en": "Stored fixed-step errors for the stiff cosine-tracking ODE."
+      },
+      "visual_input": {
+        "id": "stiff-cosine",
+        "kind": "stiff-refinement",
+        "source": "assets/solver-foundations.json",
+        "caption": {
+          "ja": "保存済みの硬い余弦追従ODEの固定刻み誤差。",
+          "en": "Stored fixed-step errors for the stiff cosine-tracking ODE."
+        }
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#stiff-cosine-ja"
+    },
+    {
+      "id": "nonlinear-rational-ode",
+      "group": "time",
+      "name": {
+        "ja": "有理関数を厳密解に持つ非線形・非自律ODE",
+        "en": "Nonlinear nonautonomous ODE with rational exact solution"
+      },
+      "chapter": "stiff-integration",
+      "evidence": [
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_new_models.py",
+          "python_symbol": "test_implicit_orders_on_nonautonomous_nonlinear_exact_solution"
+        },
+        {
+          "path": "numerical-methods-atlas/gallery/calculations.json",
+          "json_pointer": "/cases/nonlinear-rational-ode"
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/stiff-integration/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/stiff-integration/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#nonlinear-rational-ode",
+      "run_commands": [
+        "python -m pytest -q tests/test_new_models.py -k test_implicit_orders_on_nonautonomous_nonlinear_exact_solution"
+      ],
+      "image": "/numerical-methods-atlas/gallery/previews/nonlinear-rational-ode.png",
+      "image_sha256": "e9b4394c6ee0a2d6bc7f97d2a095129e50a98dcdd1ac1928b2ad2833e4713e6c",
+      "width": 832,
+      "height": 494,
+      "source_kind": "computed-preview",
+      "caption": {
+        "ja": "公開コード版を固定条件で実行して作成した計算結果。条件・値・検査結果を添付。",
+        "en": "Calculated from the public code edition with fixed inputs; inputs, values and checks are linked."
+      },
+      "visual_input": {
+        "id": "nonlinear-rational-ode",
+        "kind": "computed-preview",
+        "source": null,
+        "caption": {
+          "ja": "公開コード版を固定条件で実行して作成した計算結果。条件・値・検査結果を添付。",
+          "en": "Calculated from the public code edition with fixed inputs; inputs, values and checks are linked."
+        }
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#nonlinear-rational-ode-ja"
+    },
+    {
+      "id": "smooth-function-projection",
+      "group": "approximation",
+      "name": {
+        "ja": "滑らかな関数の多項式補間・射影",
+        "en": "Polynomial interpolation and projection of a smooth function"
+      },
+      "chapter": "basis-functions",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/basis.json",
+          "json_pointer": "/approximations",
+          "where": {
+            "profile": "smooth"
+          }
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/basis-functions/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/basis-functions/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#smooth-function-projection",
+      "run_commands": [],
+      "image": "/numerical-methods-atlas/gallery/previews/smooth-function-projection.png",
+      "image_sha256": "a707ea243ee02d799b972da136505ec673514e89db5f33f948ee405a261648d4",
+      "width": 832,
+      "height": 494,
+      "source_kind": "stored-data-plot",
+      "caption": {
+        "ja": "保存済み8次多項式の射影・補間と元の関数。",
+        "en": "Stored degree-8 projection/interpolation and the original function."
+      },
+      "visual_input": {
+        "id": "smooth-function-projection",
+        "kind": "basis-approximation",
+        "source": "basis.json",
+        "caption": {
+          "ja": "保存済み8次多項式の射影・補間と元の関数。",
+          "en": "Stored degree-8 projection/interpolation and the original function."
+        },
+        "profile": "smooth"
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#smooth-function-projection-ja"
+    },
+    {
+      "id": "jump-function-projection",
+      "group": "approximation",
+      "name": {
+        "ja": "不連続関数の多項式補間・射影",
+        "en": "Polynomial interpolation and projection of a jump function"
+      },
+      "chapter": "basis-functions",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/basis.json",
+          "json_pointer": "/approximations",
+          "where": {
+            "profile": "jump"
+          }
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/basis-functions/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/basis-functions/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#jump-function-projection",
+      "run_commands": [],
+      "image": "/numerical-methods-atlas/gallery/previews/jump-function-projection.png",
+      "image_sha256": "9b57db39b86fc73cdff20599b67cd29c7c4f0acd05b0f7d407dc6f699b6f88be",
+      "width": 832,
+      "height": 494,
+      "source_kind": "stored-data-plot",
+      "caption": {
+        "ja": "保存済み8次多項式の射影・補間と元の関数。",
+        "en": "Stored degree-8 projection/interpolation and the original function."
+      },
+      "visual_input": {
+        "id": "jump-function-projection",
+        "kind": "basis-approximation",
+        "source": "basis.json",
+        "caption": {
+          "ja": "保存済み8次多項式の射影・補間と元の関数。",
+          "en": "Stored degree-8 projection/interpolation and the original function."
+        },
+        "profile": "jump"
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#jump-function-projection-ja"
+    },
+    {
+      "id": "cubic-root",
+      "group": "approximation",
+      "name": {
+        "ja": "減衰Newton法による3次方程式の求根",
+        "en": "Damped Newton root of a cubic equation"
+      },
+      "chapter": "sparse-nonlinear",
+      "evidence": [
+        {
+          "path": "code/numerical-methods-atlas/2026-11-21/tests/test_sparse_fem.py",
+          "python_symbol": "test_damped_newton_backtracks_and_reports_failure"
+        },
+        {
+          "path": "numerical-methods-atlas/gallery/calculations.json",
+          "json_pointer": "/cases/cubic-root"
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/sparse-nonlinear/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/sparse-nonlinear/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#cubic-root",
+      "run_commands": [
+        "python -m pytest -q tests/test_sparse_fem.py -k test_damped_newton_backtracks_and_reports_failure"
+      ],
+      "image": "/numerical-methods-atlas/gallery/previews/cubic-root.png",
+      "image_sha256": "82d33eafdf02384a4b338cb034eaa590d2f736c018948bbbbb20d1fe97ea2efb",
+      "width": 832,
+      "height": 494,
+      "source_kind": "computed-preview",
+      "caption": {
+        "ja": "公開コード版を固定条件で実行して作成した計算結果。条件・値・検査結果を添付。",
+        "en": "Calculated from the public code edition with fixed inputs; inputs, values and checks are linked."
+      },
+      "visual_input": {
+        "id": "cubic-root",
+        "kind": "computed-preview",
+        "source": null,
+        "caption": {
+          "ja": "公開コード版を固定条件で実行して作成した計算結果。条件・値・検査結果を添付。",
+          "en": "Calculated from the public code edition with fixed inputs; inputs, values and checks are linked."
+        }
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#cubic-root-ja"
+    },
+    {
+      "id": "nonlinear-rational-decay",
+      "group": "time",
+      "name": {
+        "ja": "有理減衰ODE（y′ = −y²）",
+        "en": "Rational-decay ODE (y′ = −y²)"
+      },
+      "chapter": "runge-kutta",
+      "evidence": [
+        {
+          "path": "numerical-methods-atlas/runge-kutta.json",
+          "json_pointer": "/nonlinear_problem"
+        },
+        {
+          "path": "numerical-methods-atlas/runge-kutta.json",
+          "json_pointer": "/cases"
+        }
+      ],
+      "availability": "saved-output",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/runge-kutta/",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/runge-kutta/"
+      },
+      "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/#nonlinear-rational-decay",
+      "run_commands": [],
+      "image": "/numerical-methods-atlas/gallery/previews/nonlinear-rational-decay.png",
+      "image_sha256": "56f8efda8e60babc21a818fa91bce6ff95b6d5f3baf3450caa09cf58178421bf",
+      "width": 832,
+      "height": 494,
+      "source_kind": "stored-data-plot",
+      "caption": {
+        "ja": "保存済み有理減衰ODEの時間刻み収束（代表3手法）。",
+        "en": "Stored time-refinement errors for rational decay, showing three methods."
+      },
+      "visual_input": {
+        "id": "nonlinear-rational-decay",
+        "kind": "rk-refinement",
+        "source": "runge-kutta.json",
+        "caption": {
+          "ja": "保存済み有理減衰ODEの時間刻み収束（代表3手法）。",
+          "en": "Stored time-refinement errors for rational decay, showing three methods."
+        }
+      },
+      "gallery_url": "https://hrkoyama.github.io/numerical-methods-atlas/gallery/#nonlinear-rational-decay-ja"
+    }
+  ],
+  "source_sha256": {
+    "catalog/atlas-gallery.json": "3f78a3fa36ba22095f6815f2c57acab85554aa4c0ebaf6329a5495036528aca1",
+    "scripts/render-atlas-gallery.py": "1866f93c1cbee63212da8bcc5a9716de01e15ab95fcaa49b93de3d1f67e965e0",
+    "code/numerical-methods-atlas/2026-11-21/numart/benchmarks.py": "dc8f83aafea473b5f0e1e7bf82630484dd60aa446859c1f602571adc3c59f019",
+    "code/numerical-methods-atlas/2026-11-21/numart/solvers.py": "7811862ea3384cef825a1d382c24c6e19a175fb688a024fa4117959eed4bf05d",
+    "code/numerical-methods-atlas/2026-11-21/numart/linear.py": "d58db4efc09a3358b28cff07ba3a2e732244eaaf2f82a5fcf1ce0de001ba87a9",
+    "code/numerical-methods-atlas/2026-11-21/numart/krylov.py": "3241dc174c3e0cf496723152ec92f81e1b741cb4d826c02f88395621b965ae2d",
+    "code/numerical-methods-atlas/2026-11-21/numart/runge_kutta.py": "c3f4543c7a6ece11e8207204a43490bd29711ad4179fdd190f52a626ba6fff74",
+    "code/numerical-methods-atlas/2026-11-21/numart/stiff.py": "3b22b57239ea41e46b83a6b16e36f37bf5eda53342efe42475449d4089ddcb2e",
+    "numerical-methods-atlas/cip.json": "3aa33fbffad6b9ad76310e9b713629a1a35b4e30e419db0c531180cf769e6b6f",
+    "numerical-methods-atlas/equation-gallery.json": "e99af38238a50232f92875817c4556ab6c730289db13014efdd41913096c902e",
+    "numerical-methods-atlas/assets/diffusion-boundaries.png": "d2fa0bbcb07693a80ea9f0c4b2289c0199d11e5101d36fae730718cb64a92c68",
+    "numerical-methods-atlas/assets/lax-entropy.png": "468467f127f5d7e5c151e5714a9545360c7dc3eef1548ae9155396d5f19aa8fa",
+    "numerical-methods-atlas/assets/reconstruction/reconstruction.json": "2b3b9959fe6516725d2f57414f92dd154d6899720cb149236eeac6b9a9ae5c15",
+    "numerical-methods-atlas/experiments.json": "3b58cba3ed6001ca9403f9ace461747d2eaa5e187e6599ead876c6af27150226",
+    "numerical-methods-atlas/assets/shock-expansion/shock-expansion.json": "bee8170508af45c2bd8e44ed735af243b287209f04fc32ad961c98d3c7b54d54",
+    "numerical-methods-atlas/assets/movies/double-mach/frame-080.webp": "c25e7e545607ec4e2f8d56186d6d963956c28d7e9e28b2a45b504f60c42e8eec",
+    "numerical-methods-atlas/assets/comparisons/wedge-m2-mc.png": "05289a877f8a6798fb091f7bfef9baeaf0e6e0825c9bb3c51081929de0d032da",
+    "numerical-methods-atlas/assets/comparisons/step-m3-mc.png": "3002eb94449b6fe7835da19cc825840ddf6c25818c19a0b5840606ef72a6889b",
+    "numerical-methods-atlas/assets/comparisons/smooth-refinement.png": "b897c263ed234fcbffa37bcfbe86c52a2b3d3cfc3f690f8216707b38539f1543",
+    "numerical-methods-atlas/assets/shock-expansion/forebody-48-0-density.png": "a5889e8683e3bbb451234074da81773e32210d7d349523d2611fac2c90414595",
+    "numerical-methods-atlas/assets/shock-methods/planar-128-0.png": "bd795bce6943a209b564e085844c53b372d77e33c597d213a39fa9f9f3c3cfcf",
+    "numerical-methods-atlas/assets/movies/keep-vortex/frame-080.webp": "0571dd99590171b88cab7b70ee4a152eec5870a6129fa8dca0769e1c001eaf5e",
+    "numerical-methods-atlas/assets/movies/orszag-tang-ct/frame-080.webp": "38c260ae5d3a5031e733b365eb00c6ea04c9182a059a317bd1735e0c3dc0e6af",
+    "numerical-methods-atlas/assets/mhd-tests/brio-wu.png": "9702508c0d5c9210f1a7df3351ca605c5cfb0e78bef5f2158bbece6018b83b82",
+    "numerical-methods-atlas/assets/mhd-tests/alfven.png": "59a8cd9131e3b5ea278b3bda97b9995f7324315c11c9a6606eb411cca3917e9e",
+    "numerical-methods-atlas/assets/mhd-tests/field-loop.png": "ae99ce992228c257747d74ebbcbea8c1ecf61acf64185bb7fc1718e2857c9655",
+    "numerical-methods-atlas/assets/field-taylor-green.png": "89d51b4bdc8650fd270de49d92f3109e0d2b0feb27f3e62ae509ea550fe33a19",
+    "numerical-methods-atlas/assets/solver-foundations.json": "fc6b4e20bcc9635b8a6e14527caa4993d86ec255325652945dddf4118360f9fd",
+    "numerical-methods-atlas/assets/poisson-comparison/comparison.json": "10f7574878f58a954054fa56732d404478670a6803e57139320e6581e3da06a2",
+    "numerical-methods-atlas/assets/poisson-comparison/manufactured-63-fields.png": "911131f2907f0eeeab7e1eddab91ac42ed3fd027dda1d129d28e930f83c75cbd",
+    "numerical-methods-atlas/assets/poisson-comparison/localized-63-fields.png": "27aae7390f2a8ba4560de1b57fa56f2aa24c256423f37e8cd6ac39d3bc443716",
+    "numerical-methods-atlas/assets/field-fem-poisson.png": "5cb31b1cb182fa6509de11f0cafcc2368b9136b46d625bc6183df2a648f9af29",
+    "numerical-methods-atlas/assets/validation.json": "8c9198b072ae067f208fdb6c44ee4f84fe19b93f68f2f78811eb18cb1ffcef1a",
+    "numerical-methods-atlas/assets/field-poisson-3d.png": "8988cdb2747b9da6cc88bc7374275a4238557d7fa24d56ad0756f9435b322bb7",
+    "numerical-methods-atlas/assets/particle-gravity.json": "04d2172033898666e9df1578174df6007899fa6fed23d5094991b04df77d5923",
+    "numerical-methods-atlas/assets/particle-gravity.png": "1f3660258f393a6cc54438864c79ce8c48a099b7fd2175047e2387bf4f5612f3",
+    "numerical-methods-atlas/assets/gravity-boundaries.png": "d660c26c162d156dba24026b81efa2b78a4b02924f72d16594aa63c19038103c",
+    "numerical-methods-atlas/hamiltonian.json": "530c74ca27962b28579d90de47bc3d42df5d4ef1ad90d9e7606a64772c638203",
+    "numerical-methods-atlas/basis.json": "13bac5be15b5a43e7a103120e225fb15388650ae4de66aa731b4e324a8525651",
+    "numerical-methods-atlas/runge-kutta.json": "e2f5f1484a8d3edf1bb5511d4f237de20615ddad4103d1277f34f7357ae9d501",
+    "code/numerical-methods-atlas/2026-11-21/tests/test_numerics.py": "4ad61ac54dfa59d7d61959c5699f290e2386c23bf5b4b930a5d98576feaa54d1",
+    "code/numerical-methods-atlas/2026-11-21/tests/test_linear.py": "5e7323f2734fb7328c35706ccd90fc25076bd46d01d32cd9c78c8cd25dd0421f",
+    "code/numerical-methods-atlas/2026-11-21/tests/test_sparse_fem.py": "4076e514e0b9b5fd94dead4af33fe7e7548fba6a7b48b3e21a406034f7170afb",
+    "code/numerical-methods-atlas/2026-11-21/tests/test_runge_kutta.py": "920a5eb560afe7f560cae8d22f879f125851f4ee0451b24720d0eca0082c31ce",
+    "code/numerical-methods-atlas/2026-11-21/tests/test_new_models.py": "2937daf8fa8ad86882ac06e47835a6309ca1df3d0283c7dfb7b9606dc3906b1f",
+    "numerical-methods-atlas/gallery/preview-manifest.json": "80199623664985b2d875e780da1cfe4661dacd0c14ac2336d5acffbe6beed597",
+    "numerical-methods-atlas/gallery/calculations.json": "877ba403f68c67a337cf45f7158a5404758d03e61657f701a545fbf14f8a65a4",
+    "numerical-methods-atlas/gallery/verification.json": "46c39543afa9d943dfef896fadbc8f84d847f1a145d9b1427a2336de7a3a50f9",
+    "numerical-methods-atlas/test-cases/index.json": "6b45ecd938019017036ffd3c1116696f2474dc42bd51acaeaaf6c5ad3bf949ee"
+  }
+}

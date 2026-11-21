@@ -15,7 +15,7 @@ test('the three browse routes are available in both languages before the purpose
     assert.ok(html.indexOf('atlas-ways')<html.indexOf('atlas-purpose'));
     for(const item of copy[lang].browse)assert.ok(html.includes(item.title));
     assert.ok(html.includes('/numerical-methods-atlas/equations/?lang='+lang));
-    assert.ok(html.includes('/numerical-methods-atlas/?lang='+lang+'#/gallery'));
+    assert.ok(html.includes('/numerical-methods-atlas/gallery/?lang='+lang));
     assert.ok(html.includes('data-atlas-word-search'));
   }
 });

@@ -402,9 +402,13 @@
         {
           "path": "code/numerical-methods-atlas/2026-11-21/tests/test_numerics.py",
           "python_symbol": "test_benchmark_default_horizon_smoke"
+        },
+        {
+          "path": "numerical-methods-atlas/gallery/calculations.json",
+          "json_pointer": "/cases/double-rarefaction"
         }
       ],
-      "availability": "verified-code-check"
+      "availability": "saved-output"
     },
     {
       "id": "dam-break",
@@ -753,9 +757,13 @@
         {
           "path": "code/numerical-methods-atlas/2026-11-21/tests/test_linear.py",
           "python_symbol": "test_neumann_compatibility_and_mean_gauge"
+        },
+        {
+          "path": "numerical-methods-atlas/gallery/calculations.json",
+          "json_pointer": "/cases/poisson-1d-neumann"
         }
       ],
-      "availability": "verified-code-check"
+      "availability": "saved-output"
     },
     {
       "id": "poisson-1d-mixed",
@@ -769,9 +777,13 @@
         {
           "path": "code/numerical-methods-atlas/2026-11-21/tests/test_linear.py",
           "python_symbol": "test_mixed_dirichlet_neumann"
+        },
+        {
+          "path": "numerical-methods-atlas/gallery/calculations.json",
+          "json_pointer": "/cases/poisson-1d-mixed"
         }
       ],
-      "availability": "verified-code-check"
+      "availability": "saved-output"
     },
     {
       "id": "poisson-1d-robin",
@@ -785,9 +797,13 @@
         {
           "path": "code/numerical-methods-atlas/2026-11-21/tests/test_linear.py",
           "python_symbol": "test_robin_second_order_with_manufactured_exponential"
+        },
+        {
+          "path": "numerical-methods-atlas/gallery/calculations.json",
+          "json_pointer": "/cases/poisson-1d-robin"
         }
       ],
-      "availability": "verified-code-check"
+      "availability": "saved-output"
     },
     {
       "id": "poisson-2d-broad",
@@ -886,9 +902,13 @@
         {
           "path": "code/numerical-methods-atlas/2026-11-21/tests/test_linear.py",
           "python_symbol": "test_poisson_cg_for_general_forcing_satisfies_discrete_residual"
+        },
+        {
+          "path": "numerical-methods-atlas/gallery/calculations.json",
+          "json_pointer": "/cases/poisson-2d-random"
         }
       ],
-      "availability": "verified-code-check"
+      "availability": "saved-output"
     },
     {
       "id": "poisson-3d-periodic",
@@ -942,9 +962,13 @@
         {
           "path": "code/numerical-methods-atlas/2026-11-21/tests/test_sparse_fem.py",
           "python_symbol": "test_bratu_newton_krylov_refines_to_continuous_reference"
+        },
+        {
+          "path": "numerical-methods-atlas/gallery/calculations.json",
+          "json_pointer": "/cases/bratu"
         }
       ],
-      "availability": "verified-code-check"
+      "availability": "saved-output"
     },
     {
       "id": "sparse-advection-diffusion",
@@ -1108,9 +1132,13 @@
         {
           "path": "code/numerical-methods-atlas/2026-11-21/tests/test_runge_kutta.py",
           "python_symbol": "test_rk_order_conditions_and_manufactured_nonlinear_time_dependence"
+        },
+        {
+          "path": "numerical-methods-atlas/gallery/calculations.json",
+          "json_pointer": "/cases/nonlinear-exp-ode"
         }
       ],
-      "availability": "verified-code-check"
+      "availability": "saved-output"
     },
     {
       "id": "stiff-cosine",
@@ -1148,9 +1176,13 @@
         {
           "path": "code/numerical-methods-atlas/2026-11-21/tests/test_new_models.py",
           "python_symbol": "test_implicit_orders_on_nonautonomous_nonlinear_exact_solution"
+        },
+        {
+          "path": "numerical-methods-atlas/gallery/calculations.json",
+          "json_pointer": "/cases/nonlinear-rational-ode"
         }
       ],
-      "availability": "verified-code-check"
+      "availability": "saved-output"
     },
     {
       "id": "smooth-function-projection",
@@ -1202,9 +1234,13 @@
         {
           "path": "code/numerical-methods-atlas/2026-11-21/tests/test_sparse_fem.py",
           "python_symbol": "test_damped_newton_backtracks_and_reports_failure"
+        },
+        {
+          "path": "numerical-methods-atlas/gallery/calculations.json",
+          "json_pointer": "/cases/cubic-root"
         }
       ],
-      "availability": "verified-code-check"
+      "availability": "saved-output"
     },
     {
       "id": "nonlinear-rational-decay",

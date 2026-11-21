@@ -19,6 +19,7 @@ add('public-code-guide',{'ja':'コード・入力・検証を取得する','en':
 add('thermostats',{'ja':'サーモスタット：温度制御と分布の比較','en':'Thermostats: temperature control and distributions'},['サーモスタット','温度制御','thermostat','NVT'],{lang:f'/numerical-methods-atlas/{lang}/read/thermostats/' for lang in ['ja','en']})
 add('equation-index',{'ja':'数式から探す','en':'Browse by equation'},['数式検索','方程式の一覧','equation index','formula'],{lang:'/numerical-methods-atlas/equations/?lang='+lang for lang in ['ja','en']})
 add('test-inventory',{'ja':'テスト計算の全体一覧','en':'Atlas-wide test-problem inventory'},['テスト計算','検証問題','benchmark','test problems'],{lang:'/numerical-methods-atlas/test-cases/?lang='+lang for lang in ['ja','en']})
+add('visual-test-index',{'ja':'絵から探す：全58のテスト計算','en':'Browse all 58 test problems by picture'},['絵から探す','画像','ギャラリー','テスト計算','visual index','gallery'],{lang:'/numerical-methods-atlas/gallery/?lang='+lang for lang in ['ja','en']})
 index['scope']='chapter titles, section headings, model and method labels, glossary aliases, and public method records'
 path.write_text(json.dumps(index,ensure_ascii=False,separators=(',',':'))+'\n')
 module=ATLAS/'home-search.js';text=module.read_text()

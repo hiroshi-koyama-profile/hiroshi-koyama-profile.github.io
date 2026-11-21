@@ -493,9 +493,13 @@
         {
           "path": "code/numerical-methods-atlas/2026-11-21/tests/test_numerics.py",
           "python_symbol": "test_benchmark_default_horizon_smoke"
+        },
+        {
+          "path": "numerical-methods-atlas/gallery/calculations.json",
+          "json_pointer": "/cases/double-rarefaction"
         }
       ],
-      "availability": "verified-code-check",
+      "availability": "saved-output",
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/benchmarks/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/benchmarks/"
@@ -966,9 +970,13 @@
         {
           "path": "code/numerical-methods-atlas/2026-11-21/tests/test_linear.py",
           "python_symbol": "test_neumann_compatibility_and_mean_gauge"
+        },
+        {
+          "path": "numerical-methods-atlas/gallery/calculations.json",
+          "json_pointer": "/cases/poisson-1d-neumann"
         }
       ],
-      "availability": "verified-code-check",
+      "availability": "saved-output",
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/elliptic/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/elliptic/"
@@ -990,9 +998,13 @@
         {
           "path": "code/numerical-methods-atlas/2026-11-21/tests/test_linear.py",
           "python_symbol": "test_mixed_dirichlet_neumann"
+        },
+        {
+          "path": "numerical-methods-atlas/gallery/calculations.json",
+          "json_pointer": "/cases/poisson-1d-mixed"
         }
       ],
-      "availability": "verified-code-check",
+      "availability": "saved-output",
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/elliptic/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/elliptic/"
@@ -1014,9 +1026,13 @@
         {
           "path": "code/numerical-methods-atlas/2026-11-21/tests/test_linear.py",
           "python_symbol": "test_robin_second_order_with_manufactured_exponential"
+        },
+        {
+          "path": "numerical-methods-atlas/gallery/calculations.json",
+          "json_pointer": "/cases/poisson-1d-robin"
         }
       ],
-      "availability": "verified-code-check",
+      "availability": "saved-output",
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/elliptic/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/elliptic/"
@@ -1149,9 +1165,13 @@
         {
           "path": "code/numerical-methods-atlas/2026-11-21/tests/test_linear.py",
           "python_symbol": "test_poisson_cg_for_general_forcing_satisfies_discrete_residual"
+        },
+        {
+          "path": "numerical-methods-atlas/gallery/calculations.json",
+          "json_pointer": "/cases/poisson-2d-random"
         }
       ],
-      "availability": "verified-code-check",
+      "availability": "saved-output",
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/elliptic/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/elliptic/"
@@ -1227,9 +1247,13 @@
         {
           "path": "code/numerical-methods-atlas/2026-11-21/tests/test_sparse_fem.py",
           "python_symbol": "test_bratu_newton_krylov_refines_to_continuous_reference"
+        },
+        {
+          "path": "numerical-methods-atlas/gallery/calculations.json",
+          "json_pointer": "/cases/bratu"
         }
       ],
-      "availability": "verified-code-check",
+      "availability": "saved-output",
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/sparse-nonlinear/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/sparse-nonlinear/"
@@ -1455,9 +1479,13 @@
         {
           "path": "code/numerical-methods-atlas/2026-11-21/tests/test_runge_kutta.py",
           "python_symbol": "test_rk_order_conditions_and_manufactured_nonlinear_time_dependence"
+        },
+        {
+          "path": "numerical-methods-atlas/gallery/calculations.json",
+          "json_pointer": "/cases/nonlinear-exp-ode"
         }
       ],
-      "availability": "verified-code-check",
+      "availability": "saved-output",
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/runge-kutta/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/runge-kutta/"
@@ -1511,9 +1539,13 @@
         {
           "path": "code/numerical-methods-atlas/2026-11-21/tests/test_new_models.py",
           "python_symbol": "test_implicit_orders_on_nonautonomous_nonlinear_exact_solution"
+        },
+        {
+          "path": "numerical-methods-atlas/gallery/calculations.json",
+          "json_pointer": "/cases/nonlinear-rational-ode"
         }
       ],
-      "availability": "verified-code-check",
+      "availability": "saved-output",
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/stiff-integration/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/stiff-integration/"
@@ -1585,9 +1617,13 @@
         {
           "path": "code/numerical-methods-atlas/2026-11-21/tests/test_sparse_fem.py",
           "python_symbol": "test_damped_newton_backtracks_and_reports_failure"
+        },
+        {
+          "path": "numerical-methods-atlas/gallery/calculations.json",
+          "json_pointer": "/cases/cubic-root"
         }
       ],
-      "availability": "verified-code-check",
+      "availability": "saved-output",
       "reading": {
         "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/sparse-nonlinear/",
         "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/sparse-nonlinear/"
@@ -1643,8 +1679,8 @@
   "url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/",
   "counts": {
     "test_problems": 58,
-    "saved_test_problems": 49,
-    "code_test_problems": 9,
+    "saved_test_problems": 58,
+    "code_test_problems": 0,
     "groups": {
       "transport": 8,
       "fluid": 16,
@@ -1657,7 +1693,7 @@
     }
   },
   "source_sha256": {
-    "catalog/atlas-test-problems.json": "17635a0a6b940582618c6ace217aaca03f7a731a78f080ad48d1a03ad33c08b2",
+    "catalog/atlas-test-problems.json": "9c78a3220361eabf6fcbbedd07e974f97c313cf67db6a90ade776213562d04b4",
     "numerical-methods-atlas/equation-gallery.json": "e99af38238a50232f92875817c4556ab6c730289db13014efdd41913096c902e",
     "numerical-methods-atlas/cip.json": "3aa33fbffad6b9ad76310e9b713629a1a35b4e30e419db0c531180cf769e6b6f",
     "numerical-methods-atlas/limiters.json": "3242180ba171420220fd349cac93dff552466070f886f3d00a70927939255312",
@@ -1670,6 +1706,7 @@
     "numerical-methods-atlas/assets/lax-entropy.png": "468467f127f5d7e5c151e5714a9545360c7dc3eef1548ae9155396d5f19aa8fa",
     "code/numerical-methods-atlas/2026-11-21/tests/test_numerics.py": "4ad61ac54dfa59d7d61959c5699f290e2386c23bf5b4b930a5d98576feaa54d1",
     "code/numerical-methods-atlas/2026-11-21/tests/test_reference_solutions.py": "3012e675a09cc33b2d4abe3a304622f5fc3d6be02271c695b7921291d901444e",
+    "numerical-methods-atlas/gallery/calculations.json": "877ba403f68c67a337cf45f7158a5404758d03e61657f701a545fbf14f8a65a4",
     "numerical-methods-atlas/assets/double-mach-run.json": "4596fdd6b2b6fcc0da80181bcc48b13a80e605e618bde265fbf5f6abb9c1be0a",
     "numerical-methods-atlas/assets/movies/shock-catalog.json": "5ae9a49aa23b2f5a735247acbbe9a16371404ceec0be2fb951664658af61c5bf",
     "numerical-methods-atlas/assets/shock-gallery.json": "ce84e5fa7f6414e2f1cd4eeacdbd7dba60cfd048dfc3b4bdd72ec463bb592e64",

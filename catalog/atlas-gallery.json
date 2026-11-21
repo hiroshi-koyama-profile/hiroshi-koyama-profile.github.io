@@ -1,0 +1,546 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-11-21",
+  "scope": "One explicitly mapped visual per atlas test problem. Existing shared figures are identified. Derived plots use stored numerical values; computed previews record fixed inputs and numerical checks.",
+  "items": [
+    {
+      "id": "advection-sine",
+      "kind": "cip-profile",
+      "source": "cip.json",
+      "caption": {
+        "ja": "保存済みのCIP・線形補間・厳密な移流波形。",
+        "en": "Stored CIP, linear-interpolation and exact advection profiles."
+      },
+      "profile": "sine"
+    },
+    {
+      "id": "advection-square",
+      "kind": "cip-profile",
+      "source": "cip.json",
+      "caption": {
+        "ja": "保存済みのCIP・線形補間・厳密な移流波形。",
+        "en": "Stored CIP, linear-interpolation and exact advection profiles."
+      },
+      "profile": "square"
+    },
+    {
+      "id": "burgers-shock",
+      "kind": "wave-profile",
+      "source": "equation-gallery.json",
+      "caption": {
+        "ja": "保存した最終時刻の数値波形と参照解。",
+        "en": "Stored final-time numerical profile and reference."
+      },
+      "case": "burgers-shock"
+    },
+    {
+      "id": "burgers-fan",
+      "kind": "wave-profile",
+      "source": "equation-gallery.json",
+      "caption": {
+        "ja": "保存した最終時刻の数値波形と参照解。",
+        "en": "Stored final-time numerical profile and reference."
+      },
+      "case": "burgers-rarefaction"
+    },
+    {
+      "id": "traffic-jam",
+      "kind": "wave-profile",
+      "source": "equation-gallery.json",
+      "caption": {
+        "ja": "保存した最終時刻の数値波形と参照解。",
+        "en": "Stored final-time numerical profile and reference."
+      },
+      "case": "traffic-upstream-jam"
+    },
+    {
+      "id": "traffic-fan",
+      "kind": "wave-profile",
+      "source": "equation-gallery.json",
+      "caption": {
+        "ja": "保存した最終時刻の数値波形と参照解。",
+        "en": "Stored final-time numerical profile and reference."
+      },
+      "case": "traffic-clearing-fan"
+    },
+    {
+      "id": "heat-periodic",
+      "kind": "wave-profile",
+      "source": "equation-gallery.json",
+      "caption": {
+        "ja": "保存した最終時刻の数値波形と参照解。",
+        "en": "Stored final-time numerical profile and reference."
+      },
+      "case": "heat"
+    },
+    {
+      "id": "heat-dirichlet",
+      "kind": "image",
+      "source": "assets/diffusion-boundaries.png",
+      "caption": {
+        "ja": "共有図の左パネル：Dirichlet境界の熱拡散。右パネルは別のPoisson境界問題。",
+        "en": "Shared figure, left: Dirichlet heat decay. Right: separate Poisson boundary problems."
+      }
+    },
+    {
+      "id": "sod",
+      "kind": "wave-profile",
+      "source": "equation-gallery.json",
+      "caption": {
+        "ja": "保存した最終時刻の数値波形と参照解。",
+        "en": "Stored final-time numerical profile and reference."
+      },
+      "case": "sod"
+    },
+    {
+      "id": "lax",
+      "kind": "image",
+      "source": "assets/lax-entropy.png",
+      "caption": {
+        "ja": "共有図の左パネル：Lax衝撃波管。右は別のエントロピー波収束計算。",
+        "en": "Shared figure, left: Lax shock tube. Right: a separate entropy-wave refinement study."
+      }
+    },
+    {
+      "id": "shu-osher",
+      "kind": "reconstruction-profile",
+      "source": "assets/reconstruction/reconstruction.json",
+      "caption": {
+        "ja": "保存したEuler密度波形（1つの手法を代表表示）。",
+        "en": "Stored Euler density profile, showing one representative method."
+      },
+      "problem": "shu-osher"
+    },
+    {
+      "id": "entropy-1d",
+      "kind": "entropy-refinement",
+      "source": "experiments.json",
+      "caption": {
+        "ja": "保存済みの1次元エントロピー波の密度誤差・格子収束。",
+        "en": "Stored density-error refinement for a 1D entropy wave."
+      }
+    },
+    {
+      "id": "moving-contact",
+      "kind": "reconstruction-profile",
+      "source": "assets/reconstruction/reconstruction.json",
+      "caption": {
+        "ja": "保存したEuler密度波形（1つの手法を代表表示）。",
+        "en": "Stored Euler density profile, showing one representative method."
+      },
+      "problem": "moving-contact"
+    },
+    {
+      "id": "strong-shock",
+      "kind": "ppm-profile",
+      "source": "assets/shock-expansion/shock-expansion.json",
+      "caption": {
+        "ja": "完了したPPM計算の保存密度。停止した他の変種とは区別しています。",
+        "en": "Stored density from a completed PPM run, distinct from variants that stopped."
+      },
+      "problem": "strong-shock"
+    },
+    {
+      "id": "double-rarefaction",
+      "kind": "computed-preview",
+      "source": null,
+      "caption": {
+        "ja": "公開コード版を固定条件で実行して作成した計算結果。条件・値・検査結果を添付。",
+        "en": "Calculated from the public code edition with fixed inputs; inputs, values and checks are linked."
+      }
+    },
+    {
+      "id": "dam-break",
+      "kind": "wave-profile",
+      "source": "equation-gallery.json",
+      "caption": {
+        "ja": "保存した最終時刻の数値波形と参照解。",
+        "en": "Stored final-time numerical profile and reference."
+      },
+      "case": "dam-break"
+    },
+    {
+      "id": "isothermal-jump",
+      "kind": "wave-profile",
+      "source": "equation-gallery.json",
+      "caption": {
+        "ja": "保存した最終時刻の数値波形と参照解。",
+        "en": "Stored final-time numerical profile and reference."
+      },
+      "case": "isothermal"
+    },
+    {
+      "id": "double-mach",
+      "kind": "image",
+      "source": "assets/movies/double-mach/frame-080.webp",
+      "caption": {
+        "ja": "保存済み2次元Double Mach反射の最終フレーム。",
+        "en": "Stored final frame of 2D Double Mach reflection."
+      }
+    },
+    {
+      "id": "nasa-wedge",
+      "kind": "image",
+      "source": "assets/comparisons/wedge-m2-mc.png",
+      "caption": {
+        "ja": "同一問題に統合したMach数違いのうち、Mach 2の保存図を代表表示。",
+        "en": "Stored Mach-2 example from the merged wedge Mach variants."
+      }
+    },
+    {
+      "id": "forward-step",
+      "kind": "image",
+      "source": "assets/comparisons/step-m3-mc.png",
+      "caption": {
+        "ja": "保存済みMach 3前向きステップの計算場。",
+        "en": "Stored computed field for the Mach-3 forward-facing step."
+      }
+    },
+    {
+      "id": "entropy-2d",
+      "kind": "image",
+      "source": "assets/comparisons/smooth-refinement.png",
+      "caption": {
+        "ja": "保存済み2次元エントロピー波の格子収束。",
+        "en": "Stored refinement study for the 2D entropy wave."
+      }
+    },
+    {
+      "id": "cylinder-forebody",
+      "kind": "image",
+      "source": "assets/shock-expansion/forebody-48-0-density.png",
+      "caption": {
+        "ja": "保存済み円柱前面の密度比較。有限時刻の結果で、定常収束の認定ではありません。",
+        "en": "Stored finite-time forebody density comparison; not steady-state certification."
+      }
+    },
+    {
+      "id": "odd-even",
+      "kind": "image",
+      "source": "assets/shock-methods/planar-128-0.png",
+      "caption": {
+        "ja": "保存済み定常平面衝撃波のodd–even診断。",
+        "en": "Stored odd–even diagnostic for a stationary planar shock."
+      }
+    },
+    {
+      "id": "isentropic-vortex",
+      "kind": "image",
+      "source": "assets/movies/keep-vortex/frame-080.webp",
+      "caption": {
+        "ja": "保存したKEEP移動渦の最終フレーム。",
+        "en": "Stored final frame of the KEEP moving vortex."
+      }
+    },
+    {
+      "id": "orszag-tang",
+      "kind": "image",
+      "source": "assets/movies/orszag-tang-ct/frame-080.webp",
+      "caption": {
+        "ja": "CT・GLMを統合した1問題のうち、CTの保存フレームを代表表示。",
+        "en": "Stored CT frame representing the merged CT/GLM problem."
+      }
+    },
+    {
+      "id": "brio-wu",
+      "kind": "image",
+      "source": "assets/mhd-tests/brio-wu.png",
+      "caption": {
+        "ja": "保存済みBrio–Wu衝撃波管の比較図。",
+        "en": "Stored Brio–Wu shock-tube comparison."
+      }
+    },
+    {
+      "id": "circular-alfven",
+      "kind": "image",
+      "source": "assets/mhd-tests/alfven.png",
+      "caption": {
+        "ja": "保存済み円偏波Alfvén波の誤差・収束比較。",
+        "en": "Stored circularly polarized Alfvén-wave comparison."
+      }
+    },
+    {
+      "id": "magnetic-loop",
+      "kind": "image",
+      "source": "assets/mhd-tests/field-loop.png",
+      "caption": {
+        "ja": "保存済み磁場ループ移流の計算場。",
+        "en": "Stored computed fields for magnetic-loop advection."
+      }
+    },
+    {
+      "id": "taylor-green",
+      "kind": "image",
+      "source": "assets/field-taylor-green.png",
+      "caption": {
+        "ja": "保存済みTaylor–Green渦の速度と圧力。",
+        "en": "Stored Taylor–Green velocity and pressure fields."
+      }
+    },
+    {
+      "id": "lbm-shear",
+      "kind": "lbm-shear",
+      "source": "assets/solver-foundations.json",
+      "caption": {
+        "ja": "保存済みせん断波振幅と粘性減衰の参照値。",
+        "en": "Stored shear amplitudes and viscous-decay reference."
+      }
+    },
+    {
+      "id": "channel-poiseuille",
+      "kind": "lbm-channel",
+      "source": "assets/solver-foundations.json",
+      "caption": {
+        "ja": "保存済み半格子壁Poiseuille速度分布と参照値。",
+        "en": "Stored half-way-wall Poiseuille velocity profile and reference."
+      }
+    },
+    {
+      "id": "poisson-1d-dirichlet",
+      "kind": "poisson-1d-refinement",
+      "source": "assets/poisson-comparison/comparison.json",
+      "caption": {
+        "ja": "保存済み1次元Dirichlet製造解の誤差と格子数。",
+        "en": "Stored error versus resolution for the 1D Dirichlet manufactured solution."
+      }
+    },
+    {
+      "id": "poisson-1d-neumann",
+      "kind": "computed-preview",
+      "source": null,
+      "caption": {
+        "ja": "公開コード版を固定条件で実行して作成した計算結果。条件・値・検査結果を添付。",
+        "en": "Calculated from the public code edition with fixed inputs; inputs, values and checks are linked."
+      }
+    },
+    {
+      "id": "poisson-1d-mixed",
+      "kind": "computed-preview",
+      "source": null,
+      "caption": {
+        "ja": "公開コード版を固定条件で実行して作成した計算結果。条件・値・検査結果を添付。",
+        "en": "Calculated from the public code edition with fixed inputs; inputs, values and checks are linked."
+      }
+    },
+    {
+      "id": "poisson-1d-robin",
+      "kind": "computed-preview",
+      "source": null,
+      "caption": {
+        "ja": "公開コード版を固定条件で実行して作成した計算結果。条件・値・検査結果を添付。",
+        "en": "Calculated from the public code edition with fixed inputs; inputs, values and checks are linked."
+      }
+    },
+    {
+      "id": "poisson-2d-broad",
+      "kind": "image",
+      "source": "assets/poisson-comparison/manufactured-63-fields.png",
+      "caption": {
+        "ja": "保存済みの広帯域ソースと離散Poisson解。",
+        "en": "Stored broad smooth forcing and discrete Poisson solution."
+      }
+    },
+    {
+      "id": "poisson-2d-localized",
+      "kind": "image",
+      "source": "assets/poisson-comparison/localized-63-fields.png",
+      "caption": {
+        "ja": "保存済み局在ソースと離散Poisson解。",
+        "en": "Stored localized forcing and discrete Poisson solution."
+      }
+    },
+    {
+      "id": "poisson-2d-sine",
+      "kind": "image",
+      "source": "assets/field-fem-poisson.png",
+      "caption": {
+        "ja": "同じ正弦製造解を解く、三角形有限要素の保存解と誤差。",
+        "en": "Stored triangular-FEM solution and error for the same sine manufactured problem."
+      }
+    },
+    {
+      "id": "poisson-2d-uniform",
+      "kind": "multigrid-residual",
+      "source": "assets/validation.json",
+      "caption": {
+        "ja": "保存済み一様ソースPoisson問題のマルチグリッド残差。",
+        "en": "Stored multigrid residual history for uniform-source Poisson."
+      }
+    },
+    {
+      "id": "poisson-2d-random",
+      "kind": "computed-preview",
+      "source": null,
+      "caption": {
+        "ja": "公開コード版を固定条件で実行して作成した計算結果。条件・値・検査結果を添付。",
+        "en": "Calculated from the public code edition with fixed inputs; inputs, values and checks are linked."
+      }
+    },
+    {
+      "id": "poisson-3d-periodic",
+      "kind": "image",
+      "source": "assets/field-poisson-3d.png",
+      "caption": {
+        "ja": "保存済み3次元周期Poisson解の3断面。3次元流体計算ではありません。",
+        "en": "Three stored slices of a 3D periodic Poisson solution, not 3D fluid evolution."
+      }
+    },
+    {
+      "id": "poisson-1d-periodic",
+      "kind": "hyperbolic-refinement",
+      "source": "assets/solver-foundations.json",
+      "caption": {
+        "ja": "保存済み擬似時間定常解の誤差・格子収束。",
+        "en": "Stored error refinement of the pseudo-time steady solution."
+      }
+    },
+    {
+      "id": "bratu",
+      "kind": "computed-preview",
+      "source": null,
+      "caption": {
+        "ja": "公開コード版を固定条件で実行して作成した計算結果。条件・値・検査結果を添付。",
+        "en": "Calculated from the public code edition with fixed inputs; inputs, values and checks are linked."
+      }
+    },
+    {
+      "id": "sparse-advection-diffusion",
+      "kind": "krylov-residual",
+      "source": "assets/solver-foundations.json",
+      "caption": {
+        "ja": "保存済み非対称離散系の真の残差履歴。",
+        "en": "Stored true-residual histories of the nonsymmetric discrete system."
+      }
+    },
+    {
+      "id": "isolated-particles",
+      "kind": "tree-force",
+      "source": "assets/particle-gravity.json",
+      "caption": {
+        "ja": "保存済みツリー力と直接和の相対誤差。開き角・展開次数を比較。",
+        "en": "Stored relative tree/direct-sum force errors versus opening angle and expansion order."
+      }
+    },
+    {
+      "id": "periodic-particles",
+      "kind": "image",
+      "source": "assets/particle-gravity.png",
+      "caption": {
+        "ja": "共有図の周期PM部分。孤立ツリーの比較は別問題です。",
+        "en": "Periodic-PM part of a shared figure; isolated-tree comparisons are a separate problem."
+      }
+    },
+    {
+      "id": "isolated-convolution",
+      "kind": "image",
+      "source": "assets/gravity-boundaries.png",
+      "caption": {
+        "ja": "境界核の共有図。このカードは「孤立畳み込み」の問題を案内します。",
+        "en": "Shared boundary-kernel figure; this card links specifically to isolated-convolution."
+      }
+    },
+    {
+      "id": "uniform-slab",
+      "kind": "image",
+      "source": "assets/gravity-boundaries.png",
+      "caption": {
+        "ja": "境界核の共有図。このカードは「一様平面スラブ」の問題を案内します。",
+        "en": "Shared boundary-kernel figure; this card links specifically to uniform-slab."
+      }
+    },
+    {
+      "id": "sinusoidal-sheet",
+      "kind": "image",
+      "source": "assets/gravity-boundaries.png",
+      "caption": {
+        "ja": "境界核の共有図。このカードは「正弦薄層」の問題を案内します。",
+        "en": "Shared boundary-kernel figure; this card links specifically to sinusoidal-sheet."
+      }
+    },
+    {
+      "id": "harmonic-oscillator",
+      "kind": "hamiltonian-orbit",
+      "source": "hamiltonian.json",
+      "caption": {
+        "ja": "保存済みのt≤10の正準位相軌道。手法違いは同一問題の比較。",
+        "en": "Stored canonical phase orbits for t≤10; methods remain variants of one problem."
+      },
+      "system": "harmonic"
+    },
+    {
+      "id": "quartic-oscillator",
+      "kind": "hamiltonian-orbit",
+      "source": "hamiltonian.json",
+      "caption": {
+        "ja": "保存済みのt≤10の正準位相軌道。手法違いは同一問題の比較。",
+        "en": "Stored canonical phase orbits for t≤10; methods remain variants of one problem."
+      },
+      "system": "quartic"
+    },
+    {
+      "id": "nonlinear-exp-ode",
+      "kind": "computed-preview",
+      "source": null,
+      "caption": {
+        "ja": "公開コード版を固定条件で実行して作成した計算結果。条件・値・検査結果を添付。",
+        "en": "Calculated from the public code edition with fixed inputs; inputs, values and checks are linked."
+      }
+    },
+    {
+      "id": "stiff-cosine",
+      "kind": "stiff-refinement",
+      "source": "assets/solver-foundations.json",
+      "caption": {
+        "ja": "保存済みの硬い余弦追従ODEの固定刻み誤差。",
+        "en": "Stored fixed-step errors for the stiff cosine-tracking ODE."
+      }
+    },
+    {
+      "id": "nonlinear-rational-ode",
+      "kind": "computed-preview",
+      "source": null,
+      "caption": {
+        "ja": "公開コード版を固定条件で実行して作成した計算結果。条件・値・検査結果を添付。",
+        "en": "Calculated from the public code edition with fixed inputs; inputs, values and checks are linked."
+      }
+    },
+    {
+      "id": "smooth-function-projection",
+      "kind": "basis-approximation",
+      "source": "basis.json",
+      "caption": {
+        "ja": "保存済み8次多項式の射影・補間と元の関数。",
+        "en": "Stored degree-8 projection/interpolation and the original function."
+      },
+      "profile": "smooth"
+    },
+    {
+      "id": "jump-function-projection",
+      "kind": "basis-approximation",
+      "source": "basis.json",
+      "caption": {
+        "ja": "保存済み8次多項式の射影・補間と元の関数。",
+        "en": "Stored degree-8 projection/interpolation and the original function."
+      },
+      "profile": "jump"
+    },
+    {
+      "id": "cubic-root",
+      "kind": "computed-preview",
+      "source": null,
+      "caption": {
+        "ja": "公開コード版を固定条件で実行して作成した計算結果。条件・値・検査結果を添付。",
+        "en": "Calculated from the public code edition with fixed inputs; inputs, values and checks are linked."
+      }
+    },
+    {
+      "id": "nonlinear-rational-decay",
+      "kind": "rk-refinement",
+      "source": "runge-kutta.json",
+      "caption": {
+        "ja": "保存済み有理減衰ODEの時間刻み収束（代表3手法）。",
+        "en": "Stored time-refinement errors for rational decay, showing three methods."
+      }
+    }
+  ]
+}

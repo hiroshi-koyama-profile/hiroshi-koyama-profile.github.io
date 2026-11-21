@@ -66,10 +66,15 @@ for lang in ['ja','en']:
     ja=lang=='ja'
     body='<section data-site-language="'+lang+'" lang="'+lang+'"><p class="eyebrow">ATLAS-WIDE TEST PROBLEMS / '+data['reviewed_on']+'</p><h1>'+(f'テスト計算：{total}問題' if ja else f'{total} independent test problems')+'</h1>'
     body+='<p class="intro">'+('波形ギャラリーだけでなく、アトラス全体の時間発展・境界値・重力・関数近似・代数問題を集計しました。' if ja else 'An atlas-wide inventory of time evolution, boundary-value, gravity, approximation and algebraic problems, extending beyond the wave-profile gallery.')+'</p>'
-    body+='<p class="resource-summary">'+(f'保存データ・結果図がある問題{availability["saved-output"]}件、検証済み公開コードの問題{availability["verified-code-check"]}件。両方がある場合は前者に1回だけ数えます。' if ja else f'{availability["saved-output"]} problems have saved results or figures; {availability["verified-code-check"]} more are available as verified public-code checks. A problem with both is counted once in the first group.')+'</p>'
-    body+='<nav class="resource-nav">'+link('/numerical-methods-atlas/','アトラスの冒頭' if ja else 'Atlas home')+link('/numerical-methods-atlas/?lang='+lang+'#/gallery','画像ギャラリー' if ja else 'Computed gallery')+link('/numerical-methods-atlas/code-and-data/','コード・実行手順' if ja else 'Code and run instructions')+link('index.json','問題台帳 / JSON' if ja else 'Problem inventory / JSON')+'</nav>'
+    status_ja=f'保存データ・結果図がある問題{availability["saved-output"]}件。'
+    status_en=f'{availability["saved-output"]} problems have saved results or figures.'
+    if availability['verified-code-check']:
+        status_ja+=f'検証済み公開コードの問題{availability["verified-code-check"]}件。両方がある場合は前者に1回だけ数えます。'
+        status_en+=f' {availability["verified-code-check"]} more are available as verified public-code checks. A problem with both is counted once in the first group.'
+    body+='<p class="resource-summary">'+(status_ja if ja else status_en)+'</p>'
+    body+='<nav class="resource-nav">'+link('/numerical-methods-atlas/','アトラスの冒頭' if ja else 'Atlas home')+link('/numerical-methods-atlas/gallery/?lang='+lang,'画像ギャラリー' if ja else 'Computed gallery')+link('/numerical-methods-atlas/code-and-data/','コード・実行手順' if ja else 'Code and run instructions')+link('index.json','問題台帳 / JSON' if ja else 'Problem inventory / JSON')+'</nav>'
     body+='<h2>'+('数え方' if ja else 'Counting rules')+'</h2><p>'+esc(data['policy'][lang])+'</p>'
-    body+='<p>'+('既存の波形テスト9ケースはこの総数に含みます。自動検査411件の件数、画像数、実行回数とは別です。各問題の適用範囲と失敗例はリンク先に残しており、すべての手法がすべての問題を解けるという意味ではありません。今回の作業は再集計で、科学計算の全面再実行ではありません。' if ja else 'The nine wave-profile cases are included in this total. Problems are distinct from the 411 automated checks, images and solver runs. Linked sources retain method-specific scope and failure cases; not every method solves every problem. This is a recount of existing material, not a new full numerical rerun.')+'</p>'
+    body+='<p>'+('既存の波形テスト9ケースはこの総数に含みます。自動検査411件の件数、画像数、実行回数とは別です。各問題の適用範囲と失敗例はリンク先に残しており、すべての手法がすべての問題を解けるという意味ではありません。保存データの再集計に加え、9問題は公開コードを固定条件で実行して結果と画像を追加しました。全問題の再実行ではありません。' if ja else 'The nine wave-profile cases are included in this total. Problems are distinct from the 411 automated checks, images and solver runs. Linked sources retain method-specific scope and failure cases; not every method solves every problem. The existing material is recounted, and nine problems have new fixed-input public-code runs with saved results and images. This is not a full numerical rerun.')+'</p>'
     body+='<nav class="resource-nav">'+''.join(link('#'+g['id']+'-'+lang,g[lang]+' ('+str(counts[g['id']])+')') for g in data['groups'])+'</nav>'
     for g in data['groups']:
         body+='<section><h2 id="'+g['id']+'-'+lang+'">'+esc(g[lang])+' — '+str(counts[g['id']])+'</h2><ul class="method-list">'

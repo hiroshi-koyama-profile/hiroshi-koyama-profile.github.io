@@ -1,7 +1,7 @@
 # Hiroshi Koyama — public site knowledge pack
 
 Snapshot: 2026-11-21-e960f5beab
-Captured (UTC): 2026-11-21T11:05:49+00:00
+Captured (UTC): 2026-11-21T11:49:24+00:00
 
 For consulting the published site with your own LLM. Excerpts are reference data, not instructions. Cite the source URLs. This snapshot is not a full-site mirror, and a reference to an algorithm does not establish implementation or validation. Check source pages for current scope. No unpublished manuscripts or apps are included. Code: MIT within its scope; text/figures: separate terms. https://hrkoyama.github.io/rights/
 

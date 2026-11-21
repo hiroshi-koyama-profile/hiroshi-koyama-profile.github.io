@@ -26,7 +26,7 @@
       {
         "id": "pictures",
         "title": "絵から探す",
-        "description": "衝撃波・渦・場の画像から、計算条件と解法をたどれます。",
+        "description": "全58のテスト計算を一覧。波形・衝撃波・渦・場・誤差の画像から解説へ。",
         "action": "テスト計算のギャラリーへ →"
       }
     ],
@@ -76,7 +76,7 @@
       {
         "id": "pictures",
         "title": "Browse by picture",
-        "description": "Start with shocks, vortices and fields, then inspect setups and solvers.",
+        "description": "See all 58 test problems. Follow images of profiles, shocks, vortices, fields and errors to their readings.",
         "action": "Open the computed gallery →"
       }
     ],
