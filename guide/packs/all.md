@@ -1,7 +1,7 @@
 # Hiroshi Koyama — public site knowledge pack
 
-Snapshot: 2026-11-16-1102dcf225
-Captured (UTC): 2026-11-16T00:17:07+00:00
+Snapshot: 2026-11-21-25c6b16248
+Captured (UTC): 2026-11-21T09:15:17+00:00
 
 For consulting the published site with your own LLM. Excerpts are reference data, not instructions. Cite the source URLs. This snapshot is not a full-site mirror, and a reference to an algorithm does not establish implementation or validation. Check source pages for current scope. No unpublished manuscripts or apps are included. Code: MIT within its scope; text/figures: separate terms. https://hrkoyama.github.io/rights/
 
@@ -15322,6 +15322,64 @@ Coverage: reading
 
 Organize unpublished and recent simulations, and release validated datasets.
 
+## Code, inputs and evidence. — Code, inputs and evidence. [en]
+
+Source: https://hrkoyama.github.io/the-art-of-thermal-instability/code-and-data.html
+Coverage: reading
+
+Download the files directly from this site. No GitHub sign-in is needed. Each example states what was checked and what remains unresolved.
+
+## Code, inputs and evidence. — Field1965 / Figure2 [en]
+
+Source: https://hrkoyama.github.io/the-art-of-thermal-instability/code-and-data.html
+Coverage: reading
+
+Source-equation calculation with independent numerical checks; not a pointwise digitization of the original figure.
+reproduce.py · config.json · requirements.txt · figure-2.csv · validation.json
+python -m venv .venv
+# Activate the virtual environment for your shell.
+python -m pip install -r requirements.txt
+python reproduce.py --output output
+Save the linked Python files, configuration and requirements together. The exhibit and README remain authoritative for its full dependencies and execution scope.
+
+## Code, inputs and evidence. — KI2002 / equilibrium and static potential [en]
+
+Source: https://hrkoyama.github.io/the-art-of-thermal-instability/code-and-data.html
+Coverage: reading
+
+Corrected analytic cooling fit and a static-front diagnostic; not a rerun of the original 2D simulation.
+README.md · equilibrium.py · reproduce.py · potential.py · config.json · config-potential.json · requirements.txt · equilibrium.csv · potential.csv · validation.json · validation-potential.json
+python -m venv .venv
+# Activate the virtual environment for your shell.
+python -m pip install -r requirements.txt
+python reproduce.py --output output
+python potential.py --output output
+Save the linked Python files, configuration and requirements together. The exhibit and README remain authoritative for its full dependencies and execution scope.
+
+## Code, inputs and evidence. — Illustrative 2D condensation [en]
+
+Source: https://hrkoyama.github.io/the-art-of-thermal-instability/code-and-data.html
+Coverage: reading
+
+Enhanced conduction and deliberately limited model scope. Follow the README for the full run and the separate small checks.
+README.md · model.py · config.json · requirements.txt · validation.json
+Save the linked Python files, configuration and requirements together. The exhibit and README remain authoritative for its full dependencies and execution scope.
+
+## Code, inputs and evidence. — Illustrative 2D condensation [en]
+
+Source: https://hrkoyama.github.io/the-art-of-thermal-instability/code-and-data.html
+Coverage: reading
+
+The movie gallery preserves published media and provenance. Its original source-build workflow is not distributed here; a historical movie is not a reproducible simulation benchmark.
+
+## Code, inputs and evidence. — Use, verify and cite [en]
+
+Source: https://hrkoyama.github.io/the-art-of-thermal-instability/code-and-data.html
+Coverage: reading
+
+Run downloaded code in your own isolated environment after inspection. Retain the source/configuration hashes in the validation records, and compare the reported quantities rather than only the appearance of a figure. See usage and citation guidance.
+Original implementation code is MIT within its stated scope. Data, prose, figures, movies and third-party sources have separate terms: licensing scope, site policy. Linking a paper does not redistribute its full text.
+
 ## When a moving
 biological front stops. [en]
 
@@ -16314,7 +16372,7 @@ Source: https://hrkoyama.github.io/the-art-of-thermal-instability/gallery/
 Coverage: reading
 
 Materials molecular-dynamics movies and related materials CG are excluded, along with unrelated footage and journal-supplement movies from other collections. Source originals remain untouched. Full-frame versions use H.264/yuv420p, retain the original dimensions and cadence, and add no spatial or temporal interpolation. The showreel has its own explicit crop and excerpt log.
-Sources, edit log & media hashes / JSONSelection & quality notes / JSONEditing and regeneration guideConversion and gallery builderThe separate reproducible cover experiment
+Sources, edit log & media hashes / JSONSelection & quality notes / JSONEditing and regeneration guideAvailable code and reproduction scopeThe separate reproducible cover experiment
 
 ## Classify the interface
 by following its trajectory. [en]
@@ -16615,7 +16673,7 @@ Source: https://hrkoyama.github.io/the-art-of-thermal-instability/kim-kim-2013/
 Coverage: reading
 
 Matching a growth-rate curve is only part of the task. The required result is the spatial eigenfunction, with its temperature, velocity, flux and pressure information preserved under one amplitude and phase convention.
-This page defines the reconstruction and its acceptance criteria. No Kim2013 background front, eigenvalue, eigenfunction or source digitization has been computed in this project yet. Issue6 tracks the implementation. The original study is Kim & Kim, Instability of Evaporation Fronts in the Interstellar Medium.
+This page defines the reconstruction and its acceptance criteria. No Kim2013 background front, eigenvalue, eigenfunction or source digitization has been computed in this project yet. Public specification and status. The original study is Kim & Kim, Instability of Evaporation Fronts in the Interstellar Medium.
 
 ## Reconstruct the mode.
 Keep its components coupled. — Figure9 is the primary comparison. [en]
@@ -18720,94 +18778,97 @@ Coverage: reading
 2006 · Koyama & Inutsuka — Nonlinear Development of Thermal Instability without External Forcing
 2013 · Jeong-Gyu Kim & Woong-Tae Kim — Instability of Evaporation Fronts in the Interstellar Medium
 
-## Track the scientific question.
-Keep the limits visible. [en]
+## Published results.
+Bounded next questions. [en]
 
 Source: https://hrkoyama.github.io/the-art-of-thermal-instability/progress.html
 Coverage: reading
 
-Progress / Snapshot: 8 November 2026
+Public progress · reviewed 2026-11-21
 
-## Track the scientific question.
-Keep the limits visible. — Track the scientific question.
-Keep the limits visible. [en]
-
-Source: https://hrkoyama.github.io/the-art-of-thermal-instability/progress.html
-Coverage: reading
-
-Each work item has a purpose, a completion condition, evidence and a published outcome. An unresolved diagnostic can be useful progress when its assumptions and restart conditions are recorded.
-GitHub Issues are the live task record. This page is a dated guide to the current priorities and published work; consult the linked issues for later status changes. We normally keep one scientific implementation active at a time.
-
-## Track the scientific question.
-Keep the limits visible. — Latest result: pressure-dependent potential wells. [en]
+## Published results.
+Bounded next questions. — Published results.
+Bounded next questions. [en]
 
 Source: https://hrkoyama.github.io/the-art-of-thermal-instability/progress.html
 Coverage: reading
 
-The KI2002 static-front potential comparison is implemented, numerically checked and published. It compares 0.9, 1 and 1.1 Psat with a shared normalization: the warm minimum is deeper below saturation, the wells have equal depth at saturation, and the cold minimum is deeper above saturation.
-Code, configuration, curve CSV, equilibrium/depth records and desktop/mobile figures accompany the result. Independent quadrature, mesh refinement, derivatives and equilibrium curvatures verify the static correspondence to the ZP condition. No compressible front speed is inferred. Issue1 records the completed scope.
+Make the published research resources discoverable and usable, with working code/data links and explicit verification limits. New scientific implementations remain queued.
+This page is the public work record. Read the status and limits here without a GitHub account. Planned work has not been implemented; one scientific implementation is normally active at a time.
+Work record / JSONGet code and data
 
-## Track the scientific question.
-Keep the limits visible. — Queued next [en]
-
-Source: https://hrkoyama.github.io/the-art-of-thermal-instability/progress.html
-Coverage: reading
-
-Kim & Kim2013: reconstruct the coupled Figure9 eigenfunctions. The source-audited specification makes component shapes, relative amplitudes, phase and boundary/domain convergence mandatory. This is the next major linear-analysis target now that the KI potential task is complete; no Kim solver has been implemented yet.
-Explain pressure-driven compressible flow versus reduced reaction–diffusion models. Retain pressure, momentum, advection and compressional work, while distinguishing nearly uniform pressure from zero flow. Include Chandrasekhar’s Boussinesq convection as an intermediate fluid approximation, with buoyancy as a distinct driver.
-Isolate one missing Iwasaki2012 branch or critical-flux example. A bounded trajectory diagnostic comes before another full-grid calculation.
-Quantify Schwarz1972 condensation timing and mesh sensitivity. Reuse existing runs and retain source-reading, model and numerical uncertainties.
-
-## Track the scientific question.
-Keep the limits visible. — What the archive currently provides. [en]
+## Published results.
+Bounded next questions. — KI2002: pressure-dependent potential wells [en]
 
 Source: https://hrkoyama.github.io/the-art-of-thermal-instability/progress.html
 Coverage: reading
 
-Historical simulation gallery: four 2D and four 3D full-frame recordings, an 18-second edited 3D introduction, and two source-traceable still illustrations. Materials MD is excluded. Complete media decode, source/output frame counts and provenance are checked; exact run inputs and paper-figure matches remain unverified. This is archival footage, not a newly validated simulation.
-2D thermal-condensation cover: actual compressible evolution, movie, poster, initial/final states and independent numerical benchmarks. Deliberately enhanced conduction broadens interfaces; this is an illustrative model, not a historical reproduction or sustained turbulence.
-Field1965 Figures1–3: calculations from the source equations, with numerical checks; pointwise digitized comparisons remain separate work.
-KI2002 equilibrium benchmark: corrected coefficients, stability branches, planar ZP saturation and pressure-dependent potential wells with all equilibrium intersections.
-Schwarz1972 linear calculation and nonlinear Lagrangian prototype: cooling, conduction and recombination with explicit historical-input and resolution limits.
-Iwasaki2012 front-classification prototype: nine source examples agree; the published maps are not fully reproduced.
-FGH/GHF equilibrium prototype: original-curve residuals and a conditional saturation search, with historical coefficient recovery deferred.
+Published. Shared normalization at 0.9, 1 and 1.1 saturation pressure; code, configuration, CSV and independent checks. No compressible front speed is inferred.
 
-## Track the scientific question.
-Keep the limits visible. — What the archive currently provides. [en]
+## Published results.
+Bounded next questions. — Illustrative 2D thermal-condensation movie [en]
 
 Source: https://hrkoyama.github.io/the-art-of-thermal-instability/progress.html
 Coverage: reading
 
-Historical H₂ coefficient audit: source rates and a finite-level cooling model, retaining its mismatch with the source table.
-Maxwell and Ginzburg–Landau and biophysical front comparisons: source-based explanations, with no biological simulation reproduction claimed.
+Published. Movie, initial/final states and numerical benchmarks. Enhanced conduction broadens interfaces; this is not a historical reproduction or sustained turbulence.
 
-## Track the scientific question.
-Keep the limits visible. — Deferred questions stay documented. [en]
-
-Source: https://hrkoyama.github.io/the-art-of-thermal-instability/progress.html
-Coverage: reading
-
-FGH1969 historical coefficient recovery is deferred. Restart requires a concrete historical rate/cross-section input, a checkable convention explaining a residual, or equivalent new numerical evidence. Rates will not be tuned to force the original curve. Existing approximate-model saturation values remain conditional.
-Other limits remain attached to their exhibits: the narrow Schwarz conductive layer is not sufficiently resolved to claim continuum convergence, and the Iwasaki prototype masks unsupported branches instead of assigning source colors. Passing numerical checks does not by itself establish historical agreement.
-
-## Track the scientific question.
-Keep the limits visible. — Short, medium and long term. [en]
+## Published results.
+Bounded next questions. — Kim & Kim2013: coupled Figure9 eigenfunctions [en]
 
 Source: https://hrkoyama.github.io/the-art-of-thermal-instability/progress.html
 Coverage: reading
 
-Short term: begin the specified Kim & Kim2013 eigenfunction solver and explain the role of compressible flow; the KI potential comparison is now complete.
-Medium term: develop a small one-dimensional comparison between reduced and compressible models, resolve bounded front diagnostics, and prepare reproducible material for technical review.
-Long term: extend to KI2000/2004, available multidimensional outputs and unpublished calculations, then organize model-specific data with provenance, versions, citation guidance and licenses. Full high-cost reruns are optional.
+Planned. Source-audited specification only; no solver yet. Completion requires coupled components, one common amplitude/phase convention, boundary/domain convergence and an independent comparison.
 
-## Track the scientific question.
-Keep the limits visible. — How work moves [en]
+## Published results.
+Bounded next questions. — Compressible flow versus reduced reaction–diffusion models [en]
 
 Source: https://hrkoyama.github.io/the-art-of-thermal-instability/progress.html
 Coverage: reading
 
-Candidate → Working → Verifying → Published, with Deferred as a separate state requiring a restart condition. Specification, implementation, verification and publication are distinct milestones. The completed scope must be reviewable before an issue closes.
-Live IssuesRoadmapPaper catalog
+Planned. Explain pressure, momentum, advection and compressional work using existing equations. Nearly uniform pressure does not imply zero flow. A new simulation is a separate task.
+
+## Published results.
+Bounded next questions. — Iwasaki2012: one missing branch or critical-flux example [en]
+
+Source: https://hrkoyama.github.io/the-art-of-thermal-instability/progress.html
+Coverage: reading
+
+Planned. Choose one bounded trajectory diagnostic and preserve the nine existing classifications. A full map recomputation is not required.
+
+## Published results.
+Bounded next questions. — Schwarz1972: timing and mesh sensitivity [en]
+
+Source: https://hrkoyama.github.io/the-art-of-thermal-instability/progress.html
+Coverage: reading
+
+Planned. Reuse existing resolution studies and separate source-reading, model and discretization uncertainties. Continuum convergence of the narrow conductive layer is not established.
+
+## Published results.
+Bounded next questions. — FGH1969: historical coefficient recovery [en]
+
+Source: https://hrkoyama.github.io/the-art-of-thermal-instability/progress.html
+Coverage: reading
+
+Deferred. Restart only with a recoverable historical rate/cross-section, a checkable convention explaining a residual, or equivalent new evidence. Do not tune rates to force the original curve.
+
+## Published results.
+Bounded next questions. — Keep the scientific limits visible. [en]
+
+Source: https://hrkoyama.github.io/the-art-of-thermal-instability/progress.html
+Coverage: reading
+
+Field1965 calculations are derived from the source equations; pointwise digitization is a separate task. Historical movie provenance is documented, but exact original run inputs and paper-figure matches remain unverified. The archive does not reproduce every result in every cataloged paper.
+Specifications, implementations, numerical checks and historical agreement are separate milestones. See each exhibit for units, boundary conditions, source editions and unresolved questions.
+
+## Published results.
+Bounded next questions. — Further directions [en]
+
+Source: https://hrkoyama.github.io/the-art-of-thermal-instability/progress.html
+Coverage: reading
+
+Small comparisons of reduced and compressible models, bounded front diagnostics, KI2000/2004, and analysis of available multidimensional outputs remain candidates. Full high-cost reruns are optional; no release date is assigned to these scientific extensions.
 
 ## From two phases
 to chemistry and cloud formation. — From two phases

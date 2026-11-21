@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "metadata_updated_on": "2026-11-21",
+  "citation_guidance": "Cite the specific page, access date, code version/configuration and original method papers as applicable. Catalog metadata is not a license or evidence that every underlying source was fully reviewed.",
+  "rights": "https://hrkoyama.github.io/rights/",
+  "resources": [
+    {"id": "numerical-methods-atlas", "title": "An Atlas of Numerical Methods", "creator": "Hiroshi Koyama", "type": "educational software and research guide", "url": "https://hrkoyama.github.io/numerical-methods-atlas/"},
+    {"id": "thermal-instability", "title": "The Art of Thermal Instability", "creator": "Hiroshi Koyama", "type": "research archive", "url": "https://hrkoyama.github.io/the-art-of-thermal-instability/", "public_progress": "https://hrkoyama.github.io/the-art-of-thermal-instability/progress.html"},
+    {"id": "astrophysics", "title": "Theoretical Astrophysics, Step by Step / 理論天文学の道具箱", "creator": "Hiroshi Koyama / 小山 洋", "type": "bilingual learning resources", "url": "https://hrkoyama.github.io/astronomy-step-by-step/ja/", "english_url": "https://hrkoyama.github.io/astronomy-step-by-step/en/"},
+    {"id": "dissertation", "title": "Physical Processes in the Interstellar Medium and the Formation of Molecular Clouds", "creator": "Hiroshi Koyama", "type": "doctoral dissertation", "institution": "The University of Tokyo", "degree_awarded": "2001-03-29", "cover_submission_month": "2000-12", "url": "https://hrkoyama.github.io/dissertation/"},
+    {"id": "gordon-bell", "title": "Gordon Bell Research Archive", "editor": "Hiroshi Koyama", "type": "curated research archive", "url": "https://hrkoyama.github.io/gordon-bell/", "data_url": "https://hrkoyama.github.io/gordon-bell/data.json"},
+    {"id": "college-notes", "title": "College Notes / 大学ノート", "creator": "Hiroshi Koyama / 小山 洋", "type": "handwritten learning archive", "url": "https://hrkoyama.github.io/notebooks/", "note": "Lecture and third-party material retains its own provenance and terms."},
+    {"id": "computing-policy", "title": "Computing Policy Archive / 計算科学政策の記録", "editor": "Hiroshi Koyama", "type": "public-source policy archive", "url": "https://hrkoyama.github.io/hpci-policy/"},
+    {"id": "academic-roots", "title": "Academic Roots", "creator": "Hiroshi Koyama", "type": "evidence-linked academic genealogy and browser-local tool", "url": "https://hrkoyama.github.io/academic-roots/"}
+  ]
+}

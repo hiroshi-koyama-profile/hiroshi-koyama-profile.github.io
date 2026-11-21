@@ -4,19 +4,373 @@
     <loc>https://hrkoyama.github.io/</loc>
   </url>
   <url>
-    <loc>https://hrkoyama.github.io/dissertation/</loc>
-  </url>
-  <url>
     <loc>https://hrkoyama.github.io/academic-roots/</loc>
   </url>
   <url>
     <loc>https://hrkoyama.github.io/academic-roots/rights.html</loc>
   </url>
   <url>
-    <loc>https://hrkoyama.github.io/rights/</loc>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/about/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/alpha-disk/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/ambipolar-diffusion/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/angular-momentum/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/bondi/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/bonnor-ebert/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/ellipsoids/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/fokker-planck/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/goldreich-julian/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/gravothermal/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/hayashi/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/isothermal-collapse/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/isothermal-cylinder/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/jeans/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/kelvin-helmholtz/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/kerr/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/lane-emden/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/lin-mestel-shu/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/mri/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/parker-wind/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/press-schechter/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/rayleigh-taylor/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/relaxation/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/schwarzschild/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/sedov/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/shock-acceleration/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/stromgren/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/sunyaev-zeldovich/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/synchrotron/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/tensor-virial/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/three-body-chemistry/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/tomimatsu-sato/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/toomre-q/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/two-temperature/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/viscous-disk/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/zeldovich/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/appendix/numbers/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/books/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/chapter/atom/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/chapter/chandra/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/chapter/distance/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/chapter/eddington/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/chapter/elements/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/chapter/expansion/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/chapter/matter/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/chapter/planck/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/chapter/relativity/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/chapter/scattering/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/chapter/structure/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/chapter/sun/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/chapter/thermal/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/chapter/tools/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/chapter/virial/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/chapter/width/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/chapters/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/solutions/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/about/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/alpha-disk/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/ambipolar-diffusion/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/angular-momentum/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/bondi/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/bonnor-ebert/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/ellipsoids/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/fokker-planck/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/goldreich-julian/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/gravothermal/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/hayashi/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/isothermal-collapse/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/isothermal-cylinder/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/jeans/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/kelvin-helmholtz/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/kerr/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/lane-emden/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/lin-mestel-shu/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/mri/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/parker-wind/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/press-schechter/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/rayleigh-taylor/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/relaxation/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/schwarzschild/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/sedov/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/shock-acceleration/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/stromgren/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/sunyaev-zeldovich/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/synchrotron/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/tensor-virial/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/three-body-chemistry/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/tomimatsu-sato/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/toomre-q/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/two-temperature/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/viscous-disk/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/zeldovich/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/appendix/numbers/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/books/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/atom/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/chandra/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/distance/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/eddington/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/elements/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/expansion/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/matter/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/planck/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/relativity/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/scattering/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/structure/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/sun/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/thermal/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/tools/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/virial/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/width/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/chapters/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/solutions/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/dissertation/</loc>
   </url>
   <url>
     <loc>https://hrkoyama.github.io/gordon-bell/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/guide/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/hpci-policy/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/hpci-policy/history.html</loc>
   </url>
   <url>
     <loc>https://hrkoyama.github.io/notebooks/</loc>
@@ -31,22 +385,19 @@
     <loc>https://hrkoyama.github.io/notebooks/quantum-a-sample.html</loc>
   </url>
   <url>
-    <loc>https://hrkoyama.github.io/hpci-policy/</loc>
+    <loc>https://hrkoyama.github.io/numerical-methods-atlas/</loc>
   </url>
   <url>
-    <loc>https://hrkoyama.github.io/hpci-policy/history.html</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/guide/</loc>
+    <loc>https://hrkoyama.github.io/numerical-methods-atlas/en/read/</loc>
   </url>
   <url>
     <loc>https://hrkoyama.github.io/numerical-methods-atlas/en/read/accuracy-stability/</loc>
   </url>
   <url>
-    <loc>https://hrkoyama.github.io/numerical-methods-atlas/en/read/advanced/</loc>
+    <loc>https://hrkoyama.github.io/numerical-methods-atlas/en/read/advanced-limiters/</loc>
   </url>
   <url>
-    <loc>https://hrkoyama.github.io/numerical-methods-atlas/en/read/advanced-limiters/</loc>
+    <loc>https://hrkoyama.github.io/numerical-methods-atlas/en/read/advanced/</loc>
   </url>
   <url>
     <loc>https://hrkoyama.github.io/numerical-methods-atlas/en/read/ale/</loc>
@@ -104,9 +455,6 @@
   </url>
   <url>
     <loc>https://hrkoyama.github.io/numerical-methods-atlas/en/read/incompressible/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/numerical-methods-atlas/en/read/</loc>
   </url>
   <url>
     <loc>https://hrkoyama.github.io/numerical-methods-atlas/en/read/keep/</loc>
@@ -184,16 +532,16 @@
     <loc>https://hrkoyama.github.io/numerical-methods-atlas/en/read/time-integration/</loc>
   </url>
   <url>
-    <loc>https://hrkoyama.github.io/numerical-methods-atlas/</loc>
+    <loc>https://hrkoyama.github.io/numerical-methods-atlas/ja/read/</loc>
   </url>
   <url>
     <loc>https://hrkoyama.github.io/numerical-methods-atlas/ja/read/accuracy-stability/</loc>
   </url>
   <url>
-    <loc>https://hrkoyama.github.io/numerical-methods-atlas/ja/read/advanced/</loc>
+    <loc>https://hrkoyama.github.io/numerical-methods-atlas/ja/read/advanced-limiters/</loc>
   </url>
   <url>
-    <loc>https://hrkoyama.github.io/numerical-methods-atlas/ja/read/advanced-limiters/</loc>
+    <loc>https://hrkoyama.github.io/numerical-methods-atlas/ja/read/advanced/</loc>
   </url>
   <url>
     <loc>https://hrkoyama.github.io/numerical-methods-atlas/ja/read/ale/</loc>
@@ -248,9 +596,6 @@
   </url>
   <url>
     <loc>https://hrkoyama.github.io/numerical-methods-atlas/ja/read/incompressible/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/numerical-methods-atlas/ja/read/</loc>
   </url>
   <url>
     <loc>https://hrkoyama.github.io/numerical-methods-atlas/ja/read/keep/</loc>
@@ -328,19 +673,34 @@
     <loc>https://hrkoyama.github.io/numerical-methods-atlas/ja/read/time-integration/</loc>
   </url>
   <url>
+    <loc>https://hrkoyama.github.io/rights/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/search/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/the-art-of-thermal-instability/</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/the-art-of-thermal-instability/code-and-data.html</loc>
+  </url>
+  <url>
     <loc>https://hrkoyama.github.io/the-art-of-thermal-instability/essays/biophysical-fronts.html</loc>
   </url>
   <url>
     <loc>https://hrkoyama.github.io/the-art-of-thermal-instability/essays/equal-area.html</loc>
   </url>
   <url>
-    <loc>https://hrkoyama.github.io/the-art-of-thermal-instability/fgh-1969/cold-branch.html</loc>
-  </url>
-  <url>
     <loc>https://hrkoyama.github.io/the-art-of-thermal-instability/fgh-1969/</loc>
   </url>
   <url>
+    <loc>https://hrkoyama.github.io/the-art-of-thermal-instability/fgh-1969/cold-branch.html</loc>
+  </url>
+  <url>
     <loc>https://hrkoyama.github.io/the-art-of-thermal-instability/fgh-1969/two-phase.html</loc>
+  </url>
+  <url>
+    <loc>https://hrkoyama.github.io/the-art-of-thermal-instability/field-1965/</loc>
   </url>
   <url>
     <loc>https://hrkoyama.github.io/the-art-of-thermal-instability/field-1965/figure-1.html</loc>
@@ -349,13 +709,7 @@
     <loc>https://hrkoyama.github.io/the-art-of-thermal-instability/field-1965/figure-3.html</loc>
   </url>
   <url>
-    <loc>https://hrkoyama.github.io/the-art-of-thermal-instability/field-1965/</loc>
-  </url>
-  <url>
     <loc>https://hrkoyama.github.io/the-art-of-thermal-instability/gallery/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/the-art-of-thermal-instability/</loc>
   </url>
   <url>
     <loc>https://hrkoyama.github.io/the-art-of-thermal-instability/iwasaki-2012/</loc>
@@ -526,355 +880,6 @@
     <loc>https://hrkoyama.github.io/the-art-of-thermal-instability/ti-2d/</loc>
   </url>
   <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/chapters/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/chapters/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/books/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/books/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/appendix/numbers/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/appendix/numbers/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/about/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/about/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/solutions/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/solutions/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/tools/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/chapter/tools/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/distance/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/chapter/distance/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/matter/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/chapter/matter/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/atom/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/chapter/atom/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/width/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/chapter/width/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/scattering/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/chapter/scattering/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/thermal/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/chapter/thermal/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/planck/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/chapter/planck/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/virial/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/chapter/virial/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/structure/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/chapter/structure/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/sun/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/chapter/sun/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/eddington/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/chapter/eddington/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/chandra/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/chapter/chandra/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/relativity/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/chapter/relativity/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/elements/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/chapter/elements/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/chapter/expansion/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/chapter/expansion/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/lane-emden/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/lane-emden/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/bonnor-ebert/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/bonnor-ebert/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/isothermal-cylinder/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/isothermal-cylinder/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/hayashi/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/hayashi/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/ellipsoids/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/ellipsoids/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/tensor-virial/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/tensor-virial/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/jeans/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/jeans/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/zeldovich/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/zeldovich/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/press-schechter/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/press-schechter/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/rayleigh-taylor/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/rayleigh-taylor/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/kelvin-helmholtz/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/kelvin-helmholtz/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/bondi/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/bondi/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/parker-wind/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/parker-wind/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/sedov/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/sedov/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/isothermal-collapse/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/isothermal-collapse/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/shock-acceleration/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/shock-acceleration/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/synchrotron/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/synchrotron/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/relaxation/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/relaxation/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/fokker-planck/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/fokker-planck/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/gravothermal/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/gravothermal/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/angular-momentum/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/angular-momentum/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/alpha-disk/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/alpha-disk/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/mri/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/mri/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/viscous-disk/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/viscous-disk/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/toomre-q/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/toomre-q/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/stromgren/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/stromgren/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/sunyaev-zeldovich/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/sunyaev-zeldovich/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/goldreich-julian/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/goldreich-julian/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/two-temperature/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/two-temperature/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/ambipolar-diffusion/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/ambipolar-diffusion/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/three-body-chemistry/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/three-body-chemistry/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/schwarzschild/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/schwarzschild/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/kerr/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/kerr/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/tomimatsu-sato/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/tomimatsu-sato/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/ja/advanced/lin-mestel-shu/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/astronomy-step-by-step/en/advanced/lin-mestel-shu/</loc>
-  </url>
-  <url>
-    <loc>https://hrkoyama.github.io/search/</loc>
-    <lastmod>2026-11-16</lastmod>
+    <loc>https://hrkoyama.github.io/using/</loc>
   </url>
 </urlset>

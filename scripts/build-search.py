@@ -79,7 +79,16 @@ for notebook in notebooks:
  documents.append(record('/notebooks/notebook.html?id='+notebook['id'],notebook['display_title'],'',text,'ja','notebooks'))
 assert len({doc['url'] for doc in documents})==len(documents)
 assert all(not re.search(r'koyam(?:arium|ahr)@gmail[.]com',doc['text']) for doc in documents)
-data=json.dumps({'version':1,'documents':documents},ensure_ascii=False,separators=(',',':'))+'\n'
+inputs={'sitemap.xml','notebooks/catalog.js','gordon-bell/data.json'}
+inputs.update('hpci-policy/'+name for name in ['content.json','committees.json','comparison.json','history.json'])
+for url in urls:
+ parsed=urlparse(url)
+ if parsed.path in ['/search/','/notebooks/notebook.html']:continue
+ path=ROOT/unquote(parsed.path).lstrip('/')
+ if path.is_dir():path=path/'index.html'
+ if path.suffix=='.html':inputs.add(path.relative_to(ROOT).as_posix())
+receipts={name:hashlib.sha256((ROOT/name).read_bytes()).hexdigest() for name in sorted(inputs)}
+data=json.dumps({'version':1,'documents':documents,'sourceSha256':receipts},ensure_ascii=False,separators=(',',':'))+'\n'
 (ROOT/'search/index.json').write_text(data)
 digest=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()[:12]
 js=ROOT/'search/search.js'

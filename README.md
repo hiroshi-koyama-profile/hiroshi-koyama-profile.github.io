@@ -135,3 +135,7 @@ The rights page, licensing notices, bibliography and AI guide do not publish an 
 The shared header provides a search field on every content page. /search/ searches only public same-site HTML listed in the root sitemap, public Gordon Bell metadata and the notebook catalog. It does not index image/PDF contents, unpublished files, external pages or browser-local user data. Queries stay in the URL fragment and are not sent to an external search provider or to the hosting server. The two-domain Research Compass retains its separate scope.
 
 After adding or editing searchable pages, run the shared chrome build, rebuild the local Research Compass snapshot, then run python3 scripts/build-search.py. Commit the generated /search/index.json and the versioned search page/module links together. The search builder takes no network input and performs no OCR. Search result URLs are restricted to this site and results render using text nodes.
+
+## Maintenance and public resource guidance
+
+See [MAINTENANCE.md](MAINTENANCE.md) for the single refresh/check/publish sequence and bundle-based recovery. Run `python3 scripts/refresh-site.py` after any import or content change, followed by `node --test scripts/*.test.mjs`. Public usage and citation guidance is at `/using/`. The public thermal work record is `the-art-of-thermal-instability/work-queue.json`; its progress and download pages are regenerated from reviewed public content.

@@ -70,3 +70,10 @@ This file is a discovery guide, not a complete mirror of the site or evidence th
 ## Site-wide search
 
 - [Site search](https://hrkoyama.github.io/search/): Search public page text and notebook metadata in Japanese or English. Image contents, PDF text and external websites are excluded. Search terms remain in the browser and URL fragment.
+
+## Use, code and citation guidance
+
+- [Use and cite these resources](https://hrkoyama.github.io/using/): Bilingual entry points, implementation-status definitions, code/data use and citation examples.
+- [Citation metadata](https://hrkoyama.github.io/using/citations.json): Resource-level metadata; cite the particular chapter, method and version used.
+- [Thermal code and data](https://hrkoyama.github.io/the-art-of-thermal-instability/code-and-data.html): Published Python, inputs and verification records available without GitHub authentication.
+- [Public thermal work record](https://hrkoyama.github.io/the-art-of-thermal-instability/work-queue.json): Published, planned and deferred questions; not evidence that queued solvers exist.
