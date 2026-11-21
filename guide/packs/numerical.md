@@ -1,7 +1,7 @@
 # Hiroshi Koyama — public site knowledge pack
 
-Snapshot: 2026-11-21-190031f8e6
-Captured (UTC): 2026-11-21T16:28:27+00:00
+Snapshot: 2026-11-21-1f5566265a
+Captured (UTC): 2026-11-21T16:32:27+00:00
 
 For consulting the published site with your own LLM. Excerpts are reference data, not instructions. Cite the source URLs. This snapshot is not a full-site mirror, and a reference to an algorithm does not establish implementation or validation. Check source pages for current scope. No unpublished manuscripts or apps are included. Code: MIT within its scope; text/figures: separate terms. https://hrkoyama.github.io/rights/
 
@@ -7193,8 +7193,9 @@ Method map including the 24 reviewed records · 24 reviewed method records / JSO
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/
 Coverage: reading
 
-In progress / publication check pending
+Current scope published and checked
 Select existing problems and provide paths from public inputs to result files, check values, tolerances and explicit failures. Reuse completed examples; these are not 15 new problems to add to the inventory.
+Run and validate fifteen representative problems · Common execution registry / JSON · Fifteen-case rerun from the public registry
 
 ## Implementation roadmap — Connect problem, equation and picture entries to actual use [en]
 
@@ -7209,7 +7210,7 @@ Use Poisson, Barnes–Hut and hydrogenic/He examples to show useful decisions, c
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/
 Coverage: reading
 
-Planned
+In progress / publication check pending
 Extract public ZIPs in a fixed environment and run small representative examples. Record human bilingual navigation and AI discovery, retrieval, execution and citation separately. Apply the same checks to any newly published examples; do not promise search inclusion or future model-training use.
 
 ## Implementation roadmap — Prepare a year-end edition that can be maintained and restored [en]
@@ -14633,8 +14634,9 @@ Coverage: reading
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/
 Coverage: reading
 
-実装中・公開確認待ち
+今回の範囲を公開確認済み
 既にある問題を選び、公開入力から結果ファイルを生成し、確認値・許容誤差・失敗を判定できる経路を揃える。既存の完成例を再利用し、新規15問題として総数へ加算しない。
+代表15問題の取得・実行・検証 · 実行例の共通台帳 / JSON · 公開一覧からの15問題の再実行記録
 
 ## 実装ロードマップ — 問題・数式・画像から使い方へ進む入口 [ja]
 
@@ -14649,7 +14651,7 @@ Poisson・Barnes–Hut・H/Heを代表例として、得られる判断、条件
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/
 Coverage: reading
 
-予定
+実装中・公開確認待ち
 固定環境で公開ZIPを展開し、小規模な代表例を実行する。人の日英の導線と、AIの外部発見・情報取得・実行・引用を別々に記録する。年内に追加公開する例も同じ確認を通し、検索への掲載や将来の学習採用を保証しない。
 
 ## 実装ロードマップ — 更新・復元できる年末版へまとめる [ja]

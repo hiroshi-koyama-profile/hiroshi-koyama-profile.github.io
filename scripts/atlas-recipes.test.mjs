@@ -66,3 +66,16 @@ test('convergence lower bounds reject weak, missing, boolean and non-finite obse
   const script=`import importlib.util\ns=importlib.util.spec_from_file_location('b','scripts/build-atlas-execution-examples.py');b=importlib.util.module_from_spec(s);s.loader.exec_module(b)\nc={'id':'order','pointer':'/order','comparison':'minimum','tolerance':1.8}\nassert b.evaluate_check({'order':1.99},c)['passed']\nfor v in [1.2,True,float('nan'),float('inf')]:assert not b.evaluate_check({'order':v},c)['passed']\nassert not b.evaluate_check({},c)['passed']\nprint('ok')`;
   assert.match(execFileSync('python3',['-c',script],{cwd:root,encoding:'utf8'}),/ok/);
 });
+
+test('all fifteen are rerun from the exact public registry and the guide displays that receipt',()=>{
+  const url=registry.verification_receipt.replace(/\.json$/,'-public.json');
+  const receipt=json(path(url));
+  assert.equal(receipt.registry_source_mode,'public-registry');
+  assert.equal(receipt.registry_url,'https://hrkoyama.github.io/numerical-methods-atlas/code-and-data/examples.json');
+  assert.equal(receipt.registry_sha256,sha('numerical-methods-atlas/code-and-data/examples.json'));
+  assert.equal(receipt.passed,true);
+  assert.equal(receipt.unique_runner_executions,14);
+  assert.deepEqual(receipt.examples.map(x=>x.id).sort(),registry.examples.map(x=>x.id).sort());
+  for(const row of receipt.examples){assert.equal(row.execution.completed,true);assert.equal(row.validation.passed,true);assert.equal(row.passed,true);}
+  assert.ok(text('numerical-methods-atlas/code-and-data/index.html').includes('href="'+url+'"'));
+});
