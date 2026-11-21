@@ -11,10 +11,10 @@
       "en": "Equations, discretization, implementation and benchmarks: shocks, fluids, Poisson, time integration, particle methods and finite elements."
     },
     "scope": {
-      "ja": "教育用実装・限定的な検証・文献調査・開発予定が混在。各章の範囲を確認。量子化学・Hartree–Fock・DFTは今後の予定で専用実装は未着手。",
-      "en": "Contains educational implementations, limited verification, literature surveys and plans. Check each chapter. Quantum chemistry, Hartree–Fock and DFT are planned, with no dedicated implementation yet."
+      "ja": "教育用実装・限定的な検証・文献調査・開発予定が混在。各章の範囲を確認。量子化学・HF・DFTは日英の導入解説を公開、専用実装と数値検証は未提供。",
+      "en": "Includes scoped educational implementations, verification, reading and plans. Quantum chemistry, HF and DFT have bilingual introductory readings but no dedicated implementation or numerical verification yet."
     },
-    "keywords": "数値計算 アルゴリズム 計算 解法 numerical algorithm simulation"
+    "keywords": "数値計算 アルゴリズム 計算 解法 numerical algorithm simulation 量子化学 DFT Hartree-Fock Kohn-Sham electronic structure"
   },
   {
     "domain": "thermal",

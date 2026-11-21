@@ -13,26 +13,56 @@
     "ja": "確率的な量子計算と統計誤差・近似を整理する。",
     "en": "Map stochastic quantum calculations, statistical errors and approximations."
   },
-  "status": "planned",
-  "origin": "development-candidate",
-  "reading": {},
+  "status": "reading-only",
+  "origin": "curated-quantum-reading",
+  "reading": {
+    "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#quantum-monte-carlo",
+    "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#quantum-monte-carlo"
+  },
   "code_modules": [],
   "test_files": [],
-  "references": [],
-  "assumptions": null,
-  "units": null,
-  "boundary_conditions": null,
+  "references": [
+    {
+      "id": "ceperley1980",
+      "label": "Ceperley, D. M.; Alder, B. J. (1980), Ground State of the Electron Gas by a Stochastic Method",
+      "url": "https://doi.org/10.1103/PhysRevLett.45.566",
+      "kind": "primary-paper",
+      "scope": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+    }
+  ],
+  "assumptions": [
+    "Introductory formulation and comparison, not a verified executable solver.",
+    "Representative electronic-structure formulas use nonrelativistic Born–Oppenheimer theory unless the section explicitly states otherwise."
+  ],
+  "units": "Atomic units in the displayed electronic equations (hbar = m_e = e = 4 pi epsilon_0 = 1); dimensionless conventions are stated where needed.",
+  "boundary_conditions": "Isolated or periodic conditions must be selected for each physical system; no numerical boundary-value example is published here yet.",
   "next_deliverable": {
     "ja": "代表手法を分けた文献・検証計画。",
     "en": "Separate representative methods and their verification plans."
   },
   "limitations": {
-    "ja": "Under construction。専用の実装・検証結果はまだありません。",
-    "en": "Under construction. No dedicated implementation or verification result is provided yet."
+    "ja": "日英の導入・代表式・一次文献を公開。専用の実装・数値検証はUnder construction。統計誤差の棒だけでは固定節・時間刻み・有限サイズ等の系統誤差を表せません。量子コンピュータを使う計算という意味でもありません。",
+    "en": "Introductory bilingual reading, representative equations and primary references are available. No dedicated implementation or numerical verification result is provided yet. Statistical error bars do not capture fixed-node, time-step or finite-size bias. Quantum Monte Carlo here does not mean computation on a quantum computer."
   },
   "metadata_review": {
-    "level": "candidate outline; scientific derivation and literature review incomplete",
+    "level": "curated introductory formulation with primary publication and official-documentation entry points; full derivation audit and numerical examples pending",
     "on": "2026-11-21"
+  },
+  "aliases": [
+    "VMC",
+    "DMC",
+    "fixed node",
+    "量子モンテカルロ"
+  ],
+  "assumptions_ja": [
+    "定式化と比較の導入解説であり、実行・検証済みソルバーではありません。",
+    "代表式は、各節に別記する場合を除き非相対論・Born–Oppenheimerの電子状態問題を想定します。"
+  ],
+  "units_ja": "表示する電子状態の式は原子単位系（ℏ = m_e = e = 4πε₀ = 1）。無次元量や占有の規約は各節に明記。",
+  "boundary_conditions_ja": "孤立・周期を対象系ごとに選ぶ必要があります。この導入には実行済みの境界値計算例はまだありません。",
+  "caution": {
+    "ja": "統計誤差の棒だけでは固定節・時間刻み・有限サイズ等の系統誤差を表せません。量子コンピュータを使う計算という意味でもありません。",
+    "en": "Statistical error bars do not capture fixed-node, time-step or finite-size bias. Quantum Monte Carlo here does not mean computation on a quantum computer."
   },
   "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/quantum-monte-carlo/",
   "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/quantum-monte-carlo/index.json",

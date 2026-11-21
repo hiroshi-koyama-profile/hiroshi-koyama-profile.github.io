@@ -18,6 +18,11 @@
       "id": "biology",
       "ja": "生物・化学・反応拡散モデル",
       "en": "Biological, chemical and reaction–diffusion models"
+    },
+    {
+      "id": "quantum",
+      "ja": "電子状態・量子化学",
+      "en": "Electronic structure & quantum chemistry"
     }
   ],
   "equations": [
@@ -949,6 +954,81 @@
       "status": "reading",
       "group": "biology",
       "coverage_scope": "Bistability is not guaranteed for arbitrary Hill exponents or production rates. Induction, mRNA dynamics and noise are additional model choices."
+    },
+    {
+      "id": "stationary-schrodinger",
+      "group": "quantum",
+      "name": {
+        "ja": "電子の定常Schrödinger方程式",
+        "en": "Stationary electronic Schrödinger equation"
+      },
+      "formula": [
+        "\\hat H_{\\rm el}\\Psi=E_{\\rm el}\\Psi,\\qquad E_{\\rm tot}=E_{\\rm el}+\\sum_{A<B}\\frac{Z_AZ_B}{R_{AB}}"
+      ],
+      "note": {
+        "ja": "固定核・非相対論の電子多体固有値問題。核間反発は電子Hamiltonianの外に加える。",
+        "en": "A fixed-nuclei nonrelativistic electronic many-body eigenproblem; nuclear repulsion is added separately."
+      },
+      "status": "reading",
+      "chapter": "quantum-chemistry",
+      "section": "schrodinger"
+    },
+    {
+      "id": "hartree-fock-model",
+      "group": "quantum",
+      "name": {
+        "ja": "閉殻Hartree–Fock方程式",
+        "en": "Closed-shell Hartree–Fock equations"
+      },
+      "formula": [
+        "\\hat F=\\hat h+\\sum_{j\\in\\mathrm{occ}}(2\\hat J_j-\\hat K_j),\\qquad \\hat F\\phi_i=\\varepsilon_i\\phi_i",
+        "\\mathbf F\\mathbf C=\\mathbf S\\mathbf C\\boldsymbol\\varepsilon,\\qquad \\mathbf C^\\dagger\\mathbf S\\mathbf C=\\mathbf I"
+      ],
+      "note": {
+        "ja": "閉殻RHFの占有空間軌道の式。一般に非局所な交換を含む。専用実装は未公開。",
+        "en": "Representative closed-shell RHF spatial-orbital equations with generally nonlocal exchange. No dedicated implementation is published."
+      },
+      "status": "reading",
+      "chapter": "quantum-chemistry",
+      "section": "hartree-fock"
+    },
+    {
+      "id": "kohn-sham-model",
+      "group": "quantum",
+      "name": {
+        "ja": "局所Kohn–Sham DFT",
+        "en": "Local Kohn–Sham DFT"
+      },
+      "formula": [
+        "E[n]=T_s[n]+\\int v_{\\rm ext}n\\,d\\mathbf r+E_H[n]+E_{\\rm xc}[n]+E_{NN}",
+        "[-\\tfrac12\\nabla^2+v_{\\rm ext}+v_H+v_{\\rm xc}]\\phi_i=\\varepsilon_i\\phi_i",
+        "n(\\mathbf r)=\\sum_i f_i|\\phi_i(\\mathbf r)|^2,\\quad \\int n\\,d\\mathbf r=N,\\quad v_{\\rm xc}=\\frac{\\delta E_{\\rm xc}}{\\delta n}"
+      ],
+      "note": {
+        "ja": "密度汎関数の局所KS代表形。hybrid等の一般化KSを区別し、交換相関近似を明記する。",
+        "en": "Representative local KS equations for density functionals. Distinguish generalized KS treatments and specify the exchange-correlation approximation."
+      },
+      "status": "reading",
+      "chapter": "quantum-chemistry",
+      "section": "kohn-sham-dft"
+    },
+    {
+      "id": "time-dependent-kohn-sham",
+      "group": "quantum",
+      "name": {
+        "ja": "時間依存Kohn–Sham方程式",
+        "en": "Time-dependent Kohn–Sham equations"
+      },
+      "formula": [
+        "i\\partial_t\\phi_i(\\mathbf r,t)=[-\\tfrac12\\nabla^2+v_s[n](\\mathbf r,t)]\\phi_i(\\mathbf r,t)"
+      ],
+      "note": {
+        "ja": "局所時間依存KSの代表形。初期状態、交換相関の記憶効果、断熱近似を区別する。実時間と線形応答の専用実装は未公開。",
+        "en": "Representative local time-dependent KS equations. Distinguish initial-state dependence, exchange-correlation memory and adiabatic approximations. No dedicated real-time or response implementation is published."
+      },
+      "status": "reading",
+      "chapter": "quantum-chemistry",
+      "section": "tddft"
     }
   ]
 }

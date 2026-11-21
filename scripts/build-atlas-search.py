@@ -10,6 +10,10 @@ ATLAS=ROOT/'numerical-methods-atlas'
 catalog=json.loads((ROOT/'catalog/atlas-methods.json').read_text())
 path=ATLAS/'home-search-index.json';index=json.loads(path.read_text())
 index['entries']=[x for x in index['entries'] if x.get('origin')!='public-method-registry']
+for entry in index['entries']:
+    if entry['id']=='roadmap':
+        for lang in ['ja','en']:
+            entry['headings'][lang]=json.loads((ATLAS/('content.'+lang+'.json')).read_text())['roadmap']['headings']
 def add(ident,title,keywords,routes):
     index['entries'].append({'id':ident,'title':title,'headings':{'ja':[],'en':[]},'keywords':keywords,'routes':routes,'origin':'public-method-registry'})
 for x in catalog['methods']:
@@ -20,6 +24,7 @@ add('thermostats',{'ja':'サーモスタット：温度制御と分布の比較'
 add('equation-index',{'ja':'数式から探す','en':'Browse by equation'},['数式検索','方程式の一覧','equation index','formula'],{lang:'/numerical-methods-atlas/equations/?lang='+lang for lang in ['ja','en']})
 add('test-inventory',{'ja':'テスト計算の全体一覧','en':'Atlas-wide test-problem inventory'},['テスト計算','検証問題','benchmark','test problems'],{lang:'/numerical-methods-atlas/test-cases/?lang='+lang for lang in ['ja','en']})
 add('visual-test-index',{'ja':'絵から探す：全58のテスト計算','en':'Browse all 58 test problems by picture'},['絵から探す','画像','ギャラリー','テスト計算','visual index','gallery'],{lang:'/numerical-methods-atlas/gallery/?lang='+lang for lang in ['ja','en']})
+add('quantum-chemistry-overview',{'ja':'量子化学・DFT：何を近似し、何を解くか','en':'Quantum chemistry and DFT: approximations and equations'},['量子化学','密度汎関数','電子状態','HF','DFT','Kohn–Sham','Hartree–Fock','quantum chemistry'],{lang:f'/numerical-methods-atlas/{lang}/read/quantum-chemistry/' for lang in ['ja','en']})
 index['scope']='chapter titles, section headings, model and method labels, glossary aliases, and public method records'
 path.write_text(json.dumps(index,ensure_ascii=False,separators=(',',':'))+'\n')
 module=ATLAS/'home-search.js';text=module.read_text()

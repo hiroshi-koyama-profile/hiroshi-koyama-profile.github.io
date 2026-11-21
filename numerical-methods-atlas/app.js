@@ -1,4 +1,4 @@
-import {homeOverviewPage,wireHomeOverview} from './home-overview.js?v=335f9fc046c4';
+import {homeOverviewPage,wireHomeOverview} from './home-overview.js?v=f619d060c474';
 import {readingURL,rewriteReadingLinks} from './reading-urls.js';
 import {expansionPage,wireExpansion} from './shock-expansion.js';
 import {referencePage as exactPage,wireReferences} from './reference-solutions.js';
@@ -117,11 +117,12 @@ const eras = [
  ['1994–2026','Particles meet a Riemann problem','Inutsuka · Iwasaki · Kitajima · Seno','Trace GSPH through its detailed 2002 formulation, particle MHD, and special-relativistic SRGSPH. Literature and a staged implementation plan.','gsph','inutsuka2002']
 ].sort((a,b)=>parseInt(a[0],10)-parseInt(b[0],10));
 let documents, references, sod, experiments, foundations, coverage, translationStatus, localeCatalog, glossary;
+const atlasDocumentVersions = {"ja": "7e37d607466b", "en": "5d2a9790cbe2"};
 const documentCache = new Map();
 const originalShell = new Map([...document.querySelectorAll('.site-header,.site-footer,#figure-dialog,.skip-link')].map(element => [element, element.innerHTML]));
 let navigationVersion = 0, switching = false;
 async function loadDocuments(language) {
- if (!documentCache.has(language)) documentCache.set(language, fetch(`content.${language}.json`).then(response => {if(!response.ok)throw Error('Cannot load reading language');return response.json();}).catch(error => {documentCache.delete(language);throw error;}));
+ if (!documentCache.has(language)) documentCache.set(language, fetch(`content.${language}.json?v=${atlasDocumentVersions[language]}`).then(response => {if(!response.ok)throw Error('Cannot load reading language');return response.json();}).catch(error => {documentCache.delete(language);throw error;}));
  return documentCache.get(language);
 }
 function renderShell() {
@@ -162,7 +163,7 @@ async function changeLanguage(language, {historyEntry=true}={}) {
 
 const eyebrow = text => `<p class="eyebrow">${text}</p>`;
 const arrow = '<span aria-hidden="true">↗</span>';
-const plannedQuantumNotice = () => `<aside class="callout page-width planned-extension" id="quantum-plan" aria-labelledby="quantum-plan-title"><p class="eyebrow">PLANNED / QUANTUM CHEMISTRY + DFT</p><h2 id="quantum-plan-title">From basis functions to electronic structure.</h2><p>Schrödinger eigenproblems, orbital and plane-wave bases, Hartree–Fock, Kohn–Sham DFT, SCF mixing and verification examples.</p><p class="planned-status">Status: planned. Implementation and a dedicated literature review have not started. No release date is assigned.</p><a class="text-link" href="#/read/roadmap?section=planned-quantum-chemistry-and-dft">Read the development checklist ↗</a></aside>`;
+const plannedQuantumNotice = () => `<aside class="callout page-width planned-extension" id="quantum-plan" aria-labelledby="quantum-plan-title"><p class="eyebrow">${escapeHTML(t("planned.quantum.eyebrow"))}</p><h2 id="quantum-plan-title">${escapeHTML(t("planned.quantum.title"))}</h2><p>${escapeHTML(t("planned.quantum.scope"))}</p><p class="planned-status">${escapeHTML(t("planned.quantum.status"))}</p><a class="text-link" href="#/read/quantum-chemistry">${escapeHTML(t("planned.quantum.link"))}</a></aside>`;
 
 const figureCard = (f, i) => `<article class="figure-card"><button class="figure-open" data-figure="${figures.indexOf(f)}" aria-label="Enlarge ${escapeHTML(f.title)}"><img src="assets/${f.file}" alt="${escapeHTML(f.description)}" loading="lazy" width="1000" height="450"><span class="enlarge" aria-hidden="true">＋</span></button><div class="figure-meta">${f.dimension?`<span>${f.dimension}D</span>`:''}<span>${f.category}</span><span>${f.year}</span></div><h3>${f.title}</h3><p>${f.description}</p><a class="text-link" href="#/read/${f.chapter}">Read the method ${arrow}</a>${f.movie?`<a class="text-link movie-card-link" href="#/movies?case=${f.movie}">${f.movie==='forward-step'?'Watch the first-order movie ▷':'Watch time evolution ▷'}</a>`:''}${f.comparison?`<a class="text-link movie-card-link" href="#/flow-comparison?case=${f.comparison}">Compare first order / MUSCL ↗</a>`:''}${f.experiment?`<a class="text-link movie-card-link" href="#/${f.experiment}">Open the solver comparison ↗</a>`:''}${f.shockmethod?`<a class="text-link movie-card-link" href="#/${f.shockmethod}">Open the shock-method comparison ↗</a>`:''}${f.mhdtest?`<a class="text-link movie-card-link" href="#/mhd-tests?case=${f.mhdtest}">Open the MHD test ↗</a>`:''}</article>`;
 const methodCard = m => `<a class="method-card" href="#/read/${m.id}"><div class="method-top"><span>${m.number} / ${m.tag}</span><span aria-hidden="true">↗</span></div><p class="method-formula" aria-hidden="true">${m.formula}</p><h3>${m.title}</h3><p>${m.description}</p></a>`;
@@ -305,7 +306,7 @@ async function route(options={}) {
 document.querySelector('.skip-link').addEventListener('click',e=>{e.preventDefault();main.focus();main.scrollIntoView();});
 document.querySelector('#figure-dialog').addEventListener('click',e=>{if(e.target===e.currentTarget)e.currentTarget.close();});
 try {
- [localeCatalog,references,sod,experiments,foundations,coverage,translationStatus,glossary,site]=await Promise.all(['locales/messages.json','references.json','sod.json','experiments.json','foundations.json','coverage.json?v=58584dbd1e71','translation-status.json','glossary.json','site.json'].map(async file=>{const response=await fetch(file);if(!response.ok)throw Error(`Cannot load ${file}`);return response.json();}));
+ [localeCatalog,references,sod,experiments,foundations,coverage,translationStatus,glossary,site]=await Promise.all(['locales/messages.json?v=2165bf8429e7','references.json?v=f07358a04d99','sod.json','experiments.json','foundations.json','coverage.json?v=5db9b8c56fcf','translation-status.json','glossary.json','site.json'].map(async file=>{const response=await fetch(file);if(!response.ok)throw Error(`Cannot load ${file}`);return response.json();}));
  repo=site.repositoryUrl;
  references.sort((a,b)=>a.year-b.year||a.id.localeCompare(b.id));
  let saved;try{saved=localStorage.getItem('hrkoyama.home.language') || localStorage.getItem('numart-language');}catch{}

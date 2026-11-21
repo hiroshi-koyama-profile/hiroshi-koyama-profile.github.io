@@ -13,26 +13,89 @@
     "ja": "交換相関近似を、数値誤差と物理近似の違いを保って整理する。",
     "en": "Separate exchange-correlation model choices from numerical errors."
   },
-  "status": "planned",
-  "origin": "development-candidate",
-  "reading": {},
+  "status": "reading-only",
+  "origin": "curated-quantum-reading",
+  "reading": {
+    "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#xc-functionals",
+    "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#xc-functionals"
+  },
   "code_modules": [],
   "test_files": [],
-  "references": [],
-  "assumptions": null,
-  "units": null,
-  "boundary_conditions": null,
+  "references": [
+    {
+      "id": "dirac1930",
+      "label": "Dirac, P. A. M. (1930), Note on Exchange Phenomena in the Thomas Atom",
+      "url": "https://doi.org/10.1017/S0305004100016108",
+      "kind": "primary-paper",
+      "scope": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+    },
+    {
+      "id": "perdew1996",
+      "label": "Perdew, J. P.; Burke, K.; Ernzerhof, M. (1996), Generalized Gradient Approximation Made Simple",
+      "url": "https://doi.org/10.1103/PhysRevLett.77.3865",
+      "kind": "primary-paper",
+      "scope": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+    },
+    {
+      "id": "sun2015",
+      "label": "Sun, J.; Ruzsinszky, A.; Perdew, J. P. (2015), Strongly Constrained and Appropriately Normed Semilocal Density Functional",
+      "url": "https://doi.org/10.1103/PhysRevLett.115.036402",
+      "kind": "primary-paper",
+      "scope": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+    },
+    {
+      "id": "becke1993",
+      "label": "Becke, A. D. (1993), Density-functional thermochemistry. III. The role of exact exchange",
+      "url": "https://doi.org/10.1063/1.464913",
+      "kind": "primary-paper",
+      "scope": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+    },
+    {
+      "id": "adamo1999",
+      "label": "Adamo, C.; Barone, V. (1999), Toward reliable density functional methods without adjustable parameters: The PBE0 model",
+      "url": "https://doi.org/10.1063/1.478522",
+      "kind": "primary-paper",
+      "scope": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+    }
+  ],
+  "assumptions": [
+    "Introductory formulation and comparison, not a verified executable solver.",
+    "Representative electronic-structure formulas use nonrelativistic Born–Oppenheimer theory unless the section explicitly states otherwise."
+  ],
+  "units": "Atomic units in the displayed electronic equations (hbar = m_e = e = 4 pi epsilon_0 = 1); dimensionless conventions are stated where needed.",
+  "boundary_conditions": "Isolated or periodic conditions must be selected for each physical system; no numerical boundary-value example is published here yet.",
   "next_deliverable": {
     "ja": "使用する汎関数・グリッド・基底の明示と出典整理。",
     "en": "Document functional, grid, basis and primary references."
   },
   "limitations": {
-    "ja": "Under construction。専用の実装・検証結果はまだありません。",
-    "en": "Under construction. No dedicated implementation or verification result is provided yet."
+    "ja": "日英の導入・代表式・一次文献を公開。専用の実装・数値検証はUnder construction。基底・格子・SCFが収束しても汎関数の近似誤差は消えません。自己相互作用、電荷移動、強相関、分散の扱いは対象と近似に応じて評価します。",
+    "en": "Introductory bilingual reading, representative equations and primary references are available. No dedicated implementation or numerical verification result is provided yet. Basis, grid and SCF convergence do not remove functional error. Assess self-interaction, charge transfer, strong correlation and dispersion for the chosen system and approximation."
   },
   "metadata_review": {
-    "level": "candidate outline; scientific derivation and literature review incomplete",
+    "level": "curated introductory formulation with primary publication and official-documentation entry points; full derivation audit and numerical examples pending",
     "on": "2026-11-21"
+  },
+  "aliases": [
+    "LDA",
+    "GGA",
+    "meta-GGA",
+    "hybrid",
+    "PBE",
+    "PBE0",
+    "SCAN",
+    "B3LYP",
+    "交換相関汎関数"
+  ],
+  "assumptions_ja": [
+    "定式化と比較の導入解説であり、実行・検証済みソルバーではありません。",
+    "代表式は、各節に別記する場合を除き非相対論・Born–Oppenheimerの電子状態問題を想定します。"
+  ],
+  "units_ja": "表示する電子状態の式は原子単位系（ℏ = m_e = e = 4πε₀ = 1）。無次元量や占有の規約は各節に明記。",
+  "boundary_conditions_ja": "孤立・周期を対象系ごとに選ぶ必要があります。この導入には実行済みの境界値計算例はまだありません。",
+  "caution": {
+    "ja": "基底・格子・SCFが収束しても汎関数の近似誤差は消えません。自己相互作用、電荷移動、強相関、分散の扱いは対象と近似に応じて評価します。",
+    "en": "Basis, grid and SCF convergence do not remove functional error. Assess self-interaction, charge transfer, strong correlation and dispersion for the chosen system and approximation."
   },
   "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/xc-functionals/",
   "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/xc-functionals/index.json",

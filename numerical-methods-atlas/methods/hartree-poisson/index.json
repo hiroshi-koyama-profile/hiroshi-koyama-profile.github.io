@@ -13,26 +13,62 @@
     "ja": "電子密度のPoisson解法を、静電気の符号・単位・境界とともに扱う。",
     "en": "Solve Poisson for electronic charge with explicit signs, units and boundaries."
   },
-  "status": "planned",
-  "origin": "development-candidate",
-  "reading": {},
+  "status": "reading-only",
+  "origin": "curated-quantum-reading",
+  "reading": {
+    "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#hartree-poisson",
+    "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#hartree-poisson"
+  },
   "code_modules": [],
   "test_files": [],
-  "references": [],
-  "assumptions": null,
-  "units": null,
-  "boundary_conditions": null,
+  "references": [
+    {
+      "id": "hartree1928",
+      "label": "Hartree, D. R. (1928), The Wave Mechanics of an Atom with a Non-Coulomb Central Field. Part I. Theory and Methods",
+      "url": "https://doi.org/10.1017/S0305004100011919",
+      "kind": "primary-paper",
+      "scope": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+    },
+    {
+      "id": "kohn1965",
+      "label": "Kohn, W.; Sham, L. J. (1965), Self-Consistent Equations Including Exchange and Correlation Effects",
+      "url": "https://doi.org/10.1103/PhysRev.140.A1133",
+      "kind": "primary-paper",
+      "scope": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+    }
+  ],
+  "assumptions": [
+    "Introductory formulation and comparison, not a verified executable solver.",
+    "Representative electronic-structure formulas use nonrelativistic Born–Oppenheimer theory unless the section explicitly states otherwise."
+  ],
+  "units": "Atomic units in the displayed electronic equations (hbar = m_e = e = 4 pi epsilon_0 = 1); dimensionless conventions are stated where needed.",
+  "boundary_conditions": "Isolated or periodic conditions must be selected for each physical system; no numerical boundary-value example is published here yet.",
   "next_deliverable": {
     "ja": "孤立と周期の小規模参照例。",
     "en": "Small isolated and periodic reference examples."
   },
   "limitations": {
-    "ja": "Under construction。専用の実装・検証結果はまだありません。",
-    "en": "Under construction. No dedicated implementation or verification result is provided yet."
+    "ja": "日英の導入・代表式・一次文献を公開。専用の実装・数値検証はUnder construction。Poisson解の残差、積分した電子数、遠方の挙動、二重計数の1/2を別々に確かめます。周期セルの帯電系を孤立系のエネルギーとして解釈しません。",
+    "en": "Introductory bilingual reading, representative equations and primary references are available. No dedicated implementation or numerical verification result is provided yet. Check the Poisson residual, integrated electron number, far-field behavior and the one-half double-counting factor separately. A charged periodic cell does not directly give an isolated-system energy."
   },
   "metadata_review": {
-    "level": "candidate outline; scientific derivation and literature review incomplete",
+    "level": "curated introductory formulation with primary publication and official-documentation entry points; full derivation audit and numerical examples pending",
     "on": "2026-11-21"
+  },
+  "aliases": [
+    "Hartree potential",
+    "電子密度",
+    "Coulomb"
+  ],
+  "assumptions_ja": [
+    "定式化と比較の導入解説であり、実行・検証済みソルバーではありません。",
+    "代表式は、各節に別記する場合を除き非相対論・Born–Oppenheimerの電子状態問題を想定します。"
+  ],
+  "units_ja": "表示する電子状態の式は原子単位系（ℏ = m_e = e = 4πε₀ = 1）。無次元量や占有の規約は各節に明記。",
+  "boundary_conditions_ja": "孤立・周期を対象系ごとに選ぶ必要があります。この導入には実行済みの境界値計算例はまだありません。",
+  "caution": {
+    "ja": "Poisson解の残差、積分した電子数、遠方の挙動、二重計数の1/2を別々に確かめます。周期セルの帯電系を孤立系のエネルギーとして解釈しません。",
+    "en": "Check the Poisson residual, integrated electron number, far-field behavior and the one-half double-counting factor separately. A charged periodic cell does not directly give an isolated-system energy."
   },
   "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/hartree-poisson/",
   "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/hartree-poisson/index.json",

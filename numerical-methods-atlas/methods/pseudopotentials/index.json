@@ -13,26 +13,70 @@
     "ja": "内殻の扱いと有効な電子状態表現の位置付けを示す。",
     "en": "Map core-electron treatments and effective electronic representations."
   },
-  "status": "planned",
-  "origin": "development-candidate",
-  "reading": {},
+  "status": "reading-only",
+  "origin": "curated-quantum-reading",
+  "reading": {
+    "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#pseudopotentials",
+    "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#pseudopotentials"
+  },
   "code_modules": [],
   "test_files": [],
-  "references": [],
-  "assumptions": null,
-  "units": null,
-  "boundary_conditions": null,
+  "references": [
+    {
+      "id": "hamann1979",
+      "label": "Hamann, D. R.; Schlüter, M.; Chiang, C. (1979), Norm-Conserving Pseudopotentials",
+      "url": "https://doi.org/10.1103/PhysRevLett.43.1494",
+      "kind": "primary-paper",
+      "scope": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+    },
+    {
+      "id": "vanderbilt1990",
+      "label": "Vanderbilt, D. (1990), Soft self-consistent pseudopotentials in a generalized eigenvalue formalism",
+      "url": "https://doi.org/10.1103/PhysRevB.41.7892",
+      "kind": "primary-paper",
+      "scope": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+    },
+    {
+      "id": "blochl1994",
+      "label": "Blöchl, P. E. (1994), Projector augmented-wave method",
+      "url": "https://doi.org/10.1103/PhysRevB.50.17953",
+      "kind": "primary-paper",
+      "scope": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+    }
+  ],
+  "assumptions": [
+    "Introductory formulation and comparison, not a verified executable solver.",
+    "Representative electronic-structure formulas use nonrelativistic Born–Oppenheimer theory unless the section explicitly states otherwise."
+  ],
+  "units": "Atomic units in the displayed electronic equations (hbar = m_e = e = 4 pi epsilon_0 = 1); dimensionless conventions are stated where needed.",
+  "boundary_conditions": "Isolated or periodic conditions must be selected for each physical system; no numerical boundary-value example is published here yet.",
   "next_deliverable": {
     "ja": "モデルの適用条件と全電子計算との比較方針。",
     "en": "Define applicability and comparison with all-electron calculations."
   },
   "limitations": {
-    "ja": "Under construction。専用の実装・検証結果はまだありません。",
-    "en": "Under construction. No dedicated implementation or verification result is provided yet."
+    "ja": "日英の導入・代表式・一次文献を公開。専用の実装・数値検証はUnder construction。異なる擬ポテンシャルの全エネルギーの零点を無条件に比較しません。平面波カットオフの収束だけで移植性が証明されるわけではありません。",
+    "en": "Introductory bilingual reading, representative equations and primary references are available. No dedicated implementation or numerical verification result is provided yet. Do not compare absolute energy zeroes across different pseudopotentials without alignment. Cutoff convergence alone does not establish transferability."
   },
   "metadata_review": {
-    "level": "candidate outline; scientific derivation and literature review incomplete",
+    "level": "curated introductory formulation with primary publication and official-documentation entry points; full derivation audit and numerical examples pending",
     "on": "2026-11-21"
+  },
+  "aliases": [
+    "擬ポテンシャル",
+    "PAW",
+    "norm-conserving",
+    "ultrasoft"
+  ],
+  "assumptions_ja": [
+    "定式化と比較の導入解説であり、実行・検証済みソルバーではありません。",
+    "代表式は、各節に別記する場合を除き非相対論・Born–Oppenheimerの電子状態問題を想定します。"
+  ],
+  "units_ja": "表示する電子状態の式は原子単位系（ℏ = m_e = e = 4πε₀ = 1）。無次元量や占有の規約は各節に明記。",
+  "boundary_conditions_ja": "孤立・周期を対象系ごとに選ぶ必要があります。この導入には実行済みの境界値計算例はまだありません。",
+  "caution": {
+    "ja": "異なる擬ポテンシャルの全エネルギーの零点を無条件に比較しません。平面波カットオフの収束だけで移植性が証明されるわけではありません。",
+    "en": "Do not compare absolute energy zeroes across different pseudopotentials without alignment. Cutoff convergence alone does not establish transferability."
   },
   "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/pseudopotentials/",
   "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/pseudopotentials/index.json",

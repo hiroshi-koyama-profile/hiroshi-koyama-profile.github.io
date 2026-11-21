@@ -30,7 +30,7 @@ def metrics(lang):
     return result+'</div>'
 def render(lang):
     c=copy[lang]
-    links=[('/numerical-methods-atlas/methods/',c['map']),('/numerical-methods-atlas/code-and-data/',c['code']),('/using/',c['using'])]
+    links=[('/numerical-methods-atlas/methods/',c['map']),('/numerical-methods-atlas/code-and-data/',c['code']),('/using/',c['using']),(f'/numerical-methods-atlas/{lang}/read/quantum-chemistry/','量子化学・DFTの見取り図' if lang=='ja' else 'Quantum chemistry & DFT')]
     return browse(lang)+'<section class="page-width atlas-purpose" aria-labelledby="atlas-purpose-title-'+lang+'"><h2 id="atlas-purpose-title-'+lang+'">'+html.escape(c['title'])+'</h2>'+''.join('<p>'+html.escape(p)+'</p>' for p in c['paragraphs'])+'<p><strong>'+html.escape(policy['title'][lang])+':</strong> '+html.escape(policy['statement'][lang])+'</p><nav aria-label="Atlas resources">'+''.join('<a href="'+url+'">'+html.escape(label)+'</a>' for url,label in links)+'</nav></section>'
 sections={lang:render(lang) for lang in copy}
 module=ATLAS/'atlas-purpose.js'
@@ -76,4 +76,14 @@ for content in ATLAS.glob('content*.json'):
     data=json.loads(content.read_text());lang='ja' if '.ja.' in content.name else 'en'
     data['roadmap']['html']=adapt_roadmap(data['roadmap']['html'],lang)
     content.write_text(json.dumps(data,ensure_ascii=False,separators=(',',':'))+'\n')
+# A newly added chapter must also be discoverable through existing #/read links
+# when a returning browser has a cached language document bundle.
+versions={lang:digest(ATLAS/('content.'+lang+'.json')) for lang in ['ja','en']}
+text=app.read_text()
+text=re.sub(r'const atlasDocumentVersions = [^\n]+;\n','',text)
+text=text.replace('const documentCache = new Map();','const atlasDocumentVersions = '+json.dumps(versions)+';\nconst documentCache = new Map();')
+text=text.replace('fetch(`content.${language}.json`)','fetch(`content.${language}.json?v=${atlasDocumentVersions[language]}`)')
+assert 'fetch(`content.${language}.json?v=${atlasDocumentVersions[language]}`)' in text
+app.write_text(text)
+text=page.read_text();text=re.sub(r'src="app.js(?:[?]v=[a-f0-9]+)?"','src="app.js?v='+digest(app)+'"',text);page.write_text(text)
 print('Built bilingual atlas purpose statement for the live homepage and static fallback.')

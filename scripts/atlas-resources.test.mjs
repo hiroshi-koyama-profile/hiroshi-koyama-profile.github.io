@@ -19,7 +19,7 @@ test('planned methods never inherit available implementations or verified status
     assert.ok(x.next_deliverable.ja&&x.next_deliverable.en);
     assert.match(x.limitations.en,/No dedicated implementation/);
   }
-  for(const id of ['ewald','pme','spme','hartree-fock','kohn-sham-dft'])assert.equal(items.find(x=>x.id===id).status,'planned');
+  for(const id of ['ewald','pme','spme'])assert.equal(items.find(x=>x.id===id).status,'planned');
   assert.equal(items.find(x=>x.id==='barnes-hut').status,'educational-example');
   assert.match(items.find(x=>x.id==='pm').limitations.en,/not.*Ewald/);
 });
@@ -46,7 +46,7 @@ test('each method has readable HTML, JSON and Markdown with valid reading-langua
     for(const ext of ['html','json','md'])assert.ok(existsSync(new URL(route+'index.'+ext,root)));
     const record=JSON.parse(read(route+'index.json'));assert.equal(record.status,x.status);
     const html=read(route+'index.html');assert.ok(html.includes('data-site-language="ja"')&&html.includes('data-site-language="en"'));
-    for(const path of Object.values(x.reading))assert.ok(existsSync(new URL(path.slice(1)+'index.html',root)));
+    for(const path of Object.values(x.reading)){const u=new URL(path,'https://hrkoyama.github.io');assert.ok(existsSync(new URL(u.pathname.slice(1)+'index.html',root)));if(u.hash)assert.ok(read(u.pathname.slice(1)+'index.html').includes('id=\"'+u.hash.slice(1)+'\"'));}
     if(x.status!=='planned'&&!x.reading.ja)assert.ok(html.includes('英語の解説を読む'));
     assert.doesNotMatch(html,/https:\/\/github\.com\/koyamarium\//);
   }

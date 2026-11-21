@@ -1,18 +1,29 @@
 # LDA, GGA and hybrid functionals / LDA・GGA・hybrid汎関数
 
-Status: planned
+Status: reading-only
 
 Separate exchange-correlation model choices from numerical errors.
 
 交換相関近似を、数値誤差と物理近似の違いを保って整理する。
 
-Under construction. No dedicated implementation or verification result is provided yet.
+Introductory bilingual reading, representative equations and primary references are available. No dedicated implementation or numerical verification result is provided yet. Basis, grid and SCF convergence do not remove functional error. Assess self-interaction, charge transfer, strong correlation and dispersion for the chosen system and approximation.
+
+Other names: LDA, GGA, meta-GGA, hybrid, PBE, PBE0, SCAN, B3LYP, 交換相関汎関数
+
+Comparison notes: Basis, grid and SCF convergence do not remove functional error. Assess self-interaction, charge transfer, strong correlation and dispersion for the chosen system and approximation.
+
+基底・格子・SCFが収束しても汎関数の近似誤差は消えません。自己相互作用、電荷移動、強相関、分散の扱いは対象と近似に応じて評価します。
+
+- Reading (ja): https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#xc-functionals
+- Reading (en): https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#xc-functionals
 
 
 
-
-
-
+- Reference: https://doi.org/10.1017/S0305004100016108 — Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced.
+- Reference: https://doi.org/10.1103/PhysRevLett.77.3865 — Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced.
+- Reference: https://doi.org/10.1103/PhysRevLett.115.036402 — Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced.
+- Reference: https://doi.org/10.1063/1.464913 — Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced.
+- Reference: https://doi.org/10.1063/1.478522 — Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced.
 
 Next: Document functional, grid, basis and primary references.
 

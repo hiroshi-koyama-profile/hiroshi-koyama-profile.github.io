@@ -19,7 +19,7 @@ for directory in (ATLAS/'methods').glob('*'):
         assert {p.name for p in directory.iterdir()} <= {'index.html','index.json','index.md'},directory
         for p in directory.iterdir():p.unlink()
         directory.rmdir()
-existing_count=sum(x['origin']=='existing-coverage-catalog' for x in METHODS)
+existing_count=sum(x['status']!='planned' for x in METHODS)
 example_count=sum(x['status']=='educational-example' for x in METHODS)
 reading_count=sum(x['status']=='reading-only' for x in METHODS)
 planned_count=sum(x['status']=='planned' for x in METHODS)

@@ -1,0 +1,853 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-11-21",
+  "status": "introductory-reading",
+  "title": {
+    "ja": "量子化学・DFT：何を近似し、何を解くか",
+    "en": "Quantum chemistry and DFT: approximations and equations"
+  },
+  "description": {
+    "ja": "Schrödinger、Hartree–Fock、Kohn–Sham DFTから、基底・SCF・電子相関・励起まで。数理的な違いと検証の道筋をたどる。",
+    "en": "From Schrödinger, Hartree–Fock and Kohn–Sham DFT to bases, SCF, correlation and excitations: follow the mathematical choices and their validation."
+  },
+  "lanes": [
+    {
+      "id": "models",
+      "ja": "電子状態のモデル",
+      "en": "Electronic-structure models"
+    },
+    {
+      "id": "representation",
+      "ja": "表現と非線形反復",
+      "en": "Representations and nonlinear iteration"
+    },
+    {
+      "id": "correlation",
+      "ja": "多電子相関",
+      "en": "Many-electron correlation"
+    },
+    {
+      "id": "excited",
+      "ja": "励起と時間発展",
+      "en": "Excitations and time evolution"
+    }
+  ],
+  "sections": [
+    {
+      "id": "schrodinger",
+      "lane": "models",
+      "paragraphs": {
+        "ja": [
+          "固定した核配置に対して電子の多体固有値問題を解く、という共通の出発点です。ここでは非相対論・Born–Oppenheimer近似・原子単位系を使い、電子エネルギーE_elと核間反発E_NNを分けます。R_Aは核位置、Z_Aは核電荷、r_ijは電子間距離です。",
+          "1電子なら電子間反発の和はなく、水素型原子は E_n = −Z²/(2n²) を参照値にできます。多電子のΨは全電子座標とスピンに依存するため、3次元の1電子軌道を解くHF・KSとの違いを意識します。"
+        ],
+        "en": [
+          "The common starting point is a many-electron eigenproblem at fixed nuclear positions. We use nonrelativistic Born–Oppenheimer theory and atomic units, separating electronic energy E_el from nuclear repulsion E_NN. R_A and Z_A denote nuclear positions and charges; r_ij is an electron–electron distance.",
+          "For one electron the pair-repulsion sum vanishes; hydrogenic energies E_n = −Z²/(2n²) provide references. The many-electron wavefunction depends on all electronic coordinates and spins, unlike the individual three-dimensional orbitals in HF or KS."
+        ]
+      },
+      "formula": [
+        "\\hat H_{\\rm el}=-\\frac12\\sum_i\\nabla_i^2-\\sum_{iA}\\frac{Z_A}{|\\mathbf r_i-\\mathbf R_A|}+\\sum_{i<j}\\frac1{r_{ij}}",
+        "\\hat H_{\\rm el}\\Psi=E_{\\rm el}\\Psi,\\qquad E_{\\rm tot}=E_{\\rm el}+\\sum_{A<B}\\frac{Z_AZ_B}{R_{AB}}"
+      ],
+      "references": [
+        "schrodinger1926",
+        "roothaan1951"
+      ],
+      "caution": {
+        "ja": "核運動、相対論、スピン軌道相互作用、外場はこの代表式に含めません。固有値の残差が小さくても、領域・基底の誤差は残ります。",
+        "en": "Nuclear dynamics, relativity, spin–orbit coupling and external fields are outside this representative Hamiltonian. A small eigenpair residual does not establish domain or basis convergence."
+      }
+    },
+    {
+      "id": "hartree-fock",
+      "lane": "models",
+      "paragraphs": {
+        "ja": [
+          "HFは反対称な単一Slater行列式の範囲でエネルギーを停留させる方法です。交換は行列式から入り、そのHF参照から見た電子相関は含みません。閉殻RHFでは、二重占有された空間軌道を用いてFock演算子を作ります。",
+          "J_jは軌道jのCoulomb場、K_jは一般に非局所な交換演算子です。開殻ではUHF・ROHF等の選択があり、UHFのスピン汚染や対称性の破れを記録する必要があります。"
+        ],
+        "en": [
+          "HF makes the energy stationary within single antisymmetric Slater determinants. Exchange follows from the determinant; electron correlation relative to the HF reference is absent. Closed-shell RHF builds its Fock operator from doubly occupied spatial orbitals.",
+          "J_j is a Coulomb operator and K_j is generally nonlocal exchange. Open-shell choices include UHF and ROHF, with spin contamination and symmetry breaking requiring explicit diagnostics."
+        ]
+      },
+      "formula": [
+        "\\hat F=\\hat h+\\sum_{j\\in\\mathrm{occ}}(2\\hat J_j-\\hat K_j),\\qquad \\hat F\\phi_i=\\varepsilon_i\\phi_i",
+        "\\mathbf F\\mathbf C=\\mathbf S\\mathbf C\\boldsymbol\\varepsilon,\\qquad \\mathbf C^\\dagger\\mathbf S\\mathbf C=\\mathbf I"
+      ],
+      "references": [
+        "roothaan1951"
+      ],
+      "caution": {
+        "ja": "HFの解は一般に一意とは限りません。SCFが停止しても基底収束・軌道安定性・正しい電子状態の確認が必要です。分子解離では単一参照の限界が現れます。",
+        "en": "HF solutions need not be unique. SCF termination does not prove basis convergence, orbital stability or the desired electronic state. Bond dissociation can expose single-reference limitations."
+      }
+    },
+    {
+      "id": "kohn-sham-dft",
+      "lane": "models",
+      "paragraphs": {
+        "ja": [
+          "DFTはここでは密度汎関数理論で、離散Fourier変換の略称とは別です。Hohenberg–Kohnの基底状態の枠組みを出発点に、Kohn–Sham法は補助的な非相互作用軌道で密度を表します。占有数f_iはスピンを含む規約を明示し、和が電子数Nになるようにします。",
+          "T_sは補助系の運動エネルギー、E_Hは古典的Coulombエネルギーです。E_xcには交換と相関に加え、相互作用系の運動エネルギーとT_sとの差も含まれます。密度からポテンシャル、軌道から密度へと更新する非線形問題をSCFで解きます。",
+          "下式は密度のみに依存する微分可能な汎関数に対する局所KSの代表形です。hybridの非局所交換や軌道依存meta-GGA等では一般化KSの扱いを区別します。"
+        ],
+        "en": [
+          "Here DFT means density functional theory, rather than the discrete Fourier transform. Within the Hohenberg–Kohn ground-state framework, Kohn–Sham theory represents the density using auxiliary noninteracting orbitals. State the spin convention for occupations f_i and enforce their sum N.",
+          "T_s is the auxiliary kinetic energy and E_H the classical Coulomb energy. E_xc includes exchange, correlation and the difference between interacting kinetic energy and T_s. Updating density to potential and orbitals back to density produces the nonlinear SCF problem.",
+          "The representative local KS equation below assumes a differentiable density functional. Distinguish generalized KS treatments of nonlocal hybrid exchange and orbital-dependent meta-GGAs."
+        ]
+      },
+      "formula": [
+        "E[n]=T_s[n]+\\int v_{\\rm ext}n\\,d\\mathbf r+E_H[n]+E_{\\rm xc}[n]+E_{NN}",
+        "[-\\tfrac12\\nabla^2+v_{\\rm ext}+v_H+v_{\\rm xc}]\\phi_i=\\varepsilon_i\\phi_i",
+        "n(\\mathbf r)=\\sum_i f_i|\\phi_i(\\mathbf r)|^2,\\quad \\int n\\,d\\mathbf r=N,\\quad v_{\\rm xc}=\\frac{\\delta E_{\\rm xc}}{\\delta n}"
+      ],
+      "references": [
+        "hohenberg1964",
+        "kohn1965"
+      ],
+      "caution": {
+        "ja": "正確な汎関数の理論と、近似汎関数による実計算を分けます。KS固有値を一般に励起エネルギーと同一視せず、基底状態DFTだけで励起状態まで保証しません。",
+        "en": "Distinguish exact-functional theory from calculations with approximate functionals. KS eigenvalues are not generally excitation energies; ground-state DFT alone does not guarantee excited-state accuracy."
+      }
+    },
+    {
+      "id": "electronic-bases",
+      "lane": "representation",
+      "paragraphs": {
+        "ja": [
+          "同じHF・DFTでも、Gaussian型・Slater型の原子軌道、平面波、実空間格子などで離散問題が変わります。非直交基底の重なり行列Sを残し、一般化固有値問題を解く必要があります。",
+          "原子軌道では基底の大きさ・分極・diffuse関数、平面波ではカットオフとセル、実空間では格子幅と領域を別々に変えます。Gaussian基底の積分評価はBoysの一次文献への入口を付けています。"
+        ],
+        "en": [
+          "The same HF or DFT model can use Gaussian or Slater atomic orbitals, plane waves, or a real-space grid. Nonorthogonal bases retain an overlap matrix S and require a generalized eigenproblem.",
+          "Vary basis size, polarization and diffuse functions for atomic orbitals; cutoff and cell size for plane waves; spacing and domain for real-space grids. Boys provides an original entry point for Gaussian integral methods."
+        ]
+      },
+      "formula": [
+        "\\phi_i=\\sum_\\mu C_{\\mu i}\\chi_\\mu,\\qquad S_{\\mu\\nu}=\\langle\\chi_\\mu|\\chi_\\nu\\rangle",
+        "\\mathbf F\\mathbf C=\\mathbf S\\mathbf C\\boldsymbol\\varepsilon"
+      ],
+      "references": [
+        "boys1950",
+        "roothaan1951"
+      ],
+      "caution": {
+        "ja": "基底を変える操作と電子相関・汎関数を変える操作は別です。線形従属、基底重なり誤差、擬ポテンシャルとの整合性も確認します。",
+        "en": "Changing the basis is different from changing electron correlation or the functional. Check near-linear dependence, basis-set superposition error and pseudopotential compatibility."
+      }
+    },
+    {
+      "id": "scf",
+      "lane": "representation",
+      "paragraphs": {
+        "ja": [
+          "SCFは物理モデル名ではなく、HFやKSで現れる自己無撞着条件を解く反復です。下式のMは、入力密度からポテンシャルを作り、軌道を解いて出力密度を作る写像です。",
+          "エネルギー変化だけでなく、密度差、電子数、固有値または軌道勾配の残差を保存します。混合率、初期密度、占有の扱い、最大反復数、未収束という終了理由も出力に残します。"
+        ],
+        "en": [
+          "SCF is an iteration for self-consistency in HF or KS, rather than a physical model. The map M builds a potential from the input density, solves for orbitals and constructs an output density.",
+          "Save density differences, electron number and eigenpair or orbital-gradient residuals as well as energy changes. Record mixing, initial density, occupations, iteration limits and an explicit nonconvergence termination reason."
+        ]
+      },
+      "formula": [
+        "n_{k+1}=(1-\\alpha)n_k+\\alpha\\mathcal M[n_k],\\qquad 0<\\alpha\\le1",
+        "\\mathrm{Tr}(\\mathbf P\\mathbf S)=N,\\qquad \\mathbf R=\\mathbf F\\mathbf P\\mathbf S-\\mathbf S\\mathbf P\\mathbf F"
+      ],
+      "references": [
+        "roothaan1951",
+        "pulay1980"
+      ],
+      "caution": {
+        "ja": "小さいエネルギー変化だけで収束を宣言しません。収束した解が最低エネルギーの安定な電子状態である保証も別に検査します。",
+        "en": "A small energy change alone is insufficient. Convergence also does not establish the lowest-energy stable electronic solution."
+      }
+    },
+    {
+      "id": "diis",
+      "lane": "representation",
+      "paragraphs": {
+        "ja": [
+          "DIISは保存した反復履歴と誤差ベクトルから外挿係数を決めます。係数和を1に制約し、外挿された誤差のノルムを小さくするのが基本形です。SCFではFock行列と非直交基底に整合した交換子残差等を使います。",
+          "これは物理近似を追加する方法ではなく、非線形方程式の解き方です。減衰混合と比較する際は同じ初期状態と停止条件を使い、履歴長と特異な履歴行列への対処も記録します。"
+        ],
+        "en": [
+          "DIIS determines extrapolation coefficients from stored iterates and error vectors. Its basic form minimizes the extrapolated error norm subject to coefficients summing to one. SCF commonly uses Fock matrices and an overlap-consistent commutator residual.",
+          "It changes the nonlinear solution strategy rather than the physical approximation. Compare against damping using the same initial state and stopping rules; record history length and treatment of singular history matrices."
+        ]
+      },
+      "formula": [
+        "\\min_{\\{c_j\\}}\\left\\|\\sum_j c_j\\mathbf e_j\\right\\|^2,\\qquad \\sum_j c_j=1"
+      ],
+      "references": [
+        "pulay1980"
+      ],
+      "caution": {
+        "ja": "外挿は収束やエネルギーの単調減少を保証しません。残差が見かけ上小さい場合、初期値依存や停留解の不安定性も確認します。",
+        "en": "Extrapolation guarantees neither convergence nor monotonic energy decrease. Investigate initial-state dependence and unstable stationary solutions even when a residual appears small."
+      }
+    },
+    {
+      "id": "hartree-poisson",
+      "lane": "representation",
+      "paragraphs": {
+        "ja": [
+          "nを正の電子数密度として定義すると、Hartreeポテンシャルは下式の正のCoulomb積分です。電子の電荷密度ρ_charge = −nとは符号が異なります。電子エネルギーに入るv_Hと、電荷が作る静電ポテンシャルを混同しません。",
+          "孤立系では無限遠の条件、周期系ではG=0成分、電荷中性、補償背景や基準電位を指定します。既存のPoisson・FFT・粒子力の章を使う際も、境界条件と符号をそのまま流用しないようにします。"
+        ],
+        "en": [
+          "With n defined as positive electron number density, the Hartree potential is the positive Coulomb integral below. Its sign differs from charge density ρ_charge = −n. Distinguish v_H in the electronic energy from electrostatic potential generated by charge.",
+          "Isolated systems require far-field conditions. Periodic systems require a stated G=0 convention, neutrality, compensating background when used, and potential reference. Existing Poisson, FFT and particle-force methods must be matched to these signs and boundaries."
+        ]
+      },
+      "formula": [
+        "v_H(\\mathbf r)=\\int\\frac{n(\\mathbf r\\prime)}{|\\mathbf r-\\mathbf r\\prime|}\\,d\\mathbf r\\prime,\\qquad \\nabla^2v_H=-4\\pi n",
+        "E_H=\\frac12\\int n(\\mathbf r)v_H(\\mathbf r)\\,d\\mathbf r"
+      ],
+      "references": [
+        "hartree1928",
+        "kohn1965"
+      ],
+      "caution": {
+        "ja": "Poisson解の残差、積分した電子数、遠方の挙動、二重計数の1/2を別々に確かめます。周期セルの帯電系を孤立系のエネルギーとして解釈しません。",
+        "en": "Check the Poisson residual, integrated electron number, far-field behavior and the one-half double-counting factor separately. A charged periodic cell does not directly give an isolated-system energy."
+      }
+    },
+    {
+      "id": "xc-functionals",
+      "lane": "models",
+      "paragraphs": {
+        "ja": [
+          "LDAは局所密度、GGAは密度と勾配、meta-GGAは軌道の運動エネルギー密度などにも依存します。hybridはHF型交換を一部混合します。PBE、SCAN、B3系、PBE0等は交換相関近似の選択で、単なる精度の順位表ではありません。",
+          "下式はスピン非偏極のDirac交換のみです。相関項を含むLDAと区別し、汎関数名、成分、パラメータ、ライブラリと版を明示します。電子密度の求積格子も結果を変え得ます。"
+        ],
+        "en": [
+          "LDA depends on local density, GGA on density and its gradient, and meta-GGA on quantities such as orbital kinetic-energy density. Hybrids mix in HF-type exchange. PBE, SCAN, B3 variants and PBE0 are approximation choices rather than a universal ranking.",
+          "The formula below is spin-unpolarized Dirac exchange only. Distinguish it from LDA including correlation. State functional components, parameters, library/version and the density integration grid."
+        ]
+      },
+      "formula": [
+        "E_x^{\\rm LDA}[n]=-\\frac34\\left(\\frac3\\pi\\right)^{1/3}\\int n^{4/3}\\,d\\mathbf r",
+        "v_x^{\\rm LDA}=-\\left(\\frac{3n}{\\pi}\\right)^{1/3}"
+      ],
+      "references": [
+        "dirac1930",
+        "perdew1996",
+        "sun2015",
+        "becke1993",
+        "adamo1999"
+      ],
+      "caution": {
+        "ja": "基底・格子・SCFが収束しても汎関数の近似誤差は消えません。自己相互作用、電荷移動、強相関、分散の扱いは対象と近似に応じて評価します。",
+        "en": "Basis, grid and SCF convergence do not remove functional error. Assess self-interaction, charge transfer, strong correlation and dispersion for the chosen system and approximation."
+      }
+    },
+    {
+      "id": "pseudopotentials",
+      "lane": "representation",
+      "paragraphs": {
+        "ja": [
+          "擬ポテンシャルは内殻の効果を有効的に扱い、価電子を主に解く表現です。norm-conserving、ultrasoft、PAWを区別します。PAWは変換と再構成を使う方法で、単に滑らかな局所ポテンシャルに置き換える説明では不十分です。",
+          "元素、価電子配置、生成した汎関数、相対論の扱い、データセットの版と推奨カットオフを保存します。全電子計算との比較は同じ物理条件・観測量で行います。"
+        ],
+        "en": [
+          "Pseudopotentials represent core effects effectively while focusing on valence electrons. Distinguish norm-conserving, ultrasoft and PAW approaches. PAW uses a transformation and reconstruction; describing it as only a smooth local replacement is inadequate.",
+          "Save the element, valence configuration, generating functional, relativistic treatment, dataset version and cutoff guidance. Compare against all-electron calculations under matched physical conditions and observables."
+        ]
+      },
+      "formula": [],
+      "references": [
+        "hamann1979",
+        "vanderbilt1990",
+        "blochl1994"
+      ],
+      "caution": {
+        "ja": "異なる擬ポテンシャルの全エネルギーの零点を無条件に比較しません。平面波カットオフの収束だけで移植性が証明されるわけではありません。",
+        "en": "Do not compare absolute energy zeroes across different pseudopotentials without alignment. Cutoff convergence alone does not establish transferability."
+      }
+    },
+    {
+      "id": "k-point",
+      "lane": "representation",
+      "paragraphs": {
+        "ja": [
+          "周期ポテンシャルではBloch軌道を用い、Brillouin領域の積分を重み付きk点和で近似します。u_nkは格子周期関数です。Monkhorst–Pack法は特殊点による積分の一次文献への入口です。",
+          "k点密度とシフト、対称性、占有・smearing、セル、基底カットオフを保存します。孤立分子を大きな周期セルに置くことと、孤立境界で解くことも区別します。"
+        ],
+        "en": [
+          "For a periodic potential, Bloch orbitals reduce Brillouin-zone integrals to weighted k-point sums. u_nk is lattice periodic. Monkhorst–Pack supplies an original entry point for special-point integration.",
+          "Save k-mesh density and shift, symmetry, occupations/smearing, cell and basis cutoff. A molecule in a large periodic cell must also be distinguished from an isolated-boundary calculation."
+        ]
+      },
+      "formula": [
+        "\\psi_{n\\mathbf k}(\\mathbf r)=e^{i\\mathbf k\\cdot\\mathbf r}u_{n\\mathbf k}(\\mathbf r),\\qquad \\int_{\\rm BZ}g(\\mathbf k)\\,d\\mathbf k\\approx\\sum_\\nu w_\\nu g(\\mathbf k_\\nu)"
+      ],
+      "references": [
+        "monkhorst1976"
+      ],
+      "caution": {
+        "ja": "金属の占有とsmearing幅の依存、有限温度の自由エネルギーと零温度エネルギーを区別します。Γ点だけで十分かは系とセルに依存します。",
+        "en": "Distinguish metallic occupation/smearing dependence, finite-temperature free energy and zero-temperature energy. Whether Γ-only sampling is adequate depends on the system and cell."
+      }
+    },
+    {
+      "id": "mp2",
+      "lane": "correlation",
+      "paragraphs": {
+        "ja": [
+          "HF参照を出発点とする2次の摂動補正です。下式は正準HFスピン軌道、占有i,jと仮想a,b、反対称化2電子積分を使う代表形です。RHF空間軌道の式とは係数と添字規約が違います。",
+          "比較では基底、凍結内殻、参照軌道、スピン、同じ核配置を揃えます。小分子でも全エネルギーだけでなく、HFからの相関エネルギーを分けて記録します。"
+        ],
+        "en": [
+          "MP2 is a second-order perturbative correction to an HF reference. The representative expression uses canonical HF spin orbitals, occupied i,j, virtual a,b and antisymmetrized two-electron integrals. Coefficients and index conventions differ for restricted spatial-orbital formulas.",
+          "Match the basis, frozen core, reference orbitals, spin and nuclear geometry in comparisons. Save the correlation correction separately from total energy."
+        ]
+      },
+      "formula": [
+        "E_{\\rm MP2}^{(2)}=\\frac14\\sum_{ij}^{\\rm occ}\\sum_{ab}^{\\rm virt}\\frac{|\\langle ij\\Vert ab\\rangle|^2}{\\varepsilon_i+\\varepsilon_j-\\varepsilon_a-\\varepsilon_b}"
+      ],
+      "references": [
+        "moller1934"
+      ],
+      "caution": {
+        "ja": "小さい分母や強い静的相関では低次摂動が信頼できない場合があります。HFから下がったエネルギーを、そのまま厳密値への改善とは呼びません。",
+        "en": "Small denominators and strong static correlation can invalidate low-order perturbation. An energy below HF is not by itself evidence of improvement toward the exact value."
+      }
+    },
+    {
+      "id": "configuration-interaction",
+      "lane": "correlation",
+      "paragraphs": {
+        "ja": [
+          "多電子Hamiltonianを複数の行列式または配置状態関数の空間で対角化します。FCIは指定した有限1電子基底・電子数・対称性の全空間、CISDは参照から1・2重励起までを含める打切りです。",
+          "FCIを比較の参照に使うときは、同じ有限基底における参照であることを明記します。行列式数は急増するため、小さなH₂模型などから検証を設計します。"
+        ],
+        "en": [
+          "CI diagonalizes the many-electron Hamiltonian in a space of determinants or configuration state functions. FCI spans the full chosen finite one-electron basis, electron number and symmetry sector; CISD truncates to single and double excitations from a reference.",
+          "Use FCI as a reference only with its finite-basis scope stated. Determinant spaces grow rapidly, motivating small validation systems such as H₂."
+        ]
+      },
+      "formula": [
+        "|\\Psi\\rangle=\\sum_I c_I|\\Phi_I\\rangle,\\qquad \\sum_J H_{IJ}c_J=E c_I"
+      ],
+      "references": [
+        "knowles1984"
+      ],
+      "caution": {
+        "ja": "有限基底のFCIは連続空間の厳密解とは違います。打切りCIのサイズ整合性と、変分性の成立条件を確認します。",
+        "en": "Finite-basis FCI is not the exact continuum solution. Check size consistency of truncated CI and the assumptions behind variational bounds."
+      }
+    },
+    {
+      "id": "coupled-cluster",
+      "lane": "correlation",
+      "paragraphs": {
+        "ja": [
+          "結合クラスター法は励起演算子の指数で波動関数を表します。CCSDはT₁+T₂を反復し、CCSD(T)は通常その上に非反復の摂動的3重励起補正を加えます。CCSDTとの違いを保ちます。",
+          "弱い相関の単一参照系で有用ですが、単一行列式が十分か、振幅や参照の診断と併せて評価します。凍結内殻・基底・参照状態を揃えた比較が必要です。"
+        ],
+        "en": [
+          "Coupled cluster represents the wavefunction using an exponential excitation operator. CCSD iterates T₁+T₂; CCSD(T) conventionally adds a noniterative perturbative triples correction. It is distinct from CCSDT.",
+          "Assess whether a single determinant is adequate, using amplitude and reference diagnostics. Match frozen core, basis and reference state when comparing weakly correlated single-reference systems."
+        ]
+      },
+      "formula": [
+        "|\\Psi_{\\rm CC}\\rangle=e^{\\hat T}|\\Phi_0\\rangle,\\qquad \\hat T=\\hat T_1+\\hat T_2+\\cdots"
+      ],
+      "references": [
+        "raghavachari1989"
+      ],
+      "caution": {
+        "ja": "通常の射影CCエネルギーは変分上限ではありません。CCSD(T)を全ての結合解離・強相関系に通用する基準としません。",
+        "en": "Conventional projected CC energies are not variational upper bounds. CCSD(T) is not a universal standard for bond breaking or strong correlation."
+      }
+    },
+    {
+      "id": "multireference",
+      "lane": "correlation",
+      "paragraphs": {
+        "ja": [
+          "CASSCFは選んだ活性軌道内で配置係数と軌道を最適化する方法です。CAS(n_e,n_o)の電子数と空間軌道数、含めた軌道の性質、状態平均や対象スピンを記録します。",
+          "静的相関を扱う入口ですが、活性空間外の動的相関まで自動的に十分になるわけではありません。CASPT2やNEVPT2等の後続法は今後の展開項目として区別します。"
+        ],
+        "en": [
+          "CASSCF optimizes configuration coefficients and orbitals within a selected active space. Record CAS(n_e,n_o), specifying electrons and spatial orbitals, their character, spin and any state averaging.",
+          "It addresses static correlation, but does not automatically recover adequate dynamic correlation outside the active space. Subsequent methods such as CASPT2 and NEVPT2 are separate future extensions."
+        ]
+      },
+      "formula": [
+        "|\\Psi_{\\rm CAS}\\rangle=\\sum_{I\\in\\operatorname{CAS}(n_e,n_o)}c_I|\\Phi_I\\rangle"
+      ],
+      "references": [
+        "roos1980"
+      ],
+      "caution": {
+        "ja": "活性空間依存を数値格子の誤差と混同しません。異なる核配置で活性軌道の性質が変わっていないかも追跡します。",
+        "en": "Active-space dependence is distinct from grid error. Track orbital character across geometries rather than only orbital indices."
+      }
+    },
+    {
+      "id": "tddft",
+      "lane": "excited",
+      "paragraphs": {
+        "ja": [
+          "TDDFTは時間依存密度の理論です。下式は局所ポテンシャルを使う時間依存KSの代表形で、初期状態依存や交換相関の記憶効果は一般には残ります。実時間伝播と、基底状態の周りの線形応答計算を区別します。",
+          "線形応答では励起エネルギーや振動子強度、実時間では外場・時間刻み・伝播時間・吸収スペクトルへの変換条件を保存します。断熱近似は汎関数の時間依存の近似です。"
+        ],
+        "en": [
+          "TDDFT concerns time-dependent densities. The local time-dependent KS equation shown is representative; initial-state dependence and exchange-correlation memory can remain. Distinguish real-time propagation from linear response around a ground state.",
+          "For response calculations save excitation energies and oscillator strengths. For real time save the field, step size, propagation length and spectrum-transform settings. The adiabatic approximation concerns functional time dependence."
+        ]
+      },
+      "formula": [
+        "i\\partial_t\\phi_i(\\mathbf r,t)=[-\\tfrac12\\nabla^2+v_s[n](\\mathbf r,t)]\\phi_i(\\mathbf r,t)"
+      ],
+      "references": [
+        "runge1984"
+      ],
+      "caution": {
+        "ja": "基底状態のKS固有値差だけをTDDFTの励起エネルギーと呼びません。二重励起・長距離電荷移動等は選んだ近似の限界を確認します。",
+        "en": "Bare ground-state KS eigenvalue differences are not TDDFT excitation energies. Assess approximation limits for double excitations and long-range charge transfer."
+      }
+    },
+    {
+      "id": "quantum-monte-carlo",
+      "lane": "correlation",
+      "paragraphs": {
+        "ja": [
+          "VMCは試行波動関数を用いた変分エネルギーの確率評価、DMCは虚時間発展による基底状態への射影が基本です。電子のフェルミオン符号問題への対処として固定節近似等を用いる場合、その系統誤差を明記します。",
+          "乱数系列、自己相関を考慮した統計誤差、時間刻み、walker数、試行関数、有限サイズを記録します。一様電子ガスのCeperley–Alder計算は、LDA相関を考える上でも重要な一次文献です。"
+        ],
+        "en": [
+          "VMC samples a trial-wavefunction variational energy; DMC projects toward the ground state through imaginary-time evolution. When using a fixed-node treatment of the fermion sign problem, identify its systematic bias.",
+          "Record random streams, autocorrelation-aware statistical uncertainty, time step, walker population, trial state and finite size. Ceperley–Alder electron-gas calculations also connect to LDA correlation."
+        ]
+      },
+      "formula": [
+        "E_{\\rm VMC}=\\frac{\\int |\\Psi_T|^2 E_L\\,d\\mathbf R}{\\int |\\Psi_T|^2\\,d\\mathbf R},\\qquad E_L=\\frac{\\hat H\\Psi_T}{\\Psi_T}"
+      ],
+      "references": [
+        "ceperley1980"
+      ],
+      "caution": {
+        "ja": "統計誤差の棒だけでは固定節・時間刻み・有限サイズ等の系統誤差を表せません。量子コンピュータを使う計算という意味でもありません。",
+        "en": "Statistical error bars do not capture fixed-node, time-step or finite-size bias. Quantum Monte Carlo here does not mean computation on a quantum computer."
+      }
+    },
+    {
+      "id": "dmrg",
+      "lane": "correlation",
+      "paragraphs": {
+        "ja": [
+          "DMRGを量子化学へ適用するときは、軌道をサイトとし、多電子状態を行列積状態（MPS）等で近似します。bond dimensionを増やすと表現力が増しますが、必要量は軌道順序やエンタングルメントにも依存します。",
+          "活性軌道、軌道順序、bond dimension、sweep数、打切り指標とエネルギー収束を記録します。大きな活性空間の相関計算への入口であり、一般の3次元電子状態問題が常に容易になるという意味ではありません。"
+        ],
+        "en": [
+          "Quantum-chemical DMRG treats orbitals as sites and approximates many-electron states with representations such as matrix product states (MPS). Increasing bond dimension increases expressiveness; requirements also depend on orbital ordering and entanglement.",
+          "Record the active orbitals, ordering, bond dimension, sweeps, truncation measures and energy convergence. Access to larger correlated active spaces does not make arbitrary three-dimensional electronic-structure problems easy."
+        ]
+      },
+      "formula": [
+        "c_{n_1\\cdots n_L}\\approx\\mathbf A_1^{n_1}\\mathbf A_2^{n_2}\\cdots\\mathbf A_L^{n_L}"
+      ],
+      "references": [
+        "white1992",
+        "white1999"
+      ],
+      "caution": {
+        "ja": "小さい打切り指標だけで物理的な活性空間の妥当性は保証されません。有限bond dimensionの誤差と、活性空間・基底の誤差を分けます。",
+        "en": "A small truncation measure does not establish the physical adequacy of an active space. Separate finite-bond-dimension error from active-space and basis error."
+      }
+    }
+  ],
+  "references": [
+    {
+      "id": "schrodinger1926",
+      "year": 1926,
+      "author": "Schrödinger, E.",
+      "title": "Quantisierung als Eigenwertproblem",
+      "journal": "Annalen der Physik",
+      "doi": "10.1002/andp.19263840404",
+      "type": "article",
+      "source": "https://doi.org/10.1002/andp.19263840404",
+      "origin": "curated-quantum-reading",
+      "note": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+    },
+    {
+      "id": "hartree1928",
+      "year": 1928,
+      "author": "Hartree, D. R.",
+      "title": "The Wave Mechanics of an Atom with a Non-Coulomb Central Field. Part I. Theory and Methods",
+      "journal": "Mathematical Proceedings of the Cambridge Philosophical Society",
+      "doi": "10.1017/S0305004100011919",
+      "type": "article",
+      "source": "https://doi.org/10.1017/S0305004100011919",
+      "origin": "curated-quantum-reading",
+      "note": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+    },
+    {
+      "id": "dirac1930",
+      "year": 1930,
+      "author": "Dirac, P. A. M.",
+      "title": "Note on Exchange Phenomena in the Thomas Atom",
+      "journal": "Mathematical Proceedings of the Cambridge Philosophical Society",
+      "doi": "10.1017/S0305004100016108",
+      "type": "article",
+      "source": "https://doi.org/10.1017/S0305004100016108",
+      "origin": "curated-quantum-reading",
+      "note": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+    },
+    {
+      "id": "boys1950",
+      "year": 1950,
+      "author": "Boys, S. F.",
+      "title": "Electronic wave functions - I. A general method of calculation for the stationary states of any molecular system",
+      "journal": "Proceedings of the Royal Society A",
+      "doi": "10.1098/rspa.1950.0036",
+      "type": "article",
+      "source": "https://doi.org/10.1098/rspa.1950.0036",
+      "origin": "curated-quantum-reading",
+      "note": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+    },
+    {
+      "id": "roothaan1951",
+      "year": 1951,
+      "author": "Roothaan, C. C. J.",
+      "title": "New Developments in Molecular Orbital Theory",
+      "journal": "Reviews of Modern Physics",
+      "doi": "10.1103/RevModPhys.23.69",
+      "type": "article",
+      "source": "https://doi.org/10.1103/RevModPhys.23.69",
+      "origin": "curated-quantum-reading",
+      "note": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+    },
+    {
+      "id": "hohenberg1964",
+      "year": 1964,
+      "author": "Hohenberg, P. and Kohn, W.",
+      "title": "Inhomogeneous Electron Gas",
+      "journal": "Physical Review",
+      "doi": "10.1103/PhysRev.136.B864",
+      "type": "article",
+      "source": "https://doi.org/10.1103/PhysRev.136.B864",
+      "origin": "curated-quantum-reading",
+      "note": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+    },
+    {
+      "id": "kohn1965",
+      "year": 1965,
+      "author": "Kohn, W. and Sham, L. J.",
+      "title": "Self-Consistent Equations Including Exchange and Correlation Effects",
+      "journal": "Physical Review",
+      "doi": "10.1103/PhysRev.140.A1133",
+      "type": "article",
+      "source": "https://doi.org/10.1103/PhysRev.140.A1133",
+      "origin": "curated-quantum-reading",
+      "note": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+    },
+    {
+      "id": "pulay1980",
+      "year": 1980,
+      "author": "Pulay, P.",
+      "title": "Convergence acceleration of iterative sequences. The case of SCF iteration",
+      "journal": "Chemical Physics Letters",
+      "doi": "10.1016/0009-2614(80)80396-4",
+      "type": "article",
+      "source": "https://doi.org/10.1016/0009-2614(80)80396-4",
+      "origin": "curated-quantum-reading",
+      "note": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+    },
+    {
+      "id": "perdew1996",
+      "year": 1996,
+      "author": "Perdew, J. P. and Burke, K. and Ernzerhof, M.",
+      "title": "Generalized Gradient Approximation Made Simple",
+      "journal": "Physical Review Letters",
+      "doi": "10.1103/PhysRevLett.77.3865",
+      "type": "article",
+      "source": "https://doi.org/10.1103/PhysRevLett.77.3865",
+      "origin": "curated-quantum-reading",
+      "note": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+    },
+    {
+      "id": "sun2015",
+      "year": 2015,
+      "author": "Sun, J. and Ruzsinszky, A. and Perdew, J. P.",
+      "title": "Strongly Constrained and Appropriately Normed Semilocal Density Functional",
+      "journal": "Physical Review Letters",
+      "doi": "10.1103/PhysRevLett.115.036402",
+      "type": "article",
+      "source": "https://doi.org/10.1103/PhysRevLett.115.036402",
+      "origin": "curated-quantum-reading",
+      "note": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+    },
+    {
+      "id": "becke1993",
+      "year": 1993,
+      "author": "Becke, A. D.",
+      "title": "Density-functional thermochemistry. III. The role of exact exchange",
+      "journal": "The Journal of Chemical Physics",
+      "doi": "10.1063/1.464913",
+      "type": "article",
+      "source": "https://doi.org/10.1063/1.464913",
+      "origin": "curated-quantum-reading",
+      "note": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+    },
+    {
+      "id": "adamo1999",
+      "year": 1999,
+      "author": "Adamo, C. and Barone, V.",
+      "title": "Toward reliable density functional methods without adjustable parameters: The PBE0 model",
+      "journal": "The Journal of Chemical Physics",
+      "doi": "10.1063/1.478522",
+      "type": "article",
+      "source": "https://doi.org/10.1063/1.478522",
+      "origin": "curated-quantum-reading",
+      "note": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+    },
+    {
+      "id": "hamann1979",
+      "year": 1979,
+      "author": "Hamann, D. R. and Schlüter, M. and Chiang, C.",
+      "title": "Norm-Conserving Pseudopotentials",
+      "journal": "Physical Review Letters",
+      "doi": "10.1103/PhysRevLett.43.1494",
+      "type": "article",
+      "source": "https://doi.org/10.1103/PhysRevLett.43.1494",
+      "origin": "curated-quantum-reading",
+      "note": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+    },
+    {
+      "id": "vanderbilt1990",
+      "year": 1990,
+      "author": "Vanderbilt, D.",
+      "title": "Soft self-consistent pseudopotentials in a generalized eigenvalue formalism",
+      "journal": "Physical Review B",
+      "doi": "10.1103/PhysRevB.41.7892",
+      "type": "article",
+      "source": "https://doi.org/10.1103/PhysRevB.41.7892",
+      "origin": "curated-quantum-reading",
+      "note": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+    },
+    {
+      "id": "blochl1994",
+      "year": 1994,
+      "author": "Blöchl, P. E.",
+      "title": "Projector augmented-wave method",
+      "journal": "Physical Review B",
+      "doi": "10.1103/PhysRevB.50.17953",
+      "type": "article",
+      "source": "https://doi.org/10.1103/PhysRevB.50.17953",
+      "origin": "curated-quantum-reading",
+      "note": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+    },
+    {
+      "id": "monkhorst1976",
+      "year": 1976,
+      "author": "Monkhorst, H. J. and Pack, J. D.",
+      "title": "Special points for Brillouin-zone integrations",
+      "journal": "Physical Review B",
+      "doi": "10.1103/PhysRevB.13.5188",
+      "type": "article",
+      "source": "https://doi.org/10.1103/PhysRevB.13.5188",
+      "origin": "curated-quantum-reading",
+      "note": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+    },
+    {
+      "id": "moller1934",
+      "year": 1934,
+      "author": "Møller, C. and Plesset, M. S.",
+      "title": "Note on an Approximation Treatment for Many-Electron Systems",
+      "journal": "Physical Review",
+      "doi": "10.1103/PhysRev.46.618",
+      "type": "article",
+      "source": "https://doi.org/10.1103/PhysRev.46.618",
+      "origin": "curated-quantum-reading",
+      "note": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+    },
+    {
+      "id": "raghavachari1989",
+      "year": 1989,
+      "author": "Raghavachari, K. and Trucks, G. W. and Pople, J. A. and Head-Gordon, M.",
+      "title": "A fifth-order perturbation comparison of electron correlation theories",
+      "journal": "Chemical Physics Letters",
+      "doi": "10.1016/S0009-2614(89)87395-6",
+      "type": "article",
+      "source": "https://doi.org/10.1016/S0009-2614(89)87395-6",
+      "origin": "curated-quantum-reading",
+      "note": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+    },
+    {
+      "id": "roos1980",
+      "year": 1980,
+      "author": "Roos, B. O. and Taylor, P. R. and Siegbahn, P. E. M.",
+      "title": "A complete active space SCF method (CASSCF) using a density matrix formulated super-CI approach",
+      "journal": "Chemical Physics",
+      "doi": "10.1016/0301-0104(80)80045-0",
+      "type": "article",
+      "source": "https://doi.org/10.1016/0301-0104(80)80045-0",
+      "origin": "curated-quantum-reading",
+      "note": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+    },
+    {
+      "id": "runge1984",
+      "year": 1984,
+      "author": "Runge, E. and Gross, E. K. U.",
+      "title": "Density-Functional Theory for Time-Dependent Systems",
+      "journal": "Physical Review Letters",
+      "doi": "10.1103/PhysRevLett.52.997",
+      "type": "article",
+      "source": "https://doi.org/10.1103/PhysRevLett.52.997",
+      "origin": "curated-quantum-reading",
+      "note": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+    },
+    {
+      "id": "ceperley1980",
+      "year": 1980,
+      "author": "Ceperley, D. M. and Alder, B. J.",
+      "title": "Ground State of the Electron Gas by a Stochastic Method",
+      "journal": "Physical Review Letters",
+      "doi": "10.1103/PhysRevLett.45.566",
+      "type": "article",
+      "source": "https://doi.org/10.1103/PhysRevLett.45.566",
+      "origin": "curated-quantum-reading",
+      "note": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+    },
+    {
+      "id": "white1992",
+      "year": 1992,
+      "author": "White, S. R.",
+      "title": "Density matrix formulation for quantum renormalization groups",
+      "journal": "Physical Review Letters",
+      "doi": "10.1103/PhysRevLett.69.2863",
+      "type": "article",
+      "source": "https://doi.org/10.1103/PhysRevLett.69.2863",
+      "origin": "curated-quantum-reading",
+      "note": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+    },
+    {
+      "id": "white1999",
+      "year": 1999,
+      "author": "White, S. R. and Martin, R. L.",
+      "title": "Ab initio quantum chemistry using the density matrix renormalization group",
+      "journal": "The Journal of Chemical Physics",
+      "doi": "10.1063/1.478295",
+      "type": "article",
+      "source": "https://doi.org/10.1063/1.478295",
+      "origin": "curated-quantum-reading",
+      "note": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+    },
+    {
+      "id": "knowles1984",
+      "year": 1984,
+      "author": "Knowles, P. J. and Handy, N. C.",
+      "title": "A new determinant-based full configuration interaction method",
+      "journal": "Chemical Physics Letters",
+      "doi": "10.1016/0009-2614(84)85513-X",
+      "type": "article",
+      "source": "https://doi.org/10.1016/0009-2614(84)85513-X",
+      "origin": "curated-quantum-reading",
+      "note": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+    }
+  ],
+  "verification_plan": [
+    {
+      "id": "hydrogen",
+      "state": "planned",
+      "title": {
+        "ja": "1電子：水素型原子",
+        "en": "One electron: hydrogenic atoms"
+      },
+      "check": {
+        "ja": "E_n = −Z²/(2n²)、規格化、固有値残差を確認し、領域と格子の誤差を分離。",
+        "en": "Check E_n = −Z²/(2n²), normalization and eigenpair residuals; separate domain and grid errors."
+      }
+    },
+    {
+      "id": "helium-dft",
+      "state": "planned",
+      "title": {
+        "ja": "最初のDFT：球対称He原子",
+        "en": "First DFT example: spherical helium"
+      },
+      "check": {
+        "ja": "原子単位系・閉殻・交換のみLDAを明示。Hartree場、電子数、密度とエネルギーのSCF履歴、格子収束、独立実装との比較を保存。相関を含むLDAとは区別。",
+        "en": "Specify atomic units, a closed shell and exchange-only LDA. Save Hartree fields, electron count, density/energy SCF histories, grid convergence and an independent comparison; distinguish LDA with correlation."
+      }
+    },
+    {
+      "id": "h2-hf-dft",
+      "state": "planned",
+      "title": {
+        "ja": "分子：H₂のHF・DFTと有限基底FCI",
+        "en": "Molecule: H₂ with HF, DFT and finite-basis FCI"
+      },
+      "check": {
+        "ja": "核間距離・基底・スピン・汎関数・求積格子・SCF閾値を固定。解離曲線で数値誤差と単一参照・汎関数の限界を分ける。",
+        "en": "Fix geometry, basis, spin, functional, quadrature grid and SCF thresholds. Use dissociation curves to separate numerical error from single-reference and functional limitations."
+      }
+    },
+    {
+      "id": "periodic",
+      "state": "planned",
+      "title": {
+        "ja": "周期系：基底・k点・セルの収束",
+        "en": "Periodic systems: basis, k-mesh and cell convergence"
+      },
+      "check": {
+        "ja": "擬ポテンシャルの識別子と価電子、カットオフ、k点、電荷中性、占有の扱いを保存して誤差要因を一つずつ変える。",
+        "en": "Record pseudopotential identity and valence, cutoff, k mesh, neutrality and occupations; vary one numerical source at a time."
+      }
+    }
+  ],
+  "future_topics": {
+    "ja": [
+      "軌道自由DFT・Thomas–Fermi模型",
+      "range-separated hybrid・分散・二重hybrid",
+      "GW・Bethe–Salpeter方程式・RPA",
+      "CASPT2・NEVPT2と多参照相関",
+      "力・Pulay項・構造最適化",
+      "相対論・スピン軌道・非共線スピン"
+    ],
+    "en": [
+      "Orbital-free DFT and Thomas–Fermi models",
+      "Range-separated hybrids, dispersion and double hybrids",
+      "GW, Bethe–Salpeter equations and RPA",
+      "CASPT2, NEVPT2 and multireference correlation",
+      "Forces, Pulay terms and geometry optimization",
+      "Relativity, spin–orbit coupling and noncollinear spin"
+    ]
+  },
+  "source_policy": {
+    "ja": "標準的な代表式を独自に要約した導入です。一次文献の書誌を照合し、理論の位置付けは原論文の公開情報と公式資料で確認しています。原論文の全式の監査や数値再現は未実施です。",
+    "en": "An original introductory synthesis of standard representative equations. Bibliographic metadata and conceptual entry points are checked against primary publication information and official documentation. Full-paper equation audits and numerical reproduction have not been performed."
+  },
+  "documentation": [
+    {
+      "label": "PySCF: SCF methods",
+      "url": "https://pyscf.org/user/scf.html"
+    },
+    {
+      "label": "PySCF: density functional theory",
+      "url": "https://pyscf.org/user/dft.html"
+    },
+    {
+      "label": "PySCF: MP2",
+      "url": "https://pyscf.org/user/mp.html"
+    },
+    {
+      "label": "PySCF: configuration interaction",
+      "url": "https://pyscf.org/user/ci.html"
+    },
+    {
+      "label": "PySCF: coupled cluster",
+      "url": "https://pyscf.org/user/cc.html"
+    },
+    {
+      "label": "PySCF: MCSCF",
+      "url": "https://pyscf.org/user/mcscf.html"
+    }
+  ]
+}

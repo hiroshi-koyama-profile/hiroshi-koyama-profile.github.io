@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "edition": "Published web edition",
-  "counted_on": "2026-11-07",
+  "counted_on": "2026-11-21",
   "policy": {
     "equations": "Named equation/model entries, not scalar component equations or mathematically disjoint families. Includes frameworks and auxiliary formulations; variants share one entry except the three separately explained SR/GR fluid systems. Biological entries are imported once from their own catalog.",
     "methods": "Named numerical methods and building blocks with a reading chapter. Aliases count once; RK stages, dimensions, parameter combinations, mesh layouts and theoretical conditions do not add methods. A family and a separately explained algorithm may both appear. Not a count of mutually exclusive end-to-end solvers.",
@@ -10,24 +10,24 @@
     "test_problems": "Count independent problems across published atlas results and the verified public code edition. Distinguish governing equations, dimensions, boundary conditions and named initial/source problems; merge solver, mesh, step-size, parameter-sweep, random-seed and presentation variants of the same problem. Repeated Sod exhibits, wedge Mach variants and CT/GLM variants do not add problems. Exclude reference-only evaluations, planned/literature-only entries, diagrams, and local identity/invariant/input-error unit checks. Static-force, boundary-value, approximation and algebraic problems are included; not every entry is a time-evolving simulation."
   },
   "counts": {
-    "equations": 42,
-    "methods": 90,
-    "papers": 140,
-    "references": 177,
-    "journal_articles": 137,
+    "equations": 46,
+    "methods": 107,
+    "papers": 164,
+    "references": 201,
+    "journal_articles": 161,
     "conference_papers": 3,
     "books": 22,
     "chapters": 2,
     "reports": 3,
     "other_sources": 10,
     "local_equations": 15,
-    "reading_equations": 27,
+    "reading_equations": 31,
     "local_methods": 85,
-    "reading_methods": 5,
+    "reading_methods": 22,
     "biological_entries": 22,
     "gallery_cases": 9,
     "gallery_equations": 7,
-    "reading_chapters": 47,
+    "reading_chapters": 49,
     "test_problems": 58,
     "saved_test_problems": 58,
     "code_test_problems": 0
@@ -1220,6 +1220,216 @@
       "status": "reading",
       "group": "Biological model survey",
       "scope": "Bistability is not guaranteed for arbitrary Hill exponents or production rates. Induction, mRNA dynamics and noise are additional model choices."
+    },
+    {
+      "kind": "method",
+      "id": "schrodinger",
+      "label": "Schrodinger eigenproblems",
+      "chapter": "quantum-chemistry",
+      "status": "reading",
+      "group": "Electronic structure & quantum chemistry",
+      "scope": "Introductory formulation only; no dedicated solver or numerical validation.",
+      "origin": "curated-quantum-reading"
+    },
+    {
+      "kind": "method",
+      "id": "electronic-bases",
+      "label": "Electronic-structure basis sets",
+      "chapter": "quantum-chemistry",
+      "status": "reading",
+      "group": "Electronic structure & quantum chemistry",
+      "scope": "Introductory formulation only; no dedicated solver or numerical validation.",
+      "origin": "curated-quantum-reading"
+    },
+    {
+      "kind": "method",
+      "id": "hartree-fock",
+      "label": "Hartree–Fock",
+      "chapter": "quantum-chemistry",
+      "status": "reading",
+      "group": "Electronic structure & quantum chemistry",
+      "scope": "Introductory formulation only; no dedicated solver or numerical validation.",
+      "origin": "curated-quantum-reading"
+    },
+    {
+      "kind": "method",
+      "id": "kohn-sham-dft",
+      "label": "Kohn–Sham density functional theory / DFT",
+      "chapter": "quantum-chemistry",
+      "status": "reading",
+      "group": "Electronic structure & quantum chemistry",
+      "scope": "Introductory formulation only; no dedicated solver or numerical validation.",
+      "origin": "curated-quantum-reading"
+    },
+    {
+      "kind": "method",
+      "id": "scf",
+      "label": "Self-consistent field iteration / SCF",
+      "chapter": "quantum-chemistry",
+      "status": "reading",
+      "group": "Electronic structure & quantum chemistry",
+      "scope": "Introductory formulation only; no dedicated solver or numerical validation.",
+      "origin": "curated-quantum-reading"
+    },
+    {
+      "kind": "method",
+      "id": "diis",
+      "label": "Pulay / DIIS acceleration",
+      "chapter": "quantum-chemistry",
+      "status": "reading",
+      "group": "Electronic structure & quantum chemistry",
+      "scope": "Introductory formulation only; no dedicated solver or numerical validation.",
+      "origin": "curated-quantum-reading"
+    },
+    {
+      "kind": "method",
+      "id": "hartree-poisson",
+      "label": "Coulomb and Hartree potentials",
+      "chapter": "quantum-chemistry",
+      "status": "reading",
+      "group": "Electronic structure & quantum chemistry",
+      "scope": "Introductory formulation only; no dedicated solver or numerical validation.",
+      "origin": "curated-quantum-reading"
+    },
+    {
+      "kind": "method",
+      "id": "xc-functionals",
+      "label": "LDA, GGA and hybrid functionals",
+      "chapter": "quantum-chemistry",
+      "status": "reading",
+      "group": "Electronic structure & quantum chemistry",
+      "scope": "Introductory formulation only; no dedicated solver or numerical validation.",
+      "origin": "curated-quantum-reading"
+    },
+    {
+      "kind": "method",
+      "id": "pseudopotentials",
+      "label": "Pseudopotentials and PAW",
+      "chapter": "quantum-chemistry",
+      "status": "reading",
+      "group": "Electronic structure & quantum chemistry",
+      "scope": "Introductory formulation only; no dedicated solver or numerical validation.",
+      "origin": "curated-quantum-reading"
+    },
+    {
+      "kind": "method",
+      "id": "k-point",
+      "label": "Periodic electronic structure and k-point sampling",
+      "chapter": "quantum-chemistry",
+      "status": "reading",
+      "group": "Electronic structure & quantum chemistry",
+      "scope": "Introductory formulation only; no dedicated solver or numerical validation.",
+      "origin": "curated-quantum-reading"
+    },
+    {
+      "kind": "method",
+      "id": "mp2",
+      "label": "MP2 perturbation theory",
+      "chapter": "quantum-chemistry",
+      "status": "reading",
+      "group": "Electronic structure & quantum chemistry",
+      "scope": "Introductory formulation only; no dedicated solver or numerical validation.",
+      "origin": "curated-quantum-reading"
+    },
+    {
+      "kind": "method",
+      "id": "configuration-interaction",
+      "label": "Configuration interaction / CI",
+      "chapter": "quantum-chemistry",
+      "status": "reading",
+      "group": "Electronic structure & quantum chemistry",
+      "scope": "Introductory formulation only; no dedicated solver or numerical validation.",
+      "origin": "curated-quantum-reading"
+    },
+    {
+      "kind": "method",
+      "id": "coupled-cluster",
+      "label": "Coupled cluster / CCSD(T)",
+      "chapter": "quantum-chemistry",
+      "status": "reading",
+      "group": "Electronic structure & quantum chemistry",
+      "scope": "Introductory formulation only; no dedicated solver or numerical validation.",
+      "origin": "curated-quantum-reading"
+    },
+    {
+      "kind": "method",
+      "id": "multireference",
+      "label": "CASSCF and multireference methods",
+      "chapter": "quantum-chemistry",
+      "status": "reading",
+      "group": "Electronic structure & quantum chemistry",
+      "scope": "Introductory formulation only; no dedicated solver or numerical validation.",
+      "origin": "curated-quantum-reading"
+    },
+    {
+      "kind": "method",
+      "id": "tddft",
+      "label": "Time-dependent density functional theory / TDDFT",
+      "chapter": "quantum-chemistry",
+      "status": "reading",
+      "group": "Electronic structure & quantum chemistry",
+      "scope": "Introductory formulation only; no dedicated solver or numerical validation.",
+      "origin": "curated-quantum-reading"
+    },
+    {
+      "kind": "method",
+      "id": "quantum-monte-carlo",
+      "label": "Quantum Monte Carlo",
+      "chapter": "quantum-chemistry",
+      "status": "reading",
+      "group": "Electronic structure & quantum chemistry",
+      "scope": "Introductory formulation only; no dedicated solver or numerical validation.",
+      "origin": "curated-quantum-reading"
+    },
+    {
+      "kind": "method",
+      "id": "dmrg",
+      "label": "DMRG and tensor networks",
+      "chapter": "quantum-chemistry",
+      "status": "reading",
+      "group": "Electronic structure & quantum chemistry",
+      "scope": "Introductory formulation only; no dedicated solver or numerical validation.",
+      "origin": "curated-quantum-reading"
+    },
+    {
+      "kind": "equation",
+      "id": "stationary-schrodinger",
+      "label": "Stationary electronic Schrödinger equation",
+      "chapter": "quantum-chemistry",
+      "status": "reading",
+      "group": "Electronic structure & quantum chemistry",
+      "scope": "A fixed-nuclei nonrelativistic electronic many-body eigenproblem; nuclear repulsion is added separately.",
+      "origin": "curated-quantum-reading"
+    },
+    {
+      "kind": "equation",
+      "id": "hartree-fock-model",
+      "label": "Closed-shell Hartree–Fock equations",
+      "chapter": "quantum-chemistry",
+      "status": "reading",
+      "group": "Electronic structure & quantum chemistry",
+      "scope": "Representative closed-shell RHF spatial-orbital equations with generally nonlocal exchange. No dedicated implementation is published.",
+      "origin": "curated-quantum-reading"
+    },
+    {
+      "kind": "equation",
+      "id": "kohn-sham-model",
+      "label": "Local Kohn–Sham DFT",
+      "chapter": "quantum-chemistry",
+      "status": "reading",
+      "group": "Electronic structure & quantum chemistry",
+      "scope": "Representative local KS equations for density functionals. Distinguish generalized KS treatments and specify the exchange-correlation approximation.",
+      "origin": "curated-quantum-reading"
+    },
+    {
+      "kind": "equation",
+      "id": "time-dependent-kohn-sham",
+      "label": "Time-dependent Kohn–Sham equations",
+      "chapter": "quantum-chemistry",
+      "status": "reading",
+      "group": "Electronic structure & quantum chemistry",
+      "scope": "Representative local time-dependent KS equations. Distinguish initial-state dependence, exchange-correlation memory and adiabatic approximations. No dedicated real-time or response implementation is published.",
+      "origin": "curated-quantum-reading"
     }
   ],
   "publications": [
@@ -2107,6 +2317,150 @@
       "id": "schneider2015cholla",
       "type": "article",
       "identity": "doi:10.1088/0067-0049/217/2/24"
+    },
+    {
+      "id": "schrodinger1926",
+      "type": "article",
+      "identity": "doi:10.1002/andp.19263840404",
+      "origin": "curated-quantum-reading"
+    },
+    {
+      "id": "hartree1928",
+      "type": "article",
+      "identity": "doi:10.1017/s0305004100011919",
+      "origin": "curated-quantum-reading"
+    },
+    {
+      "id": "dirac1930",
+      "type": "article",
+      "identity": "doi:10.1017/s0305004100016108",
+      "origin": "curated-quantum-reading"
+    },
+    {
+      "id": "boys1950",
+      "type": "article",
+      "identity": "doi:10.1098/rspa.1950.0036",
+      "origin": "curated-quantum-reading"
+    },
+    {
+      "id": "roothaan1951",
+      "type": "article",
+      "identity": "doi:10.1103/revmodphys.23.69",
+      "origin": "curated-quantum-reading"
+    },
+    {
+      "id": "hohenberg1964",
+      "type": "article",
+      "identity": "doi:10.1103/physrev.136.b864",
+      "origin": "curated-quantum-reading"
+    },
+    {
+      "id": "kohn1965",
+      "type": "article",
+      "identity": "doi:10.1103/physrev.140.a1133",
+      "origin": "curated-quantum-reading"
+    },
+    {
+      "id": "pulay1980",
+      "type": "article",
+      "identity": "doi:10.1016/0009-2614(80)80396-4",
+      "origin": "curated-quantum-reading"
+    },
+    {
+      "id": "perdew1996",
+      "type": "article",
+      "identity": "doi:10.1103/physrevlett.77.3865",
+      "origin": "curated-quantum-reading"
+    },
+    {
+      "id": "sun2015",
+      "type": "article",
+      "identity": "doi:10.1103/physrevlett.115.036402",
+      "origin": "curated-quantum-reading"
+    },
+    {
+      "id": "becke1993",
+      "type": "article",
+      "identity": "doi:10.1063/1.464913",
+      "origin": "curated-quantum-reading"
+    },
+    {
+      "id": "adamo1999",
+      "type": "article",
+      "identity": "doi:10.1063/1.478522",
+      "origin": "curated-quantum-reading"
+    },
+    {
+      "id": "hamann1979",
+      "type": "article",
+      "identity": "doi:10.1103/physrevlett.43.1494",
+      "origin": "curated-quantum-reading"
+    },
+    {
+      "id": "vanderbilt1990",
+      "type": "article",
+      "identity": "doi:10.1103/physrevb.41.7892",
+      "origin": "curated-quantum-reading"
+    },
+    {
+      "id": "blochl1994",
+      "type": "article",
+      "identity": "doi:10.1103/physrevb.50.17953",
+      "origin": "curated-quantum-reading"
+    },
+    {
+      "id": "monkhorst1976",
+      "type": "article",
+      "identity": "doi:10.1103/physrevb.13.5188",
+      "origin": "curated-quantum-reading"
+    },
+    {
+      "id": "moller1934",
+      "type": "article",
+      "identity": "doi:10.1103/physrev.46.618",
+      "origin": "curated-quantum-reading"
+    },
+    {
+      "id": "raghavachari1989",
+      "type": "article",
+      "identity": "doi:10.1016/s0009-2614(89)87395-6",
+      "origin": "curated-quantum-reading"
+    },
+    {
+      "id": "roos1980",
+      "type": "article",
+      "identity": "doi:10.1016/0301-0104(80)80045-0",
+      "origin": "curated-quantum-reading"
+    },
+    {
+      "id": "runge1984",
+      "type": "article",
+      "identity": "doi:10.1103/physrevlett.52.997",
+      "origin": "curated-quantum-reading"
+    },
+    {
+      "id": "ceperley1980",
+      "type": "article",
+      "identity": "doi:10.1103/physrevlett.45.566",
+      "origin": "curated-quantum-reading"
+    },
+    {
+      "id": "white1992",
+      "type": "article",
+      "identity": "doi:10.1103/physrevlett.69.2863",
+      "origin": "curated-quantum-reading"
+    },
+    {
+      "id": "white1999",
+      "type": "article",
+      "identity": "doi:10.1063/1.478295",
+      "origin": "curated-quantum-reading"
+    },
+    {
+      "id": "knowles1984",
+      "type": "article",
+      "identity": "doi:10.1016/0009-2614(84)85513-x",
+      "origin": "curated-quantum-reading"
     }
   ],
   "source_sha256": {
@@ -2120,5 +2474,10 @@
     "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/test-cases/index.json",
     "catalog": "catalog/atlas-test-problems.json",
     "reviewed_on": "2026-11-21"
+  },
+  "public_extension_sha256": {
+    "catalog/atlas-quantum.json": "af3b949a518c28ea332bb3099dee2b37f7864df565d112c40920a8fb23e5a64c",
+    "catalog/atlas-methods.json": "cec31fbd02ad43ac516c03f419e32b8cde66f1c4c19437049a7c0601e21d8198",
+    "catalog/atlas-equations.json": "101a4295afc533766ee79825399fb04545b2e1be2a1d0bea24615da1f44ad522"
   }
 }

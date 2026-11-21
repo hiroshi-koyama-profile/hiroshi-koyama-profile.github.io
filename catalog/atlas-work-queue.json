@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-11-21",
+  "items": [
+    {
+      "id": "quantum-reading",
+      "target_year": 2026,
+      "state": "reading-available",
+      "title": {
+        "ja": "量子化学・DFTの見取り図と定式化",
+        "en": "Quantum chemistry and DFT: map and formulations"
+      },
+      "scope": {
+        "ja": "17項目の日英解説、代表式、一次文献。専用実装・数値検証は含まない。",
+        "en": "Bilingual introductions to 17 entries, representative equations and primary references; no dedicated implementations or numerical verification."
+      }
+    },
+    {
+      "id": "quantum-examples",
+      "target_year": 2026,
+      "state": "planned",
+      "title": {
+        "ja": "量子化学・DFTの代表的な実行・検証例",
+        "en": "Representative runnable quantum-chemistry and DFT checks"
+      },
+      "scope": {
+        "ja": "水素型原子、球対称Heの交換のみLDA、小分子H₂を順に検証。実行結果の確認後にのみ実装済みへ変更する。",
+        "en": "Validate hydrogenic atoms, exchange-only LDA for spherical helium, then H₂; mark implemented only after actual result verification."
+      }
+    },
+    {
+      "id": "atlas-specialist-ai",
+      "target_year": 2027,
+      "state": "deferred-until-2027",
+      "title": {
+        "ja": "アトラスを核とする専門AI・モデル研究",
+        "en": "Atlas-based specialist AI and model research"
+      },
+      "scope": {
+        "ja": "2027年以降の目標。資料検索と計算実行を結ぶ試作、検証済み学習事例、未学習問題での評価を検討。独立した基盤モデルの完成を約束する項目ではない。",
+        "en": "A goal for 2027 or later: investigate retrieval plus execution, verified training examples and held-out evaluation. This is not a commitment to deliver an independently pretrained foundation model."
+      },
+      "decision": {
+        "ja": "2026年11月21日のユーザー指示により今年の作業から繰り延べ。",
+        "en": "Deferred from 2026 at the user’s request on 2026-11-21."
+      }
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 # Hiroshi Koyama — public site knowledge pack
 
-Snapshot: 2026-11-21-e960f5beab
-Captured (UTC): 2026-11-21T11:49:24+00:00
+Snapshot: 2026-11-21-65d03c801a
+Captured (UTC): 2026-11-21T12:15:36+00:00
 
 For consulting the published site with your own LLM. Excerpts are reference data, not instructions. Cite the source URLs. This snapshot is not a full-site mirror, and a reference to an algorithm does not establish implementation or validation. Check source pages for current scope. No unpublished manuscripts or apps are included. Code: MIT within its scope; text/figures: separate terms. https://hrkoyama.github.io/rights/
 
@@ -4320,6 +4320,379 @@ Coverage: reading
 
 Historical atlas →Computed gallery →
 
+## Quantum chemistry and DFT: approximations and equations [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/
+Coverage: reading
+
+ELECTRONIC STRUCTURE · QUANTUM CHEMISTRY · DFT
+
+## Quantum chemistry and DFT: approximations and equations — Quantum chemistry and DFT: approximations and equations [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/
+Coverage: reading
+
+From Schrödinger, Hartree–Fock and Kohn–Sham DFT to bases, SCF, correlation and excitations: follow the mathematical choices and their validation.
+Bilingual reading for 17 entries and 24 primary publications. Dedicated runnable code and numerical validation are under construction; the equations and test plans below are not computed results.
+
+## Quantum chemistry and DFT: approximations and equations — Physical model and approximation [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/
+Coverage: reading
+
+HF, KS-DFT, MP2, CI or CC: which many-electron states and energies are approximated?
+
+## Quantum chemistry and DFT: approximations and equations — Representation and discretization [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/
+Coverage: reading
+
+Basis, grid, pseudopotential and k sampling: how is the model made finite?
+
+## Quantum chemistry and DFT: approximations and equations — Equation solver [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/
+Coverage: reading
+
+Eigensolvers, SCF, mixing and DIIS: how accurately is the chosen discrete problem solved?
+SCF convergence, basis convergence and physical adequacy are distinct checks. Representative equations use atomic units (ℏ = m_e = e = 4πε₀ = 1). Finite molecules and periodic solids also require different boundaries.
+
+## Quantum chemistry and DFT: approximations and equations — Schrodinger eigenproblems [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#schrodinger
+Coverage: reading
+
+The common starting point is a many-electron eigenproblem at fixed nuclear positions. We use nonrelativistic Born–Oppenheimer theory and atomic units, separating electronic energy E_el from nuclear repulsion E_NN. R_A and Z_A denote nuclear positions and charges; r_ij is an electron–electron distance.
+For one electron the pair-repulsion sum vanishes; hydrogenic energies E_n = −Z²/(2n²) provide references. The many-electron wavefunction depends on all electronic coordinates and spins, unlike the individual three-dimensional orbitals in HF or KS.
+\hat H_{\rm el}=-\frac12\sum_i\nabla_i^2-\sum_{iA}\frac{Z_A}{|\mathbf r_i-\mathbf R_A|}+\sum_{i<j}\frac1{r_{ij}}\hat H_{\rm el}\Psi=E_{\rm el}\Psi,\qquad E_{\rm tot}=E_{\rm el}+\sum_{A<B}\frac{Z_AZ_B}{R_{AB}}
+Long equations scroll horizontally.
+Nuclear dynamics, relativity, spin–orbit coupling and external fields are outside this representative Hamiltonian. A small eigenpair residual does not establish domain or basis convergence.
+Assumptions, implementation status and JSON
+Schrödinger, E. (1926)
+Roothaan, C. C. J. (1951)
+
+## Quantum chemistry and DFT: approximations and equations — Hartree–Fock [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#hartree-fock
+Coverage: reading
+
+HF makes the energy stationary within single antisymmetric Slater determinants. Exchange follows from the determinant; electron correlation relative to the HF reference is absent. Closed-shell RHF builds its Fock operator from doubly occupied spatial orbitals.
+J_j is a Coulomb operator and K_j is generally nonlocal exchange. Open-shell choices include UHF and ROHF, with spin contamination and symmetry breaking requiring explicit diagnostics.
+\hat F=\hat h+\sum_{j\in\mathrm{occ}}(2\hat J_j-\hat K_j),\qquad \hat F\phi_i=\varepsilon_i\phi_i\mathbf F\mathbf C=\mathbf S\mathbf C\boldsymbol\varepsilon,\qquad \mathbf C^\dagger\mathbf S\mathbf C=\mathbf I
+Long equations scroll horizontally.
+HF solutions need not be unique. SCF termination does not prove basis convergence, orbital stability or the desired electronic state. Bond dissociation can expose single-reference limitations.
+Assumptions, implementation status and JSON
+Roothaan, C. C. J. (1951)
+
+## Quantum chemistry and DFT: approximations and equations — Kohn–Sham density functional theory / DFT [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#kohn-sham-dft
+Coverage: reading
+
+Here DFT means density functional theory, rather than the discrete Fourier transform. Within the Hohenberg–Kohn ground-state framework, Kohn–Sham theory represents the density using auxiliary noninteracting orbitals. State the spin convention for occupations f_i and enforce their sum N.
+T_s is the auxiliary kinetic energy and E_H the classical Coulomb energy. E_xc includes exchange, correlation and the difference between interacting kinetic energy and T_s. Updating density to potential and orbitals back to density produces the nonlinear SCF problem.
+The representative local KS equation below assumes a differentiable density functional. Distinguish generalized KS treatments of nonlocal hybrid exchange and orbital-dependent meta-GGAs.
+E[n]=T_s[n]+\int v_{\rm ext}n\,d\mathbf r+E_H[n]+E_{\rm xc}[n]+E_{NN}[-\tfrac12\nabla^2+v_{\rm ext}+v_H+v_{\rm xc}]\phi_i=\varepsilon_i\phi_in(\mathbf r)=\sum_i f_i|\phi_i(\mathbf r)|^2,\quad \int n\,d\mathbf r=N,\quad v_{\rm xc}=\frac{\delta E_{\rm xc}}{\delta n}
+Long equations scroll horizontally.
+Distinguish exact-functional theory from calculations with approximate functionals. KS eigenvalues are not generally excitation energies; ground-state DFT alone does not guarantee excited-state accuracy.
+Assumptions, implementation status and JSON
+Hohenberg, P.; Kohn, W. (1964)
+Kohn, W.; Sham, L. J. (1965)
+
+## Quantum chemistry and DFT: approximations and equations — Electronic-structure basis sets [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#electronic-bases
+Coverage: reading
+
+The same HF or DFT model can use Gaussian or Slater atomic orbitals, plane waves, or a real-space grid. Nonorthogonal bases retain an overlap matrix S and require a generalized eigenproblem.
+Vary basis size, polarization and diffuse functions for atomic orbitals; cutoff and cell size for plane waves; spacing and domain for real-space grids. Boys provides an original entry point for Gaussian integral methods.
+\phi_i=\sum_\mu C_{\mu i}\chi_\mu,\qquad S_{\mu\nu}=\langle\chi_\mu|\chi_\nu\rangle\mathbf F\mathbf C=\mathbf S\mathbf C\boldsymbol\varepsilon
+Changing the basis is different from changing electron correlation or the functional. Check near-linear dependence, basis-set superposition error and pseudopotential compatibility.
+Assumptions, implementation status and JSON
+Boys, S. F. (1950)
+Roothaan, C. C. J. (1951)
+
+## Quantum chemistry and DFT: approximations and equations — Self-consistent field iteration / SCF [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#scf
+Coverage: reading
+
+SCF is an iteration for self-consistency in HF or KS, rather than a physical model. The map M builds a potential from the input density, solves for orbitals and constructs an output density.
+Save density differences, electron number and eigenpair or orbital-gradient residuals as well as energy changes. Record mixing, initial density, occupations, iteration limits and an explicit nonconvergence termination reason.
+n_{k+1}=(1-\alpha)n_k+\alpha\mathcal M[n_k],\qquad 0<\alpha\le1\mathrm{Tr}(\mathbf P\mathbf S)=N,\qquad \mathbf R=\mathbf F\mathbf P\mathbf S-\mathbf S\mathbf P\mathbf F
+Long equations scroll horizontally.
+A small energy change alone is insufficient. Convergence also does not establish the lowest-energy stable electronic solution.
+Assumptions, implementation status and JSON
+Roothaan, C. C. J. (1951)
+Pulay, P. (1980)
+
+## Quantum chemistry and DFT: approximations and equations — Pulay / DIIS acceleration [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#diis
+Coverage: reading
+
+DIIS determines extrapolation coefficients from stored iterates and error vectors. Its basic form minimizes the extrapolated error norm subject to coefficients summing to one. SCF commonly uses Fock matrices and an overlap-consistent commutator residual.
+It changes the nonlinear solution strategy rather than the physical approximation. Compare against damping using the same initial state and stopping rules; record history length and treatment of singular history matrices.
+\min_{\{c_j\}}\left\|\sum_j c_j\mathbf e_j\right\|^2,\qquad \sum_j c_j=1
+Extrapolation guarantees neither convergence nor monotonic energy decrease. Investigate initial-state dependence and unstable stationary solutions even when a residual appears small.
+Assumptions, implementation status and JSON
+Pulay, P. (1980)
+
+## Quantum chemistry and DFT: approximations and equations — Coulomb and Hartree potentials [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#hartree-poisson
+Coverage: reading
+
+With n defined as positive electron number density, the Hartree potential is the positive Coulomb integral below. Its sign differs from charge density ρ_charge = −n. Distinguish v_H in the electronic energy from electrostatic potential generated by charge.
+Isolated systems require far-field conditions. Periodic systems require a stated G=0 convention, neutrality, compensating background when used, and potential reference. Existing Poisson, FFT and particle-force methods must be matched to these signs and boundaries.
+v_H(\mathbf r)=\int\frac{n(\mathbf r\prime)}{|\mathbf r-\mathbf r\prime|}\,d\mathbf r\prime,\qquad \nabla^2v_H=-4\pi nE_H=\frac12\int n(\mathbf r)v_H(\mathbf r)\,d\mathbf r
+Long equations scroll horizontally.
+Check the Poisson residual, integrated electron number, far-field behavior and the one-half double-counting factor separately. A charged periodic cell does not directly give an isolated-system energy.
+Assumptions, implementation status and JSON
+Hartree, D. R. (1928)
+Kohn, W.; Sham, L. J. (1965)
+
+## Quantum chemistry and DFT: approximations and equations — LDA, GGA and hybrid functionals [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#xc-functionals
+Coverage: reading
+
+LDA depends on local density, GGA on density and its gradient, and meta-GGA on quantities such as orbital kinetic-energy density. Hybrids mix in HF-type exchange. PBE, SCAN, B3 variants and PBE0 are approximation choices rather than a universal ranking.
+The formula below is spin-unpolarized Dirac exchange only. Distinguish it from LDA including correlation. State functional components, parameters, library/version and the density integration grid.
+E_x^{\rm LDA}[n]=-\frac34\left(\frac3\pi\right)^{1/3}\int n^{4/3}\,d\mathbf rv_x^{\rm LDA}=-\left(\frac{3n}{\pi}\right)^{1/3}
+Basis, grid and SCF convergence do not remove functional error. Assess self-interaction, charge transfer, strong correlation and dispersion for the chosen system and approximation.
+Assumptions, implementation status and JSON
+Dirac, P. A. M. (1930)
+Perdew, J. P.; Burke, K.; Ernzerhof, M. (1996)
+Sun, J.; Ruzsinszky, A.; Perdew, J. P. (2015)
+Becke, A. D. (1993)
+Adamo, C.; Barone, V. (1999)
+
+## Quantum chemistry and DFT: approximations and equations — Pseudopotentials and PAW [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#pseudopotentials
+Coverage: reading
+
+Pseudopotentials represent core effects effectively while focusing on valence electrons. Distinguish norm-conserving, ultrasoft and PAW approaches. PAW uses a transformation and reconstruction; describing it as only a smooth local replacement is inadequate.
+Save the element, valence configuration, generating functional, relativistic treatment, dataset version and cutoff guidance. Compare against all-electron calculations under matched physical conditions and observables.
+Do not compare absolute energy zeroes across different pseudopotentials without alignment. Cutoff convergence alone does not establish transferability.
+Assumptions, implementation status and JSON
+Hamann, D. R.; Schlüter, M.; Chiang, C. (1979)
+Vanderbilt, D. (1990)
+Blöchl, P. E. (1994)
+
+## Quantum chemistry and DFT: approximations and equations — Periodic electronic structure and k-point sampling [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#k-point
+Coverage: reading
+
+For a periodic potential, Bloch orbitals reduce Brillouin-zone integrals to weighted k-point sums. u_nk is lattice periodic. Monkhorst–Pack supplies an original entry point for special-point integration.
+Save k-mesh density and shift, symmetry, occupations/smearing, cell and basis cutoff. A molecule in a large periodic cell must also be distinguished from an isolated-boundary calculation.
+\psi_{n\mathbf k}(\mathbf r)=e^{i\mathbf k\cdot\mathbf r}u_{n\mathbf k}(\mathbf r),\qquad \int_{\rm BZ}g(\mathbf k)\,d\mathbf k\approx\sum_\nu w_\nu g(\mathbf k_\nu)
+Long equations scroll horizontally.
+Distinguish metallic occupation/smearing dependence, finite-temperature free energy and zero-temperature energy. Whether Γ-only sampling is adequate depends on the system and cell.
+Assumptions, implementation status and JSON
+Monkhorst, H. J.; Pack, J. D. (1976)
+
+## Quantum chemistry and DFT: approximations and equations — MP2 perturbation theory [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#mp2
+Coverage: reading
+
+MP2 is a second-order perturbative correction to an HF reference. The representative expression uses canonical HF spin orbitals, occupied i,j, virtual a,b and antisymmetrized two-electron integrals. Coefficients and index conventions differ for restricted spatial-orbital formulas.
+Match the basis, frozen core, reference orbitals, spin and nuclear geometry in comparisons. Save the correlation correction separately from total energy.
+E_{\rm MP2}^{(2)}=\frac14\sum_{ij}^{\rm occ}\sum_{ab}^{\rm virt}\frac{|\langle ij\Vert ab\rangle|^2}{\varepsilon_i+\varepsilon_j-\varepsilon_a-\varepsilon_b}
+Long equations scroll horizontally.
+Small denominators and strong static correlation can invalidate low-order perturbation. An energy below HF is not by itself evidence of improvement toward the exact value.
+Assumptions, implementation status and JSON
+Møller, C.; Plesset, M. S. (1934)
+
+## Quantum chemistry and DFT: approximations and equations — Configuration interaction / CI [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#configuration-interaction
+Coverage: reading
+
+CI diagonalizes the many-electron Hamiltonian in a space of determinants or configuration state functions. FCI spans the full chosen finite one-electron basis, electron number and symmetry sector; CISD truncates to single and double excitations from a reference.
+Use FCI as a reference only with its finite-basis scope stated. Determinant spaces grow rapidly, motivating small validation systems such as H₂.
+|\Psi\rangle=\sum_I c_I|\Phi_I\rangle,\qquad \sum_J H_{IJ}c_J=E c_I
+Finite-basis FCI is not the exact continuum solution. Check size consistency of truncated CI and the assumptions behind variational bounds.
+Assumptions, implementation status and JSON
+Knowles, P. J.; Handy, N. C. (1984)
+
+## Quantum chemistry and DFT: approximations and equations — Coupled cluster / CCSD(T) [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#coupled-cluster
+Coverage: reading
+
+Coupled cluster represents the wavefunction using an exponential excitation operator. CCSD iterates T₁+T₂; CCSD(T) conventionally adds a noniterative perturbative triples correction. It is distinct from CCSDT.
+Assess whether a single determinant is adequate, using amplitude and reference diagnostics. Match frozen core, basis and reference state when comparing weakly correlated single-reference systems.
+|\Psi_{\rm CC}\rangle=e^{\hat T}|\Phi_0\rangle,\qquad \hat T=\hat T_1+\hat T_2+\cdots
+Conventional projected CC energies are not variational upper bounds. CCSD(T) is not a universal standard for bond breaking or strong correlation.
+Assumptions, implementation status and JSON
+Raghavachari, K.; Trucks, G. W.; Pople, J. A.; Head-Gordon, M. (1989)
+
+## Quantum chemistry and DFT: approximations and equations — CASSCF and multireference methods [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#multireference
+Coverage: reading
+
+CASSCF optimizes configuration coefficients and orbitals within a selected active space. Record CAS(n_e,n_o), specifying electrons and spatial orbitals, their character, spin and any state averaging.
+It addresses static correlation, but does not automatically recover adequate dynamic correlation outside the active space. Subsequent methods such as CASPT2 and NEVPT2 are separate future extensions.
+|\Psi_{\rm CAS}\rangle=\sum_{I\in\operatorname{CAS}(n_e,n_o)}c_I|\Phi_I\rangle
+Active-space dependence is distinct from grid error. Track orbital character across geometries rather than only orbital indices.
+Assumptions, implementation status and JSON
+Roos, B. O.; Taylor, P. R.; Siegbahn, P. E. M. (1980)
+
+## Quantum chemistry and DFT: approximations and equations — Time-dependent density functional theory / TDDFT [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#tddft
+Coverage: reading
+
+TDDFT concerns time-dependent densities. The local time-dependent KS equation shown is representative; initial-state dependence and exchange-correlation memory can remain. Distinguish real-time propagation from linear response around a ground state.
+For response calculations save excitation energies and oscillator strengths. For real time save the field, step size, propagation length and spectrum-transform settings. The adiabatic approximation concerns functional time dependence.
+i\partial_t\phi_i(\mathbf r,t)=[-\tfrac12\nabla^2+v_s[n](\mathbf r,t)]\phi_i(\mathbf r,t)
+Bare ground-state KS eigenvalue differences are not TDDFT excitation energies. Assess approximation limits for double excitations and long-range charge transfer.
+Assumptions, implementation status and JSON
+Runge, E.; Gross, E. K. U. (1984)
+
+## Quantum chemistry and DFT: approximations and equations — Quantum Monte Carlo [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#quantum-monte-carlo
+Coverage: reading
+
+VMC samples a trial-wavefunction variational energy; DMC projects toward the ground state through imaginary-time evolution. When using a fixed-node treatment of the fermion sign problem, identify its systematic bias.
+Record random streams, autocorrelation-aware statistical uncertainty, time step, walker population, trial state and finite size. Ceperley–Alder electron-gas calculations also connect to LDA correlation.
+E_{\rm VMC}=\frac{\int |\Psi_T|^2 E_L\,d\mathbf R}{\int |\Psi_T|^2\,d\mathbf R},\qquad E_L=\frac{\hat H\Psi_T}{\Psi_T}
+Long equations scroll horizontally.
+Statistical error bars do not capture fixed-node, time-step or finite-size bias. Quantum Monte Carlo here does not mean computation on a quantum computer.
+Assumptions, implementation status and JSON
+Ceperley, D. M.; Alder, B. J. (1980)
+
+## Quantum chemistry and DFT: approximations and equations — DMRG and tensor networks [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#dmrg
+Coverage: reading
+
+Quantum-chemical DMRG treats orbitals as sites and approximates many-electron states with representations such as matrix product states (MPS). Increasing bond dimension increases expressiveness; requirements also depend on orbital ordering and entanglement.
+Record the active orbitals, ordering, bond dimension, sweeps, truncation measures and energy convergence. Access to larger correlated active spaces does not make arbitrary three-dimensional electronic-structure problems easy.
+c_{n_1\cdots n_L}\approx\mathbf A_1^{n_1}\mathbf A_2^{n_2}\cdots\mathbf A_L^{n_L}
+A small truncation measure does not establish the physical adequacy of an active space. Separate finite-bond-dimension error from active-space and basis error.
+Assumptions, implementation status and JSON
+White, S. R. (1992)
+White, S. R.; Martin, R. L. (1999)
+
+## Quantum chemistry and DFT: approximations and equations — Next runnable validation examples [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#verification
+Coverage: reading
+
+These are plans, not results, and are not added to the current 58-problem inventory. Publish explicit inputs and stopping rules, with independent references, numerical error and model limitations distinguished.
+Under construction
+
+## Quantum chemistry and DFT: approximations and equations — One electron: hydrogenic atoms [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/
+Coverage: reading
+
+Check E_n = −Z²/(2n²), normalization and eigenpair residuals; separate domain and grid errors.
+
+## Quantum chemistry and DFT: approximations and equations — First DFT example: spherical helium [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/
+Coverage: reading
+
+Specify atomic units, a closed shell and exchange-only LDA. Save Hartree fields, electron count, density/energy SCF histories, grid convergence and an independent comparison; distinguish LDA with correlation.
+
+## Quantum chemistry and DFT: approximations and equations — Molecule: H₂ with HF, DFT and finite-basis FCI [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/
+Coverage: reading
+
+Fix geometry, basis, spin, functional, quadrature grid and SCF thresholds. Use dissociation curves to separate numerical error from single-reference and functional limitations.
+
+## Quantum chemistry and DFT: approximations and equations — Periodic systems: basis, k-mesh and cell convergence [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/
+Coverage: reading
+
+Record pseudopotential identity and valence, cutoff, k mesh, neutrality and occupations; vary one numerical source at a time.
+
+## Quantum chemistry and DFT: approximations and equations — Further topics to develop [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#further-topics
+Coverage: reading
+
+These are extension candidates, not dedicated readings or implementations already supplied here. AMR, parallelization and mixed precision remain outside the editorial scope.
+Orbital-free DFT and Thomas–Fermi models
+Range-separated hybrids, dispersion and double hybrids
+GW, Bethe–Salpeter equations and RPA
+CASPT2, NEVPT2 and multireference correlation
+Forces, Pulay terms and geometry optimization
+Relativity, spin–orbit coupling and noncollinear spin
+
+## Quantum chemistry and DFT: approximations and equations — Primary publications and review scope [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#sources
+Coverage: reading
+
+An original introductory synthesis of standard representative equations. Bibliographic metadata and conceptual entry points are checked against primary publication information and official documentation. Full-paper equation audits and numerical reproduction have not been performed.
+Schrödinger, E. (1926). Quantisierung als Eigenwertproblem. Annalen der Physik.
+Hartree, D. R. (1928). The Wave Mechanics of an Atom with a Non-Coulomb Central Field. Part I. Theory and Methods. Mathematical Proceedings of the Cambridge Philosophical Society.
+Dirac, P. A. M. (1930). Note on Exchange Phenomena in the Thomas Atom. Mathematical Proceedings of the Cambridge Philosophical Society.
+Møller, C.; Plesset, M. S. (1934). Note on an Approximation Treatment for Many-Electron Systems. Physical Review.
+Boys, S. F. (1950). Electronic wave functions - I. A general method of calculation for the stationary states of any molecular system. Proceedings of the Royal Society A.
+Roothaan, C. C. J. (1951). New Developments in Molecular Orbital Theory. Reviews of Modern Physics.
+Hohenberg, P.; Kohn, W. (1964). Inhomogeneous Electron Gas. Physical Review.
+Kohn, W.; Sham, L. J. (1965). Self-Consistent Equations Including Exchange and Correlation Effects. Physical Review.
+Monkhorst, H. J.; Pack, J. D. (1976). Special points for Brillouin-zone integrations. Physical Review B.
+
+## Quantum chemistry and DFT: approximations and equations — Primary publications and review scope [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#sources
+Coverage: reading
+
+Hamann, D. R.; Schlüter, M.; Chiang, C. (1979). Norm-Conserving Pseudopotentials. Physical Review Letters.
+Ceperley, D. M.; Alder, B. J. (1980). Ground State of the Electron Gas by a Stochastic Method. Physical Review Letters.
+Pulay, P. (1980). Convergence acceleration of iterative sequences. The case of SCF iteration. Chemical Physics Letters.
+Roos, B. O.; Taylor, P. R.; Siegbahn, P. E. M. (1980). A complete active space SCF method (CASSCF) using a density matrix formulated super-CI approach. Chemical Physics.
+Knowles, P. J.; Handy, N. C. (1984). A new determinant-based full configuration interaction method. Chemical Physics Letters.
+Runge, E.; Gross, E. K. U. (1984). Density-Functional Theory for Time-Dependent Systems. Physical Review Letters.
+Raghavachari, K.; Trucks, G. W.; Pople, J. A.; Head-Gordon, M. (1989). A fifth-order perturbation comparison of electron correlation theories. Chemical Physics Letters.
+Vanderbilt, D. (1990). Soft self-consistent pseudopotentials in a generalized eigenvalue formalism. Physical Review B.
+White, S. R. (1992). Density matrix formulation for quantum renormalization groups. Physical Review Letters.
+Becke, A. D. (1993). Density-functional thermochemistry. III. The role of exact exchange. The Journal of Chemical Physics.
+Blöchl, P. E. (1994). Projector augmented-wave method. Physical Review B.
+
+## Quantum chemistry and DFT: approximations and equations — Primary publications and review scope [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#sources
+Coverage: reading
+
+Perdew, J. P.; Burke, K.; Ernzerhof, M. (1996). Generalized Gradient Approximation Made Simple. Physical Review Letters.
+Adamo, C.; Barone, V. (1999). Toward reliable density functional methods without adjustable parameters: The PBE0 model. The Journal of Chemical Physics.
+White, S. R.; Martin, R. L. (1999). Ab initio quantum chemistry using the density matrix renormalization group. The Journal of Chemical Physics.
+Sun, J.; Ruzsinszky, A.; Perdew, J. P. (2015). Strongly Constrained and Appropriately Normed Semilocal Density Functional. Physical Review Letters.
+
+## Quantum chemistry and DFT: approximations and equations — Official implementation documentation [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/
+Coverage: reading
+
+These describe external software; linking them does not claim an atlas-verified run.
+PySCF: SCF methods
+PySCF: density functional theory
+PySCF: MP2
+PySCF: configuration interaction
+PySCF: coupled cluster
+PySCF: MCSCF
+
+## Quantum chemistry and DFT: approximations and equations — Official implementation documentation [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/
+Coverage: reading
+
+Text, formulas and sources / JSON · Use and citation
+
 ## Euler reconstruction: PPM, characteristics, WENO-Z and AUSM [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/reconstruction/
@@ -6181,6 +6554,48 @@ Coverage: reading
 
 Historical atlas →Computed gallery →
 
+## References by original publication year — Added quantum-chemistry primary publications [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/references/
+Coverage: reading
+
+Schrödinger, E. (1926). Quantisierung als Eigenwertproblem. Annalen der Physik.
+Hartree, D. R. (1928). The Wave Mechanics of an Atom with a Non-Coulomb Central Field. Part I. Theory and Methods. Mathematical Proceedings of the Cambridge Philosophical Society.
+Dirac, P. A. M. (1930). Note on Exchange Phenomena in the Thomas Atom. Mathematical Proceedings of the Cambridge Philosophical Society.
+Boys, S. F. (1950). Electronic wave functions - I. A general method of calculation for the stationary states of any molecular system. Proceedings of the Royal Society A.
+Roothaan, C. C. J. (1951). New Developments in Molecular Orbital Theory. Reviews of Modern Physics.
+Hohenberg, P.; Kohn, W. (1964). Inhomogeneous Electron Gas. Physical Review.
+Kohn, W.; Sham, L. J. (1965). Self-Consistent Equations Including Exchange and Correlation Effects. Physical Review.
+Pulay, P. (1980). Convergence acceleration of iterative sequences. The case of SCF iteration. Chemical Physics Letters.
+Perdew, J. P.; Burke, K.; Ernzerhof, M. (1996). Generalized Gradient Approximation Made Simple. Physical Review Letters.
+Sun, J.; Ruzsinszky, A.; Perdew, J. P. (2015). Strongly Constrained and Appropriately Normed Semilocal Density Functional. Physical Review Letters.
+Becke, A. D. (1993). Density-functional thermochemistry. III. The role of exact exchange. The Journal of Chemical Physics.
+
+## References by original publication year — Added quantum-chemistry primary publications [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/references/
+Coverage: reading
+
+Adamo, C.; Barone, V. (1999). Toward reliable density functional methods without adjustable parameters: The PBE0 model. The Journal of Chemical Physics.
+Hamann, D. R.; Schlüter, M.; Chiang, C. (1979). Norm-Conserving Pseudopotentials. Physical Review Letters.
+Vanderbilt, D. (1990). Soft self-consistent pseudopotentials in a generalized eigenvalue formalism. Physical Review B.
+Blöchl, P. E. (1994). Projector augmented-wave method. Physical Review B.
+Monkhorst, H. J.; Pack, J. D. (1976). Special points for Brillouin-zone integrations. Physical Review B.
+Møller, C.; Plesset, M. S. (1934). Note on an Approximation Treatment for Many-Electron Systems. Physical Review.
+Raghavachari, K.; Trucks, G. W.; Pople, J. A.; Head-Gordon, M. (1989). A fifth-order perturbation comparison of electron correlation theories. Chemical Physics Letters.
+Roos, B. O.; Taylor, P. R.; Siegbahn, P. E. M. (1980). A complete active space SCF method (CASSCF) using a density matrix formulated super-CI approach. Chemical Physics.
+Runge, E.; Gross, E. K. U. (1984). Density-Functional Theory for Time-Dependent Systems. Physical Review Letters.
+Ceperley, D. M.; Alder, B. J. (1980). Ground State of the Electron Gas by a Stochastic Method. Physical Review Letters.
+White, S. R. (1992). Density matrix formulation for quantum renormalization groups. Physical Review Letters.
+
+## References by original publication year — Added quantum-chemistry primary publications [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/references/
+Coverage: reading
+
+White, S. R.; Martin, R. L. (1999). Ab initio quantum chemistry using the density matrix renormalization group. The Journal of Chemical Physics.
+Knowles, P. J.; Handy, N. C. (1984). A new determinant-based full configuration interaction method. Chemical Physics Letters.
+
 ## Relativistic hydrodynamics: SRHD, GRHD, and GRMHD [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/relativistic-hydrodynamics/
@@ -6482,6 +6897,35 @@ Coverage: reading
 
 The focus is mathematical methods, formulations, applicability and verification. AMR (adaptive mesh refinement), parallelization and mixed-precision techniques for computational efficiency are outside the scope of dedicated coverage and development. Ordinary roundoff and numerical stability remain foundational topics.
 
+## Implementation roadmap — 2026 · Quantum chemistry and DFT: map and formulations [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/
+Coverage: reading
+
+Bilingual introductions to 17 entries, representative equations and primary references; no dedicated implementations or numerical verification.
+
+## Implementation roadmap — 2026 · Representative runnable quantum-chemistry and DFT checks [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/
+Coverage: reading
+
+Validate hydrogenic atoms, exchange-only LDA for spherical helium, then H₂; mark implemented only after actual result verification.
+
+## Implementation roadmap — 2027 · Atlas-based specialist AI and model research [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/
+Coverage: reading
+
+A goal for 2027 or later: investigate retrieval plus execution, verified training examples and held-out evaluation. This is not a commitment to deliver an independently pretrained foundation model.
+Work queue / JSON
+
+## Implementation roadmap — 2027 · Atlas-based specialist AI and model research [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/
+Coverage: reading
+
+The sections below record earlier development and validation plans. The current priorities are stated above.
+
 ## Implementation roadmap — Current priority: shock methods# [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/#current-priority-shock-methods
@@ -6754,62 +7198,13 @@ automatic derivative evaluation. Assess noise, dimensions/symmetries,
 expression complexity and independent-data checks. Consider the study on
 extracting symbolic models from deep learning.
 
-## Implementation roadmap — Planned quantum chemistry and DFT# [en]
+## Implementation roadmap — Quantum chemistry and DFT: reading available, numerical validation next [en]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/#planned-quantum-chemistry-and-dft
 Coverage: reading
 
-Status: planned; implementation and the dedicated literature review have not
-started. No release date is assigned. This is a separate electronic-structure
-branch, with the following development checklist. None of these planned items
-adds to the current implemented-method or equation counts.
- Schrödinger eigenproblems: begin with one-electron models, including
-the harmonic oscillator and hydrogenic radial problem. Compare finite
-differences, finite elements and spectral discretization, recording boundary,
-domain-truncation and resolution errors separately.
- Electronic-structure bases: introduce atomic orbitals, Gaussian and
-Slater functions, plane waves and real-space grids. Include overlap matrices
-and generalized eigenproblems. Connect to the existing
-element-basis notebook, while distinguishing its
-mesh-local polynomial examples from molecular orbital basis sets.
- Coulomb and Hartree potentials: connect electronic charge density to
-Poisson solvers. State electrostatic units, charge signs, isolated/periodic
-boundaries, zero modes and self-interaction conventions explicitly; do not
-silently reuse gravitational signs or normalizations.
- Hartree–Fock: develop a small closed-shell molecular example with
-matrix assembly, a generalized eigenvalue solve and a self-consistent field
-loop. Verify the required integral machinery before presenting energies.
-
-## Implementation roadmap — Planned quantum chemistry and DFT# [en]
-
-Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/#planned-quantum-chemistry-and-dft
-Coverage: reading
-
- Kohn–Sham density functional theory: explain the density, effective
-potential and exchange–correlation approximation. Start with an explicitly
-identified LDA model; GGA and later functionals require their own verification.
- SCF iteration and mixing: compare damping, density/potential mixing
-and Pulay/DIIS acceleration. Report electron-number checks, eigenproblem and
-SCF residuals, energy changes and explicit nonconvergence.
- Verification examples: use one-electron references and small atoms or
-molecules, with basis/grid refinement and independent reference-code checks.
-Separate discretization error, SCF tolerance and physical-model differences.
-The intended first milestones are a verified one-electron eigensolver, followed
-by a minimal-basis Hartree–Fock example, then a clearly scoped Kohn–Sham DFT
-example. Periodic materials, pseudopotentials, spin-dependent extensions and
-post-Hartree–Fock correlation are later branches, rather than promises of the
-first implementation. This plan does not change the current priority of the
-fluid-method work above, and AMR is outside the editorial scope.
-The next editorial priority is to connect shared equations to multiple
-verified discretizations, cost/error evidence and explicit failure cases,
-while retaining separate labels for surveys, prototypes and verified models.
-
-## Implementation roadmap — Planned quantum chemistry and DFT# [en]
-
-Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/roadmap/#planned-quantum-chemistry-and-dft
-Coverage: reading
-
-Reference-element basis functions now have an executable Legendre/nodal notebook, including exact and quadrature mass, affine metric scaling and triangular P2 shapes. Curved-element metrics, orthogonal simplex modes and higher-order FEM/DG fluid assembly remain separate extensions.
+Introductions, representative formulas and primary references are available for 17 entries. Dedicated code and numerical validation are next. These entries are counted as reading-only, without implementation or verification claims.
+Bilingual overview and planned numerical examples
 
 ## Implementation roadmap — Verified Euler and MHD comparisons# [en]
 
@@ -7238,9 +7633,9 @@ THE READING ROOM公開コード・データ / Public code and data
 Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/site-coverage/
 Coverage: reading
 
-Published web edition, counted 2026-11-07. These are counts of catalog entries and documented examples, not a claim that every entry is a verified end-to-end solver.
-42 equation/model entries · 90 methods and building blocks · 140 journal/conference papers · 177 total sources.
-There are 9 saved-profile equation-gallery cases across 7 equation families, and 47 reading chapters including this inventory.
+Published web edition, counted 2026-11-21. These are counts of catalog entries and documented examples, not a claim that every entry is a verified end-to-end solver.
+46 equation/model entries · 107 methods and building blocks · 164 journal/conference papers · 201 total sources.
+There are 9 saved-profile equation-gallery cases across 7 equation families, and 49 reading chapters including this inventory.
 
 ## Site coverage and counting rules — Equations and models# [en]
 
@@ -7248,7 +7643,7 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/site-coverage
 Coverage: reading
 
 Named equation/model entries, not scalar component equations or mathematically disjoint families. Includes frameworks and auxiliary formulations; variants share one entry except the three separately explained SR/GR fluid systems. Biological entries are imported once from their own catalog.
-15 entries have scoped local examples; 27 are reading-only, including all 22 biological survey entries. A coupled system is one entry; its individual component equations do not increase the count. Poisson/Laplace and dimensional variants share entries. Named frameworks and specialized kinetic laws can both appear, so this is not a count of mathematically disjoint families.
+15 entries have scoped local examples; 31 are reading-only, including all 22 biological survey entries. A coupled system is one entry; its individual component equations do not increase the count. Poisson/Laplace and dimensional variants share entries. Named frameworks and specialized kinetic laws can both appear, so this is not a count of mathematically disjoint families.
 
 ## Site coverage and counting rules — Physics & mathematical models# [en]
 
@@ -7334,7 +7729,7 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/site-coverage
 Coverage: reading
 
 Named numerical methods and building blocks with a reading chapter. Aliases count once; RK stages, dimensions, parameter combinations, mesh layouts and theoretical conditions do not add methods. A family and a separately explained algorithm may both appear. Not a count of mutually exclusive end-to-end solvers.
-85 entries have scoped local examples; 5 are reading-only. Reconstruction limiters, preconditioners and coupling operators are building blocks, not complete PDE solvers. Mesh layouts, CFL conditions and theorems are not counted as numerical methods.
+85 entries have scoped local examples; 22 are reading-only. Reconstruction limiters, preconditioners and coupling operators are building blocks, not complete PDE solvers. Mesh layouts, CFL conditions and theorems are not counted as numerical methods.
 
 ## Site coverage and counting rules — Spatial discretization# [en]
 
@@ -7487,7 +7882,7 @@ Coverage: reading
 
 Unique bibliographic publications classified as journal articles or conference papers, deduplicated by DOI or author/title/year. Includes reviews, translations and explicitly labeled accepted papers; not a claim that every full text was inspected. Books, chapters, reports, preprints and documentation are separate.
 Unique cataloged works across all publication types. An original publication and a later translation are separate works; duplicate DOI records are not. NASA case links in prose are not catalog records.
-137 journal-article records, including reviews, translations and explicitly labeled accepted papers.
+161 journal-article records, including reviews, translations and explicitly labeled accepted papers.
 3 conference papers.
 22 books.
 2 book chapters.
@@ -7509,6 +7904,30 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/site-coverage
 Coverage: reading
 
 Historical atlas →Computed gallery →
+
+## Site coverage and counting rules — Added electronic-structure reading [en]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/en/read/site-coverage/
+Coverage: reading
+
+These are introductory readings, without dedicated implementations.
+Schrodinger eigenproblems
+Electronic-structure basis sets
+Hartree–Fock
+Kohn–Sham density functional theory / DFT
+Self-consistent field iteration / SCF
+Pulay / DIIS acceleration
+Coulomb and Hartree potentials
+LDA, GGA and hybrid functionals
+Pseudopotentials and PAW
+Periodic electronic structure and k-point sampling
+MP2 perturbation theory
+Configuration interaction / CI
+Coupled cluster / CCSD(T)
+CASSCF and multireference methods
+Time-dependent density functional theory / TDDFT
+Quantum Monte Carlo
+DMRG and tensor networks
 
 ## Sparse and nonlinear systems: measure the actual residual [en]
 
@@ -11229,6 +11648,372 @@ Coverage: reading
 
 InutsukaのGSPHは粒子流体と粒子対のリーマン問題を結び付けます。2002年の畳み込みによる導出、1994年の先行研究、Iwasaki・Inutsukaの2011年MHD拡張をたどる文献ノートと実装計画です。上のカーネル再構成はGSPH流体計算ではありません。
 
+## 量子化学・DFT：何を近似し、何を解くか [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/
+Coverage: reading
+
+ELECTRONIC STRUCTURE · QUANTUM CHEMISTRY · DFT
+
+## 量子化学・DFT：何を近似し、何を解くか — 量子化学・DFT：何を近似し、何を解くか [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/
+Coverage: reading
+
+Schrödinger、Hartree–Fock、Kohn–Sham DFTから、基底・SCF・電子相関・励起まで。数理的な違いと検証の道筋をたどる。
+17項目の日英解説と24件の一次文献を公開。専用の実行コード・数値検証例はUnder constructionです。以下の式や検証計画を、計算済みの結果とは区別しています。
+
+## 量子化学・DFT：何を近似し、何を解くか — 物理モデル・近似 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/
+Coverage: reading
+
+HF、KS-DFT、MP2、CI、CC等。どの多電子状態やエネルギーを近似するか。
+
+## 量子化学・DFT：何を近似し、何を解くか — 表現・離散化 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/
+Coverage: reading
+
+基底、格子、擬ポテンシャル、k点。モデルを有限の計算問題にする方法。
+
+## 量子化学・DFT：何を近似し、何を解くか — 方程式の解き方 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/
+Coverage: reading
+
+固有値計算、SCF、混合、DIIS。選んだ離散問題をどこまで解いたか。
+「SCFが収束した」「基底が収束した」「物理モデルが妥当」は別の確認です。代表式は原子単位系（ℏ = m_e = e = 4πε₀ = 1）を用います。有限の分子と周期的な固体は境界条件も違います。
+
+## 量子化学・DFT：何を近似し、何を解くか — Schrödinger固有値問題 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#schrodinger
+Coverage: reading
+
+固定した核配置に対して電子の多体固有値問題を解く、という共通の出発点です。ここでは非相対論・Born–Oppenheimer近似・原子単位系を使い、電子エネルギーE_elと核間反発E_NNを分けます。R_Aは核位置、Z_Aは核電荷、r_ijは電子間距離です。
+1電子なら電子間反発の和はなく、水素型原子は E_n = −Z²/(2n²) を参照値にできます。多電子のΨは全電子座標とスピンに依存するため、3次元の1電子軌道を解くHF・KSとの違いを意識します。
+\hat H_{\rm el}=-\frac12\sum_i\nabla_i^2-\sum_{iA}\frac{Z_A}{|\mathbf r_i-\mathbf R_A|}+\sum_{i<j}\frac1{r_{ij}}\hat H_{\rm el}\Psi=E_{\rm el}\Psi,\qquad E_{\rm tot}=E_{\rm el}+\sum_{A<B}\frac{Z_AZ_B}{R_{AB}}
+長い式は横にスクロールできます。
+核運動、相対論、スピン軌道相互作用、外場はこの代表式に含めません。固有値の残差が小さくても、領域・基底の誤差は残ります。
+条件・実装状況・JSON
+Schrödinger, E. (1926)
+Roothaan, C. C. J. (1951)
+
+## 量子化学・DFT：何を近似し、何を解くか — Hartree–Fock法 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#hartree-fock
+Coverage: reading
+
+HFは反対称な単一Slater行列式の範囲でエネルギーを停留させる方法です。交換は行列式から入り、そのHF参照から見た電子相関は含みません。閉殻RHFでは、二重占有された空間軌道を用いてFock演算子を作ります。
+J_jは軌道jのCoulomb場、K_jは一般に非局所な交換演算子です。開殻ではUHF・ROHF等の選択があり、UHFのスピン汚染や対称性の破れを記録する必要があります。
+\hat F=\hat h+\sum_{j\in\mathrm{occ}}(2\hat J_j-\hat K_j),\qquad \hat F\phi_i=\varepsilon_i\phi_i\mathbf F\mathbf C=\mathbf S\mathbf C\boldsymbol\varepsilon,\qquad \mathbf C^\dagger\mathbf S\mathbf C=\mathbf I
+長い式は横にスクロールできます。
+HFの解は一般に一意とは限りません。SCFが停止しても基底収束・軌道安定性・正しい電子状態の確認が必要です。分子解離では単一参照の限界が現れます。
+条件・実装状況・JSON
+Roothaan, C. C. J. (1951)
+
+## 量子化学・DFT：何を近似し、何を解くか — Kohn–Sham密度汎関数法 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#kohn-sham-dft
+Coverage: reading
+
+DFTはここでは密度汎関数理論で、離散Fourier変換の略称とは別です。Hohenberg–Kohnの基底状態の枠組みを出発点に、Kohn–Sham法は補助的な非相互作用軌道で密度を表します。占有数f_iはスピンを含む規約を明示し、和が電子数Nになるようにします。
+T_sは補助系の運動エネルギー、E_Hは古典的Coulombエネルギーです。E_xcには交換と相関に加え、相互作用系の運動エネルギーとT_sとの差も含まれます。密度からポテンシャル、軌道から密度へと更新する非線形問題をSCFで解きます。
+下式は密度のみに依存する微分可能な汎関数に対する局所KSの代表形です。hybridの非局所交換や軌道依存meta-GGA等では一般化KSの扱いを区別します。
+E[n]=T_s[n]+\int v_{\rm ext}n\,d\mathbf r+E_H[n]+E_{\rm xc}[n]+E_{NN}[-\tfrac12\nabla^2+v_{\rm ext}+v_H+v_{\rm xc}]\phi_i=\varepsilon_i\phi_in(\mathbf r)=\sum_i f_i|\phi_i(\mathbf r)|^2,\quad \int n\,d\mathbf r=N,\quad v_{\rm xc}=\frac{\delta E_{\rm xc}}{\delta n}
+長い式は横にスクロールできます。
+正確な汎関数の理論と、近似汎関数による実計算を分けます。KS固有値を一般に励起エネルギーと同一視せず、基底状態DFTだけで励起状態まで保証しません。
+条件・実装状況・JSON
+Hohenberg, P.; Kohn, W. (1964)
+Kohn, W.; Sham, L. J. (1965)
+
+## 量子化学・DFT：何を近似し、何を解くか — 電子状態計算の基底 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#electronic-bases
+Coverage: reading
+
+同じHF・DFTでも、Gaussian型・Slater型の原子軌道、平面波、実空間格子などで離散問題が変わります。非直交基底の重なり行列Sを残し、一般化固有値問題を解く必要があります。
+原子軌道では基底の大きさ・分極・diffuse関数、平面波ではカットオフとセル、実空間では格子幅と領域を別々に変えます。Gaussian基底の積分評価はBoysの一次文献への入口を付けています。
+\phi_i=\sum_\mu C_{\mu i}\chi_\mu,\qquad S_{\mu\nu}=\langle\chi_\mu|\chi_\nu\rangle\mathbf F\mathbf C=\mathbf S\mathbf C\boldsymbol\varepsilon
+基底を変える操作と電子相関・汎関数を変える操作は別です。線形従属、基底重なり誤差、擬ポテンシャルとの整合性も確認します。
+条件・実装状況・JSON
+Boys, S. F. (1950)
+Roothaan, C. C. J. (1951)
+
+## 量子化学・DFT：何を近似し、何を解くか — 自己無撞着場反復（SCF） [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#scf
+Coverage: reading
+
+SCFは物理モデル名ではなく、HFやKSで現れる自己無撞着条件を解く反復です。下式のMは、入力密度からポテンシャルを作り、軌道を解いて出力密度を作る写像です。
+エネルギー変化だけでなく、密度差、電子数、固有値または軌道勾配の残差を保存します。混合率、初期密度、占有の扱い、最大反復数、未収束という終了理由も出力に残します。
+n_{k+1}=(1-\alpha)n_k+\alpha\mathcal M[n_k],\qquad 0<\alpha\le1\mathrm{Tr}(\mathbf P\mathbf S)=N,\qquad \mathbf R=\mathbf F\mathbf P\mathbf S-\mathbf S\mathbf P\mathbf F
+長い式は横にスクロールできます。
+小さいエネルギー変化だけで収束を宣言しません。収束した解が最低エネルギーの安定な電子状態である保証も別に検査します。
+条件・実装状況・JSON
+Roothaan, C. C. J. (1951)
+Pulay, P. (1980)
+
+## 量子化学・DFT：何を近似し、何を解くか — Pulay / DIIS加速 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#diis
+Coverage: reading
+
+DIISは保存した反復履歴と誤差ベクトルから外挿係数を決めます。係数和を1に制約し、外挿された誤差のノルムを小さくするのが基本形です。SCFではFock行列と非直交基底に整合した交換子残差等を使います。
+これは物理近似を追加する方法ではなく、非線形方程式の解き方です。減衰混合と比較する際は同じ初期状態と停止条件を使い、履歴長と特異な履歴行列への対処も記録します。
+\min_{\{c_j\}}\left\|\sum_j c_j\mathbf e_j\right\|^2,\qquad \sum_j c_j=1
+外挿は収束やエネルギーの単調減少を保証しません。残差が見かけ上小さい場合、初期値依存や停留解の不安定性も確認します。
+条件・実装状況・JSON
+Pulay, P. (1980)
+
+## 量子化学・DFT：何を近似し、何を解くか — Coulomb・Hartreeポテンシャル [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#hartree-poisson
+Coverage: reading
+
+nを正の電子数密度として定義すると、Hartreeポテンシャルは下式の正のCoulomb積分です。電子の電荷密度ρ_charge = −nとは符号が異なります。電子エネルギーに入るv_Hと、電荷が作る静電ポテンシャルを混同しません。
+孤立系では無限遠の条件、周期系ではG=0成分、電荷中性、補償背景や基準電位を指定します。既存のPoisson・FFT・粒子力の章を使う際も、境界条件と符号をそのまま流用しないようにします。
+v_H(\mathbf r)=\int\frac{n(\mathbf r\prime)}{|\mathbf r-\mathbf r\prime|}\,d\mathbf r\prime,\qquad \nabla^2v_H=-4\pi nE_H=\frac12\int n(\mathbf r)v_H(\mathbf r)\,d\mathbf r
+長い式は横にスクロールできます。
+Poisson解の残差、積分した電子数、遠方の挙動、二重計数の1/2を別々に確かめます。周期セルの帯電系を孤立系のエネルギーとして解釈しません。
+条件・実装状況・JSON
+Hartree, D. R. (1928)
+Kohn, W.; Sham, L. J. (1965)
+
+## 量子化学・DFT：何を近似し、何を解くか — LDA・GGA・hybrid汎関数 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#xc-functionals
+Coverage: reading
+
+LDAは局所密度、GGAは密度と勾配、meta-GGAは軌道の運動エネルギー密度などにも依存します。hybridはHF型交換を一部混合します。PBE、SCAN、B3系、PBE0等は交換相関近似の選択で、単なる精度の順位表ではありません。
+下式はスピン非偏極のDirac交換のみです。相関項を含むLDAと区別し、汎関数名、成分、パラメータ、ライブラリと版を明示します。電子密度の求積格子も結果を変え得ます。
+E_x^{\rm LDA}[n]=-\frac34\left(\frac3\pi\right)^{1/3}\int n^{4/3}\,d\mathbf rv_x^{\rm LDA}=-\left(\frac{3n}{\pi}\right)^{1/3}
+基底・格子・SCFが収束しても汎関数の近似誤差は消えません。自己相互作用、電荷移動、強相関、分散の扱いは対象と近似に応じて評価します。
+条件・実装状況・JSON
+Dirac, P. A. M. (1930)
+Perdew, J. P.; Burke, K.; Ernzerhof, M. (1996)
+Sun, J.; Ruzsinszky, A.; Perdew, J. P. (2015)
+Becke, A. D. (1993)
+Adamo, C.; Barone, V. (1999)
+
+## 量子化学・DFT：何を近似し、何を解くか — 擬ポテンシャル・PAW [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#pseudopotentials
+Coverage: reading
+
+擬ポテンシャルは内殻の効果を有効的に扱い、価電子を主に解く表現です。norm-conserving、ultrasoft、PAWを区別します。PAWは変換と再構成を使う方法で、単に滑らかな局所ポテンシャルに置き換える説明では不十分です。
+元素、価電子配置、生成した汎関数、相対論の扱い、データセットの版と推奨カットオフを保存します。全電子計算との比較は同じ物理条件・観測量で行います。
+異なる擬ポテンシャルの全エネルギーの零点を無条件に比較しません。平面波カットオフの収束だけで移植性が証明されるわけではありません。
+条件・実装状況・JSON
+Hamann, D. R.; Schlüter, M.; Chiang, C. (1979)
+Vanderbilt, D. (1990)
+Blöchl, P. E. (1994)
+
+## 量子化学・DFT：何を近似し、何を解くか — 周期電子状態とk点 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#k-point
+Coverage: reading
+
+周期ポテンシャルではBloch軌道を用い、Brillouin領域の積分を重み付きk点和で近似します。u_nkは格子周期関数です。Monkhorst–Pack法は特殊点による積分の一次文献への入口です。
+k点密度とシフト、対称性、占有・smearing、セル、基底カットオフを保存します。孤立分子を大きな周期セルに置くことと、孤立境界で解くことも区別します。
+\psi_{n\mathbf k}(\mathbf r)=e^{i\mathbf k\cdot\mathbf r}u_{n\mathbf k}(\mathbf r),\qquad \int_{\rm BZ}g(\mathbf k)\,d\mathbf k\approx\sum_\nu w_\nu g(\mathbf k_\nu)
+長い式は横にスクロールできます。
+金属の占有とsmearing幅の依存、有限温度の自由エネルギーと零温度エネルギーを区別します。Γ点だけで十分かは系とセルに依存します。
+条件・実装状況・JSON
+Monkhorst, H. J.; Pack, J. D. (1976)
+
+## 量子化学・DFT：何を近似し、何を解くか — MP2摂動論 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#mp2
+Coverage: reading
+
+HF参照を出発点とする2次の摂動補正です。下式は正準HFスピン軌道、占有i,jと仮想a,b、反対称化2電子積分を使う代表形です。RHF空間軌道の式とは係数と添字規約が違います。
+比較では基底、凍結内殻、参照軌道、スピン、同じ核配置を揃えます。小分子でも全エネルギーだけでなく、HFからの相関エネルギーを分けて記録します。
+E_{\rm MP2}^{(2)}=\frac14\sum_{ij}^{\rm occ}\sum_{ab}^{\rm virt}\frac{|\langle ij\Vert ab\rangle|^2}{\varepsilon_i+\varepsilon_j-\varepsilon_a-\varepsilon_b}
+長い式は横にスクロールできます。
+小さい分母や強い静的相関では低次摂動が信頼できない場合があります。HFから下がったエネルギーを、そのまま厳密値への改善とは呼びません。
+条件・実装状況・JSON
+Møller, C.; Plesset, M. S. (1934)
+
+## 量子化学・DFT：何を近似し、何を解くか — 配置間相互作用（CI） [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#configuration-interaction
+Coverage: reading
+
+多電子Hamiltonianを複数の行列式または配置状態関数の空間で対角化します。FCIは指定した有限1電子基底・電子数・対称性の全空間、CISDは参照から1・2重励起までを含める打切りです。
+FCIを比較の参照に使うときは、同じ有限基底における参照であることを明記します。行列式数は急増するため、小さなH₂模型などから検証を設計します。
+|\Psi\rangle=\sum_I c_I|\Phi_I\rangle,\qquad \sum_J H_{IJ}c_J=E c_I
+有限基底のFCIは連続空間の厳密解とは違います。打切りCIのサイズ整合性と、変分性の成立条件を確認します。
+条件・実装状況・JSON
+Knowles, P. J.; Handy, N. C. (1984)
+
+## 量子化学・DFT：何を近似し、何を解くか — 結合クラスター・CCSD(T) [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#coupled-cluster
+Coverage: reading
+
+結合クラスター法は励起演算子の指数で波動関数を表します。CCSDはT₁+T₂を反復し、CCSD(T)は通常その上に非反復の摂動的3重励起補正を加えます。CCSDTとの違いを保ちます。
+弱い相関の単一参照系で有用ですが、単一行列式が十分か、振幅や参照の診断と併せて評価します。凍結内殻・基底・参照状態を揃えた比較が必要です。
+|\Psi_{\rm CC}\rangle=e^{\hat T}|\Phi_0\rangle,\qquad \hat T=\hat T_1+\hat T_2+\cdots
+通常の射影CCエネルギーは変分上限ではありません。CCSD(T)を全ての結合解離・強相関系に通用する基準としません。
+条件・実装状況・JSON
+Raghavachari, K.; Trucks, G. W.; Pople, J. A.; Head-Gordon, M. (1989)
+
+## 量子化学・DFT：何を近似し、何を解くか — CASSCF・多参照法 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#multireference
+Coverage: reading
+
+CASSCFは選んだ活性軌道内で配置係数と軌道を最適化する方法です。CAS(n_e,n_o)の電子数と空間軌道数、含めた軌道の性質、状態平均や対象スピンを記録します。
+静的相関を扱う入口ですが、活性空間外の動的相関まで自動的に十分になるわけではありません。CASPT2やNEVPT2等の後続法は今後の展開項目として区別します。
+|\Psi_{\rm CAS}\rangle=\sum_{I\in\operatorname{CAS}(n_e,n_o)}c_I|\Phi_I\rangle
+活性空間依存を数値格子の誤差と混同しません。異なる核配置で活性軌道の性質が変わっていないかも追跡します。
+条件・実装状況・JSON
+Roos, B. O.; Taylor, P. R.; Siegbahn, P. E. M. (1980)
+
+## 量子化学・DFT：何を近似し、何を解くか — 時間依存DFT [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#tddft
+Coverage: reading
+
+TDDFTは時間依存密度の理論です。下式は局所ポテンシャルを使う時間依存KSの代表形で、初期状態依存や交換相関の記憶効果は一般には残ります。実時間伝播と、基底状態の周りの線形応答計算を区別します。
+線形応答では励起エネルギーや振動子強度、実時間では外場・時間刻み・伝播時間・吸収スペクトルへの変換条件を保存します。断熱近似は汎関数の時間依存の近似です。
+i\partial_t\phi_i(\mathbf r,t)=[-\tfrac12\nabla^2+v_s[n](\mathbf r,t)]\phi_i(\mathbf r,t)
+基底状態のKS固有値差だけをTDDFTの励起エネルギーと呼びません。二重励起・長距離電荷移動等は選んだ近似の限界を確認します。
+条件・実装状況・JSON
+Runge, E.; Gross, E. K. U. (1984)
+
+## 量子化学・DFT：何を近似し、何を解くか — 量子Monte Carlo [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#quantum-monte-carlo
+Coverage: reading
+
+VMCは試行波動関数を用いた変分エネルギーの確率評価、DMCは虚時間発展による基底状態への射影が基本です。電子のフェルミオン符号問題への対処として固定節近似等を用いる場合、その系統誤差を明記します。
+乱数系列、自己相関を考慮した統計誤差、時間刻み、walker数、試行関数、有限サイズを記録します。一様電子ガスのCeperley–Alder計算は、LDA相関を考える上でも重要な一次文献です。
+E_{\rm VMC}=\frac{\int |\Psi_T|^2 E_L\,d\mathbf R}{\int |\Psi_T|^2\,d\mathbf R},\qquad E_L=\frac{\hat H\Psi_T}{\Psi_T}
+長い式は横にスクロールできます。
+統計誤差の棒だけでは固定節・時間刻み・有限サイズ等の系統誤差を表せません。量子コンピュータを使う計算という意味でもありません。
+条件・実装状況・JSON
+Ceperley, D. M.; Alder, B. J. (1980)
+
+## 量子化学・DFT：何を近似し、何を解くか — DMRG・テンソルネットワーク [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#dmrg
+Coverage: reading
+
+DMRGを量子化学へ適用するときは、軌道をサイトとし、多電子状態を行列積状態（MPS）等で近似します。bond dimensionを増やすと表現力が増しますが、必要量は軌道順序やエンタングルメントにも依存します。
+活性軌道、軌道順序、bond dimension、sweep数、打切り指標とエネルギー収束を記録します。大きな活性空間の相関計算への入口であり、一般の3次元電子状態問題が常に容易になるという意味ではありません。
+c_{n_1\cdots n_L}\approx\mathbf A_1^{n_1}\mathbf A_2^{n_2}\cdots\mathbf A_L^{n_L}
+小さい打切り指標だけで物理的な活性空間の妥当性は保証されません。有限bond dimensionの誤差と、活性空間・基底の誤差を分けます。
+条件・実装状況・JSON
+White, S. R. (1992)
+White, S. R.; Martin, R. L. (1999)
+
+## 量子化学・DFT：何を近似し、何を解くか — 次に付ける実行・検証例 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#verification
+Coverage: reading
+
+以下は計画で、まだ計算結果ではありません。同じ入力と停止条件を公開し、独立した参照、数値誤差、モデルの限界を別々に示します。現行58問題の総数には加えていません。
+Under construction
+
+## 量子化学・DFT：何を近似し、何を解くか — 1電子：水素型原子 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/
+Coverage: reading
+
+E_n = −Z²/(2n²)、規格化、固有値残差を確認し、領域と格子の誤差を分離。
+
+## 量子化学・DFT：何を近似し、何を解くか — 最初のDFT：球対称He原子 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/
+Coverage: reading
+
+原子単位系・閉殻・交換のみLDAを明示。Hartree場、電子数、密度とエネルギーのSCF履歴、格子収束、独立実装との比較を保存。相関を含むLDAとは区別。
+
+## 量子化学・DFT：何を近似し、何を解くか — 分子：H₂のHF・DFTと有限基底FCI [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/
+Coverage: reading
+
+核間距離・基底・スピン・汎関数・求積格子・SCF閾値を固定。解離曲線で数値誤差と単一参照・汎関数の限界を分ける。
+
+## 量子化学・DFT：何を近似し、何を解くか — 周期系：基底・k点・セルの収束 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/
+Coverage: reading
+
+擬ポテンシャルの識別子と価電子、カットオフ、k点、電荷中性、占有の扱いを保存して誤差要因を一つずつ変える。
+
+## 量子化学・DFT：何を近似し、何を解くか — 今後広げる項目 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#further-topics
+Coverage: reading
+
+以下は追加候補です。この導入で専用解説・実装を提供しているという意味ではありません。AMR・並列化・mixed precisionは既存の収録方針どおり対象外です。
+軌道自由DFT・Thomas–Fermi模型
+range-separated hybrid・分散・二重hybrid
+GW・Bethe–Salpeter方程式・RPA
+CASPT2・NEVPT2と多参照相関
+力・Pulay項・構造最適化
+相対論・スピン軌道・非共線スピン
+
+## 量子化学・DFT：何を近似し、何を解くか — 一次文献と確認範囲 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#sources
+Coverage: reading
+
+標準的な代表式を独自に要約した導入です。一次文献の書誌を照合し、理論の位置付けは原論文の公開情報と公式資料で確認しています。原論文の全式の監査や数値再現は未実施です。
+Schrödinger, E. (1926). Quantisierung als Eigenwertproblem. Annalen der Physik.
+Hartree, D. R. (1928). The Wave Mechanics of an Atom with a Non-Coulomb Central Field. Part I. Theory and Methods. Mathematical Proceedings of the Cambridge Philosophical Society.
+Dirac, P. A. M. (1930). Note on Exchange Phenomena in the Thomas Atom. Mathematical Proceedings of the Cambridge Philosophical Society.
+Møller, C.; Plesset, M. S. (1934). Note on an Approximation Treatment for Many-Electron Systems. Physical Review.
+Boys, S. F. (1950). Electronic wave functions - I. A general method of calculation for the stationary states of any molecular system. Proceedings of the Royal Society A.
+Roothaan, C. C. J. (1951). New Developments in Molecular Orbital Theory. Reviews of Modern Physics.
+Hohenberg, P.; Kohn, W. (1964). Inhomogeneous Electron Gas. Physical Review.
+Kohn, W.; Sham, L. J. (1965). Self-Consistent Equations Including Exchange and Correlation Effects. Physical Review.
+Monkhorst, H. J.; Pack, J. D. (1976). Special points for Brillouin-zone integrations. Physical Review B.
+Hamann, D. R.; Schlüter, M.; Chiang, C. (1979). Norm-Conserving Pseudopotentials. Physical Review Letters.
+Ceperley, D. M.; Alder, B. J. (1980). Ground State of the Electron Gas by a Stochastic Method. Physical Review Letters.
+
+## 量子化学・DFT：何を近似し、何を解くか — 一次文献と確認範囲 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#sources
+Coverage: reading
+
+Pulay, P. (1980). Convergence acceleration of iterative sequences. The case of SCF iteration. Chemical Physics Letters.
+Roos, B. O.; Taylor, P. R.; Siegbahn, P. E. M. (1980). A complete active space SCF method (CASSCF) using a density matrix formulated super-CI approach. Chemical Physics.
+Knowles, P. J.; Handy, N. C. (1984). A new determinant-based full configuration interaction method. Chemical Physics Letters.
+Runge, E.; Gross, E. K. U. (1984). Density-Functional Theory for Time-Dependent Systems. Physical Review Letters.
+Raghavachari, K.; Trucks, G. W.; Pople, J. A.; Head-Gordon, M. (1989). A fifth-order perturbation comparison of electron correlation theories. Chemical Physics Letters.
+Vanderbilt, D. (1990). Soft self-consistent pseudopotentials in a generalized eigenvalue formalism. Physical Review B.
+White, S. R. (1992). Density matrix formulation for quantum renormalization groups. Physical Review Letters.
+Becke, A. D. (1993). Density-functional thermochemistry. III. The role of exact exchange. The Journal of Chemical Physics.
+Blöchl, P. E. (1994). Projector augmented-wave method. Physical Review B.
+Perdew, J. P.; Burke, K.; Ernzerhof, M. (1996). Generalized Gradient Approximation Made Simple. Physical Review Letters.
+Adamo, C.; Barone, V. (1999). Toward reliable density functional methods without adjustable parameters: The PBE0 model. The Journal of Chemical Physics.
+
+## 量子化学・DFT：何を近似し、何を解くか — 一次文献と確認範囲 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#sources
+Coverage: reading
+
+White, S. R.; Martin, R. L. (1999). Ab initio quantum chemistry using the density matrix renormalization group. The Journal of Chemical Physics.
+Sun, J.; Ruzsinszky, A.; Perdew, J. P. (2015). Strongly Constrained and Appropriately Normed Semilocal Density Functional. Physical Review Letters.
+
+## 量子化学・DFT：何を近似し、何を解くか — 実装を調べるための公式資料 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/
+Coverage: reading
+
+以下は外部ソフトウェアの資料です。このアトラスで実行・検証済みであることは意味しません。
+PySCF: SCF methods
+PySCF: density functional theory
+PySCF: MP2
+PySCF: configuration interaction
+PySCF: coupled cluster
+PySCF: MCSCF
+
 ## Euler再構成：PPM・特性変数・WENO-Z・AUSM [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/reconstruction/
@@ -13003,6 +13788,48 @@ Powell, Ken. Philip Lawrence Roe, Professor Emeritus of Aerospace Engineering at
 原著の書誌情報 · 全文または実装の参照資料
 Official university memorial published April 29, 2026. A biographical source, not a numerical-method research paper.
 
+## 原著の出版年順に並べた参考文献 — 量子化学の追加一次文献 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/
+Coverage: reading
+
+Schrödinger, E. (1926). Quantisierung als Eigenwertproblem. Annalen der Physik.
+Hartree, D. R. (1928). The Wave Mechanics of an Atom with a Non-Coulomb Central Field. Part I. Theory and Methods. Mathematical Proceedings of the Cambridge Philosophical Society.
+Dirac, P. A. M. (1930). Note on Exchange Phenomena in the Thomas Atom. Mathematical Proceedings of the Cambridge Philosophical Society.
+Boys, S. F. (1950). Electronic wave functions - I. A general method of calculation for the stationary states of any molecular system. Proceedings of the Royal Society A.
+Roothaan, C. C. J. (1951). New Developments in Molecular Orbital Theory. Reviews of Modern Physics.
+Hohenberg, P.; Kohn, W. (1964). Inhomogeneous Electron Gas. Physical Review.
+Kohn, W.; Sham, L. J. (1965). Self-Consistent Equations Including Exchange and Correlation Effects. Physical Review.
+Pulay, P. (1980). Convergence acceleration of iterative sequences. The case of SCF iteration. Chemical Physics Letters.
+Perdew, J. P.; Burke, K.; Ernzerhof, M. (1996). Generalized Gradient Approximation Made Simple. Physical Review Letters.
+Sun, J.; Ruzsinszky, A.; Perdew, J. P. (2015). Strongly Constrained and Appropriately Normed Semilocal Density Functional. Physical Review Letters.
+Becke, A. D. (1993). Density-functional thermochemistry. III. The role of exact exchange. The Journal of Chemical Physics.
+
+## 原著の出版年順に並べた参考文献 — 量子化学の追加一次文献 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/
+Coverage: reading
+
+Adamo, C.; Barone, V. (1999). Toward reliable density functional methods without adjustable parameters: The PBE0 model. The Journal of Chemical Physics.
+Hamann, D. R.; Schlüter, M.; Chiang, C. (1979). Norm-Conserving Pseudopotentials. Physical Review Letters.
+Vanderbilt, D. (1990). Soft self-consistent pseudopotentials in a generalized eigenvalue formalism. Physical Review B.
+Blöchl, P. E. (1994). Projector augmented-wave method. Physical Review B.
+Monkhorst, H. J.; Pack, J. D. (1976). Special points for Brillouin-zone integrations. Physical Review B.
+Møller, C.; Plesset, M. S. (1934). Note on an Approximation Treatment for Many-Electron Systems. Physical Review.
+Raghavachari, K.; Trucks, G. W.; Pople, J. A.; Head-Gordon, M. (1989). A fifth-order perturbation comparison of electron correlation theories. Chemical Physics Letters.
+Roos, B. O.; Taylor, P. R.; Siegbahn, P. E. M. (1980). A complete active space SCF method (CASSCF) using a density matrix formulated super-CI approach. Chemical Physics.
+Runge, E.; Gross, E. K. U. (1984). Density-Functional Theory for Time-Dependent Systems. Physical Review Letters.
+Ceperley, D. M.; Alder, B. J. (1980). Ground State of the Electron Gas by a Stochastic Method. Physical Review Letters.
+White, S. R. (1992). Density matrix formulation for quantum renormalization groups. Physical Review Letters.
+
+## 原著の出版年順に並べた参考文献 — 量子化学の追加一次文献 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/references/
+Coverage: reading
+
+White, S. R.; Martin, R. L. (1999). Ab initio quantum chemistry using the density matrix renormalization group. The Journal of Chemical Physics.
+Knowles, P. J.; Handy, N. C. (1984). A new determinant-based full configuration interaction method. Chemical Physics Letters.
+
 ## 相対論的流体力学：SRHD、GRHD、GRMHD [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/relativistic-hydrodynamics/
@@ -13171,6 +13998,35 @@ Coverage: reading
 
 数値計算の数理的な手法・定式化・適用条件・検証を中心に扱います。AMR（適応格子細分化）、並列化、mixed precision（混合精度）などの計算効率化・実装上の技巧は、独立した収録・開発の対象から外します。通常の丸め誤差や数値安定性は基礎として扱います。
 
+## 実装ロードマップ — 2026 · 量子化学・DFTの見取り図と定式化 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/
+Coverage: reading
+
+17項目の日英解説、代表式、一次文献。専用実装・数値検証は含まない。
+
+## 実装ロードマップ — 2026 · 量子化学・DFTの代表的な実行・検証例 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/
+Coverage: reading
+
+水素型原子、球対称Heの交換のみLDA、小分子H₂を順に検証。実行結果の確認後にのみ実装済みへ変更する。
+
+## 実装ロードマップ — 2027 · アトラスを核とする専門AI・モデル研究 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/
+Coverage: reading
+
+2027年以降の目標。資料検索と計算実行を結ぶ試作、検証済み学習事例、未学習問題での評価を検討。独立した基盤モデルの完成を約束する項目ではない。
+作業台帳 / JSON
+
+## 実装ロードマップ — 2027 · アトラスを核とする専門AI・モデル研究 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/
+Coverage: reading
+
+これより下は、これまでの整備と従来の検証計画です。現在の優先順位は上記を参照してください。
+
 ## 実装ロードマップ — 現在の最優先：衝撃波手法# [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/#current-priority-shock-methods
@@ -13311,21 +14167,13 @@ Coverage: reading
  応用候補 — Neural Operator／Fourier Neural Operator：入力関数から解関数への写像を学習する考え方を、既存のFourier基底・スペクトル法と接続します。学習分布外、格子変更、離散化・aliasing誤差を独立に確認する計画とし、格子を変更できることだけで精度を保証しません。Neural Operator原論文を参照します。
  応用候補 — 記号回帰と方程式発見：データや学習モデルから明示的な数式を探す方法。微分の自動計算と区別し、ノイズ、次元・対称性、式の複雑さ、別データでの再現性を評価します。深層学習から記号モデルを抽出する研究を調査候補とします。
 
-## 実装ロードマップ — 量子化学・DFTの開発予定# [ja]
+## 実装ロードマップ — 量子化学・DFT：解説公開、検証例は次段階 [ja]
 
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/roadmap/#planned-quantum-chemistry-and-dft
 Coverage: reading
 
-状態：予定。実装と専用の文献調査は未着手で、公開時期は未定です。 電子状態計算を独立した分岐として、次の開発リストに記録します。予定項目を現在の実装済み手法数や方程式数には加えません。
- Schrödinger固有値問題：調和振動子、水素型原子の動径問題などの1電子モデルから開始。有限差分・有限要素・スペクトル離散化を比較し、境界・領域打切り・解像度の誤差を分けて記録します。
- 電子状態計算の基底：原子軌道、Gaussian・Slater関数、平面波、実空間格子。重なり行列と一般化固有値問題を含めます。既存の要素基底ノートと接続し、メッシュ内の多項式基底と分子軌道用の基底集合を区別します。
- Coulomb・Hartreeポテンシャル：電子の電荷密度とPoisson解法を接続。静電単位系、電荷の符号、孤立・周期境界、ゼロモード、自己相互作用の規約を明記し、重力の符号や規格化をそのまま流用しません。
- Hartree–Fock：小さな閉殻分子を対象に、行列組立て・一般化固有値解法・自己無撞着場（SCF）反復を実装。必要な積分計算を検証してからエネルギーを提示します。
- Kohn–Sham密度汎関数法（DFT）：密度・有効ポテンシャル・交換相関近似を解説。使用するLDAモデルを明示して開始し、GGA以降は個別に検証します。
- SCF反復と混合：減衰、密度・ポテンシャル混合、Pulay／DIIS加速を比較。電子数、固有値問題とSCFの残差、エネルギー変化、未収束を報告します。
- 検証例：1電子の参照解、小さな原子・分子を使い、基底・格子の細分化と独立した参照コードで確認。離散化誤差、SCF許容誤差、物理モデルの差を分けます。
-最初の到達点は、検証済みの1電子固有値ソルバー、最小基底のHartree–Fock例、適用範囲を明示したKohn–Sham DFT例の順です。周期物質、擬ポテンシャル、スピン依存の拡張、post-Hartree–Fock相関は後続の独立課題とし、初期実装の完成範囲には含めません。この予定の追加で上記の流体計算法の優先順位は変えず、AMRは収録対象外です。
-今後の編集は、同じ方程式を複数の検証済み離散化、コスト・誤差、明示した失敗へ結び付けることを優先し、調査・試作・検証済みモデルの表示を維持します。
+17項目の導入解説・代表式・一次文献を公開しました。専用コードと数値検証は次段階です。解説のみとして収録台帳へ加え、実装済み・検証済みとは表示していません。
+日英の解説と計算例の計画
 
 ## 実装ロードマップ — 検証付きEuler・MHD比較# [ja]
 
@@ -13611,9 +14459,9 @@ Coverage: reading
 Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/site-coverage/
 Coverage: reading
 
-公開Web版、集計日2026-11-07。数えるのはカタログ項目と記載した実験例です。すべての項目が検証済みの完全なソルバーであるという意味ではありません。
-方程式・モデル42項目・計算法と構成要素90項目・学術誌／会議論文140件・全参考資料177件。
-保存済み計算を用いる方程式ギャラリーは7系統・9例、読書章はこの一覧を含め47章です。
+公開Web版、集計日2026-11-21。数えるのはカタログ項目と記載した実験例です。すべての項目が検証済みの完全なソルバーであるという意味ではありません。
+方程式・モデル46項目・計算法と構成要素107項目・学術誌／会議論文164件・全参考資料201件。
+保存済み計算を用いる方程式ギャラリーは7系統・9例、読書章はこの一覧を含め49章です。
 
 ## 収録範囲と数え方 — 方程式とモデル# [ja]
 
@@ -13621,7 +14469,7 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/site-coverage
 Coverage: reading
 
 名前付きの方程式・モデルを数えます。スカラー成分や数学的に互いに独立な系統の数ではありません。枠組みや補助定式化を含み、通常は派生形を一つにまとめます。ただし個別に説明するSR／GRの流体系3種類は分けます。生物モデルは専用カタログから一度だけ取り込みます。
-ローカル実験のある項目は15、文献解説のみは27で、後者には生物調査22項目すべてを含みます。連成系は一項目とし、成分方程式では増やしません。Poisson／Laplaceや次元の違いもまとめます。枠組みと個別反応則が並ぶため、数学的に独立した系統数ではありません。
+ローカル実験のある項目は15、文献解説のみは31で、後者には生物調査22項目すべてを含みます。連成系は一項目とし、成分方程式では増やしません。Poisson／Laplaceや次元の違いもまとめます。枠組みと個別反応則が並ぶため、数学的に独立した系統数ではありません。
 一覧の詳細な範囲注記は原文（英語）を保持します。各章の日本語本文も併せて参照できます。
 
 ## 収録範囲と数え方 — 物理・数学モデル# [ja]
@@ -13708,7 +14556,7 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/site-coverage
 Coverage: reading
 
 名前付きの離散化法、積分法、線形・非線形解法、連成演算子を数えます。パラメータの違いでは増やしません。
-ローカル実験のある項目は85、文献解説のみは5です。再構成の制限関数、前処理、連成演算子は構成要素であり、完全なPDEソルバーではありません。格子配置、CFL条件、定理は計算法の数に含めません。
+ローカル実験のある項目は85、文献解説のみは22です。再構成の制限関数、前処理、連成演算子は構成要素であり、完全なPDEソルバーではありません。格子配置、CFL条件、定理は計算法の数に含めません。
 
 ## 収録範囲と数え方 — 空間離散化# [ja]
 
@@ -13860,7 +14708,7 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/site-coverage
 Coverage: reading
 
 論文数は学術誌論文と会議論文です。総説、翻訳、採録済みであることを明記した論文も含みます。全参考資料は、それに書籍、章、技術資料、文書、個別に識別したプレプリント等を加えた、重複を除く出版物の数です。
-137件：学術誌論文（総説・翻訳・採録済み論文を含む）
+161件：学術誌論文（総説・翻訳・採録済み論文を含む）
 3件：会議論文
 22件：書籍
 2件：書籍の章
@@ -13875,6 +14723,30 @@ Coverage: reading
 
 名前付き登録簿はcatalog/coverage.jsonです。生物項目と出版物の種別は各専用カタログを参照します。python scripts/build_coverage.pyが出版物の同一性とローカル章リンクを検査し、数と一覧を生成します。Webビルドもこの検査を実行します。パラメータ、保存フレーム、本文での方程式の繰り返し、テスト関数の数では増やしません。翻訳ファイルも章の総数を増やしません。
 集計一覧と出典ハッシュをダウンロード。参考文献、方程式ギャラリー、生物モデル、実装ロードマップも参照できます。
+
+## 収録範囲と数え方 — 電子状態・量子化学の追加項目 [ja]
+
+Source: https://hrkoyama.github.io/numerical-methods-atlas/ja/read/site-coverage/
+Coverage: reading
+
+以下は導入解説のみで、専用実装は未公開です。
+Schrödinger固有値問題
+電子状態計算の基底
+Hartree–Fock法
+Kohn–Sham密度汎関数法
+自己無撞着場反復（SCF）
+Pulay / DIIS加速
+Coulomb・Hartreeポテンシャル
+LDA・GGA・hybrid汎関数
+擬ポテンシャル・PAW
+周期電子状態とk点
+MP2摂動論
+配置間相互作用（CI）
+結合クラスター・CCSD(T)
+CASSCF・多参照法
+時間依存DFT
+量子Monte Carlo
+DMRG・テンソルネットワーク
 
 ## 疎行列・非線形方程式系：真の残差を測る [ja]
 
@@ -20426,7 +21298,7 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/
 Coverage: overview
 
 方程式、離散化、実装、ベンチマークをたどる。衝撃波、流体、Poisson、時間積分、粒子法、有限要素法を学ぶ。
-教育用実装・限定的な検証・文献調査・開発予定が混在。各章の範囲を確認。量子化学・Hartree–Fock・DFTは今後の予定で専用実装は未着手。
+教育用実装・限定的な検証・文献調査・開発予定が混在。各章の範囲を確認。量子化学・HF・DFTは日英の導入解説を公開、専用実装と数値検証は未提供。
 
 ## Numerical Methods Atlas [en]
 
@@ -20434,7 +21306,7 @@ Source: https://hrkoyama.github.io/numerical-methods-atlas/
 Coverage: overview
 
 Equations, discretization, implementation and benchmarks: shocks, fluids, Poisson, time integration, particle methods and finite elements.
-Contains educational implementations, limited verification, literature surveys and plans. Check each chapter. Quantum chemistry, Hartree–Fock and DFT are planned, with no dedicated implementation yet.
+Includes scoped educational implementations, verification, reading and plans. Quantum chemistry, HF and DFT have bilingual introductory readings but no dedicated implementation or numerical verification yet.
 
 ## 熱的不安定性の研究アーカイブ [ja]
 

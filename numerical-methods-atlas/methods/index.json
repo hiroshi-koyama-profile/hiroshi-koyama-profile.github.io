@@ -6969,26 +6969,62 @@
         "ja": "1電子の問題から離散化と固有値・固有関数の誤差を調べる。",
         "en": "Start with one-electron discretization, eigenvalues and eigenfunctions."
       },
-      "status": "planned",
-      "origin": "development-candidate",
-      "reading": {},
+      "status": "reading-only",
+      "origin": "curated-quantum-reading",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#schrodinger",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#schrodinger"
+      },
       "code_modules": [],
       "test_files": [],
-      "references": [],
-      "assumptions": null,
-      "units": null,
-      "boundary_conditions": null,
+      "references": [
+        {
+          "id": "schrodinger1926",
+          "label": "Schrödinger, E. (1926), Quantisierung als Eigenwertproblem",
+          "url": "https://doi.org/10.1002/andp.19263840404",
+          "kind": "primary-paper",
+          "scope": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+        },
+        {
+          "id": "roothaan1951",
+          "label": "Roothaan, C. C. J. (1951), New Developments in Molecular Orbital Theory",
+          "url": "https://doi.org/10.1103/RevModPhys.23.69",
+          "kind": "primary-paper",
+          "scope": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+        }
+      ],
+      "assumptions": [
+        "Introductory formulation and comparison, not a verified executable solver.",
+        "Representative electronic-structure formulas use nonrelativistic Born–Oppenheimer theory unless the section explicitly states otherwise."
+      ],
+      "units": "Atomic units in the displayed electronic equations (hbar = m_e = e = 4 pi epsilon_0 = 1); dimensionless conventions are stated where needed.",
+      "boundary_conditions": "Isolated or periodic conditions must be selected for each physical system; no numerical boundary-value example is published here yet.",
       "next_deliverable": {
         "ja": "調和振動子・水素型原子で領域と格子の誤差を分離。",
         "en": "Separate domain and resolution errors for oscillator and hydrogenic models."
       },
       "limitations": {
-        "ja": "Under construction。専用の実装・検証結果はまだありません。",
-        "en": "Under construction. No dedicated implementation or verification result is provided yet."
+        "ja": "日英の導入・代表式・一次文献を公開。専用の実装・数値検証はUnder construction。核運動、相対論、スピン軌道相互作用、外場はこの代表式に含めません。固有値の残差が小さくても、領域・基底の誤差は残ります。",
+        "en": "Introductory bilingual reading, representative equations and primary references are available. No dedicated implementation or numerical verification result is provided yet. Nuclear dynamics, relativity, spin–orbit coupling and external fields are outside this representative Hamiltonian. A small eigenpair residual does not establish domain or basis convergence."
       },
       "metadata_review": {
-        "level": "candidate outline; scientific derivation and literature review incomplete",
+        "level": "curated introductory formulation with primary publication and official-documentation entry points; full derivation audit and numerical examples pending",
         "on": "2026-11-21"
+      },
+      "aliases": [
+        "シュレーディンガー",
+        "Schrödinger equation",
+        "electronic Hamiltonian"
+      ],
+      "assumptions_ja": [
+        "定式化と比較の導入解説であり、実行・検証済みソルバーではありません。",
+        "代表式は、各節に別記する場合を除き非相対論・Born–Oppenheimerの電子状態問題を想定します。"
+      ],
+      "units_ja": "表示する電子状態の式は原子単位系（ℏ = m_e = e = 4πε₀ = 1）。無次元量や占有の規約は各節に明記。",
+      "boundary_conditions_ja": "孤立・周期を対象系ごとに選ぶ必要があります。この導入には実行済みの境界値計算例はまだありません。",
+      "caution": {
+        "ja": "核運動、相対論、スピン軌道相互作用、外場はこの代表式に含めません。固有値の残差が小さくても、領域・基底の誤差は残ります。",
+        "en": "Nuclear dynamics, relativity, spin–orbit coupling and external fields are outside this representative Hamiltonian. A small eigenpair residual does not establish domain or basis convergence."
       },
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/schrodinger/",
       "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/schrodinger/index.json",
@@ -7015,26 +7051,64 @@
         "ja": "原子軌道・Gaussian・Slater・平面波・実空間格子をつなぐ。",
         "en": "Connect atomic, Gaussian, Slater, plane-wave and real-space representations."
       },
-      "status": "planned",
-      "origin": "development-candidate",
-      "reading": {},
+      "status": "reading-only",
+      "origin": "curated-quantum-reading",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#electronic-bases",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#electronic-bases"
+      },
       "code_modules": [],
       "test_files": [],
-      "references": [],
-      "assumptions": null,
-      "units": null,
-      "boundary_conditions": null,
+      "references": [
+        {
+          "id": "boys1950",
+          "label": "Boys, S. F. (1950), Electronic wave functions - I. A general method of calculation for the stationary states of any molecular system",
+          "url": "https://doi.org/10.1098/rspa.1950.0036",
+          "kind": "primary-paper",
+          "scope": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+        },
+        {
+          "id": "roothaan1951",
+          "label": "Roothaan, C. C. J. (1951), New Developments in Molecular Orbital Theory",
+          "url": "https://doi.org/10.1103/RevModPhys.23.69",
+          "kind": "primary-paper",
+          "scope": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+        }
+      ],
+      "assumptions": [
+        "Introductory formulation and comparison, not a verified executable solver.",
+        "Representative electronic-structure formulas use nonrelativistic Born–Oppenheimer theory unless the section explicitly states otherwise."
+      ],
+      "units": "Atomic units in the displayed electronic equations (hbar = m_e = e = 4 pi epsilon_0 = 1); dimensionless conventions are stated where needed.",
+      "boundary_conditions": "Isolated or periodic conditions must be selected for each physical system; no numerical boundary-value example is published here yet.",
       "next_deliverable": {
         "ja": "重なり行列と一般化固有値問題を含む比較解説。",
         "en": "A comparison including overlap matrices and generalized eigenproblems."
       },
       "limitations": {
-        "ja": "Under construction。専用の実装・検証結果はまだありません。",
-        "en": "Under construction. No dedicated implementation or verification result is provided yet."
+        "ja": "日英の導入・代表式・一次文献を公開。専用の実装・数値検証はUnder construction。基底を変える操作と電子相関・汎関数を変える操作は別です。線形従属、基底重なり誤差、擬ポテンシャルとの整合性も確認します。",
+        "en": "Introductory bilingual reading, representative equations and primary references are available. No dedicated implementation or numerical verification result is provided yet. Changing the basis is different from changing electron correlation or the functional. Check near-linear dependence, basis-set superposition error and pseudopotential compatibility."
       },
       "metadata_review": {
-        "level": "candidate outline; scientific derivation and literature review incomplete",
+        "level": "curated introductory formulation with primary publication and official-documentation entry points; full derivation audit and numerical examples pending",
         "on": "2026-11-21"
+      },
+      "aliases": [
+        "Gaussian",
+        "Slater",
+        "平面波",
+        "plane waves",
+        "basis set"
+      ],
+      "assumptions_ja": [
+        "定式化と比較の導入解説であり、実行・検証済みソルバーではありません。",
+        "代表式は、各節に別記する場合を除き非相対論・Born–Oppenheimerの電子状態問題を想定します。"
+      ],
+      "units_ja": "表示する電子状態の式は原子単位系（ℏ = m_e = e = 4πε₀ = 1）。無次元量や占有の規約は各節に明記。",
+      "boundary_conditions_ja": "孤立・周期を対象系ごとに選ぶ必要があります。この導入には実行済みの境界値計算例はまだありません。",
+      "caution": {
+        "ja": "基底を変える操作と電子相関・汎関数を変える操作は別です。線形従属、基底重なり誤差、擬ポテンシャルとの整合性も確認します。",
+        "en": "Changing the basis is different from changing electron correlation or the functional. Check near-linear dependence, basis-set superposition error and pseudopotential compatibility."
       },
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/electronic-bases/",
       "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/electronic-bases/index.json",
@@ -7061,37 +7135,57 @@
         "ja": "交換を含む平均場と、基底を用いた分子のSCF計算を扱う。",
         "en": "Study exchange-containing mean-field models and molecular SCF calculations."
       },
-      "status": "planned",
-      "origin": "development-candidate",
-      "reading": {},
+      "status": "reading-only",
+      "origin": "curated-quantum-reading",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#hartree-fock",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#hartree-fock"
+      },
       "code_modules": [],
       "test_files": [],
       "references": [
         {
-          "label": "Roothaan (1951), New Developments in Molecular Orbital Theory",
+          "id": "roothaan1951",
+          "label": "Roothaan, C. C. J. (1951), New Developments in Molecular Orbital Theory",
           "url": "https://doi.org/10.1103/RevModPhys.23.69",
-          "scope": "Bibliographic or official-documentation entry point; source equations are not audited for this planned entry."
-        },
-        {
-          "label": "PySCF: self-consistent field methods",
-          "url": "https://pyscf.org/user/scf",
-          "scope": "Bibliographic or official-documentation entry point; source equations are not audited for this planned entry."
+          "kind": "primary-paper",
+          "scope": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
         }
       ],
-      "assumptions": null,
-      "units": null,
-      "boundary_conditions": null,
+      "assumptions": [
+        "Introductory formulation and comparison, not a verified executable solver.",
+        "Representative electronic-structure formulas use nonrelativistic Born–Oppenheimer theory unless the section explicitly states otherwise."
+      ],
+      "units": "Atomic units in the displayed electronic equations (hbar = m_e = e = 4 pi epsilon_0 = 1); dimensionless conventions are stated where needed.",
+      "boundary_conditions": "Isolated or periodic conditions must be selected for each physical system; no numerical boundary-value example is published here yet.",
       "next_deliverable": {
         "ja": "小分子・最小基底の入力と独立した参照値の照合。",
         "en": "Small-molecule minimal-basis inputs checked against an independent reference."
       },
       "limitations": {
-        "ja": "Under construction。専用の実装・検証結果はまだありません。",
-        "en": "Under construction. No dedicated implementation or verification result is provided yet."
+        "ja": "日英の導入・代表式・一次文献を公開。専用の実装・数値検証はUnder construction。HFの解は一般に一意とは限りません。SCFが停止しても基底収束・軌道安定性・正しい電子状態の確認が必要です。分子解離では単一参照の限界が現れます。",
+        "en": "Introductory bilingual reading, representative equations and primary references are available. No dedicated implementation or numerical verification result is provided yet. HF solutions need not be unique. SCF termination does not prove basis convergence, orbital stability or the desired electronic state. Bond dissociation can expose single-reference limitations."
       },
       "metadata_review": {
-        "level": "candidate outline; scientific derivation and literature review incomplete",
+        "level": "curated introductory formulation with primary publication and official-documentation entry points; full derivation audit and numerical examples pending",
         "on": "2026-11-21"
+      },
+      "aliases": [
+        "HF",
+        "RHF",
+        "UHF",
+        "ROHF",
+        "ハートリー・フォック"
+      ],
+      "assumptions_ja": [
+        "定式化と比較の導入解説であり、実行・検証済みソルバーではありません。",
+        "代表式は、各節に別記する場合を除き非相対論・Born–Oppenheimerの電子状態問題を想定します。"
+      ],
+      "units_ja": "表示する電子状態の式は原子単位系（ℏ = m_e = e = 4πε₀ = 1）。無次元量や占有の規約は各節に明記。",
+      "boundary_conditions_ja": "孤立・周期を対象系ごとに選ぶ必要があります。この導入には実行済みの境界値計算例はまだありません。",
+      "caution": {
+        "ja": "HFの解は一般に一意とは限りません。SCFが停止しても基底収束・軌道安定性・正しい電子状態の確認が必要です。分子解離では単一参照の限界が現れます。",
+        "en": "HF solutions need not be unique. SCF termination does not prove basis convergence, orbital stability or the desired electronic state. Bond dissociation can expose single-reference limitations."
       },
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/hartree-fock/",
       "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/hartree-fock/index.json",
@@ -7118,37 +7212,64 @@
         "ja": "密度・有効ポテンシャル・交換相関近似とSCFをつなぐ。",
         "en": "Connect density, effective potential, exchange-correlation approximations and SCF."
       },
-      "status": "planned",
-      "origin": "development-candidate",
-      "reading": {},
+      "status": "reading-only",
+      "origin": "curated-quantum-reading",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#kohn-sham-dft",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#kohn-sham-dft"
+      },
       "code_modules": [],
       "test_files": [],
       "references": [
         {
-          "label": "Hohenberg & Kohn (1964), Inhomogeneous Electron Gas",
+          "id": "hohenberg1964",
+          "label": "Hohenberg, P.; Kohn, W. (1964), Inhomogeneous Electron Gas",
           "url": "https://doi.org/10.1103/PhysRev.136.B864",
-          "scope": "Publisher title and abstract checked; full derivation not audited for this entry."
+          "kind": "primary-paper",
+          "scope": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
         },
         {
-          "label": "Kohn & Sham (1965), Self-Consistent Equations Including Exchange and Correlation Effects",
+          "id": "kohn1965",
+          "label": "Kohn, W.; Sham, L. J. (1965), Self-Consistent Equations Including Exchange and Correlation Effects",
           "url": "https://doi.org/10.1103/PhysRev.140.A1133",
-          "scope": "Publisher title and abstract checked; full derivation not audited for this entry."
+          "kind": "primary-paper",
+          "scope": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
         }
       ],
-      "assumptions": null,
-      "units": null,
-      "boundary_conditions": null,
+      "assumptions": [
+        "Introductory formulation and comparison, not a verified executable solver.",
+        "Representative electronic-structure formulas use nonrelativistic Born–Oppenheimer theory unless the section explicitly states otherwise."
+      ],
+      "units": "Atomic units in the displayed electronic equations (hbar = m_e = e = 4 pi epsilon_0 = 1); dimensionless conventions are stated where needed.",
+      "boundary_conditions": "Isolated or periodic conditions must be selected for each physical system; no numerical boundary-value example is published here yet.",
       "next_deliverable": {
         "ja": "交換相関モデルを固定した小さな系の実行・検証例。",
         "en": "A small reproducible case with a specified exchange-correlation model."
       },
       "limitations": {
-        "ja": "Under construction。専用の実装・検証結果はまだありません。",
-        "en": "Under construction. No dedicated implementation or verification result is provided yet."
+        "ja": "日英の導入・代表式・一次文献を公開。専用の実装・数値検証はUnder construction。正確な汎関数の理論と、近似汎関数による実計算を分けます。KS固有値を一般に励起エネルギーと同一視せず、基底状態DFTだけで励起状態まで保証しません。",
+        "en": "Introductory bilingual reading, representative equations and primary references are available. No dedicated implementation or numerical verification result is provided yet. Distinguish exact-functional theory from calculations with approximate functionals. KS eigenvalues are not generally excitation energies; ground-state DFT alone does not guarantee excited-state accuracy."
       },
       "metadata_review": {
-        "level": "candidate outline; scientific derivation and literature review incomplete",
+        "level": "curated introductory formulation with primary publication and official-documentation entry points; full derivation audit and numerical examples pending",
         "on": "2026-11-21"
+      },
+      "aliases": [
+        "DFT",
+        "密度汎関数法",
+        "密度汎関数理論",
+        "コーン・シャム",
+        "density functional theory"
+      ],
+      "assumptions_ja": [
+        "定式化と比較の導入解説であり、実行・検証済みソルバーではありません。",
+        "代表式は、各節に別記する場合を除き非相対論・Born–Oppenheimerの電子状態問題を想定します。"
+      ],
+      "units_ja": "表示する電子状態の式は原子単位系（ℏ = m_e = e = 4πε₀ = 1）。無次元量や占有の規約は各節に明記。",
+      "boundary_conditions_ja": "孤立・周期を対象系ごとに選ぶ必要があります。この導入には実行済みの境界値計算例はまだありません。",
+      "caution": {
+        "ja": "正確な汎関数の理論と、近似汎関数による実計算を分けます。KS固有値を一般に励起エネルギーと同一視せず、基底状態DFTだけで励起状態まで保証しません。",
+        "en": "Distinguish exact-functional theory from calculations with approximate functionals. KS eigenvalues are not generally excitation energies; ground-state DFT alone does not guarantee excited-state accuracy."
       },
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/kohn-sham-dft/",
       "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/kohn-sham-dft/index.json",
@@ -7175,37 +7296,62 @@
         "ja": "密度や有効ポテンシャルを反復し、収束と未収束を診断する。",
         "en": "Iterate densities or effective potentials and diagnose convergence or failure."
       },
-      "status": "planned",
-      "origin": "development-candidate",
-      "reading": {},
+      "status": "reading-only",
+      "origin": "curated-quantum-reading",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#scf",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#scf"
+      },
       "code_modules": [],
       "test_files": [],
       "references": [
         {
-          "label": "Roothaan (1951), New Developments in Molecular Orbital Theory",
+          "id": "roothaan1951",
+          "label": "Roothaan, C. C. J. (1951), New Developments in Molecular Orbital Theory",
           "url": "https://doi.org/10.1103/RevModPhys.23.69",
-          "scope": "Bibliographic or official-documentation entry point; source equations are not audited for this planned entry."
+          "kind": "primary-paper",
+          "scope": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
         },
         {
-          "label": "PySCF: self-consistent field methods",
-          "url": "https://pyscf.org/user/scf",
-          "scope": "Bibliographic or official-documentation entry point; source equations are not audited for this planned entry."
+          "id": "pulay1980",
+          "label": "Pulay, P. (1980), Convergence acceleration of iterative sequences. The case of SCF iteration",
+          "url": "https://doi.org/10.1016/0009-2614(80)80396-4",
+          "kind": "primary-paper",
+          "scope": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
         }
       ],
-      "assumptions": null,
-      "units": null,
-      "boundary_conditions": null,
+      "assumptions": [
+        "Introductory formulation and comparison, not a verified executable solver.",
+        "Representative electronic-structure formulas use nonrelativistic Born–Oppenheimer theory unless the section explicitly states otherwise."
+      ],
+      "units": "Atomic units in the displayed electronic equations (hbar = m_e = e = 4 pi epsilon_0 = 1); dimensionless conventions are stated where needed.",
+      "boundary_conditions": "Isolated or periodic conditions must be selected for each physical system; no numerical boundary-value example is published here yet.",
       "next_deliverable": {
         "ja": "電子数・残差・エネルギー変化を保存する基準例。",
         "en": "A baseline recording electron number, residuals and energy changes."
       },
       "limitations": {
-        "ja": "Under construction。専用の実装・検証結果はまだありません。",
-        "en": "Under construction. No dedicated implementation or verification result is provided yet."
+        "ja": "日英の導入・代表式・一次文献を公開。専用の実装・数値検証はUnder construction。小さいエネルギー変化だけで収束を宣言しません。収束した解が最低エネルギーの安定な電子状態である保証も別に検査します。",
+        "en": "Introductory bilingual reading, representative equations and primary references are available. No dedicated implementation or numerical verification result is provided yet. A small energy change alone is insufficient. Convergence also does not establish the lowest-energy stable electronic solution."
       },
       "metadata_review": {
-        "level": "candidate outline; scientific derivation and literature review incomplete",
+        "level": "curated introductory formulation with primary publication and official-documentation entry points; full derivation audit and numerical examples pending",
         "on": "2026-11-21"
+      },
+      "aliases": [
+        "自己無撞着場",
+        "self consistency",
+        "density mixing"
+      ],
+      "assumptions_ja": [
+        "定式化と比較の導入解説であり、実行・検証済みソルバーではありません。",
+        "代表式は、各節に別記する場合を除き非相対論・Born–Oppenheimerの電子状態問題を想定します。"
+      ],
+      "units_ja": "表示する電子状態の式は原子単位系（ℏ = m_e = e = 4πε₀ = 1）。無次元量や占有の規約は各節に明記。",
+      "boundary_conditions_ja": "孤立・周期を対象系ごとに選ぶ必要があります。この導入には実行済みの境界値計算例はまだありません。",
+      "caution": {
+        "ja": "小さいエネルギー変化だけで収束を宣言しません。収束した解が最低エネルギーの安定な電子状態である保証も別に検査します。",
+        "en": "A small energy change alone is insufficient. Convergence also does not establish the lowest-energy stable electronic solution."
       },
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/scf/",
       "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/scf/index.json",
@@ -7232,32 +7378,55 @@
         "ja": "反復履歴を利用してSCF等の収束を加速する。",
         "en": "Use iteration history to accelerate SCF and related sequences."
       },
-      "status": "planned",
-      "origin": "development-candidate",
-      "reading": {},
+      "status": "reading-only",
+      "origin": "curated-quantum-reading",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#diis",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#diis"
+      },
       "code_modules": [],
       "test_files": [],
       "references": [
         {
-          "label": "Pulay (1980), Convergence acceleration of iterative sequences. The case of SCF iteration",
+          "id": "pulay1980",
+          "label": "Pulay, P. (1980), Convergence acceleration of iterative sequences. The case of SCF iteration",
           "url": "https://doi.org/10.1016/0009-2614(80)80396-4",
-          "scope": "Bibliographic or official-documentation entry point; source equations are not audited for this planned entry."
+          "kind": "primary-paper",
+          "scope": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
         }
       ],
-      "assumptions": null,
-      "units": null,
-      "boundary_conditions": null,
+      "assumptions": [
+        "Introductory formulation and comparison, not a verified executable solver.",
+        "Representative electronic-structure formulas use nonrelativistic Born–Oppenheimer theory unless the section explicitly states otherwise."
+      ],
+      "units": "Atomic units in the displayed electronic equations (hbar = m_e = e = 4 pi epsilon_0 = 1); dimensionless conventions are stated where needed.",
+      "boundary_conditions": "Isolated or periodic conditions must be selected for each physical system; no numerical boundary-value example is published here yet.",
       "next_deliverable": {
         "ja": "減衰反復とDIISを、同じ停止条件と失敗例で比較。",
         "en": "Compare damping and DIIS under the same stopping criteria, including failures."
       },
       "limitations": {
-        "ja": "Under construction。専用の実装・検証結果はまだありません。",
-        "en": "Under construction. No dedicated implementation or verification result is provided yet."
+        "ja": "日英の導入・代表式・一次文献を公開。専用の実装・数値検証はUnder construction。外挿は収束やエネルギーの単調減少を保証しません。残差が見かけ上小さい場合、初期値依存や停留解の不安定性も確認します。",
+        "en": "Introductory bilingual reading, representative equations and primary references are available. No dedicated implementation or numerical verification result is provided yet. Extrapolation guarantees neither convergence nor monotonic energy decrease. Investigate initial-state dependence and unstable stationary solutions even when a residual appears small."
       },
       "metadata_review": {
-        "level": "candidate outline; scientific derivation and literature review incomplete",
+        "level": "curated introductory formulation with primary publication and official-documentation entry points; full derivation audit and numerical examples pending",
         "on": "2026-11-21"
+      },
+      "aliases": [
+        "Pulay",
+        "DIIS",
+        "プーレイ"
+      ],
+      "assumptions_ja": [
+        "定式化と比較の導入解説であり、実行・検証済みソルバーではありません。",
+        "代表式は、各節に別記する場合を除き非相対論・Born–Oppenheimerの電子状態問題を想定します。"
+      ],
+      "units_ja": "表示する電子状態の式は原子単位系（ℏ = m_e = e = 4πε₀ = 1）。無次元量や占有の規約は各節に明記。",
+      "boundary_conditions_ja": "孤立・周期を対象系ごとに選ぶ必要があります。この導入には実行済みの境界値計算例はまだありません。",
+      "caution": {
+        "ja": "外挿は収束やエネルギーの単調減少を保証しません。残差が見かけ上小さい場合、初期値依存や停留解の不安定性も確認します。",
+        "en": "Extrapolation guarantees neither convergence nor monotonic energy decrease. Investigate initial-state dependence and unstable stationary solutions even when a residual appears small."
       },
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/diis/",
       "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/diis/index.json",
@@ -7284,26 +7453,62 @@
         "ja": "電子密度のPoisson解法を、静電気の符号・単位・境界とともに扱う。",
         "en": "Solve Poisson for electronic charge with explicit signs, units and boundaries."
       },
-      "status": "planned",
-      "origin": "development-candidate",
-      "reading": {},
+      "status": "reading-only",
+      "origin": "curated-quantum-reading",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#hartree-poisson",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#hartree-poisson"
+      },
       "code_modules": [],
       "test_files": [],
-      "references": [],
-      "assumptions": null,
-      "units": null,
-      "boundary_conditions": null,
+      "references": [
+        {
+          "id": "hartree1928",
+          "label": "Hartree, D. R. (1928), The Wave Mechanics of an Atom with a Non-Coulomb Central Field. Part I. Theory and Methods",
+          "url": "https://doi.org/10.1017/S0305004100011919",
+          "kind": "primary-paper",
+          "scope": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+        },
+        {
+          "id": "kohn1965",
+          "label": "Kohn, W.; Sham, L. J. (1965), Self-Consistent Equations Including Exchange and Correlation Effects",
+          "url": "https://doi.org/10.1103/PhysRev.140.A1133",
+          "kind": "primary-paper",
+          "scope": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+        }
+      ],
+      "assumptions": [
+        "Introductory formulation and comparison, not a verified executable solver.",
+        "Representative electronic-structure formulas use nonrelativistic Born–Oppenheimer theory unless the section explicitly states otherwise."
+      ],
+      "units": "Atomic units in the displayed electronic equations (hbar = m_e = e = 4 pi epsilon_0 = 1); dimensionless conventions are stated where needed.",
+      "boundary_conditions": "Isolated or periodic conditions must be selected for each physical system; no numerical boundary-value example is published here yet.",
       "next_deliverable": {
         "ja": "孤立と周期の小規模参照例。",
         "en": "Small isolated and periodic reference examples."
       },
       "limitations": {
-        "ja": "Under construction。専用の実装・検証結果はまだありません。",
-        "en": "Under construction. No dedicated implementation or verification result is provided yet."
+        "ja": "日英の導入・代表式・一次文献を公開。専用の実装・数値検証はUnder construction。Poisson解の残差、積分した電子数、遠方の挙動、二重計数の1/2を別々に確かめます。周期セルの帯電系を孤立系のエネルギーとして解釈しません。",
+        "en": "Introductory bilingual reading, representative equations and primary references are available. No dedicated implementation or numerical verification result is provided yet. Check the Poisson residual, integrated electron number, far-field behavior and the one-half double-counting factor separately. A charged periodic cell does not directly give an isolated-system energy."
       },
       "metadata_review": {
-        "level": "candidate outline; scientific derivation and literature review incomplete",
+        "level": "curated introductory formulation with primary publication and official-documentation entry points; full derivation audit and numerical examples pending",
         "on": "2026-11-21"
+      },
+      "aliases": [
+        "Hartree potential",
+        "電子密度",
+        "Coulomb"
+      ],
+      "assumptions_ja": [
+        "定式化と比較の導入解説であり、実行・検証済みソルバーではありません。",
+        "代表式は、各節に別記する場合を除き非相対論・Born–Oppenheimerの電子状態問題を想定します。"
+      ],
+      "units_ja": "表示する電子状態の式は原子単位系（ℏ = m_e = e = 4πε₀ = 1）。無次元量や占有の規約は各節に明記。",
+      "boundary_conditions_ja": "孤立・周期を対象系ごとに選ぶ必要があります。この導入には実行済みの境界値計算例はまだありません。",
+      "caution": {
+        "ja": "Poisson解の残差、積分した電子数、遠方の挙動、二重計数の1/2を別々に確かめます。周期セルの帯電系を孤立系のエネルギーとして解釈しません。",
+        "en": "Check the Poisson residual, integrated electron number, far-field behavior and the one-half double-counting factor separately. A charged periodic cell does not directly give an isolated-system energy."
       },
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/hartree-poisson/",
       "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/hartree-poisson/index.json",
@@ -7330,26 +7535,89 @@
         "ja": "交換相関近似を、数値誤差と物理近似の違いを保って整理する。",
         "en": "Separate exchange-correlation model choices from numerical errors."
       },
-      "status": "planned",
-      "origin": "development-candidate",
-      "reading": {},
+      "status": "reading-only",
+      "origin": "curated-quantum-reading",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#xc-functionals",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#xc-functionals"
+      },
       "code_modules": [],
       "test_files": [],
-      "references": [],
-      "assumptions": null,
-      "units": null,
-      "boundary_conditions": null,
+      "references": [
+        {
+          "id": "dirac1930",
+          "label": "Dirac, P. A. M. (1930), Note on Exchange Phenomena in the Thomas Atom",
+          "url": "https://doi.org/10.1017/S0305004100016108",
+          "kind": "primary-paper",
+          "scope": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+        },
+        {
+          "id": "perdew1996",
+          "label": "Perdew, J. P.; Burke, K.; Ernzerhof, M. (1996), Generalized Gradient Approximation Made Simple",
+          "url": "https://doi.org/10.1103/PhysRevLett.77.3865",
+          "kind": "primary-paper",
+          "scope": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+        },
+        {
+          "id": "sun2015",
+          "label": "Sun, J.; Ruzsinszky, A.; Perdew, J. P. (2015), Strongly Constrained and Appropriately Normed Semilocal Density Functional",
+          "url": "https://doi.org/10.1103/PhysRevLett.115.036402",
+          "kind": "primary-paper",
+          "scope": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+        },
+        {
+          "id": "becke1993",
+          "label": "Becke, A. D. (1993), Density-functional thermochemistry. III. The role of exact exchange",
+          "url": "https://doi.org/10.1063/1.464913",
+          "kind": "primary-paper",
+          "scope": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+        },
+        {
+          "id": "adamo1999",
+          "label": "Adamo, C.; Barone, V. (1999), Toward reliable density functional methods without adjustable parameters: The PBE0 model",
+          "url": "https://doi.org/10.1063/1.478522",
+          "kind": "primary-paper",
+          "scope": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+        }
+      ],
+      "assumptions": [
+        "Introductory formulation and comparison, not a verified executable solver.",
+        "Representative electronic-structure formulas use nonrelativistic Born–Oppenheimer theory unless the section explicitly states otherwise."
+      ],
+      "units": "Atomic units in the displayed electronic equations (hbar = m_e = e = 4 pi epsilon_0 = 1); dimensionless conventions are stated where needed.",
+      "boundary_conditions": "Isolated or periodic conditions must be selected for each physical system; no numerical boundary-value example is published here yet.",
       "next_deliverable": {
         "ja": "使用する汎関数・グリッド・基底の明示と出典整理。",
         "en": "Document functional, grid, basis and primary references."
       },
       "limitations": {
-        "ja": "Under construction。専用の実装・検証結果はまだありません。",
-        "en": "Under construction. No dedicated implementation or verification result is provided yet."
+        "ja": "日英の導入・代表式・一次文献を公開。専用の実装・数値検証はUnder construction。基底・格子・SCFが収束しても汎関数の近似誤差は消えません。自己相互作用、電荷移動、強相関、分散の扱いは対象と近似に応じて評価します。",
+        "en": "Introductory bilingual reading, representative equations and primary references are available. No dedicated implementation or numerical verification result is provided yet. Basis, grid and SCF convergence do not remove functional error. Assess self-interaction, charge transfer, strong correlation and dispersion for the chosen system and approximation."
       },
       "metadata_review": {
-        "level": "candidate outline; scientific derivation and literature review incomplete",
+        "level": "curated introductory formulation with primary publication and official-documentation entry points; full derivation audit and numerical examples pending",
         "on": "2026-11-21"
+      },
+      "aliases": [
+        "LDA",
+        "GGA",
+        "meta-GGA",
+        "hybrid",
+        "PBE",
+        "PBE0",
+        "SCAN",
+        "B3LYP",
+        "交換相関汎関数"
+      ],
+      "assumptions_ja": [
+        "定式化と比較の導入解説であり、実行・検証済みソルバーではありません。",
+        "代表式は、各節に別記する場合を除き非相対論・Born–Oppenheimerの電子状態問題を想定します。"
+      ],
+      "units_ja": "表示する電子状態の式は原子単位系（ℏ = m_e = e = 4πε₀ = 1）。無次元量や占有の規約は各節に明記。",
+      "boundary_conditions_ja": "孤立・周期を対象系ごとに選ぶ必要があります。この導入には実行済みの境界値計算例はまだありません。",
+      "caution": {
+        "ja": "基底・格子・SCFが収束しても汎関数の近似誤差は消えません。自己相互作用、電荷移動、強相関、分散の扱いは対象と近似に応じて評価します。",
+        "en": "Basis, grid and SCF convergence do not remove functional error. Assess self-interaction, charge transfer, strong correlation and dispersion for the chosen system and approximation."
       },
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/xc-functionals/",
       "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/xc-functionals/index.json",
@@ -7376,26 +7644,70 @@
         "ja": "内殻の扱いと有効な電子状態表現の位置付けを示す。",
         "en": "Map core-electron treatments and effective electronic representations."
       },
-      "status": "planned",
-      "origin": "development-candidate",
-      "reading": {},
+      "status": "reading-only",
+      "origin": "curated-quantum-reading",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#pseudopotentials",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#pseudopotentials"
+      },
       "code_modules": [],
       "test_files": [],
-      "references": [],
-      "assumptions": null,
-      "units": null,
-      "boundary_conditions": null,
+      "references": [
+        {
+          "id": "hamann1979",
+          "label": "Hamann, D. R.; Schlüter, M.; Chiang, C. (1979), Norm-Conserving Pseudopotentials",
+          "url": "https://doi.org/10.1103/PhysRevLett.43.1494",
+          "kind": "primary-paper",
+          "scope": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+        },
+        {
+          "id": "vanderbilt1990",
+          "label": "Vanderbilt, D. (1990), Soft self-consistent pseudopotentials in a generalized eigenvalue formalism",
+          "url": "https://doi.org/10.1103/PhysRevB.41.7892",
+          "kind": "primary-paper",
+          "scope": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+        },
+        {
+          "id": "blochl1994",
+          "label": "Blöchl, P. E. (1994), Projector augmented-wave method",
+          "url": "https://doi.org/10.1103/PhysRevB.50.17953",
+          "kind": "primary-paper",
+          "scope": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+        }
+      ],
+      "assumptions": [
+        "Introductory formulation and comparison, not a verified executable solver.",
+        "Representative electronic-structure formulas use nonrelativistic Born–Oppenheimer theory unless the section explicitly states otherwise."
+      ],
+      "units": "Atomic units in the displayed electronic equations (hbar = m_e = e = 4 pi epsilon_0 = 1); dimensionless conventions are stated where needed.",
+      "boundary_conditions": "Isolated or periodic conditions must be selected for each physical system; no numerical boundary-value example is published here yet.",
       "next_deliverable": {
         "ja": "モデルの適用条件と全電子計算との比較方針。",
         "en": "Define applicability and comparison with all-electron calculations."
       },
       "limitations": {
-        "ja": "Under construction。専用の実装・検証結果はまだありません。",
-        "en": "Under construction. No dedicated implementation or verification result is provided yet."
+        "ja": "日英の導入・代表式・一次文献を公開。専用の実装・数値検証はUnder construction。異なる擬ポテンシャルの全エネルギーの零点を無条件に比較しません。平面波カットオフの収束だけで移植性が証明されるわけではありません。",
+        "en": "Introductory bilingual reading, representative equations and primary references are available. No dedicated implementation or numerical verification result is provided yet. Do not compare absolute energy zeroes across different pseudopotentials without alignment. Cutoff convergence alone does not establish transferability."
       },
       "metadata_review": {
-        "level": "candidate outline; scientific derivation and literature review incomplete",
+        "level": "curated introductory formulation with primary publication and official-documentation entry points; full derivation audit and numerical examples pending",
         "on": "2026-11-21"
+      },
+      "aliases": [
+        "擬ポテンシャル",
+        "PAW",
+        "norm-conserving",
+        "ultrasoft"
+      ],
+      "assumptions_ja": [
+        "定式化と比較の導入解説であり、実行・検証済みソルバーではありません。",
+        "代表式は、各節に別記する場合を除き非相対論・Born–Oppenheimerの電子状態問題を想定します。"
+      ],
+      "units_ja": "表示する電子状態の式は原子単位系（ℏ = m_e = e = 4πε₀ = 1）。無次元量や占有の規約は各節に明記。",
+      "boundary_conditions_ja": "孤立・周期を対象系ごとに選ぶ必要があります。この導入には実行済みの境界値計算例はまだありません。",
+      "caution": {
+        "ja": "異なる擬ポテンシャルの全エネルギーの零点を無条件に比較しません。平面波カットオフの収束だけで移植性が証明されるわけではありません。",
+        "en": "Do not compare absolute energy zeroes across different pseudopotentials without alignment. Cutoff convergence alone does not establish transferability."
       },
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/pseudopotentials/",
       "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/pseudopotentials/index.json",
@@ -7422,26 +7734,56 @@
         "ja": "周期境界、Bloch表現、Brillouin領域の積分をつなぐ。",
         "en": "Connect periodic boundaries, Bloch representations and Brillouin-zone integration."
       },
-      "status": "planned",
-      "origin": "development-candidate",
-      "reading": {},
+      "status": "reading-only",
+      "origin": "curated-quantum-reading",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#k-point",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#k-point"
+      },
       "code_modules": [],
       "test_files": [],
-      "references": [],
-      "assumptions": null,
-      "units": null,
-      "boundary_conditions": null,
+      "references": [
+        {
+          "id": "monkhorst1976",
+          "label": "Monkhorst, H. J.; Pack, J. D. (1976), Special points for Brillouin-zone integrations",
+          "url": "https://doi.org/10.1103/PhysRevB.13.5188",
+          "kind": "primary-paper",
+          "scope": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+        }
+      ],
+      "assumptions": [
+        "Introductory formulation and comparison, not a verified executable solver.",
+        "Representative electronic-structure formulas use nonrelativistic Born–Oppenheimer theory unless the section explicitly states otherwise."
+      ],
+      "units": "Atomic units in the displayed electronic equations (hbar = m_e = e = 4 pi epsilon_0 = 1); dimensionless conventions are stated where needed.",
+      "boundary_conditions": "Isolated or periodic conditions must be selected for each physical system; no numerical boundary-value example is published here yet.",
       "next_deliverable": {
         "ja": "k点・基底・セルの収束を分離する最小例。",
         "en": "A minimal case separating k-point, basis and cell convergence."
       },
       "limitations": {
-        "ja": "Under construction。専用の実装・検証結果はまだありません。",
-        "en": "Under construction. No dedicated implementation or verification result is provided yet."
+        "ja": "日英の導入・代表式・一次文献を公開。専用の実装・数値検証はUnder construction。金属の占有とsmearing幅の依存、有限温度の自由エネルギーと零温度エネルギーを区別します。Γ点だけで十分かは系とセルに依存します。",
+        "en": "Introductory bilingual reading, representative equations and primary references are available. No dedicated implementation or numerical verification result is provided yet. Distinguish metallic occupation/smearing dependence, finite-temperature free energy and zero-temperature energy. Whether Γ-only sampling is adequate depends on the system and cell."
       },
       "metadata_review": {
-        "level": "candidate outline; scientific derivation and literature review incomplete",
+        "level": "curated introductory formulation with primary publication and official-documentation entry points; full derivation audit and numerical examples pending",
         "on": "2026-11-21"
+      },
+      "aliases": [
+        "k点",
+        "Monkhorst–Pack",
+        "Bloch",
+        "Brillouin zone"
+      ],
+      "assumptions_ja": [
+        "定式化と比較の導入解説であり、実行・検証済みソルバーではありません。",
+        "代表式は、各節に別記する場合を除き非相対論・Born–Oppenheimerの電子状態問題を想定します。"
+      ],
+      "units_ja": "表示する電子状態の式は原子単位系（ℏ = m_e = e = 4πε₀ = 1）。無次元量や占有の規約は各節に明記。",
+      "boundary_conditions_ja": "孤立・周期を対象系ごとに選ぶ必要があります。この導入には実行済みの境界値計算例はまだありません。",
+      "caution": {
+        "ja": "金属の占有とsmearing幅の依存、有限温度の自由エネルギーと零温度エネルギーを区別します。Γ点だけで十分かは系とセルに依存します。",
+        "en": "Distinguish metallic occupation/smearing dependence, finite-temperature free energy and zero-temperature energy. Whether Γ-only sampling is adequate depends on the system and cell."
       },
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/k-point/",
       "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/k-point/index.json",
@@ -7468,32 +7810,54 @@
         "ja": "平均場から電子相関を加える摂動的な方法を位置付ける。",
         "en": "Locate perturbative electron correlation beyond mean field."
       },
-      "status": "planned",
-      "origin": "development-candidate",
-      "reading": {},
+      "status": "reading-only",
+      "origin": "curated-quantum-reading",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#mp2",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#mp2"
+      },
       "code_modules": [],
       "test_files": [],
       "references": [
         {
-          "label": "Moller & Plesset (1934), Note on an Approximation Treatment for Many-Electron Systems",
+          "id": "moller1934",
+          "label": "Møller, C.; Plesset, M. S. (1934), Note on an Approximation Treatment for Many-Electron Systems",
           "url": "https://doi.org/10.1103/PhysRev.46.618",
-          "scope": "Bibliographic or official-documentation entry point; source equations are not audited for this planned entry."
+          "kind": "primary-paper",
+          "scope": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
         }
       ],
-      "assumptions": null,
-      "units": null,
-      "boundary_conditions": null,
+      "assumptions": [
+        "Introductory formulation and comparison, not a verified executable solver.",
+        "Representative electronic-structure formulas use nonrelativistic Born–Oppenheimer theory unless the section explicitly states otherwise."
+      ],
+      "units": "Atomic units in the displayed electronic equations (hbar = m_e = e = 4 pi epsilon_0 = 1); dimensionless conventions are stated where needed.",
+      "boundary_conditions": "Isolated or periodic conditions must be selected for each physical system; no numerical boundary-value example is published here yet.",
       "next_deliverable": {
         "ja": "一次文献と小分子の参照計算を選ぶ。",
         "en": "Select primary references and a small-molecule benchmark."
       },
       "limitations": {
-        "ja": "Under construction。専用の実装・検証結果はまだありません。",
-        "en": "Under construction. No dedicated implementation or verification result is provided yet."
+        "ja": "日英の導入・代表式・一次文献を公開。専用の実装・数値検証はUnder construction。小さい分母や強い静的相関では低次摂動が信頼できない場合があります。HFから下がったエネルギーを、そのまま厳密値への改善とは呼びません。",
+        "en": "Introductory bilingual reading, representative equations and primary references are available. No dedicated implementation or numerical verification result is provided yet. Small denominators and strong static correlation can invalidate low-order perturbation. An energy below HF is not by itself evidence of improvement toward the exact value."
       },
       "metadata_review": {
-        "level": "candidate outline; scientific derivation and literature review incomplete",
+        "level": "curated introductory formulation with primary publication and official-documentation entry points; full derivation audit and numerical examples pending",
         "on": "2026-11-21"
+      },
+      "aliases": [
+        "Møller–Plesset",
+        "メラー・プレセット"
+      ],
+      "assumptions_ja": [
+        "定式化と比較の導入解説であり、実行・検証済みソルバーではありません。",
+        "代表式は、各節に別記する場合を除き非相対論・Born–Oppenheimerの電子状態問題を想定します。"
+      ],
+      "units_ja": "表示する電子状態の式は原子単位系（ℏ = m_e = e = 4πε₀ = 1）。無次元量や占有の規約は各節に明記。",
+      "boundary_conditions_ja": "孤立・周期を対象系ごとに選ぶ必要があります。この導入には実行済みの境界値計算例はまだありません。",
+      "caution": {
+        "ja": "小さい分母や強い静的相関では低次摂動が信頼できない場合があります。HFから下がったエネルギーを、そのまま厳密値への改善とは呼びません。",
+        "en": "Small denominators and strong static correlation can invalidate low-order perturbation. An energy below HF is not by itself evidence of improvement toward the exact value."
       },
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/mp2/",
       "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/mp2/index.json",
@@ -7520,26 +7884,56 @@
         "ja": "多電子配置の展開と打切りの意味を整理する。",
         "en": "Explain many-electron configuration expansions and truncation."
       },
-      "status": "planned",
-      "origin": "development-candidate",
-      "reading": {},
+      "status": "reading-only",
+      "origin": "curated-quantum-reading",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#configuration-interaction",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#configuration-interaction"
+      },
       "code_modules": [],
       "test_files": [],
-      "references": [],
-      "assumptions": null,
-      "units": null,
-      "boundary_conditions": null,
+      "references": [
+        {
+          "id": "knowles1984",
+          "label": "Knowles, P. J.; Handy, N. C. (1984), A new determinant-based full configuration interaction method",
+          "url": "https://doi.org/10.1016/0009-2614(84)85513-X",
+          "kind": "primary-paper",
+          "scope": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+        }
+      ],
+      "assumptions": [
+        "Introductory formulation and comparison, not a verified executable solver.",
+        "Representative electronic-structure formulas use nonrelativistic Born–Oppenheimer theory unless the section explicitly states otherwise."
+      ],
+      "units": "Atomic units in the displayed electronic equations (hbar = m_e = e = 4 pi epsilon_0 = 1); dimensionless conventions are stated where needed.",
+      "boundary_conditions": "Isolated or periodic conditions must be selected for each physical system; no numerical boundary-value example is published here yet.",
       "next_deliverable": {
         "ja": "小さな基底での参照問題と比較軸を定義。",
         "en": "Define a small-basis reference and comparison criteria."
       },
       "limitations": {
-        "ja": "Under construction。専用の実装・検証結果はまだありません。",
-        "en": "Under construction. No dedicated implementation or verification result is provided yet."
+        "ja": "日英の導入・代表式・一次文献を公開。専用の実装・数値検証はUnder construction。有限基底のFCIは連続空間の厳密解とは違います。打切りCIのサイズ整合性と、変分性の成立条件を確認します。",
+        "en": "Introductory bilingual reading, representative equations and primary references are available. No dedicated implementation or numerical verification result is provided yet. Finite-basis FCI is not the exact continuum solution. Check size consistency of truncated CI and the assumptions behind variational bounds."
       },
       "metadata_review": {
-        "level": "candidate outline; scientific derivation and literature review incomplete",
+        "level": "curated introductory formulation with primary publication and official-documentation entry points; full derivation audit and numerical examples pending",
         "on": "2026-11-21"
+      },
+      "aliases": [
+        "CI",
+        "CISD",
+        "FCI",
+        "配置間相互作用"
+      ],
+      "assumptions_ja": [
+        "定式化と比較の導入解説であり、実行・検証済みソルバーではありません。",
+        "代表式は、各節に別記する場合を除き非相対論・Born–Oppenheimerの電子状態問題を想定します。"
+      ],
+      "units_ja": "表示する電子状態の式は原子単位系（ℏ = m_e = e = 4πε₀ = 1）。無次元量や占有の規約は各節に明記。",
+      "boundary_conditions_ja": "孤立・周期を対象系ごとに選ぶ必要があります。この導入には実行済みの境界値計算例はまだありません。",
+      "caution": {
+        "ja": "有限基底のFCIは連続空間の厳密解とは違います。打切りCIのサイズ整合性と、変分性の成立条件を確認します。",
+        "en": "Finite-basis FCI is not the exact continuum solution. Check size consistency of truncated CI and the assumptions behind variational bounds."
       },
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/configuration-interaction/",
       "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/configuration-interaction/index.json",
@@ -7566,26 +7960,57 @@
         "ja": "電子相関の励起階層と計算量・適用範囲を整理する。",
         "en": "Map excitation hierarchies, cost and applicability in correlation calculations."
       },
-      "status": "planned",
-      "origin": "development-candidate",
-      "reading": {},
+      "status": "reading-only",
+      "origin": "curated-quantum-reading",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#coupled-cluster",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#coupled-cluster"
+      },
       "code_modules": [],
       "test_files": [],
-      "references": [],
-      "assumptions": null,
-      "units": null,
-      "boundary_conditions": null,
+      "references": [
+        {
+          "id": "raghavachari1989",
+          "label": "Raghavachari, K.; Trucks, G. W.; Pople, J. A.; Head-Gordon, M. (1989), A fifth-order perturbation comparison of electron correlation theories",
+          "url": "https://doi.org/10.1016/S0009-2614(89)87395-6",
+          "kind": "primary-paper",
+          "scope": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+        }
+      ],
+      "assumptions": [
+        "Introductory formulation and comparison, not a verified executable solver.",
+        "Representative electronic-structure formulas use nonrelativistic Born–Oppenheimer theory unless the section explicitly states otherwise."
+      ],
+      "units": "Atomic units in the displayed electronic equations (hbar = m_e = e = 4 pi epsilon_0 = 1); dimensionless conventions are stated where needed.",
+      "boundary_conditions": "Isolated or periodic conditions must be selected for each physical system; no numerical boundary-value example is published here yet.",
       "next_deliverable": {
         "ja": "一次文献・参照実装・小分子例を選ぶ。",
         "en": "Select original references, a reference implementation and a small molecule."
       },
       "limitations": {
-        "ja": "Under construction。専用の実装・検証結果はまだありません。",
-        "en": "Under construction. No dedicated implementation or verification result is provided yet."
+        "ja": "日英の導入・代表式・一次文献を公開。専用の実装・数値検証はUnder construction。通常の射影CCエネルギーは変分上限ではありません。CCSD(T)を全ての結合解離・強相関系に通用する基準としません。",
+        "en": "Introductory bilingual reading, representative equations and primary references are available. No dedicated implementation or numerical verification result is provided yet. Conventional projected CC energies are not variational upper bounds. CCSD(T) is not a universal standard for bond breaking or strong correlation."
       },
       "metadata_review": {
-        "level": "candidate outline; scientific derivation and literature review incomplete",
+        "level": "curated introductory formulation with primary publication and official-documentation entry points; full derivation audit and numerical examples pending",
         "on": "2026-11-21"
+      },
+      "aliases": [
+        "CC",
+        "CCSD",
+        "CCSD(T)",
+        "CCSDT",
+        "結合クラスター"
+      ],
+      "assumptions_ja": [
+        "定式化と比較の導入解説であり、実行・検証済みソルバーではありません。",
+        "代表式は、各節に別記する場合を除き非相対論・Born–Oppenheimerの電子状態問題を想定します。"
+      ],
+      "units_ja": "表示する電子状態の式は原子単位系（ℏ = m_e = e = 4πε₀ = 1）。無次元量や占有の規約は各節に明記。",
+      "boundary_conditions_ja": "孤立・周期を対象系ごとに選ぶ必要があります。この導入には実行済みの境界値計算例はまだありません。",
+      "caution": {
+        "ja": "通常の射影CCエネルギーは変分上限ではありません。CCSD(T)を全ての結合解離・強相関系に通用する基準としません。",
+        "en": "Conventional projected CC energies are not variational upper bounds. CCSD(T) is not a universal standard for bond breaking or strong correlation."
       },
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/coupled-cluster/",
       "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/coupled-cluster/index.json",
@@ -7612,26 +8037,58 @@
         "ja": "単一参照が不足する系と活性空間の選び方を整理する。",
         "en": "Map active spaces and systems beyond a single reference."
       },
-      "status": "planned",
-      "origin": "development-candidate",
-      "reading": {},
+      "status": "reading-only",
+      "origin": "curated-quantum-reading",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#multireference",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#multireference"
+      },
       "code_modules": [],
       "test_files": [],
-      "references": [],
-      "assumptions": null,
-      "units": null,
-      "boundary_conditions": null,
+      "references": [
+        {
+          "id": "roos1980",
+          "label": "Roos, B. O.; Taylor, P. R.; Siegbahn, P. E. M. (1980), A complete active space SCF method (CASSCF) using a density matrix formulated super-CI approach",
+          "url": "https://doi.org/10.1016/0301-0104(80)80045-0",
+          "kind": "primary-paper",
+          "scope": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+        }
+      ],
+      "assumptions": [
+        "Introductory formulation and comparison, not a verified executable solver.",
+        "Representative electronic-structure formulas use nonrelativistic Born–Oppenheimer theory unless the section explicitly states otherwise."
+      ],
+      "units": "Atomic units in the displayed electronic equations (hbar = m_e = e = 4 pi epsilon_0 = 1); dimensionless conventions are stated where needed.",
+      "boundary_conditions": "Isolated or periodic conditions must be selected for each physical system; no numerical boundary-value example is published here yet.",
       "next_deliverable": {
         "ja": "活性空間を明示した小規模比較。",
         "en": "A small comparison with an explicit active space."
       },
       "limitations": {
-        "ja": "Under construction。専用の実装・検証結果はまだありません。",
-        "en": "Under construction. No dedicated implementation or verification result is provided yet."
+        "ja": "日英の導入・代表式・一次文献を公開。専用の実装・数値検証はUnder construction。活性空間依存を数値格子の誤差と混同しません。異なる核配置で活性軌道の性質が変わっていないかも追跡します。",
+        "en": "Introductory bilingual reading, representative equations and primary references are available. No dedicated implementation or numerical verification result is provided yet. Active-space dependence is distinct from grid error. Track orbital character across geometries rather than only orbital indices."
       },
       "metadata_review": {
-        "level": "candidate outline; scientific derivation and literature review incomplete",
+        "level": "curated introductory formulation with primary publication and official-documentation entry points; full derivation audit and numerical examples pending",
         "on": "2026-11-21"
+      },
+      "aliases": [
+        "CAS",
+        "CASSCF",
+        "CASPT2",
+        "NEVPT2",
+        "多参照法",
+        "活性空間"
+      ],
+      "assumptions_ja": [
+        "定式化と比較の導入解説であり、実行・検証済みソルバーではありません。",
+        "代表式は、各節に別記する場合を除き非相対論・Born–Oppenheimerの電子状態問題を想定します。"
+      ],
+      "units_ja": "表示する電子状態の式は原子単位系（ℏ = m_e = e = 4πε₀ = 1）。無次元量や占有の規約は各節に明記。",
+      "boundary_conditions_ja": "孤立・周期を対象系ごとに選ぶ必要があります。この導入には実行済みの境界値計算例はまだありません。",
+      "caution": {
+        "ja": "活性空間依存を数値格子の誤差と混同しません。異なる核配置で活性軌道の性質が変わっていないかも追跡します。",
+        "en": "Active-space dependence is distinct from grid error. Track orbital character across geometries rather than only orbital indices."
       },
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/multireference/",
       "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/multireference/index.json",
@@ -7658,32 +8115,56 @@
         "ja": "励起・応答と実時間発展の扱いを区別する。",
         "en": "Distinguish excitation/response calculations from real-time evolution."
       },
-      "status": "planned",
-      "origin": "development-candidate",
-      "reading": {},
+      "status": "reading-only",
+      "origin": "curated-quantum-reading",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#tddft",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#tddft"
+      },
       "code_modules": [],
       "test_files": [],
       "references": [
         {
-          "label": "PySCF user guide",
-          "url": "https://pyscf.org/user/index.html",
-          "scope": "Bibliographic or official-documentation entry point; source equations are not audited for this planned entry."
+          "id": "runge1984",
+          "label": "Runge, E.; Gross, E. K. U. (1984), Density-Functional Theory for Time-Dependent Systems",
+          "url": "https://doi.org/10.1103/PhysRevLett.52.997",
+          "kind": "primary-paper",
+          "scope": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
         }
       ],
-      "assumptions": null,
-      "units": null,
-      "boundary_conditions": null,
+      "assumptions": [
+        "Introductory formulation and comparison, not a verified executable solver.",
+        "Representative electronic-structure formulas use nonrelativistic Born–Oppenheimer theory unless the section explicitly states otherwise."
+      ],
+      "units": "Atomic units in the displayed electronic equations (hbar = m_e = e = 4 pi epsilon_0 = 1); dimensionless conventions are stated where needed.",
+      "boundary_conditions": "Isolated or periodic conditions must be selected for each physical system; no numerical boundary-value example is published here yet.",
       "next_deliverable": {
         "ja": "線形応答の一次文献と小分子の基準例。",
         "en": "Primary linear-response references and a small-molecule baseline."
       },
       "limitations": {
-        "ja": "Under construction。専用の実装・検証結果はまだありません。",
-        "en": "Under construction. No dedicated implementation or verification result is provided yet."
+        "ja": "日英の導入・代表式・一次文献を公開。専用の実装・数値検証はUnder construction。基底状態のKS固有値差だけをTDDFTの励起エネルギーと呼びません。二重励起・長距離電荷移動等は選んだ近似の限界を確認します。",
+        "en": "Introductory bilingual reading, representative equations and primary references are available. No dedicated implementation or numerical verification result is provided yet. Bare ground-state KS eigenvalue differences are not TDDFT excitation energies. Assess approximation limits for double excitations and long-range charge transfer."
       },
       "metadata_review": {
-        "level": "candidate outline; scientific derivation and literature review incomplete",
+        "level": "curated introductory formulation with primary publication and official-documentation entry points; full derivation audit and numerical examples pending",
         "on": "2026-11-21"
+      },
+      "aliases": [
+        "TDDFT",
+        "Runge–Gross",
+        "時間依存密度汎関数",
+        "linear response"
+      ],
+      "assumptions_ja": [
+        "定式化と比較の導入解説であり、実行・検証済みソルバーではありません。",
+        "代表式は、各節に別記する場合を除き非相対論・Born–Oppenheimerの電子状態問題を想定します。"
+      ],
+      "units_ja": "表示する電子状態の式は原子単位系（ℏ = m_e = e = 4πε₀ = 1）。無次元量や占有の規約は各節に明記。",
+      "boundary_conditions_ja": "孤立・周期を対象系ごとに選ぶ必要があります。この導入には実行済みの境界値計算例はまだありません。",
+      "caution": {
+        "ja": "基底状態のKS固有値差だけをTDDFTの励起エネルギーと呼びません。二重励起・長距離電荷移動等は選んだ近似の限界を確認します。",
+        "en": "Bare ground-state KS eigenvalue differences are not TDDFT excitation energies. Assess approximation limits for double excitations and long-range charge transfer."
       },
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/tddft/",
       "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/tddft/index.json",
@@ -7710,26 +8191,56 @@
         "ja": "確率的な量子計算と統計誤差・近似を整理する。",
         "en": "Map stochastic quantum calculations, statistical errors and approximations."
       },
-      "status": "planned",
-      "origin": "development-candidate",
-      "reading": {},
+      "status": "reading-only",
+      "origin": "curated-quantum-reading",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#quantum-monte-carlo",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#quantum-monte-carlo"
+      },
       "code_modules": [],
       "test_files": [],
-      "references": [],
-      "assumptions": null,
-      "units": null,
-      "boundary_conditions": null,
+      "references": [
+        {
+          "id": "ceperley1980",
+          "label": "Ceperley, D. M.; Alder, B. J. (1980), Ground State of the Electron Gas by a Stochastic Method",
+          "url": "https://doi.org/10.1103/PhysRevLett.45.566",
+          "kind": "primary-paper",
+          "scope": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+        }
+      ],
+      "assumptions": [
+        "Introductory formulation and comparison, not a verified executable solver.",
+        "Representative electronic-structure formulas use nonrelativistic Born–Oppenheimer theory unless the section explicitly states otherwise."
+      ],
+      "units": "Atomic units in the displayed electronic equations (hbar = m_e = e = 4 pi epsilon_0 = 1); dimensionless conventions are stated where needed.",
+      "boundary_conditions": "Isolated or periodic conditions must be selected for each physical system; no numerical boundary-value example is published here yet.",
       "next_deliverable": {
         "ja": "代表手法を分けた文献・検証計画。",
         "en": "Separate representative methods and their verification plans."
       },
       "limitations": {
-        "ja": "Under construction。専用の実装・検証結果はまだありません。",
-        "en": "Under construction. No dedicated implementation or verification result is provided yet."
+        "ja": "日英の導入・代表式・一次文献を公開。専用の実装・数値検証はUnder construction。統計誤差の棒だけでは固定節・時間刻み・有限サイズ等の系統誤差を表せません。量子コンピュータを使う計算という意味でもありません。",
+        "en": "Introductory bilingual reading, representative equations and primary references are available. No dedicated implementation or numerical verification result is provided yet. Statistical error bars do not capture fixed-node, time-step or finite-size bias. Quantum Monte Carlo here does not mean computation on a quantum computer."
       },
       "metadata_review": {
-        "level": "candidate outline; scientific derivation and literature review incomplete",
+        "level": "curated introductory formulation with primary publication and official-documentation entry points; full derivation audit and numerical examples pending",
         "on": "2026-11-21"
+      },
+      "aliases": [
+        "VMC",
+        "DMC",
+        "fixed node",
+        "量子モンテカルロ"
+      ],
+      "assumptions_ja": [
+        "定式化と比較の導入解説であり、実行・検証済みソルバーではありません。",
+        "代表式は、各節に別記する場合を除き非相対論・Born–Oppenheimerの電子状態問題を想定します。"
+      ],
+      "units_ja": "表示する電子状態の式は原子単位系（ℏ = m_e = e = 4πε₀ = 1）。無次元量や占有の規約は各節に明記。",
+      "boundary_conditions_ja": "孤立・周期を対象系ごとに選ぶ必要があります。この導入には実行済みの境界値計算例はまだありません。",
+      "caution": {
+        "ja": "統計誤差の棒だけでは固定節・時間刻み・有限サイズ等の系統誤差を表せません。量子コンピュータを使う計算という意味でもありません。",
+        "en": "Statistical error bars do not capture fixed-node, time-step or finite-size bias. Quantum Monte Carlo here does not mean computation on a quantum computer."
       },
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/quantum-monte-carlo/",
       "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/quantum-monte-carlo/index.json",
@@ -7756,26 +8267,63 @@
         "ja": "多体系の低ランク表現と打切り誤差を位置付ける。",
         "en": "Locate low-rank many-body representations and truncation error."
       },
-      "status": "planned",
-      "origin": "development-candidate",
-      "reading": {},
+      "status": "reading-only",
+      "origin": "curated-quantum-reading",
+      "reading": {
+        "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#dmrg",
+        "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#dmrg"
+      },
       "code_modules": [],
       "test_files": [],
-      "references": [],
-      "assumptions": null,
-      "units": null,
-      "boundary_conditions": null,
+      "references": [
+        {
+          "id": "white1992",
+          "label": "White, S. R. (1992), Density matrix formulation for quantum renormalization groups",
+          "url": "https://doi.org/10.1103/PhysRevLett.69.2863",
+          "kind": "primary-paper",
+          "scope": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+        },
+        {
+          "id": "white1999",
+          "label": "White, S. R.; Martin, R. L. (1999), Ab initio quantum chemistry using the density matrix renormalization group",
+          "url": "https://doi.org/10.1063/1.478295",
+          "kind": "primary-paper",
+          "scope": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+        }
+      ],
+      "assumptions": [
+        "Introductory formulation and comparison, not a verified executable solver.",
+        "Representative electronic-structure formulas use nonrelativistic Born–Oppenheimer theory unless the section explicitly states otherwise."
+      ],
+      "units": "Atomic units in the displayed electronic equations (hbar = m_e = e = 4 pi epsilon_0 = 1); dimensionless conventions are stated where needed.",
+      "boundary_conditions": "Isolated or periodic conditions must be selected for each physical system; no numerical boundary-value example is published here yet.",
       "next_deliverable": {
         "ja": "小さな模型と誤差指標を選ぶ。",
         "en": "Select a small model and error diagnostics."
       },
       "limitations": {
-        "ja": "Under construction。専用の実装・検証結果はまだありません。",
-        "en": "Under construction. No dedicated implementation or verification result is provided yet."
+        "ja": "日英の導入・代表式・一次文献を公開。専用の実装・数値検証はUnder construction。小さい打切り指標だけで物理的な活性空間の妥当性は保証されません。有限bond dimensionの誤差と、活性空間・基底の誤差を分けます。",
+        "en": "Introductory bilingual reading, representative equations and primary references are available. No dedicated implementation or numerical verification result is provided yet. A small truncation measure does not establish the physical adequacy of an active space. Separate finite-bond-dimension error from active-space and basis error."
       },
       "metadata_review": {
-        "level": "candidate outline; scientific derivation and literature review incomplete",
+        "level": "curated introductory formulation with primary publication and official-documentation entry points; full derivation audit and numerical examples pending",
         "on": "2026-11-21"
+      },
+      "aliases": [
+        "DMRG",
+        "MPS",
+        "tensor networks",
+        "密度行列繰り込み群"
+      ],
+      "assumptions_ja": [
+        "定式化と比較の導入解説であり、実行・検証済みソルバーではありません。",
+        "代表式は、各節に別記する場合を除き非相対論・Born–Oppenheimerの電子状態問題を想定します。"
+      ],
+      "units_ja": "表示する電子状態の式は原子単位系（ℏ = m_e = e = 4πε₀ = 1）。無次元量や占有の規約は各節に明記。",
+      "boundary_conditions_ja": "孤立・周期を対象系ごとに選ぶ必要があります。この導入には実行済みの境界値計算例はまだありません。",
+      "caution": {
+        "ja": "小さい打切り指標だけで物理的な活性空間の妥当性は保証されません。有限bond dimensionの誤差と、活性空間・基底の誤差を分けます。",
+        "en": "A small truncation measure does not establish the physical adequacy of an active space. Separate finite-bond-dimension error from active-space and basis error."
       },
       "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/dmrg/",
       "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/dmrg/index.json",

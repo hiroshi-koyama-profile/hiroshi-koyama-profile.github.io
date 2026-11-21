@@ -13,26 +13,64 @@
     "ja": "原子軌道・Gaussian・Slater・平面波・実空間格子をつなぐ。",
     "en": "Connect atomic, Gaussian, Slater, plane-wave and real-space representations."
   },
-  "status": "planned",
-  "origin": "development-candidate",
-  "reading": {},
+  "status": "reading-only",
+  "origin": "curated-quantum-reading",
+  "reading": {
+    "ja": "https://hrkoyama.github.io/numerical-methods-atlas/ja/read/quantum-chemistry/#electronic-bases",
+    "en": "https://hrkoyama.github.io/numerical-methods-atlas/en/read/quantum-chemistry/#electronic-bases"
+  },
   "code_modules": [],
   "test_files": [],
-  "references": [],
-  "assumptions": null,
-  "units": null,
-  "boundary_conditions": null,
+  "references": [
+    {
+      "id": "boys1950",
+      "label": "Boys, S. F. (1950), Electronic wave functions - I. A general method of calculation for the stationary states of any molecular system",
+      "url": "https://doi.org/10.1098/rspa.1950.0036",
+      "kind": "primary-paper",
+      "scope": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+    },
+    {
+      "id": "roothaan1951",
+      "label": "Roothaan, C. C. J. (1951), New Developments in Molecular Orbital Theory",
+      "url": "https://doi.org/10.1103/RevModPhys.23.69",
+      "kind": "primary-paper",
+      "scope": "Primary publication entry point for the quantum-chemistry overview. Bibliographic/introductory review only; full-paper equations and numerical results have not been reproduced."
+    }
+  ],
+  "assumptions": [
+    "Introductory formulation and comparison, not a verified executable solver.",
+    "Representative electronic-structure formulas use nonrelativistic Born–Oppenheimer theory unless the section explicitly states otherwise."
+  ],
+  "units": "Atomic units in the displayed electronic equations (hbar = m_e = e = 4 pi epsilon_0 = 1); dimensionless conventions are stated where needed.",
+  "boundary_conditions": "Isolated or periodic conditions must be selected for each physical system; no numerical boundary-value example is published here yet.",
   "next_deliverable": {
     "ja": "重なり行列と一般化固有値問題を含む比較解説。",
     "en": "A comparison including overlap matrices and generalized eigenproblems."
   },
   "limitations": {
-    "ja": "Under construction。専用の実装・検証結果はまだありません。",
-    "en": "Under construction. No dedicated implementation or verification result is provided yet."
+    "ja": "日英の導入・代表式・一次文献を公開。専用の実装・数値検証はUnder construction。基底を変える操作と電子相関・汎関数を変える操作は別です。線形従属、基底重なり誤差、擬ポテンシャルとの整合性も確認します。",
+    "en": "Introductory bilingual reading, representative equations and primary references are available. No dedicated implementation or numerical verification result is provided yet. Changing the basis is different from changing electron correlation or the functional. Check near-linear dependence, basis-set superposition error and pseudopotential compatibility."
   },
   "metadata_review": {
-    "level": "candidate outline; scientific derivation and literature review incomplete",
+    "level": "curated introductory formulation with primary publication and official-documentation entry points; full derivation audit and numerical examples pending",
     "on": "2026-11-21"
+  },
+  "aliases": [
+    "Gaussian",
+    "Slater",
+    "平面波",
+    "plane waves",
+    "basis set"
+  ],
+  "assumptions_ja": [
+    "定式化と比較の導入解説であり、実行・検証済みソルバーではありません。",
+    "代表式は、各節に別記する場合を除き非相対論・Born–Oppenheimerの電子状態問題を想定します。"
+  ],
+  "units_ja": "表示する電子状態の式は原子単位系（ℏ = m_e = e = 4πε₀ = 1）。無次元量や占有の規約は各節に明記。",
+  "boundary_conditions_ja": "孤立・周期を対象系ごとに選ぶ必要があります。この導入には実行済みの境界値計算例はまだありません。",
+  "caution": {
+    "ja": "基底を変える操作と電子相関・汎関数を変える操作は別です。線形従属、基底重なり誤差、擬ポテンシャルとの整合性も確認します。",
+    "en": "Changing the basis is different from changing electron correlation or the functional. Check near-linear dependence, basis-set superposition error and pseudopotential compatibility."
   },
   "url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/electronic-bases/",
   "json_url": "https://hrkoyama.github.io/numerical-methods-atlas/methods/electronic-bases/index.json",
