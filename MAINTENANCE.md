@@ -54,6 +54,8 @@ Google Search Consoleの対象プロパティは `https://hrkoyama.github.io/`�
 
 手法情報の正本は `catalog/atlas-methods.json`。`scripts/build-atlas-resources.py` が手法一覧と個別のHTML・JSON・Markdown、取得案内を生成する。予定項目にコードや検証済み状態を付けない。関連コードの割当てが章単位か手法単位かを区別し、単位・境界等の未整理はnullと確認範囲で明示する。英語しかない解説は英語のURLへ案内する。
 
+手法一覧の絞り込みは同じ生成処理が出す143項目に `atlas-methods.mjs` と一覧専用の `styles/atlas-methods.css` を適用する。状態は正本の教育用例91・解説のみ17・収録予定35を維持し、比較解説の有無で格上げしない。日英の名称・別名・分野・概要・状態ラベルを両言語で検索でき、空白区切りの全語と選択状態を組み合わせる。検索条件はタブ内のsessionStorageで引き継ぎ、URLや科学計算の台帳・検証記録を書き換えない。保存を拒否されても動作し、JavaScriptなしでは全項目を読める。`scripts/atlas-method-filters.test.mjs` が実生成HTMLと正本の一致、日英同期・日本語入力・件数・リセット等を確認する。
+
 収録方針は同じ台帳の `editorial_policy` を正本とする。数理的な手法・定式化・適用条件・検証を中心に扱い、AMR・並列化・mixed precisionなどの計算効率化・実装上の技巧は独立した収録・開発の対象から外す。通常の丸め誤差と数値安定性は基礎に含む。除外したAMRを予定項目として復活させない。
 
 アトラス冒頭の日英の目的説明は `catalog/atlas-purpose.json`。`build-atlas-purpose.py` が取り込み後の動的ホームと静的本文に適用し、収録方針をロードマップにも反映する。`build-atlas-search.py` は既存章に公開手法台帳を加え、アトラス内の検索も更新する。サーモスタット比較は台帳の `thermostats` 群から `build-thermostat-reading.py` で生成する。比較解説を公開済みでも、専用コードと検証結果が揃うまでは `planned` のままにする。これらはすべて `refresh-site.py` に含まれ、教材の再取り込み後にも再生成できる。

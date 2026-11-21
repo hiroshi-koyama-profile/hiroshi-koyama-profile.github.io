@@ -54,7 +54,7 @@ test('each method has readable HTML, JSON and Markdown with valid reading-langua
 
 test('discovery routes expose the catalog and downloads without private GitHub dependencies',()=>{
   const index=read('numerical-methods-atlas/methods/index.html');
-  const ids=[...index.matchAll(/\bid="([^"]+)"/g)].map(x=>x[1]);assert.equal(ids.length,new Set(ids).size);
+  const ids=[...index.matchAll(/\sid="([^"]+)"/g)].map(x=>x[1]);assert.equal(ids.length,new Set(ids).size);
   const publicData=JSON.parse(read('numerical-methods-atlas/methods/index.json'));
   assert.equal(publicData.methods.length,data.methods.length);
   assert.equal(publicData.code_release.sha256,verification.archive_sha256);
